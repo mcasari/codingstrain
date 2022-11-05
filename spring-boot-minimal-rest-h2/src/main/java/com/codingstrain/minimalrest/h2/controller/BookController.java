@@ -1,26 +1,51 @@
-package com.codingstrain.minimalrest.h2.controller;  
+package com.codingstrain.minimalrest.h2.controller;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.codingstrain.minimalrest.h2.model.Book;
-import com.codingstrain.minimalrest.h2.service.BookService;  
+import com.codingstrain.minimalrest.h2.service.BookService;
 
+@RestController
+@RequestMapping("/library")
+public class BookController {
 
-@RestController  
-public class BookController   
-{  
+	@Autowired
+	private BookService bookService;
 
-	@Autowired  
-	private BookService bookService;  
+	@GetMapping("/book")
+	private List<Book> findAll() {
+		return bookService.findAll();
+	}
 
-	@GetMapping("/book")  
-	private List<Book> getAllBook()   
-	{  
-		return bookService.getAllBook();  
-	}  
- 
-}  
+	@GetMapping("/book/{title}")
+	public Book findByTitle(@RequestParam("title") String title) {
+		return bookService.findByTitle(title);
+	}
+
+	@PostMapping("/book")
+	public Book add(@RequestBody Book book) {
+		return bookService.save(book);
+	}
+
+	@PutMapping("/book")
+	public Book update(@RequestBody Book book) {
+		return bookService.save(book);
+	}
+	
+	@DeleteMapping("/book/{title}")
+	public void deleteByTitle(@RequestParam("title") String title) {
+		bookService.deleteByTitle(title);
+	}
+	
+	
+}

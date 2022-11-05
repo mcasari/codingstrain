@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-	
-    <artifactId>spring-boot-minimal-rest-h2</artifactId>
-    <name>spring-boot-minimal-rest-h2</name>
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-    <parent>
+	<artifactId>spring-boot-minimal-rest-h2</artifactId>
+	<name>spring-boot-minimal-rest-h2</name>
+
+	<parent>
 		<groupId>com.codingstraing</groupId>
 		<artifactId>parent-module</artifactId>
-        <version>1.0-SNAPSHOT</version>
-    </parent>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
 
-    <dependencies>
+	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -33,11 +33,25 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-    </dependencies>
 
-    <properties>
-        <!-- The main class to start by executing java -jar -->
-        <start-class>com.codingstrain.minimalrest.h2.MinimalRestH2App</start-class>
-    </properties>
+		<!-- Swagger -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.7.0</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.7.0</version>
+		</dependency>
+
+
+	</dependencies>
+
+	<properties>
+		<!-- The main class to start by executing java -jar -->
+		<start-class>com.codingstrain.minimalrest.h2.MinimalRestH2App</start-class>
+	</properties>
 
 </project>

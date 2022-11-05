@@ -11,4 +11,7 @@ spring:
          enabled: true
    sql:
       init:
-         mode: always       
+         mode: always
+   mvc:
+      pathmatch:
+         matching-strategy: ant_path_matcher

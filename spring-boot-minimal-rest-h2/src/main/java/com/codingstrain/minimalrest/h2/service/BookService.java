@@ -19,7 +19,24 @@ public class BookService {
 	@Autowired
 	private BookRepository bookRepository;
 
-	public List<Book> getAllBook() {
+	public List<Book> findAll() {
 		return bookRepository.findAll();
 	}
+	
+	public Book findByTitle(String title) {
+		return bookRepository.findById(title).get();
+	}
+	
+	public Book save(Book book) {
+		return bookRepository.save(book);
+	}
+	
+	public Book update(Book book) {
+		return bookRepository.save(book);
+	}
+	
+	public void deleteByTitle(String title) {
+		bookRepository.deleteById(title);
+	}
+	
 }
