@@ -27,7 +27,8 @@ public class SwaggerConfig {
 				.termsOfServiceUrl("http://codingstrain.com")
 				.license("REST API example License")
 				.licenseUrl("fake@gmail.com")
-				.version("1.0").build();
+				.version("1.0")
+				.build();
 	}
 
 }
