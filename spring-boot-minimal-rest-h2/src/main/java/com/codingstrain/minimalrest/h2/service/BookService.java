@@ -23,8 +23,8 @@ public class BookService {
 		return bookRepository.findAll();
 	}
 	
-	public Book findByTitle(String title) {
-		return bookRepository.findById(title).get();
+	public Book findById(String id) {
+		return bookRepository.findById(id).get();
 	}
 	
 	public Book save(Book book) {
@@ -35,8 +35,8 @@ public class BookService {
 		return bookRepository.save(book);
 	}
 	
-	public void deleteByTitle(String title) {
-		bookRepository.deleteById(title);
+	public void deleteById(String id) {
+		bookRepository.deleteById(id);
 	}
 	
 }

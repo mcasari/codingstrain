@@ -27,9 +27,9 @@ public class BookController {
 		return bookService.findAll();
 	}
 
-	@GetMapping("/book/{title}")
-	public Book findByTitle(@RequestParam("title") String title) {
-		return bookService.findByTitle(title);
+	@GetMapping("/book/{id}")
+	public Book findById(@RequestParam("id") String id) {
+		return bookService.findById(id);
 	}
 
 	@PostMapping("/book")
@@ -42,9 +42,9 @@ public class BookController {
 		return bookService.save(book);
 	}
 	
-	@DeleteMapping("/book/{title}")
-	public void deleteByTitle(@RequestParam("title") String title) {
-		bookService.deleteByTitle(title);
+	@DeleteMapping("/book/{id}")
+	public void deleteByTitle(@RequestParam("id") String id) {
+		bookService.deleteById(id);
 	}
 	
 	
