@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -28,7 +29,7 @@ public class BookController {
 	}
 
 	@GetMapping("/book/{id}")
-	public Book findById(@RequestParam("id") String id) {
+	public Book findById(@PathVariable("id") String id) {
 		return bookService.findById(id);
 	}
 
@@ -43,8 +44,13 @@ public class BookController {
 	}
 	
 	@DeleteMapping("/book/{id}")
-	public void deleteByTitle(@RequestParam("id") String id) {
+	public void deleteByTitle(@PathVariable("id") String id) {
 		bookService.deleteById(id);
+	}
+	
+	@GetMapping(value = "/book", params = {"author"})
+	public List<Book> findByAuthor(@RequestParam("author") String author) {
+		return bookService.findByAuthor(author);
 	}
 	
 	

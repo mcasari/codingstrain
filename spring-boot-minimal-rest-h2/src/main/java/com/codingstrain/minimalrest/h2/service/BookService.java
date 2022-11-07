@@ -39,4 +39,8 @@ public class BookService {
 		bookRepository.deleteById(id);
 	}
 	
+	public List<Book> findByAuthor(String author) {
+		return bookRepository.findByAuthor(author);
+	}
+	
 }
