@@ -1,4 +1,4 @@
-package com.codingstrain.minimalrest.h2.model;
+package com.codingstrain.minimalrest.h2.actuator.model;
 
 import java.io.Serializable;
 

@@ -1,4 +1,4 @@
-package com.codingstrain.minimalrest.h2.service;
+package com.codingstrain.minimalrest.h2.actuator.service;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.codingstrain.minimalrest.h2.model.Book;
-import com.codingstrain.minimalrest.h2.repository.BookRepository;
+import com.codingstrain.minimalrest.h2.actuator.model.Book;
+import com.codingstrain.minimalrest.h2.actuator.repository.BookRepository;
 
 
 @Service("bookService")

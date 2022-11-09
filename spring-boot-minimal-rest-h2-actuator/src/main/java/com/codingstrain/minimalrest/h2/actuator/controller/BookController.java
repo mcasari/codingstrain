@@ -1,4 +1,4 @@
-package com.codingstrain.minimalrest.h2.controller;
+package com.codingstrain.minimalrest.h2.actuator.controller;
 
 import java.util.List;
 
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.codingstrain.minimalrest.h2.model.Book;
-import com.codingstrain.minimalrest.h2.service.BookService;
+import com.codingstrain.minimalrest.h2.actuator.model.Book;
+import com.codingstrain.minimalrest.h2.actuator.service.BookService;
 
 @RestController
 @RequestMapping("/library")
