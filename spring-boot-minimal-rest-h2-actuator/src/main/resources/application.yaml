@@ -15,6 +15,11 @@ spring:
    mvc:
       pathmatch:
          matching-strategy: ant_path_matcher
+
 management:
    security:
-      enabled: false
+      enabled: true
+   endpoints:
+      web:
+         exposure: 
+            include: "*"
