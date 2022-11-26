@@ -13,30 +13,41 @@ public class DoubleParseStringWithComma {
 
 		
 		try {
-			String p = "1,234";
-			Double d = Double.valueOf(p.replaceAll(",", ".")); 
-			System.out.println(d);
-			
-			p = "123.111,234";
+			String numStr = "1,234";
+			Double doubleNum = Double.valueOf(numStr.replaceAll(",", ".")); 
+			System.out.println(doubleNum);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		try {						
+			String numStr = "123.111,234";
 			NumberFormat format = NumberFormat.getInstance(Locale.ITALY);
-			Number number = format.parse(p);
-			double dd = number.doubleValue();
-			System.out.println(dd);
-			
-			p = "123.111,234";
-			DecimalFormat df = new DecimalFormat();
+			Number number = format.parse(numStr);
+			double doubleNum = number.doubleValue();
+			System.out.println(doubleNum);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		
+		try {						
+			String numStr = "123.111,234";
+			DecimalFormat decimalFormat = new DecimalFormat();
 			DecimalFormatSymbols symbols = new DecimalFormatSymbols();
 			symbols.setDecimalSeparator(',');
 			symbols.setGroupingSeparator('.');
-			df.setDecimalFormatSymbols(symbols);
-			Number num = df.parse(p);	
+			decimalFormat.setDecimalFormatSymbols(symbols);
+			Number num = decimalFormat.parse(numStr);	
 			System.out.println(num.toString());
-			
-			
-			p = "123.111,234";
-			symbols = new DecimalFormatSymbols(Locale.ITALY);
-			df = new DecimalFormat("#,###.##", symbols );
-			num = df.parse(p);	
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		
+		try {						
+			String numStr = "123.111,234";
+			DecimalFormatSymbols symbols = new DecimalFormatSymbols(Locale.ITALY);
+			DecimalFormat decimalFormat = new DecimalFormat("#,###.##", symbols);
+			Number num = decimalFormat.parse(numStr);	
 			System.out.println(num.toString());
 		} catch (ParseException e) {
 			e.printStackTrace();
