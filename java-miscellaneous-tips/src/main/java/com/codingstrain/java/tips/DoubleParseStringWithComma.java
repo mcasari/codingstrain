@@ -6,7 +6,7 @@ import java.text.NumberFormat;
 import java.text.ParseException;
 import java.util.Locale;
 
-public class DoubleParseString {
+public class DoubleParseStringWithComma {
 
 	public static void main(String[] args) {
 
