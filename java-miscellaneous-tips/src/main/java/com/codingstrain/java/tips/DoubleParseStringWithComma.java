@@ -13,8 +13,16 @@ public class DoubleParseStringWithComma {
 
 		
 		try {
-			String numStr = "1,234";
+			String numStr = "121,234";
 			Double doubleNum = Double.valueOf(numStr.replaceAll(",", ".")); 
+			System.out.println(doubleNum);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		try {
+			String numStr = "121,234";
+			double doubleNum = Double.parseDouble(numStr.replaceAll(",", ".")); 
 			System.out.println(doubleNum);
 		} catch (Exception e) {
 			e.printStackTrace();
