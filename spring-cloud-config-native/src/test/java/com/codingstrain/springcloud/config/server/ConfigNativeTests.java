@@ -1,4 +1,4 @@
-package com.codingstrain.springcloud.config;
+package com.codingstrain.springcloud.config.server;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
