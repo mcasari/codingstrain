@@ -14,7 +14,8 @@
         <module>java-miscellaneous-tips</module>
         <module>spring-boot-minimal-rest-h2</module>
         <module>spring-boot-minimal-rest-h2-actuator</module>
-		<module>spring-cloud-config-native-server</module>		
+		<module>spring-cloud-config-native-server</module>
+		<module>spring-cloud-config-native-client</module>
     </modules>
 
     <dependencyManagement>
