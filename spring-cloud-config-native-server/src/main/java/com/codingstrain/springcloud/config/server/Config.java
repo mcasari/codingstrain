@@ -7,10 +7,10 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 
 @SpringBootApplication
 @EnableConfigServer
-public class ConfigNative {
+public class Config {
 
 	public static void main(String[] args) {
-		new SpringApplicationBuilder(ConfigNative.class).run(args);
+		new SpringApplicationBuilder(Config.class).run(args);
 	}
 
 
