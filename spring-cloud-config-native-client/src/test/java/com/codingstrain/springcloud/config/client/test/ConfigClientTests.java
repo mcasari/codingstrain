@@ -1,10 +1,10 @@
-package com.codingstrain.springcloud.config.server.test;
+package com.codingstrain.springcloud.config.client.test;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ConfigNativeTests {
+class ConfigClientTests {
 
 	@Test
 	void contextLoads() {

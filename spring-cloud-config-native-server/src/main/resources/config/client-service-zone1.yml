@@ -1,9 +1,0 @@
-eureka:
-  instance:
-    metadataMap:
-      zone: zone1
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-server:  
-  port: ${PORT:8081}
