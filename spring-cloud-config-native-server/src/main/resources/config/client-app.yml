@@ -1,2 +1,9 @@
 server:  
   port: ${PORT:8081}
+
+myproperty: value  
+
+myproperties:
+   properties:
+      - value1
+      - value2
