@@ -4,8 +4,3 @@ server:
 spring:
   application:
     name: config-server
-#  cloud:
-#    config:
-#      server:
-#        native:
-#          searchLocations: 
