@@ -5,5 +5,5 @@ spring:
 #    config:
 #      uri: http://localhost:8888
   config:
-    import: "optional:configserver:http://localhost:8888"
+    import: "configserver:http://localhost:8888"
      
