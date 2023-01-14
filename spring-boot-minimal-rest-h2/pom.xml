@@ -48,6 +48,7 @@
 
 
 	</dependencies>
+	
 
 	<properties>
 		<!-- The main class to start by executing java -jar -->
