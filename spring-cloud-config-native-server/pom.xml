@@ -8,7 +8,7 @@
 	<name>spring-cloud-config-native-server</name>
 
 	<parent>
-		<groupId>com.codingstraing</groupId>
+		<groupId>com.codingstrain</groupId>
 		<artifactId>parent-module</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
