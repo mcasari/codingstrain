@@ -1,5 +1,5 @@
 server:  
-  port: ${PORT:8899}
+  port: ${PORT:8888}
   
 spring:
   profiles:
@@ -11,3 +11,7 @@ spring:
 #         server:
 #            native:
 #               search-locations: classpath:/config
+  security:
+    user:
+      name: myusername
+      password: mypassword
