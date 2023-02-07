@@ -26,6 +26,7 @@
         <module>spring-boot-minimal-rest-h2-actuator</module>
 		<module>spring-cloud-config-native-server</module>
 		<module>spring-cloud-config-native-client</module>
+        <module>spring-cloud-config-git-server</module>
     </modules>
 
 	<build>
