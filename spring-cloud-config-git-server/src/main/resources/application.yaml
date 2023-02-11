@@ -2,16 +2,18 @@ server:
   port: ${PORT:8888}
   
 spring:
-  profiles:
-     active: native
   application:
     name: config-server
-#  cloud:
-#      config:
-#         server:
-#            native:
-#               search-locations: classpath:/config
   security:
     user:
       name: myusername
-      password: mypassword
+      password: mypassword   
+  cloud:
+   config:
+     server:
+       git:
+         uri: https://github.com/mcasari/spring-cloud-config-git-server-repo.git
+         username: ${github.username}
+         password: ${github.password}
+         cloneOnStart: true
+ 
