@@ -8,28 +8,6 @@ spring:
     config:
       username: myusername
       password: mypassword
-  mvc:
-     pathmatch:
-        matching-strategy: ant_path_matcher
-  security:
-     user:
-        name: username
-        password: pass
-  rabbitmq:
-     host: localhost
-     port: 5672
-     username: guest
-     password: guest 
-   
-management:
-   endpoint: 
-      health:
-         show-details: always
-   endpoints: 
-      web:
-         exposure:
-            include: '*'
-
 
             
 
