@@ -15,6 +15,12 @@ spring:
      user:
         name: username
         password: pass
+  rabbitmq:
+     host: localhost
+     port: 5672
+     username: guest
+     password: guest 
+   
 management:
    endpoint: 
       health:
@@ -23,6 +29,8 @@ management:
       web:
          exposure:
             include: '*'
+
+
             
 
      
