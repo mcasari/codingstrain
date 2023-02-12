@@ -8,4 +8,21 @@ spring:
     config:
       username: myusername
       password: mypassword
+  mvc:
+     pathmatch:
+        matching-strategy: ant_path_matcher
+  security:
+     user:
+        name: username
+        password: pass
+management:
+   endpoint: 
+      health:
+         show-details: always
+   endpoints: 
+      web:
+         exposure:
+            include: '*'
+            
+
      

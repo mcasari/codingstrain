@@ -16,4 +16,16 @@ spring:
          username: ${github.username}
          password: ${github.password}
          cloneOnStart: true
+       monitor:
+         github:
+           enabled: true
+  rabbitmq:
+     host: localhost
+     port: 5672
+     username: guest
+     password: guest
+
+ 
+
+
  
