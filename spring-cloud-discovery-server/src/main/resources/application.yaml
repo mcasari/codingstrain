@@ -1,30 +1,14 @@
-server:  
-  port: ${PORT:8888}
-  
+spring:
+  config:
+    import: "optional:configserver:http://config-service:8088"
+    activate:
+      on-profile: docker
+---
 spring:
   application:
-    name: config-server
-  security:
-    user:
-      name: myusername
-      password: mypassword   
-  cloud:
-   config:
-     server:
-       git:
-         uri: https://github.com/mcasari/spring-cloud-config-git-server-repo.git
-         username: ${github.username}
-         password: ${github.password}
-         cloneOnStart: true
-       monitor:
-         github:
-           enabled: true
-  rabbitmq:
-     host: localhost
-     port: 5672
-     username: guest
-     password: guest
-
+    name: discovery-service
+  config:
+    import: "optional:configserver:http://localhost:8088"
  
 
 
