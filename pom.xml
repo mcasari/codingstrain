@@ -31,6 +31,7 @@
         <module>spring-cloud-discovery-server</module>
 		<module>spring-cloud-discovery-client</module>
 		<module>spring-cloud-discovery-config-server</module>
+		<module>spring-cloud-discovery-gateway</module>
     </modules>
 
 	<build>
