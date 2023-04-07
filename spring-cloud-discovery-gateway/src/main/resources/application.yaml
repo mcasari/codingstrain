@@ -4,7 +4,7 @@ spring:
     
 ---
 spring:
-  profiles: node1
+  profiles: peer1
 eureka:
   instance:
     hostname: localhost
@@ -18,10 +18,10 @@ server:
 
 ---
 spring:
-  profiles: node2
+  profiles: peer2
 eureka:
   instance:
-    hostname: node2
+    hostname: peer2
     metadataMap:
       zone: zone2
   client:
@@ -32,10 +32,10 @@ server:
   
 ---
 spring:
-  profiles: node3
+  profiles: peer3
 eureka:
   instance:
-    hostname: node3
+    hostname: peer3
     metadataMap:
       zone: zone3
   client:
