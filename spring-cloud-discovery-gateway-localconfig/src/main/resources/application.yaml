@@ -1,49 +1,65 @@
 spring:  
   application:
-    name: discovery-service
-    
----
-spring:
-  profiles: peer1
-eureka:
-  instance:
-    hostname: localhost
-    metadataMap:
-      zone: zone1
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8762/eureka/,http://localhost:8763/eureka/
-server:  
-  port: ${PORT:8761}
+    name: gateway-service
 
----
 spring:
-  profiles: peer2
-eureka:
-  instance:
-    hostname: peer2
-    metadataMap:
-      zone: zone2
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/,http://localhost:8763/eureka/
-server:  
-  port: ${PORT:8762}
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+      - id: client-service
+        uri: lb://client-service
+        predicates:
+        - Path=/app/**
+        filters:
+        - RewritePath=/app/(?<path>.*), /$\{path}
+        
+---
+
+spring: 
+   profiles: zone1
+eureka: 
+   client: 
+      serviceUrl: 
+         defaultZone: http://localhost:8761/eureka/ 
+         registerWithEureka: false 
+         preferSameZoneEureka: true
+   instance: 
+      metadataMap: 
+         zone: zone1
+server:
+  port: 8081
+ 
+---
+
+spring: 
+   profiles: zone2
+eureka: 
+   client: 
+      serviceUrl: 
+         defaultZone: http://localhost:8762/eureka/ 
+         registerWithEureka: false 
+         preferSameZoneEureka: true
+   instance: 
+      metadataMap: 
+         zone: zone2
+server:
+  port: 8082
   
 ---
-spring:
-  profiles: peer3
-eureka:
-  instance:
-    hostname: peer3
-    metadataMap:
-      zone: zone3
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/
-server:  
-  port: ${PORT:8763}
- 
 
-
- 
+spring: 
+   profiles: zone3
+eureka: 
+   client: 
+      serviceUrl: 
+         defaultZone: http://localhost:8763/eureka/ 
+         registerWithEureka: false 
+         preferSameZoneEureka: true
+   instance: 
+      metadataMap: 
+         zone: zone3
+server:
+  port: 8083
