@@ -1,31 +1,32 @@
-server:  
-  port: ${PORT:8888}
-  
-spring:
+spring:  
   application:
-    name: config-server
-  security:
-    user:
-      name: myusername
-      password: mypassword   
-  cloud:
+    name: client-service
+
+---
+
+server: 
+   port: ${PORT:8181}
+
+
+spring: 
    config:
-     server:
-       git:
-         uri: https://github.com/mcasari/spring-cloud-config-git-server-repo.git
-         username: ${github.username}
-         password: ${github.password}
-         cloneOnStart: true
-       monitor:
-         github:
-           enabled: true
-  rabbitmq:
-     host: localhost
-     port: 5672
-     username: guest
-     password: guest
+      activate:
+         on-profiles: zone1  
+eureka: 
+   client: 
+      serviceUrl: 
+         defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/
 
+---
  
-
-
- 
+server: 
+   port: ${PORT:8182}
+   
+spring: 
+   config:
+      activate:
+         on-profiles: zone2 
+eureka: 
+   client: 
+      serviceUrl: 
+         defaultZone: http://localhost:8762/eureka/,http://localhost:8761/eureka/
