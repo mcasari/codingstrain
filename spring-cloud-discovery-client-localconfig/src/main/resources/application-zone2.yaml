@@ -1,0 +1,15 @@
+spring: 
+   config:
+      activate:
+         on-profiles: zone2  
+         
+eureka:
+  instance:
+    metadataMap:
+       zone: zone2
+  client:
+    serviceUrl:
+      defaultZone: http://peer2:8762/eureka/,http://peer1:8761/eureka/
+      
+server: 
+   port: ${PORT:8182}

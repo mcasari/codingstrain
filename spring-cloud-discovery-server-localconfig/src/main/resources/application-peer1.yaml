@@ -9,8 +9,8 @@ spring:
 eureka:
   instance:
     hostname: peer1
-    metadataMap:
-       zone: zone1
+#    metadataMap:
+#       zone: zone1
   client:
     serviceUrl:
       defaultZone: http://peer2:8762/eureka/

@@ -1,32 +1,3 @@
-spring:  
-  application:
-    name: client-service
-
----
-
-server: 
-   port: ${PORT:8181}
-
-
-spring: 
-   config:
-      activate:
-         on-profiles: zone1  
-eureka: 
-   client: 
-      serviceUrl: 
-         defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/
-
----
- 
-server: 
-   port: ${PORT:8182}
-   
-spring: 
-   config:
-      activate:
-         on-profiles: zone2 
-eureka: 
-   client: 
-      serviceUrl: 
-         defaultZone: http://localhost:8762/eureka/,http://localhost:8761/eureka/
+spring:
+   application:
+      name: client-service
