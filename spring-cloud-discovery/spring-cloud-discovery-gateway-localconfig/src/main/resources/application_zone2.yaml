@@ -1,0 +1,14 @@
+server:
+  port: ${PORT:8082}
+spring: 
+   profiles: zone2
+eureka: 
+   client: 
+      serviceUrl: 
+         defaultZone: http://node2:8762/eureka/ 
+         registerWithEureka: false 
+         preferSameZoneEureka: true
+   instance: 
+      metadataMap: 
+         zone: zone2
+

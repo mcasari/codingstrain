@@ -1,0 +1,16 @@
+spring:
+   application:
+      name: discovery-service
+   config:
+      activate:
+         on-profiles: node1
+eureka:
+  instance:
+    hostname: node1
+    metadataMap:
+       zone: zone1
+  client:
+    serviceUrl:
+      defaultZone: http://node2:8762/eureka/
+server:  
+  port: ${PORT:8761}

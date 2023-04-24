@@ -28,10 +28,7 @@
 		<module>spring-cloud-config-native-client</module>
         <module>spring-cloud-config-git-server</module>
         <module>spring-cloud-config-git-client</module>
-        <module>spring-cloud-discovery-server</module>
-		<module>spring-cloud-discovery-client</module>
-		<module>spring-cloud-discovery-config-server</module>
-		<module>spring-cloud-discovery-gateway-localconfig</module>
+        <module>spring-cloud-discovery</module>         
     </modules>
 
 	<build>
@@ -42,7 +39,5 @@
 			</plugin>
 		</plugins>
 	</build>
-
-
 
 </project>
