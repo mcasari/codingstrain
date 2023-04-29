@@ -10,9 +10,9 @@ public class ClientController {
 	@Value("${spring.config.activate.on-profiles}")
 	private String zone;
 
-	@GetMapping("/ping")
+	@GetMapping("/checkZone")
 	public String ping() {
-		return "I'm in zone " + zone;
+		return "This service runs in zone " + zone;
 	}
 	
 }

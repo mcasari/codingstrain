@@ -26,5 +26,14 @@
 		<module>spring-cloud-discovery-gateway-localconfig</module>
 		<module>spring-cloud-discovery-config-server</module>
     </modules>
+    
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>

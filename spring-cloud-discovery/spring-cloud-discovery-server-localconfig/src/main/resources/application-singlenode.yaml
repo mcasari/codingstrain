@@ -8,6 +8,9 @@ spring:
 eureka:
    instance:
       hostname: localhost
+   server:
+      enableSelfPreservation: false 
+      evictionIntervalTimerInMs: 3000
    client:
       registerWithEureka: false
       fetchRegistry: false

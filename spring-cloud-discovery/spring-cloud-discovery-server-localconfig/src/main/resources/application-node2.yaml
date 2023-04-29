@@ -9,6 +9,10 @@ eureka:
     hostname: node2
     metadataMap:
        zone: zone2
+  server:
+     enableSelfPreservation: false 
+     evictionIntervalTimerInMs: 3000
+     responseCacheUpdateIntervalMs: 3000
   client:
     serviceUrl:
       defaultZone: http://node1:8761/eureka/

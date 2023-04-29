@@ -5,11 +5,15 @@ spring:
          
 eureka:
   instance:
+    leaseRenewalIntervalInSeconds: 1 
+    leaseExpirationDurationInSeconds: 2
     metadataMap:
        zone: zone2
+    preferIpAddress: true    
   client:
     serviceUrl:
       defaultZone: http://zone2:8762/eureka/,http://zone1:8761/eureka/
-      
+    preferSameZoneEureka: true
+          
 server: 
    port: ${PORT:8182}
