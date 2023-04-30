@@ -3,13 +3,15 @@ spring:
       name: discovery-service
    config:
       activate:
-         on-profiles: node2
+         on-profiles: node1
 eureka:
   instance:
-    metadataMap:
-       zone: zone2
+    hostname: localhost
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://localhost:8762/eureka/
 server:  
-  port: ${PORT:8762}
+  port: ${PORT:8761}
+  
+  
+

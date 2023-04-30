@@ -5,7 +5,4 @@ spring:
 eureka:
   instance:
     leaseRenewalIntervalInSeconds: 1 
-    leaseExpirationDurationInSeconds: 1
-#    preferIpAddress: true
-  client:
-    preferSameZoneEureka: true
+    leaseExpirationDurationInSeconds: 2
