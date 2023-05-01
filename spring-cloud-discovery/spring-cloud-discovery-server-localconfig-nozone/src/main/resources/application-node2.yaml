@@ -3,10 +3,6 @@ spring:
       activate:
          on-profiles: node2
 eureka:
-  instance:
-    hostname: localhost
-    metadataMap:
-       zone: zone2
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
