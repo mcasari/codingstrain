@@ -22,9 +22,12 @@
 	
     <modules>
         <module>spring-cloud-discovery-server-localconfig</module>
+        <module>spring-cloud-discovery-server-localconfig-nozone</module>
+        <module>spring-cloud-discovery-server-localconfig-nozone-singlenode</module>
 		<module>spring-cloud-discovery-client-localconfig</module>
+		<module>spring-cloud-discovery-client-localconfig-nozone</module>
 		<module>spring-cloud-discovery-gateway-localconfig</module>
-		<module>spring-cloud-discovery-config-server</module>
+		<module>spring-cloud-discovery-gateway-localconfig-nozone</module>
     </modules>
     
 	<build>

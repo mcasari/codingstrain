@@ -1,16 +1,10 @@
 spring:
    application:
       name: discovery-service
-   config:
-      activate:
-         on-profiles: singlenode
-         
+               
 eureka:
    instance:
       hostname: localhost
-   server:
-      enableSelfPreservation: false 
-      evictionIntervalTimerInMs: 1000
    client:
       registerWithEureka: false
       fetchRegistry: false
