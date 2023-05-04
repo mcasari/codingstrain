@@ -1,0 +1,14 @@
+spring: 
+   config:
+      activate:
+         on-profiles: zone3  
+         
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8763/eureka/,http://localhost:8762/eureka/,http://localhost:8761/eureka/
+          
+server: 
+   port: ${PORT:8183}
