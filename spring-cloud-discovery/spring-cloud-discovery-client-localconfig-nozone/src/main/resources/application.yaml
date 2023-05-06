@@ -5,4 +5,4 @@ spring:
 eureka:
   instance:
     leaseRenewalIntervalInSeconds: 1 
-    leaseExpirationDurationInSeconds: 2
+    leaseExpirationDurationInSeconds: 1
