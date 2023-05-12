@@ -10,6 +10,8 @@ spring:
    
 eureka: 
    client: 
+      serviceUrl:
+         defaultZone: http://node1:8761/eureka/ 
       registerWithEureka: false 
       registryFetchIntervalSeconds: 1 
       shouldDisableDelta: true
