@@ -6,3 +6,6 @@ eureka:
   instance:
     leaseRenewalIntervalInSeconds: 1 
     leaseExpirationDurationInSeconds: 1
+  client:
+    registryFetchIntervalSeconds: 1
+    shouldDisableDelta: true
