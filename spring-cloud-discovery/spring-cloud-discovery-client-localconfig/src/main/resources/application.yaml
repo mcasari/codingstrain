@@ -9,3 +9,5 @@ eureka:
 #    preferIpAddress: true
   client:
     preferSameZoneEureka: true
+    registryFetchIntervalSeconds: 1
+    shouldDisableDelta: true
