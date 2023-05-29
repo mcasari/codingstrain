@@ -1,0 +1,13 @@
+eureka:
+  instance:
+    hostname: localhost
+    leaseRenewalIntervalInSeconds: 1 
+    leaseExpirationDurationInSeconds: 1
+  client:
+    registryFetchIntervalSeconds: 1
+    shouldDisableDelta: true
+    serviceUrl:
+      defaultZone: http://localhost:8760/eureka/
+            
+server: 
+   port: ${PORT:8180}
