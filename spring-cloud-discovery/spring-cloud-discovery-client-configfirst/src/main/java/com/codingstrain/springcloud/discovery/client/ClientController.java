@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,17 +20,18 @@ public class ClientController {
 	@Autowired
 	private DiscoveryClient discoveryClient;
 			         
-	@Value("${spring.config.activate.on-profiles}")
-	private String zone;
+	@Value("${myproperty}")
+	private String myproperty;
 
-	@GetMapping("/checkZone")
-	public String ping() {
-		return "This service runs in zone " + zone;
+	@GetMapping("/myproperty")
+	public String myproperty() {
+		return "myproperty value: " + myproperty;
 	}
 	
+	@SuppressWarnings("unchecked")
 	@GetMapping("/testEurekaClient")
 	public String testEurekaClient() {
-	    List<InstanceInfo> list = eurekaClient.getInstancesById("STORES");
+	    List<InstanceInfo> list = eurekaClient.getInstancesById("CLIENT_SERVICE");
 	    if (list != null && list.size() > 0 ) {
 	        return list.get(0).getHomePageUrl();
 	    }
@@ -40,7 +40,7 @@ public class ClientController {
 	
 	@GetMapping("/testDiscoveryClient")
 	public String testDiscoveryClient() {
-	    List<InstanceInfo> list = discoveryClient.getInstancesById("STORES");
+	    List<InstanceInfo> list = discoveryClient.getInstancesById("CLIENT_SERVICE");
 	    if (list != null && list.size() > 0 ) {
 	        return list.get(0).getHomePageUrl();
 	    }

@@ -1,9 +1,19 @@
-server:  
-  port: ${PORT:8081}
+server:
+   port: ${PORT:8080}
+   ssl:
+      key-store: classpath:keystore.p12
+      key-store-password: mypassword
 
-myproperty: value  
+myproperty: value
 
-myproperties:
-   properties:
-      - value1
-      - value2
+eureka:
+  instance:
+    hostname: localhost
+    securePortEnabled: true 
+    nonSecurePortEnabled: false 
+    statusPageUrl: https://${eureka.hostname}:${server.port}/info 
+    healthCheckUrl: https://${eureka.hostname}:${server.port}/health
+    homePageUrl: https://${eureka.hostname}:${server.port}/
+  client:
+    serviceUrl:
+       defaultZone: http://myusername:mypassword@localhost:8760/eureka/

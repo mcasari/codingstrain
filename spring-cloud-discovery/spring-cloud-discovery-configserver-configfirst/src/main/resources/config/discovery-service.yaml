@@ -1,3 +1,9 @@
+spring:
+  security:
+    user:
+      name: myusername
+      password: mypassword
+
 eureka:
    instance:
       hostname: localhost
