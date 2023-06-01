@@ -4,8 +4,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>spring-cloud-discovery-server-remoteconfig-configfirst</artifactId>
-	<name>spring-cloud-discovery-server-remoteconfig-configfirst</name>
+	<artifactId>spring-cloud-discovery-server-configfirst</artifactId>
+	<name>spring-cloud-discovery-server-configfirst</name>
 
     <properties>
 		<java.version>17</java.version>
@@ -34,9 +34,5 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 		</dependency>
-		
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId></dependency>
-		</dependencies>
+	</dependencies>
 </project>

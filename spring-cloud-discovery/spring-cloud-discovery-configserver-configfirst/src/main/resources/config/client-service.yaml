@@ -1,13 +1,19 @@
+server:
+   port: ${PORT:8080}
+   ssl:
+      key-store: classpath:keystore.p12
+      key-store-password: mypassword
+
+myproperty: value
+
 eureka:
   instance:
     hostname: localhost
-    leaseRenewalIntervalInSeconds: 1 
-    leaseExpirationDurationInSeconds: 1
+    securePortEnabled: true 
+    nonSecurePortEnabled: false 
+    statusPageUrl: https://${eureka.instance.hostname}:${server.port}/info 
+    healthCheckUrl: https://${{eureka.instance.hostname}:${server.port}/health
+    homePageUrl: https://${{eureka.instance.hostname}:${server.port}/
   client:
-    registryFetchIntervalSeconds: 1
-    shouldDisableDelta: true
     serviceUrl:
-      defaultZone: http://localhost:8760/eureka/
-            
-server: 
-   port: ${PORT:8180}
+       defaultZone: http://myusername:mypassword@localhost:8760/eureka/
