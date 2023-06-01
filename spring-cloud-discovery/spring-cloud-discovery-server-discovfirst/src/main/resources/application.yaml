@@ -1,6 +1,10 @@
 spring:
    application:
       name: discovery-service
+   security:
+      user:
+         name: myusername
+         password: mypassword
                
 eureka:
    instance:
