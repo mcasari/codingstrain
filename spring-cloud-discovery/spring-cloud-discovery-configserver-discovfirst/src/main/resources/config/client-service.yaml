@@ -13,7 +13,4 @@ eureka:
     nonSecurePortEnabled: false 
     statusPageUrl: https://${eureka.hostname}:${server.port}/info 
     healthCheckUrl: https://${eureka.hostname}:${server.port}/health
-    homePageUrl: https://${eureka.hostname}:${server.port}/
-  client:
-    serviceUrl:
-       defaultZone: http://myusername:mypassword@localhost:8760/eureka/
+    homePageUrl: https://${eureka.hostname}:${server.port}/ 

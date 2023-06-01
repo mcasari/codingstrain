@@ -4,11 +4,21 @@ server:
 spring:
    application:
       name: client-service
-      
+   cloud: 
+      config: 
+         discovery: 
+            enabled: true 
+            serviceId: config-server
+         
 eureka:
+  instance:
+    hostname: localhost
   client:
     serviceUrl:
-       defaultZone: http://myusername:mypassword@localhost:8760/eureka/
+      defaultZone: http://myusername:mypassword@localhost:8760/eureka/
+       
+
+ 
 
 
 
