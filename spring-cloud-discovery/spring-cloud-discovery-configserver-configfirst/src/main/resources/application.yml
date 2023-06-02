@@ -2,6 +2,8 @@ server:
   port: ${PORT:8888}
   
 spring:
+  profiles:
+     active: native
   application:
     name: config-server
   security:
