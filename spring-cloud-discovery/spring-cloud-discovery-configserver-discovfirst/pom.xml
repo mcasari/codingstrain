@@ -16,7 +16,7 @@
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>2021.0.5</version>
+				<version>2022.0.2</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -24,12 +24,14 @@
 	</dependencyManagement>
 
 	<dependencies>
-
+		<dependency>
+		    <groupId>org.springframework.cloud</groupId>
+		    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-config-server</artifactId>
 		</dependency>
-
 	</dependencies>
 
 </project>
