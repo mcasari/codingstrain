@@ -1,0 +1,11 @@
+myproperty: value
+
+spring:
+   cloud: 
+      config: 
+         discovery: 
+            enabled: true 
+            serviceId: config-server
+            
+server:
+   port: ${PORT:8080}
