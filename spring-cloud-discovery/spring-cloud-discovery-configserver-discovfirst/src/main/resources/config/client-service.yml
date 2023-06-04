@@ -1,4 +1,11 @@
+server:
+   port: ${PORT:8080}
+   ssl:
+      key-store: classpath:keystore.p12
+      key-store-password: mypassword
+
 myproperty: value
+
 
 spring:
    cloud: 
@@ -6,6 +13,15 @@ spring:
          discovery: 
             enabled: true 
             serviceId: config-server
-            
-server:
-   port: ${PORT:8080}
+
+eureka:
+  instance:
+    hostname: localhost
+    securePortEnabled: true 
+    nonSecurePortEnabled: false 
+    statusPageUrl: https://${eureka.instance.hostname}:${server.port}/info 
+    healthCheckUrl: https://${{eureka.instance.hostname}:${server.port}/health
+    homePageUrl: https://${{eureka.instance.hostname}:${server.port}/
+  client:
+    serviceUrl:
+       defaultZone: http://myusername:mypassword@localhost:8760/eureka/
