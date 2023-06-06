@@ -28,6 +28,12 @@
 		<module>spring-cloud-discovery-client-localconfig-nozone</module>
 		<module>spring-cloud-discovery-gateway-localconfig</module>
 		<module>spring-cloud-discovery-gateway-localconfig-nozone</module>
+		<module>spring-cloud-discovery-client-configfirst</module>
+		<module>spring-cloud-discovery-client-discovfirst</module>
+		<module>spring-cloud-discovery-configserver-configfirst</module>
+		<module>spring-cloud-discovery-configserver-discovfirst</module>
+		<module>spring-cloud-discovery-server-configfirst</module>
+		<module>spring-cloud-discovery-server-discovfirst</module>	
     </modules>
     
 	<build>
