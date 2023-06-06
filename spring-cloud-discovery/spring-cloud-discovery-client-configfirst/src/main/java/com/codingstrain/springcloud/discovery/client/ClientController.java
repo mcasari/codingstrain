@@ -30,7 +30,6 @@ public class ClientController {
 		return "myproperty value: " + myproperty;
 	}
 	
-	@SuppressWarnings("unchecked")
 	@GetMapping("/testEurekaClient")
 	public String testEurekaClient() {
 		Application application = eurekaClient.getApplication("CLIENT-SERVICE");
