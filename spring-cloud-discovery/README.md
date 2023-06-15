@@ -1,5 +1,5 @@
 
-## Spring Cloud Discovery Service
+## Spring Cloud Service Discovery
 
 
 ### Articles:
