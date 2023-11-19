@@ -15,12 +15,13 @@ import jakarta.persistence.Table;
  */
 @Entity
 @Table(name="Book")
-@NamedQuery(name = "Rete.findAll", query = "SELECT r FROM Book r")
+@NamedQuery(name = "Book.findAll", query = "SELECT b FROM Book b")
 public class Book implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	private String id;
+	@Column
+	private String isbn;
 	
 	@Column
 	private String title;
@@ -44,13 +45,12 @@ public class Book implements Serializable {
 		this.author = author;
 	}
 
-	public String getId() {
-		return id;
+	public String getIsbn() {
+		return isbn;
 	}
 
-	public void setId(String id) {
-		this.id = id;
-	}	
-	
+	public void setIsbn(String isbn) {
+		this.isbn = isbn;
+	}
 
 }
