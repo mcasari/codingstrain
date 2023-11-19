@@ -1,13 +1,13 @@
-package com.codingstrain.springcloud.sample.libraryapp.books;
+package com.codingstrain.springcloud.sample.libraryapp.borrowers;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MinimalRestH2App {
+public class AppMain {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MinimalRestH2App.class, args);
+		SpringApplication.run(AppMain.class, args);
 	}
 
 
