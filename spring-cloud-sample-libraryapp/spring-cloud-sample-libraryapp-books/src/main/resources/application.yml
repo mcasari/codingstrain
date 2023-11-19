@@ -1,14 +1,17 @@
-spring:  
-  application:
-    name: discovery-service
-  security:
-     user:
-        name: myusername
-        password: mypassword
-  config:
-    import: "optional:configserver:"
-  cloud:
-    config:
-      username: myusername
-      password: mypassword
-      
+spring:
+   datasource:
+      url: jdbc:h2:mem:mydb
+      username: sa
+      password: pass
+      driverClassName: org.h2.Driver
+   jpa:
+      spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+   h2:
+      console:
+         enabled: true
+   sql:
+      init:
+         mode: always
+   mvc:
+      pathmatch:
+         matching-strategy: ant_path_matcher
