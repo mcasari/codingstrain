@@ -11,7 +11,7 @@ class LinkedHashMapPreserveOrder{
    preserveOrderMap.put(3,"Third");
    preserveOrderMap.put(4,"Fourth");
 
-   for(Map.Entry mapEntry: preserveOrderMap.entrySet()){  
+   for(Map.Entry<Integer,String> mapEntry: preserveOrderMap.entrySet()){  
         System.out.println(mapEntry.getKey() + " - " + mapEntry.getValue());  
    }  
  }  
