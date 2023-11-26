@@ -8,8 +8,6 @@ import org.springframework.stereotype.Repository;
 
 import com.codingstrain.springcloud.sample.libraryapp.lending.model.Lending;
 
-
-
 @Repository
 public interface LendingRepository extends JpaRepository<Lending, String>, JpaSpecificationExecutor<Lending> {
 	List<Lending> findByAuthor(String author);
