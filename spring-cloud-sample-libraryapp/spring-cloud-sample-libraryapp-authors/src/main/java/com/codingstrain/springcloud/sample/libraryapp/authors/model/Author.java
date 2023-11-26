@@ -1,4 +1,4 @@
-package com.codingstrain.springcloud.sample.libraryapp.borrowers.model;
+package com.codingstrain.springcloud.sample.libraryapp.authors.model;
 
 import java.io.Serializable;
 
@@ -8,20 +8,15 @@ import jakarta.persistence.Id;
 import jakarta.persistence.NamedQuery;
 import jakarta.persistence.Table;
 
-
-/**
- * The persistent class for the RMA_RETE database table.
- * 
- */
 @Entity
-@Table(name="Borrower")
-@NamedQuery(name = "Borrower.findAll", query = "SELECT b FROM Borrower b")
-public class Borrower implements Serializable {
+@Table(name = "Author")
+@NamedQuery(name = "Author.findAll", query = "SELECT a FROM Author a")
+public class Author implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@Column
-	private String userID;
+	private Integer id;
 
 	@Column
 	private String firstName;
@@ -29,12 +24,12 @@ public class Borrower implements Serializable {
 	@Column
 	private String lastName;
 
-	public String getUserID() {
-		return userID;
+	public Integer getId() {
+		return id;
 	}
 
-	public void setUserID(String userID) {
-		this.userID = userID;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public String getFirstName() {
@@ -52,5 +47,5 @@ public class Borrower implements Serializable {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	
+
 }

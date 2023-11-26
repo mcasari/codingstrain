@@ -49,9 +49,9 @@ public class BookController {
 		bookService.deleteById(id);
 	}
 	
-	@GetMapping(value = "/book", params = {"author"})
-	public List<Book> findByAuthor(@RequestParam("author") String author) {
-		return bookService.findByAuthor(author);
+	@GetMapping(value = "/book", params = {"title"})
+	public List<Book> findByTitle(@RequestParam("title") String title) {
+		return bookService.findByTitle(title);
 	}
 	
 	

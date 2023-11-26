@@ -1,4 +1,4 @@
-package com.codingstrain.springcloud.sample.libraryapp.lending.controller;
+package com.codingstrain.springcloud.sample.libraryapp.review.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -6,18 +6,18 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.codingstrain.springcloud.sample.libraryapp.lending.model.Lending;
-import com.codingstrain.springcloud.sample.libraryapp.lending.service.LendingService;
+import com.codingstrain.springcloud.sample.libraryapp.review.model.Review;
+import com.codingstrain.springcloud.sample.libraryapp.review.service.ReviewService;
 
 @RestController
 @RequestMapping("/library")
-public class LendingController {
+public class ReviewController {
 
 	@Autowired
-	private LendingService lendingService;
+	private ReviewService lendingService;
 
 	@PostMapping(value="/lending", consumes = "application/json", produces = "application/json")
-	public Lending lend(@RequestBody Lending lending) {
+	public Review lend(@RequestBody Review lending) {
 		return lendingService.lend(lending);
 	}
 	
