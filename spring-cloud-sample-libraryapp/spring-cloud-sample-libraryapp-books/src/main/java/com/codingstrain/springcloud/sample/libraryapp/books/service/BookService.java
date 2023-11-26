@@ -38,8 +38,8 @@ public class BookService {
 		bookRepository.deleteById(id);
 	}
 	
-	public List<Book> findByAuthor(String author) {
-		return bookRepository.findByAuthor(author);
+	public List<Book> findByTitle(String title) {
+		return bookRepository.findByTitle(title);
 	}
 	
 }

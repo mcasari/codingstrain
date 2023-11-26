@@ -25,6 +25,9 @@ public class Book implements Serializable {
 	
 	@Column
 	private String title;
+	
+	@Column
+	private String edition;
 
 	@Column
 	private String author;
@@ -53,4 +56,12 @@ public class Book implements Serializable {
 		this.isbn = isbn;
 	}
 
+	public String getEdition() {
+		return edition;
+	}
+
+	public void setEdition(String edition) {
+		this.edition = edition;
+	}
+	
 }

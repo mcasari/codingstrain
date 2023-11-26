@@ -1,4 +1,4 @@
-package com.codingstrain.springcloud.sample.libraryapp.lending;
+package com.codingstrain.springcloud.sample.libraryapp.review;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
