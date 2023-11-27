@@ -23,7 +23,7 @@ public class SwaggerConfig {
 
 	private ApiInfo apiInfo() {
 		return new ApiInfoBuilder().title("REST API example")
-				.description("A minimal REST example with H2 in memory db as persistence layer")
+				.description("A minimal REST example")
 				.termsOfServiceUrl("http://codingstrain.com")
 				.license("REST API example License")
 				.licenseUrl("fake@gmail.com")
