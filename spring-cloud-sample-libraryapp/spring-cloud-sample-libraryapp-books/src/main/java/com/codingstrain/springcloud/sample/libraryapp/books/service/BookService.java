@@ -1,6 +1,7 @@
 package com.codingstrain.springcloud.sample.libraryapp.books.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,49 +21,39 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @Service("bookService")
 public class BookService {
 
-	Logger logger = LoggerFactory.getLogger(BookService.class);
-	
-	@Autowired
-	private BookRepository bookRepository;
-	
+    Logger logger = LoggerFactory.getLogger(BookService.class);
+
+    @Autowired
+    private BookRepository bookRepository;
+
     @Autowired
     private RestTemplate restTemplate;
 
-	public List<Book> findAll() {
-		return bookRepository.findAll();
-	}
-	
-	public Book findById(String id) {
-		return bookRepository.findById(id).get();
-	}
-	
-	public Book save(Book book) {
-		return bookRepository.save(book);
-	}
-	
-	public Book update(Book book) {
-		return bookRepository.save(book);
-	}
-	
-	public void deleteById(String id) {
-		bookRepository.deleteById(id);
-	}
-	
-	public List<Book> findByTitle(String title) {
-		return bookRepository.findByTitle(title);
-	}
-	
-	
-	public BookInfo getBookInfoByRestTemplate(String isbn) throws JsonMappingException, JsonProcessingException {
-		BookInfo bookInfo = new BookInfo();
-		//Get author biography info
-		String fooResourceUrl = "http://localhost:8080/library/author";
-		ResponseEntity<String> response = restTemplate.getForEntity(fooResourceUrl + "/1", String.class);
-		ObjectMapper mapper = new ObjectMapper();
-		JsonNode root = mapper.readTree(response.getBody());
-		JsonNode name = root.path("name");	
-		return bookInfo;
-	}
+    public void deleteById(String id) {
+        bookRepository.deleteById(id);
+    }
 
-	
+    public List<Book> findAll() {
+        return bookRepository.findAll();
+    }
+
+    public Optional<Book> findByTitle(String title) {
+        return bookRepository.findById(title);
+    }
+
+    public BookInfo getBookInfoByRestTemplate(String isbn) throws JsonMappingException, JsonProcessingException {
+        BookInfo bookInfo = new BookInfo();
+        //Get author biography info
+        String fooResourceUrl = "http://localhost:8080/library/author";
+        ResponseEntity<String> response = restTemplate.getForEntity(fooResourceUrl + "/1", String.class);
+        ObjectMapper mapper = new ObjectMapper();
+        JsonNode root = mapper.readTree(response.getBody());
+        JsonNode name = root.path("name");
+        return bookInfo;
+    }
+
+    public Book save(Book book) {
+        return bookRepository.saveAndFlush(book);
+    }
+
 }

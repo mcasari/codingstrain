@@ -1,6 +1,7 @@
 package com.codingstrain.springcloud.sample.libraryapp.books.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -16,43 +17,36 @@ import org.springframework.web.bind.annotation.RestController;
 import com.codingstrain.springcloud.sample.libraryapp.books.model.Book;
 import com.codingstrain.springcloud.sample.libraryapp.books.service.BookService;
 
-
 @RestController
 @RequestMapping("/library")
 public class BookController {
 
-	@Autowired
-	private BookService bookService;
+    @Autowired
+    private BookService bookService;
 
-	@GetMapping("/book")
-	public List<Book> findAll() {
-		return bookService.findAll();
-	}
+    @PostMapping("/book")
+    public Book add(@RequestBody Book book) {
+        return bookService.save(book);
+    }
 
-	@GetMapping("/book/{id}")
-	public Book findById(@PathVariable("id") String id) {
-		return bookService.findById(id);
-	}
+    @DeleteMapping("/book/{id}")
+    public void deleteByTitle(@PathVariable("id") String id) {
+        bookService.deleteById(id);
+    }
 
-	@PostMapping("/book")
-	public Book add(@RequestBody Book book) {
-		return bookService.save(book);
-	}
+    @GetMapping("/book")
+    public List<Book> findAll() {
+        return bookService.findAll();
+    }
 
-	@PutMapping("/book")
-	public Book update(@RequestBody Book book) {
-		return bookService.save(book);
-	}
-	
-	@DeleteMapping("/book/{id}")
-	public void deleteByTitle(@PathVariable("id") String id) {
-		bookService.deleteById(id);
-	}
-	
-	@GetMapping(value = "/book", params = {"title"})
-	public List<Book> findByTitle(@RequestParam("title") String title) {
-		return bookService.findByTitle(title);
-	}
-	
-	
+    @GetMapping(value = "/book", params = { "title" })
+    public Optional<Book> findByTitle(@RequestParam("title") String title) {
+        return bookService.findByTitle(title);
+    }
+
+    @PutMapping("/book")
+    public Book update(@RequestBody Book book) {
+        return bookService.save(book);
+    }
+
 }

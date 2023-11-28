@@ -10,5 +10,6 @@ import com.codingstrain.springcloud.sample.libraryapp.review.model.Review;
 
 @Repository
 public interface ReviewRepository extends JpaRepository<Review, String>, JpaSpecificationExecutor<Review> {
-	List<Review> findByAuthor(String author);
+
+    List<Review> findAllByBookTitle(String title);
 }

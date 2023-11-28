@@ -1,5 +1,7 @@
 package com.codingstrain.springcloud.sample.libraryapp.review.service;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,16 +10,16 @@ import org.springframework.stereotype.Service;
 import com.codingstrain.springcloud.sample.libraryapp.review.model.Review;
 import com.codingstrain.springcloud.sample.libraryapp.review.repository.ReviewRepository;
 
-@Service("lendingService")
+@Service("reviewService")
 public class ReviewService {
 
-	Logger logger = LoggerFactory.getLogger(ReviewService.class);
-	
-	@Autowired
-	private ReviewRepository lendingRepository;
+    Logger logger = LoggerFactory.getLogger(ReviewService.class);
 
-	public Review lend(Review lending) {
-		return lendingRepository.save(lending);
-	}
-	
+    @Autowired
+    private ReviewRepository reviewRepository;
+
+    public List<Review> findByBookTitle(String booktitle) {
+        return reviewRepository.findAllByBookTitle(booktitle);
+    }
+
 }
