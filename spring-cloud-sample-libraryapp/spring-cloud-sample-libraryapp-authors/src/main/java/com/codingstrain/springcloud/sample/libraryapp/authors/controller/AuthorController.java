@@ -1,6 +1,5 @@
 package com.codingstrain.springcloud.sample.libraryapp.authors.controller;
 
-import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,11 +17,6 @@ public class AuthorController {
 
     @Autowired
     private AuthorService authorService;
-
-    @GetMapping("/author")
-    public List<Author> findAll() {
-        return authorService.findAll();
-    }
 
     @GetMapping("/author/{name}")
     public Optional<Author> findByName(@PathVariable("name") String name) {

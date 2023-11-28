@@ -1,6 +1,5 @@
 package com.codingstrain.springcloud.sample.libraryapp.books.service;
 
-import java.util.List;
 import java.util.Optional;
 
 import org.slf4j.Logger;
@@ -29,14 +28,6 @@ public class BookService {
     @Autowired
     private RestTemplate restTemplate;
 
-    public void deleteById(String id) {
-        bookRepository.deleteById(id);
-    }
-
-    public List<Book> findAll() {
-        return bookRepository.findAll();
-    }
-
     public Optional<Book> findByTitle(String title) {
         return bookRepository.findById(title);
     }
@@ -50,10 +41,6 @@ public class BookService {
         JsonNode root = mapper.readTree(response.getBody());
         JsonNode name = root.path("name");
         return bookInfo;
-    }
-
-    public Book save(Book book) {
-        return bookRepository.saveAndFlush(book);
     }
 
 }
