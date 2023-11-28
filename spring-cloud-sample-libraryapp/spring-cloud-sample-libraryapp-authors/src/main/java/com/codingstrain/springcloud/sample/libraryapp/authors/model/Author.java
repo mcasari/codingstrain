@@ -12,29 +12,30 @@ import jakarta.persistence.Table;
 @Table(name = "Author")
 @NamedQuery(name = "Author.findAll", query = "SELECT a FROM Author a")
 public class Author implements Serializable {
-	private static final long serialVersionUID = 1L;
 
-	@Id
-	@Column
-	private Integer id;
+    private static final long serialVersionUID = 1L;
 
-	@Column
-	private String name;
+    @Id
+    @Column
+    private String name;
 
-	public Integer getId() {
-		return id;
-	}
+    @Column
+    private String biography;
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    public String getBiography() {
+        return biography;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public void setBiography(String biography) {
+        this.biography = biography;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
 }

@@ -30,38 +30,38 @@ public class Book implements Serializable {
 	private String edition;
 
 	@Column
-	private String author;
+    private String authorName;
 
-	public String getTitle() {
-		return title;
+	public String getAuthorName() {
+        return authorName;
+    }
+
+	public String getEdition() {
+		return edition;
 	}
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
+    public String getIsbn() {
+        return isbn;
+    }
 
-	public String getAuthor() {
-		return author;
-	}
+    public String getTitle() {
+        return title;
+    }
 
-	public void setAuthor(String author) {
-		this.author = author;
-	}
+    public void setAuthorName(String authorName) {
+        this.authorName = authorName;
+    }
 
-	public String getIsbn() {
-		return isbn;
+	public void setEdition(String edition) {
+		this.edition = edition;
 	}
 
 	public void setIsbn(String isbn) {
 		this.isbn = isbn;
 	}
 
-	public String getEdition() {
-		return edition;
-	}
-
-	public void setEdition(String edition) {
-		this.edition = edition;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 	
 }
