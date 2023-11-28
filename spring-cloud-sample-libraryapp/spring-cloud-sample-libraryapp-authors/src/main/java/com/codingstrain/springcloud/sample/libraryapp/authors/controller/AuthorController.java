@@ -27,5 +27,17 @@ public class AuthorController {
 	public List<Author> findByName(@PathVariable("firstName") String firstName, @PathVariable("lastName") String lastName) {
 		return authorService.findByName(firstName, lastName);
 	}
+	
+	@GetMapping("/author/{isbn}")
+	public Author findByISBN(@PathVariable("isbn") String isbn) {
+		//TODO
+		return null;
+	}
+	
+	@GetMapping("/author/biography/{firstName}/{lastName}")
+	public List<Author> getBiography(@PathVariable("firstName") String firstName, @PathVariable("lastName") String lastName) {
+		//TODO
+		return null;
+	}
 
 }
