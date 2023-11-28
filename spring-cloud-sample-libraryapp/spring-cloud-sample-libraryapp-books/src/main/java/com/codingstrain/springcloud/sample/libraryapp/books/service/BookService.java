@@ -56,7 +56,7 @@ public class BookService {
 	public BookInfo getBookInfoByRestTemplate(String isbn) throws JsonMappingException, JsonProcessingException {
 		BookInfo bookInfo = new BookInfo();
 		//Get author biography info
-		String fooResourceUrl = "http://localhost:8080/spring-rest/foos";
+		String fooResourceUrl = "http://localhost:8080/library/author";
 		ResponseEntity<String> response = restTemplate.getForEntity(fooResourceUrl + "/1", String.class);
 		ObjectMapper mapper = new ObjectMapper();
 		JsonNode root = mapper.readTree(response.getBody());
