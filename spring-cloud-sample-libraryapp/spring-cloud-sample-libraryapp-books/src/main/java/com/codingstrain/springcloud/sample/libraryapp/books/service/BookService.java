@@ -1,5 +1,7 @@
 package com.codingstrain.springcloud.sample.libraryapp.books.service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 import org.slf4j.Logger;
@@ -27,28 +29,60 @@ public class BookService {
     @Autowired
     private RestTemplate restTemplate;
 
-    public BookInfo findBookInfoByRestTemplate(String urlAuthorInfo, String urlBookReviewInfo, String title) throws BookException {
-        ResponseEntity<String> response1 = restTemplate.getForEntity(urlAuthorInfo + "/" + title, String.class);
-        BookInfo bookInfo1 = parseAuthorInfo(response1);
-        ResponseEntity<String> response2 = restTemplate.getForEntity(urlBookReviewInfo + "/" + title, String.class);
-        BookInfo bookInfo2 = parseAuthorInfo(response2);
-        return bookInfo1;
+    public BookInfo findBookInfoByRestTemplate(String urlAuthorInfo, String urlBookReviewInfo, String authorName, String bookTitle) throws BookException {
+        ResponseEntity<String> responseAuthorInfo = restTemplate.getForEntity(urlAuthorInfo + "/" + authorName, String.class);
+        BookInfo bookInfo = new BookInfo();
+        bookInfo = parseAuthorInfo(bookInfo, responseAuthorInfo);
+        ResponseEntity<String> response2 = restTemplate.getForEntity(urlBookReviewInfo + "/" + bookTitle, String.class);
+        bookInfo = parseReviewInfo(bookInfo, response2);
+        return bookInfo;
     }
 
     public Optional<Book> findByTitle(String title) {
         return bookRepository.findById(title);
     }
 
-    private BookInfo parseAuthorInfo(ResponseEntity<String> response) throws BookException {
+    private BookInfo parseAuthorInfo(BookInfo bookInfo, ResponseEntity<String> response) throws BookException {
         ObjectMapper mapper = new ObjectMapper();
         JsonNode root = null;
         try {
             root = mapper.readTree(response.getBody());
-            JsonNode name = root.path("name");
+            String authorName = "";
+            String authorBiography = "";
+            JsonNode node = root.path("name");
+            authorName = node != null ? node.asText() : "";
+            node = root.path("biography");
+            authorBiography = node != null ? node.asText() : "";
+            bookInfo.setAuthorName(authorName);
+            bookInfo.setAuthorBiography(authorBiography);
         } catch (Exception e) {
-            throw new BookException(e);
+            throw new BookException("Error in parsing JSON author info!", e);
         }
         return null;
     }
 
+    private BookInfo parseReviewInfo(BookInfo bookInfo, ResponseEntity<String> response) throws BookException {
+        ObjectMapper mapper = new ObjectMapper();
+        JsonNode root = null;
+        try {
+            root = mapper.readTree(response.getBody());
+            String bookTitle = "";
+            List<String> contents = new ArrayList<String>();
+            if (root.isArray()) {
+                for (JsonNode arrayItem : root) {
+                    if (bookTitle.isEmpty()) {
+                        JsonNode bookTitleNode = arrayItem.path("bookTitle");
+                        bookTitle = bookTitleNode != null ? bookTitleNode.asText() : "";
+                    }
+                    JsonNode contentNode = arrayItem.path("content");
+                    contents.add(contentNode != null ? contentNode.asText() : "");
+                }
+            }
+            bookInfo.setTitle(bookTitle);
+            bookInfo.setBookReviews(contents);
+        } catch (Exception e) {
+            throw new BookException("Error in parsing JSON reviews info!", e);
+        }
+        return null;
+    }
 }

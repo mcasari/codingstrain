@@ -20,9 +20,33 @@ public class Review implements Serializable {
     private Integer id;
 
     @Column
-    private String boookTitle;
+    private String bookTitle;
 
     @Column
     private String content;
+
+    public String getBookTitle() {
+        return bookTitle;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setBookTitle(String bookTitle) {
+        this.bookTitle = bookTitle;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
 }
