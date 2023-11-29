@@ -9,7 +9,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import com.codingstrain.springcloud.sample.libraryapp.books.dto.BookInfo;
 import com.codingstrain.springcloud.sample.libraryapp.books.model.Book;
 import com.codingstrain.springcloud.sample.libraryapp.books.repository.BookRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -32,15 +31,15 @@ public class BookService {
         return bookRepository.findById(title);
     }
 
-    public BookInfo getBookInfoByRestTemplate(String isbn) throws JsonMappingException, JsonProcessingException {
-        BookInfo bookInfo = new BookInfo();
+    public Book getBookInfoByRestTemplate(String isbn) throws JsonMappingException, JsonProcessingException {
+        Book book = new Book();
         //Get author biography info
         String fooResourceUrl = "http://localhost:8080/library/author";
         ResponseEntity<String> response = restTemplate.getForEntity(fooResourceUrl + "/1", String.class);
         ObjectMapper mapper = new ObjectMapper();
         JsonNode root = mapper.readTree(response.getBody());
         JsonNode name = root.path("name");
-        return bookInfo;
+        return book;
     }
 
 }
