@@ -17,9 +17,6 @@ public class Review implements Serializable {
 
     @Id
     @Column
-    private Integer id;
-
-    @Column
     private String bookTitle;
 
     @Column
@@ -33,20 +30,12 @@ public class Review implements Serializable {
         return content;
     }
 
-    public Integer getId() {
-        return id;
-    }
-
     public void setBookTitle(String bookTitle) {
         this.bookTitle = bookTitle;
     }
 
     public void setContent(String content) {
         this.content = content;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
 }

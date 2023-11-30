@@ -1,7 +1,5 @@
 package com.codingstrain.springcloud.sample.libraryapp.books.service;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
 import org.slf4j.Logger;
@@ -66,20 +64,14 @@ public class BookService {
         JsonNode root = null;
         try {
             root = mapper.readTree(response.getBody());
-            String bookTitle = "";
-            List<String> contents = new ArrayList<String>();
-            if (root.isArray()) {
-                for (JsonNode arrayItem : root) {
-                    if (bookTitle.isEmpty()) {
-                        JsonNode bookTitleNode = arrayItem.path("bookTitle");
-                        bookTitle = bookTitleNode != null ? bookTitleNode.asText() : "";
-                    }
-                    JsonNode contentNode = arrayItem.path("content");
-                    contents.add(contentNode != null ? contentNode.asText() : "");
-                }
-            }
-            bookInfo.setTitle(bookTitle);
-            bookInfo.setBookReviews(contents);
+            String authorName = "";
+            String authorBiography = "";
+            JsonNode node = root.path("name");
+            authorName = node != null ? node.asText() : "";
+            node = root.path("biography");
+            authorBiography = node != null ? node.asText() : "";
+            bookInfo.setAuthorName(authorName);
+            bookInfo.setAuthorBiography(authorBiography);
         } catch (Exception e) {
             throw new BookException("Error in parsing JSON reviews info!", e);
         }
