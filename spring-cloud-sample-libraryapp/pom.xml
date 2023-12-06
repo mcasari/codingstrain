@@ -22,9 +22,8 @@
 	</parent>
 	
     <modules>
-		<module>spring-cloud-sample-libraryapp-lending</module>
-        <module>spring-cloud-sample-libraryapp-books</module>
-		<module>spring-cloud-sample-libraryapp-borrowers</module>
+		<module>libraryapp-openfeign-nodiscovery</module>
+        <module>libraryapp-openfeign-discovery</module>
     </modules>
     
 	<build>
