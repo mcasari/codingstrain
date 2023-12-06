@@ -27,7 +27,6 @@ public class BookController {
 
     @GetMapping(value = "/bookInfo", params = { "authorName", "bookTitle" })
     public BookInfo findBookInfoByTitle(@RequestParam("authorName") String authorName, @RequestParam("bookTitle") String bookTitle) {
-
         try {
             return bookService.findBookInfoByRestTemplate("http://localhost:8080/library/author", "http://localhost:8080/library/review", authorName,
                 bookTitle);
