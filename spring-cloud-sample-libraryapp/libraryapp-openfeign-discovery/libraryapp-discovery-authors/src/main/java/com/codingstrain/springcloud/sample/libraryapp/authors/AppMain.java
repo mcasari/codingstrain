@@ -1,13 +1,13 @@
 package com.codingstrain.springcloud.sample.libraryapp.authors;
 
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 
 @SpringBootApplication
 public class AppMain {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AppMain.class, args);
+        new SpringApplicationBuilder(AppMain.class).run(args);
 	}
 
 
