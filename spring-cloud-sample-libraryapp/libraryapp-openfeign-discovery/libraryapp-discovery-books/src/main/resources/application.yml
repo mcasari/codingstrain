@@ -22,4 +22,4 @@ eureka:
       serviceUrl:
          defaultZone: http://myusername:mypassword@localhost:8760/eureka/
 server:  
-   port: ${PORT:8090}}     
+   port: ${PORT:8082}
