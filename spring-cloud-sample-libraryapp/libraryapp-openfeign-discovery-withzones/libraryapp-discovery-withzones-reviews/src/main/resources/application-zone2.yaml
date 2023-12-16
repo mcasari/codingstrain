@@ -1,0 +1,16 @@
+spring: 
+   config:
+      activate:
+         on-profiles: zone2  
+         
+eureka:
+  instance:
+    hostname: localhost
+    metadataMap:
+       zone: zone2 
+  client:
+    serviceUrl:
+      defaultZone: http://myusername:mypassword@localhost:8760/eureka/
+          
+server: 
+   port: ${PORT:8086}

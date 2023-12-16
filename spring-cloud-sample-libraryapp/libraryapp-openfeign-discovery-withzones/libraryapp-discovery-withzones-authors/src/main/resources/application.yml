@@ -16,10 +16,4 @@ spring:
          mode: always
    mvc:
       pathmatch:
-         matching-strategy: ant_path_matcher
-eureka:
-   client: 
-      serviceUrl:
-         defaultZone: http://myusername:mypassword@localhost:8760/eureka/
-server:  
-   port: ${PORT:8091}   
+         matching-strategy: ant_path_matcher  
