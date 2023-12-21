@@ -7,7 +7,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableFeignClients
+@EnableFeignClients(defaultConfiguration = BookClientConfiguration.class)
 public class AppMain {
 
 	public static void main(String[] args) {

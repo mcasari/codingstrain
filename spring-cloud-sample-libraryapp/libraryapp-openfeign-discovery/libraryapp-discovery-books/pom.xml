@@ -7,9 +7,9 @@
 	<artifactId>libraryapp-discovery-books</artifactId>
 	<name>libraryapp-discovery-books</name>
 
-    <properties>
+	<properties>
 		<java.version>17</java.version>
-    </properties>
+	</properties>
 
 	<parent>
 		<groupId>spring-cloud-samples</groupId>
@@ -50,11 +50,27 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-<dependency>
-	<groupId>org.springframework.cloud</groupId>
-	<artifactId>spring-cloud-starter-openfeign</artifactId>
-</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
 
+		<dependency>
+			<groupId>spring-cloud-samples</groupId>
+			<artifactId>libraryapp-discovery-reviews</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>spring-cloud-samples</groupId>
+			<artifactId>libraryapp-discovery-authors</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>		
+		
+		<dependency>
+			<groupId>io.github.openfeign</groupId>
+			<artifactId>feign-jackson</artifactId>
+		</dependency>
 
 		<!-- Swagger -->
 		<dependency>
