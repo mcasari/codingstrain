@@ -15,11 +15,34 @@
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>spring-cloud-samples</groupId>
+				<artifactId>libraryapp-discovery-authors</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>spring-cloud-samples</groupId>
+				<artifactId>libraryapp-discovery-reviews</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>2023.0.0</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	
     <modules>
 		<module>libraryapp-discovery-authors</module>
-        <module>libraryapp-discovery-books</module>
         <module>libraryapp-discovery-reviews</module>
         <module>libraryapp-discovery-server</module>
+        <module>libraryapp-discovery-books</module>
     </modules>
+   
 
 </project>

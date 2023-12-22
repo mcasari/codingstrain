@@ -15,9 +15,6 @@ import com.codingstrain.springcloud.sample.libraryapp.books.dto.BookInfo;
 import com.codingstrain.springcloud.sample.libraryapp.books.model.Book;
 import com.codingstrain.springcloud.sample.libraryapp.books.service.BookService;
 
-import feign.Feign;
-import feign.httpclient.ApacheHttpClient;
-
 @RestController
 @RequestMapping("/library")
 public class BookController {
@@ -29,9 +26,6 @@ public class BookController {
 
     @GetMapping(value = "/bookInfo", params = { "authorName", "bookTitle" })
     public BookInfo findBookInfoByTitle(@RequestParam("authorName") String authorName, @RequestParam("bookTitle") String bookTitle) {
-        Feign.builder()
-            .client(new ApacheHttpClient())
-            .build();
         return bookService.findBookInfoByTitle(authorName, bookTitle);
     }
 
