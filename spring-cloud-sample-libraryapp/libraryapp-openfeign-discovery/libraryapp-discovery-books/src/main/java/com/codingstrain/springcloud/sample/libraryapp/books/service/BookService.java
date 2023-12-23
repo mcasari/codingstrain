@@ -10,13 +10,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.codingstrain.springcloud.sample.libraryapp.authors.model.Author;
-import com.codingstrain.springcloud.sample.libraryapp.books.client.frominterface.AuthorClient;
-import com.codingstrain.springcloud.sample.libraryapp.books.client.frominterface.ReviewClient;
+import com.codingstrain.springcloud.sample.libraryapp.books.client.Author;
+import com.codingstrain.springcloud.sample.libraryapp.books.client.AuthorClient;
+import com.codingstrain.springcloud.sample.libraryapp.books.client.Review;
+import com.codingstrain.springcloud.sample.libraryapp.books.client.ReviewClient;
 import com.codingstrain.springcloud.sample.libraryapp.books.dto.BookInfo;
 import com.codingstrain.springcloud.sample.libraryapp.books.model.Book;
 import com.codingstrain.springcloud.sample.libraryapp.books.repository.BookRepository;
-import com.codingstrain.springcloud.sample.libraryapp.review.model.Review;
 
 @Service("bookService")
 public class BookService {

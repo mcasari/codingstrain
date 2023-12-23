@@ -7,9 +7,9 @@
 	<artifactId>libraryapp-discovery-server</artifactId>
 	<name>libraryapp-discovery-server</name>
 
-    <properties>
+	<properties>
 		<java.version>17</java.version>
-    </properties>
+	</properties>
 
 	<parent>
 		<groupId>spring-cloud-samples</groupId>
@@ -24,5 +24,4 @@
 			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 		</dependency>
 	</dependencies>
-	
 </project>

@@ -44,16 +44,6 @@
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>spring-cloud-samples</groupId>
-			<artifactId>libraryapp-discovery-reviews</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>spring-cloud-samples</groupId>
-			<artifactId>libraryapp-discovery-authors</artifactId>
-		</dependency>
-
 		<!-- Swagger -->
 		<dependency>
 			<groupId>io.springfox</groupId>
