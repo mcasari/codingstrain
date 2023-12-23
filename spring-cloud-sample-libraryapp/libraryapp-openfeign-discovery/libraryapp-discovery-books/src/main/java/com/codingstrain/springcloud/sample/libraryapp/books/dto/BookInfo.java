@@ -3,30 +3,17 @@ package com.codingstrain.springcloud.sample.libraryapp.books.dto;
 import java.io.Serializable;
 import java.util.List;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.NamedQuery;
-import jakarta.persistence.Table;
 
-@Entity
-@Table(name = "Book")
-@NamedQuery(name = "Book.findAll", query = "SELECT b FROM Book b")
 public class BookInfo implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @Id
-    @Column
     private String title;
 
-    @Column
     private String authorName;
 
-    @Column
     private String authorBiography;
 
-    @Column
     private List<String> bookReviews;
 
     public String getAuthorBiography() {

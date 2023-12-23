@@ -1,2 +1,2 @@
-INSERT INTO BOOK (title, authorName) VALUES ('La Divina Commedia', 'Dante Alighieri');    
-INSERT INTO BOOK (title, authorName) VALUES ('Faust', 'Goethe'); 
+INSERT INTO BOOK VALUES ('La Divina Commedia', 'Dante Alighieri');    
+INSERT INTO BOOK VALUES ('Faust', 'Goethe'); 
