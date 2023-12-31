@@ -21,10 +21,10 @@
 	</parent>
 
 	<modules>
-		<module>./libraryapp-discovery-authors</module>
-		<module>./libraryapp-discovery-reviews</module>
-		<module>./libraryapp-discovery-server</module>
-		<module>./libraryapp-discovery-books</module>
+		<module>libraryapp-discovery-authors</module>
+		<module>libraryapp-discovery-reviews</module>
+		<module>libraryapp-discovery-server</module>
+		<module>libraryapp-discovery-books</module>
 	</modules>
 
 	<build>
