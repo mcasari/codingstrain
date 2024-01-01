@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.codingstrain.springcloud.sample.libraryapp.review.model.Review;
+import com.codingstrain.springcloud.sample.libraryapp.model.entity.Review;
 import com.codingstrain.springcloud.sample.libraryapp.review.repository.ReviewRepository;
 
 @Service("reviewService")

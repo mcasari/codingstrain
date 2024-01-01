@@ -7,8 +7,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.codingstrain.springcloud.sample.libraryapp.authors.model.Author;
 import com.codingstrain.springcloud.sample.libraryapp.authors.repository.AuthorRepository;
+import com.codingstrain.springcloud.sample.libraryapp.model.entity.Author;
 
 @Service("authorService")
 public class AuthorService {
