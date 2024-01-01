@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.codingstrain.springcloud.sample.libraryapp.books.client.Author;
+import com.codingstrain.springcloud.sample.libraryapp.authors.model.Author;
 import com.codingstrain.springcloud.sample.libraryapp.books.client.AuthorClient;
 import com.codingstrain.springcloud.sample.libraryapp.books.client.Review;
 import com.codingstrain.springcloud.sample.libraryapp.books.client.ReviewClient;

@@ -6,6 +6,8 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import com.codingstrain.springcloud.sample.libraryapp.authors.model.Author;
+
 @FeignClient(name = "author-service")
 public interface AuthorClient {
 
