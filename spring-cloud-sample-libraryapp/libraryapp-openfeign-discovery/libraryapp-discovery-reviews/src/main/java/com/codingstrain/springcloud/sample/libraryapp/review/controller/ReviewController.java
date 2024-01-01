@@ -12,7 +12,7 @@ import com.codingstrain.springcloud.sample.libraryapp.model.entity.Review;
 import com.codingstrain.springcloud.sample.libraryapp.review.service.ReviewService;
 
 @RestController
-@RequestMapping("/library")
+@RequestMapping("/reviews")
 public class ReviewController {
 
     @Autowired

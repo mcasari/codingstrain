@@ -11,10 +11,10 @@ import com.codingstrain.springcloud.sample.libraryapp.model.entity.Author;
 @FeignClient(name = "author-service")
 public interface AuthorClient {
 
-    @GetMapping("/author/{name}")
+    @GetMapping("/authors/author/{name}")
     public Optional<Author> findByName(@PathVariable("name") String name);
 
-    @GetMapping("/getInstance")
+    @GetMapping("/authors/getInstance")
     public String getInstance();
 
 }

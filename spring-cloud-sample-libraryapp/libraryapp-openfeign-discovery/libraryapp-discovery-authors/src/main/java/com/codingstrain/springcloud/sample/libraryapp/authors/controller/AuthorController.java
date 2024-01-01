@@ -16,7 +16,7 @@ import com.codingstrain.springcloud.sample.libraryapp.model.entity.Author;
 import jakarta.servlet.http.HttpServletRequest;
 
 @RestController
-@RequestMapping("/library")
+@RequestMapping("/authors")
 public class AuthorController {
 
     @Autowired

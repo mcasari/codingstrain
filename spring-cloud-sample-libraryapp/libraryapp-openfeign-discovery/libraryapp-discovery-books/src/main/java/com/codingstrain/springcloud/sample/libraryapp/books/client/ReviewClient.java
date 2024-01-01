@@ -11,7 +11,7 @@ import com.codingstrain.springcloud.sample.libraryapp.model.entity.Review;
 @FeignClient(name = "review-service")
 public interface ReviewClient {
 
-    @GetMapping("/review/{bookTitle}")
+    @GetMapping("/reviews/review/{bookTitle}")
     public List<Review> findByBookTitle(@PathVariable("bookTitle") String bookTitle);
 
 }
