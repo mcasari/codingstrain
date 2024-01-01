@@ -58,7 +58,13 @@
 		<dependency>
 			<groupId>com.codingstrain.springcloud.sample</groupId>
 			<artifactId>com.codingstrain.springcloud.sample.libraryapp.authors</artifactId>
-			<version>1.0-SNAPSHOT</version>
+			<version>${project.parent.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.codingstrain.springcloud.sample</groupId>
+			<artifactId>com.codingstrain.springcloud.sample.libraryapp.reviews</artifactId>
+			<version>${project.parent.version}</version>
 		</dependency>
 			
 		<!-- Swagger -->
