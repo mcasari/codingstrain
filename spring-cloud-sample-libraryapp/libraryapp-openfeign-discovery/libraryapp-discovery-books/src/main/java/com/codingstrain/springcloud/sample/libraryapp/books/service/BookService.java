@@ -51,4 +51,8 @@ public class BookService {
         return bookRepository.findById(title);
     }
 
+    public String getAuthorServiceInstance() {
+        return authorClient.getInstance();
+    }
+
 }

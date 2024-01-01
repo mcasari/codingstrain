@@ -34,4 +34,9 @@ public class BookController {
         return bookService.findByTitle(title);
     }
 
+    @GetMapping("/getAuthorServiceInstance")
+    public String getAuthorServiceInstance() {
+        return bookService.getAuthorServiceInstance();
+    }
+
 }

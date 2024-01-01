@@ -14,4 +14,7 @@ public interface AuthorClient {
     @GetMapping("/author/{name}")
     public Optional<Author> findByName(@PathVariable("name") String name);
 
+    @GetMapping("/getInstance")
+    public String getInstance();
+
 }

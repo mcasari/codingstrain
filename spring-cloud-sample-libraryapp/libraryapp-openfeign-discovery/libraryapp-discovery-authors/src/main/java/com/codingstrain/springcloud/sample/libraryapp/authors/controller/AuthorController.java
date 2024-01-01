@@ -27,11 +27,11 @@ public class AuthorController {
         return authorService.findByName(name);
     }
 
-    @GetMapping("/getInstanceRemoteAddress")
-    public String getInstanceRemoteAddress() {
+    @GetMapping("/getInstance")
+    public String getInstance() {
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
-        String remoteAddr = request.getRemoteAddr();
-        return "author-service instance: " + remoteAddr;
+        String instanceInfo = request.getServerName() + ":" + request.getServerPort() + "";
+        return "author-service instance: " + instanceInfo;
     }
 
 }
