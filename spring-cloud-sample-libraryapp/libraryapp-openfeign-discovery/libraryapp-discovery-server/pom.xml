@@ -4,12 +4,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>com.codingstrain.springcloud.sample.libraryapp.discoveryserver</artifactId>
-	<name>com.codingstrain.springcloud.sample.libraryapp.discoveryserver</name>
+	<artifactId>springcloud.sample.libraryapp.discoveryserver</artifactId>
+	<name>springcloud.sample.libraryapp.discoveryserver</name>
 
 	<parent>
-        <groupId>com.codingstrain.springcloud.sample</groupId>
-	    <artifactId>com.codingstrain.springcloud.sample.libraryapp</artifactId>
+        <groupId>springcloud.sample</groupId>
+	    <artifactId>springcloud.sample.libraryapp</artifactId>
 	    <version>1.0-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
