@@ -57,16 +57,10 @@
 	
 		<dependency>
 			<groupId>com.codingstrain.springcloud.sample</groupId>
-			<artifactId>com.codingstrain.springcloud.sample.libraryapp.authors</artifactId>
+			<artifactId>com.codingstrain.springcloud.sample.libraryapp.model</artifactId>
 			<version>${project.parent.version}</version>
 		</dependency>
-		
-		<dependency>
-			<groupId>com.codingstrain.springcloud.sample</groupId>
-			<artifactId>com.codingstrain.springcloud.sample.libraryapp.reviews</artifactId>
-			<version>${project.parent.version}</version>
-		</dependency>
-			
+					
 		<!-- Swagger -->
 		<dependency>
 			<groupId>io.springfox</groupId>
@@ -79,4 +73,13 @@
 			<version>2.7.0</version>
 		</dependency>
 	</dependencies>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 </project>

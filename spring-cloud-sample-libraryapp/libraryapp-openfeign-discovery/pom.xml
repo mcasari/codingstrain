@@ -25,6 +25,7 @@
 		<module>libraryapp-discovery-reviews</module>
 		<module>libraryapp-discovery-server</module>
 		<module>libraryapp-discovery-books</module>
+		<module>libraryapp-discovery-model</module>
 	</modules>
 	
 </project>
