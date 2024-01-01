@@ -48,7 +48,7 @@ public class BookService {
     }
 
     public Optional<Book> findByTitle(String title) {
-        return bookRepository.findById(title);
+        return bookRepository.findByTitle(title);
     }
 
     public String getAuthorServiceInstance() {
