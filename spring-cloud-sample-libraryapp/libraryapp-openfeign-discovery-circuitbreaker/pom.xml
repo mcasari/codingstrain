@@ -6,7 +6,7 @@
 
     <groupId>springcloud.sample</groupId>
 	<artifactId>springcloud.sample.libraryapp.circuitbreaker</artifactId>
-	<name>libraryapp-openfeign-discovery</name>
+	<name>springcloud.sample.libraryapp.circuitbreaker</name>
     <version>1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
@@ -21,11 +21,11 @@
 	</parent>
 
 	<modules>
-		<module>libraryapp-discovery-authors</module>
-		<module>libraryapp-discovery-reviews</module>
-		<module>libraryapp-discovery-server</module>
-		<module>libraryapp-discovery-books</module>
-		<module>libraryapp-discovery-model</module>
+		<module>libraryapp-discovery-authors-cb</module>
+		<module>libraryapp-discovery-reviews-cb</module>
+		<module>libraryapp-discovery-server-cb</module>
+		<module>libraryapp-discovery-books-cb</module>
+		<module>libraryapp-discovery-model-cb</module>
 	</modules>
 	
 </project>
