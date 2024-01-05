@@ -8,7 +8,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.codingstrain.springcloud.sample.libraryapp.model.entity.Author;
 
-@FeignClient(name = "author-service")
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+
+@FeignClient(name = "author-service", fallback = AuthorClientFallback.class)
+@CircuitBreaker(name = "CBService")
 public interface AuthorClient {
 
     @GetMapping("/authors/author/{name}")

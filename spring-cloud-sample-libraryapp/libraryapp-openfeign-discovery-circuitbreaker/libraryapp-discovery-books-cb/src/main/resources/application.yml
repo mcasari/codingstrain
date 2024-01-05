@@ -21,5 +21,31 @@ eureka:
    client: 
       serviceUrl:
          defaultZone: http://myusername:mypassword@localhost:8760/eureka/
+
+management:
+    endpoints:
+      web:
+        exposure:
+          include: '*'
+      health:
+        show-details: always
+    health:
+      circuitbreakers:
+        enabled: 'true'
+      ratelimiters:
+        enabled: 'true'
+        
+resilience4j:
+  circuitbreaker:
+    instances:
+      CircuitBreakerService:
+        sliding-window-size: '10'
+        minimum-number-of-calls: '5'
+        permitted-number-of-calls-in-half-open-state: '3'
+        failure-rate-threshold: '50'
+        wait-duration-in-open-state: 5s
+        sliding-window-type: count_based
+        automatic-transition-from-open-to-half-open-enabled: 'true'
+        
 server:  
    port: ${PORT:8082}
