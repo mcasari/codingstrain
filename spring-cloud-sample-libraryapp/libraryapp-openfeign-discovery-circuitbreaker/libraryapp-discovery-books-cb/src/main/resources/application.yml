@@ -38,7 +38,7 @@ management:
 resilience4j:
   circuitbreaker:
     instances:
-      CircuitBreakerService:
+      CBService:
         sliding-window-size: '10'
         minimum-number-of-calls: '5'
         permitted-number-of-calls-in-half-open-state: '3'

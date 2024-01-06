@@ -1,50 +1,67 @@
 package com.codingstrain.springcloud.sample.libraryapp.books;
 
-import static com.github.tomakehurst.wiremock.client.WireMock.getRequestedFor;
 import static com.github.tomakehurst.wiremock.client.WireMock.serverError;
-import static com.github.tomakehurst.wiremock.client.WireMock.urlEqualTo;
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.RegisterExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 
 import com.github.tomakehurst.wiremock.client.WireMock;
 import com.github.tomakehurst.wiremock.core.WireMockConfiguration;
 import com.github.tomakehurst.wiremock.junit5.WireMockExtension;
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+import io.github.resilience4j.circuitbreaker.CircuitBreaker;
+import io.github.resilience4j.circuitbreaker.CircuitBreakerRegistry;
+
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 class BooksControllerTest {
 
     @RegisterExtension
     static WireMockExtension mockService = WireMockExtension.newInstance()
         .options(WireMockConfiguration.wireMockConfig()
-            .port(8091))
+            .port(80))
         .build();
 
     @Autowired
     private TestRestTemplate restTemplate;
 
+    @Autowired
+    private CircuitBreakerRegistry circuitBreakerRegistry;
+
     @Test
     public void testCircuitBreaker() {
-        mockService.stubFor(WireMock.get("/library/author/Goethe")
+        mockService.stubFor(WireMock.get("/authors/getInstance")
             .willReturn(serverError()));
 
+        Optional<CircuitBreaker> circuitBreakerOptional = circuitBreakerRegistry.getAllCircuitBreakers()
+            .stream()
+            .findFirst();
+        CircuitBreaker circuitBreaker = circuitBreakerOptional.get();
+
         for (int i = 0; i < 5; i++) {
-            ResponseEntity<String> response = restTemplate.getForEntity("/library/authorInfo", String.class, "Goethe");
-            assertThat(response.getStatusCode()).isEqualTo(HttpStatus.INTERNAL_SERVER_ERROR);
+            restTemplate.getForEntity("http://localhost:8080/library/getAuthorServiceInstance", String.class);
+            if (i < 4) {
+                assertTrue(circuitBreaker.getState()
+                    .equals(CircuitBreaker.State.CLOSED));
+            } else {
+                assertTrue(circuitBreaker.getState()
+                    .equals(CircuitBreaker.State.OPEN));
+            }
         }
 
         for (int i = 0; i < 5; i++) {
-            ResponseEntity<String> response = restTemplate.getForEntity("/library/authorInfo", String.class, "Goethe");
-            assertThat(response.getStatusCode()).isEqualTo(HttpStatus.SERVICE_UNAVAILABLE);
+            restTemplate.getForEntity("http://localhost:8080/library/getAuthorServiceInstance", String.class);
+            assertTrue(circuitBreaker.getState()
+                .equals(CircuitBreaker.State.OPEN) || circuitBreaker.getState()
+                    .equals(CircuitBreaker.State.HALF_OPEN));
         }
 
-        mockService.verify(5, getRequestedFor(urlEqualTo("/library/authorInfo")));
+
     }
 
 }

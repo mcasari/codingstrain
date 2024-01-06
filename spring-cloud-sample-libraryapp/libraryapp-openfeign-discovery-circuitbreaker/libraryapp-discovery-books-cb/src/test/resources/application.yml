@@ -16,10 +16,12 @@ spring:
          mode: always
    mvc:
       pathmatch:
-         matching-strategy: ant_path_matcher          
+         matching-strategy: ant_path_matcher 
+       
 eureka:
    client: 
        enabled: false
+      
 
 management:
     endpoints:
@@ -28,11 +30,11 @@ management:
           include: '*'
       health:
         show-details: always
-    health:
-      circuitbreakers:
-        enabled: 'true'
-      ratelimiters:
-        enabled: 'true'
+        circuitbreakers:
+           enabled: 'true'
+        ratelimiters:
+           enabled: 'true'
+
         
 resilience4j:
   circuitbreaker:
@@ -47,4 +49,4 @@ resilience4j:
         automatic-transition-from-open-to-half-open-enabled: 'true'
         
 server:  
-   port: ${PORT:8082}
+   port: ${PORT:8080}
