@@ -32,6 +32,11 @@ public class BookService {
     @Autowired
     private BookRepository bookRepository;
 
+    public Optional<Author> findAuthorByName(@RequestParam("authorName") String authorName) {
+        Optional<Author> author = authorClient.findByName(authorName);
+        return author;
+    }
+
     public BookInfo findBookInfoByTitle(@RequestParam("authorName") String authorName, @RequestParam("bookTitle") String bookTitle) {
         Optional<Author> author = authorClient.findByName(authorName);
         List<Review> reviews = reviewClient.findByBookTitle(bookTitle);
@@ -54,5 +59,4 @@ public class BookService {
     public String getAuthorServiceInstance() {
         return authorClient.getInstance();
     }
-
 }

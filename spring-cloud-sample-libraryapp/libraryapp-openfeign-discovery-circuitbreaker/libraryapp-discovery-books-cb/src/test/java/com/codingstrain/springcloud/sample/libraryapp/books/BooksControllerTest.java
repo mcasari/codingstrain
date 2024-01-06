@@ -31,20 +31,20 @@ class BooksControllerTest {
 
     @Test
     public void testCircuitBreaker() {
-        mockService.stubFor(WireMock.get("/api/external")
+        mockService.stubFor(WireMock.get("/library/author/Goethe")
             .willReturn(serverError()));
 
         for (int i = 0; i < 5; i++) {
-            ResponseEntity<String> response = restTemplate.getForEntity("/api/circuit-breaker", String.class);
+            ResponseEntity<String> response = restTemplate.getForEntity("/library/authorInfo", String.class, "Goethe");
             assertThat(response.getStatusCode()).isEqualTo(HttpStatus.INTERNAL_SERVER_ERROR);
         }
 
         for (int i = 0; i < 5; i++) {
-            ResponseEntity<String> response = restTemplate.getForEntity("/api/circuit-breaker", String.class);
+            ResponseEntity<String> response = restTemplate.getForEntity("/library/authorInfo", String.class, "Goethe");
             assertThat(response.getStatusCode()).isEqualTo(HttpStatus.SERVICE_UNAVAILABLE);
         }
 
-        mockService.verify(5, getRequestedFor(urlEqualTo("/api/external")));
+        mockService.verify(5, getRequestedFor(urlEqualTo("/library/authorInfo")));
     }
 
 }
