@@ -43,7 +43,23 @@ public class BookController {
         return bookService.getAuthorServiceInstance();
     }
 
-    public String getAuthorServiceInstanceFallback() {
+    @GetMapping(value = "/getAuthorServiceInstanceBulkhead")
+    @Retry(name = "BulkheadApi", fallbackMethod = "getAuthorServiceInstanceBulkheadFallback")
+    public String getAuthorServiceInstanceBulkhead() {
+        return bookService.getAuthorServiceInstance();
+    }
+
+    public String getAuthorServiceInstanceFallback(Exception ex) {
+        return "Fallback content";
+    }
+
+    @GetMapping(value = "/getAuthorServiceInstanceRateLimiter")
+    @Retry(name = "RateLimiterApi", fallbackMethod = "getAuthorServiceInstanceRateLimiterFallback")
+    public String getAuthorServiceInstanceRateLimiter() {
+        return bookService.getAuthorServiceInstance();
+    }
+
+    public String getAuthorServiceInstanceRateLimiterFallback(Exception ex) {
         return "Fallback content";
     }
 
@@ -53,7 +69,17 @@ public class BookController {
         return bookService.getAuthorServiceInstance();
     }
 
-    public String getAuthorServiceInstanceRetryFallback() {
+    public String getAuthorServiceInstanceRetryFallback(Exception ex) {
+        return "Fallback content";
+    }
+
+    @GetMapping(value = "/getAuthorServiceInstanceTimeLimiter")
+    @Retry(name = "BulkheadApi", fallbackMethod = "getAuthorServiceInstanceTimeLimiterFallback")
+    public String getAuthorServiceInstanceTimeLimiter() {
+        return bookService.getAuthorServiceInstance();
+    }
+
+    public String getAuthorServiceInstanceTimeLimiterFallback(Exception ex) {
         return "Fallback content";
     }
 }
