@@ -15,6 +15,9 @@ import com.codingstrain.springcloud.sample.libraryapp.books.dto.BookInfo;
 import com.codingstrain.springcloud.sample.libraryapp.books.model.Book;
 import com.codingstrain.springcloud.sample.libraryapp.books.service.BookService;
 
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.retry.annotation.Retry;
+
 @RestController
 @RequestMapping("/library")
 public class BookController {
@@ -35,8 +38,22 @@ public class BookController {
     }
 
     @GetMapping(value = "/getAuthorServiceInstance")
+    @CircuitBreaker(name = "CircuitBreakerApi", fallbackMethod = "getAuthorServiceInstanceFallback")
     public String getAuthorServiceInstance() {
         return bookService.getAuthorServiceInstance();
     }
 
+    public String getAuthorServiceInstanceFallback() {
+        return "Fallback content";
+    }
+
+    @GetMapping(value = "/getAuthorServiceInstanceRetry")
+    @Retry(name = "RetryApi", fallbackMethod = "getAuthorServiceInstanceRetryFallback")
+    public String getAuthorServiceInstanceRetry() {
+        return bookService.getAuthorServiceInstance();
+    }
+
+    public String getAuthorServiceInstanceRetryFallback() {
+        return "Fallback content";
+    }
 }

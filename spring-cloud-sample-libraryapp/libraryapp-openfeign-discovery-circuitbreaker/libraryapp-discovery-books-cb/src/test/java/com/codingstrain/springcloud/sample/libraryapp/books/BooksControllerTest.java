@@ -24,7 +24,7 @@ class BooksControllerTest {
     @RegisterExtension
     static WireMockExtension mockService = WireMockExtension.newInstance()
         .options(WireMockConfiguration.wireMockConfig()
-            .port(80))
+            .port(8090))
         .build();
 
     @Autowired
@@ -60,7 +60,6 @@ class BooksControllerTest {
                 .equals(CircuitBreaker.State.OPEN) || circuitBreaker.getState()
                     .equals(CircuitBreaker.State.HALF_OPEN));
         }
-
 
     }
 

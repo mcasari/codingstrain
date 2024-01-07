@@ -16,7 +16,17 @@ spring:
          mode: always
    mvc:
       pathmatch:
-         matching-strategy: ant_path_matcher          
+         matching-strategy: ant_path_matcher    
+   cloud:
+      discovery:
+         client:
+            simple:
+               instances:
+                  author-service:
+                    - instanceId: author
+                      serviceId: author-service
+                      host: localhost
+                      port: 8090      
 eureka:
    client: 
       serviceUrl:
@@ -38,7 +48,7 @@ management:
 resilience4j:
   circuitbreaker:
     instances:
-      CBService:
+      CircuitBreakerApi:
         sliding-window-size: '10'
         minimum-number-of-calls: '5'
         permitted-number-of-calls-in-half-open-state: '3'
@@ -46,6 +56,15 @@ resilience4j:
         wait-duration-in-open-state: 5s
         sliding-window-type: count_based
         automatic-transition-from-open-to-half-open-enabled: 'true'
-        
+  retry:
+    metrics:
+      legacy:
+        enabled: 'true'
+      enabled: 'true'
+    instances:
+      retryApi:
+        max-attempts: '3'
+        wait-duration: 1s
+                
 server:  
    port: ${PORT:8082}
