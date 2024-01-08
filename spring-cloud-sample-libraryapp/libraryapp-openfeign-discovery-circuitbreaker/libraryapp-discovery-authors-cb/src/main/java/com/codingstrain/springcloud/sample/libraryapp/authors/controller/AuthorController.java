@@ -34,4 +34,11 @@ public class AuthorController {
         return "author-service instance: " + instanceInfo;
     }
 
+    @GetMapping("/getInstanceLB")
+    public String getInstanceLB() {
+        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
+        String instanceInfo = request.getServerName() + ":" + request.getServerPort() + "";
+        return "author-service instance: " + instanceInfo;
+    }
+
 }

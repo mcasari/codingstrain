@@ -21,4 +21,7 @@ public interface AuthorClient {
     @CircuitBreaker(name = "CircuitBreakerService")
     public String getInstance();
 
+    @GetMapping("/authors/getInstanceLB")
+    public String getInstanceLB();
+
 }

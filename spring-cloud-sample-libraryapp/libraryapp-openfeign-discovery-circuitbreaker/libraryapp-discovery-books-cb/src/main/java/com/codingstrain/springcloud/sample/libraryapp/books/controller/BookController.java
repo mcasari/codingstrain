@@ -53,6 +53,11 @@ public class BookController {
         return "Fallback content";
     }
 
+    @GetMapping(value = "/getAuthorServiceInstanceLB")
+    public String getAuthorServiceInstanceLB() {
+        return bookService.getAuthorServiceInstanceLB();
+    }
+
     @GetMapping(value = "/getAuthorServiceInstanceRateLimiter")
     @Retry(name = "RateLimiterApi", fallbackMethod = "getAuthorServiceInstanceRateLimiterFallback")
     public String getAuthorServiceInstanceRateLimiter() {

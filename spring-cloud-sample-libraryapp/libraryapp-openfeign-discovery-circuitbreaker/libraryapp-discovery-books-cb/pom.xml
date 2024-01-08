@@ -98,11 +98,13 @@
 		</dependency>
 
 		<!-- Hoverfly -->
+
 		<dependency>
 		    <groupId>io.specto</groupId>
-		    <artifactId>hoverfly-java</artifactId>
+		    <artifactId>hoverfly-java-junit5</artifactId>
 		    <scope>test</scope>
 		</dependency>
+
 	</dependencies>
 		
 	<build>

@@ -56,4 +56,8 @@ public class BookService {
         return authorClient.getInstance();
     }
 
+    public String getAuthorServiceInstanceLB() {
+        return authorClient.getInstanceLB();
+    }
+
 }

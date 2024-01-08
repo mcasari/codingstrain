@@ -17,16 +17,7 @@ spring:
    mvc:
       pathmatch:
          matching-strategy: ant_path_matcher    
-   cloud:
-      discovery:
-         client:
-            simple:
-               instances:
-                  author-service:
-                    - instanceId: author
-                      serviceId: author-service
-                      host: localhost
-                      port: 8090      
+    
 eureka:
    client: 
       serviceUrl:
