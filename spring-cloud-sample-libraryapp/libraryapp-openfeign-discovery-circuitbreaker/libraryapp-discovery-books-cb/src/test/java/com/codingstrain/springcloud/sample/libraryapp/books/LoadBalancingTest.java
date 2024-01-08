@@ -43,9 +43,14 @@ class LoadBalancingTest {
         int a = 0, b = 0;
         for (int i = 0; i < 10; i++) {
             String result = restTemplate.getForObject("http://localhost:8080/library/getAuthorServiceInstanceLB", String.class);
+            if (result.contains("8091")) {
+                ++a;
+            } else if (result.contains("8092")) {
+                ++b;
+            }
             logger.info("Result: ", result);
         }
-        logger.info("TEST RESULT: 8091={}, 8092={}", a, b);
+        logger.info("Result: author-service:8091={}, author-service:8092={}", a, b);
     }
 
 
