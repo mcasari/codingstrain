@@ -24,7 +24,7 @@ class CircuitBreakerTest {
     @RegisterExtension
     static WireMockExtension mockService = WireMockExtension.newInstance()
         .options(WireMockConfiguration.wireMockConfig()
-            .port(8090))
+            .port(8091))
         .build();
 
     @Autowired
