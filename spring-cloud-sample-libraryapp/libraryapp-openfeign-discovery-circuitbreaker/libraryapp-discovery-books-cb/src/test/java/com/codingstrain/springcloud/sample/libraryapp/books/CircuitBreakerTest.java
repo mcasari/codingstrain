@@ -19,7 +19,7 @@ import io.github.resilience4j.circuitbreaker.CircuitBreaker;
 import io.github.resilience4j.circuitbreaker.CircuitBreakerRegistry;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
-class BooksControllerTest {
+class CircuitBreakerTest {
 
     @RegisterExtension
     static WireMockExtension mockService = WireMockExtension.newInstance()

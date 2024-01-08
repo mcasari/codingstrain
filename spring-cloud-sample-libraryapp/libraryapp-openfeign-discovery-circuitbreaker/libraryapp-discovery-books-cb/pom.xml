@@ -85,6 +85,11 @@
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 
+		<dependency>
+		    <groupId>io.github.resilience4j</groupId>
+		    <artifactId>resilience4j-spring-boot3</artifactId>
+		</dependency>
+		
 		<!-- Spring Cloud Contract Stub Runner -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
@@ -92,16 +97,12 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- Hoverfly -->
 		<dependency>
-		    <groupId>io.github.resilience4j</groupId>
-		    <artifactId>resilience4j-spring-boot3</artifactId>
+		    <groupId>io.specto</groupId>
+		    <artifactId>hoverfly-java</artifactId>
+		    <scope>test</scope>
 		</dependency>
-
-
-<!--		<dependency>-->
-<!--			<groupId>io.github.resilience4j</groupId>-->
-<!--			<artifactId>resilience4j-spring-boot2</artifactId>-->
-<!--		</dependency>-->
 	</dependencies>
 		
 	<build>
