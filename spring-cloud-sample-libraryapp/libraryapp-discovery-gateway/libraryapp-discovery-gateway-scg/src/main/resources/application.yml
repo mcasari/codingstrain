@@ -1,17 +1,19 @@
 spring:
    application:
       name: discovery-service
-   security:
-      user:
-         name: myusername
-         password: mypassword
-               
-eureka:
-   instance:
-      hostname: localhost
-   client:
-      registerWithEureka: false
-      fetchRegistry: false
-      
+   cloud:
+      gateway:
+         mvc:
+            enabled: 'true'
+         routes:
+            - id: after_route
+              uri: https://example.org
+              predicates:
+                 - After=2017-01-20T17:42:47.789-07:00[America/Denver]   
+            - id: add_request_header_route
+              uri: https://example.org
+              filters:
+                 - AddRequestHeader=X-Request-red, blue   
+                                       
 server:
    port: ${PORT:8760}
