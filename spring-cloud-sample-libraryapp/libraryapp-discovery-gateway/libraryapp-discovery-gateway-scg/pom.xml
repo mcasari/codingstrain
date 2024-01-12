@@ -4,9 +4,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>springcloud.sample.libraryapp.model</artifactId>
-	<name>springcloud.sample.libraryapp.model</name>
-	<packaging>jar</packaging>
+	<artifactId>springcloud.sample.libraryapp.gateway.server</artifactId>
+	<name>springcloud.sample.libraryapp.gateway.server</name>
 
 	<parent>
         <groupId>springcloud.sample</groupId>
@@ -26,15 +25,20 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-			
+
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 		</dependency>
 	</dependencies>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 </project>

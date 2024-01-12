@@ -22,10 +22,11 @@
 
 	<modules>
 		<module>libraryapp-discovery-authors-scg</module>
-		<module>libraryapp-discovery-reviews-scg</module>
-		<module>libraryapp-discovery-server-scg</module>
 		<module>libraryapp-discovery-books-scg</module>
+		<module>libraryapp-discovery-eureka-scg</module>
+		<module>libraryapp-discovery-gateway-scg</module>
 		<module>libraryapp-discovery-model-scg</module>
+		<module>libraryapp-discovery-reviews-scg</module>		
 	</modules>
 	
 </project>
