@@ -6,14 +6,13 @@ spring:
          mvc:
             enabled: 'true'
          routes:
-            - id: after_route
-              uri: https://example.org
-              predicates:
-                 - After=2017-01-20T17:42:47.789-07:00[America/Denver]   
             - id: add_request_header_route
-              uri: https://example.org
+              uri: http://book-service:8082/library/getAuthor
+              predicates:
+                 - Method=GET
+                 - Path=/api/{segment}
               filters:
-                 - AddRequestHeader=X-Request-red, blue   
+                 - AddRequestHeader=X-Request-red, blue-{segment}   
                                        
 server:
-   port: ${PORT:8760}
+   port: ${PORT:8080}
