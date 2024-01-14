@@ -1,18 +1,28 @@
 spring:
    application:
-      name: discovery-service
+      name: gateway-service
    cloud:
       gateway:
-         mvc:
-            enabled: 'true'
          routes:
             - id: add_request_header_route
-              uri: http://book-service:8082/library/getAuthor
+              uri: http://localhost:8090/library/getAuthor?authorName=Goethe
               predicates:
-                 - Method=GET
-                 - Path=/api/{segment}
+                 - Path=/library/**
               filters:
-                 - AddRequestHeader=X-Request-red, blue-{segment}   
-                                       
+                 - AddRequestHeader=My-Header-Good,Good
+                 
+management:
+   endpoint: 
+      health:
+         show-details: always
+   endpoints: 
+      web:
+         exposure:
+            include: '*' 
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    reactor.netty.http.client: DEBUG
+                                           
 server:
    port: ${PORT:8080}
