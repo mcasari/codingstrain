@@ -5,11 +5,12 @@ spring:
       gateway:
          routes:
             - id: add_request_header_route
-              uri: http://localhost:8090/library/getAuthor?authorName=Goethe
+              uri: http://localhost:8090
               predicates:
                  - Path=/library/**
               filters:
-                 - AddRequestHeader=My-Header-Good,Good
+                 - AddRequestHeader=X-Request-red, blue
+                 - AddRequestHeader=GGGGGG, G
                  
 management:
    endpoint: 
