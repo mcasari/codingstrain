@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 import com.codingstrain.springcloud.sample.libraryapp.authors.repository.AuthorRepository;
 import com.codingstrain.springcloud.sample.libraryapp.model.entity.Author;
 
+import io.micrometer.observation.annotation.Observed;
+
 @Service("authorService")
 public class AuthorService {
 
@@ -18,6 +20,7 @@ public class AuthorService {
     @Autowired
     private AuthorRepository authorRepository;
 
+    @Observed(name = "user.name", contextualName = "getting-user-name", lowCardinalityKeyValues = { "userType", "userType2" })
     public Optional<Author> findByName(String name) {
         return authorRepository.findById(name);
     }
