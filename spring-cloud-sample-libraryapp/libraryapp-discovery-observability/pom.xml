@@ -24,7 +24,6 @@
 		<module>libraryapp-discovery-authors-obs</module>
 		<module>libraryapp-discovery-books-obs</module>
 		<module>libraryapp-discovery-eureka-obs</module>
-		<module>libraryapp-discovery-gateway-obs</module>
 		<module>libraryapp-discovery-model-obs</module>		
 	</modules>
 	

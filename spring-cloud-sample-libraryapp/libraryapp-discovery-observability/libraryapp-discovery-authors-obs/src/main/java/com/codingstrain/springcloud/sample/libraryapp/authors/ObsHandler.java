@@ -11,9 +11,9 @@ import io.micrometer.observation.Observation;
 import io.micrometer.observation.ObservationHandler;
 
 @Component
-class MyHandler implements ObservationHandler<Observation.Context> {
+class ObsHandler implements ObservationHandler<Observation.Context> {
 
-    private static final Logger log = LoggerFactory.getLogger(MyHandler.class);
+    private static final Logger log = LoggerFactory.getLogger(ObsHandler.class);
 
     private String getUserTypeFromContext(Observation.Context context) {
         return StreamSupport.stream(context.getLowCardinalityKeyValues().spliterator(), false)
