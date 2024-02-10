@@ -17,9 +17,11 @@ class ReverseStringKeepSpecialCharsUnitTest {
         while (i < j) {
             if (!Character.isAlphabetic(chArray[i])) {
                 ++i;
+                continue;
             }
             if (!Character.isAlphabetic(chArray[j])) {
                 --j;
+                continue;
             }
             char temp = chArray[i];
             chArray[i] = chArray[j];
