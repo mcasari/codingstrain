@@ -1,4 +1,4 @@
-package com.codingstrain.cs.algorithms.strings.arrays;
+package com.codingstrain.cs.algorithms.arrays;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
