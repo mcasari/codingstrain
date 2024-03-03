@@ -35,10 +35,11 @@ public class BookController {
     }
 
     @GetMapping(value = "/getAuthor", params = { "authorName" })
-    public void getAuthor(@RequestParam("authorName") String authorName) {
+    public Optional<Author> getAuthor(@RequestParam("authorName") String authorName) {
         ObservationRegistry registry = ObservationRegistry.create();
         registry.observationConfig()
             .observationHandler(new ObsHandler());
+        ThreadLocal<Optional<Author>> thLocal = new ThreadLocal<Optional<Author>>();
         Observation.createNotStarted("my.observation", registry)
             .lowCardinalityKeyValue("authorType", "Poet")
             .highCardinalityKeyValue("authorName", authorName)
@@ -46,8 +47,11 @@ public class BookController {
             .observe(() -> {
                 logger.info("request to the server");
                 Optional<Author> response = bookService.getAuthor(authorName);
+                thLocal.set(response);
                 logger.info("response [{}]", response);
             });
+
+        return thLocal.get();
     }
 
 }
