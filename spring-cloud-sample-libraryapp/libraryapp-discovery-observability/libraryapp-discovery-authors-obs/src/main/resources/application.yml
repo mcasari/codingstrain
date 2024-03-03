@@ -18,7 +18,7 @@ spring:
       pathmatch:
          matching-strategy: ant_path_matcher
 
-# All traces should be sent to latency analysis tool         
+  
 management:
    tracing:
       sampling:
@@ -27,14 +27,13 @@ management:
       web:
          exposure:
             include: prometheus
-# For Exemplars to work we need histogram buckets
+
    metrics:
       distribution:
          percentiles-histogram:
             http:
                server:
-                  requests: 'true'
-# traceID and spanId are predefined MDC keys - we want the logs to include them                  
+                  requests: 'true'            
 logging:
   pattern:
     level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'

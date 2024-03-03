@@ -1,4 +1,4 @@
-package com.codingstrain.springcloud.sample.libraryapp.authors;
+package com.codingstrain.springcloud.sample.libraryapp.books;
 
 import java.util.stream.StreamSupport;
 

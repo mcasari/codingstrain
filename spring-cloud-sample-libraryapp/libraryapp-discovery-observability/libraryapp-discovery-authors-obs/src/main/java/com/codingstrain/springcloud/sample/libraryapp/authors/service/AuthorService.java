@@ -20,7 +20,7 @@ public class AuthorService {
     @Autowired
     private AuthorRepository authorRepository;
 
-    @Observed(name = "user.name", contextualName = "getting-user-name", lowCardinalityKeyValues = { "userType", "userType2" })
+    @Observed(name = "authorInfo", contextualName = "getting-author-info", lowCardinalityKeyValues = { "authorType", "Poet" })
     public Optional<Author> findByName(String name) {
         return authorRepository.findById(name);
     }
