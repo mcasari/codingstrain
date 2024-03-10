@@ -61,42 +61,11 @@
 			<version>${project.parent.version}</version>
 		</dependency>
 					
-		<!-- Actuator -->
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-
-		<!-- Prometheus -->
-		<dependency>
-			<groupId>io.micrometer</groupId>
-			<artifactId>micrometer-registry-prometheus</artifactId>
-		</dependency>
-
-		<!-- Zipkin Brave -->
-		<dependency>
-			<groupId>io.micrometer</groupId>
-			<artifactId>micrometer-tracing-bridge-brave</artifactId>
-		</dependency>
-
-		<!-- Zipkin Latency Visualization -->
-		<dependency>
-			<groupId>io.zipkin.reporter2</groupId>
-			<artifactId>zipkin-reporter-brave</artifactId>
-		</dependency>
-
-		<!-- Grafana Loki -->
-		<dependency>
-			<groupId>com.github.loki4j</groupId>
-			<artifactId>loki-logback-appender</artifactId>
-			<version>1.4.2</version>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-stream</artifactId>
 		</dependency>
 		
-		<!-- Openfeign Micrometer Support -->
-		<dependency>
-		    <groupId>io.github.openfeign</groupId>
-		     <artifactId>feign-micrometer</artifactId>
-		</dependency>
 	</dependencies>
 	
 	<build>

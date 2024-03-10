@@ -6,6 +6,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 
 @SpringBootApplication
 @EntityScan(basePackages = { "com.codingstrain.springcloud.sample.libraryapp.model" })
+
 public class AppMain {
 
 	public static void main(String[] args) {
