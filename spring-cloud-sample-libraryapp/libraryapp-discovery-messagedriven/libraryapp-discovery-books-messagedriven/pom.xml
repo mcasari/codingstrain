@@ -7,6 +7,10 @@
 	<artifactId>springcloud.sample.libraryapp.messagedriven.books</artifactId>
 	<name>springcloud.sample.libraryapp.messagedriven.books</name>
 
+    <properties>
+		<kafka.version>17</kafka.version>
+    </properties>
+    
 	<parent>
         <groupId>springcloud.sample</groupId>
 	    <artifactId>springcloud.sample.libraryapp.messagedriven</artifactId>
@@ -64,6 +68,26 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-stream</artifactId>
+		</dependency>
+		
+		<!--RabbitMQ-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-amqp</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-stream-binder-rabbit</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.amqp</groupId>
+			<artifactId>spring-rabbit-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-stream-test-binder</artifactId>
+			<scope>test</scope>
 		</dependency>
 		
 	</dependencies>
