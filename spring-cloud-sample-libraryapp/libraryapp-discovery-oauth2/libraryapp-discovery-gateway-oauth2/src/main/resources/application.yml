@@ -9,11 +9,11 @@ spring:
         - id: callme-service
           uri: http://localhost:8091
           predicates:
-            - Path=/callme/**
+            - Path=/authors/**
         - id: caller-service
           uri: http://localhost:8092
           predicates:
-            - Path=/caller/**
+            - Path=/library/**
    security:
     oauth2:
       resourceserver:
