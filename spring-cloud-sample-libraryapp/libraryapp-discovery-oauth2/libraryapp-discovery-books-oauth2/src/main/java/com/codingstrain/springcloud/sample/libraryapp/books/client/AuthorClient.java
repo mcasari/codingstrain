@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import com.codingstrain.springcloud.sample.libraryapp.books.OAuthFeignConfig;
 import com.codingstrain.springcloud.sample.libraryapp.model.entity.Author;
 
-@FeignClient(name = "author-service", url = "http://localhost:8092/", configuration = OAuthFeignConfig.class)
+@FeignClient(name = "author-service", configuration = OAuthFeignConfig.class)
 public interface AuthorClient {
 
     @GetMapping("/authors/author/{name}")
