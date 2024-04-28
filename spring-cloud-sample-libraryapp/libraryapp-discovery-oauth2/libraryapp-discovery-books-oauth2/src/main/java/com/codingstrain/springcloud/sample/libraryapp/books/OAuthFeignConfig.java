@@ -13,7 +13,6 @@ import feign.RequestInterceptor;
 
 public class OAuthFeignConfig {
 
-    public static final String CLIENT_REGISTRATION_ID = "keycloak";
 
     private final OAuth2AuthorizedClientService oAuth2AuthorizedClientService;
     private final ClientRegistrationRepository clientRegistrationRepository;
@@ -38,7 +37,7 @@ public class OAuthFeignConfig {
 
     @Bean
     public RequestInterceptor requestInterceptor() {
-        ClientRegistration clientRegistration = clientRegistrationRepository.findByRegistrationId(CLIENT_REGISTRATION_ID);
+        ClientRegistration clientRegistration = clientRegistrationRepository.findByRegistrationId("keycloak");
         OAuthClientCredentialsFeignManager clientCredentialsFeignManager =
             new OAuthClientCredentialsFeignManager(authorizedClientManager(), clientRegistration);
         return requestTemplate -> {
