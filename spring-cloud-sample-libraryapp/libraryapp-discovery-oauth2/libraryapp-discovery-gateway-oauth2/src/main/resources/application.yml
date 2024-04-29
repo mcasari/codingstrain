@@ -6,11 +6,11 @@ spring:
       default-filters:
         - TokenRelay=
       routes:
-        - id: callme-service
+        - id: author-service
           uri: http://localhost:8091
           predicates:
             - Path=/authors/**
-        - id: caller-service
+        - id: book-service
           uri: http://localhost:8092
           predicates:
             - Path=/library/**
@@ -27,7 +27,7 @@ spring:
           gateway-client:
             provider: keycloak
             client-id: gateway-client
-            client-secret: QSIbiMUAtQ3rduBxxf2lkJZ2rz7sk29O
+            client-secret: VvQXimbn43QmNLljL7f4EvWiBdXTLtRa
             authorization-grant-type: authorization_code
             scope: openid
 
