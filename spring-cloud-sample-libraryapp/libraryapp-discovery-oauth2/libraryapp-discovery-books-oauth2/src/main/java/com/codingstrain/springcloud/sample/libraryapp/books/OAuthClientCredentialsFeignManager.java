@@ -30,8 +30,6 @@ public class OAuthClientCredentialsFeignManager {
 
     private Authentication createPrincipal() {
         return new Authentication() {
-            private static final long serialVersionUID = 1L;
-
             @Override
             public Collection<? extends GrantedAuthority> getAuthorities() {
                 return Collections.emptySet();

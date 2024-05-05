@@ -1,5 +1,6 @@
 package com.codingstrain.springcloud.sample.libraryapp.books;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.oauth2.client.AuthorizedClientServiceOAuth2AuthorizedClientManager;
 import org.springframework.security.oauth2.client.OAuth2AuthorizedClientManager;
@@ -13,12 +14,14 @@ import feign.RequestInterceptor;
 
 public class OAuthFeignConfig {
 
+    public static final String CLIENT_REGISTRATION_ID = "keycloak";
 
-    private final OAuth2AuthorizedClientService oAuth2AuthorizedClientService;
-    private final ClientRegistrationRepository clientRegistrationRepository;
 
-    public OAuthFeignConfig(OAuth2AuthorizedClientService oAuth2AuthorizedClientService,
-            ClientRegistrationRepository clientRegistrationRepository) {
+    private OAuth2AuthorizedClientService oAuth2AuthorizedClientService;
+    private ClientRegistrationRepository clientRegistrationRepository;
+
+    @Autowired
+    public OAuthFeignConfig(OAuth2AuthorizedClientService oAuth2AuthorizedClientService, ClientRegistrationRepository clientRegistrationRepository) {
         this.oAuth2AuthorizedClientService = oAuth2AuthorizedClientService;
         this.clientRegistrationRepository = clientRegistrationRepository;
     }
@@ -37,9 +40,9 @@ public class OAuthFeignConfig {
 
     @Bean
     public RequestInterceptor requestInterceptor() {
-        ClientRegistration clientRegistration = clientRegistrationRepository.findByRegistrationId("keycloak");
-        OAuthClientCredentialsFeignManager clientCredentialsFeignManager =
-            new OAuthClientCredentialsFeignManager(authorizedClientManager(), clientRegistration);
+        ClientRegistration clientRegistration = clientRegistrationRepository.findByRegistrationId(CLIENT_REGISTRATION_ID);
+        OAuthClientCredentialsFeignManager clientCredentialsFeignManager = new OAuthClientCredentialsFeignManager(authorizedClientManager(),
+            clientRegistration);
         return requestTemplate -> {
             requestTemplate.header("Authorization", "Bearer " + clientCredentialsFeignManager.getAccessToken());
         };

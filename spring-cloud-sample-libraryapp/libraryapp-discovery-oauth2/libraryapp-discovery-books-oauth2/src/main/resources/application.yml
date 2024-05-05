@@ -1,6 +1,8 @@
 spring:
   application:
     name: book-service
+  main:
+    allow-bean-definition-overriding: true
   datasource:
     url: 'jdbc:h2:mem:mydb'
     username: sa
@@ -21,7 +23,19 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: 'http://localhost:8080/realms/demo/protocol/openid-connect/certs'
+          jwk-set-uri: 'http://localhost:8080/realms/test/protocol/openid-connect/certs'
+      client:
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8080/realms/test
+        registration:
+          gateway-client:
+            provider: keycloak
+            client-id: gateway-client
+            client-secret: VvQXimbn43QmNLljL7f4EvWiBdXTLtRa
+            authorization-grant-type: authorization_code
+            scope: openid 
+                                      
 eureka:
   client:
     serviceUrl:

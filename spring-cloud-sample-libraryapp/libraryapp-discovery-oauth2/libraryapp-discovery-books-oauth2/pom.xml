@@ -49,7 +49,6 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
-	
 		<dependency>
 			<groupId>com.codingstrain.springcloud.sample</groupId>
 			<artifactId>com.codingstrain.springcloud.sample.libraryapp.model</artifactId>
@@ -73,6 +72,11 @@
 		  <groupId>org.springframework.security</groupId>
 		  <artifactId>spring-security-oauth2-jose</artifactId>
 		</dependency>
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-okhttp</artifactId>
+        </dependency>
+		
 					
 	</dependencies>
 	
