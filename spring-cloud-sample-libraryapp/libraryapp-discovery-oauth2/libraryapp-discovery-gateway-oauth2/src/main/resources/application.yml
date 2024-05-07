@@ -18,11 +18,11 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: http://localhost:8080/realms/TEST-REALM/protocol/openid-connect/certs
+          jwk-set-uri: http://localhost:8080/realms/test/protocol/openid-connect/certs
       client:
         provider:
           keycloak:
-            issuer-uri: http://localhost:8080/realms/TEST-REALM
+            issuer-uri: http://localhost:8080/realms/test
         registration:
           gateway-client:
             provider: keycloak
