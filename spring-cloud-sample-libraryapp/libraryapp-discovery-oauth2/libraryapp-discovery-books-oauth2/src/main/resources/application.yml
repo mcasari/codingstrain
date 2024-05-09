@@ -34,7 +34,7 @@ spring:
             client-id: gateway-client
             client-secret: VvQXimbn43QmNLljL7f4EvWiBdXTLtRa
             authorization-grant-type: authorization_code
-            scope: openid 
+            scope: TEST 
                                       
 eureka:
   client:

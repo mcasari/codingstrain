@@ -19,7 +19,7 @@ public class AuthorController {
     @Autowired
     private AuthorService authorService;
 
-    @PreAuthorize("hasAuthority('SCOPE_TESTSCOPE')")
+    @PreAuthorize("hasAuthority('SCOPE_TEST')")
     @GetMapping("/author/{name}")
     public Optional<Author> findByName(@PathVariable("name") String name) {
         return authorService.findByName(name);

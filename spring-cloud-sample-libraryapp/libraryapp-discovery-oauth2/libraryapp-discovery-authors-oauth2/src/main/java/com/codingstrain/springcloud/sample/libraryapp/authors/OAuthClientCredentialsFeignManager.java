@@ -1,4 +1,6 @@
-package com.codingstrain.springcloud.sample.libraryapp.books;
+package com.codingstrain.springcloud.sample.libraryapp.authors;
+
+import static java.util.Objects.isNull;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -7,10 +9,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.oauth2.client.OAuth2AuthorizeRequest;
+import org.springframework.security.oauth2.client.OAuth2AuthorizedClient;
 import org.springframework.security.oauth2.client.OAuth2AuthorizedClientManager;
 import org.springframework.security.oauth2.client.registration.ClientRegistration;
-import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationToken;
 
 public class OAuthClientCredentialsFeignManager {
 
@@ -66,12 +68,15 @@ public class OAuthClientCredentialsFeignManager {
 
     public String getAccessToken() {
         try {
-            Authentication authentication = SecurityContextHolder.getContext()
-                .getAuthentication();
-            String tokenValue = ((JwtAuthenticationToken) authentication).getToken()
-                .getTokenValue();
-            return tokenValue;
-
+            OAuth2AuthorizeRequest oAuth2AuthorizeRequest = OAuth2AuthorizeRequest
+                .withClientRegistrationId(clientRegistration.getRegistrationId())
+                .principal(principal)
+                .build();
+            OAuth2AuthorizedClient client = manager.authorize(oAuth2AuthorizeRequest);
+            if (isNull(client)) {
+                throw new IllegalStateException("client credentials flow on " + clientRegistration.getRegistrationId() + " failed, client is null");
+            }
+            return client.getAccessToken().getTokenValue();
         } catch (Exception exp) {
             logger.error("client credentials error " + exp.getMessage());
         }

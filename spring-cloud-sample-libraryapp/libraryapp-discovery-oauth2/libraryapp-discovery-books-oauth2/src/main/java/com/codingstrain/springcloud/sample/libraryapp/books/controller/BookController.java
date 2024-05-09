@@ -23,10 +23,16 @@ public class BookController {
     @Autowired
     private BookService bookService;
 
-    @PreAuthorize("hasAuthority('SCOPE_TESTSCOPE')")
+    @PreAuthorize("hasAuthority('SCOPE_TEST')")
     @GetMapping(value = "/authorInfo", params = { "authorName" })
     public Optional<Author> getAuthor(@RequestParam("authorName") String authorName) {
         return bookService.getAuthor(authorName);
+    }
+
+    @PreAuthorize("hasAuthority('SCOPE_TEST')")
+    @GetMapping(value = "/ping")
+    public String ping() {
+        return "fffff";
     }
 
 }
