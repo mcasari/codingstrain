@@ -62,10 +62,6 @@
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
 		<dependency>
-		    <groupId>org.springframework.security</groupId>
-		    <artifactId>spring-security-oauth2-client</artifactId>
-		</dependency>
-		<dependency>
 		  <groupId>org.springframework.security</groupId>
 		  <artifactId>spring-security-oauth2-resource-server</artifactId>
 		</dependency>
