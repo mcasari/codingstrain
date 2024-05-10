@@ -17,11 +17,7 @@ spring:
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          jwk-set-uri: 'http://localhost:8080/realms/test/protocol/openid-connect/certs'
+
 eureka:
   client:
     serviceUrl:

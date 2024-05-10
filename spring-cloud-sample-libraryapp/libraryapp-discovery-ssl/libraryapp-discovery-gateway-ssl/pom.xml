@@ -37,21 +37,7 @@
 		  <groupId>org.springframework.boot</groupId>
 		  <artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
-		
-		<!-- Oauth2 -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-oauth2-client</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-oauth2-resource-server</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-oauth2-jose</artifactId>
-		</dependency>
-		
+				
 		<!-- Actuator -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

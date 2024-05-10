@@ -19,22 +19,7 @@ spring:
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          jwk-set-uri: 'http://localhost:8080/realms/test/protocol/openid-connect/certs'
-      client:
-        provider:
-          keycloak:
-            issuer-uri: http://localhost:8080/realms/test
-        registration:
-          gateway-client:
-            provider: keycloak
-            client-id: gateway-client
-            client-secret: VvQXimbn43QmNLljL7f4EvWiBdXTLtRa
-            authorization-grant-type: authorization_code
-            scope: TEST 
+
                                       
 eureka:
   client:
