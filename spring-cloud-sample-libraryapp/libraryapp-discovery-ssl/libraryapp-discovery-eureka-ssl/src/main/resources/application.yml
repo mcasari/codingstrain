@@ -9,9 +9,22 @@ spring:
 eureka:
    instance:
       hostname: localhost
+      securePort: ${server.port}
+      securePortEnabled: true  
+      nonSecurePortEnabled: false 
+      homePageUrl: https://${eureka.instance.hostname}:${server.port}/
+      statusPageUrl: https://${eureka.instance.hostname}:${server.port}/admin/info
    client:
       registerWithEureka: false
       fetchRegistry: false
       
 server:
    port: ${PORT:8760}
+   ssl:
+      enabled: true
+      client-auth: need
+      key-store: classpath:discovery.jks
+      key-store-password: 123456
+      trust-store: classpath:discovery.jks
+      trust-store-password: 123456
+      key-alias: discovery
