@@ -5,4 +5,4 @@ keytool -exportcert -alias discovery -keystore discovery.p12 -file discovery.cer
 keytool -exportcert -alias books -keystore books.p12 -file books.cer
 
 keytool -importcert -alias books -keystore discovery.p12 -file books.cer
-keytool -importcert -alias discovery -keystore books.p12 -file authors.cer
+keytool -importcert -alias discovery -keystore books.p12 -file discovery.cer
