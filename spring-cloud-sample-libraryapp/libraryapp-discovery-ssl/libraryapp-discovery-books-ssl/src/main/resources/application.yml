@@ -24,6 +24,17 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: 'http://myusername:mypassword@localhost:8760/eureka/'
+      defaultZone: 'https://myusername:mypassword@localhost:8760/eureka/'
+    tls:
+      enabled: true
+      key-store: classpath:books.p12
+      key-store-type: PKCS12
+      key-store-password: mypass
+      key-password: mypass
+      trust-store: classpath:books.p12
+      trust-store-type: PKCS12
+      trust-store-password: mypass
+      key-alias: books
+        
 server:
   port: '${PORT:8092}'
