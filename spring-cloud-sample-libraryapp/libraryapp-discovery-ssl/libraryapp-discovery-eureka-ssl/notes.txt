@@ -1,29 +1,8 @@
+keytool -genkey -alias discovery -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore discovery.p12 -validity 365
+keytool -genkey -alias books -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore books.p12 -validity 365
 
+keytool -exportcert -alias discovery -keystore discovery.p12 -file discovery.cer
+keytool -exportcert -alias books -keystore books.p12 -file books.cer
 
-keytool -genkey -alias discovery -storetype JKS -keyalg RSA -keysize 2048 -keystore discovery.jks -validity 365
-keytool -genkey -alias books -storetype JKS -keyalg RSA -keysize 2048 -keystore books.jks -validity 365
-keytool -genkey -alias authors -storetype JKS -keyalg RSA -keysize 2048 -keystore authors.jks -validity 365
-
-keytool -exportcert -alias discovery -keystore discovery.jks -file discovery.cer
-keytool -exportcert -alias books -keystore books.jks -file books.cer
-keytool -exportcert -alias authors -keystore authors.jks -file authors.cer
-
-keytool importcert -alias books -keystore discovery.jks -file books.cer
-keytool importcert -alias authors -keystore discovery.jks -file authors.cer
-keytool importcert -alias discovery -keystore books.jks -file authors.cer
-keytool importcert -alias discovery -keystore authors.jks -file authors.cer
-
-
-
-keytool -genkey -alias discovery -storetype JKS -keyalg RSA -keysize 2048 -keystore discovery.jks -validity 365
-keytool -genkey -alias books -storetype JKS -keyalg RSA -keysize 2048 -keystore books.jks -validity 365
-keytool -genkey -alias authors -storetype JKS -keyalg RSA -keysize 2048 -keystore authors.jks -validity 365
-
-keytool -exportcert -alias discovery -keystore discovery.jks -file discovery.cer
-keytool -exportcert -alias books -keystore books.jks -file books.cer
-keytool -exportcert -alias authors -keystore authors.jks -file authors.cer
-
-keytool importcert -alias books -keystore discovery.jks -file books.cer
-keytool importcert -alias authors -keystore discovery.jks -file authors.cer
-keytool importcert -alias discovery -keystore books.jks -file authors.cer
-keytool importcert -alias discovery -keystore authors.jks -file authors.cer
+keytool importcert -alias books -keystore discovery.p12 -file books.cer
+keytool importcert -alias discovery -keystore books.p12 -file authors.cer
