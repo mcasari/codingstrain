@@ -54,10 +54,6 @@
 			<artifactId>com.codingstrain.springcloud.sample.libraryapp.model</artifactId>
 			<version>${project.parent.version}</version>
 		</dependency>
-		
-		
-
-
 					
 	</dependencies>
 	

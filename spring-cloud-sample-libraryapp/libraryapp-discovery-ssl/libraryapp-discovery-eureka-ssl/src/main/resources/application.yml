@@ -16,9 +16,6 @@ eureka:
       homePageUrl: https://${eureka.instance.hostname}:${server.port}/
       statusPageUrl: https://${eureka.instance.hostname}:${server.port}/admin/info
       healthCheckUrl: https://${eureka.instance.hostname}:${server.port}/health
-   metadataMap:
-      hostname : ${eureka.instance.hostname}
-      securePort: ${server.port}
    client:
       registerWithEureka: false
       fetchRegistry: false
@@ -27,6 +24,7 @@ server:
    port: ${PORT:8760}
    ssl:
       enabled: true
+      client-auth: need
       key-store: classpath:discovery.p12
       key-store-type: PKCS12
       key-store-password: mypass
