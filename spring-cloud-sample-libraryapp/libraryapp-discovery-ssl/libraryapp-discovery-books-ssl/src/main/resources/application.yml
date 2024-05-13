@@ -34,7 +34,6 @@ eureka:
       trust-store: classpath:books.p12
       trust-store-type: PKCS12
       trust-store-password: mypass
-      key-alias: books
         
 server:
   port: '${PORT:8092}'

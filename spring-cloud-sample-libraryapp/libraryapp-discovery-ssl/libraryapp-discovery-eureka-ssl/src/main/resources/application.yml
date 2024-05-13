@@ -33,4 +33,3 @@ server:
       trust-store: classpath:discovery.p12
       trust-store-type: PKCS12
       trust-store-password: mypass
-      key-alias: discovery
