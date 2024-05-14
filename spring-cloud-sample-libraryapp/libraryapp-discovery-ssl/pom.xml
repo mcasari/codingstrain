@@ -21,10 +21,9 @@
 	</parent>
 
 	<modules>
-		<module>libraryapp-discovery-authors-ssl</module>
 		<module>libraryapp-discovery-books-ssl</module>
 		<module>libraryapp-discovery-eureka-ssl</module>
-		<module>libraryapp-discovery-gateway-ssl</module>
+		<module>libraryapp-discovery-config-ssl</module>
 		<module>libraryapp-discovery-model-ssl</module>		
 	</modules>
 	
