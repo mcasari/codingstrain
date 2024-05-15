@@ -1,21 +1,28 @@
-server:  
+server:
   port: ${PORT:8888}
-  
+#  ssl:
+#    enabled: true
+#    client-auth: need
+#    key-store: classpath:discovery.jks
+#    key-store-password: 123456
+#    trust-store: classpath:discovery.jks
+#    trust-store-password: 123456
+#    key-alias: discovery
+
 spring:
   application:
-    name: config-server
-  security:
-    user:
-      name: myusername
-      password: mypassword   
+    name: config-service
   cloud:
-   config:
-     server:
-       git:
-         uri: https://github.com/mcasari/spring-cloud-config-git-server-repo.git
-         cloneOnStart: true
+    config:
+      server:
+        encrypt:
+          enabled: false
+  profiles:
+    active: native
+
 encrypt:
-  key-store:
+  keyStore:
     location: classpath:/config.p12
     password: mypass
     alias: config
+    secret: mypass
