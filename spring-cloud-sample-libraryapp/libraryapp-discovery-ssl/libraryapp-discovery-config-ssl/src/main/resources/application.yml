@@ -15,7 +15,7 @@ spring:
   cloud:
     config:
       server:
-        encrypt:
+        decrypt:
           enabled: false
   profiles:
     active: native
