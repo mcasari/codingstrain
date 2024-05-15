@@ -8,12 +8,7 @@ spring:
   security:
      user:
         name: username
-        password: pass
-  rabbitmq:
-     host: localhost
-     port: 5672
-     username: guest
-     password: guest 
+        password: pass 
    
 management:
    endpoint: 
@@ -25,9 +20,4 @@ management:
             include: '*'
 
 myproperty: value22222
-
-myproperties:
-   properties:
-      - value1
-      - value2
       
