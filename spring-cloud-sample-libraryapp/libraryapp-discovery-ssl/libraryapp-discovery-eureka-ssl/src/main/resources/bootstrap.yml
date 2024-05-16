@@ -1,6 +1,6 @@
 spring:  
   application:
-    name: book-service
+    name: discovery-service
   config:
     import: "optional:configserver:"
 #    import: "optional:configserver:http://localhost:8888"

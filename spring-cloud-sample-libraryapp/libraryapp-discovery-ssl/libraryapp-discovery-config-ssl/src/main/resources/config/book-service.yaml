@@ -1,0 +1,39 @@
+server:
+  port: ${PORT:8092}
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    url: 'jdbc:h2:mem:mydb'
+    username: sa
+    password: pass
+    driverClassName: org.h2.Driver
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+  sql:
+    init:
+      mode: always
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+                                      
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: 'https://myusername:mypassword@localhost:8760/eureka/'
+    tls:
+      enabled: true
+      key-store: classpath:books.p12
+      key-store-type: PKCS12
+      key-store-password: mypass
+      key-password: mypass
+      trust-store: classpath:books.p12
+      trust-store-type: PKCS12
+      trust-store-password: mypass
+            
+myproperty: value22222
+      
