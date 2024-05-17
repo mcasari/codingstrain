@@ -8,3 +8,9 @@ spring:
     config:
       username: myusername
       password: mypassword
+
+      
+eureka:
+   client:
+      registerWithEureka: false
+      fetchRegistry: false

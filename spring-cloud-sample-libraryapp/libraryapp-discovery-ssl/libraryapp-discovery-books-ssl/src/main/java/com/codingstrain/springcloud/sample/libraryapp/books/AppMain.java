@@ -48,7 +48,7 @@ public class AppMain {
         SSLConnectionSocketFactory sslConFactory = new SSLConnectionSocketFactory(sslContext);
         HttpClientConnectionManager cm = PoolingHttpClientConnectionManagerBuilder.create()
             .setSSLSocketFactory(sslConFactory)
-                .build();
+            .build();
         CloseableHttpClient httpClient = HttpClients.custom()
             .setConnectionManager(cm)
             .build();
