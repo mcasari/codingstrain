@@ -5,13 +5,16 @@ server:
 spring:
   application:
     name: config-service
+  security:
+    user:
+      name: myusername
+      password: mypassword  
   cloud:
-    config:
-      server:
-        decrypt:
-          enabled: false
-  profiles:
-    active: native
+   config:
+     server:
+       git:
+         uri: https://github.com/mcasari/spring-cloud-config-git-server-repo.git
+         cloneOnStart: true
 
 encrypt:
   keyStore:
