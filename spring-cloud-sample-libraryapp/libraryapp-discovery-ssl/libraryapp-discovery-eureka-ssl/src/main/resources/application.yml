@@ -1,31 +1,35 @@
-spring:
-   application:
-      name: discovery-service
-   security:
-      user:
-         name: myusername
-         password: mypassword
-               
-server:
-   port: ${PORT:8760}             
+spring:  
+  application:
+    name: discovery-service
+
+server:  
+  port: ${PORT:8760}
+  ssl:
+    enabled: true
+    client-auth: need
+    key-store: classpath:discovery.p12
+    key-store-type: PKCS12
+    key-store-password: mypass
+    trust-store: classpath:discovery.p12
+    trust-store-type: PKCS12
+    trust-store-password: mypass
+    key-alias: discovery
+    
+security:
+  require-ssl: true
+        
 eureka:
-   instance:
-      hostname: localhost
+  instance:
+    hostname: localhost
+    securePort: ${server.port}
+    securePortEnabled: true  
+    nonSecurePortEnabled: false 
+    secureVirtualHostName: ${spring.application.name}
+    homePageUrl: https://${eureka.instance.hostname}:${server.port}/
+    statusPageUrl: https://${eureka.instance.hostname}:${server.port}/admin/info
+    metadataMap:
+      hostname : ${eureka.instance.hostname}
       securePort: ${server.port}
-      securePortEnabled: true  
-      nonSecurePortEnabled: false 
-      homePageUrl: https://${eureka.instance.hostname}:${server.port}/
-      statusPageUrl: https://${eureka.instance.hostname}:${server.port}/admin/info
-      healthCheckUrl: https://${eureka.instance.hostname}:${server.port}/health
-   client:
-      registerWithEureka: false
-      fetchRegistry: false
-   ssl:
-      enabled: true
-      client-auth: need
-      key-store: classpath:discovery.p12
-      key-store-type: PKCS12
-      key-store-password: mypass
-      trust-store: classpath:discovery.p12
-      trust-store-type: PKCS12
-      trust-store-password: mypass
+  client:
+    registerWithEureka: false
+    fetchRegistry: false

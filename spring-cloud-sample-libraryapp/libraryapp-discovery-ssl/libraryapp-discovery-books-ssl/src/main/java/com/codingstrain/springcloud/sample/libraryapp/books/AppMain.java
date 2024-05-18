@@ -2,6 +2,7 @@ package com.codingstrain.springcloud.sample.libraryapp.books;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.net.URL;
 import java.security.KeyManagementException;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
@@ -20,9 +21,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
-import org.springframework.core.io.Resource;
 import org.springframework.http.client.ClientHttpRequestFactory;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
@@ -30,7 +32,7 @@ import org.springframework.web.client.RestTemplate;
 public class AppMain {
 
     @Value("${eureka.client.tls.trust-store}")
-    private Resource trustStore;
+    private String trustStore;
 
     @Value("${eureka.client.tls.trust-store-password}")
     private String trustStorePassword;
@@ -39,11 +41,13 @@ public class AppMain {
         SpringApplication.run(AppMain.class, args);
     }
 
+
     @Bean
     public RestTemplate restTemplate() throws KeyManagementException, NoSuchAlgorithmException, KeyStoreException, CertificateException, MalformedURLException,
                                        IOException {
 
-        SSLContext sslContext = new SSLContextBuilder().loadTrustMaterial(trustStore.getURL(), trustStorePassword.toCharArray())
+        URL url = new URL(trustStore);
+        SSLContext sslContext = new SSLContextBuilder().loadTrustMaterial(url, trustStorePassword.toCharArray())
             .build();
         SSLConnectionSocketFactory sslConFactory = new SSLConnectionSocketFactory(sslContext);
         HttpClientConnectionManager cm = PoolingHttpClientConnectionManagerBuilder.create()
@@ -54,6 +58,12 @@ public class AppMain {
             .build();
         ClientHttpRequestFactory requestFactory = new HttpComponentsClientHttpRequestFactory(httpClient);
         return new RestTemplate(requestFactory);
+    }
+
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        http.csrf((csrf) -> csrf.disable());
+        return http.build();
     }
 
 
