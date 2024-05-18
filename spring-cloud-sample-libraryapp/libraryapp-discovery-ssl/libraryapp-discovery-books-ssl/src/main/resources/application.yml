@@ -1,3 +1,5 @@
+server:
+  port: '${PORT:8092}'
 spring:
   application:
     name: book-service
@@ -23,7 +25,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: 'http://localhost:8760/eureka/'
+      defaultZone: 'https://localhost:8760/eureka/'
     tls:
       enabled: true
       key-store: classpath:books.p12
@@ -34,6 +36,5 @@ eureka:
       trust-store-type: PKCS12
       trust-store-password: mypass
                                       
-server:
-  port: '${PORT:8092}'
+
 

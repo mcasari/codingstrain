@@ -23,8 +23,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.client.ClientHttpRequestFactory;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
@@ -60,11 +58,11 @@ public class AppMain {
         return new RestTemplate(requestFactory);
     }
 
-    @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.csrf((csrf) -> csrf.disable());
-        return http.build();
-    }
+    //    @Bean
+    //    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+    //        http.csrf((csrf) -> csrf.disable());
+    //        return http.build();
+    //    }
 
 
 }
