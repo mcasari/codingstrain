@@ -3,6 +3,9 @@ package com.codingstrain.springcloud.sample.libraryapp.discoveryserver;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.web.SecurityFilterChain;
 
 
 
@@ -14,5 +17,13 @@ public class AppMain {
         new SpringApplicationBuilder(AppMain.class).run(args);
 	}
 
+    @Bean
+    SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+        return http.requiresChannel(channel -> channel.anyRequest()
+            .requiresSecure())
+            .authorizeHttpRequests(authorize -> authorize.anyRequest()
+                .permitAll())
+            .build();
+    }
 
 }

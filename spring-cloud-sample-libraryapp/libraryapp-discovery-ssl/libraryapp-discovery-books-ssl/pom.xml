@@ -45,8 +45,8 @@
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>com.codingstrain.springcloud.sample</groupId>
-			<artifactId>com.codingstrain.springcloud.sample.libraryapp.model</artifactId>
+			<groupId>springcloud.sample</groupId>
+			<artifactId>springcloud.sample.libraryapp.ssl.model</artifactId>
 			<version>${project.parent.version}</version>
 		</dependency>
 		
