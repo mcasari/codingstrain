@@ -19,6 +19,7 @@ import org.apache.hc.core5.ssl.SSLContextBuilder;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.client.ClientHttpRequestFactory;
@@ -27,6 +28,7 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableFeignClients
+@RefreshScope
 public class AppMain {
 
     @Value("${eureka.client.tls.trust-store}")
@@ -57,12 +59,6 @@ public class AppMain {
         ClientHttpRequestFactory requestFactory = new HttpComponentsClientHttpRequestFactory(httpClient);
         return new RestTemplate(requestFactory);
     }
-
-    //    @Bean
-    //    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-    //        http.csrf((csrf) -> csrf.disable());
-    //        return http.build();
-    //    }
 
 
 }
