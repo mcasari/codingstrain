@@ -60,5 +60,14 @@ public class AppMain {
         return new RestTemplate(requestFactory);
     }
 
+    //    @Bean
+    //    SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+    //        return http.requiresChannel(channel -> channel.anyRequest()
+    //            .requiresSecure())
+    //            .authorizeHttpRequests(authorize -> authorize.anyRequest()
+    //                .permitAll())
+    //            .build();
+    //    }
+
 
 }
