@@ -4,8 +4,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>springcloud.sample.libraryapp.ssl.books</artifactId>
-	<name>springcloud.sample.libraryapp.ssl.books</name>
+	<artifactId>springcloud.sample.libraryapp.ssl.client</artifactId>
+	<name>springcloud.sample.libraryapp.ssl.client</name>
 
 	<parent>
         <groupId>springcloud.sample</groupId>
@@ -50,10 +50,6 @@
 			<version>${project.parent.version}</version>
 		</dependency>
 		
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-config</artifactId>
-		</dependency>
 		<dependency>
 		  <groupId>org.springframework.boot</groupId>
 		  <artifactId>spring-boot-starter-security</artifactId>
