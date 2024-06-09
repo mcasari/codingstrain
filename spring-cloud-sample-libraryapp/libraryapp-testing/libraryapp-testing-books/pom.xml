@@ -61,13 +61,13 @@
 		<dependency>
 		    <groupId>au.com.dius.pact.consumer</groupId>
 		    <artifactId>junit5</artifactId>
-		    <version>4.2.10</version>
+		    <version>4.6.10</version>
 		    <scope>test</scope>
 		</dependency>
 		<dependency>
 		    <groupId>au.com.dius.pact.provider</groupId>
 		    <artifactId>junit5spring</artifactId>
-		    <version>4.2.10</version>
+		    <version>4.6.10</version>
 		    <scope>test</scope>
 		</dependency>
 				
@@ -99,7 +99,6 @@
 			 <configuration>
 			   <pactDirectory>target/pacts</pactDirectory> <!-- Defaults to ${project.build.directory}/pacts -->
 			   <pactBrokerUrl>http://localhost:9292</pactBrokerUrl>
-			   <projectVersion>1.0.100</projectVersion> <!-- Defaults to ${project.version} -->
 			   <trimSnapshot>true</trimSnapshot> <!-- Defaults to false -->
 			</configuration>
 			</plugin>
