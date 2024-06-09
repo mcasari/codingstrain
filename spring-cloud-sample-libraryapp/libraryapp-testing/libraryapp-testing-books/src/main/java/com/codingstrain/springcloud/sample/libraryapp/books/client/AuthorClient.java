@@ -4,14 +4,14 @@ import java.util.Optional;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.codingstrain.springcloud.sample.libraryapp.model.entity.Author;
 
-@FeignClient(name = "author-service")
+@FeignClient(name = "author-service", url = "http://localhost:8091/authors")
 public interface AuthorClient {
 
-    @GetMapping("/authors/author/{name}")
-    public Optional<Author> findByName(@PathVariable("name") String name);
+    @GetMapping(value = "/findAuthor", params = { "name" })
+    public Optional<Author> findByName(@RequestParam("name") String name);
 
 }

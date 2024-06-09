@@ -18,9 +18,9 @@ public class AuthorController {
     @Autowired
     private AuthorService authorService;
 
-    @GetMapping(value = "/findAuthor", params = { "authorName" })
-    public Optional<Author> findByName(@RequestParam("authorName") String authorName) {
-        return authorService.findByName(authorName);
+    @GetMapping(value = "/findAuthor", params = { "name" })
+    public Optional<Author> findByName(@RequestParam("name") String name) {
+        return authorService.findByName(name);
     }
 
 }

@@ -32,19 +32,20 @@
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>org.springframework.cloud</groupId>
-		    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-		</dependency>
-
-		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
@@ -56,20 +57,20 @@
 			<version>${project.parent.version}</version>
 		</dependency>
 
-
+		        
 		<dependency>
-			<groupId>au.com.dius</groupId>
-			<artifactId>pact-jvm-consumer-junit5_2.12</artifactId>
-			<version>3.6.3</version>
-			<scope>test</scope>
+		    <groupId>au.com.dius.pact.consumer</groupId>
+		    <artifactId>junit5</artifactId>
+		    <version>4.2.10</version>
+		    <scope>test</scope>
 		</dependency>
-		
 		<dependency>
-		    <groupId>au.com.dius</groupId>
-		    <artifactId>pact-jvm-provider-junit5_2.12</artifactId>
-		    <version>3.6.3</version>
+		    <groupId>au.com.dius.pact.provider</groupId>
+		    <artifactId>junit5spring</artifactId>
+		    <version>4.2.10</version>
+		    <scope>test</scope>
 		</dependency>
-		
+				
 		<dependency>
 		    <groupId>org.assertj</groupId>
 		    <artifactId>assertj-core</artifactId>
@@ -82,19 +83,27 @@
 	
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
                     <systemPropertyVariables>
-                        <pact.rootDir>target/mypacts</pact.rootDir>
+                        <pact.rootDir>target/pacts</pact.rootDir>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
+			<plugin>
+			 <groupId>au.com.dius</groupId>
+			 <artifactId>pact-jvm-provider-maven_2.11</artifactId>
+			 <version>3.5.24</version>
+			 <configuration>
+			   <pactDirectory>target/pacts</pactDirectory> <!-- Defaults to ${project.build.directory}/pacts -->
+			   <pactBrokerUrl>http://localhost:9292</pactBrokerUrl>
+			   <projectVersion>1.0.100</projectVersion> <!-- Defaults to ${project.version} -->
+			   <trimSnapshot>true</trimSnapshot> <!-- Defaults to false -->
+			</configuration>
+			</plugin>
 		</plugins>
 	</build>
+	
 </project>

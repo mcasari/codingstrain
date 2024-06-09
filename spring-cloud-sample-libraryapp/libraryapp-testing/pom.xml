@@ -23,8 +23,6 @@
 	<modules>
 		<module>libraryapp-testing-authors</module>
 		<module>libraryapp-testing-books</module>
-		<module>libraryapp-testing-eureka</module>
-		<module>libraryapp-testing-gateway</module>
 		<module>libraryapp-testing-model</module>		
 	</modules>
 	
