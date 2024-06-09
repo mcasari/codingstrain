@@ -7,7 +7,10 @@ import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.client.RestTemplate;
+
+import com.codingstrain.springcloud.sample.libraryapp.books.client.AuthorClient;
 
 import au.com.dius.pact.consumer.MockServer;
 import au.com.dius.pact.consumer.dsl.PactDslWithProvider;
@@ -18,6 +21,9 @@ import au.com.dius.pact.core.model.annotations.Pact;
 
 @ExtendWith(PactConsumerTestExt.class)
 public class PactConsumerDrivenContractUnitTest {
+
+    @Autowired
+    private AuthorClient authorClient;
 
     @Pact(consumer = "ConsumerService", provider = "ProviderService")
     public V4Pact createPact(PactDslWithProvider builder) {
@@ -43,6 +49,7 @@ public class PactConsumerDrivenContractUnitTest {
         RestTemplate restTemplate = new RestTemplate();
         String response = restTemplate.getForObject(mockServer.getUrl() + "/authors/findAuthor?name=Goethe", String.class);
         assertEquals("{\"name\":\"Goethe\",\"biography\":\"Bio info\"}", response);
+
     }
 
 }
