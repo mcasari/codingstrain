@@ -21,11 +21,11 @@
 	</parent>
 
 	<modules>
-		<module>libraryapp-discovery-authors-oauth2</module>
-		<module>libraryapp-discovery-books-oauth2</module>
-		<module>libraryapp-discovery-eureka-oauth2</module>
-		<module>libraryapp-discovery-gateway-oauth2</module>
-		<module>libraryapp-discovery-model-oauth2</module>		
+		<module>libraryapp-testing-authors</module>
+		<module>libraryapp-testing-books</module>
+		<module>libraryapp-testing-eureka</module>
+		<module>libraryapp-testing-gateway</module>
+		<module>libraryapp-testing-model</module>		
 	</modules>
 	
 </project>

@@ -1,4 +1,4 @@
-package com.baeldung.pact;
+package com.codingstrain.pact;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -39,14 +39,6 @@ public class PactConsumerDrivenContractUnitTest {
             .status(200)
             .headers(headers)
             .body("{\"condition\": true, \"name\": \"tom\"}")
-          .given("test POST")
-            .uponReceiving("POST REQUEST")
-            .method("POST")
-            .headers(headers)
-            .body("{\"name\": \"Michael\"}")
-            .path("/pact")
-          .willRespondWith()
-            .status(201)
           .toPact();
     }
 

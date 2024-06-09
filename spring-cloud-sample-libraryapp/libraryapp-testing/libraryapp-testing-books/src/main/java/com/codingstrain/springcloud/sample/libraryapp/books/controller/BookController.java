@@ -22,7 +22,7 @@ public class BookController {
     @Autowired
     private BookService bookService;
 
-    @GetMapping(value = "/authorInfo", params = { "authorName" })
+    @GetMapping(value = "/findAuthor", params = { "authorName" })
     public Optional<Author> getAuthor(@RequestParam("authorName") String authorName) {
         return bookService.getAuthor(authorName);
     }
