@@ -4,12 +4,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>springcloud.sample.libraryapp.testing.books</artifactId>
-	<name>springcloud.sample.libraryapp.testing.books</name>
+	<artifactId>springcloud.sample.libraryapp.testing.contract.authors</artifactId>
+	<name>springcloud.sample.libraryapp.testing.contract.authors</name>
+	<packaging>jar</packaging>
 
 	<parent>
         <groupId>springcloud.sample</groupId>
-	    <artifactId>springcloud.sample.libraryapp.testing</artifactId>
+	    <artifactId>springcloud.sample.libraryapp.testing.contract</artifactId>
 	    <version>1.0-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
@@ -25,16 +26,11 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-
-	<dependencies>		
+			
+	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
 		</dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -42,8 +38,9 @@
         </dependency>
 
 		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-openfeign</artifactId>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 		
 		<dependency>
@@ -52,28 +49,19 @@
 			<version>${project.parent.version}</version>
 		</dependency>
 
-		        
 		<dependency>
-		    <groupId>au.com.dius.pact.consumer</groupId>
-		    <artifactId>junit5</artifactId>
-		    <version>4.6.10</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.springframework.cloud</groupId>
+		    <artifactId>spring-cloud-starter-contract-verifier</artifactId>
 		    <scope>test</scope>
 		</dependency>
-		<dependency>
-		    <groupId>au.com.dius.pact.provider</groupId>
-		    <artifactId>junit5spring</artifactId>
-		    <version>4.6.10</version>
-		    <scope>test</scope>
-		</dependency>
-				
-		<dependency>
-		    <groupId>org.assertj</groupId>
-		    <artifactId>assertj-core</artifactId>
-		    <scope>test</scope>
-		</dependency>
-
 	
-					
+
 	</dependencies>
 	
 	<build>
@@ -81,23 +69,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <configuration>
-                    <systemPropertyVariables>
-                        <pact.rootDir>target/pacts</pact.rootDir>
-                    </systemPropertyVariables>
-                </configuration>
             </plugin>
-			<plugin>
-			 <groupId>au.com.dius</groupId>
-			 <artifactId>pact-jvm-provider-maven_2.11</artifactId>
-			 <version>3.5.24</version>
-			 <configuration>
-			   <pactDirectory>target/pacts</pactDirectory> <!-- Defaults to ${project.build.directory}/pacts -->
-			   <pactBrokerUrl>http://localhost:9292</pactBrokerUrl>
-			   <trimSnapshot>true</trimSnapshot> <!-- Defaults to false -->
-			</configuration>
-			</plugin>
 		</plugins>
 	</build>
-	
 </project>

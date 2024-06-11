@@ -4,13 +4,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>springcloud.sample.libraryapp.testing.authors</artifactId>
-	<name>springcloud.sample.libraryapp.testing.authors</name>
-	<packaging>jar</packaging>
+	<artifactId>springcloud.sample.libraryapp.testing.contract.books</artifactId>
+	<name>springcloud.sample.libraryapp.testing.contract.books</name>
 
 	<parent>
         <groupId>springcloud.sample</groupId>
-	    <artifactId>springcloud.sample.libraryapp.testing</artifactId>
+	    <artifactId>springcloud.sample.libraryapp.testing.contract</artifactId>
 	    <version>1.0-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
@@ -26,11 +25,16 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-			
-	<dependencies>
+
+	<dependencies>		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
 		</dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -38,9 +42,8 @@
         </dependency>
 
 		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
 		
 		<dependency>
@@ -48,7 +51,8 @@
 			<artifactId>springcloud.sample.libraryapp.testing.model</artifactId>
 			<version>${project.parent.version}</version>
 		</dependency>
-		
+
+		        
 		<dependency>
 		    <groupId>au.com.dius.pact.consumer</groupId>
 		    <artifactId>junit5</artifactId>
@@ -61,14 +65,13 @@
 		    <version>4.6.10</version>
 		    <scope>test</scope>
 		</dependency>
-
+				
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-
-
+		    <groupId>org.assertj</groupId>
+		    <artifactId>assertj-core</artifactId>
+		    <scope>test</scope>
+		</dependency>	
+					
 	</dependencies>
 	
 	<build>
@@ -79,4 +82,5 @@
             </plugin>
 		</plugins>
 	</build>
+	
 </project>
