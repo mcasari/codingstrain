@@ -51,26 +51,30 @@
 			<artifactId>springcloud.sample.libraryapp.testing.model</artifactId>
 			<version>${project.parent.version}</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
 
-		        
+
 		<dependency>
-		    <groupId>au.com.dius.pact.consumer</groupId>
-		    <artifactId>junit5</artifactId>
-		    <version>4.6.10</version>
-		    <scope>test</scope>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-contract-wiremock</artifactId>
+			<scope>test</scope>
 		</dependency>
 		<dependency>
-		    <groupId>au.com.dius.pact.provider</groupId>
-		    <artifactId>junit5spring</artifactId>
-		    <version>4.6.10</version>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-contract-stub-runner</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+		    <groupId>io.projectreactor</groupId>
+		    <artifactId>reactor-test</artifactId>
 		    <scope>test</scope>
 		</dependency>
-				
-		<dependency>
-		    <groupId>org.assertj</groupId>
-		    <artifactId>assertj-core</artifactId>
-		    <scope>test</scope>
-		</dependency>	
 					
 	</dependencies>
 	
