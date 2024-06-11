@@ -19,7 +19,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 @AutoConfigureJsonTesters
 @AutoConfigureStubRunner(
   stubsMode = StubRunnerProperties.StubsMode.LOCAL,
-    ids = "springcloud.sample:springcloud.sample.libraryapp.testing.contract.authors:+:stubs:8090")
+    ids = "springcloud.sample:springcloud.sample.libraryapp.testing.contract.authors:+:stubs:8091")
 public class ConsumerTest {
 
     @Autowired
