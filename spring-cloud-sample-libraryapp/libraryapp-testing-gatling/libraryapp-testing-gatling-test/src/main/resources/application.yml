@@ -21,4 +21,4 @@ spring:
       matching-strategy: ant_path_matcher 
                                       
 server:
-  port: '${PORT:8092}'
+  port: '${PORT:8080}'

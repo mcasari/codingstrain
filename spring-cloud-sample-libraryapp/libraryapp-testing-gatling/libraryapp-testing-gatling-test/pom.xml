@@ -60,30 +60,34 @@
 
 
 		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-contract-wiremock</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-contract-stub-runner</artifactId>
-			<scope>test</scope>
-		</dependency>
-		
-		<dependency>
-		    <groupId>io.projectreactor</groupId>
-		    <artifactId>reactor-test</artifactId>
-		    <scope>test</scope>
+		    <groupId>io.gatling</groupId>
+		    <artifactId>gatling-app</artifactId>
+		    <version>3.7.2</version>
 		</dependency>
 					
+		<dependency>
+		    <groupId>io.gatling.highcharts</groupId>
+		    <artifactId>gatling-charts-highcharts</artifactId>
+		    <version>3.7.2</version>
+		</dependency>	
+		
+		<dependency>
+		    <groupId>com.github.javafaker</groupId>
+		    <artifactId>javafaker</artifactId>
+		    <version>0.15</version>
+		</dependency>				
 	</dependencies>
 	
 	<build>
 		<plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-            </plugin>
+			<plugin>
+			    <groupId>io.gatling</groupId>
+			    <artifactId>gatling-maven-plugin</artifactId>
+			    <version>4.2.9</version>
+			    <configuration>
+			        <simulationClass>com.codingstrain.springcloud.sample.libraryapp.books.EmployeeRegistrationSimulation</simulationClass>
+			    </configuration>
+			</plugin>
 		</plugins>
 	</build>
 	

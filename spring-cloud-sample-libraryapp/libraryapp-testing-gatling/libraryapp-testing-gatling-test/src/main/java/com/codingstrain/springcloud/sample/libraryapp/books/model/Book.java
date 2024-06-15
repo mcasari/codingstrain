@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.NamedQuery;
 import jakarta.persistence.Table;
@@ -17,21 +19,22 @@ public class Book implements Serializable {
 
     @Id
     @Column
-    private String title;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
     @Column
-    private String authorName;
+    private String title;
 
-    public String getAuthorName() {
-        return authorName;
+    public Integer getId() {
+        return id;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public void setAuthorName(String authorName) {
-        this.authorName = authorName;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public void setTitle(String title) {
