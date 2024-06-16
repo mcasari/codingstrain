@@ -23,7 +23,7 @@ import io.gatling.javaapi.http.HttpDsl;
 import io.gatling.javaapi.http.HttpProtocolBuilder;
 
 
-public class EmployeeRegistrationSimulation extends Simulation {
+public class BookSaveSimulation extends Simulation {
 
     private static final HttpProtocolBuilder HTTP_PROTOCOL_BUILDER = setupProtocolForSimulation();
 
@@ -31,7 +31,7 @@ public class EmployeeRegistrationSimulation extends Simulation {
 
     private static final ScenarioBuilder POST_SCENARIO_BUILDER = buildPostScenario();
 
-    public EmployeeRegistrationSimulation() {
+    public BookSaveSimulation() {
 
         setUp(POST_SCENARIO_BUILDER.injectOpen(postEndpointInjectionProfile())
           .protocols(HTTP_PROTOCOL_BUILDER)).assertions(global().responseTime()
@@ -65,8 +65,8 @@ public class EmployeeRegistrationSimulation extends Simulation {
         Iterator<Map<String, Object>> iterator;
         iterator = Stream.generate(() -> {
               Map<String, Object> stringObjectMap = new HashMap<>();
-            stringObjectMap.put("title", faker.name()
-                .fullName());
+            stringObjectMap.put("title", faker.book()
+                .title());
               return stringObjectMap;
           })
           .iterator();
