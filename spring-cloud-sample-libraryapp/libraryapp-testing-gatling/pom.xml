@@ -21,7 +21,6 @@
 	</parent>
 
 	<modules>
-		<module>libraryapp-testing-gatling-books</module>
 		<module>libraryapp-testing-gatling-test</module>		
 	</modules>
 	

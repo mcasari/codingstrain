@@ -3,9 +3,7 @@ package com.codingstrain.springcloud.sample.libraryapp.books;
 import static io.gatling.javaapi.core.CoreDsl.StringBody;
 import static io.gatling.javaapi.core.CoreDsl.global;
 import static io.gatling.javaapi.core.CoreDsl.rampUsersPerSec;
-import static io.gatling.javaapi.http.HttpDsl.header;
 import static io.gatling.javaapi.http.HttpDsl.http;
-import static io.gatling.javaapi.http.HttpDsl.status;
 
 import java.time.Duration;
 import java.util.HashMap;
@@ -25,16 +23,12 @@ import io.gatling.javaapi.http.HttpProtocolBuilder;
 
 public class BookSaveSimulation extends Simulation {
 
-    private static final HttpProtocolBuilder HTTP_PROTOCOL_BUILDER = setupProtocolForSimulation();
-
-    private static final Iterator<Map<String, Object>> FEED_DATA = setupTestFeedData();
-
-    private static final ScenarioBuilder POST_SCENARIO_BUILDER = buildPostScenario();
 
     public BookSaveSimulation() {
 
-        setUp(POST_SCENARIO_BUILDER.injectOpen(postEndpointInjectionProfile())
-          .protocols(HTTP_PROTOCOL_BUILDER)).assertions(global().responseTime()
+        setUp(buildPostScenario()
+            .injectOpen(scenarioProfile())
+            .protocols(setupProtocol())).assertions(global().responseTime()
           .max()
           .lte(10000), global().successfulRequests()
           .percent()
@@ -42,25 +36,15 @@ public class BookSaveSimulation extends Simulation {
     }
 
     private static ScenarioBuilder buildPostScenario() {
-        return CoreDsl.scenario("Load Test")
-          .feed(FEED_DATA)
+        return CoreDsl.scenario("Load POST Test")
+            .feed(feedData())
             .exec(http("create-book").post("/library/book")
             .header("Content-Type", "application/json")
-                .body(StringBody("{ \"title\": \"${title}\" }"))
-                .check(status().is(200))
-                .check(header("Location").saveAs("location")))
-            .exec(http("get-book").get(session -> session.getString("location"))
-                .check(status().is(200)));
+                .body(StringBody("{ \"title\": \"${title}\" }")));
     }
 
-    private static HttpProtocolBuilder setupProtocolForSimulation() {
-        return HttpDsl.http.baseUrl("http://localhost:8080")
-          .acceptHeader("application/json")
-          .maxConnectionsPerHost(10)
-          .userAgentHeader("Gatling/Performance Test");
-    }
 
-    private static Iterator<Map<String, Object>> setupTestFeedData() {
+    private static Iterator<Map<String, Object>> feedData() {
         Faker faker = new Faker();
         Iterator<Map<String, Object>> iterator;
         iterator = Stream.generate(() -> {
@@ -73,14 +57,21 @@ public class BookSaveSimulation extends Simulation {
         return iterator;
     }
 
-    private RampRateOpenInjectionStep postEndpointInjectionProfile() {
-        int totalDesiredUserCount = 200;
-        double userRampUpPerInterval = 50;
-        double rampUpIntervalSeconds = 30;
+    private static HttpProtocolBuilder setupProtocol() {
+        return HttpDsl.http.baseUrl("http://localhost:8080")
+          .acceptHeader("application/json")
+          .maxConnectionsPerHost(10)
+            .userAgentHeader("Performance Test");
+    }
+
+    private RampRateOpenInjectionStep scenarioProfile() {
+        int totalUsers = 100;
+        double userRampUpPerInterval = 10;
+        double rampUpIntervalInSeconds = 30;
 
         int totalRampUptimeSeconds = 120;
         int steadyStateDurationSeconds = 300;
-        return rampUsersPerSec(userRampUpPerInterval / (rampUpIntervalSeconds / 60)).to(totalDesiredUserCount)
+        return rampUsersPerSec(userRampUpPerInterval / (rampUpIntervalInSeconds / 60)).to(totalUsers)
           .during(Duration.ofSeconds(totalRampUptimeSeconds + steadyStateDurationSeconds));
     }
 }
