@@ -69,9 +69,9 @@ public class BookSaveSimulation extends Simulation {
         double userRampUpPerInterval = 10;
         double rampUpIntervalInSeconds = 30;
 
-        int totalRampUptimeSeconds = 120;
-        int steadyStateDurationSeconds = 300;
-        return rampUsersPerSec(userRampUpPerInterval / (rampUpIntervalInSeconds / 60)).to(totalUsers)
-          .during(Duration.ofSeconds(totalRampUptimeSeconds + steadyStateDurationSeconds));
+        int rampUptimeSeconds = 300;
+        int duration = 300;
+        return rampUsersPerSec(userRampUpPerInterval / (rampUpIntervalInSeconds)).to(totalUsers)
+            .during(Duration.ofSeconds(rampUptimeSeconds + duration));
     }
 }
