@@ -27,7 +27,7 @@ public class BookSaveSimulation extends Simulation {
     public BookSaveSimulation() {
 
         setUp(buildPostScenario()
-            .injectOpen(scenarioProfile())
+            .injectOpen(injection())
             .protocols(setupProtocol())).assertions(global().responseTime()
           .max()
           .lte(10000), global().successfulRequests()
@@ -64,7 +64,7 @@ public class BookSaveSimulation extends Simulation {
             .userAgentHeader("Performance Test");
     }
 
-    private RampRateOpenInjectionStep scenarioProfile() {
+    private RampRateOpenInjectionStep injection() {
         int totalUsers = 100;
         double userRampUpPerInterval = 10;
         double rampUpIntervalInSeconds = 30;

@@ -45,7 +45,7 @@
 		
 		<dependency>
 			<groupId>springcloud.sample</groupId>
-			<artifactId>springcloud.sample.libraryapp.testing.model</artifactId>
+			<artifactId>springcloud.sample.libraryapp.testing.pact.model</artifactId>
 			<version>${project.parent.version}</version>
 		</dependency>
 		
