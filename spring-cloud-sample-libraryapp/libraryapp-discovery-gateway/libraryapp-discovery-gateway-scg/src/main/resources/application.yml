@@ -5,7 +5,7 @@ spring:
       gateway:
          routes:
             - id: add_request_header_route
-              uri: http://localhost:8090
+              uri: http://localhost:8082
               predicates:
                  - Path=/library/**
               filters:
