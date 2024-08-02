@@ -18,6 +18,7 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import io.specto.hoverfly.junit.core.Hoverfly;
 import io.specto.hoverfly.junit5.HoverflyExtension;
 
+
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 @ExtendWith(HoverflyExtension.class)
 class LoadBalancingTest {
@@ -52,6 +53,5 @@ class LoadBalancingTest {
         }
         logger.info("Result: author-service:8091={}, author-service:8092={}", a, b);
     }
-
 
 }
