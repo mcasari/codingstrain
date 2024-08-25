@@ -6,10 +6,6 @@ spring:
       default-filters:
         - TokenRelay=
       routes:
-        - id: author-service
-          uri: http://localhost:8091
-          predicates:
-            - Path=/authors/**
         - id: book-service
           uri: http://localhost:8092
           predicates:

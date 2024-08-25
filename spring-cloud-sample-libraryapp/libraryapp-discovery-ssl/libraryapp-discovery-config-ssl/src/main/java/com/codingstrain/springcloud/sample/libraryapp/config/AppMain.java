@@ -12,24 +12,17 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableConfigServer
 public class AppMain {
 
+	public static void main(String[] args) {
+		SpringApplication.run(AppMain.class, args);
+	}
 
-    public static void main(String[] args) {
-        SpringApplication.run(AppMain.class, args);
-    }
+	@Bean
+	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 
+		http.authorizeHttpRequests(auth -> auth.requestMatchers("/decrypt").denyAll().anyRequest().permitAll())
+				.csrf(CsrfConfigurer::disable);
 
-        @Bean
-        public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-    
-            http.authorizeHttpRequests(auth -> auth.requestMatchers("/decrypt")
-                .denyAll()
-                .anyRequest()
-                .permitAll())
-                .csrf(CsrfConfigurer::disable);
-    
-            return http.build();
-        }
-
-
+		return http.build();
+	}
 
 }

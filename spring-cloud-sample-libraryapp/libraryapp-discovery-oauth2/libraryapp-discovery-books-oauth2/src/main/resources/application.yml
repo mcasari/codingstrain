@@ -34,11 +34,7 @@ spring:
             client-id: gateway-client
             client-secret: VvQXimbn43QmNLljL7f4EvWiBdXTLtRa
             authorization-grant-type: authorization_code
-            scope: TEST 
+            scope: openid 
                                       
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: 'http://myusername:mypassword@localhost:8760/eureka/'
 server:
   port: '${PORT:8092}'

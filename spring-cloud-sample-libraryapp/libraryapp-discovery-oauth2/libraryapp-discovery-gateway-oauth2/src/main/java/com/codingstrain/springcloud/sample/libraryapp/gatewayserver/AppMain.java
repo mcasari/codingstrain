@@ -16,7 +16,7 @@ public class AppMain {
         new SpringApplicationBuilder(AppMain.class).run(args);
 	}
 
-    @GetMapping(value = "/token")
+    @GetMapping(value = "/getAccessToken")
     public String getHome(@RegisteredOAuth2AuthorizedClient OAuth2AuthorizedClient authorizedClient) {
         return authorizedClient.getAccessToken()
             .getTokenValue();
