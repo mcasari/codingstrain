@@ -1,0 +1,23 @@
+spring:
+   application:
+      name: author-service
+   rabbitmq:
+      host: localhost
+      port: 5672
+   cloud:
+      function:
+         definition: uppercase;receive;send;source
+      stream:
+         bindings:
+            uppercase-in-0:
+               destination: test-in
+            uppercase-out-0:
+               destination: test-out
+            receive-in-0:
+               destination: test-out
+            send-out-0:
+               destination: test-in
+            source-out-0:
+               destination: test-in            
+server:  
+   port: ${PORT:8081}   
