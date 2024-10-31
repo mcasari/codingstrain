@@ -22,6 +22,8 @@
 
 	<modules>
 		<module>libraryapp-messagedriven-booksmanagement</module>
+	    <module>libraryapp-messagedriven-books</module>
+	    <module>libraryapp-messagedriven-authors</module>
 	</modules>
 	
 </project>
