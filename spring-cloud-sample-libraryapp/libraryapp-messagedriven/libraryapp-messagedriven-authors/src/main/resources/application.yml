@@ -20,4 +20,4 @@ spring:
             source-out-0:
                destination: test-in            
 server:  
-   port: ${PORT:8081}   
+   port: ${PORT:8082}   
