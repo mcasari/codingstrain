@@ -13,11 +13,11 @@ public class BooksManagementController {
     @Autowired
     private StreamBridge streamBridge;
 
-    @GetMapping(value = "/newBookItem")
+    @GetMapping(value = "/sendBookInfo")
     public void newBookItem() {
         BookInfo bookInfo = new BookInfo();
         System.out.println("Sending " + bookInfo);
-        streamBridge.send("toStream", bookInfo);
+        streamBridge.send("sendBookInfo-out-0", bookInfo);
     }
 
     class BookInfo {
