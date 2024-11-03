@@ -10,17 +10,17 @@ spring:
       stream:
          bindings:
             uppercase-in-0:
-               destination: test-in
+               destination: test-out
             uppercase-out-0:
-               destination: test-out
-            receive-in-0:
-               destination: test-out
-            send-out-0:
+               destination: test-in
+            sink-in-0:
                destination: test-in
             source-out-0:
-               destination: test-in  
+               destination: test-out  
             sendBookInfo-out-0:
-               destination: booInfo-out
+               destination: bookInfo-out
+            sendBookInfoGrouped-out-0:
+               destination: bookInfoGrouped-out
                          
 server:  
    port: ${PORT:8080}   

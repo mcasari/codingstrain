@@ -11,6 +11,9 @@ spring:
          bindings:
             receiveBookInfo-in-0:
                destination: booInfo-out    
+            receiveBookInfoGroup-in-0:
+               destination: bookInfoGrouped-out
+               group: bookInfoGroup
                
 server:  
    port: ${PORT:8082}   

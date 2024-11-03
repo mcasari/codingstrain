@@ -18,12 +18,14 @@ public class BooksManagementController {
     private StreamBridge streamBridge;
 
     @GetMapping(value = "/sendBookInfo")
-    public void newBookItem() {
+    public void sendBookInfo() {
         BookInfo bookInfo = new BookInfo();
         Book book = new Book();
+        book.setId(1L);
         book.setTitle("The Naked Sun");
         book.setGenre("Sci-fi");
         Author author = new Author();
+        author.setId(1L);
         author.setName("Isaac Asimov");
         author.setBiographyInfo("Biography Info");
 
@@ -31,6 +33,20 @@ public class BooksManagementController {
         streamBridge.send("sendBookInfo-out-0", bookInfo);
     }
 
+    @GetMapping(value = "/sendBookInfoGrouped")
+    public void sendBookInfoGrouped() {
+        BookInfo bookInfo = new BookInfo();
+        Book book = new Book();
+        book.setId(1L);
+        book.setTitle("The Naked Sun");
+        book.setGenre("Sci-fi");
+        Author author = new Author();
+        author.setId(1L);
+        author.setName("Isaac Asimov");
+        author.setBiographyInfo("Biography Info");
 
+        System.out.println("Sending " + bookInfo);
+        streamBridge.send("sendBookInfo-out-0", bookInfo);
+    }
 
 }

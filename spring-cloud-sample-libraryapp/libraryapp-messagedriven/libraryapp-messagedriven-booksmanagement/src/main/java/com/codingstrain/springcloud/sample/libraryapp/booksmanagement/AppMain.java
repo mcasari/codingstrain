@@ -16,7 +16,7 @@ public class AppMain {
 	}
 
     @Bean
-    public Consumer<String> receive() {
+    public Consumer<String> sink() {
         return payload -> {
             System.out.println(payload);
         };
