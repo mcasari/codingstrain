@@ -10,7 +10,7 @@ spring:
       stream:
          bindings:
             uppercase-in-0:
-               destination: test-out
+               destination: test-out               
             uppercase-out-0:
                destination: test-in
             sink-in-0:
@@ -26,6 +26,9 @@ spring:
                producer:
                   partitionKeyExpression: headers['bookInfoId']
                   partitionCount: 4 
+            uppercase-in-0:
+               destination: test-out
+               error-handler-definition: errorHandler
                          
 server:  
    port: ${PORT:8080}   
