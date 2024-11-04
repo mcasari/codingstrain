@@ -10,10 +10,15 @@ spring:
       stream:
          bindings:
             receiveBookInfo-in-0:
-               destination: booInfo-out    
+               destination: booInfo-out
             receiveBookInfoGroup-in-0:
                destination: bookInfoGrouped-out
                group: bookInfoGroup
-               
-server:  
-   port: ${PORT:8082}   
+            receiveBookInfoPartitioned-in-0:
+               destination: bookInfoPartitioned-out
+               consumer:
+                  partitioned: true
+                  instance-index: 0
+
+server:
+   port: ${PORT:8082}

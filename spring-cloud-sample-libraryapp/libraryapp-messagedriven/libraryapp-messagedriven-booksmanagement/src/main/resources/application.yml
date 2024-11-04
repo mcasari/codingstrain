@@ -21,6 +21,11 @@ spring:
                destination: bookInfo-out
             sendBookInfoGrouped-out-0:
                destination: bookInfoGrouped-out
+            sendBookInfoPartitioned-out-0:
+               destination: sendBookInfoPartitioned-out
+               producer:
+                  partitionKeyExpression: headers['bookInfoId']
+                  partitionCount: 4 
                          
 server:  
    port: ${PORT:8080}   
