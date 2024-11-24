@@ -6,7 +6,7 @@ spring:
       port: 5672
    cloud:
       function:
-         definition: uppercase;receive;send;source;sendBookInfo
+         definition: uppercase;receive;send;source;sendBookInfo;sendBookInfoGrouped;sendBookInfoPartitioned
       stream:
          bindings:
             uppercase-in-0:

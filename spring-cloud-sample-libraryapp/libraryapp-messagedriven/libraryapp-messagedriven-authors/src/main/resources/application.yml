@@ -9,13 +9,15 @@ spring:
          definition: receiveBookInfo
       stream:
          bindings:
-            receiveBookInfo-in-0:
+            receiveBookInfoAuthors-in-0:
                destination: booInfo-out
+               group: bookInfo
             receiveBookInfoGroup-in-0:
                destination: bookInfoGrouped-out
                group: bookInfoGroup
             receiveBookInfoPartitioned-in-0:
                destination: bookInfoPartitioned-out
+               group: bookInfoGroup
                consumer:
                   partitioned: true
                   instance-index: 0

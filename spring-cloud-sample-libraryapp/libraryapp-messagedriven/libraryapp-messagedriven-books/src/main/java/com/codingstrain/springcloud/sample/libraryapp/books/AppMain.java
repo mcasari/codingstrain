@@ -19,7 +19,15 @@ public class AppMain {
 	}
 
     @Bean
-    public Consumer<String> receive() {
+    public Consumer<String> receiveBookInfoBooks() {
+        return payload -> {
+            System.out.println(payload);
+            System.out.println("SERVER PORT: " + serverProperties.getPort());
+        };
+    }
+
+    @Bean
+    public Consumer<String> receiveBookInfoGroup() {
         return payload -> {
             System.out.println(payload);
             System.out.println("SERVER PORT: " + serverProperties.getPort());

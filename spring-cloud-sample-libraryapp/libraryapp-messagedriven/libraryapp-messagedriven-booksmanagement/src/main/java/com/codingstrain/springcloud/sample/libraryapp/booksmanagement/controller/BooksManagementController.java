@@ -45,7 +45,7 @@ public class BooksManagementController {
         author.setBiographyInfo("Biography Info");
 
         System.out.println("Sending " + bookInfo);
-        streamBridge.send("sendBookInfo-out-0", bookInfo);
+        streamBridge.send("sendBookInfoGrouped-out-0", bookInfo);
     }
 
     @GetMapping(value = "/sendBookInfoPartitioned")
