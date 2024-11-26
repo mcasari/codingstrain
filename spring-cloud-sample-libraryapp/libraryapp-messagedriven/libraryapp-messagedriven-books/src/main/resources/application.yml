@@ -9,9 +9,8 @@ spring:
          definition: receiveBookInfo;receiveBookInfoGroup;receiveBookInfoPartitioned
       stream:
          bindings:
-            receiveBookInfoBooks-in-0:
+            receiveBookInfo-in-0:
                destination: bookInfo-out
-               group: bookInfo
             receiveBookInfoGroup-in-0:
                destination: bookInfoGrouped-out
                group: bookInfoGroup

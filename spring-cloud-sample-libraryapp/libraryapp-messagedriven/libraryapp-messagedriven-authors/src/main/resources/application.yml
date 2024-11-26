@@ -6,12 +6,11 @@ spring:
       port: 5672
    cloud:
       function:
-         definition: receiveBookInfo
+         definition: receiveBookInfo;receiveBookInfoGroup;receiveBookInfoPartitioned
       stream:
          bindings:
-            receiveBookInfoAuthors-in-0:
-               destination: booInfo-out
-               group: bookInfo
+            receiveBookInfo-in-0:
+               destination: bookInfo-out
             receiveBookInfoGroup-in-0:
                destination: bookInfoGrouped-out
                group: bookInfoGroup
