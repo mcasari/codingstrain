@@ -16,7 +16,7 @@ spring:
                group: bookInfoGroup
             receiveBookInfoPartitioned-in-0:
                destination: bookInfoPartitioned-out
-               group: bookInfoGroup
+               group: bookInfoGroupBooks
                consumer:
                   partitioned: true
                   instance-index: 0

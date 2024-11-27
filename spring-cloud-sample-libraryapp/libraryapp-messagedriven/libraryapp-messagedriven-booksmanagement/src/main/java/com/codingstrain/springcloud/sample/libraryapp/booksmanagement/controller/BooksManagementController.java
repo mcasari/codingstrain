@@ -60,7 +60,7 @@ public class BooksManagementController {
         author.setBiographyInfo("Biography Info");
 
         System.out.println("Sending " + bookInfo);
-        streamBridge.send("sendBookInfo-out-0", MessageBuilder.withPayload(bookInfo)
+        streamBridge.send("sendBookInfoPartitioned-out-0", MessageBuilder.withPayload(bookInfo)
             .setHeader("bookInfoId", bookInfo.getId())
             .build());
     }

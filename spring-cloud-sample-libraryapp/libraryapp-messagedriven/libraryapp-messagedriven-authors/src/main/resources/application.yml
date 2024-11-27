@@ -16,10 +16,10 @@ spring:
                group: bookInfoGroup
             receiveBookInfoPartitioned-in-0:
                destination: bookInfoPartitioned-out
-               group: bookInfoGroup
+               group: bookInfoGroupAuthors
                consumer:
                   partitioned: true
-                  instance-index: 0
+                  instance-index: 1
 
 server:
    port: ${PORT:8082}

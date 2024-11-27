@@ -23,7 +23,7 @@ spring:
             sendBookInfoGrouped-out-0:
                destination: bookInfoGrouped-out
             sendBookInfoPartitioned-out-0:
-               destination: sendBookInfoPartitioned-out
+               destination: bookInfoPartitioned-out
                producer:
                   partitionKeyExpression: headers['bookInfoId']
                   partitionCount: 4 
