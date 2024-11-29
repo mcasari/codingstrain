@@ -13,7 +13,7 @@ spring:
                destination: bookInfo-out
             receiveBookInfoGroup-in-0:
                destination: bookInfoGrouped-out
-               group: bookInfoGroup
+               group: bookInfoGroupAuthors
             receiveBookInfoPartitioned-in-0:
                destination: bookInfoPartitioned-out
                group: bookInfoGroupAuthors
