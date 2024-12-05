@@ -19,7 +19,8 @@ spring:
                group: bookInfoGroupAuthors
                consumer:
                   partitioned: true
-                  instance-index: 1
+                  instance-index: 1                  
+                  instance-count: 4
 
 server:
    port: ${PORT:8082}

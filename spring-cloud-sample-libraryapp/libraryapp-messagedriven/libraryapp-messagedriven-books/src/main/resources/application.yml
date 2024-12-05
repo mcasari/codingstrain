@@ -20,6 +20,7 @@ spring:
                consumer:
                   partitioned: true
                   instance-index: 0
+                  instance-count: 4
 
 server:
    port: ${PORT:8081}
