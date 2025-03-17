@@ -1,0 +1,29 @@
+spring:
+   application:
+      name: gateway-service
+   cloud:
+      gateway:
+         routes:
+            - id: add_request_header_route
+              uri: http://localhost:8082
+              predicates:
+                 - Path=/library/**
+              filters:
+                 - AddRequestHeader=X-Request-red, blue
+                 - AddRequestHeader=GGGGGG, G
+                 
+management:
+   endpoint: 
+      health:
+         show-details: always
+   endpoints: 
+      web:
+         exposure:
+            include: '*' 
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    reactor.netty.http.client: DEBUG
+                                           
+server:
+   port: ${PORT:8080}

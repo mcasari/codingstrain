@@ -1,0 +1,47 @@
+spring:
+   application:
+      name: book-service
+   datasource:
+      url: jdbc:h2:mem:mydb
+      username: sa
+      password: pass
+      driverClassName: org.h2.Driver
+   jpa:
+      spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+   h2:
+      console:
+         enabled: true
+   sql:
+      init:
+         mode: always
+   mvc:
+      pathmatch:
+         matching-strategy: ant_path_matcher    
+         
+# All traces should be sent to latency analysis tool         
+management:
+   tracing:
+      sampling:
+         probability: 1.0
+   endpoints:
+      web:
+         exposure:
+            include: prometheus
+
+   metrics:
+      distribution:
+         percentiles-histogram:
+            http:
+               server:
+                  requests: 'true'
+              
+logging:
+  pattern:
+    level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'
+          
+eureka:
+   client: 
+      serviceUrl:
+         defaultZone: http://myusername:mypassword@localhost:8760/eureka/
+server:  
+   port: ${PORT:8082}

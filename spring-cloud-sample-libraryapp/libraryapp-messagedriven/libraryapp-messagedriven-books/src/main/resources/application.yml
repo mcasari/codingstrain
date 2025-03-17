@@ -1,0 +1,26 @@
+spring:
+   application:
+      name: books-service
+   rabbitmq:
+      host: localhost
+      port: 5672
+   cloud:
+      function:
+         definition: receiveBookInfo;receiveBookInfoGroup;receiveBookInfoPartitioned
+      stream:
+         bindings:
+            receiveBookInfo-in-0:
+               destination: bookInfo-out
+            receiveBookInfoGroup-in-0:
+               destination: bookInfoGrouped-out
+               group: bookInfoGroupBooks
+            receiveBookInfoPartitioned-in-0:
+               destination: bookInfoPartitioned-out
+               group: bookInfoGroupBooks
+               consumer:
+                  partitioned: true
+                  instance-index: 0
+                  instance-count: 4
+
+server:
+   port: ${PORT:8081}

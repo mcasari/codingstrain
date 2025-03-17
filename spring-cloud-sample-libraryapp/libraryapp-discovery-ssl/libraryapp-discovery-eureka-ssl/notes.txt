@@ -1,0 +1,10 @@
+keytool -genkey -alias discovery -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore discovery.p12 -validity 3650 -dname "CN=codingstrain,OU=cs,O=cs,C=IT" -ext "SAN:c=DNS:localhost,IP:127.0.0.1" -storepass mypass -keypass mypass
+keytool -genkey -alias books -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore books.p12 -validity 3650 -dname "CN=codingstrain,OU=cs,O=cs,C=IT" -ext "SAN:c=DNS:localhost,IP:127.0.0.1" -storepass mypass -keypass mypass
+
+
+
+keytool -exportcert -alias discovery -keystore discovery.p12 -file discovery.cer
+keytool -exportcert -alias books -keystore books.p12 -file books.cer
+
+keytool -importcert -alias books -keystore discovery.p12 -file books.cer
+keytool -importcert -alias discovery -keystore books.p12 -file discovery.cer

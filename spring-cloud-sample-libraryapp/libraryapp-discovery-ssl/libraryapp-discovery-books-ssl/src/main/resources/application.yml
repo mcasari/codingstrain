@@ -1,0 +1,12 @@
+spring:  
+  application:
+    name: book-service
+  config:
+    import: "optional:configserver:"
+    #import: "optional:configserver:http://localhost:8888"
+  cloud:
+    config:
+      username: myusername
+      password: mypassword
+
+

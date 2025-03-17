@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+    <groupId>springcloud.sample</groupId>
+	<artifactId>springcloud.sample.libraryapp.circuitbreaker</artifactId>
+	<name>springcloud.sample.libraryapp.circuitbreaker</name>
+    <version>1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+    <properties>
+		<java.version>17</java.version>
+    </properties>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.2.1</version>
+	</parent>
+
+	<modules>
+		<module>libraryapp-discovery-authors-cb</module>
+		<module>libraryapp-discovery-reviews-cb</module>
+		<module>libraryapp-discovery-server-cb</module>
+		<module>libraryapp-discovery-books-cb</module>
+		<module>libraryapp-discovery-model-cb</module>
+	</modules>
+	
+</project>

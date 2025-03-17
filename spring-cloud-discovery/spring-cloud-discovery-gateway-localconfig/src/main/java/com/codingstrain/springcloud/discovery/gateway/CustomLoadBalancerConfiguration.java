@@ -9,9 +9,7 @@ import org.springframework.cloud.loadbalancer.core.DiscoveryClientServiceInstanc
 import org.springframework.cloud.loadbalancer.core.ServiceInstanceListSupplier;
 import org.springframework.cloud.loadbalancer.core.ZonePreferenceServiceInstanceListSupplier;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;
-import org.springframework.stereotype.Component;
 
 
 public class CustomLoadBalancerConfiguration {

@@ -1,0 +1,87 @@
+spring:
+   application:
+      name: book-service
+   datasource:
+      url: jdbc:h2:mem:mydb
+      username: sa
+      password: pass
+      driverClassName: org.h2.Driver
+   jpa:
+      spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+   h2:
+      console:
+         enabled: true
+   sql:
+      init:
+         mode: always
+   mvc:
+      pathmatch:
+         matching-strategy: ant_path_matcher    
+    
+eureka:
+   client: 
+      serviceUrl:
+         defaultZone: http://myusername:mypassword@localhost:8760/eureka/
+
+management:
+    endpoints:
+      web:
+        exposure:
+          include: '*'
+      health:
+        show-details: always
+    health:
+      circuitbreakers:
+        enabled: 'true'
+      ratelimiters:
+        enabled: 'true'
+        
+resilience4j:
+  circuitbreaker:
+    instances:
+      CircuitBreakerApi:
+        sliding-window-size: '10'
+        minimum-number-of-calls: '5'
+        permitted-number-of-calls-in-half-open-state: '3'
+        failure-rate-threshold: '50'
+        wait-duration-in-open-state: 5s
+        sliding-window-type: count_based
+        automatic-transition-from-open-to-half-open-enabled: 'true'
+  retry:
+    metrics:
+      legacy:
+        enabled: 'true'
+      enabled: 'true'
+    instances:
+      RetryApi:
+        max-attempts: '3'
+        wait-duration: 1s
+  timelimiter:
+    metrics:
+      enabled: 'true'
+    instances:
+      TimeLimiterApi:
+        timeout-duration: 2s
+        cancel-running-future: 'true'
+  bulkhead:
+    metrics:
+      enabled: 'true'
+    instances:
+      BulkheadApi:
+        max-wait-duration: '1'
+        max-concurrent-calls: '3'
+  ratelimiter:
+    metrics:
+      enabled: 'true'
+    instances:
+      RateLimiterApi:
+        timeout-duration: 0s
+        event-consumer-buffer-size: '50'
+        register-health-indicator: 'true'
+        limit-for-period: '5'
+        subscribe-for-events: 'true'
+        limit-refresh-period: 60s
+        allow-health-indicator-to-fail: 'true'
+             
+server:  
+   port: ${PORT:8082}

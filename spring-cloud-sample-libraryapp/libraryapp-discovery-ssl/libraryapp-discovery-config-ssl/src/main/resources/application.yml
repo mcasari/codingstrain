@@ -1,0 +1,24 @@
+server:
+  port: ${PORT:8888}
+
+
+spring:
+  application:
+    name: config-service
+  security:
+    user:
+      name: myusername
+      password: mypassword  
+  cloud:
+   config:
+     server:
+       git:
+         uri: https://github.com/mcasari/spring-cloud-config-git-server-repo.git
+         cloneOnStart: true
+
+encrypt:
+  keyStore:
+    location: classpath:/config.p12
+    password: mypass
+    alias: config
+    secret: mypass

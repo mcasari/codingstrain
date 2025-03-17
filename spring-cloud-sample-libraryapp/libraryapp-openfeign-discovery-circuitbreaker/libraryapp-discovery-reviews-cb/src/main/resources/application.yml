@@ -1,0 +1,25 @@
+spring:
+   application:
+      name: review-service
+   datasource:
+      url: jdbc:h2:mem:mydb
+      username: sa
+      password: pass
+      driverClassName: org.h2.Driver
+   jpa:
+      spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+   h2:
+      console:
+         enabled: true
+   sql:
+      init:
+         mode: always
+   mvc:
+      pathmatch:
+         matching-strategy: ant_path_matcher
+eureka:
+   client: 
+      serviceUrl:
+         defaultZone: http://myusername:mypassword@localhost:8760/eureka/
+server:  
+   port: ${PORT:8083}     

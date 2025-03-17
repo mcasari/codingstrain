@@ -1,0 +1,32 @@
+spring:
+   application:
+      name: booksmanagement-service
+   rabbitmq:
+      host: localhost
+      port: 5672
+   cloud:
+      function:
+         definition: uppercase;receive;send;source;sendBookInfo;sendBookInfoGrouped;sendBookInfoPartitioned
+      stream:
+         bindings:
+            uppercase-in-0:
+               destination: test-out    
+               error-handler-definition: errorHandler           
+            uppercase-out-0:
+               destination: test-in
+            sink-in-0:
+               destination: test-in
+            source-out-0:
+               destination: test-out  
+            sendBookInfo-out-0:
+               destination: bookInfo-out
+            sendBookInfoGrouped-out-0:
+               destination: bookInfoGrouped-out
+            sendBookInfoPartitioned-out-0:
+               destination: bookInfoPartitioned-out
+               producer:
+                  partitionKeyExpression: headers['bookInfoId']
+                  partitionCount: 4 
+                         
+server:  
+   port: ${PORT:8080}   
