@@ -71,7 +71,7 @@ class NthSmallestElementUnsortedArrayTestUnitTest {
 
 	@Test
 	public void findNthSmallestElementQuickSelectTest() throws Exception {
-		int[] array = { 8, 9, 4, 3, 23, 15 };
+		int[] array = {8, 9, 4, 3, 23, 15};
 		int n = 3;
 		int result = quickSel(array, 0, array.length - 1, n);
 		assertEquals(8, result);
