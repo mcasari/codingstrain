@@ -6,38 +6,36 @@ class MergeSortUnitTest {
 
 	@Test
 	public void mergeSortTest() throws Exception {
-        int[] array = {38, 27, 43, 3, 9, 82, 10};       
-        mergeSort(array, 0, array.length - 1);
-        for (int elem : array) {
+        int[] a = {130, 44, 77, 2, 9, 5, 77};       
+        mergeSort(a, 0, a.length - 1);
+        for (int elem : a) {
             System.out.println(elem + " ");
         }
 	}
 
-    private void mergeSort(int[] arrayToSort, int left, int right) {
-        if (left < right) {
-            int mid = left + (right - left) / 2;
-           
-            mergeSort(arrayToSort, left, mid);
-            mergeSort(arrayToSort, mid + 1, right);
-            
-            merge(arrayToSort, left, mid, right);
+    private void mergeSort(int[] arrayToSort, int l, int r) {
+        if (l < r) {
+            int middle = l + (r - l) / 2;         
+            mergeSort(arrayToSort, l, middle);
+            mergeSort(arrayToSort, middle + 1, r);            
+            merge(arrayToSort, l, middle, r);
         }
     }
     
-    private void merge(int[] arrayToMerge, int left, int mid, int right) {
-        int n1 = mid - left + 1;
-        int n2 = right - mid;
+    private void merge(int[] arrayToMerge, int l, int middle, int r) {
+        int k1 = middle - l + 1;
+        int k2 = r - middle;
         
-        int[] leftArray = new int[n1];
-        int[] rightArray = new int[n2];
+        int[] leftArray = new int[k1];
+        int[] rightArray = new int[k2];
         
-        for (int i = 0; i < n1; i++)
-            leftArray[i] = arrayToMerge[left + i];
-        for (int j = 0; j < n2; j++)
-            rightArray[j] = arrayToMerge[mid + 1 + j];
+        for (int i = 0; i < k1; i++)
+            leftArray[i] = arrayToMerge[l + i];
+        for (int j = 0; j < k2; j++)
+            rightArray[j] = arrayToMerge[middle + 1 + j];
         
-        int i = 0, j = 0, k = left;
-        while (i < n1 && j < n2) {
+        int i = 0, j = 0, k = l;
+        while (i < k1 && j < k2) {
             if (leftArray[i] <= rightArray[j]) {
             	arrayToMerge[k] = leftArray[i];
                 i++;
@@ -48,13 +46,13 @@ class MergeSortUnitTest {
             k++;
         }
         
-        while (i < n1) {
+        while (i < k1) {
         	arrayToMerge[k] = leftArray[i];
             i++;
             k++;
         }
         
-        while (j < n2) {
+        while (j < k2) {
         	arrayToMerge[k] = rightArray[j];
             j++;
             k++;
