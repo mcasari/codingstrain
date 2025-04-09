@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 class CountingSortUnitTest {
 
 	@Test
-	public void HeapSortTest() throws Exception {
+	public void CountingSortTest() throws Exception {
 		int[] arrToBeSorted = { 13, 15, 21, 57, 67, 71 };
 		cSort(arrToBeSorted);
 		for (int elem : arrToBeSorted) {
