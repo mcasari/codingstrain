@@ -1,4 +1,5 @@
 package com.codingstrain.cs.datastructures;
+
 public class Tree {
 
     class TreeNode {
@@ -23,14 +24,14 @@ public class Tree {
     }
 
     // Helper method for recursive node addition
-    private TreeNode addRecursively(TreeNode node, int value) {
+    private TreeNode addRecursively(TreeNode node, int nodeVal) {
         if (node == null) {
-            return new TreeNode(value);
+            return new TreeNode(nodeVal);
         }
-        if (value < node.value) {
-            node.left = addRecursively(node.left, value);
-        } else if (value > node.value) {
-            node.right = addRecursively(node.right, value);
+        if (nodeVal < node.value) {
+            node.left = addRecursively(node.left, nodeVal);
+        } else if (nodeVal > node.value) {
+            node.right = addRecursively(node.right, nodeVal);
         }
         return node;
     }
@@ -41,17 +42,17 @@ public class Tree {
     }
 
     // Helper method for recursive search
-    private boolean containsRecursively(TreeNode node, int value) {
+    private boolean containsRecursively(TreeNode node, int nodeVAl) {
         if (node == null) {
             return false;
         }
-        if (value == node.value) {
+        if (nodeVAl == node.value) {
             return true;
         }
-        if (value < node.value) {
-            return containsRecursively(node.left, value);
+        if (nodeVAl < node.value) {
+            return containsRecursively(node.left, nodeVAl);
         }
-        return containsRecursively(node.right, value);
+        return containsRecursively(node.right, nodeVAl);
     }
 
     // Perform an in-order traversal and print the values
