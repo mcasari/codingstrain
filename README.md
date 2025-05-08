@@ -4,3 +4,5 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/mcasari/codingstrain)
 ![GitHub forks](https://img.shields.io/github/forks/mcasari/codingstrain?style=social)
 ![GitHub Repo stars](https://img.shields.io/github/stars/mcasari/codingstrain?style=social)
+
+# Coding Strain - A Blog About Software Development
