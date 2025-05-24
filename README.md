@@ -6,3 +6,4 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/mcasari/codingstrain?style=social)
 
 # Coding Strain - A Blog About Software Development
+https://codingstrain.com
