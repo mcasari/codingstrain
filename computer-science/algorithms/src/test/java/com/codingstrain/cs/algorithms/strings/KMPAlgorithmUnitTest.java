@@ -14,7 +14,7 @@ class KMPAlgorithmUnitTest {
 	private void search(String textToSearch, String stringPattern) {
 		int n = textToSearch.length();
 		int m = stringPattern.length();
-		int[] lps = computeLPSArray(stringPattern);
+		int[] longestPrefixSuffix = computeLPSArray(stringPattern);
 
 		int i = 0; // index for text
 		int j = 0; // index for pattern
@@ -27,10 +27,10 @@ class KMPAlgorithmUnitTest {
 
 			if (j == m) {
 				System.out.println("Pattern found at index " + (i - j));
-				j = lps[j - 1];
+				j = longestPrefixSuffix[j - 1];
 			} else if (i < n && stringPattern.charAt(j) != textToSearch.charAt(i)) {
 				if (j != 0) {
-					j = lps[j - 1];
+					j = longestPrefixSuffix[j - 1];
 				} else {
 					i++;
 				}
@@ -40,24 +40,24 @@ class KMPAlgorithmUnitTest {
 
 	private int[] computeLPSArray(String stringPattern) {
 		int m = stringPattern.length();
-		int[] lps = new int[m];
+		int[] longestPrefixSuffix = new int[m];
 		int len = 0; // length of the previous longest prefix suffix
 		int i = 1;
 
 		while (i < m) {
 			if (stringPattern.charAt(i) == stringPattern.charAt(len)) {
 				len++;
-				lps[i] = len;
+				longestPrefixSuffix[i] = len;
 				i++;
 			} else {
 				if (len != 0) {
-					len = lps[len - 1];
+					len = longestPrefixSuffix[len - 1];
 				} else {
-					lps[i] = 0;
+					longestPrefixSuffix[i] = 0;
 					i++;
 				}
 			}
 		}
-		return lps;
+		return longestPrefixSuffix;
 	}
 }
