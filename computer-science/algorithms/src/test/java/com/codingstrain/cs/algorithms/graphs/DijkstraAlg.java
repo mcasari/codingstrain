@@ -22,6 +22,7 @@ class DijkstraAlg {
             this.distance = distance;
         }
 
+        
         public int compareTo(GraphNode other) {
             return Integer.compare(this.distance, other.distance);
         }
