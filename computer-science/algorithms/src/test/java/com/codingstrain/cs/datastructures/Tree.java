@@ -76,6 +76,7 @@ public class Tree {
         binaryTree.add(3);
         binaryTree.add(7);
 
+        //
         System.out.println("In-order traversal:");
         binaryTree.traverseInOrder(); // Expected output: 3 5 7 10 15
         System.out.println("\nDoes the tree contain 7? " + binaryTree.contains(7)); // Expected output: true
