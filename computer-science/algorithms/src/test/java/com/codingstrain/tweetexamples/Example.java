@@ -75,7 +75,6 @@ public class Example {
         binaryTree.add(15);
         binaryTree.add(3);
         binaryTree.add(7);
-
         //
         System.out.println("In-order traversal:");
         binaryTree.traverseInOrder(); // Expected output: 3 5 7 10 15
