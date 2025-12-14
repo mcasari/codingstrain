@@ -26,9 +26,9 @@ public class SampleJobConfig {
 
         return new StepBuilder("sampleStep", jobRepository)
                 .tasklet((contribution, chunkContext) -> {
-                    System.out.println("🔥 Running sample job");
+                    System.out.println("Running job");
                     Thread.sleep(3000);
-                    System.out.println("✅ Job finished");
+                    System.out.println("Job finished");
                     return RepeatStatus.FINISHED;
                 }, transactionManager)
                 .build();
