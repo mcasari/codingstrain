@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class WeatherService {
 
+	
     @Cacheable(value = "weather", key = "#city")
     public String getWeather(String city) {
         simulateSlowApiCall();
