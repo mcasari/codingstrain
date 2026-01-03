@@ -17,7 +17,15 @@ public class UserController {
     }
 
     @GetMapping
-    public Page<User> getUsers(Pageable pageable) {
-        return repository.findAll(pageable);
+    public PagedResponse<User> getUsers(Pageable pageable) {
+        Page<User> page = repository.findAll(pageable);
+
+        return new PagedResponse<>(
+                page.getContent(),
+                page.getNumber(),
+                page.getSize(),
+                page.getTotalElements(),
+                page.getTotalPages()
+        );
     }
 }

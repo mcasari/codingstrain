@@ -7,7 +7,6 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class DataLoader {
 
-	
     @Bean
     CommandLineRunner loadData(UserRepository repository) {
         return args -> {
