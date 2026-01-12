@@ -4,8 +4,8 @@
          http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>springboot-propertieslauncher-demo</artifactId>
-    <name>springboot-propertieslauncher-demo</name>
+    <artifactId>springboot-jarlauncher-demo</artifactId>
+    <name>springboot-jarlauncher-demo</name>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -31,9 +31,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <mainClass>com.example.demo.DemoApplication</mainClass>
-                </configuration>
             </plugin>
         </plugins>
     </build>
