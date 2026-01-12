@@ -15,7 +15,7 @@ public class SampleJobConfig {
 
     @Bean
     public Job sampleJob(JobRepository jobRepository, Step sampleStep) {
-        return new JobBuilder("sampleJob", jobRepository)
+        return new JobBuilder("sampleJob")
                 .start(sampleStep)
                 .build();
     }
@@ -24,13 +24,13 @@ public class SampleJobConfig {
     public Step sampleStep(JobRepository jobRepository,
                            PlatformTransactionManager transactionManager) {
 
-        return new StepBuilder("sampleStep", jobRepository)
+        return new StepBuilder("sampleStep")
                 .tasklet((contribution, chunkContext) -> {
                     System.out.println("Running job");
                     Thread.sleep(3000);
                     System.out.println("Job finished");
                     return RepeatStatus.FINISHED;
-                }, transactionManager)
+                })
                 .build();
     }
 }
