@@ -124,28 +124,12 @@ Algorithms and data structures implementations in Java.
    cd codingstrain
    ```
 
-2. **Build all modules**:
-   ```bash
-   mvn clean install
-   ```
-
-3. **Run individual modules**:
+2. **Extract and Run individual modules**:
+   Inside the repository, there are many independent modules, organized as single or multimodule Maven projects in a hierarchical structure.
    Each module can be run independently. Navigate to the specific module directory and run:
    ```bash
    mvn spring-boot:run
    ```
-
-## 📖 Learning Path
-
-This repository is designed as a progressive learning path:
-
-1. Start with **spring-boot-minimal-rest-h2** for basic Spring Boot concepts
-2. Move to **spring-boot-minimal-rest-h2-actuator** for monitoring
-3. Explore **spring-cloud-config-*** modules for configuration management
-4. Study **spring-cloud-discovery** for service discovery patterns
-5. Examine **spring-cloud-sample-libraryapp** for complete microservices architecture
-6. Reference **java-miscellaneous-tips** for Java programming best practices
-
 ## 🔗 Related Resources
 
 - **Blog**: [codingstrain.com](https://codingstrain.com)
