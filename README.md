@@ -123,7 +123,6 @@ Algorithms and data structures implementations in Java.
    git clone https://github.com/mcasari/codingstrain.git
    cd codingstrain
    ```
-
 2. **Extract and Run individual modules**:
    Inside the repository, there are many independent modules, organized as single or multimodule Maven projects in a hierarchical structure.
    Each module can be run independently. Navigate to the specific module directory and run:
