@@ -1,4 +1,5 @@
 package com.codingstrain.tweetexamples;
+
 public class RectangleExample {
 
     // Define records
