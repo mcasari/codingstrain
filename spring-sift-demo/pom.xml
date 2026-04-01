@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example</groupId>
+    <artifactId>sift-examples</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>Sift Examples</name>
+    <description>Comprehensive examples for Sift fluent regex builder</description>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <sift.version>1.0.0</sift.version>
+    </properties>
+
+    <dependencies>
+        <!-- Core engine — zero external dependencies -->
+        <dependency>
+            <groupId>com.mirkoddd</groupId>
+            <artifactId>sift-core</artifactId>
+            <version>${sift.version}</version>
+        </dependency>
+
+        <!-- Optional: Jakarta Validation / Hibernate Validator integration -->
+        <dependency>
+            <groupId>com.mirkoddd</groupId>
+            <artifactId>sift-annotations</artifactId>
+            <version>${sift.version}</version>
+        </dependency>
+
+        <!-- Optional: Engine RE2J for linear-time matching -->
+        <dependency>
+            <groupId>com.mirkoddd</groupId>
+            <artifactId>sift-engine-re2j</artifactId>
+            <version>${sift.version}</version>
+        </dependency>
+
+        <!-- Optional: Engine GraalVM for native images -->
+        <dependency>
+            <groupId>com.mirkoddd</groupId>
+            <artifactId>sift-engine-graalvm</artifactId>
+            <version>${sift.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+            
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <mainClass>com.example.SiftExamples</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
