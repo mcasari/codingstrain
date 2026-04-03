@@ -26,20 +26,6 @@
             <artifactId>sift-core</artifactId>
             <version>${sift.version}</version>
         </dependency>
-
-        <!-- Optional: Jakarta Validation / Hibernate Validator integration -->
-        <dependency>
-            <groupId>com.mirkoddd</groupId>
-            <artifactId>sift-annotations</artifactId>
-            <version>1.1.0</version>
-        </dependency>
-
-        <!-- Optional: Engine RE2J for linear-time matching -->
-        <dependency>
-            <groupId>com.mirkoddd</groupId>
-            <artifactId>sift-engine-re2j</artifactId>
-            <version>${sift.version}</version>
-        </dependency>
     </dependencies>
 
     <build>

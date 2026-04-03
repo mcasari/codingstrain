@@ -3,7 +3,6 @@ package com.example;
 import java.util.List;
 import java.util.Map;
 
-import com.mirkoddd.sift.SiftRegexProvider;
 import com.mirkoddd.sift.core.Delimiter;
 import com.mirkoddd.sift.core.NamedCapture;
 import com.mirkoddd.sift.core.Sift;
@@ -22,10 +21,25 @@ public class SiftExamples {
     public static void main(String[] args) {
         System.out.println("=== Sift Examples ===\n");
         
-        // ============================================
-        // 1. BASIC USAGE - The Problem & Solution
-        // ============================================
-        System.out.println("1. BASIC USAGE");
+        // ===========================================================
+        // 1. BASIC USAGE EXAMPLE: hexColor pattern ^#[0-9a-fA-F]{6}$
+        // ==========================================================
+        
+        //BASIC USAGE EXAMPLE: hexColor pattern ^#[0-9a-fA-F]{6}$
+             
+        //You can define the pattern in a more expressive way starting from the Sift domain specific language 
+		String hexColor = Sift.fromStart()
+				.character('#')
+				.then()
+				.exactly(6)
+				.hexDigits() 
+				.andNothingElse().shake();
+		
+		SiftCompiledPattern compiledPattern = Sift.fromStart().character('#').then().exactly(6).hexDigits() // [0-9a-fA-F]{6}
+		.andNothingElse().sieve();
+
+        	// ^#[0-9a-fA-F]{6}$
+        
         
         // Old way - cryptic regex
         // Pattern p = Pattern.compile("^(?=[\\p{Lu}])[\\p{L}\\p{Nd}_]{3,15}+[0-9]?$");
@@ -282,17 +296,3 @@ public class SiftExamples {
     }
 }
 
-/**
- * Example of SiftRegexProvider for reusable validation rules
- */
-class PromoCodeRule implements SiftRegexProvider {
-    @Override
-    public String getRegex() {
-        return Sift.fromStart()
-                .atLeast(4).letters()
-                .then()
-                .exactly(3).digits()
-                .andNothingElse()
-                .shake();
-    }
-}
