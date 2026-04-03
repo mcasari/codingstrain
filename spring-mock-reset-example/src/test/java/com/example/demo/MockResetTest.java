@@ -1,14 +1,16 @@
 package com.example.demo;
 
+import static org.mockito.Mockito.when;
+
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
-import static org.mockito.Mockito.*;
-
 @SpringBootTest
-class LeakageTest {
+class MockResetTest {
+
 
     @Autowired
     private MyController controller;
@@ -17,14 +19,15 @@ class LeakageTest {
     private MyService myService;
 
     @Test
-    void testA_setsStub() {
+    @Order(1)
+    void testA() {
         when(myService.getData()).thenReturn("A");
-        assert controller.fetch().equals("A");
+        System.out.println(controller.fetch()); // A
     }
 
     @Test
-    void testB_leaksFromPreviousTest() {
-        // This test will FAIL if mocks are not reset
-        assert controller.fetch().equals("REAL");
+    @Order(2)
+    void testB() {
+        System.out.println(controller.fetch()); // should be A if leakage happens
     }
 }

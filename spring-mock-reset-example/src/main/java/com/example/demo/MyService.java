@@ -5,6 +5,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class MyService {
     public String getData() {
-        return "REAL";
+        return "real-data";
     }
 }
