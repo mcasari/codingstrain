@@ -1,0 +1,9 @@
+app:
+  name: MyApp
+  timeout: 0
+  servers:
+    - server1.example.com
+    - server2.example.com
+  security:
+    username: admin
+    password: secret
