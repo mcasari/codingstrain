@@ -28,7 +28,7 @@ public class UserService {
             stream.forEach(user -> {
                 System.out.println(user.getName());
 
-                if (counter.incrementAndGet() % 50 == 0) {
+                if (counter.incrementAndGet() % 100 == 0) {
                     em.clear();
                 }
             });
