@@ -1,16 +1,23 @@
 <mxfile host="app.diagrams.net" agent="codingstrain-generator" version="22.1.0" type="device">
-  <diagram id="a8879476-c8f5-43e4-a3fb-7a98578e5c01" name="Tweet 53">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="b4d25b1f-4185-4c85-b09c-7a71be11436a" name="Tweet 53">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// OpenFeign + circuit breaker samples — resilience isn&#x27;t an afterthought." style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #53 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: libraryapp-openfeign-discovery-circuitbreaker  #SpringCloud" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #53 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="OpenFeign + circuit breaker samples — resilience isn't an afterthought." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: libraryapp-openfeign-discovery-circuitbreaker  #SpringCloud" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>

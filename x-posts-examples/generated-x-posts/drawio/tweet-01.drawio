@@ -1,16 +1,29 @@
 <mxfile host="app.diagrams.net" agent="codingstrain-generator" version="22.1.0" type="device">
-  <diagram id="7d32e4e4-1a93-4638-be64-6bd5ac6f27ac" name="Tweet 1">
-    <mxGraphModel pageWidth="600" pageHeight="308">
+  <diagram id="19dc34c5-dff3-4b5d-a37b-8b2b224fb77d" name="Tweet 1">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="462" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="@RestController&amp;#xa;@RequestMapping(&quot;/library&quot;)&amp;#xa;public class BookController {&amp;#xa;  @GetMapping(&quot;/book&quot;)&amp;#xa;  public List&lt;Book&gt; findAll() { ... }&amp;#xa;}" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="208" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="422" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #1 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: spring-boot-minimal-rest-h2  #SpringBoot #Java" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="278" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #1 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Your first Spring Boot REST API in 30 seconds:&amp;#xa;&amp;#xa;@RestController + @RequestMapping(&quot;/library&quot;)&amp;#xa;@GetMapping(&quot;/book&quot;) → List&lt;Book&gt; findAll()&amp;#xa;&amp;#xa;CRUD with H2 — no XML." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="302" as="geometry"/>
+        </mxCell>
+        <mxCell id="code-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#192734;strokeColor=#38444d;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="36" y="202" width="488" height="132" as="geometry"/>
+        </mxCell>
+        <mxCell id="code" value="@RestController&amp;#xa;@RequestMapping(&quot;/library&quot;)&amp;#xa;public class BookController {&amp;#xa;  @GetMapping(&quot;/book&quot;)&amp;#xa;  public List&lt;Book&gt; findAll() { ... }&amp;#xa;}" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#89cff0;fontSize=11;fontFamily=Courier New;spacingLeft=12;spacingTop=8;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="36" y="202" width="488" height="132" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-boot-minimal-rest-h2  #SpringBoot #Java" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="414" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>

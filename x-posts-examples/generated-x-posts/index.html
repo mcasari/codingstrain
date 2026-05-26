@@ -2,561 +2,671 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
-  <title>codingstrain X Posts — Carbon style</title>
+  <title>codingstrain X Posts — Spring Boot &amp; Java</title>
   <style>
-    body { font-family: system-ui, sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1rem; background: #0d1117; color: #e6edf3; }
-    article { background: #161b22; border-radius: 12px; padding: 1rem; margin-bottom: 2rem; border: 1px solid #30363d; }
-    h2 { margin: 0 0 .75rem; font-size: 1rem; color: #8b949e; }
-    .links a { color: #58a6ff; }
-    .banner { background: linear-gradient(135deg, #667eea, #764ba2); color: #fff; padding: 1.25rem; border-radius: 12px; margin-bottom: 2rem; }
-    .banner a { color: #fff; }
+    body { font-family: system-ui, sans-serif; max-width: 640px; margin: 2rem auto; padding: 0 1rem; background: #f5f8fa; }
+    article { background: #fff; border-radius: 12px; padding: 1rem; margin-bottom: 2rem; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
+    h2 { margin: 0 0 .5rem; font-size: 1rem; }
+    pre { font-size: 12px; color: #536471; white-space: pre-wrap; }
+    .links a { color: #1DA1F2; }
+    .banner { background: #1DA1F2; color: #fff; padding: 1rem; border-radius: 8px; margin-bottom: 2rem; }
   </style>
 </head>
 <body>
   <div class="banner">
-    <h1>Spring Boot &amp; Java — Carbon images</h1>
-    <p>60 code cards in <a href="https://carbon.now.sh/">Carbon.now.sh</a> style.
-       Paste <code>sources/tweet-XX.java</code> into Carbon to tweak theme/export PNG.</p>
+    <h1>Spring Boot &amp; Java X Posts</h1>
+    <p>60 tweet cards · Open <code>.drawio</code> files in <a href="https://app.diagrams.net/">diagrams.net</a> to edit or export PNG/PDF.</p>
   </div>
     <article>
-      <h2>Tweet #1</h2>
-      <img src="carbon/tweet-01.svg" alt="Tweet 1 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-01.drawio">Tweet #1</a></h2>
+      <img src="svg/tweet-01.svg" alt="Tweet 1" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-01.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-01.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-01.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-01.svg" download>Download .svg</a>
       </p>
+      <pre>Your first Spring Boot REST API in 30 seconds:
+
+@RestController + @RequestMapping(&quot;/library&quot;)
+@GetMapping(&quot;/book&quot;) → List&lt;Book&gt; findAll()
+
+CRUD with H2 — no XML.</pre>
     </article>
     <article>
-      <h2>Tweet #2</h2>
-      <img src="carbon/tweet-02.svg" alt="Tweet 2 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-02.drawio">Tweet #2</a></h2>
+      <img src="svg/tweet-02.svg" alt="Tweet 2" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-02.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-02.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-02.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-02.svg" download>Download .svg</a>
       </p>
+      <pre>Constructor injection beats field injection:
+
+public UserController(UserRepository repository) {
+  this.repository = repository;
+}
+
+Spring recommends it. Your tests will thank you.</pre>
     </article>
     <article>
-      <h2>Tweet #3</h2>
-      <img src="carbon/tweet-03.svg" alt="Tweet 3 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-03.drawio">Tweet #3</a></h2>
+      <img src="svg/tweet-03.svg" alt="Tweet 3" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-03.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-03.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-03.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-03.svg" download>Download .svg</a>
       </p>
+      <pre>Pagination without boilerplate:
+
+@GetMapping + Pageable → Page&lt;User&gt;
+
+?page=0&amp;size=20&amp;sort=name,asc — done.</pre>
     </article>
     <article>
-      <h2>Tweet #4</h2>
-      <img src="carbon/tweet-04.svg" alt="Tweet 4 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-04.drawio">Tweet #4</a></h2>
+      <img src="svg/tweet-04.svg" alt="Tweet 4" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-04.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-04.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-04.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-04.svg" download>Download .svg</a>
       </p>
+      <pre>@PathVariable vs @RequestParam:
+
+• /book/{id} → path variable
+• /book?title=foo → query param
+
+Mixing them up is a classic mistake. Get it right once.</pre>
     </article>
     <article>
-      <h2>Tweet #5</h2>
-      <img src="carbon/tweet-05.svg" alt="Tweet 5 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-05.drawio">Tweet #5</a></h2>
+      <img src="svg/tweet-05.svg" alt="Tweet 5" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-05.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-05.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-05.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-05.svg" download>Download .svg</a>
       </p>
+      <pre>Raw exceptions in controllers are fine for demos.
+
+Production? Map them with @ControllerAdvice + stable JSON.</pre>
     </article>
     <article>
-      <h2>Tweet #6</h2>
-      <img src="carbon/tweet-06.svg" alt="Tweet 6 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-06.drawio">Tweet #6</a></h2>
+      <img src="svg/tweet-06.svg" alt="Tweet 6" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-06.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-06.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-06.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-06.svg" download>Download .svg</a>
       </p>
+      <pre>Stop returning stack traces to clients.
+
+Return structure: timestamp, status, error, message, path.
+
+Pair with @ExceptionHandler + @ControllerAdvice.</pre>
     </article>
     <article>
-      <h2>Tweet #7</h2>
-      <img src="carbon/tweet-07.svg" alt="Tweet 7 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-07.drawio">Tweet #7</a></h2>
+      <img src="svg/tweet-07.svg" alt="Tweet 7" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-07.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-07.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-07.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-07.svg" download>Download .svg</a>
       </p>
+      <pre>RuntimeException(&quot;Database connection failed!&quot;) in a controller teaches one thing:
+
+Always map exceptions to HTTP status + safe JSON body.</pre>
     </article>
     <article>
-      <h2>Tweet #8</h2>
-      <img src="carbon/tweet-08.svg" alt="Tweet 8 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-08.drawio">Tweet #8</a></h2>
+      <img src="svg/tweet-08.svg" alt="Tweet 8" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-08.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-08.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-08.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-08.svg" download>Download .svg</a>
       </p>
+      <pre>Production error JSON checklist:
+✅ timestamp
+✅ status
+✅ error (short code)
+✅ message (user-safe)
+✅ path
+
+Never leak SQL or internal hostnames.</pre>
     </article>
     <article>
-      <h2>Tweet #9</h2>
-      <img src="carbon/tweet-09.svg" alt="Tweet 9 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-09.drawio">Tweet #9</a></h2>
+      <img src="svg/tweet-09.svg" alt="Tweet 9" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-09.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-09.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-09.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-09.svg" download>Download .svg</a>
       </p>
+      <pre>Fail fast at startup with validated config:
+
+@Validated + @ConfigurationProperties
+
+Bad YAML? App won&#x27;t start. That&#x27;s a feature.</pre>
     </article>
     <article>
-      <h2>Tweet #10</h2>
-      <img src="carbon/tweet-10.svg" alt="Tweet 10 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-10.drawio">Tweet #10</a></h2>
+      <img src="svg/tweet-10.svg" alt="Tweet 10" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-10.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-10.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-10.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-10.svg" download>Download .svg</a>
       </p>
+      <pre>Nested config + validation:
+
+@Valid on nested objects is easy to forget.</pre>
     </article>
     <article>
-      <h2>Tweet #11</h2>
-      <img src="carbon/tweet-11.svg" alt="Tweet 11 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-11.drawio">Tweet #11</a></h2>
+      <img src="svg/tweet-11.svg" alt="Tweet 11" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-11.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-11.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-11.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-11.svg" download>Download .svg</a>
       </p>
+      <pre>Validate lists in application.yml:
+
+@NotEmpty
+private List&lt;@NotBlank String&gt; servers;
+
+Empty server list → startup failure.</pre>
     </article>
     <article>
-      <h2>Tweet #12</h2>
-      <img src="carbon/tweet-12.svg" alt="Tweet 12 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-12.drawio">Tweet #12</a></h2>
+      <img src="svg/tweet-12.svg" alt="Tweet 12" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-12.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-12.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-12.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-12.svg" download>Download .svg</a>
       </p>
+      <pre>timeout: 0 in YAML with @Min(1) → Bean Validation stops the app.
+
+Better than discovering it in prod at 3 a.m.</pre>
     </article>
     <article>
-      <h2>Tweet #13</h2>
-      <img src="carbon/tweet-13.svg" alt="Tweet 13 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-13.drawio">Tweet #13</a></h2>
+      <img src="svg/tweet-13.svg" alt="Tweet 13" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-13.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-13.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-13.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-13.svg" download>Download .svg</a>
       </p>
+      <pre>JpaRepository&lt;User, Long&gt; — that&#x27;s your entire DAO for CRUD.
+
+Spring Data generates the implementation.</pre>
     </article>
     <article>
-      <h2>Tweet #14</h2>
-      <img src="carbon/tweet-14.svg" alt="Tweet 14 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-14.drawio">Tweet #14</a></h2>
+      <img src="svg/tweet-14.svg" alt="Tweet 14" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-14.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-14.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-14.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-14.svg" download>Download .svg</a>
       </p>
+      <pre>Load test data in integration tests with one annotation:
+
+@SpringBootTest + @Sql(&quot;/test-data.sql&quot;)
+
+No @BeforeEach seeding boilerplate.</pre>
     </article>
     <article>
-      <h2>Tweet #15</h2>
-      <img src="carbon/tweet-15.svg" alt="Tweet 15 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-15.drawio">Tweet #15</a></h2>
+      <img src="svg/tweet-15.svg" alt="Tweet 15" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-15.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-15.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-15.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-15.svg" download>Download .svg</a>
       </p>
+      <pre>Processing 1M rows with findAll() will OOM you.
+
+Use a Stream instead.</pre>
     </article>
     <article>
-      <h2>Tweet #16</h2>
-      <img src="carbon/tweet-16.svg" alt="Tweet 16 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-16.drawio">Tweet #16</a></h2>
+      <img src="svg/tweet-16.svg" alt="Tweet 16" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-16.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-16.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-16.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-16.svg" download>Download .svg</a>
       </p>
+      <pre>Stream + EntityManager.clear() every N rows keeps the persistence context from growing forever.</pre>
     </article>
     <article>
-      <h2>Tweet #17</h2>
-      <img src="carbon/tweet-17.svg" alt="Tweet 17 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-17.drawio">Tweet #17</a></h2>
+      <img src="svg/tweet-17.svg" alt="Tweet 17" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-17.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-17.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-17.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-17.svg" download>Download .svg</a>
       </p>
+      <pre>Always wrap JPA streams in try-with-resources:
+
+try (Stream&lt;User&gt; stream = repository.streamAllUsers()) { ... }
+
+Forgot it? Connection leak.</pre>
     </article>
     <article>
-      <h2>Tweet #18</h2>
-      <img src="carbon/tweet-18.svg" alt="Tweet 18 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-18.drawio">Tweet #18</a></h2>
+      <img src="svg/tweet-18.svg" alt="Tweet 18" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-18.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-18.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-18.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-18.svg" download>Download .svg</a>
       </p>
+      <pre>@Transactional(readOnly = true) on read-only batch jobs — hints to the DB and avoids surprises.</pre>
     </article>
     <article>
-      <h2>Tweet #19</h2>
-      <img src="carbon/tweet-19.svg" alt="Tweet 19 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-19.drawio">Tweet #19</a></h2>
+      <img src="svg/tweet-19.svg" alt="Tweet 19" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-19.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-19.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-19.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-19.svg" download>Download .svg</a>
       </p>
+      <pre>Spring Kafka producer in 5 lines:</pre>
     </article>
     <article>
-      <h2>Tweet #20</h2>
-      <img src="carbon/tweet-20.svg" alt="Tweet 20 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-20.drawio">Tweet #20</a></h2>
+      <img src="svg/tweet-20.svg" alt="Tweet 20" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-20.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-20.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-20.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-20.svg" download>Download .svg</a>
       </p>
+      <pre>Kafka consumer side:</pre>
     </article>
     <article>
-      <h2>Tweet #21</h2>
-      <img src="carbon/tweet-21.svg" alt="Tweet 21 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-21.drawio">Tweet #21</a></h2>
+      <img src="svg/tweet-21.svg" alt="Tweet 21" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-21.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-21.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-21.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-21.svg" download>Download .svg</a>
       </p>
+      <pre>auto-offset-reset: earliest in application.yml — new consumer groups read from the start.
+
+Know when you want latest instead.</pre>
     </article>
     <article>
-      <h2>Tweet #22</h2>
-      <img src="carbon/tweet-22.svg" alt="Tweet 22 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-22.drawio">Tweet #22</a></h2>
+      <img src="svg/tweet-22.svg" alt="Tweet 22" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-22.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-22.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-22.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-22.svg" download>Download .svg</a>
       </p>
+      <pre>Decouple services: save to DB, then publish.
+
+OrderService saves → publishEvent(OrderCreatedEvent).
+
+Listeners react without tight coupling.</pre>
     </article>
     <article>
-      <h2>Tweet #23</h2>
-      <img src="carbon/tweet-23.svg" alt="Tweet 23 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-23.drawio">Tweet #23</a></h2>
+      <img src="svg/tweet-23.svg" alt="Tweet 23" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-23.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-23.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-23.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-23.svg" download>Download .svg</a>
       </p>
+      <pre>Don&#x27;t send the email before commit:</pre>
     </article>
     <article>
-      <h2>Tweet #24</h2>
-      <img src="carbon/tweet-24.svg" alt="Tweet 24 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-24.drawio">Tweet #24</a></h2>
+      <img src="svg/tweet-24.svg" alt="Tweet 24" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-24.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-24.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-24.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-24.svg" download>Download .svg</a>
       </p>
+      <pre>@EnableAsync on your main class.
+@Async(&quot;taskExecutor&quot;) on the method.
+
+Done.</pre>
     </article>
     <article>
-      <h2>Tweet #25</h2>
-      <img src="carbon/tweet-25.svg" alt="Tweet 25 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-25.drawio">Tweet #25</a></h2>
+      <img src="svg/tweet-25.svg" alt="Tweet 25" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-25.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-25.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-25.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-25.svg" download>Download .svg</a>
       </p>
+      <pre>Don&#x27;t use the default executor in prod. Define your pool:</pre>
     </article>
     <article>
-      <h2>Tweet #26</h2>
-      <img src="carbon/tweet-26.svg" alt="Tweet 26 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-26.drawio">Tweet #26</a></h2>
+      <img src="svg/tweet-26.svg" alt="Tweet 26" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-26.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-26.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-26.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-26.svg" download>Download .svg</a>
       </p>
+      <pre>Fire 10 async tasks at startup with CommandLineRunner.
+
+Watch thread names in logs — you&#x27;ll see Async-*.</pre>
     </article>
     <article>
-      <h2>Tweet #27</h2>
-      <img src="carbon/tweet-27.svg" alt="Tweet 27 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-27.drawio">Tweet #27</a></h2>
+      <img src="svg/tweet-27.svg" alt="Tweet 27" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-27.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-27.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-27.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-27.svg" download>Download .svg</a>
       </p>
+      <pre>@Async methods must be called from another Spring bean, not the same class.
+
+Self-invocation = synchronous. Classic gotcha.</pre>
     </article>
     <article>
-      <h2>Tweet #28</h2>
-      <img src="carbon/tweet-28.svg" alt="Tweet 28 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-28.drawio">Tweet #28</a></h2>
+      <img src="svg/tweet-28.svg" alt="Tweet 28" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-28.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-28.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-28.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-28.svg" download>Download .svg</a>
       </p>
+      <pre>Slow external API? Cache it:</pre>
     </article>
     <article>
-      <h2>Tweet #29</h2>
-      <img src="carbon/tweet-29.svg" alt="Tweet 29 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-29.drawio">Tweet #29</a></h2>
+      <img src="svg/tweet-29.svg" alt="Tweet 29" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-29.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-29.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-29.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-29.svg" download>Download .svg</a>
       </p>
+      <pre>Redis cache TTL in one bean:</pre>
     </article>
     <article>
-      <h2>Tweet #30</h2>
-      <img src="carbon/tweet-30.svg" alt="Tweet 30 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-30.drawio">Tweet #30</a></h2>
+      <img src="svg/tweet-30.svg" alt="Tweet 30" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-30.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-30.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-30.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-30.svg" download>Download .svg</a>
       </p>
+      <pre>@EnableCaching + @Cacheable — Spring abstracts Redis.
+
+Swap cache provider later without touching business logic.</pre>
     </article>
     <article>
-      <h2>Tweet #31</h2>
-      <img src="carbon/tweet-31.svg" alt="Tweet 31 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-31.drawio">Tweet #31</a></h2>
+      <img src="svg/tweet-31.svg" alt="Tweet 31" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-31.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-31.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-31.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-31.svg" download>Download .svg</a>
       </p>
+      <pre>Global CORS in Spring Boot — configure once, no @CrossOrigin on every controller.</pre>
     </article>
     <article>
-      <h2>Tweet #32</h2>
-      <img src="carbon/tweet-32.svg" alt="Tweet 32 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-32.drawio">Tweet #32</a></h2>
+      <img src="svg/tweet-32.svg" alt="Tweet 32" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-32.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-32.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-32.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-32.svg" download>Download .svg</a>
       </p>
+      <pre>Frontend on :3000, API on :8080?
+
+CORS isn&#x27;t a bug — it&#x27;s the browser. Configure it once globally.</pre>
     </article>
     <article>
-      <h2>Tweet #33</h2>
-      <img src="carbon/tweet-33.svg" alt="Tweet 33 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-33.drawio">Tweet #33</a></h2>
+      <img src="svg/tweet-33.svg" alt="Tweet 33" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-33.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-33.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-33.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-33.svg" download>Download .svg</a>
       </p>
+      <pre>Debug HTTP issues with CommonsRequestLoggingFilter:</pre>
     </article>
     <article>
-      <h2>Tweet #34</h2>
-      <img src="carbon/tweet-34.svg" alt="Tweet 34 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-34.drawio">Tweet #34</a></h2>
+      <img src="svg/tweet-34.svg" alt="Tweet 34" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-34.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-34.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-34.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-34.svg" download>Download .svg</a>
       </p>
+      <pre>Spring Batch: read CSV → process → write in chunks of 5:</pre>
     </article>
     <article>
-      <h2>Tweet #35</h2>
-      <img src="carbon/tweet-35.svg" alt="Tweet 35 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-35.drawio">Tweet #35</a></h2>
+      <img src="svg/tweet-35.svg" alt="Tweet 35" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-35.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-35.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-35.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-35.svg" download>Download .svg</a>
       </p>
+      <pre>FlatFileItemReaderBuilder + .linesToSkip(1) — skip the header row automatically.</pre>
     </article>
     <article>
-      <h2>Tweet #36</h2>
-      <img src="carbon/tweet-36.svg" alt="Tweet 36 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-36.drawio">Tweet #36</a></h2>
+      <img src="svg/tweet-36.svg" alt="Tweet 36" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-36.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-36.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-36.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-36.svg" download>Download .svg</a>
       </p>
+      <pre>ItemProcessor transforms each row:</pre>
     </article>
     <article>
-      <h2>Tweet #37</h2>
-      <img src="carbon/tweet-37.svg" alt="Tweet 37 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-37.drawio">Tweet #37</a></h2>
+      <img src="svg/tweet-37.svg" alt="Tweet 37" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-37.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-37.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-37.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-37.svg" download>Download .svg</a>
       </p>
+      <pre>Parse CSV without reinventing the wheel — Apache Commons CSV + try-with-resources.</pre>
     </article>
     <article>
-      <h2>Tweet #38</h2>
-      <img src="carbon/tweet-38.svg" alt="Tweet 38 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-38.drawio">Tweet #38</a></h2>
+      <img src="svg/tweet-38.svg" alt="Tweet 38" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-38.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-38.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-38.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-38.svg" download>Download .svg</a>
       </p>
+      <pre>@MockBean stubs can leak between tests unless reset.
+
+Use @DirtiesContext or Mockito reset.</pre>
     </article>
     <article>
-      <h2>Tweet #39</h2>
-      <img src="carbon/tweet-39.svg" alt="Tweet 39 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-39.drawio">Tweet #39</a></h2>
+      <img src="svg/tweet-39.svg" alt="Tweet 39" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-39.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-39.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-39.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-39.svg" download>Download .svg</a>
       </p>
+      <pre>@SpringBootTest loads the full context.
+
+Use it when you need integration truth — not for every unit test.</pre>
     </article>
     <article>
-      <h2>Tweet #40</h2>
-      <img src="carbon/tweet-40.svg" alt="Tweet 40 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-40.drawio">Tweet #40</a></h2>
+      <img src="svg/tweet-40.svg" alt="Tweet 40" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-40.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-40.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-40.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-40.svg" download>Download .svg</a>
       </p>
+      <pre>@Sql on tests = reproducible DB state.
+
+No flaky &quot;works on my machine&quot; seeds.</pre>
     </article>
     <article>
-      <h2>Tweet #41</h2>
-      <img src="carbon/tweet-41.svg" alt="Tweet 41 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-41.drawio">Tweet #41</a></h2>
+      <img src="svg/tweet-41.svg" alt="Tweet 41" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-41.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-41.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-41.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-41.svg" download>Download .svg</a>
       </p>
+      <pre>Builder pattern without Lombok — required fields in constructor, optional fields chain.</pre>
     </article>
     <article>
-      <h2>Tweet #42</h2>
-      <img src="carbon/tweet-42.svg" alt="Tweet 42 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-42.drawio">Tweet #42</a></h2>
+      <img src="svg/tweet-42.svg" alt="Tweet 42" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-42.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-42.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-42.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-42.svg" download>Download .svg</a>
       </p>
+      <pre>LinkedHashMap preserves insertion order. HashMap does not.</pre>
     </article>
     <article>
-      <h2>Tweet #43</h2>
-      <img src="carbon/tweet-43.svg" alt="Tweet 43 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-43.drawio">Tweet #43</a></h2>
+      <img src="svg/tweet-43.svg" alt="Tweet 43" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-43.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-43.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-43.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-43.svg" download>Download .svg</a>
       </p>
+      <pre>Parsing &quot;121,234&quot; as a double?
+
+Quick fix: replace comma with dot.
+
+Locale-aware? NumberFormat.getInstance(Locale.ITALY).</pre>
     </article>
     <article>
-      <h2>Tweet #44</h2>
-      <img src="carbon/tweet-44.svg" alt="Tweet 44 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-44.drawio">Tweet #44</a></h2>
+      <img src="svg/tweet-44.svg" alt="Tweet 44" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-44.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-44.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-44.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-44.svg" download>Download .svg</a>
       </p>
+      <pre>Italian number format 123.111,234 — don&#x27;t assume . is always the decimal separator.</pre>
     </article>
     <article>
-      <h2>Tweet #45</h2>
-      <img src="carbon/tweet-45.svg" alt="Tweet 45 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-45.drawio">Tweet #45</a></h2>
+      <img src="svg/tweet-45.svg" alt="Tweet 45" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-45.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-45.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-45.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-45.svg" download>Download .svg</a>
       </p>
+      <pre>Shallow clone: super.clone() — shared nested objects.
+Deep clone: clone nested Dependency too.</pre>
     </article>
     <article>
-      <h2>Tweet #46</h2>
-      <img src="carbon/tweet-46.svg" alt="Tweet 46 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-46.drawio">Tweet #46</a></h2>
+      <img src="svg/tweet-46.svg" alt="Tweet 46" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-46.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-46.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-46.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-46.svg" download>Download .svg</a>
       </p>
+      <pre>Cloneable without overriding clone() correctly → CloneNotSupportedException.
+
+Prefer copy constructors or records for new code.</pre>
     </article>
     <article>
-      <h2>Tweet #47</h2>
-      <img src="carbon/tweet-47.svg" alt="Tweet 47 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-47.drawio">Tweet #47</a></h2>
+      <img src="svg/tweet-47.svg" alt="Tweet 47" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-47.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-47.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-47.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-47.svg" download>Download .svg</a>
       </p>
+      <pre>Immutable fields in the Builder pattern:
+
+private final String name;
+private final int age;
+
+Set once at build time — fewer bugs in DTOs.</pre>
     </article>
     <article>
-      <h2>Tweet #48</h2>
-      <img src="carbon/tweet-48.svg" alt="Tweet 48 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-48.drawio">Tweet #48</a></h2>
+      <img src="svg/tweet-48.svg" alt="Tweet 48" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-48.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-48.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-48.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-48.svg" download>Download .svg</a>
       </p>
+      <pre>Spring Boot 2.7 + Java 17 in codingstrain — run any module with:
+
+mvn spring-boot:run
+
+Each folder is an independent lesson.
+
+codingstrain.com</pre>
     </article>
     <article>
-      <h2>Tweet #49</h2>
-      <img src="carbon/tweet-49.svg" alt="Tweet 49 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-49.drawio">Tweet #49</a></h2>
+      <img src="svg/tweet-49.svg" alt="Tweet 49" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-49.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-49.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-49.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-49.svg" download>Download .svg</a>
       </p>
+      <pre>H2 in-memory DB for REST tutorials — zero Docker, full CRUD.
+
+Swap to Postgres later; controllers stay the same.</pre>
     </article>
     <article>
-      <h2>Tweet #50</h2>
-      <img src="carbon/tweet-50.svg" alt="Tweet 50 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-50.drawio">Tweet #50</a></h2>
+      <img src="svg/tweet-50.svg" alt="Tweet 50" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-50.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-50.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-50.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-50.svg" download>Download .svg</a>
       </p>
+      <pre>/actuator/health before you deploy.
+
+Monitoring isn&#x27;t optional.</pre>
     </article>
     <article>
-      <h2>Tweet #51</h2>
-      <img src="carbon/tweet-51.svg" alt="Tweet 51 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-51.drawio">Tweet #51</a></h2>
+      <img src="svg/tweet-51.svg" alt="Tweet 51" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-51.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-51.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-51.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-51.svg" download>Download .svg</a>
       </p>
+      <pre>Spring Cloud Config (native + Git) in codingstrain — centralize config before you have 12 copies of application.properties.</pre>
     </article>
     <article>
-      <h2>Tweet #52</h2>
-      <img src="carbon/tweet-52.svg" alt="Tweet 52 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-52.drawio">Tweet #52</a></h2>
+      <img src="svg/tweet-52.svg" alt="Tweet 52" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-52.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-52.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-52.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-52.svg" download>Download .svg</a>
       </p>
+      <pre>Eureka service discovery — register clients, call by name not IP.
+
+Microservices 101 in this monorepo.</pre>
     </article>
     <article>
-      <h2>Tweet #53</h2>
-      <img src="carbon/tweet-53.svg" alt="Tweet 53 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-53.drawio">Tweet #53</a></h2>
+      <img src="svg/tweet-53.svg" alt="Tweet 53" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-53.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-53.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-53.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-53.svg" download>Download .svg</a>
       </p>
+      <pre>OpenFeign + circuit breaker samples — resilience isn&#x27;t an afterthought.</pre>
     </article>
     <article>
-      <h2>Tweet #54</h2>
-      <img src="carbon/tweet-54.svg" alt="Tweet 54 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-54.drawio">Tweet #54</a></h2>
+      <img src="svg/tweet-54.svg" alt="Tweet 54" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-54.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-54.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-54.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-54.svg" download>Download .svg</a>
       </p>
+      <pre>Contract testing (Pact) and Gatling load tests live beside the microservices.
+
+CI-friendly patterns, not slide-deck theory.</pre>
     </article>
     <article>
-      <h2>Tweet #55</h2>
-      <img src="carbon/tweet-55.svg" alt="Tweet 55 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-55.drawio">Tweet #55</a></h2>
+      <img src="svg/tweet-55.svg" alt="Tweet 55" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-55.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-55.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-55.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-55.svg" download>Download .svg</a>
       </p>
+      <pre>codingstrain is a multi-module Maven lab — clone once, open one module, learn one concept.
+
+github.com/mcasari/codingstrain</pre>
     </article>
     <article>
-      <h2>Tweet #56</h2>
-      <img src="carbon/tweet-56.svg" alt="Tweet 56 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-56.drawio">Tweet #56</a></h2>
+      <img src="svg/tweet-56.svg" alt="Tweet 56" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-56.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-56.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-56.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-56.svg" download>Download .svg</a>
       </p>
+      <pre>🧵 5 Spring Boot mistakes I see in every code review (from real demos in codingstrain)</pre>
     </article>
     <article>
-      <h2>Tweet #57</h2>
-      <img src="carbon/tweet-57.svg" alt="Tweet 57 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-57.drawio">Tweet #57</a></h2>
+      <img src="svg/tweet-57.svg" alt="Tweet 57" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-57.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-57.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-57.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-57.svg" download>Download .svg</a>
       </p>
+      <pre>🧵 JPA memory leaks: findAll() vs Stream + em.clear() — thread</pre>
     </article>
     <article>
-      <h2>Tweet #58</h2>
-      <img src="carbon/tweet-58.svg" alt="Tweet 58 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-58.drawio">Tweet #58</a></h2>
+      <img src="svg/tweet-58.svg" alt="Tweet 58" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-58.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-58.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-58.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-58.svg" download>Download .svg</a>
       </p>
+      <pre>🧵 Kafka with Spring Boot in under 10 minutes — producer + consumer code</pre>
     </article>
     <article>
-      <h2>Tweet #59</h2>
-      <img src="carbon/tweet-59.svg" alt="Tweet 59 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-59.drawio">Tweet #59</a></h2>
+      <img src="svg/tweet-59.svg" alt="Tweet 59" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-59.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-59.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-59.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-59.svg" download>Download .svg</a>
       </p>
+      <pre>🧵 @ConfigurationProperties + Bean Validation = fail at startup, not in prod</pre>
     </article>
     <article>
-      <h2>Tweet #60</h2>
-      <img src="carbon/tweet-60.svg" alt="Tweet 60 Carbon" width="720"/>
+      <h2><a href="drawio/tweet-60.drawio">Tweet #60</a></h2>
+      <img src="svg/tweet-60.svg" alt="Tweet 60" width="560"/>
       <p class="links">
-        <a href="carbon/tweet-60.svg" download>Download SVG</a> ·
-        <a href="sources/tweet-60.java" download>Source .java</a> ·
-        <a href="https://carbon.now.sh/" target="_blank" rel="noopener">Edit on Carbon</a>
+        <a href="drawio/tweet-60.drawio" download>Download .drawio</a> ·
+        <a href="svg/tweet-60.svg" download>Download .svg</a>
       </p>
+      <pre>🧵 Java Builder pattern step-by-step (no Lombok required)</pre>
     </article>
 </body>
 </html>

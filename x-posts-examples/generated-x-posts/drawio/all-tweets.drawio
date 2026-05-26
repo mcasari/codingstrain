@@ -1,960 +1,1542 @@
-<mxfile host="app.diagrams.net" agent="codingstrain-generator" version="22.1.0">
-  <diagram id="6ff4ccca-c3ad-4902-b729-30022377bea6" name="Tweet 1">
-    <mxGraphModel pageWidth="600" pageHeight="308">
+<mxfile host="app.diagrams.net" agent="codingstrain-generator" version="22.1.0" type="device">
+  <diagram id="94d66410-76e7-4ada-ace1-b482ae3a219c" name="Tweet 1">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="462" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="@RestController&amp;#xa;@RequestMapping(&quot;/library&quot;)&amp;#xa;public class BookController {&amp;#xa;  @GetMapping(&quot;/book&quot;)&amp;#xa;  public List&lt;Book&gt; findAll() { ... }&amp;#xa;}" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="208" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="422" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #1 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: spring-boot-minimal-rest-h2  #SpringBoot #Java" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="278" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #1 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Your first Spring Boot REST API in 30 seconds:&amp;#xa;&amp;#xa;@RestController + @RequestMapping(&quot;/library&quot;)&amp;#xa;@GetMapping(&quot;/book&quot;) → List&lt;Book&gt; findAll()&amp;#xa;&amp;#xa;CRUD with H2 — no XML." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="302" as="geometry"/>
+        </mxCell>
+        <mxCell id="code-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#192734;strokeColor=#38444d;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="36" y="202" width="488" height="132" as="geometry"/>
+        </mxCell>
+        <mxCell id="code" value="@RestController&amp;#xa;@RequestMapping(&quot;/library&quot;)&amp;#xa;public class BookController {&amp;#xa;  @GetMapping(&quot;/book&quot;)&amp;#xa;  public List&lt;Book&gt; findAll() { ... }&amp;#xa;}" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#89cff0;fontSize=11;fontFamily=Courier New;spacingLeft=12;spacingTop=8;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="36" y="202" width="488" height="132" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-boot-minimal-rest-h2  #SpringBoot #Java" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="414" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="256e4771-cbb3-4f24-a65d-81ab767e2a2a" name="Tweet 2">
-    <mxGraphModel pageWidth="600" pageHeight="326">
+  <diagram id="de7e6452-c2c0-4cfb-81a4-c6a6bd33c03b" name="Tweet 2">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="332" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// Constructor injection beats field injection:&amp;#xa;//&amp;#xa;// public UserController(UserRepository repository) {&amp;#xa;//   this.repository = repository;&amp;#xa;// }&amp;#xa;//&amp;#xa;// Spring recommends it. Your tests will thank you." style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="226" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="292" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #2 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: spring-boot-paged-rest-example  #SpringBoot" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="296" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #2 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Constructor injection beats field injection:&amp;#xa;&amp;#xa;public UserController(UserRepository repository) {&amp;#xa;  this.repository = repository;&amp;#xa;}&amp;#xa;&amp;#xa;Spring recommends it. Your tests will thank you." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="172" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-boot-paged-rest-example  #SpringBoot" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="284" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="96684b01-f548-411a-be1a-12383a1ec2a0" name="Tweet 3">
-    <mxGraphModel pageWidth="600" pageHeight="290">
+  <diagram id="89c01f5f-49e6-46a9-9856-15eeaf87ca27" name="Tweet 3">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="422" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="@GetMapping&amp;#xa;public PagedResponse&lt;User&gt; getUsers(Pageable pageable) {&amp;#xa;  Page&lt;User&gt; page = repository.findAll(pageable);&amp;#xa;  return new PagedResponse&lt;&gt;(page.getContent(), ...);&amp;#xa;}" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="190" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="382" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #3 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: spring-boot-paged-rest-example  #SpringBoot" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="260" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #3 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Pagination without boilerplate:&amp;#xa;&amp;#xa;@GetMapping + Pageable → Page&lt;User&gt;&amp;#xa;&amp;#xa;?page=0&amp;size=20&amp;sort=name,asc — done." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="262" as="geometry"/>
+        </mxCell>
+        <mxCell id="code-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#192734;strokeColor=#38444d;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="36" y="182" width="488" height="114" as="geometry"/>
+        </mxCell>
+        <mxCell id="code" value="@GetMapping&amp;#xa;public PagedResponse&lt;User&gt; getUsers(Pageable pageable) {&amp;#xa;  Page&lt;User&gt; page = repository.findAll(pageable);&amp;#xa;  return new PagedResponse&lt;&gt;(page.getContent(), ...);&amp;#xa;}" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#89cff0;fontSize=11;fontFamily=Courier New;spacingLeft=12;spacingTop=8;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="36" y="182" width="488" height="114" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-boot-paged-rest-example  #SpringBoot" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="374" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="329b0e56-ab5f-452f-a912-82c2b377d001" name="Tweet 4">
-    <mxGraphModel pageWidth="600" pageHeight="308">
+  <diagram id="32e9417f-3c78-4c6a-8cc2-a346ab82b4cd" name="Tweet 4">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="332" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// @PathVariable vs @RequestParam:&amp;#xa;//&amp;#xa;// • /book/{id} → path variable&amp;#xa;// • /book?title=foo → query param&amp;#xa;//&amp;#xa;// Mixing them up is a classic mistake. Get it right once." style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="208" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="292" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #4 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: spring-boot-minimal-rest-h2  #SpringBoot #Java" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="278" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #4 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="@PathVariable vs @RequestParam:&amp;#xa;&amp;#xa;• /book/{id} → path variable&amp;#xa;• /book?title=foo → query param&amp;#xa;&amp;#xa;Mixing them up is a classic mistake. Get it right once." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="172" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-boot-minimal-rest-h2  #SpringBoot #Java" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="284" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="eb51afa7-ba62-4872-96d9-7bc171a3ceb5" name="Tweet 5">
-    <mxGraphModel pageWidth="600" pageHeight="290">
+  <diagram id="9ea1a76c-c59c-4817-bdb5-084ad58d4019" name="Tweet 5">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="400" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="@GetMapping(&quot;/api/users/{id}&quot;)&amp;#xa;public String getUser(@PathVariable Long id) {&amp;#xa;  if (id == 1) return &quot;User found&quot;;&amp;#xa;  throw new RuntimeException(&quot;Database connection failed!&quot;);&amp;#xa;}" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="190" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="360" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #5 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: springboot-error-handling-demo  #SpringBoot" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="260" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #5 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Raw exceptions in controllers are fine for demos.&amp;#xa;&amp;#xa;Production? Map them with @ControllerAdvice + stable JSON." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="240" as="geometry"/>
+        </mxCell>
+        <mxCell id="code-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#192734;strokeColor=#38444d;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="36" y="162" width="488" height="114" as="geometry"/>
+        </mxCell>
+        <mxCell id="code" value="@GetMapping(&quot;/api/users/{id}&quot;)&amp;#xa;public String getUser(@PathVariable Long id) {&amp;#xa;  if (id == 1) return &quot;User found&quot;;&amp;#xa;  throw new RuntimeException(&quot;Database connection failed!&quot;);&amp;#xa;}" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#89cff0;fontSize=11;fontFamily=Courier New;spacingLeft=12;spacingTop=8;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="36" y="162" width="488" height="114" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: springboot-error-handling-demo  #SpringBoot" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="352" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="3e90856b-11bb-4d5f-bc7d-dee80f8f1bf5" name="Tweet 6">
-    <mxGraphModel pageWidth="600" pageHeight="326">
+  <diagram id="1266a929-89ec-4e9b-b73b-233aeae483de" name="Tweet 6">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="480" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="public class ErrorResponse {&amp;#xa;  private Instant timestamp;&amp;#xa;  private int status;&amp;#xa;  private String error;&amp;#xa;  private String message;&amp;#xa;  private String path;&amp;#xa;}" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="226" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="440" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #6 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: springboot-error-handling-demo  #SpringBoot" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="296" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #6 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Stop returning stack traces to clients.&amp;#xa;&amp;#xa;Return structure: timestamp, status, error, message, path.&amp;#xa;&amp;#xa;Pair with @ExceptionHandler + @ControllerAdvice." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="320" as="geometry"/>
+        </mxCell>
+        <mxCell id="code-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#192734;strokeColor=#38444d;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="36" y="202" width="488" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="code" value="public class ErrorResponse {&amp;#xa;  private Instant timestamp;&amp;#xa;  private int status;&amp;#xa;  private String error;&amp;#xa;  private String message;&amp;#xa;  private String path;&amp;#xa;}" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#89cff0;fontSize=11;fontFamily=Courier New;spacingLeft=12;spacingTop=8;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="36" y="202" width="488" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: springboot-error-handling-demo  #SpringBoot" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="432" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="5dfb1fc7-3c33-4969-9f21-60f843dd4b9f" name="Tweet 7">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="c16b247d-14e1-44d5-b1cb-ca073e3ad8e9" name="Tweet 7">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// RuntimeException(&quot;Database connection failed!&quot;) in a controller teaches one thing:&amp;#xa;//&amp;#xa;// Always map exceptions to HTTP status + safe JSON body." style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #7 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: springboot-error-handling-demo  #SpringBoot" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #7 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="RuntimeException(&quot;Database connection failed!&quot;) in a controller teaches one thing:&amp;#xa;&amp;#xa;Always map exceptions to HTTP status + safe JSON body." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: springboot-error-handling-demo  #SpringBoot" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="d8e65896-ccc4-42cb-aa06-f619f457b3d5" name="Tweet 8">
-    <mxGraphModel pageWidth="600" pageHeight="344">
+  <diagram id="172f56c9-fd5b-42a3-b6b4-d7405fd4a151" name="Tweet 8">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="354" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// Production error JSON checklist:&amp;#xa;// ✅ timestamp&amp;#xa;// ✅ status&amp;#xa;// ✅ error (short code)&amp;#xa;// ✅ message (user-safe)&amp;#xa;// ✅ path&amp;#xa;//&amp;#xa;// Never leak SQL or internal hostnames." style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="244" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="314" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #8 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: springboot-error-handling-demo  #SpringBoot" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="314" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #8 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Production error JSON checklist:&amp;#xa;✅ timestamp&amp;#xa;✅ status&amp;#xa;✅ error (short code)&amp;#xa;✅ message (user-safe)&amp;#xa;✅ path&amp;#xa;&amp;#xa;Never leak SQL or internal hostnames." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="194" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: springboot-error-handling-demo  #SpringBoot" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="306" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="ce52de88-9647-406c-8255-a9bf01b56935" name="Tweet 9">
-    <mxGraphModel pageWidth="600" pageHeight="308">
+  <diagram id="ec0232c4-bac2-412a-9836-a007f9232a36" name="Tweet 9">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="440" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="@Validated&amp;#xa;@ConfigurationProperties(prefix = &quot;app&quot;)&amp;#xa;public class AppProperties {&amp;#xa;  @NotBlank private String name;&amp;#xa;  @Min(1) @Max(60) private Integer timeout;&amp;#xa;}" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="208" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="400" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #9 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: spring-boot-validated-config  #SpringBoot" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="278" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #9 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Fail fast at startup with validated config:&amp;#xa;&amp;#xa;@Validated + @ConfigurationProperties&amp;#xa;&amp;#xa;Bad YAML? App won't start. That's a feature." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="280" as="geometry"/>
+        </mxCell>
+        <mxCell id="code-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#192734;strokeColor=#38444d;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="36" y="182" width="488" height="132" as="geometry"/>
+        </mxCell>
+        <mxCell id="code" value="@Validated&amp;#xa;@ConfigurationProperties(prefix = &quot;app&quot;)&amp;#xa;public class AppProperties {&amp;#xa;  @NotBlank private String name;&amp;#xa;  @Min(1) @Max(60) private Integer timeout;&amp;#xa;}" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#89cff0;fontSize=11;fontFamily=Courier New;spacingLeft=12;spacingTop=8;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="36" y="182" width="488" height="132" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-boot-validated-config  #SpringBoot" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="392" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="3bb9842d-4a7e-4a76-8c0e-206985a704a8" name="Tweet 10">
-    <mxGraphModel pageWidth="600" pageHeight="326">
+  <diagram id="33bbcd8f-c82a-463a-8e03-2e42c57c41b0" name="Tweet 10">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="414" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="@Valid&amp;#xa;private Security security;&amp;#xa;&amp;#xa;public static class Security {&amp;#xa;  @NotBlank private String username;&amp;#xa;  @NotBlank private String password;&amp;#xa;}" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="226" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="374" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #10 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: spring-boot-validated-config  #SpringBoot" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="296" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #10 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Nested config + validation:&amp;#xa;&amp;#xa;@Valid on nested objects is easy to forget." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="254" as="geometry"/>
+        </mxCell>
+        <mxCell id="code-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#192734;strokeColor=#38444d;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="36" y="142" width="488" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="code" value="@Valid&amp;#xa;private Security security;&amp;#xa;&amp;#xa;public static class Security {&amp;#xa;  @NotBlank private String username;&amp;#xa;  @NotBlank private String password;&amp;#xa;}" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#89cff0;fontSize=11;fontFamily=Courier New;spacingLeft=12;spacingTop=8;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="36" y="142" width="488" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-boot-validated-config  #SpringBoot" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="366" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="c26e23a8-4de4-438f-a8b6-dcf2d3a26445" name="Tweet 11">
-    <mxGraphModel pageWidth="600" pageHeight="308">
+  <diagram id="7d517156-ae08-400e-94cb-f2446f94f380" name="Tweet 11">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// Validate lists in application.yml:&amp;#xa;//&amp;#xa;// @NotEmpty&amp;#xa;// private List&lt;@NotBlank String&gt; servers;&amp;#xa;//&amp;#xa;// Empty server list → startup failure." style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="208" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #11 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: spring-boot-validated-config  #SpringBoot" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="278" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #11 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Validate lists in application.yml:&amp;#xa;&amp;#xa;@NotEmpty&amp;#xa;private List&lt;@NotBlank String&gt; servers;&amp;#xa;&amp;#xa;Empty server list → startup failure." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-boot-validated-config  #SpringBoot" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="d914a240-2b37-4f7e-bb21-672c9c2a6254" name="Tweet 12">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="6b584e7c-378b-4112-967b-2e4f50632f33" name="Tweet 12">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// timeout: 0 in YAML with @Min(1) → Bean Validation stops the app.&amp;#xa;//&amp;#xa;// Better than discovering it in prod at 3 a.m." style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #12 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: spring-boot-validated-config  #SpringBoot" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #12 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="timeout: 0 in YAML with @Min(1) → Bean Validation stops the app.&amp;#xa;&amp;#xa;Better than discovering it in prod at 3 a.m." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-boot-validated-config  #SpringBoot" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="d30de29d-407d-4453-9f83-17938cf06851" name="Tweet 13">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="9668816d-b335-45dc-835a-b327eead88f9" name="Tweet 13">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="346" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="public interface UserRepository&amp;#xa;    extends JpaRepository&lt;User, Long&gt; {}" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="306" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #13 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: sql-annotation-demo  #SpringBoot #Java" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #13 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="JpaRepository&lt;User, Long&gt; — that's your entire DAO for CRUD.&amp;#xa;&amp;#xa;Spring Data generates the implementation." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="186" as="geometry"/>
+        </mxCell>
+        <mxCell id="code-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#192734;strokeColor=#38444d;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="36" y="162" width="488" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="code" value="public interface UserRepository&amp;#xa;    extends JpaRepository&lt;User, Long&gt; {}" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#89cff0;fontSize=11;fontFamily=Courier New;spacingLeft=12;spacingTop=8;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="36" y="162" width="488" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: sql-annotation-demo  #SpringBoot #Java" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="298" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="929b3b48-fd67-42df-bd9c-9caede0a812f" name="Tweet 14">
-    <mxGraphModel pageWidth="600" pageHeight="326">
+  <diagram id="6ce76356-f275-4392-921c-6f68c7c16c46" name="Tweet 14">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="480" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="@SpringBootTest&amp;#xa;@Sql(&quot;/test-data.sql&quot;)&amp;#xa;class UserRepositoryTest {&amp;#xa;  @Test void testUserLoadedFromSql() {&amp;#xa;    assertEquals(&quot;Alice&quot;, repo.findById(1L).orElseThrow().getName());&amp;#xa;  }&amp;#xa;}" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="226" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="440" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #14 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: sql-annotation-demo  #SpringBoot #Testing" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="296" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #14 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Load test data in integration tests with one annotation:&amp;#xa;&amp;#xa;@SpringBootTest + @Sql(&quot;/test-data.sql&quot;)&amp;#xa;&amp;#xa;No @BeforeEach seeding boilerplate." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="320" as="geometry"/>
+        </mxCell>
+        <mxCell id="code-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#192734;strokeColor=#38444d;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="36" y="202" width="488" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="code" value="@SpringBootTest&amp;#xa;@Sql(&quot;/test-data.sql&quot;)&amp;#xa;class UserRepositoryTest {&amp;#xa;  @Test void testUserLoadedFromSql() {&amp;#xa;    assertEquals(&quot;Alice&quot;, repo.findById(1L).orElseThrow().getName());&amp;#xa;  }&amp;#xa;}" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#89cff0;fontSize=11;fontFamily=Courier New;spacingLeft=12;spacingTop=8;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="36" y="202" width="488" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: sql-annotation-demo  #SpringBoot #Testing" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="432" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="bc4bcce6-a040-4a12-a2fe-3e5deb9c8e0b" name="Tweet 15">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="d27045d5-aa14-45f9-a2c1-08d62279714b" name="Tweet 15">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="324" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="@Query(&quot;SELECT u FROM User u&quot;)&amp;#xa;Stream&lt;User&gt; streamAllUsers();" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="284" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #15 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: spring-streaming-demo  #SpringBoot #JPA" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #15 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Processing 1M rows with findAll() will OOM you.&amp;#xa;&amp;#xa;Use a Stream instead." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="164" as="geometry"/>
+        </mxCell>
+        <mxCell id="code-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#192734;strokeColor=#38444d;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="36" y="142" width="488" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="code" value="@Query(&quot;SELECT u FROM User u&quot;)&amp;#xa;Stream&lt;User&gt; streamAllUsers();" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#89cff0;fontSize=11;fontFamily=Courier New;spacingLeft=12;spacingTop=8;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="36" y="142" width="488" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-streaming-demo  #SpringBoot #JPA" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="276" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="419a82c3-8b92-46da-aa56-bdd2540c3ab6" name="Tweet 16">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="d77575f8-7534-45b1-8a62-552bf8b27af3" name="Tweet 16">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="if (counter.incrementAndGet() % 100 == 0) {&amp;#xa;  em.clear();&amp;#xa;}" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #16 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: spring-streaming-demo  #SpringBoot #JPA" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #16 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Stream + EntityManager.clear() every N rows keeps the persistence context from growing forever." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="code-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#192734;strokeColor=#38444d;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="36" y="122" width="488" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="code" value="if (counter.incrementAndGet() % 100 == 0) {&amp;#xa;  em.clear();&amp;#xa;}" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#89cff0;fontSize=11;fontFamily=Courier New;spacingLeft=12;spacingTop=8;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="36" y="122" width="488" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-streaming-demo  #SpringBoot #JPA" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="73e553b6-d71e-4816-9178-3f2027d88603" name="Tweet 17">
-    <mxGraphModel pageWidth="600" pageHeight="290">
+  <diagram id="23572634-78d7-4b35-84fb-f3b1e8d0651c" name="Tweet 17">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// Always wrap JPA streams in try-with-resources:&amp;#xa;//&amp;#xa;// try (Stream&lt;User&gt; stream = repository.streamAllUsers()) { ... }&amp;#xa;//&amp;#xa;// Forgot it? Connection leak." style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="190" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #17 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: spring-streaming-demo  #SpringBoot" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="260" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #17 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Always wrap JPA streams in try-with-resources:&amp;#xa;&amp;#xa;try (Stream&lt;User&gt; stream = repository.streamAllUsers()) { ... }&amp;#xa;&amp;#xa;Forgot it? Connection leak." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-streaming-demo  #SpringBoot" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="c64d2c37-01d8-44e8-9de4-370665d1e480" name="Tweet 18">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="5b8f3f5d-bc48-4382-8c18-40bd2250b9b8" name="Tweet 18">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// @Transactional(readOnly = true) on read-only batch jobs — hints to the DB and avoids surprises." style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #18 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: spring-streaming-demo  #SpringBoot #JPA" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #18 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="@Transactional(readOnly = true) on read-only batch jobs — hints to the DB and avoids surprises." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-streaming-demo  #SpringBoot #JPA" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="c028db6d-9881-4045-8f2c-f75b5c4b87d0" name="Tweet 19">
-    <mxGraphModel pageWidth="600" pageHeight="308">
+  <diagram id="10316ae6-edd5-43af-9d24-4e95b0c71bca" name="Tweet 19">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="352" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="@Service&amp;#xa;public class MessageProducer {&amp;#xa;  public void send(String message) {&amp;#xa;    kafkaTemplate.send(&quot;demo-topic&quot;, message);&amp;#xa;  }&amp;#xa;}" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="208" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="312" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #19 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: spring-kafka-demo  #SpringBoot #Kafka" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="278" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #19 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Spring Kafka producer in 5 lines:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="192" as="geometry"/>
+        </mxCell>
+        <mxCell id="code-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#192734;strokeColor=#38444d;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="36" y="102" width="488" height="132" as="geometry"/>
+        </mxCell>
+        <mxCell id="code" value="@Service&amp;#xa;public class MessageProducer {&amp;#xa;  public void send(String message) {&amp;#xa;    kafkaTemplate.send(&quot;demo-topic&quot;, message);&amp;#xa;  }&amp;#xa;}" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#89cff0;fontSize=11;fontFamily=Courier New;spacingLeft=12;spacingTop=8;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="36" y="102" width="488" height="132" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-kafka-demo  #SpringBoot #Kafka" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="304" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="ab66f31f-e485-4af0-9bb0-cf1962ebb86d" name="Tweet 20">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="2300bd83-f2be-4fd8-b9e1-8b676080481e" name="Tweet 20">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="@KafkaListener(topics = &quot;demo-topic&quot;, groupId = &quot;demo-group&quot;)&amp;#xa;public void listen(String message) {&amp;#xa;  System.out.println(&quot;Received: &quot; + message);&amp;#xa;}" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #20 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: spring-kafka-demo  #SpringBoot #Kafka" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #20 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Kafka consumer side:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="code-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#192734;strokeColor=#38444d;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="36" y="102" width="488" height="96" as="geometry"/>
+        </mxCell>
+        <mxCell id="code" value="@KafkaListener(topics = &quot;demo-topic&quot;, groupId = &quot;demo-group&quot;)&amp;#xa;public void listen(String message) {&amp;#xa;  System.out.println(&quot;Received: &quot; + message);&amp;#xa;}" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#89cff0;fontSize=11;fontFamily=Courier New;spacingLeft=12;spacingTop=8;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="36" y="102" width="488" height="96" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-kafka-demo  #SpringBoot #Kafka" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="182450e7-b7ca-4157-8ef6-f4168b6c30c8" name="Tweet 21">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="69b6b8cb-fca9-4a34-ab99-1f179603e084" name="Tweet 21">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// auto-offset-reset: earliest in application.yml — new consumer groups read from the start.&amp;#xa;//&amp;#xa;// Know when you want latest instead." style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #21 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: spring-kafka-demo  #SpringBoot #Kafka" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #21 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="auto-offset-reset: earliest in application.yml — new consumer groups read from the start.&amp;#xa;&amp;#xa;Know when you want latest instead." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-kafka-demo  #SpringBoot #Kafka" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="07263047-8f6d-4c1a-a7c2-622c0739ccb8" name="Tweet 22">
-    <mxGraphModel pageWidth="600" pageHeight="290">
+  <diagram id="98ed5b50-c494-416a-98d8-75de5579a366" name="Tweet 22">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// Decouple services: save to DB, then publish.&amp;#xa;//&amp;#xa;// OrderService saves → publishEvent(OrderCreatedEvent).&amp;#xa;//&amp;#xa;// Listeners react without tight coupling." style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="190" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #22 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: spring-transactional-event-demo  #SpringBoot" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="260" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #22 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Decouple services: save to DB, then publish.&amp;#xa;&amp;#xa;OrderService saves → publishEvent(OrderCreatedEvent).&amp;#xa;&amp;#xa;Listeners react without tight coupling." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-transactional-event-demo  #SpringBoot" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="299ac862-cc9a-4fe9-81b0-e288a1625a63" name="Tweet 23">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="5852f9db-c09d-4cd3-bdab-09e6a0ee1613" name="Tweet 23">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="@TransactionalEventListener(phase = TransactionPhase.AFTER_COMMIT)&amp;#xa;public void handleOrderCreated(OrderCreatedEvent event) { ... }" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #23 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: spring-transactional-event-demo  #SpringBoot" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #23 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Don't send the email before commit:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="code-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#192734;strokeColor=#38444d;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="36" y="102" width="488" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="code" value="@TransactionalEventListener(phase = TransactionPhase.AFTER_COMMIT)&amp;#xa;public void handleOrderCreated(OrderCreatedEvent event) { ... }" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#89cff0;fontSize=11;fontFamily=Courier New;spacingLeft=12;spacingTop=8;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="36" y="102" width="488" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-transactional-event-demo  #SpringBoot" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="9d1ddf61-be87-4c1b-9f41-d19203daf7b9" name="Tweet 24">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="d4b51260-292b-4811-9b49-3615f8833016" name="Tweet 24">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// @EnableAsync on your main class.&amp;#xa;// @Async(&quot;taskExecutor&quot;) on the method.&amp;#xa;//&amp;#xa;// Done." style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #24 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: async-demo  #SpringBoot" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #24 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="@EnableAsync on your main class.&amp;#xa;@Async(&quot;taskExecutor&quot;) on the method.&amp;#xa;&amp;#xa;Done." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: async-demo  #SpringBoot" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="1106a1d2-a7f8-429f-9def-ea4c6d072096" name="Tweet 25">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="d50acf22-62cd-4e78-a3d0-d0adfb238d9f" name="Tweet 25">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="338" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="executor.setCorePoolSize(2);&amp;#xa;executor.setMaxPoolSize(5);&amp;#xa;executor.setQueueCapacity(10);&amp;#xa;executor.setThreadNamePrefix(&quot;Async-&quot;);" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="298" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #25 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: async-demo  #SpringBoot" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #25 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Don't use the default executor in prod. Define your pool:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="178" as="geometry"/>
+        </mxCell>
+        <mxCell id="code-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#192734;strokeColor=#38444d;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="36" y="122" width="488" height="96" as="geometry"/>
+        </mxCell>
+        <mxCell id="code" value="executor.setCorePoolSize(2);&amp;#xa;executor.setMaxPoolSize(5);&amp;#xa;executor.setQueueCapacity(10);&amp;#xa;executor.setThreadNamePrefix(&quot;Async-&quot;);" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#89cff0;fontSize=11;fontFamily=Courier New;spacingLeft=12;spacingTop=8;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="36" y="122" width="488" height="96" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: async-demo  #SpringBoot" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="290" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="fdce823f-03b5-44f9-b36b-54748feed658" name="Tweet 26">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="39e09300-e983-4fab-a872-c58fd941133c" name="Tweet 26">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// Fire 10 async tasks at startup with CommandLineRunner.&amp;#xa;//&amp;#xa;// Watch thread names in logs — you&#x27;ll see Async-*." style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #26 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: async-demo  #SpringBoot" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #26 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Fire 10 async tasks at startup with CommandLineRunner.&amp;#xa;&amp;#xa;Watch thread names in logs — you'll see Async-*." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: async-demo  #SpringBoot" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="46554045-1d7b-4784-bd81-182d98a9be28" name="Tweet 27">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="c018a1c7-43b6-4f4d-83e8-2fd7c8490919" name="Tweet 27">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// @Async methods must be called from another Spring bean, not the same class.&amp;#xa;//&amp;#xa;// Self-invocation = synchronous. Classic gotcha." style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #27 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: async-demo  #SpringBoot" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #27 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="@Async methods must be called from another Spring bean, not the same class.&amp;#xa;&amp;#xa;Self-invocation = synchronous. Classic gotcha." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: async-demo  #SpringBoot" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="401c60a9-3dea-4a7f-a04b-9cf98d98ab49" name="Tweet 28">
-    <mxGraphModel pageWidth="600" pageHeight="290">
+  <diagram id="93f954c8-cc0d-4b0e-98bf-52450658d1e8" name="Tweet 28">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="334" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="@Cacheable(value = &quot;weather&quot;, key = &quot;#city&quot;)&amp;#xa;public String getWeather(String city) {&amp;#xa;  simulateSlowApiCall(); // 3s&amp;#xa;  return &quot;Sunny in &quot; + city;&amp;#xa;}" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="190" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="294" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #28 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: springboot-redis-cache-demo  #SpringBoot #Redis" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="260" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #28 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Slow external API? Cache it:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="174" as="geometry"/>
+        </mxCell>
+        <mxCell id="code-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#192734;strokeColor=#38444d;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="36" y="102" width="488" height="114" as="geometry"/>
+        </mxCell>
+        <mxCell id="code" value="@Cacheable(value = &quot;weather&quot;, key = &quot;#city&quot;)&amp;#xa;public String getWeather(String city) {&amp;#xa;  simulateSlowApiCall(); // 3s&amp;#xa;  return &quot;Sunny in &quot; + city;&amp;#xa;}" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#89cff0;fontSize=11;fontFamily=Courier New;spacingLeft=12;spacingTop=8;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="36" y="102" width="488" height="114" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: springboot-redis-cache-demo  #SpringBoot #Redis" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="286" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="b6a2cd11-8a89-4209-b152-ad87d73326a9" name="Tweet 29">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="c9be6fdc-12fe-48d8-a576-9abfa29d47e6" name="Tweet 29">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="return RedisCacheConfiguration.defaultCacheConfig()&amp;#xa;  .entryTtl(Duration.ofMinutes(5))&amp;#xa;  .disableCachingNullValues();" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #29 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: springboot-redis-cache-demo  #SpringBoot #Redis" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #29 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Redis cache TTL in one bean:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="code-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#192734;strokeColor=#38444d;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="36" y="102" width="488" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="code" value="return RedisCacheConfiguration.defaultCacheConfig()&amp;#xa;  .entryTtl(Duration.ofMinutes(5))&amp;#xa;  .disableCachingNullValues();" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#89cff0;fontSize=11;fontFamily=Courier New;spacingLeft=12;spacingTop=8;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="36" y="102" width="488" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: springboot-redis-cache-demo  #SpringBoot #Redis" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="25141b9d-9aa3-46d7-b978-a2279f9b00c3" name="Tweet 30">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="d0785a97-3a8f-4802-9d1b-580dac3839dc" name="Tweet 30">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// @EnableCaching + @Cacheable — Spring abstracts Redis.&amp;#xa;//&amp;#xa;// Swap cache provider later without touching business logic." style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #30 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: springboot-redis-cache-demo  #SpringBoot" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #30 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="@EnableCaching + @Cacheable — Spring abstracts Redis.&amp;#xa;&amp;#xa;Swap cache provider later without touching business logic." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: springboot-redis-cache-demo  #SpringBoot" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="2ab032d5-30d6-41ed-b306-7b1b3f5a17ce" name="Tweet 31">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="6446202e-514e-46ad-8cdb-5082cf56c1f0" name="Tweet 31">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="338" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="registry.addMapping(&quot;/**&quot;)&amp;#xa;  .allowedOrigins(&quot;http://localhost:3000&quot;)&amp;#xa;  .allowedMethods(&quot;GET&quot;, &quot;POST&quot;, &quot;PUT&quot;, &quot;DELETE&quot;, &quot;OPTIONS&quot;)&amp;#xa;  .allowCredentials(true);" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="298" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #31 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: cors-demo  #SpringBoot" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #31 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Global CORS in Spring Boot — configure once, no @CrossOrigin on every controller." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="178" as="geometry"/>
+        </mxCell>
+        <mxCell id="code-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#192734;strokeColor=#38444d;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="36" y="122" width="488" height="96" as="geometry"/>
+        </mxCell>
+        <mxCell id="code" value="registry.addMapping(&quot;/**&quot;)&amp;#xa;  .allowedOrigins(&quot;http://localhost:3000&quot;)&amp;#xa;  .allowedMethods(&quot;GET&quot;, &quot;POST&quot;, &quot;PUT&quot;, &quot;DELETE&quot;, &quot;OPTIONS&quot;)&amp;#xa;  .allowCredentials(true);" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#89cff0;fontSize=11;fontFamily=Courier New;spacingLeft=12;spacingTop=8;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="36" y="122" width="488" height="96" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: cors-demo  #SpringBoot" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="290" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="4e29417a-be9c-4bf1-a481-c9f5ebed0291" name="Tweet 32">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="aac41daf-f457-459b-ba04-4c2009d97471" name="Tweet 32">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// Frontend on :3000, API on :8080?&amp;#xa;//&amp;#xa;// CORS isn&#x27;t a bug — it&#x27;s the browser. Configure it once globally." style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #32 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: cors-demo  #SpringBoot #Web" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #32 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Frontend on :3000, API on :8080?&amp;#xa;&amp;#xa;CORS isn't a bug — it's the browser. Configure it once globally." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: cors-demo  #SpringBoot #Web" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="94abcb34-6fc1-4fab-9e52-979482ec2953" name="Tweet 33">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="02ca70a5-f82e-4106-aa71-a8436b62a1cf" name="Tweet 33">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="filter.setIncludeQueryString(true);&amp;#xa;filter.setIncludePayload(true);&amp;#xa;filter.setMaxPayloadLength(10000);" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #33 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: spring-request-logging-demo  #SpringBoot" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #33 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Debug HTTP issues with CommonsRequestLoggingFilter:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="code-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#192734;strokeColor=#38444d;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="36" y="122" width="488" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="code" value="filter.setIncludeQueryString(true);&amp;#xa;filter.setIncludePayload(true);&amp;#xa;filter.setMaxPayloadLength(10000);" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#89cff0;fontSize=11;fontFamily=Courier New;spacingLeft=12;spacingTop=8;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="36" y="122" width="488" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-request-logging-demo  #SpringBoot" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="241894ee-e8b1-4273-93c2-2262f54a82da" name="Tweet 34">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="89e25654-3e66-4468-8a4f-481f99fe0bca" name="Tweet 34">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="338" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value=".&lt;Person, Person&gt;chunk(5, transactionManager)&amp;#xa;  .reader(reader())&amp;#xa;  .processor(processor())&amp;#xa;  .writer(writer())" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="298" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #34 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: spring-batch-csv-sample  #SpringBoot #SpringBatch" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #34 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Spring Batch: read CSV → process → write in chunks of 5:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="178" as="geometry"/>
+        </mxCell>
+        <mxCell id="code-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#192734;strokeColor=#38444d;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="36" y="122" width="488" height="96" as="geometry"/>
+        </mxCell>
+        <mxCell id="code" value=".&lt;Person, Person&gt;chunk(5, transactionManager)&amp;#xa;  .reader(reader())&amp;#xa;  .processor(processor())&amp;#xa;  .writer(writer())" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#89cff0;fontSize=11;fontFamily=Courier New;spacingLeft=12;spacingTop=8;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="36" y="122" width="488" height="96" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-batch-csv-sample  #SpringBoot #SpringBatch" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="290" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="e84f5766-3f14-4811-b779-1ab48c035f27" name="Tweet 35">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="94d8cb9d-5f35-4482-b847-e54b04d335ed" name="Tweet 35">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// FlatFileItemReaderBuilder + .linesToSkip(1) — skip the header row automatically." style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #35 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: spring-batch-csv-sample  #SpringBoot" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #35 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="FlatFileItemReaderBuilder + .linesToSkip(1) — skip the header row automatically." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-batch-csv-sample  #SpringBoot" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="bd7f5c91-30a9-4d4c-9d90-5e4ddcbc6601" name="Tweet 36">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="0f8fc0f3-f61f-4fd9-87e4-fff4fd9e60a0" name="Tweet 36">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="person.setName(person.getName().toUpperCase());" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #36 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: spring-batch-csv-sample  #SpringBoot #SpringBatch" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #36 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="ItemProcessor transforms each row:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="code-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#192734;strokeColor=#38444d;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="36" y="102" width="488" height="42" as="geometry"/>
+        </mxCell>
+        <mxCell id="code" value="person.setName(person.getName().toUpperCase());" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#89cff0;fontSize=11;fontFamily=Courier New;spacingLeft=12;spacingTop=8;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="36" y="102" width="488" height="42" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-batch-csv-sample  #SpringBoot #SpringBatch" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="a68bb76d-e8f0-4ae8-b81d-a4770b48ef6d" name="Tweet 37">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="c9722612-f997-4e66-9fc5-2f569e7839bd" name="Tweet 37">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="CSVParser csvParser = new CSVParser(reader,&amp;#xa;    CSVFormat.DEFAULT.withHeader());&amp;#xa;String name = record.get(&quot;name&quot;);" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #37 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: spring-csv-sample  #Java #SpringBoot" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #37 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Parse CSV without reinventing the wheel — Apache Commons CSV + try-with-resources." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="code-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#192734;strokeColor=#38444d;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="36" y="122" width="488" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="code" value="CSVParser csvParser = new CSVParser(reader,&amp;#xa;    CSVFormat.DEFAULT.withHeader());&amp;#xa;String name = record.get(&quot;name&quot;);" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#89cff0;fontSize=11;fontFamily=Courier New;spacingLeft=12;spacingTop=8;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="36" y="122" width="488" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-csv-sample  #Java #SpringBoot" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="bd888f8b-35a8-4581-82fe-f75f528fdffe" name="Tweet 38">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="27b84fd5-b37e-4c97-97e6-492f73ab3cd0" name="Tweet 38">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="382" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="@Test @Order(1) void testA() {&amp;#xa;  when(myService.getData()).thenReturn(&quot;A&quot;);&amp;#xa;}&amp;#xa;@Test @Order(2) void testB() { /* still &quot;A&quot;? */ }" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="342" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #38 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: spring-mock-reset-example  #SpringBoot #Testing" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #38 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="@MockBean stubs can leak between tests unless reset.&amp;#xa;&amp;#xa;Use @DirtiesContext or Mockito reset." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="222" as="geometry"/>
+        </mxCell>
+        <mxCell id="code-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#192734;strokeColor=#38444d;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="36" y="162" width="488" height="96" as="geometry"/>
+        </mxCell>
+        <mxCell id="code" value="@Test @Order(1) void testA() {&amp;#xa;  when(myService.getData()).thenReturn(&quot;A&quot;);&amp;#xa;}&amp;#xa;@Test @Order(2) void testB() { /* still &quot;A&quot;? */ }" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#89cff0;fontSize=11;fontFamily=Courier New;spacingLeft=12;spacingTop=8;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="36" y="162" width="488" height="96" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-mock-reset-example  #SpringBoot #Testing" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="334" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="ca3e969f-e8ad-4af4-9778-2f1483152f23" name="Tweet 39">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="426ae7c1-d6d2-4bd6-9e73-a065f3df5345" name="Tweet 39">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// @SpringBootTest loads the full context.&amp;#xa;//&amp;#xa;// Use it when you need integration truth — not for every unit test." style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #39 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: spring-mock-reset-example  #SpringBoot #Testing" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #39 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="@SpringBootTest loads the full context.&amp;#xa;&amp;#xa;Use it when you need integration truth — not for every unit test." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-mock-reset-example  #SpringBoot #Testing" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="ff1dc610-9e12-440c-ba36-baba8313c55d" name="Tweet 40">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="a8e7b070-e6b1-4b01-90ab-2cad5c14a9d9" name="Tweet 40">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// @Sql on tests = reproducible DB state.&amp;#xa;//&amp;#xa;// No flaky &quot;works on my machine&quot; seeds." style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #40 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: sql-annotation-demo  #SpringBoot #Testing" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #40 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="@Sql on tests = reproducible DB state.&amp;#xa;&amp;#xa;No flaky &quot;works on my machine&quot; seeds." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: sql-annotation-demo  #SpringBoot #Testing" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="b46b5251-a8b9-4b62-a897-966f3012c1cf" name="Tweet 41">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="df674b9d-8d61-4ab3-91df-9ac39af26b85" name="Tweet 41">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="338" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="User user = new User.Builder(&quot;Mary&quot;, 30)&amp;#xa;  .email(&quot;mary@example.com&quot;)&amp;#xa;  .address(&quot;Italy&quot;)&amp;#xa;  .build();" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="298" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #41 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: java-examples/BuilderDemo  #Java" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #41 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Builder pattern without Lombok — required fields in constructor, optional fields chain." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="178" as="geometry"/>
+        </mxCell>
+        <mxCell id="code-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#192734;strokeColor=#38444d;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="36" y="122" width="488" height="96" as="geometry"/>
+        </mxCell>
+        <mxCell id="code" value="User user = new User.Builder(&quot;Mary&quot;, 30)&amp;#xa;  .email(&quot;mary@example.com&quot;)&amp;#xa;  .address(&quot;Italy&quot;)&amp;#xa;  .build();" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#89cff0;fontSize=11;fontFamily=Courier New;spacingLeft=12;spacingTop=8;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="36" y="122" width="488" height="96" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: java-examples/BuilderDemo  #Java" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="290" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="720e2077-e19f-46bd-a309-48361c8b825a" name="Tweet 42">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="2a781eac-56cb-459e-a65e-8f683f064158" name="Tweet 42">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="LinkedHashMap&lt;Integer, String&gt; map = new LinkedHashMap&lt;&gt;();" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #42 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: java-miscellaneous-tips  #Java" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #42 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="LinkedHashMap preserves insertion order. HashMap does not." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="code-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#192734;strokeColor=#38444d;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="36" y="122" width="488" height="42" as="geometry"/>
+        </mxCell>
+        <mxCell id="code" value="LinkedHashMap&lt;Integer, String&gt; map = new LinkedHashMap&lt;&gt;();" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#89cff0;fontSize=11;fontFamily=Courier New;spacingLeft=12;spacingTop=8;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="36" y="122" width="488" height="42" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: java-miscellaneous-tips  #Java" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="4c3022b5-b80a-43b6-b8b3-bed8298688eb" name="Tweet 43">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="5b1baa0d-1baa-47a1-9ac6-1f8eff7cd4fc" name="Tweet 43">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="372" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="Double.parseDouble(numStr.replaceAll(&quot;,&quot;, &quot;.&quot;));" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="332" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #43 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: java-miscellaneous-tips  #Java" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #43 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Parsing &quot;121,234&quot; as a double?&amp;#xa;&amp;#xa;Quick fix: replace comma with dot.&amp;#xa;&amp;#xa;Locale-aware? NumberFormat.getInstance(Locale.ITALY)." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="212" as="geometry"/>
+        </mxCell>
+        <mxCell id="code-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#192734;strokeColor=#38444d;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="36" y="202" width="488" height="42" as="geometry"/>
+        </mxCell>
+        <mxCell id="code" value="Double.parseDouble(numStr.replaceAll(&quot;,&quot;, &quot;.&quot;));" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#89cff0;fontSize=11;fontFamily=Courier New;spacingLeft=12;spacingTop=8;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="36" y="202" width="488" height="42" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: java-miscellaneous-tips  #Java" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="324" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="ecb752af-7a1f-4253-a0c8-440d662622fa" name="Tweet 44">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="7098fb87-30b1-4b5e-841e-be6369148167" name="Tweet 44">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="DecimalFormatSymbols symbols =&amp;#xa;    new DecimalFormatSymbols(Locale.ITALY);&amp;#xa;DecimalFormat df = new DecimalFormat(&quot;#,###.##&quot;, symbols);" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #44 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: java-miscellaneous-tips  #Java" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #44 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Italian number format 123.111,234 — don't assume . is always the decimal separator." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="code-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#192734;strokeColor=#38444d;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="36" y="122" width="488" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="code" value="DecimalFormatSymbols symbols =&amp;#xa;    new DecimalFormatSymbols(Locale.ITALY);&amp;#xa;DecimalFormat df = new DecimalFormat(&quot;#,###.##&quot;, symbols);" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#89cff0;fontSize=11;fontFamily=Courier New;spacingLeft=12;spacingTop=8;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="36" y="122" width="488" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: java-miscellaneous-tips  #Java" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="8f4a8327-0112-481a-b1d7-1eee303d3ce9" name="Tweet 45">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="b0e16565-438c-4326-9910-460f785cd154" name="Tweet 45">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="324" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="dependentClone.setDependency(&amp;#xa;    (Dependency) this.dependency.clone());" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="284" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #45 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: java-miscellaneous-tips  #Java" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #45 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Shallow clone: super.clone() — shared nested objects.&amp;#xa;Deep clone: clone nested Dependency too." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="164" as="geometry"/>
+        </mxCell>
+        <mxCell id="code-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#192734;strokeColor=#38444d;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="36" y="142" width="488" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="code" value="dependentClone.setDependency(&amp;#xa;    (Dependency) this.dependency.clone());" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#89cff0;fontSize=11;fontFamily=Courier New;spacingLeft=12;spacingTop=8;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="36" y="142" width="488" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: java-miscellaneous-tips  #Java" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="276" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="7df791d0-c464-403b-952c-1c1a4d57899c" name="Tweet 46">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="19303de6-d266-44ad-8eec-248c822ea4db" name="Tweet 46">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// Cloneable without overriding clone() correctly → CloneNotSupportedException.&amp;#xa;//&amp;#xa;// Prefer copy constructors or records for new code." style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #46 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: java-miscellaneous-tips  #Java" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #46 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Cloneable without overriding clone() correctly → CloneNotSupportedException.&amp;#xa;&amp;#xa;Prefer copy constructors or records for new code." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: java-miscellaneous-tips  #Java" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="318cdcb1-74fe-438e-ae2b-34f3b33fbe47" name="Tweet 47">
-    <mxGraphModel pageWidth="600" pageHeight="308">
+  <diagram id="f4cf1950-fc7b-4633-bb59-19d97825693e" name="Tweet 47">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// Immutable fields in the Builder pattern:&amp;#xa;//&amp;#xa;// private final String name;&amp;#xa;// private final int age;&amp;#xa;//&amp;#xa;// Set once at build time — fewer bugs in DTOs." style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="208" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #47 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: java-examples/BuilderDemo  #Java" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="278" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #47 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Immutable fields in the Builder pattern:&amp;#xa;&amp;#xa;private final String name;&amp;#xa;private final int age;&amp;#xa;&amp;#xa;Set once at build time — fewer bugs in DTOs." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: java-examples/BuilderDemo  #Java" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="ae29e29b-0bdd-42a9-9677-598464933995" name="Tweet 48">
-    <mxGraphModel pageWidth="600" pageHeight="326">
+  <diagram id="12c1e45d-3ce6-4568-9006-8a847ab62ee5" name="Tweet 48">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="354" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// Spring Boot 2.7 + Java 17 in codingstrain — run any module with:&amp;#xa;//&amp;#xa;// mvn spring-boot:run&amp;#xa;//&amp;#xa;// Each folder is an independent lesson.&amp;#xa;//&amp;#xa;// codingstrain.com" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="226" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="314" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #48 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: codingstrain  #SpringBoot #Java" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="296" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #48 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Spring Boot 2.7 + Java 17 in codingstrain — run any module with:&amp;#xa;&amp;#xa;mvn spring-boot:run&amp;#xa;&amp;#xa;Each folder is an independent lesson.&amp;#xa;&amp;#xa;codingstrain.com" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="194" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: codingstrain  #SpringBoot #Java" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="306" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="7dc2f804-a722-49e9-b92b-c292c4780c10" name="Tweet 49">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="ade4d8f6-b630-496c-b589-f5be9f254b40" name="Tweet 49">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// H2 in-memory DB for REST tutorials — zero Docker, full CRUD.&amp;#xa;//&amp;#xa;// Swap to Postgres later; controllers stay the same." style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #49 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: spring-boot-minimal-rest-h2  #SpringBoot" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #49 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="H2 in-memory DB for REST tutorials — zero Docker, full CRUD.&amp;#xa;&amp;#xa;Swap to Postgres later; controllers stay the same." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-boot-minimal-rest-h2  #SpringBoot" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="778b9c72-ba2d-4694-baeb-f5598ec4467e" name="Tweet 50">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="560d6a71-a6df-4c56-b1b6-4d0cb35367d5" name="Tweet 50">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// /actuator/health before you deploy.&amp;#xa;//&amp;#xa;// Monitoring isn&#x27;t optional." style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #50 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: spring-boot-minimal-rest-h2-actuator  #SpringBoot" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #50 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="/actuator/health before you deploy.&amp;#xa;&amp;#xa;Monitoring isn't optional." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-boot-minimal-rest-h2-actuator  #SpringBoot" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="400dcf8e-279d-4eb7-af78-ffe46d3c478f" name="Tweet 51">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="497eb385-babf-4223-9d88-a45d2ceedcdd" name="Tweet 51">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// Spring Cloud Config (native + Git) in codingstrain — centralize config before you have 12 copies of application.properties." style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #51 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: spring-cloud-config-native-server  #SpringCloud" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #51 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Spring Cloud Config (native + Git) in codingstrain — centralize config before you have 12 copies of application.properties." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-cloud-config-native-server  #SpringCloud" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="23057853-1b29-4c42-9581-6793e5f61940" name="Tweet 52">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="2f47ad20-7845-4a23-be28-0827669d445e" name="Tweet 52">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// Eureka service discovery — register clients, call by name not IP.&amp;#xa;//&amp;#xa;// Microservices 101 in this monorepo." style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #52 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: spring-cloud-discovery  #SpringCloud" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #52 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Eureka service discovery — register clients, call by name not IP.&amp;#xa;&amp;#xa;Microservices 101 in this monorepo." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-cloud-discovery  #SpringCloud" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="e136b80e-3284-4ab5-82a7-70581405bfa0" name="Tweet 53">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="25098124-9398-49e0-a9d3-c897a55db7bf" name="Tweet 53">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// OpenFeign + circuit breaker samples — resilience isn&#x27;t an afterthought." style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #53 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: libraryapp-openfeign-discovery-circuitbreaker  #SpringCloud" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #53 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="OpenFeign + circuit breaker samples — resilience isn't an afterthought." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: libraryapp-openfeign-discovery-circuitbreaker  #SpringCloud" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="b61c20b6-11cd-443f-8c55-296ddb04e44d" name="Tweet 54">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="d200698d-6d8a-4c46-9a5f-7df9899acf01" name="Tweet 54">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// Contract testing (Pact) and Gatling load tests live beside the microservices.&amp;#xa;//&amp;#xa;// CI-friendly patterns, not slide-deck theory." style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #54 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: spring-cloud-sample-libraryapp  #SpringCloud #Testing" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #54 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="Contract testing (Pact) and Gatling load tests live beside the microservices.&amp;#xa;&amp;#xa;CI-friendly patterns, not slide-deck theory." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-cloud-sample-libraryapp  #SpringCloud #Testing" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="a94e99cc-b080-4b3f-bdde-4d387091966c" name="Tweet 55">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="1ce851a2-f465-45a3-a1de-c45e05463f0b" name="Tweet 55">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// codingstrain is a multi-module Maven lab — clone once, open one module, learn one concept.&amp;#xa;//&amp;#xa;// github.com/mcasari/codingstrain" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #55 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: codingstrain  #Java #SpringBoot" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #55 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="codingstrain is a multi-module Maven lab — clone once, open one module, learn one concept.&amp;#xa;&amp;#xa;github.com/mcasari/codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: codingstrain  #Java #SpringBoot" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="b1ec1c6d-ac44-466d-9140-ae5eaa0649cd" name="Tweet 56">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="6217382a-30c0-4e81-bea9-4990807f93db" name="Tweet 56">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// 🧵 5 Spring Boot mistakes I see in every code review (from real demos in codingstrain)" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #56 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: codingstrain  #SpringBoot" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #56 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="🧵 5 Spring Boot mistakes I see in every code review (from real demos in codingstrain)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: codingstrain  #SpringBoot" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="bf939b47-bfbd-4129-887e-36a15e6a8eba" name="Tweet 57">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="22304554-00b5-467f-a150-93a223a54e63" name="Tweet 57">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// 🧵 JPA memory leaks: findAll() vs Stream + em.clear() — thread" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #57 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: spring-streaming-demo  #SpringBoot #JPA" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #57 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="🧵 JPA memory leaks: findAll() vs Stream + em.clear() — thread" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-streaming-demo  #SpringBoot #JPA" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="993e5771-d9be-47b5-a73b-ebec78dbf8fb" name="Tweet 58">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="43dd7276-31f5-485b-a267-776825f81c25" name="Tweet 58">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// 🧵 Kafka with Spring Boot in under 10 minutes — producer + consumer code" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #58 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: spring-kafka-demo  #SpringBoot #Kafka" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #58 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="🧵 Kafka with Spring Boot in under 10 minutes — producer + consumer code" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-kafka-demo  #SpringBoot #Kafka" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="dc177878-0c6e-4105-a291-af8f4cb0b312" name="Tweet 59">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="c3acc23a-a3fe-4a99-bdd3-adbde2ed0bb1" name="Tweet 59">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// 🧵 @ConfigurationProperties + Bean Validation = fail at startup, not in prod" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #59 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: spring-boot-validated-config  #SpringBoot" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #59 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="🧵 @ConfigurationProperties + Bean Validation = fail at startup, not in prod" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-boot-validated-config  #SpringBoot" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="13a73c81-9b39-4b6a-9870-2f5b947a2a7e" name="Tweet 60">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="1a88a114-033e-45ac-a993-119700e8304a" name="Tweet 60">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// 🧵 Java Builder pattern step-by-step (no Lombok required)" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #60 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: java-examples/BuilderDemo  #Java" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #60 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="🧵 Java Builder pattern step-by-step (no Lombok required)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: java-examples/BuilderDemo  #Java" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>

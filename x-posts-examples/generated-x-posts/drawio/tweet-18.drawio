@@ -1,16 +1,23 @@
 <mxfile host="app.diagrams.net" agent="codingstrain-generator" version="22.1.0" type="device">
-  <diagram id="1f0490ee-c65b-4d1e-841e-3ed33ad8af7a" name="Tweet 18">
-    <mxGraphModel pageWidth="600" pageHeight="280">
+  <diagram id="c63defca-cf89-4455-81a3-17116b5c9403" name="Tweet 18">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="320" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// @Transactional(readOnly = true) on read-only batch jobs — hints to the DB and avoids surprises." style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="280" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #18 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: spring-streaming-demo  #SpringBoot #JPA" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #18 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="@Transactional(readOnly = true) on read-only batch jobs — hints to the DB and avoids surprises." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-streaming-demo  #SpringBoot #JPA" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="272" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>

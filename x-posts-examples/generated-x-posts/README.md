@@ -1,35 +1,29 @@
-# Generated X Post Assets (Carbon style)
+# Generated X Post Assets
 
-60 tweet images in [Carbon.now.sh](https://carbon.now.sh/) style.
+60 tweet cards generated from `tweets.json`.
 
 ## Files
 
 | Folder | Format | Use |
 |--------|--------|-----|
-| `carbon/` | `.svg` | Carbon-style code images — post on X or convert to PNG |
-| `sources/` | `.java` | Paste into [carbon.now.sh](https://carbon.now.sh/) to customize theme & export |
-| `drawio/` | `.drawio` | Optional — edit in diagrams.net |
-| `index.html` | Preview | Browse all cards locally |
+| `drawio/` | `.drawio` | Open in [diagrams.net](https://app.diagrams.net/) — edit, export PNG/SVG/PDF |
+| `drawio/all-tweets.drawio` | Multi-tab | All 60 tweets in one file (one tab each) |
+| `svg/` | `.svg` | Ready-to-post vector images (browser, design tools) |
+| `index.html` | Preview | Open locally to browse and download all cards |
 
-## Export PNG from Carbon (official)
+## Open in diagrams.net
 
-1. Open https://carbon.now.sh/
-2. Paste content from `sources/tweet-XX.java` (or drag the file)
-3. Pick theme (e.g. **Night Owl**, **One Dark**)
-4. **Export → PNG**
+1. Go to https://app.diagrams.net/
+2. **File → Open from → Device**
+3. Select any `drawio/tweet-XX.drawio` file
+4. **File → Export as → PNG** (or PDF) for raster download
 
-## Batch PNG via CLI (optional)
-
-```bash
-./export_carbon_png.sh
-```
-
-Requires Node.js; uses [carbon-now-cli](https://github.com/mixn/carbon-now-cli).
-
-## Regenerate SVGs
+## Regenerate
 
 ```bash
 python3 generate_assets.py
 ```
 
-Edit `tweets.json` first if you change copy or code snippets.
+## Edit tweets
+
+Edit `tweets.json`, then run the generator again.

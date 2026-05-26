@@ -1,16 +1,23 @@
 <mxfile host="app.diagrams.net" agent="codingstrain-generator" version="22.1.0" type="device">
-  <diagram id="9de580a0-9851-4c68-9247-09a69b4ebe41" name="Tweet 4">
-    <mxGraphModel pageWidth="600" pageHeight="308">
+  <diagram id="cf56c365-3860-4ea0-b955-960e0b3e2f81" name="Tweet 4">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="332" math="0" shadow="0">
       <root>
-        <mxCell id="0"/><mxCell id="1" parent="0"/>
-        <mxCell id="code" value="// @PathVariable vs @RequestParam:&amp;#xa;//&amp;#xa;// • /book/{id} → path variable&amp;#xa;// • /book?title=foo → query param&amp;#xa;//&amp;#xa;// Mixing them up is a classic mistake. Get it right once." style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="60" width="520" height="208" as="geometry"/>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="292" as="geometry"/>
         </mxCell>
-        <mxCell id="hdr" value="Tweet #4 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="560" height="44" as="geometry"/>
         </mxCell>
-        <mxCell id="ftr" value="Module: spring-boot-minimal-rest-h2  #SpringBoot #Java" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
-          <mxGeometry x="20" y="278" width="520" height="24" as="geometry"/>
+        <mxCell id="hdr-txt" value="Tweet #4 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="540" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="body" value="@PathVariable vs @RequestParam:&amp;#xa;&amp;#xa;• /book/{id} → path variable&amp;#xa;• /book?title=foo → query param&amp;#xa;&amp;#xa;Mixing them up is a classic mistake. Get it right once." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="520" height="172" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-boot-minimal-rest-h2  #SpringBoot #Java" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="284" width="520" height="28" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
