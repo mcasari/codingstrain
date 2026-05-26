@@ -1,26 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="298" viewBox="0 0 560 298">
+<svg xmlns="http://www.w3.org/2000/svg" width="736" height="244" viewBox="0 0 736 244">
   <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
     <style>
-      .card { fill: #15202b; stroke: #38444d; stroke-width: 2; }
-      .header { fill: #1DA1F2; }
-      .title { fill: #ffffff; font: bold 14px sans-serif; }
-      .body { fill: #e7e9ea; font: 13px sans-serif; }
-      .code { fill: #89cff0; font: 11px monospace; }
-      .code-bg { fill: #192734; stroke: #38444d; stroke-width: 1; }
-      .footer { fill: #71767b; font: 10px sans-serif; }
+      .kw { fill:#c792ea; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .ann { fill:#ffb86c; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .str { fill:#c3e88d; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .typ { fill:#ffcb6b; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .met { fill:#82aaff; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .com { fill:#5c6370; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .num { fill:#f78c6c; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .pun { fill:#89ddff; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .txt { fill:#d6deeb; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
     </style>
   </defs>
-  <rect x="0" y="0" width="560" height="298" rx="12" class="card"/>
-  <rect x="0" y="0" width="560" height="44" rx="12" class="header"/>
-  <rect x="0" y="32" width="560" height="12" class="header"/>
-  <text x="20" y="28" class="title">Tweet #41 · codingstrain</text>
-    <text x="28" y="100" class="body">Builder pattern without Lombok — required fields</text>
-    <text x="28" y="122" class="body">in constructor, optional fields chain.</text>
-  <rect x="24" y="142" width="512" height="100" rx="6" class="code-bg"/>
-    <text x="36" y="160" class="code">User user = new User.Builder(&quot;Mary&quot;, 30)</text>
-    <text x="36" y="178" class="code">  .email(&quot;mary@example.com&quot;)</text>
-    <text x="36" y="196" class="code">  .address(&quot;Italy&quot;)</text>
-    <text x="36" y="214" class="code">  .build();</text>
-  <text x="20" y="282" class="footer">Module: java-examples/BuilderDemo  #Java</text>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  <g filter="url(#shadow)">
+    <rect x="48" y="48" width="640" height="148" rx="8" fill="#252836"/>
+    <rect x="48" y="48" width="640" height="32" rx="8" fill="#252836"/>
+    <rect x="48" y="74" width="640" height="6" fill="#252836"/>
+    <circle cx="66" cy="64" r="5.5" fill="#ff5f56"/>
+    <circle cx="84" cy="64" r="5.5" fill="#ffbd2e"/>
+    <circle cx="102" cy="64" r="5.5" fill="#27c93f"/>
+    <rect x="48" y="80" width="640" height="116" fill="#011627"/>
+    <rect x="48" y="188" width="640" height="8" rx="8" fill="#011627"/>
+  </g>
+  <text x="66.0" y="113" class="typ">User</text>
+  <text x="99.4" y="113" class="txt"> </text>
+  <text x="107.8" y="113" class="txt">user</text>
+  <text x="141.2" y="113" class="txt"> </text>
+  <text x="149.5" y="113" class="pun">=</text>
+  <text x="157.8" y="113" class="txt"> </text>
+  <text x="166.2" y="113" class="kw">new</text>
+  <text x="191.2" y="113" class="txt"> </text>
+  <text x="199.6" y="113" class="typ">User</text>
+  <text x="233.0" y="113" class="pun">.</text>
+  <text x="241.3" y="113" class="met">Builder</text>
+  <text x="299.8" y="113" class="pun">(</text>
+  <text x="308.2" y="113" class="str">&quot;Mary&quot;</text>
+  <text x="358.2" y="113" class="pun">,</text>
+  <text x="366.6" y="113" class="txt"> </text>
+  <text x="375.0" y="113" class="num">30</text>
+  <text x="391.7" y="113" class="pun">)</text>
+  <text x="66.0" y="133" class="txt">    </text>
+  <text x="99.4" y="133" class="pun">.</text>
+  <text x="107.8" y="133" class="met">email</text>
+  <text x="149.5" y="133" class="pun">(</text>
+  <text x="157.8" y="133" class="str">&quot;mary@example.com&quot;</text>
+  <text x="308.1" y="133" class="pun">)</text>
+  <text x="66.0" y="153" class="txt">    </text>
+  <text x="99.4" y="153" class="pun">.</text>
+  <text x="107.8" y="153" class="met">address</text>
+  <text x="166.2" y="153" class="pun">(</text>
+  <text x="174.5" y="153" class="str">&quot;Italy&quot;</text>
+  <text x="233.0" y="153" class="pun">)</text>
+  <text x="66.0" y="173" class="txt">    </text>
+  <text x="99.4" y="173" class="pun">.</text>
+  <text x="107.8" y="173" class="met">build</text>
+  <text x="149.5" y="173" class="pun">(</text>
+  <text x="157.8" y="173" class="pun">)</text>
+  <text x="166.2" y="173" class="pun">;</text>
 </svg>

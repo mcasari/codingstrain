@@ -1,25 +1,183 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="280" viewBox="0 0 560 280">
+<svg xmlns="http://www.w3.org/2000/svg" width="902" height="584" viewBox="0 0 902 584">
   <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
     <style>
-      .card { fill: #15202b; stroke: #38444d; stroke-width: 2; }
-      .header { fill: #1DA1F2; }
-      .title { fill: #ffffff; font: bold 14px sans-serif; }
-      .body { fill: #e7e9ea; font: 13px sans-serif; }
-      .code { fill: #89cff0; font: 11px monospace; }
-      .code-bg { fill: #192734; stroke: #38444d; stroke-width: 1; }
-      .footer { fill: #71767b; font: 10px sans-serif; }
+      .kw { fill:#c792ea; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .ann { fill:#ffb86c; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .str { fill:#c3e88d; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .typ { fill:#ffcb6b; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .met { fill:#82aaff; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .com { fill:#5c6370; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .num { fill:#f78c6c; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .pun { fill:#89ddff; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .txt { fill:#d6deeb; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
     </style>
   </defs>
-  <rect x="0" y="0" width="560" height="280" rx="12" class="card"/>
-  <rect x="0" y="0" width="560" height="44" rx="12" class="header"/>
-  <rect x="0" y="32" width="560" height="12" class="header"/>
-  <text x="20" y="28" class="title">Tweet #7 · codingstrain</text>
-    <text x="28" y="100" class="body">RuntimeException(&quot;Database connection failed!&quot;)</text>
-    <text x="28" y="122" class="body">in a controller teaches one thing:</text>
-    <text x="28" y="144" class="body"></text>
-    <text x="28" y="166" class="body">Always map exceptions to HTTP status + safe JSON</text>
-    <text x="28" y="188" class="body">body.</text>
-
-  <text x="20" y="264" class="footer">Module: springboot-error-handling-demo  #SpringBoot</text>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  <g filter="url(#shadow)">
+    <rect x="48" y="48" width="806" height="488" rx="8" fill="#252836"/>
+    <rect x="48" y="48" width="806" height="32" rx="8" fill="#252836"/>
+    <rect x="48" y="74" width="806" height="6" fill="#252836"/>
+    <circle cx="66" cy="64" r="5.5" fill="#ff5f56"/>
+    <circle cx="84" cy="64" r="5.5" fill="#ffbd2e"/>
+    <circle cx="102" cy="64" r="5.5" fill="#27c93f"/>
+    <rect x="48" y="80" width="806" height="456" fill="#011627"/>
+    <rect x="48" y="528" width="806" height="8" rx="8" fill="#011627"/>
+  </g>
+  <text x="66.0" y="113" class="ann">@RestControllerAdvice</text>
+  <text x="66.0" y="133" class="kw">public</text>
+  <text x="116.1" y="133" class="txt"> </text>
+  <text x="124.4" y="133" class="kw">class</text>
+  <text x="166.2" y="133" class="txt"> </text>
+  <text x="174.5" y="133" class="typ">GlobalExceptionHandler</text>
+  <text x="358.2" y="133" class="txt"> </text>
+  <text x="366.6" y="133" class="pun">{</text>
+  <text x="66.0" y="173" class="txt">    </text>
+  <text x="99.4" y="173" class="ann">@ExceptionHandler</text>
+  <text x="241.3" y="173" class="pun">(</text>
+  <text x="249.7" y="173" class="typ">ResourceNotFoundException</text>
+  <text x="458.4" y="173" class="pun">.</text>
+  <text x="466.8" y="173" class="kw">class</text>
+  <text x="508.6" y="173" class="pun">)</text>
+  <text x="66.0" y="193" class="txt">    </text>
+  <text x="99.4" y="193" class="kw">public</text>
+  <text x="149.5" y="193" class="txt"> </text>
+  <text x="157.8" y="193" class="typ">ResponseEntity</text>
+  <text x="274.8" y="193" class="pun">&lt;</text>
+  <text x="283.1" y="193" class="typ">ErrorResponse</text>
+  <text x="391.7" y="193" class="pun">&gt;</text>
+  <text x="400.0" y="193" class="txt"> </text>
+  <text x="408.4" y="193" class="met">handleNotFound</text>
+  <text x="525.3" y="193" class="pun">(</text>
+  <text x="533.6" y="193" class="typ">ResourceNotFoundException</text>
+  <text x="742.4" y="193" class="txt"> </text>
+  <text x="750.7" y="193" class="txt">ex</text>
+  <text x="767.4" y="193" class="pun">)</text>
+  <text x="775.8" y="193" class="txt"> </text>
+  <text x="784.1" y="193" class="pun">{</text>
+  <text x="66.0" y="213" class="txt">        </text>
+  <text x="132.8" y="213" class="kw">return</text>
+  <text x="182.9" y="213" class="txt"> </text>
+  <text x="191.2" y="213" class="typ">ResponseEntity</text>
+  <text x="308.1" y="213" class="pun">.</text>
+  <text x="316.5" y="213" class="met">status</text>
+  <text x="366.6" y="213" class="pun">(</text>
+  <text x="375.0" y="213" class="typ">HttpStatus</text>
+  <text x="458.5" y="213" class="pun">.</text>
+  <text x="466.8" y="213" class="typ">NOT_FOUND</text>
+  <text x="542.0" y="213" class="pun">)</text>
+  <text x="66.0" y="233" class="txt">            </text>
+  <text x="166.2" y="233" class="pun">.</text>
+  <text x="174.5" y="233" class="met">body</text>
+  <text x="207.9" y="233" class="pun">(</text>
+  <text x="216.3" y="233" class="kw">new</text>
+  <text x="241.3" y="233" class="txt"> </text>
+  <text x="249.7" y="233" class="met">ErrorResponse</text>
+  <text x="358.2" y="233" class="pun">(</text>
+  <text x="366.6" y="233" class="str">&quot;NOT_FOUND&quot;</text>
+  <text x="458.4" y="233" class="pun">,</text>
+  <text x="466.8" y="233" class="txt"> </text>
+  <text x="475.1" y="233" class="txt">ex</text>
+  <text x="491.8" y="233" class="pun">.</text>
+  <text x="500.2" y="233" class="met">getMessage</text>
+  <text x="583.7" y="233" class="pun">(</text>
+  <text x="592.1" y="233" class="pun">)</text>
+  <text x="600.4" y="233" class="pun">)</text>
+  <text x="608.8" y="233" class="pun">)</text>
+  <text x="617.1" y="233" class="pun">;</text>
+  <text x="66.0" y="253" class="txt">    </text>
+  <text x="99.4" y="253" class="pun">}</text>
+  <text x="66.0" y="293" class="txt">    </text>
+  <text x="99.4" y="293" class="ann">@ExceptionHandler</text>
+  <text x="241.3" y="293" class="pun">(</text>
+  <text x="249.7" y="293" class="typ">IllegalArgumentException</text>
+  <text x="450.1" y="293" class="pun">.</text>
+  <text x="458.4" y="293" class="kw">class</text>
+  <text x="500.2" y="293" class="pun">)</text>
+  <text x="66.0" y="313" class="txt">    </text>
+  <text x="99.4" y="313" class="kw">public</text>
+  <text x="149.5" y="313" class="txt"> </text>
+  <text x="157.8" y="313" class="typ">ResponseEntity</text>
+  <text x="274.8" y="313" class="pun">&lt;</text>
+  <text x="283.1" y="313" class="typ">ErrorResponse</text>
+  <text x="391.7" y="313" class="pun">&gt;</text>
+  <text x="400.0" y="313" class="txt"> </text>
+  <text x="408.4" y="313" class="met">handleBadRequest</text>
+  <text x="542.0" y="313" class="pun">(</text>
+  <text x="550.3" y="313" class="typ">IllegalArgumentException</text>
+  <text x="750.7" y="313" class="txt"> </text>
+  <text x="759.1" y="313" class="txt">ex</text>
+  <text x="775.8" y="313" class="pun">)</text>
+  <text x="784.1" y="313" class="txt"> </text>
+  <text x="792.5" y="313" class="pun">{</text>
+  <text x="66.0" y="333" class="txt">        </text>
+  <text x="132.8" y="333" class="kw">return</text>
+  <text x="182.9" y="333" class="txt"> </text>
+  <text x="191.2" y="333" class="typ">ResponseEntity</text>
+  <text x="308.1" y="333" class="pun">.</text>
+  <text x="316.5" y="333" class="met">status</text>
+  <text x="366.6" y="333" class="pun">(</text>
+  <text x="375.0" y="333" class="typ">HttpStatus</text>
+  <text x="458.5" y="333" class="pun">.</text>
+  <text x="466.8" y="333" class="typ">BAD_REQUEST</text>
+  <text x="558.7" y="333" class="pun">)</text>
+  <text x="66.0" y="353" class="txt">            </text>
+  <text x="166.2" y="353" class="pun">.</text>
+  <text x="174.5" y="353" class="met">body</text>
+  <text x="207.9" y="353" class="pun">(</text>
+  <text x="216.3" y="353" class="kw">new</text>
+  <text x="241.3" y="353" class="txt"> </text>
+  <text x="249.7" y="353" class="met">ErrorResponse</text>
+  <text x="358.2" y="353" class="pun">(</text>
+  <text x="366.6" y="353" class="str">&quot;BAD_REQUEST&quot;</text>
+  <text x="475.1" y="353" class="pun">,</text>
+  <text x="483.5" y="353" class="txt"> </text>
+  <text x="491.9" y="353" class="txt">ex</text>
+  <text x="508.6" y="353" class="pun">.</text>
+  <text x="516.9" y="353" class="met">getMessage</text>
+  <text x="600.4" y="353" class="pun">(</text>
+  <text x="608.8" y="353" class="pun">)</text>
+  <text x="617.1" y="353" class="pun">)</text>
+  <text x="625.5" y="353" class="pun">)</text>
+  <text x="633.8" y="353" class="pun">;</text>
+  <text x="66.0" y="373" class="txt">    </text>
+  <text x="99.4" y="373" class="pun">}</text>
+  <text x="66.0" y="393" class="pun">}</text>
+  <text x="66.0" y="433" class="com">// Controllers stay clean — no try/catch everywhere</text>
+  <text x="66.0" y="453" class="ann">@GetMapping</text>
+  <text x="157.8" y="453" class="pun">(</text>
+  <text x="166.2" y="453" class="str">&quot;/users/{id}&quot;</text>
+  <text x="274.8" y="453" class="pun">)</text>
+  <text x="66.0" y="473" class="kw">public</text>
+  <text x="116.1" y="473" class="txt"> </text>
+  <text x="124.4" y="473" class="typ">User</text>
+  <text x="157.8" y="473" class="txt"> </text>
+  <text x="166.2" y="473" class="met">getUser</text>
+  <text x="224.6" y="473" class="pun">(</text>
+  <text x="233.0" y="473" class="ann">@PathVariable</text>
+  <text x="341.5" y="473" class="txt"> </text>
+  <text x="349.9" y="473" class="typ">Long</text>
+  <text x="383.3" y="473" class="txt"> </text>
+  <text x="391.6" y="473" class="txt">id</text>
+  <text x="408.3" y="473" class="pun">)</text>
+  <text x="416.7" y="473" class="txt"> </text>
+  <text x="425.1" y="473" class="pun">{</text>
+  <text x="66.0" y="493" class="txt">    </text>
+  <text x="99.4" y="493" class="kw">return</text>
+  <text x="149.5" y="493" class="txt"> </text>
+  <text x="157.8" y="493" class="txt">userService</text>
+  <text x="249.7" y="493" class="pun">.</text>
+  <text x="258.1" y="493" class="met">findById</text>
+  <text x="324.9" y="493" class="pun">(</text>
+  <text x="333.2" y="493" class="txt">id</text>
+  <text x="349.9" y="493" class="pun">)</text>
+  <text x="358.3" y="493" class="pun">;</text>
+  <text x="66.0" y="513" class="pun">}</text>
 </svg>

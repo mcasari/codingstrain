@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """
-Generate diagrams.net (.drawio) and SVG image files for each tweet.
-Stdlib only — no pip dependencies.
+Generate tweet assets matching @mario_casari / twitter archive style:
+- CodePen Prefill embeds for Java/Spring code snippets
+- diagrams.net architecture diagrams for tweets #52–#53
+- Tweet text formatted like archive posts (🚀Spring Boot:, ✅ bullets, hashtags)
 """
 
 from __future__ import annotations
@@ -9,114 +11,529 @@ from __future__ import annotations
 import html
 import json
 import re
-import textwrap
+import subprocess
 import uuid
 from pathlib import Path
+
+from codepen_builder import CODEPEN_SCRIPT, build_codepen_embed, build_standalone_pen_page
+from diagram_templates import build_tweet_diagram
+from drawio_builder import (
+    CIRCUIT_BREAKER_CODE_SNIPPET,
+    EUREKA_CODE_SNIPPET,
+)
 
 ROOT = Path(__file__).resolve().parent
 TWEETS_FILE = ROOT / "tweets.json"
 DRAWIO_DIR = ROOT / "drawio"
-SVG_DIR = ROOT / "svg"
+CODEPEN_DIR = ROOT / "codepen"
+PNG_DIR = ROOT / "png"
+SOURCES_DIR = ROOT / "sources"
 INDEX_HTML = ROOT / "index.html"
 
-# Card dimensions (diagrams.net + SVG)
-CARD_W = 560
-CARD_H_BASE = 120
-CODE_H_PER_LINE = 18
-BODY_LINE_H = 22
-PADDING = 24
+EXTENDED_CODE_SNIPPETS: dict[int, str] = {
+    52: EUREKA_CODE_SNIPPET,
+    53: CIRCUIT_BREAKER_CODE_SNIPPET,
+}
+
+# Carbon.now.sh–style theme (Night Owl editor + gradient canvas)
+THEME = {
+    "gradient_start": "#667eea",
+    "gradient_end": "#764ba2",
+    "canvas": "#1a1d2e",
+    "window": "#252836",
+    "editor": "#011627",
+    "dot_red": "#ff5f56",
+    "dot_yellow": "#ffbd2e",
+    "dot_green": "#27c93f",
+    "text": "#d6deeb",
+    "keyword": "#c792ea",
+    "annotation": "#ffb86c",
+    "type": "#ffcb6b",
+    "method": "#82aaff",
+    "string": "#c3e88d",
+    "comment": "#5c6370",
+    "number": "#f78c6c",
+    "punctuation": "#89ddff",
+}
+
+FONT = "ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace"
+FONT_SIZE = 13
+LINE_HEIGHT = 20
+CHAR_W = 8.35
+OUTER_PAD = 48
+TITLE_H = 32
+INNER_PAD = 18
+MAX_LINES = 32
+
+JAVA_KEYWORDS = frozenset({
+    "abstract", "assert", "boolean", "break", "byte", "case", "catch", "char",
+    "class", "const", "continue", "default", "do", "double", "else", "enum",
+    "extends", "final", "finally", "float", "for", "goto", "if", "implements",
+    "import", "instanceof", "int", "interface", "long", "native", "new",
+    "package", "private", "protected", "public", "return", "short", "static",
+    "strictfp", "super", "switch", "synchronized", "this", "throw", "throws",
+    "transient", "try", "void", "volatile", "while", "var", "record", "true",
+    "false", "null",
+})
 
 
 def xml_escape(text: str) -> str:
-    return (
-        text.replace("&", "&amp;")
-        .replace("<", "&lt;")
-        .replace(">", "&gt;")
-        .replace('"', "&quot;")
-    )
+    return html.escape(text, quote=True)
 
 
-def wrap_lines(text: str, width: int = 52) -> list[str]:
-    lines: list[str] = []
-    for paragraph in text.split("\n"):
-        if not paragraph.strip():
-            lines.append("")
+def format_twitter_body(tweet: dict) -> str:
+    """Format tweet text like @mario_casari posts in twitter-2026-05-15 archive."""
+    body = tweet["body"].strip()
+    tags = tweet.get("tags", "").strip()
+
+    if body.startswith(("🚀", "💡", "🧵", "Java Tip")):
+        return body if not tags or tags in body else f"{body}\n{tags}"
+
+    module = tweet.get("module", "").lower()
+    is_java_only = "java" in module and "spring" not in module
+
+    lines = [ln.strip() for ln in body.split("\n") if ln.strip()]
+    hook = lines[0] if lines else body
+
+    if is_java_only:
+        prefix = "💡 Java tip: " if not hook.lower().startswith("java") else "💡 "
+        main = prefix + hook.replace("Java tip:", "").strip()
+    else:
+        if hook.lower().startswith("spring boot"):
+            main = f"🚀{hook}" if not hook.startswith("🚀") else hook
+        else:
+            main = f"🚀Spring Boot: {hook}"
+
+    bullets: list[str] = []
+    for line in lines[1:]:
+        cleaned = line.lstrip("•-* ").strip()
+        if not cleaned:
             continue
-        lines.extend(textwrap.wrap(paragraph, width=width) or [""])
-    return lines
+        if cleaned.startswith("✅") or cleaned.startswith("🟢"):
+            bullets.append(cleaned if cleaned.startswith("✅") else "✅ " + cleaned[2:].strip())
+        elif len(bullets) < 3:
+            bullets.append(f"✅ {cleaned}")
+
+    parts = [main]
+    if bullets:
+        parts.append("")
+        parts.extend(bullets)
+    if tags and tags not in body:
+        parts.append(tags)
+    return "\n".join(parts)
 
 
-def estimate_height(body: str, code: str | None) -> int:
-    body_lines = wrap_lines(body, 50)
-    h = PADDING * 2 + 50 + len(body_lines) * BODY_LINE_H
-    if code:
-        code_lines = code.split("\n")
-        h += 20 + len(code_lines) * CODE_H_PER_LINE + PADDING
-    h += 40  # footer
-    return max(h, 280)
+def image_source(tweet: dict) -> str:
+    """Java source shown in CodePen pens and sources/."""
+    tid = tweet.get("id")
+    if tid in EXTENDED_CODE_SNIPPETS:
+        return EXTENDED_CODE_SNIPPETS[tid].rstrip()
+    if tweet.get("code"):
+        return tweet["code"].rstrip()
 
-
-def build_drawio(tweet: dict) -> str:
-    tid = tweet["id"]
     body = tweet["body"]
-    code = tweet.get("code")
     module = tweet.get("module", "")
-    tags = tweet.get("tags", "")
-    height = estimate_height(body, code)
 
-    body_display = xml_escape(body.replace("\n", "&#xa;"))
-    header = xml_escape(f"Tweet #{tid} · codingstrain")
-    footer = xml_escape(f"Module: {module}  {tags}")
+    if "error" in module and "handling" in module:
+        return EXPANDED_SNIPPETS["exception_handler"]
+    if tweet["id"] == 6:
+        return EXPANDED_SNIPPETS["error_response"]
 
-    cells = [
-        '        <mxCell id="0"/>',
-        '        <mxCell id="1" parent="0"/>',
-        # Background card
-        f'''        <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#15202b;strokeColor=#38444d;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="{CARD_W}" height="{height}" as="geometry"/>
-        </mxCell>''',
-        # Header bar
-        f'''        <mxCell id="hdr" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1DA1F2;strokeColor=none;arcSize=0;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="{CARD_W}" height="44" as="geometry"/>
-        </mxCell>''',
-        f'''        <mxCell id="hdr-txt" value="{header}" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontStyle=1;spacingLeft=16;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="{CARD_W - 20}" height="44" as="geometry"/>
-        </mxCell>''',
-        # Body
-        f'''        <mxCell id="body" value="{body_display}" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#e7e9ea;fontSize=13;spacingLeft=20;spacingTop=12;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="72" width="{CARD_W - 40}" height="{height - 120}" as="geometry"/>
-        </mxCell>''',
+    return "\n".join(f"// {line}" if line.strip() else "//" for line in body.split("\n"))
+
+
+EXPANDED_SNIPPETS = {
+    "exception_handler": """@RestControllerAdvice
+public class GlobalExceptionHandler {
+
+    @ExceptionHandler(ResourceNotFoundException.class)
+    public ResponseEntity<ErrorResponse> handleNotFound(ResourceNotFoundException ex) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND)
+            .body(new ErrorResponse("NOT_FOUND", ex.getMessage()));
+    }
+
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<ErrorResponse> handleBadRequest(IllegalArgumentException ex) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+            .body(new ErrorResponse("BAD_REQUEST", ex.getMessage()));
+    }
+}
+
+// Controllers stay clean — no try/catch everywhere
+@GetMapping("/users/{id}")
+public User getUser(@PathVariable Long id) {
+    return userService.findById(id);
+}""",
+    "error_response": """public class ErrorResponse {
+    private Instant timestamp;
+    private int status;
+    private String error;
+    private String message;
+    private String path;
+}""",
+}
+
+
+def tokenize_java_line(line: str) -> list[tuple[str, str]]:
+    segments: list[tuple[str, str]] = []
+    i, n = 0, len(line)
+
+    while i < n:
+        if line[i] in " \t":
+            j = i + 1
+            while j < n and line[j] in " \t":
+                j += 1
+            segments.append(("text", line[i:j]))
+            i = j
+            continue
+
+        if line.startswith("//", i):
+            segments.append(("comment", line[i:]))
+            break
+
+        if line[i] in '"\'':
+            q, j = line[i], i + 1
+            while j < n:
+                if line[j] == "\\" and j + 1 < n:
+                    j += 2
+                    continue
+                if line[j] == q:
+                    j += 1
+                    break
+                j += 1
+            segments.append(("string", line[i:j]))
+            i = j
+            continue
+
+        if line[i] == "@" and i + 1 < n and line[i + 1].isalpha():
+            j = i + 1
+            while j < n and (line[j].isalnum() or line[j] in "_."):
+                j += 1
+            segments.append(("annotation", line[i:j]))
+            i = j
+            continue
+
+        if line[i].isdigit():
+            j = i
+            while j < n and (line[j].isdigit() or line[j] in "._"):
+                j += 1
+            segments.append(("number", line[i:j]))
+            i = j
+            continue
+
+        if line[i].isalpha() or line[i] == "_":
+            j = i
+            while j < n and (line[j].isalnum() or line[j] == "_"):
+                j += 1
+            word = line[i:j]
+            nxt = j
+            while nxt < n and line[nxt] in " \t":
+                nxt += 1
+            if word in JAVA_KEYWORDS:
+                kind = "keyword"
+            elif nxt < n and line[nxt] == "(":
+                kind = "method"
+            elif word[0].isupper():
+                kind = "type"
+            else:
+                kind = "text"
+            segments.append((kind, word))
+            i = j
+            continue
+
+        segments.append(("punctuation", line[i]))
+        i += 1
+
+    return segments
+
+
+def build_eureka_diagram() -> str:
+    """SVG diagram: Eureka registry + service-to-service call by name."""
+    t = THEME
+    lbl = 'font-family="system-ui, sans-serif"'
+    return f'''
+  <g id="diagram">
+    <rect x="60" y="24" width="780" height="268" rx="10" fill="#252836" stroke="#3d4260" stroke-width="1"/>
+    <text x="450" y="48" text-anchor="middle" fill="#8b949e" font-size="12" {lbl}>Service discovery flow</text>
+    <!-- Eureka -->
+    <rect x="330" y="68" width="240" height="56" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="450" y="94" text-anchor="middle" fill="#93c5fd" font-size="14" font-weight="bold" {lbl}>Eureka Server</text>
+    <text x="450" y="112" text-anchor="middle" fill="#64748b" font-size="11" {lbl}>:8761 — service registry</text>
+    <!-- register arrows -->
+    <path d="M 200 130 L 200 148 L 360 148 L 360 124" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr)"/>
+    <path d="M 450 124 L 450 68" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr)"/>
+    <path d="M 700 130 L 700 148 L 540 148 L 540 124" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr)"/>
+    <text x="280" y="162" fill="#64748b" font-size="10" {lbl}>register + heartbeat</text>
+    <text x="520" y="162" fill="#64748b" font-size="10" {lbl}>register + heartbeat</text>
+    <!-- services -->
+    <rect x="80" y="178" width="200" height="72" rx="8" fill="#1e2130" stroke="#22c55e" stroke-width="2"/>
+    <text x="180" y="204" text-anchor="middle" fill="#86efac" font-size="13" font-weight="bold" {lbl}>books-service</text>
+    <text x="180" y="222" text-anchor="middle" fill="#64748b" font-size="10" {lbl}>:8081 (instance A)</text>
+    <text x="180" y="238" text-anchor="middle" fill="#64748b" font-size="10" {lbl}>spring.application.name</text>
+    <rect x="350" y="178" width="200" height="72" rx="8" fill="#1e2130" stroke="#a78bfa" stroke-width="2"/>
+    <text x="450" y="204" text-anchor="middle" fill="#c4b5fd" font-size="13" font-weight="bold" {lbl}>author-service</text>
+    <text x="450" y="222" text-anchor="middle" fill="#64748b" font-size="10" {lbl}>:8082 (instance B)</text>
+    <rect x="620" y="178" width="200" height="72" rx="8" fill="#1e2130" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="720" y="204" text-anchor="middle" fill="#fde68a" font-size="13" font-weight="bold" {lbl}>review-service</text>
+    <text x="720" y="222" text-anchor="middle" fill="#64748b" font-size="10" {lbl}>:8083 (instance C)</text>
+    <!-- call by name -->
+    <path d="M 280 214 L 350 214" fill="none" stroke="#38bdf8" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrBlue)"/>
+    <text x="315" y="206" text-anchor="middle" fill="#38bdf8" font-size="9" {lbl}>GET author-service</text>
+    <text x="315" y="258" text-anchor="middle" fill="#38bdf8" font-size="9" {lbl}>LoadBalancer picks instance B</text>
+    <!-- without vs with -->
+    <text x="120" y="278" fill="#ef4444" font-size="10" {lbl}>✗ http://192.168.1.42:8082</text>
+    <text x="620" y="278" fill="#22c55e" font-size="10" {lbl}>✓ http://author-service/authors/1</text>
+  </g>'''
+
+
+def build_circuit_breaker_diagram() -> str:
+    """SVG diagram: OpenFeign call + circuit breaker states + fallback."""
+    lbl = 'font-family="system-ui, sans-serif"'
+    return f'''
+  <g id="diagram">
+    <rect x="60" y="24" width="780" height="288" rx="10" fill="#252836" stroke="#3d4260" stroke-width="1"/>
+    <text x="450" y="48" text-anchor="middle" fill="#8b949e" font-size="12" {lbl}>OpenFeign + Circuit Breaker (Resilience4j)</text>
+    <!-- books-service -->
+    <rect x="80" y="78" width="160" height="64" rx="8" fill="#1e2130" stroke="#22c55e" stroke-width="2"/>
+    <text x="160" y="104" text-anchor="middle" fill="#86efac" font-size="13" font-weight="bold" {lbl}>books-service</text>
+    <text x="160" y="122" text-anchor="middle" fill="#64748b" font-size="10" {lbl}>@EnableFeignClients</text>
+    <!-- circuit breaker -->
+    <rect x="280" y="68" width="340" height="84" rx="8" fill="#1e3a5f" stroke="#f97316" stroke-width="2"/>
+    <text x="450" y="92" text-anchor="middle" fill="#fdba74" font-size="13" font-weight="bold" {lbl}>Circuit Breaker</text>
+    <text x="450" y="110" text-anchor="middle" fill="#64748b" font-size="10" {lbl}>CircuitBreakerApi / CircuitBreakerService</text>
+    <!-- states -->
+    <rect x="300" y="122" width="88" height="22" rx="4" fill="#14532d" stroke="#22c55e"/>
+    <text x="344" y="137" text-anchor="middle" fill="#86efac" font-size="9" {lbl}>CLOSED</text>
+    <rect x="396" y="122" width="88" height="22" rx="4" fill="#450a0a" stroke="#ef4444"/>
+    <text x="440" y="137" text-anchor="middle" fill="#fca5a5" font-size="9" {lbl}>OPEN</text>
+    <rect x="492" y="122" width="108" height="22" rx="4" fill="#422006" stroke="#fbbf24"/>
+    <text x="546" y="137" text-anchor="middle" fill="#fde68a" font-size="9" {lbl}>HALF-OPEN</text>
+    <!-- author-service -->
+    <rect x="660" y="78" width="160" height="64" rx="8" fill="#1e2130" stroke="#a78bfa" stroke-width="2"/>
+    <text x="740" y="104" text-anchor="middle" fill="#c4b5fd" font-size="13" font-weight="bold" {lbl}>author-service</text>
+    <text x="740" y="122" text-anchor="middle" fill="#64748b" font-size="10" {lbl}>may fail / timeout</text>
+    <!-- arrows -->
+    <path d="M 240 110 L 280 110" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrBlue)"/>
+    <text x="260" y="102" text-anchor="middle" fill="#38bdf8" font-size="9" {lbl}>Feign</text>
+    <path d="M 620 110 L 660 110" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr)"/>
+    <!-- fallback -->
+    <path d="M 450 152 L 450 178" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#arrRed)"/>
+    <rect x="330" y="182" width="240" height="44" rx="6" fill="#1e2130" stroke="#ef4444" stroke-width="1.5"/>
+    <text x="450" y="202" text-anchor="middle" fill="#fca5a5" font-size="11" font-weight="bold" {lbl}>fallbackMethod()</text>
+    <text x="450" y="218" text-anchor="middle" fill="#64748b" font-size="9" {lbl}>&quot;Fallback content&quot; (circuit OPEN)</text>
+    <!-- state flow -->
+    <text x="90" y="248" fill="#8b949e" font-size="10" {lbl}>State flow:</text>
+    <text x="90" y="266" fill="#86efac" font-size="10" {lbl}>CLOSED</text>
+    <text x="150" y="266" fill="#64748b" font-size="10" {lbl}>→ failures &gt; 50%</text>
+    <text x="250" y="266" fill="#fca5a5" font-size="10" {lbl}>→ OPEN (fail fast)</text>
+    <text x="360" y="266" fill="#fde68a" font-size="10" {lbl}>→ HALF-OPEN (retry)</text>
+    <text x="490" y="266" fill="#86efac" font-size="10" {lbl}>→ CLOSED</text>
+    <text x="90" y="292" fill="#ef4444" font-size="10" {lbl}>Without CB: threads blocked, timeouts pile up, cascade failure</text>
+    <text x="500" y="292" fill="#22c55e" font-size="10" {lbl}>With CB: fail fast + degraded response</text>
+  </g>'''
+
+
+def get_diagram_svg(tweet: dict) -> str:
+    dtype = tweet.get("diagram_type", "eureka")
+    if dtype == "circuit_breaker":
+        return build_circuit_breaker_diagram()
+    return build_eureka_diagram()
+
+
+def render_code_block(source: str, wx: int, wy: int, window_w: int) -> tuple[str, int]:
+    """Render carbon code window; return (svg_fragment, total_height)."""
+    lines = source.split("\n")
+    max_lines = 26
+    if len(lines) > max_lines:
+        lines = lines[: max_lines - 1] + [lines[max_lines - 1] + " …"]
+
+    num_lines = len(lines)
+    window_h = TITLE_H + INNER_PAD * 2 + num_lines * LINE_HEIGHT
+    code_y = wy + TITLE_H + INNER_PAD
+    code_x = wx + INNER_PAD
+    t = THEME
+    cls = {
+        "keyword": "kw", "annotation": "ann", "string": "str", "type": "typ",
+        "method": "met", "comment": "com", "number": "num", "punctuation": "pun",
+        "text": "txt",
+    }
+    parts = [
+        f'''  <g filter="url(#shadow)">
+    <rect x="{wx}" y="{wy}" width="{window_w}" height="{window_h}" rx="8" fill="{t['window']}"/>
+    <rect x="{wx}" y="{wy}" width="{window_w}" height="{TITLE_H}" rx="8" fill="{t['window']}"/>
+    <rect x="{wx}" y="{wy + TITLE_H - 6}" width="{window_w}" height="6" fill="{t['window']}"/>
+    <circle cx="{wx + 18}" cy="{wy + 16}" r="5.5" fill="{t['dot_red']}"/>
+    <circle cx="{wx + 36}" cy="{wy + 16}" r="5.5" fill="{t['dot_yellow']}"/>
+    <circle cx="{wx + 54}" cy="{wy + 16}" r="5.5" fill="{t['dot_green']}"/>
+    <rect x="{wx}" y="{wy + TITLE_H}" width="{window_w}" height="{window_h - TITLE_H}" fill="{t['editor']}"/>
+    <rect x="{wx}" y="{wy + window_h - 8}" width="{window_w}" height="8" rx="8" fill="{t['editor']}"/>
+  </g>'''
     ]
+    for idx, line in enumerate(lines):
+        y = code_y + (idx + 1) * LINE_HEIGHT - 5
+        x = code_x
+        for kind, text in tokenize_java_line(line):
+            css = cls.get(kind, "txt")
+            parts.append(
+                f'  <text x="{x:.1f}" y="{y}" class="{css}">{xml_escape(text)}</text>'
+            )
+            x += len(text) * CHAR_W
+    total_h = wy + window_h
+    return "\n".join(parts), total_h
 
-    y_code = 72 + len(wrap_lines(body, 50)) * 20 + 10
-    if code:
-        code_display = xml_escape(code.replace("\n", "&#xa;"))
-        code_h = len(code.split("\n")) * CODE_H_PER_LINE + 24
-        cells.append(
-            f'''        <mxCell id="code-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#192734;strokeColor=#38444d;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="36" y="{y_code}" width="{CARD_W - 72}" height="{code_h}" as="geometry"/>
-        </mxCell>'''
-        )
-        cells.append(
-            f'''        <mxCell id="code" value="{code_display}" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#89cff0;fontSize=11;fontFamily=Courier New;spacingLeft=12;spacingTop=8;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="36" y="{y_code}" width="{CARD_W - 72}" height="{code_h}" as="geometry"/>
-        </mxCell>'''
-        )
 
-    cells.append(
-        f'''        <mxCell id="ftr" value="{footer}" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#71767b;fontSize=10;spacingLeft=20;" vertex="1" parent="1">
-          <mxGeometry x="20" y="{height - 8}" width="{CARD_W - 40}" height="28" as="geometry"/>
-        </mxCell>'''
-    )
+def build_composite_diagram_svg(tweet: dict) -> str:
+    """Image with architecture diagram + code (for tweets with has_diagram)."""
+    source = image_source(tweet)
+    total_w = 900
+    diagram_h = 320 if tweet.get("diagram_type") == "circuit_breaker" else 300
+    gap = 24
+    wx = OUTER_PAD
+    window_w = total_w - OUTER_PAD * 2
+    code_wy = OUTER_PAD + diagram_h + gap
+    code_xml, bottom = render_code_block(source, wx, code_wy, window_w)
+    total_h = bottom + OUTER_PAD
+    t = THEME
+    style = f"""
+      .kw {{ fill:{t['keyword']}; font-family:{FONT}; font-size:{FONT_SIZE}px; }}
+      .ann {{ fill:{t['annotation']}; font-family:{FONT}; font-size:{FONT_SIZE}px; }}
+      .str {{ fill:{t['string']}; font-family:{FONT}; font-size:{FONT_SIZE}px; }}
+      .typ {{ fill:{t['type']}; font-family:{FONT}; font-size:{FONT_SIZE}px; }}
+      .met {{ fill:{t['method']}; font-family:{FONT}; font-size:{FONT_SIZE}px; }}
+      .com {{ fill:{t['comment']}; font-family:{FONT}; font-size:{FONT_SIZE}px; }}
+      .num {{ fill:{t['number']}; font-family:{FONT}; font-size:{FONT_SIZE}px; }}
+      .pun {{ fill:{t['punctuation']}; font-family:{FONT}; font-size:{FONT_SIZE}px; }}
+      .txt {{ fill:{t['text']}; font-family:{FONT}; font-size:{FONT_SIZE}px; }}
+    """
+    diagram = get_diagram_svg(tweet)
+    return f'''<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="{total_w}" height="{total_h}" viewBox="0 0 {total_w} {total_h}">
+  <defs>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+    <marker id="arrBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#38bdf8"/>
+    </marker>
+    <marker id="arrRed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#ef4444"/>
+    </marker>
+    <style>{style}</style>
+  </defs>
+  <rect width="100%" height="100%" fill="{t['canvas']}"/>
+{diagram}
+{code_xml}
+</svg>
+'''
 
-    diagram_id = str(uuid.uuid4())
-    cells_xml = "\n".join(cells)
 
-    return f'''<mxfile host="app.diagrams.net" agent="codingstrain-generator" version="22.1.0" type="device">
-  <diagram id="{diagram_id}" name="Tweet {tid}">
-    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="{height + 40}" math="0" shadow="0">
+def build_svg(tweet: dict) -> str:
+    if tweet.get("has_diagram"):
+        return build_composite_diagram_svg(tweet)
+    return build_carbon_svg(tweet)
+
+
+def build_carbon_svg(tweet: dict) -> str:
+    source = image_source(tweet)
+    lines = source.split("\n")
+    if len(lines) > MAX_LINES:
+        lines = lines[: MAX_LINES - 1] + [lines[MAX_LINES - 1] + " …"]
+
+    num_lines = len(lines)
+    max_len = max((len(l) for l in lines), default=40)
+    code_inner_w = int(max_len * CHAR_W) + INNER_PAD * 2
+    window_w = max(640, min(code_inner_w + INNER_PAD * 2, 1040))
+    window_h = TITLE_H + INNER_PAD * 2 + num_lines * LINE_HEIGHT
+    total_w = window_w + OUTER_PAD * 2
+    total_h = window_h + OUTER_PAD * 2
+
+    wx, wy = OUTER_PAD, OUTER_PAD
+    code_y = wy + TITLE_H + INNER_PAD
+    code_x = wx + INNER_PAD
+
+    t = THEME
+    cls = {
+        "keyword": "kw", "annotation": "ann", "string": "str", "type": "typ",
+        "method": "met", "comment": "com", "number": "num", "punctuation": "pun",
+        "text": "txt",
+    }
+
+    style = f"""
+      .kw {{ fill:{t['keyword']}; font-family:{FONT}; font-size:{FONT_SIZE}px; }}
+      .ann {{ fill:{t['annotation']}; font-family:{FONT}; font-size:{FONT_SIZE}px; }}
+      .str {{ fill:{t['string']}; font-family:{FONT}; font-size:{FONT_SIZE}px; }}
+      .typ {{ fill:{t['type']}; font-family:{FONT}; font-size:{FONT_SIZE}px; }}
+      .met {{ fill:{t['method']}; font-family:{FONT}; font-size:{FONT_SIZE}px; }}
+      .com {{ fill:{t['comment']}; font-family:{FONT}; font-size:{FONT_SIZE}px; }}
+      .num {{ fill:{t['number']}; font-family:{FONT}; font-size:{FONT_SIZE}px; }}
+      .pun {{ fill:{t['punctuation']}; font-family:{FONT}; font-size:{FONT_SIZE}px; }}
+      .txt {{ fill:{t['text']}; font-family:{FONT}; font-size:{FONT_SIZE}px; }}
+    """
+
+    code_parts: list[str] = []
+    for idx, line in enumerate(lines):
+        y = code_y + (idx + 1) * LINE_HEIGHT - 5
+        x = code_x
+        for kind, text in tokenize_java_line(line):
+            css = cls.get(kind, "txt")
+            code_parts.append(
+                f'  <text x="{x:.1f}" y="{y}" class="{css}">{xml_escape(text)}</text>'
+            )
+            x += len(text) * CHAR_W
+
+    code_xml = "\n".join(code_parts)
+
+    return f'''<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="{total_w}" height="{total_h}" viewBox="0 0 {total_w} {total_h}">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="{t['gradient_start']}"/>
+      <stop offset="100%" stop-color="{t['gradient_end']}"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+    <style>{style}</style>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  <g filter="url(#shadow)">
+    <rect x="{wx}" y="{wy}" width="{window_w}" height="{window_h}" rx="8" fill="{t['window']}"/>
+    <rect x="{wx}" y="{wy}" width="{window_w}" height="{TITLE_H}" rx="8" fill="{t['window']}"/>
+    <rect x="{wx}" y="{wy + TITLE_H - 6}" width="{window_w}" height="6" fill="{t['window']}"/>
+    <circle cx="{wx + 18}" cy="{wy + 16}" r="5.5" fill="{t['dot_red']}"/>
+    <circle cx="{wx + 36}" cy="{wy + 16}" r="5.5" fill="{t['dot_yellow']}"/>
+    <circle cx="{wx + 54}" cy="{wy + 16}" r="5.5" fill="{t['dot_green']}"/>
+    <rect x="{wx}" y="{wy + TITLE_H}" width="{window_w}" height="{window_h - TITLE_H}" fill="{t['editor']}"/>
+    <rect x="{wx}" y="{wy + window_h - 8}" width="{window_w}" height="8" rx="8" fill="{t['editor']}"/>
+  </g>
+{code_xml}
+</svg>
+'''
+
+
+def build_drawio_diagram(tweet: dict) -> str:
+    """Native diagrams.net architecture diagram (diagram-only, code in CodePen)."""
+    return build_tweet_diagram(tweet)
+
+
+def build_drawio_simple(tweet: dict) -> str:
+    tid = tweet["id"]
+    code = xml_escape(image_source(tweet).replace("\n", "&#xa;"))
+    footer = xml_escape(tweet.get("module", ""))
+    return f'''<mxfile host="app.diagrams.net" agent="codingstrain" version="22.1.0">
+  <diagram id="{uuid.uuid4()}" name="Tweet {tid}">
+    <mxGraphModel>
       <root>
-{cells_xml}
+        <mxCell id="0"/><mxCell id="1" parent="0"/>
+        <mxCell id="c" value="{code}" style="rounded=1;fillColor=#1e2130;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="40" width="520" height="360" as="geometry"/>
+        </mxCell>
+        <mxCell id="f" value="{footer}" style="text;fontSize=10;fontColor=#71767b;" vertex="1" parent="1">
+          <mxGeometry x="20" y="10" width="400" height="24" as="geometry"/>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
@@ -124,152 +541,139 @@ def build_drawio(tweet: dict) -> str:
 '''
 
 
-def svg_text_block(lines: list[str], x: int, y: int, line_height: int, css_class: str) -> str:
-    parts = []
-    for i, line in enumerate(lines):
-        esc = html.escape(line)
-        parts.append(
-            f'    <text x="{x}" y="{y + i * line_height}" class="{css_class}">{esc}</text>'
-        )
-    return "\n".join(parts)
-
-
-def build_svg(tweet: dict) -> str:
-    tid = tweet["id"]
-    body = tweet["body"]
-    code = tweet.get("code")
-    module = tweet.get("module", "")
-    tags = tweet.get("tags", "")
-    height = estimate_height(body, code)
-
-    body_lines = wrap_lines(body, 48)
-    body_svg = svg_text_block(body_lines, 28, 100, BODY_LINE_H, "body")
-
-    code_svg = ""
-    if code:
-        y0 = 100 + len(body_lines) * BODY_LINE_H + 16
-        code_lines = code.split("\n")
-        code_svg = f'  <rect x="24" y="{y0 - 18}" width="{CARD_W - 48}" height="{len(code_lines) * CODE_H_PER_LINE + 28}" rx="6" class="code-bg"/>\n'
-        code_svg += svg_text_block(code_lines, 36, y0, CODE_H_PER_LINE, "code")
-
-    return f'''<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="{CARD_W}" height="{height}" viewBox="0 0 {CARD_W} {height}">
-  <defs>
-    <style>
-      .card {{ fill: #15202b; stroke: #38444d; stroke-width: 2; }}
-      .header {{ fill: #1DA1F2; }}
-      .title {{ fill: #ffffff; font: bold 14px sans-serif; }}
-      .body {{ fill: #e7e9ea; font: 13px sans-serif; }}
-      .code {{ fill: #89cff0; font: 11px monospace; }}
-      .code-bg {{ fill: #192734; stroke: #38444d; stroke-width: 1; }}
-      .footer {{ fill: #71767b; font: 10px sans-serif; }}
-    </style>
-  </defs>
-  <rect x="0" y="0" width="{CARD_W}" height="{height}" rx="12" class="card"/>
-  <rect x="0" y="0" width="{CARD_W}" height="44" rx="12" class="header"/>
-  <rect x="0" y="32" width="{CARD_W}" height="12" class="header"/>
-  <text x="20" y="28" class="title">Tweet #{tid} · codingstrain</text>
-{body_svg}
-{code_svg}
-  <text x="20" y="{height - 16}" class="footer">Module: {html.escape(module)}  {html.escape(tags)}</text>
-</svg>
-'''
+def build_combined_drawio(tweets: list[dict]) -> str:
+    parts = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<mxfile host="app.diagrams.net" agent="codingstrain" version="22.1.8" type="device">',
+    ]
+    for tweet in tweets:
+        content = build_drawio_diagram(tweet)
+        m = re.search(r"<diagram[^>]*>.*?</diagram>", content, re.DOTALL)
+        if m:
+            parts.append(m.group(0))
+    parts.append("</mxfile>")
+    return "\n  ".join(parts)
 
 
 def build_index(tweets: list[dict]) -> str:
     rows = []
     for t in tweets:
         tid = t["id"]
+        stem = f"tweet-{tid:02d}"
+        text = xml_escape(format_twitter_body(t))
+        pen = build_codepen_embed(t, image_source(t))
         rows.append(
             f"""    <article>
-      <h2><a href="drawio/tweet-{tid:02d}.drawio">Tweet #{tid}</a></h2>
-      <img src="svg/tweet-{tid:02d}.svg" alt="Tweet {tid}" width="560"/>
+      <h2>Tweet #{tid}</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/{stem}-diagram.png" alt="Diagram {tid}" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+{pen}
+      <div class="tweet-text">{text}</div>
       <p class="links">
-        <a href="drawio/tweet-{tid:02d}.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-{tid:02d}.svg" download>Download .svg</a>
+        <a href="drawio/{stem}.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/{stem}.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/{stem}.java" download>Source .java</a>
       </p>
-      <pre>{html.escape(t['body'][:200])}{'…' if len(t['body']) > 200 else ''}</pre>
     </article>"""
         )
-    body = "\n".join(rows)
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
-  <title>codingstrain X Posts — Spring Boot &amp; Java</title>
+  <title>codingstrain X Posts — @mario_casari style</title>
   <style>
-    body {{ font-family: system-ui, sans-serif; max-width: 640px; margin: 2rem auto; padding: 0 1rem; background: #f5f8fa; }}
-    article {{ background: #fff; border-radius: 12px; padding: 1rem; margin-bottom: 2rem; box-shadow: 0 1px 3px rgba(0,0,0,.1); }}
-    h2 {{ margin: 0 0 .5rem; font-size: 1rem; }}
-    pre {{ font-size: 12px; color: #536471; white-space: pre-wrap; }}
-    .links a {{ color: #1DA1F2; }}
-    .banner {{ background: #1DA1F2; color: #fff; padding: 1rem; border-radius: 8px; margin-bottom: 2rem; }}
+    body {{ font-family: system-ui, sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1rem; background: #f7f9f9; }}
+    article {{ background: #fff; border-radius: 16px; padding: 1.25rem; margin-bottom: 2rem; box-shadow: 0 1px 3px rgba(0,0,0,.08); }}
+    h2 {{ margin: 0 0 1rem; font-size: 0.9rem; color: #536471; }}
+    .tweet-text {{ white-space: pre-wrap; font-size: 15px; line-height: 1.4; margin: 1rem 0; padding: 1rem; background: #f7f9f9; border-radius: 12px; border: 1px solid #eff3f4; }}
+    .links a {{ color: #1d9bf0; }}
+    .banner {{ background: #1d9bf0; color: #fff; padding: 1.25rem; border-radius: 12px; margin-bottom: 2rem; }}
+    .banner p {{ margin: 0.5rem 0 0; opacity: 0.95; }}
+    .drawio-box {{ background: #e8f4fc; border: 1px solid #1d9bf0; border-radius: 12px; padding: 1rem; margin-bottom: 1rem; }}
+    .drawio-box ol {{ margin: 0.5rem 0 0; padding-left: 1.25rem; }}
+    .drawio-box li {{ margin: 0.35rem 0; }}
+    .asset-label {{ font-size: 0.85rem; color: #536471; margin: 0.75rem 0 0.35rem; }}
+    .asset-img {{ display: block; max-width: 100%; border-radius: 8px; margin-bottom: 0.5rem; border: 1px solid #eff3f4; }}
+    .codepen-wrap {{ margin: 0.5rem 0 1rem; border-radius: 8px; overflow: hidden; border: 1px solid #eff3f4; }}
+    .codepen-links {{ font-size: 0.8rem; margin: 0.35rem 0 0; padding: 0 0.5rem 0.5rem; }}
+    .codepen-links a {{ color: #1d9bf0; }}
   </style>
 </head>
 <body>
   <div class="banner">
     <h1>Spring Boot &amp; Java X Posts</h1>
-    <p>60 tweet cards · Open <code>.drawio</code> files in <a href="https://app.diagrams.net/">diagrams.net</a> to edit or export PNG/PDF.</p>
+    <p>Every tweet: <a href="https://app.diagrams.net/">diagrams.net</a> architecture diagram + <a href="https://codepen.io/">CodePen</a> code pen.</p>
   </div>
-{body}
+{chr(10).join(rows)}
+  <script async src="{CODEPEN_SCRIPT}"></script>
 </body>
 </html>
 """
 
 
-def build_combined_drawio(tweets: list[dict]) -> str:
-    """Single .drawio file with one tab per tweet (open all in diagrams.net)."""
-    parts = [
-        '<mxfile host="app.diagrams.net" agent="codingstrain-generator" version="22.1.0" type="device">'
-    ]
-    for tweet in tweets:
-        single = build_drawio(tweet)
-        diagram_match = re.search(
-            r"<diagram[^>]*>.*?</diagram>", single, re.DOTALL
+def export_diagram_png(drawio_path: Path, png_path: Path) -> bool:
+    png_path.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        subprocess.run(
+            ["npx", "--yes", "draw.io-export", str(drawio_path), "-o", str(png_path)],
+            check=True,
+            capture_output=True,
+            timeout=120,
+            cwd=ROOT,
         )
-        if diagram_match:
-            parts.append(diagram_match.group(0))
-    parts.append("</mxfile>")
-    return "\n  ".join(parts)
+        return png_path.is_file()
+    except (subprocess.CalledProcessError, subprocess.TimeoutExpired, FileNotFoundError):
+        return False
 
 
 def main() -> None:
     tweets = json.loads(TWEETS_FILE.read_text(encoding="utf-8"))
     DRAWIO_DIR.mkdir(parents=True, exist_ok=True)
-    SVG_DIR.mkdir(parents=True, exist_ok=True)
+    CODEPEN_DIR.mkdir(parents=True, exist_ok=True)
+    PNG_DIR.mkdir(parents=True, exist_ok=True)
+    SOURCES_DIR.mkdir(parents=True, exist_ok=True)
 
     for tweet in tweets:
         tid = tweet["id"]
         stem = f"tweet-{tid:02d}"
-        (DRAWIO_DIR / f"{stem}.drawio").write_text(
-            build_drawio(tweet), encoding="utf-8"
+        code = image_source(tweet) + "\n"
+        (SOURCES_DIR / f"{stem}.java").write_text(code, encoding="utf-8")
+        (CODEPEN_DIR / f"{stem}.html").write_text(
+            build_standalone_pen_page(tweet, code.rstrip()), encoding="utf-8"
         )
-        (SVG_DIR / f"{stem}.svg").write_text(build_svg(tweet), encoding="utf-8")
+        drawio_path = DRAWIO_DIR / f"{stem}.drawio"
+        drawio_path.write_text(build_drawio_diagram(tweet), encoding="utf-8")
+        export_diagram_png(drawio_path, PNG_DIR / f"{stem}-diagram.png")
+        stale_code_png = PNG_DIR / f"{stem}-code.png"
+        if stale_code_png.exists():
+            stale_code_png.unlink()
 
-    (DRAWIO_DIR / "all-tweets.drawio").write_text(
-        build_combined_drawio(tweets), encoding="utf-8"
-    )
+    (DRAWIO_DIR / "all-tweets.drawio").write_text(build_combined_drawio(tweets), encoding="utf-8")
     INDEX_HTML.write_text(build_index(tweets), encoding="utf-8")
 
     readme = f"""# Generated X Post Assets
 
-{len(tweets)} tweet cards generated from `tweets.json`.
+{len(tweets)} posts styled like **@mario_casari** tweets from `twitter-2026-05-15`.
+
+## Style
+
+| Element | Format |
+|---------|--------|
+| Tweet text | `🚀Spring Boot: …` + `✅` bullets + `#SpringBoot` hashtags |
+| Code | [CodePen](https://codepen.io/) Prefill pens (editable embeds) |
+| Diagrams | [diagrams.net](https://app.diagrams.net/) `.drawio` (architecture only, all tweets) |
+| Java tips | `💡 Java tip: …` |
 
 ## Files
 
-| Folder | Format | Use |
-|--------|--------|-----|
-| `drawio/` | `.drawio` | Open in [diagrams.net](https://app.diagrams.net/) — edit, export PNG/SVG/PDF |
-| `drawio/all-tweets.drawio` | Multi-tab | All 60 tweets in one file (one tab each) |
-| `svg/` | `.svg` | Ready-to-post vector images (browser, design tools) |
-| `index.html` | Preview | Open locally to browse and download all cards |
-
-## Open in diagrams.net
-
-1. Go to https://app.diagrams.net/
-2. **File → Open from → Device**
-3. Select any `drawio/tweet-XX.drawio` file
-4. **File → Export as → PNG** (or PDF) for raster download
+| Folder | Contents |
+|--------|----------|
+| `codepen/` | Standalone HTML page per tweet with a CodePen Prefill embed |
+| `png/` | Diagram PNG exports (one per tweet) |
+| `drawio/` | diagrams.net architecture diagrams |
+| `sources/` | `.java` snippets — copy into a CodePen pen to edit |
+| `index.html` | Preview tweet text + CodePen embeds |
 
 ## Regenerate
 
@@ -277,14 +681,13 @@ def main() -> None:
 python3 generate_assets.py
 ```
 
-## Edit tweets
-
-Edit `tweets.json`, then run the generator again.
+Diagram PNGs: `npx draw.io-export`. Code pens load via [CodePen Prefill embeds](https://blog.codepen.io/documentation/prefill-embeds/).
 """
     (ROOT / "README.md").write_text(readme, encoding="utf-8")
-    print(f"Generated {len(tweets)} .drawio + {len(tweets)} .svg + all-tweets.drawio")
-    print(f"  drawio/ → {DRAWIO_DIR}")
-    print(f"  svg/    → {SVG_DIR}")
+    print(f"Generated assets for {len(tweets)} tweets")
+    print(f"  codepen/ → {CODEPEN_DIR}")
+    print(f"  diagrams.net → {DRAWIO_DIR}")
+    print(f"  png/ → {PNG_DIR} (diagram exports)")
     print(f"  preview → {INDEX_HTML}")
 
 

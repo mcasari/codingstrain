@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="736" height="544" viewBox="0 0 736 544">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+    <style>
+      .kw { fill:#c792ea; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .ann { fill:#ffb86c; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .str { fill:#c3e88d; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .typ { fill:#ffcb6b; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .met { fill:#82aaff; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .com { fill:#5c6370; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .num { fill:#f78c6c; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .pun { fill:#89ddff; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .txt { fill:#d6deeb; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+    </style>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  <g filter="url(#shadow)">
+    <rect x="48" y="48" width="640" height="448" rx="8" fill="#252836"/>
+    <rect x="48" y="48" width="640" height="32" rx="8" fill="#252836"/>
+    <rect x="48" y="74" width="640" height="6" fill="#252836"/>
+    <circle cx="66" cy="64" r="5.5" fill="#ff5f56"/>
+    <circle cx="84" cy="64" r="5.5" fill="#ffbd2e"/>
+    <circle cx="102" cy="64" r="5.5" fill="#27c93f"/>
+    <rect x="48" y="80" width="640" height="416" fill="#011627"/>
+    <rect x="48" y="488" width="640" height="8" rx="8" fill="#011627"/>
+  </g>
+  <text x="66.0" y="113" class="com">// ── 1) Eureka Server (registry) ──────────────────────</text>
+  <text x="66.0" y="133" class="ann">@SpringBootApplication</text>
+  <text x="66.0" y="153" class="ann">@EnableEurekaServer</text>
+  <text x="66.0" y="173" class="kw">public</text>
+  <text x="116.1" y="173" class="txt"> </text>
+  <text x="124.4" y="173" class="kw">class</text>
+  <text x="166.2" y="173" class="txt"> </text>
+  <text x="174.5" y="173" class="typ">DiscoveryServerApp</text>
+  <text x="324.8" y="173" class="txt"> </text>
+  <text x="333.2" y="173" class="pun">{</text>
+  <text x="66.0" y="193" class="txt">    </text>
+  <text x="99.4" y="193" class="kw">public</text>
+  <text x="149.5" y="193" class="txt"> </text>
+  <text x="157.8" y="193" class="kw">static</text>
+  <text x="207.9" y="193" class="txt"> </text>
+  <text x="216.3" y="193" class="kw">void</text>
+  <text x="249.7" y="193" class="txt"> </text>
+  <text x="258.1" y="193" class="met">main</text>
+  <text x="291.4" y="193" class="pun">(</text>
+  <text x="299.8" y="193" class="typ">String</text>
+  <text x="349.9" y="193" class="pun">[</text>
+  <text x="358.2" y="193" class="pun">]</text>
+  <text x="366.6" y="193" class="txt"> </text>
+  <text x="375.0" y="193" class="txt">args</text>
+  <text x="408.4" y="193" class="pun">)</text>
+  <text x="416.7" y="193" class="txt"> </text>
+  <text x="425.1" y="193" class="pun">{</text>
+  <text x="66.0" y="213" class="txt">        </text>
+  <text x="132.8" y="213" class="typ">SpringApplication</text>
+  <text x="274.8" y="213" class="pun">.</text>
+  <text x="283.1" y="213" class="met">run</text>
+  <text x="308.2" y="213" class="pun">(</text>
+  <text x="316.5" y="213" class="typ">DiscoveryServerApp</text>
+  <text x="466.8" y="213" class="pun">.</text>
+  <text x="475.2" y="213" class="kw">class</text>
+  <text x="516.9" y="213" class="pun">,</text>
+  <text x="525.3" y="213" class="txt"> </text>
+  <text x="533.6" y="213" class="txt">args</text>
+  <text x="567.0" y="213" class="pun">)</text>
+  <text x="575.4" y="213" class="pun">;</text>
+  <text x="66.0" y="233" class="txt">    </text>
+  <text x="99.4" y="233" class="pun">}</text>
+  <text x="66.0" y="253" class="pun">}</text>
+  <text x="66.0" y="293" class="com">// ── 2) Client microservice ─────────────────────────────</text>
+  <text x="66.0" y="313" class="com">// application.yml</text>
+  <text x="66.0" y="333" class="com">//   spring.application.name: books-service</text>
+  <text x="66.0" y="373" class="com">// ── 3) Call another service by name (no fixed IP) ─────</text>
+  <text x="66.0" y="393" class="ann">@FeignClient</text>
+  <text x="166.2" y="393" class="pun">(</text>
+  <text x="174.5" y="393" class="txt">name</text>
+  <text x="207.9" y="393" class="txt"> </text>
+  <text x="216.3" y="393" class="pun">=</text>
+  <text x="224.6" y="393" class="txt"> </text>
+  <text x="233.0" y="393" class="str">&quot;author-service&quot;</text>
+  <text x="366.6" y="393" class="pun">)</text>
+  <text x="66.0" y="413" class="kw">public</text>
+  <text x="116.1" y="413" class="txt"> </text>
+  <text x="124.4" y="413" class="kw">interface</text>
+  <text x="199.6" y="413" class="txt"> </text>
+  <text x="207.9" y="413" class="typ">AuthorClient</text>
+  <text x="308.1" y="413" class="txt"> </text>
+  <text x="316.5" y="413" class="pun">{</text>
+  <text x="66.0" y="433" class="txt">    </text>
+  <text x="99.4" y="433" class="ann">@GetMapping</text>
+  <text x="191.2" y="433" class="pun">(</text>
+  <text x="199.6" y="433" class="str">&quot;/authors/{id}&quot;</text>
+  <text x="324.9" y="433" class="pun">)</text>
+  <text x="66.0" y="453" class="txt">    </text>
+  <text x="99.4" y="453" class="typ">Author</text>
+  <text x="149.5" y="453" class="txt"> </text>
+  <text x="157.8" y="453" class="met">getAuthor</text>
+  <text x="233.0" y="453" class="pun">(</text>
+  <text x="241.3" y="453" class="ann">@PathVariable</text>
+  <text x="349.9" y="453" class="txt"> </text>
+  <text x="358.2" y="453" class="typ">String</text>
+  <text x="408.4" y="453" class="txt"> </text>
+  <text x="416.7" y="453" class="txt">id</text>
+  <text x="433.4" y="453" class="pun">)</text>
+  <text x="441.8" y="453" class="pun">;</text>
+  <text x="66.0" y="473" class="pun">}</text>
+</svg>

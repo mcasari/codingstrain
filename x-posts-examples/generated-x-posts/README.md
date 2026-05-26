@@ -1,22 +1,25 @@
 # Generated X Post Assets
 
-60 tweet cards generated from `tweets.json`.
+60 posts styled like **@mario_casari** tweets from `twitter-2026-05-15`.
+
+## Style
+
+| Element | Format |
+|---------|--------|
+| Tweet text | `🚀Spring Boot: …` + `✅` bullets + `#SpringBoot` hashtags |
+| Code | [CodePen](https://codepen.io/) Prefill pens (editable embeds) |
+| Diagrams | [diagrams.net](https://app.diagrams.net/) `.drawio` (architecture only, all tweets) |
+| Java tips | `💡 Java tip: …` |
 
 ## Files
 
-| Folder | Format | Use |
-|--------|--------|-----|
-| `drawio/` | `.drawio` | Open in [diagrams.net](https://app.diagrams.net/) — edit, export PNG/SVG/PDF |
-| `drawio/all-tweets.drawio` | Multi-tab | All 60 tweets in one file (one tab each) |
-| `svg/` | `.svg` | Ready-to-post vector images (browser, design tools) |
-| `index.html` | Preview | Open locally to browse and download all cards |
-
-## Open in diagrams.net
-
-1. Go to https://app.diagrams.net/
-2. **File → Open from → Device**
-3. Select any `drawio/tweet-XX.drawio` file
-4. **File → Export as → PNG** (or PDF) for raster download
+| Folder | Contents |
+|--------|----------|
+| `codepen/` | Standalone HTML page per tweet with a CodePen Prefill embed |
+| `png/` | Diagram PNG exports (one per tweet) |
+| `drawio/` | diagrams.net architecture diagrams |
+| `sources/` | `.java` snippets — copy into a CodePen pen to edit |
+| `index.html` | Preview tweet text + CodePen embeds |
 
 ## Regenerate
 
@@ -24,6 +27,4 @@
 python3 generate_assets.py
 ```
 
-## Edit tweets
-
-Edit `tweets.json`, then run the generator again.
+Diagram PNGs: `npx draw.io-export`. Code pens load via [CodePen Prefill embeds](https://blog.codepen.io/documentation/prefill-embeds/).

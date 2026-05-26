@@ -1,24 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="280" viewBox="0 0 560 280">
+<svg xmlns="http://www.w3.org/2000/svg" width="736" height="224" viewBox="0 0 736 224">
   <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
     <style>
-      .card { fill: #15202b; stroke: #38444d; stroke-width: 2; }
-      .header { fill: #1DA1F2; }
-      .title { fill: #ffffff; font: bold 14px sans-serif; }
-      .body { fill: #e7e9ea; font: 13px sans-serif; }
-      .code { fill: #89cff0; font: 11px monospace; }
-      .code-bg { fill: #192734; stroke: #38444d; stroke-width: 1; }
-      .footer { fill: #71767b; font: 10px sans-serif; }
+      .kw { fill:#c792ea; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .ann { fill:#ffb86c; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .str { fill:#c3e88d; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .typ { fill:#ffcb6b; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .met { fill:#82aaff; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .com { fill:#5c6370; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .num { fill:#f78c6c; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .pun { fill:#89ddff; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .txt { fill:#d6deeb; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
     </style>
   </defs>
-  <rect x="0" y="0" width="560" height="280" rx="12" class="card"/>
-  <rect x="0" y="0" width="560" height="44" rx="12" class="header"/>
-  <rect x="0" y="32" width="560" height="12" class="header"/>
-  <text x="20" y="28" class="title">Tweet #29 · codingstrain</text>
-    <text x="28" y="100" class="body">Redis cache TTL in one bean:</text>
-  <rect x="24" y="120" width="512" height="82" rx="6" class="code-bg"/>
-    <text x="36" y="138" class="code">return RedisCacheConfiguration.defaultCacheConfig()</text>
-    <text x="36" y="156" class="code">  .entryTtl(Duration.ofMinutes(5))</text>
-    <text x="36" y="174" class="code">  .disableCachingNullValues();</text>
-  <text x="20" y="264" class="footer">Module: springboot-redis-cache-demo  #SpringBoot #Redis</text>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  <g filter="url(#shadow)">
+    <rect x="48" y="48" width="640" height="128" rx="8" fill="#252836"/>
+    <rect x="48" y="48" width="640" height="32" rx="8" fill="#252836"/>
+    <rect x="48" y="74" width="640" height="6" fill="#252836"/>
+    <circle cx="66" cy="64" r="5.5" fill="#ff5f56"/>
+    <circle cx="84" cy="64" r="5.5" fill="#ffbd2e"/>
+    <circle cx="102" cy="64" r="5.5" fill="#27c93f"/>
+    <rect x="48" y="80" width="640" height="96" fill="#011627"/>
+    <rect x="48" y="168" width="640" height="8" rx="8" fill="#011627"/>
+  </g>
+  <text x="66.0" y="113" class="kw">return</text>
+  <text x="116.1" y="113" class="txt"> </text>
+  <text x="124.4" y="113" class="typ">RedisCacheConfiguration</text>
+  <text x="316.5" y="113" class="pun">.</text>
+  <text x="324.9" y="113" class="met">defaultCacheConfig</text>
+  <text x="475.1" y="113" class="pun">(</text>
+  <text x="483.5" y="113" class="pun">)</text>
+  <text x="66.0" y="133" class="txt">    </text>
+  <text x="99.4" y="133" class="pun">.</text>
+  <text x="107.8" y="133" class="met">entryTtl</text>
+  <text x="174.6" y="133" class="pun">(</text>
+  <text x="182.9" y="133" class="typ">Duration</text>
+  <text x="249.7" y="133" class="pun">.</text>
+  <text x="258.1" y="133" class="met">ofMinutes</text>
+  <text x="333.2" y="133" class="pun">(</text>
+  <text x="341.6" y="133" class="num">5</text>
+  <text x="349.9" y="133" class="pun">)</text>
+  <text x="358.3" y="133" class="pun">)</text>
+  <text x="66.0" y="153" class="txt">    </text>
+  <text x="99.4" y="153" class="pun">.</text>
+  <text x="107.8" y="153" class="met">disableCachingNullValues</text>
+  <text x="308.1" y="153" class="pun">(</text>
+  <text x="316.5" y="153" class="pun">)</text>
+  <text x="324.9" y="153" class="pun">;</text>
 </svg>

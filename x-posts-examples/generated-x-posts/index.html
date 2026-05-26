@@ -2,671 +2,3760 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
-  <title>codingstrain X Posts — Spring Boot &amp; Java</title>
+  <title>codingstrain X Posts — @mario_casari style</title>
   <style>
-    body { font-family: system-ui, sans-serif; max-width: 640px; margin: 2rem auto; padding: 0 1rem; background: #f5f8fa; }
-    article { background: #fff; border-radius: 12px; padding: 1rem; margin-bottom: 2rem; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
-    h2 { margin: 0 0 .5rem; font-size: 1rem; }
-    pre { font-size: 12px; color: #536471; white-space: pre-wrap; }
-    .links a { color: #1DA1F2; }
-    .banner { background: #1DA1F2; color: #fff; padding: 1rem; border-radius: 8px; margin-bottom: 2rem; }
+    body { font-family: system-ui, sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1rem; background: #f7f9f9; }
+    article { background: #fff; border-radius: 16px; padding: 1.25rem; margin-bottom: 2rem; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+    h2 { margin: 0 0 1rem; font-size: 0.9rem; color: #536471; }
+    .tweet-text { white-space: pre-wrap; font-size: 15px; line-height: 1.4; margin: 1rem 0; padding: 1rem; background: #f7f9f9; border-radius: 12px; border: 1px solid #eff3f4; }
+    .links a { color: #1d9bf0; }
+    .banner { background: #1d9bf0; color: #fff; padding: 1.25rem; border-radius: 12px; margin-bottom: 2rem; }
+    .banner p { margin: 0.5rem 0 0; opacity: 0.95; }
+    .drawio-box { background: #e8f4fc; border: 1px solid #1d9bf0; border-radius: 12px; padding: 1rem; margin-bottom: 1rem; }
+    .drawio-box ol { margin: 0.5rem 0 0; padding-left: 1.25rem; }
+    .drawio-box li { margin: 0.35rem 0; }
+    .asset-label { font-size: 0.85rem; color: #536471; margin: 0.75rem 0 0.35rem; }
+    .asset-img { display: block; max-width: 100%; border-radius: 8px; margin-bottom: 0.5rem; border: 1px solid #eff3f4; }
+    .codepen-wrap { margin: 0.5rem 0 1rem; border-radius: 8px; overflow: hidden; border: 1px solid #eff3f4; }
+    .codepen-links { font-size: 0.8rem; margin: 0.35rem 0 0; padding: 0 0.5rem 0.5rem; }
+    .codepen-links a { color: #1d9bf0; }
   </style>
 </head>
 <body>
   <div class="banner">
     <h1>Spring Boot &amp; Java X Posts</h1>
-    <p>60 tweet cards · Open <code>.drawio</code> files in <a href="https://app.diagrams.net/">diagrams.net</a> to edit or export PNG/PDF.</p>
+    <p>Every tweet: <a href="https://app.diagrams.net/">diagrams.net</a> architecture diagram + <a href="https://codepen.io/">CodePen</a> code pen.</p>
   </div>
     <article>
-      <h2><a href="drawio/tweet-01.drawio">Tweet #1</a></h2>
-      <img src="svg/tweet-01.svg" alt="Tweet 1" width="560"/>
+      <h2>Tweet #1</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-01-diagram.png" alt="Diagram 1" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 1 — spring-boot-minimal-rest-h2", "description": "Spring Boot / Java snippet from codingstrain (spring-boot-minimal-rest-h2)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="380"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;spring-boot-minimal-rest-h2&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;@RestController
+@RequestMapping(&amp;quot;/library&amp;quot;)
+public class BookController {
+
+    @GetMapping(&amp;quot;/book&amp;quot;)
+    public List&amp;lt;Book&amp;gt; findAll() {
+        return bookService.findAll();
+    }
+
+    @PostMapping(&amp;quot;/book&amp;quot;)
+    public Book add(@RequestBody Book book) {
+        return bookService.save(book);
+    }
+}&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-01.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: Your first REST API in 30 seconds with H2.
+#SpringBoot #Java</div>
       <p class="links">
-        <a href="drawio/tweet-01.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-01.svg" download>Download .svg</a>
+        <a href="drawio/tweet-01.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-01.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-01.java" download>Source .java</a>
       </p>
-      <pre>Your first Spring Boot REST API in 30 seconds:
-
-@RestController + @RequestMapping(&quot;/library&quot;)
-@GetMapping(&quot;/book&quot;) → List&lt;Book&gt; findAll()
-
-CRUD with H2 — no XML.</pre>
     </article>
     <article>
-      <h2><a href="drawio/tweet-02.drawio">Tweet #2</a></h2>
-      <img src="svg/tweet-02.svg" alt="Tweet 2" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-02.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-02.svg" download>Download .svg</a>
-      </p>
-      <pre>Constructor injection beats field injection:
+      <h2>Tweet #2</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-02-diagram.png" alt="Diagram 2" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 2 — spring-boot-paged-rest-example", "description": "Spring Boot / Java snippet from codingstrain (spring-boot-paged-rest-example)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;spring-boot-paged-rest-example&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;@RestController
+public class UserController {
 
-public UserController(UserRepository repository) {
-  this.repository = repository;
+    private final UserRepository repository;
+
+    public UserController(UserRepository repository) {
+        this.repository = repository;
+    }
+}&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-02.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: Constructor injection beats field injection.
+#SpringBoot #SoftwareEngineering</div>
+      <p class="links">
+        <a href="drawio/tweet-02.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-02.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-02.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #3</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-03-diagram.png" alt="Diagram 3" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 3 — spring-boot-paged-rest-example", "description": "Spring Boot / Java snippet from codingstrain (spring-boot-paged-rest-example)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="320"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;spring-boot-paged-rest-example&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;@GetMapping
+public PagedResponse&amp;lt;User&amp;gt; getUsers(Pageable pageable) {
+    Page&amp;lt;User&amp;gt; page = repository.findAll(pageable);
+    return new PagedResponse&amp;lt;&amp;gt;(
+        page.getContent(),
+        page.getNumber(),
+        page.getSize(),
+        page.getTotalElements(),
+        page.getTotalPages()
+    );
+}&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-03.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: Pagination without boilerplate — use Pageable.
+#SpringBoot #JavaDev</div>
+      <p class="links">
+        <a href="drawio/tweet-03.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-03.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-03.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #4</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-04-diagram.png" alt="Diagram 4" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 4 — spring-boot-minimal-rest-h2", "description": "Spring Boot / Java snippet from codingstrain (spring-boot-minimal-rest-h2)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;spring-boot-minimal-rest-h2&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;@GetMapping(&amp;quot;/book/{id}&amp;quot;)
+public Book findById(@PathVariable(&amp;quot;id&amp;quot;) String id) {
+    return bookService.findById(id);
 }
 
-Spring recommends it. Your tests will thank you.</pre>
+@GetMapping(&amp;quot;/book/search&amp;quot;)
+public List&amp;lt;Book&amp;gt; search(@RequestParam String title) {
+    return bookService.findByTitle(title);
+}&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-04.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: @PathVariable vs @RequestParam — know the difference.
+#SpringBoot #Java</div>
+      <p class="links">
+        <a href="drawio/tweet-04.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-04.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-04.java" download>Source .java</a>
+      </p>
     </article>
     <article>
-      <h2><a href="drawio/tweet-03.drawio">Tweet #3</a></h2>
-      <img src="svg/tweet-03.svg" alt="Tweet 3" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-03.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-03.svg" download>Download .svg</a>
-      </p>
-      <pre>Pagination without boilerplate:
+      <h2>Tweet #5</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-05-diagram.png" alt="Diagram 5" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 5 — springboot-error-handling-demo", "description": "Spring Boot / Java snippet from codingstrain (springboot-error-handling-demo)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="380"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;springboot-error-handling-demo&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;@RestControllerAdvice
+public class GlobalExceptionHandler {
 
-@GetMapping + Pageable → Page&lt;User&gt;
+    @ExceptionHandler(ResourceNotFoundException.class)
+    public ResponseEntity&amp;lt;ErrorResponse&amp;gt; handleNotFound(ResourceNotFoundException ex) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND)
+            .body(new ErrorResponse(&amp;quot;NOT_FOUND&amp;quot;, ex.getMessage()));
+    }
+}
 
-?page=0&amp;size=20&amp;sort=name,asc — done.</pre>
+@GetMapping(&amp;quot;/users/{id}&amp;quot;)
+public User getUser(@PathVariable Long id) {
+    return userService.findById(id);
+}&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-05.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: With @RestControllerAdvice you can handle specific types of exceptions globally instead of using try/catch everywhere.
+#SpringBoot #SoftwareEngineering</div>
+      <p class="links">
+        <a href="drawio/tweet-05.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-05.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-05.java" download>Source .java</a>
+      </p>
     </article>
     <article>
-      <h2><a href="drawio/tweet-04.drawio">Tweet #4</a></h2>
-      <img src="svg/tweet-04.svg" alt="Tweet 4" width="560"/>
+      <h2>Tweet #6</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-06-diagram.png" alt="Diagram 6" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 6 — springboot-error-handling-demo", "description": "Spring Boot / Java snippet from codingstrain (springboot-error-handling-demo)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;springboot-error-handling-demo&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;public class ErrorResponse {
+    private Instant timestamp;
+    private int status;
+    private String error;
+    private String message;
+    private String path;
+}&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-06.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: Stop returning stack traces to clients — return a stable JSON structure.
+#SpringBoot #SoftwareEngineering</div>
       <p class="links">
-        <a href="drawio/tweet-04.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-04.svg" download>Download .svg</a>
+        <a href="drawio/tweet-06.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-06.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-06.java" download>Source .java</a>
       </p>
-      <pre>@PathVariable vs @RequestParam:
+    </article>
+    <article>
+      <h2>Tweet #7</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-07-diagram.png" alt="Diagram 7" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 7 — springboot-error-handling-demo", "description": "Spring Boot / Java snippet from codingstrain (springboot-error-handling-demo)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="520"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;springboot-error-handling-demo&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;@RestControllerAdvice
+public class GlobalExceptionHandler {
 
-• /book/{id} → path variable
-• /book?title=foo → query param
+    @ExceptionHandler(ResourceNotFoundException.class)
+    public ResponseEntity&amp;lt;ErrorResponse&amp;gt; handleNotFound(ResourceNotFoundException ex) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND)
+            .body(new ErrorResponse(&amp;quot;NOT_FOUND&amp;quot;, ex.getMessage()));
+    }
 
-Mixing them up is a classic mistake. Get it right once.</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-05.drawio">Tweet #5</a></h2>
-      <img src="svg/tweet-05.svg" alt="Tweet 5" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-05.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-05.svg" download>Download .svg</a>
-      </p>
-      <pre>Raw exceptions in controllers are fine for demos.
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity&amp;lt;ErrorResponse&amp;gt; handleBadRequest(IllegalArgumentException ex) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+            .body(new ErrorResponse(&amp;quot;BAD_REQUEST&amp;quot;, ex.getMessage()));
+    }
+}
 
-Production? Map them with @ControllerAdvice + stable JSON.</pre>
+// Controllers stay clean — no try/catch everywhere
+@GetMapping(&amp;quot;/users/{id}&amp;quot;)
+public User getUser(@PathVariable Long id) {
+    return userService.findById(id);
+}&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-07.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: Always map exceptions to HTTP status + a safe JSON body.
+#SpringBoot #JavaDev</div>
+      <p class="links">
+        <a href="drawio/tweet-07.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-07.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-07.java" download>Source .java</a>
+      </p>
     </article>
     <article>
-      <h2><a href="drawio/tweet-06.drawio">Tweet #6</a></h2>
-      <img src="svg/tweet-06.svg" alt="Tweet 6" width="560"/>
+      <h2>Tweet #8</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-08-diagram.png" alt="Diagram 8" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 8 — springboot-error-handling-demo", "description": "Spring Boot / Java snippet from codingstrain (springboot-error-handling-demo)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;springboot-error-handling-demo&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;// ✅ timestamp
+// ✅ status
+// ✅ error (short code)
+// ✅ message (user-safe)
+// ✅ path
+// Never leak SQL or internal hostnames&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-08.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: Production error JSON checklist.
+#SpringBoot</div>
       <p class="links">
-        <a href="drawio/tweet-06.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-06.svg" download>Download .svg</a>
+        <a href="drawio/tweet-08.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-08.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-08.java" download>Source .java</a>
       </p>
-      <pre>Stop returning stack traces to clients.
+    </article>
+    <article>
+      <h2>Tweet #9</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-09-diagram.png" alt="Diagram 9" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 9 — spring-boot-validated-config", "description": "Spring Boot / Java snippet from codingstrain (spring-boot-validated-config)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;spring-boot-validated-config&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;@Validated
+@ConfigurationProperties(prefix = &amp;quot;app&amp;quot;)
+public class AppProperties {
 
-Return structure: timestamp, status, error, message, path.
+    @NotBlank
+    private String name;
 
-Pair with @ExceptionHandler + @ControllerAdvice.</pre>
+    @Min(1) @Max(60)
+    private Integer timeout;
+}&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-09.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: Fail fast at startup with @Validated + @ConfigurationProperties.
+#SpringBoot #SoftwareEngineering</div>
+      <p class="links">
+        <a href="drawio/tweet-09.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-09.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-09.java" download>Source .java</a>
+      </p>
     </article>
     <article>
-      <h2><a href="drawio/tweet-07.drawio">Tweet #7</a></h2>
-      <img src="svg/tweet-07.svg" alt="Tweet 7" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-07.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-07.svg" download>Download .svg</a>
-      </p>
-      <pre>RuntimeException(&quot;Database connection failed!&quot;) in a controller teaches one thing:
+      <h2>Tweet #10</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-10-diagram.png" alt="Diagram 10" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 10 — spring-boot-validated-config", "description": "Spring Boot / Java snippet from codingstrain (spring-boot-validated-config)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;spring-boot-validated-config&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;@Valid
+private Security security;
 
-Always map exceptions to HTTP status + safe JSON body.</pre>
+public static class Security {
+    @NotBlank private String username;
+    @NotBlank private String password;
+}&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-10.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: Use @Valid on nested configuration objects.
+#SpringBoot</div>
+      <p class="links">
+        <a href="drawio/tweet-10.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-10.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-10.java" download>Source .java</a>
+      </p>
     </article>
     <article>
-      <h2><a href="drawio/tweet-08.drawio">Tweet #8</a></h2>
-      <img src="svg/tweet-08.svg" alt="Tweet 8" width="560"/>
+      <h2>Tweet #11</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-11-diagram.png" alt="Diagram 11" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 11 — spring-boot-validated-config", "description": "Spring Boot / Java snippet from codingstrain (spring-boot-validated-config)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;spring-boot-validated-config&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;@NotEmpty
+private List&amp;lt;@NotBlank String&amp;gt; servers;&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-11.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: Validate lists in application.yml with Bean Validation.
+#SpringBoot #JavaDev</div>
       <p class="links">
-        <a href="drawio/tweet-08.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-08.svg" download>Download .svg</a>
+        <a href="drawio/tweet-11.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-11.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-11.java" download>Source .java</a>
       </p>
-      <pre>Production error JSON checklist:
-✅ timestamp
-✅ status
-✅ error (short code)
-✅ message (user-safe)
-✅ path
+    </article>
+    <article>
+      <h2>Tweet #12</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-12-diagram.png" alt="Diagram 12" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 12 — spring-boot-validated-config", "description": "Spring Boot / Java snippet from codingstrain (spring-boot-validated-config)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;spring-boot-validated-config&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;// Bad YAML fails at startup — better than discovering misconfig in prod.&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-12.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: Bad YAML fails at startup — better than discovering misconfig in prod.
+#SpringBoot</div>
+      <p class="links">
+        <a href="drawio/tweet-12.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-12.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-12.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #13</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-13-diagram.png" alt="Diagram 13" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 13 — sql-annotation-demo", "description": "Spring Boot / Java snippet from codingstrain (sql-annotation-demo)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;sql-annotation-demo&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;public interface UserRepository extends JpaRepository&amp;lt;User, Long&amp;gt; {
+}&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-13.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: JpaRepository is your entire DAO for CRUD.
+#SpringBoot #Java</div>
+      <p class="links">
+        <a href="drawio/tweet-13.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-13.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-13.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #14</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-14-diagram.png" alt="Diagram 14" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 14 — sql-annotation-demo", "description": "Spring Boot / Java snippet from codingstrain (sql-annotation-demo)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="340"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;sql-annotation-demo&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;@SpringBootTest
+@Sql(&amp;quot;/test-data.sql&amp;quot;)
+class UserRepositoryTest {
 
-Never leak SQL or internal hostnames.</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-09.drawio">Tweet #9</a></h2>
-      <img src="svg/tweet-09.svg" alt="Tweet 9" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-09.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-09.svg" download>Download .svg</a>
-      </p>
-      <pre>Fail fast at startup with validated config:
+    @Autowired UserRepository repo;
 
-@Validated + @ConfigurationProperties
+    @Test
+    void testUserLoadedFromSql() {
+        var user = repo.findById(1L).orElseThrow();
+        assertEquals(&amp;quot;Alice&amp;quot;, user.getName());
+    }
+}&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-14.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: @Sql or @SqlGroup allows you to preload test data for reproducible tests.
+#SpringBoot #IntegrationTesting</div>
+      <p class="links">
+        <a href="drawio/tweet-14.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-14.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-14.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #15</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-15-diagram.png" alt="Diagram 15" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 15 — spring-streaming-demo", "description": "Spring Boot / Java snippet from codingstrain (spring-streaming-demo)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;spring-streaming-demo&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;@Query(&amp;quot;SELECT u FROM User u&amp;quot;)
+Stream&amp;lt;User&amp;gt; streamAllUsers();&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-15.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: Processing 1M rows with findAll() will OOM you — use a Stream.
+#SpringBoot #JPA</div>
+      <p class="links">
+        <a href="drawio/tweet-15.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-15.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-15.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #16</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-16-diagram.png" alt="Diagram 16" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 16 — spring-streaming-demo", "description": "Spring Boot / Java snippet from codingstrain (spring-streaming-demo)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;spring-streaming-demo&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;try (Stream&amp;lt;User&amp;gt; stream = repository.streamAllUsers()) {
+    stream.forEach(user -&amp;gt; {
+        process(user);
+        if (counter.incrementAndGet() % 100 == 0) {
+            em.clear();
+        }
+    });
+}&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-16.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: Call EntityManager.clear() every N rows when streaming.
+#SpringBoot #SoftwareEngineering</div>
+      <p class="links">
+        <a href="drawio/tweet-16.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-16.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-16.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #17</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-17-diagram.png" alt="Diagram 17" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 17 — spring-streaming-demo", "description": "Spring Boot / Java snippet from codingstrain (spring-streaming-demo)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;spring-streaming-demo&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;try (Stream&amp;lt;User&amp;gt; stream = repository.streamAllUsers()) {
+    stream.forEach(this::process);
+}&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-17.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: Always wrap JPA streams in try-with-resources.
+#SpringBoot #JPA</div>
+      <p class="links">
+        <a href="drawio/tweet-17.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-17.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-17.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #18</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-18-diagram.png" alt="Diagram 18" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 18 — spring-streaming-demo", "description": "Spring Boot / Java snippet from codingstrain (spring-streaming-demo)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;spring-streaming-demo&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;// Use @Transactional(readOnly = true) on read-only batch jobs.&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-18.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: Use @Transactional(readOnly = true) on read-only batch jobs.
+#SpringBoot #JavaDev</div>
+      <p class="links">
+        <a href="drawio/tweet-18.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-18.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-18.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #19</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-19-diagram.png" alt="Diagram 19" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 19 — spring-kafka-demo", "description": "Spring Boot / Java snippet from codingstrain (spring-kafka-demo)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;spring-kafka-demo&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;@Service
+public class MessageProducer {
 
-Bad YAML? App won&#x27;t start. That&#x27;s a feature.</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-10.drawio">Tweet #10</a></h2>
-      <img src="svg/tweet-10.svg" alt="Tweet 10" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-10.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-10.svg" download>Download .svg</a>
-      </p>
-      <pre>Nested config + validation:
+    private final KafkaTemplate&amp;lt;String, String&amp;gt; kafkaTemplate;
 
-@Valid on nested objects is easy to forget.</pre>
+    public void send(String message) {
+        kafkaTemplate.send(&amp;quot;demo-topic&amp;quot;, message);
+    }
+}&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-19.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot integrates easily with Kafka for event-driven architectures.
+#SpringBoot #JavaDev</div>
+      <p class="links">
+        <a href="drawio/tweet-19.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-19.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-19.java" download>Source .java</a>
+      </p>
     </article>
     <article>
-      <h2><a href="drawio/tweet-11.drawio">Tweet #11</a></h2>
-      <img src="svg/tweet-11.svg" alt="Tweet 11" width="560"/>
+      <h2>Tweet #20</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-20-diagram.png" alt="Diagram 20" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 20 — spring-kafka-demo", "description": "Spring Boot / Java snippet from codingstrain (spring-kafka-demo)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;spring-kafka-demo&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;@KafkaListener(topics = &amp;quot;demo-topic&amp;quot;, groupId = &amp;quot;demo-group&amp;quot;)
+public void listen(String message) {
+    System.out.println(&amp;quot;Received: &amp;quot; + message);
+}&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-20.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: Kafka consumers are simple with @KafkaListener.
+#SpringBoot #Kafka</div>
       <p class="links">
-        <a href="drawio/tweet-11.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-11.svg" download>Download .svg</a>
+        <a href="drawio/tweet-20.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-20.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-20.java" download>Source .java</a>
       </p>
-      <pre>Validate lists in application.yml:
+    </article>
+    <article>
+      <h2>Tweet #21</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-21-diagram.png" alt="Diagram 21" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 21 — spring-kafka-demo", "description": "Spring Boot / Java snippet from codingstrain (spring-kafka-demo)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;spring-kafka-demo&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;spring:
+  kafka:
+    consumer:
+      auto-offset-reset: earliest&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-21.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: Know when to use auto-offset-reset: earliest vs latest.
+#SpringBoot #Kafka</div>
+      <p class="links">
+        <a href="drawio/tweet-21.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-21.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-21.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #22</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-22-diagram.png" alt="Diagram 22" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 22 — spring-transactional-event-demo", "description": "Spring Boot / Java snippet from codingstrain (spring-transactional-event-demo)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;spring-transactional-event-demo&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;@Transactional
+public Order createOrder(String product) {
+    Order order = repository.save(new Order(product));
+    publisher.publishEvent(new OrderCreatedEvent(order.getId()));
+    return order;
+}&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-22.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: Decouple services: save to DB, then publish an application event.
+#SpringBoot #Microservices</div>
+      <p class="links">
+        <a href="drawio/tweet-22.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-22.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-22.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #23</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-23-diagram.png" alt="Diagram 23" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 23 — spring-transactional-event-demo", "description": "Spring Boot / Java snippet from codingstrain (spring-transactional-event-demo)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;spring-transactional-event-demo&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;@TransactionalEventListener(phase = TransactionPhase.AFTER_COMMIT)
+public void handleOrderCreated(OrderCreatedEvent event) {
+    // send confirmation email
+}&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-23.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: Don&#x27;t send the email before commit — use AFTER_COMMIT.
+#SpringBoot #SoftwareEngineering</div>
+      <p class="links">
+        <a href="drawio/tweet-23.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-23.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-23.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #24</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-24-diagram.png" alt="Diagram 24" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 24 — async-demo", "description": "Spring Boot / Java snippet from codingstrain (async-demo)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;async-demo&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;@EnableAsync
+@SpringBootApplication
+public class DemoApplication { }
 
-@NotEmpty
-private List&lt;@NotBlank String&gt; servers;
+@Async(&amp;quot;taskExecutor&amp;quot;)
+public void runTask() { }&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-24.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: Use @Async only for small offloading tasks, and with a provided executor.
+#SpringBoot #SoftwareDevelopment</div>
+      <p class="links">
+        <a href="drawio/tweet-24.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-24.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-24.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #25</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-25-diagram.png" alt="Diagram 25" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 25 — async-demo", "description": "Spring Boot / Java snippet from codingstrain (async-demo)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;async-demo&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;executor.setCorePoolSize(2);
+executor.setMaxPoolSize(5);
+executor.setQueueCapacity(10);
+executor.setThreadNamePrefix(&amp;quot;Async-&amp;quot;);&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-25.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: Don&#x27;t use the default executor in production.
+#SpringBoot</div>
+      <p class="links">
+        <a href="drawio/tweet-25.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-25.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-25.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #26</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-26-diagram.png" alt="Diagram 26" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 26 — async-demo", "description": "Spring Boot / Java snippet from codingstrain (async-demo)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;async-demo&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;// Fire async tasks at startup with CommandLineRunner.&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-26.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: Fire async tasks at startup with CommandLineRunner.
+#SpringBoot #JavaDev</div>
+      <p class="links">
+        <a href="drawio/tweet-26.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-26.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-26.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #27</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-27-diagram.png" alt="Diagram 27" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 27 — async-demo", "description": "Spring Boot / Java snippet from codingstrain (async-demo)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;async-demo&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;// @Async methods must be called from another Spring bean — not the same class.&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-27.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: @Async methods must be called from another Spring bean — not the same class.
+#SpringBoot</div>
+      <p class="links">
+        <a href="drawio/tweet-27.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-27.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-27.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #28</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-28-diagram.png" alt="Diagram 28" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 28 — springboot-redis-cache-demo", "description": "Spring Boot / Java snippet from codingstrain (springboot-redis-cache-demo)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;springboot-redis-cache-demo&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;@Cacheable(value = &amp;quot;weather&amp;quot;, key = &amp;quot;#city&amp;quot;)
+public String getWeather(String city) {
+    return fetchFromSlowApi(city);
+}&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-28.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: Boost performance with @EnableCaching and @Cacheable.
+#SpringBoot #SoftwareEngineering</div>
+      <p class="links">
+        <a href="drawio/tweet-28.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-28.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-28.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #29</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-29-diagram.png" alt="Diagram 29" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 29 — springboot-redis-cache-demo", "description": "Spring Boot / Java snippet from codingstrain (springboot-redis-cache-demo)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;springboot-redis-cache-demo&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;return RedisCacheConfiguration.defaultCacheConfig()
+    .entryTtl(Duration.ofMinutes(5))
+    .disableCachingNullValues();&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-29.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: Configure Redis cache TTL in one bean.
+#SpringBoot #Redis</div>
+      <p class="links">
+        <a href="drawio/tweet-29.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-29.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-29.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #30</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-30-diagram.png" alt="Diagram 30" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 30 — springboot-redis-cache-demo", "description": "Spring Boot / Java snippet from codingstrain (springboot-redis-cache-demo)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;springboot-redis-cache-demo&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;// Plug in Redis (or another provider) without changing business logic.&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-30.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: Plug in Redis (or another provider) without changing business logic.
+#SpringBoot</div>
+      <p class="links">
+        <a href="drawio/tweet-30.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-30.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-30.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #31</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-31-diagram.png" alt="Diagram 31" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 31 — cors-demo", "description": "Spring Boot / Java snippet from codingstrain (cors-demo)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;cors-demo&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;registry.addMapping(&amp;quot;/**&amp;quot;)
+    .allowedOrigins(&amp;quot;http://localhost:3000&amp;quot;)
+    .allowedMethods(&amp;quot;GET&amp;quot;, &amp;quot;POST&amp;quot;, &amp;quot;PUT&amp;quot;, &amp;quot;DELETE&amp;quot;, &amp;quot;OPTIONS&amp;quot;)
+    .allowCredentials(true);&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-31.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: Configure global CORS once — no @CrossOrigin on every controller.
+#SpringBoot #Web</div>
+      <p class="links">
+        <a href="drawio/tweet-31.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-31.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-31.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #32</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-32-diagram.png" alt="Diagram 32" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 32 — cors-demo", "description": "Spring Boot / Java snippet from codingstrain (cors-demo)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;cors-demo&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;// CORS isn&amp;#x27;t a bug — it&amp;#x27;s the browser. Configure it once globally.&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-32.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: CORS isn&#x27;t a bug — it&#x27;s the browser. Configure it once globally.
+#SpringBoot</div>
+      <p class="links">
+        <a href="drawio/tweet-32.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-32.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-32.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #33</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-33-diagram.png" alt="Diagram 33" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 33 — spring-request-logging-demo", "description": "Spring Boot / Java snippet from codingstrain (spring-request-logging-demo)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;spring-request-logging-demo&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;filter.setIncludeQueryString(true);
+filter.setIncludePayload(true);
+filter.setMaxPayloadLength(10000);&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-33.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: Debug HTTP issues with CommonsRequestLoggingFilter.
+#SpringBoot #JavaDev</div>
+      <p class="links">
+        <a href="drawio/tweet-33.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-33.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-33.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #34</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-34-diagram.png" alt="Diagram 34" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 34 — spring-batch-csv-sample", "description": "Spring Boot / Java snippet from codingstrain (spring-batch-csv-sample)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;spring-batch-csv-sample&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;return new StepBuilder(&amp;quot;step&amp;quot;, jobRepository)
+    .&amp;lt;Person, Person&amp;gt;chunk(5, transactionManager)
+    .reader(reader())
+    .processor(processor())
+    .writer(writer())
+    .build();&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-34.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: Spring Batch: read CSV, process, write in chunks.
+#SpringBoot #SpringBatch</div>
+      <p class="links">
+        <a href="drawio/tweet-34.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-34.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-34.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #35</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-35-diagram.png" alt="Diagram 35" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 35 — spring-batch-csv-sample", "description": "Spring Boot / Java snippet from codingstrain (spring-batch-csv-sample)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;spring-batch-csv-sample&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;// FlatFileItemReaderBuilder + linesToSkip(1) skips the CSV header.&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-35.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: FlatFileItemReaderBuilder + linesToSkip(1) skips the CSV header.
+#SpringBoot</div>
+      <p class="links">
+        <a href="drawio/tweet-35.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-35.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-35.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #36</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-36-diagram.png" alt="Diagram 36" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 36 — spring-batch-csv-sample", "description": "Spring Boot / Java snippet from codingstrain (spring-batch-csv-sample)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;spring-batch-csv-sample&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;return person -&amp;gt; {
+    person.setName(person.getName().toUpperCase());
+    return person;
+};&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-36.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: ItemProcessor transforms each row before writing.
+#SpringBoot</div>
+      <p class="links">
+        <a href="drawio/tweet-36.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-36.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-36.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #37</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-37-diagram.png" alt="Diagram 37" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 37 — spring-csv-sample", "description": "Spring Boot / Java snippet from codingstrain (spring-csv-sample)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;spring-csv-sample&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;try (Reader reader = Files.newBufferedReader(path);
+     CSVParser parser = new CSVParser(reader, CSVFormat.DEFAULT.withHeader())) {
+    for (CSVRecord record : parser) {
+        String name = record.get(&amp;quot;name&amp;quot;);
+    }
+}&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-37.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: Parse CSV with Apache Commons CSV and try-with-resources.
+#Java #SpringBoot</div>
+      <p class="links">
+        <a href="drawio/tweet-37.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-37.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-37.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #38</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-38-diagram.png" alt="Diagram 38" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 38 — spring-mock-reset-example", "description": "Spring Boot / Java snippet from codingstrain (spring-mock-reset-example)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;spring-mock-reset-example&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;@MockBean
+private MyService myService;
 
-Empty server list → startup failure.</pre>
+@Test @Order(1) void testA() {
+    when(myService.getData()).thenReturn(&amp;quot;A&amp;quot;);
+}&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-38.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: @MockBean stubs can leak between tests unless you reset them.
+#SpringBoot #Testing</div>
+      <p class="links">
+        <a href="drawio/tweet-38.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-38.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-38.java" download>Source .java</a>
+      </p>
     </article>
     <article>
-      <h2><a href="drawio/tweet-12.drawio">Tweet #12</a></h2>
-      <img src="svg/tweet-12.svg" alt="Tweet 12" width="560"/>
+      <h2>Tweet #39</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-39-diagram.png" alt="Diagram 39" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 39 — spring-mock-reset-example", "description": "Spring Boot / Java snippet from codingstrain (spring-mock-reset-example)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;spring-mock-reset-example&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;// @SpringBootTest loads the full context — use when you need integration truth.&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-39.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: @SpringBootTest loads the full context — use when you need integration truth.
+#SpringBoot #Testing</div>
       <p class="links">
-        <a href="drawio/tweet-12.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-12.svg" download>Download .svg</a>
+        <a href="drawio/tweet-39.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-39.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-39.java" download>Source .java</a>
       </p>
-      <pre>timeout: 0 in YAML with @Min(1) → Bean Validation stops the app.
+    </article>
+    <article>
+      <h2>Tweet #40</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-40-diagram.png" alt="Diagram 40" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 40 — sql-annotation-demo", "description": "Spring Boot / Java snippet from codingstrain (sql-annotation-demo)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;sql-annotation-demo&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;// @Sql on tests = reproducible DB state every run.&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-40.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: @Sql on tests = reproducible DB state every run.
+#SpringBoot #IntegrationTesting</div>
+      <p class="links">
+        <a href="drawio/tweet-40.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-40.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-40.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #41</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-41-diagram.png" alt="Diagram 41" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 41 — java-examples/BuilderDemo", "description": "Spring Boot / Java snippet from codingstrain (java-examples/BuilderDemo)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;java-examples/BuilderDemo&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;User user = new User.Builder(&amp;quot;Mary&amp;quot;, 30)
+    .email(&amp;quot;mary@example.com&amp;quot;)
+    .address(&amp;quot;Italy&amp;quot;)
+    .build();&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-41.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">💡 Java tip: Use the Builder pattern for objects with many optional fields.
+#JavaDev #CleanCode</div>
+      <p class="links">
+        <a href="drawio/tweet-41.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-41.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-41.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #42</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-42-diagram.png" alt="Diagram 42" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 42 — java-miscellaneous-tips", "description": "Spring Boot / Java snippet from codingstrain (java-miscellaneous-tips)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;java-miscellaneous-tips&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;LinkedHashMap&amp;lt;Integer, String&amp;gt; map = new LinkedHashMap&amp;lt;&amp;gt;();
+map.put(1, &amp;quot;First&amp;quot;);
+map.put(2, &amp;quot;Second&amp;quot;);&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-42.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">💡 Java tip: LinkedHashMap preserves insertion order.
+#Java #SoftwareDevelopment</div>
+      <p class="links">
+        <a href="drawio/tweet-42.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-42.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-42.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #43</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-43-diagram.png" alt="Diagram 43" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 43 — java-miscellaneous-tips", "description": "Spring Boot / Java snippet from codingstrain (java-miscellaneous-tips)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;java-miscellaneous-tips&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;NumberFormat format = NumberFormat.getInstance(Locale.ITALY);
+Number number = format.parse(&amp;quot;123.111,234&amp;quot;);&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-43.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">💡 Java tip: Parsing numbers with commas requires locale awareness.
+#Java #JavaDev</div>
+      <p class="links">
+        <a href="drawio/tweet-43.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-43.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-43.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #44</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-44-diagram.png" alt="Diagram 44" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 44 — java-miscellaneous-tips", "description": "Spring Boot / Java snippet from codingstrain (java-miscellaneous-tips)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;java-miscellaneous-tips&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;DecimalFormatSymbols symbols = new DecimalFormatSymbols(Locale.ITALY);
+DecimalFormat df = new DecimalFormat(&amp;quot;#,###.##&amp;quot;, symbols);&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-44.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">💡 Java tip: Don&#x27;t assume . is always the decimal separator.
+#Java</div>
+      <p class="links">
+        <a href="drawio/tweet-44.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-44.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-44.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #45</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-45-diagram.png" alt="Diagram 45" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 45 — java-miscellaneous-tips", "description": "Spring Boot / Java snippet from codingstrain (java-miscellaneous-tips)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;java-miscellaneous-tips&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;Main deepClone = (Main) super.clone();
+deepClone.setDependency((Dependency) this.dependency.clone());&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-45.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">💡 Java tip: Know the difference between shallow and deep clone.
+#Java #SoftwareEngineering</div>
+      <p class="links">
+        <a href="drawio/tweet-45.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-45.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-45.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #46</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-46-diagram.png" alt="Diagram 46" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 46 — java-miscellaneous-tips", "description": "Spring Boot / Java snippet from codingstrain (java-miscellaneous-tips)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;java-miscellaneous-tips&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;// Prefer copy constructors or records over Cloneable for new code.&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-46.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">💡 Java tip: Prefer copy constructors or records over Cloneable for new code.
+#JavaDev</div>
+      <p class="links">
+        <a href="drawio/tweet-46.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-46.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-46.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #47</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-47-diagram.png" alt="Diagram 47" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 47 — java-examples/BuilderDemo", "description": "Spring Boot / Java snippet from codingstrain (java-examples/BuilderDemo)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;java-examples/BuilderDemo&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;private final String name;
+private final int age;&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-47.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">💡 Java tip: Immutable fields in the Builder reduce bugs in DTOs.
+#Java #CleanCode</div>
+      <p class="links">
+        <a href="drawio/tweet-47.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-47.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-47.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #48</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-48-diagram.png" alt="Diagram 48" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 48 — codingstrain", "description": "Spring Boot / Java snippet from codingstrain (codingstrain)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;codingstrain&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;// Run any codingstrain module with mvn spring-boot:run.&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-48.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: Run any codingstrain module with mvn spring-boot:run.
+#SpringBoot #Java</div>
+      <p class="links">
+        <a href="drawio/tweet-48.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-48.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-48.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #49</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-49-diagram.png" alt="Diagram 49" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 49 — spring-boot-minimal-rest-h2", "description": "Spring Boot / Java snippet from codingstrain (spring-boot-minimal-rest-h2)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;spring-boot-minimal-rest-h2&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;// H2 in-memory DB for REST tutorials — zero Docker, full CRUD.&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-49.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: H2 in-memory DB for REST tutorials — zero Docker, full CRUD.
+#SpringBoot</div>
+      <p class="links">
+        <a href="drawio/tweet-49.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-49.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-49.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #50</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-50-diagram.png" alt="Diagram 50" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 50 — spring-boot-minimal-rest-h2-actuator", "description": "Spring Boot / Java snippet from codingstrain (spring-boot-minimal-rest-h2-actuator)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;spring-boot-minimal-rest-h2-actuator&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;// Check /actuator/health before you deploy.&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-50.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: Check /actuator/health before you deploy.
+#SpringBoot #JavaDev</div>
+      <p class="links">
+        <a href="drawio/tweet-50.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-50.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-50.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #51</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-51-diagram.png" alt="Diagram 51" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 51 — spring-cloud-config-native-server", "description": "Spring Boot / Java snippet from codingstrain (spring-cloud-config-native-server)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;spring-cloud-config-native-server&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;// Centralize config with Spring Cloud Config before you copy application.properties everywhere.&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-51.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: Centralize config with Spring Cloud Config before you copy application.properties everywhere.
+#SpringCloud #Microservices</div>
+      <p class="links">
+        <a href="drawio/tweet-51.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-51.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-51.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #52</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-52-diagram.png" alt="Diagram 52" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 52 — spring-cloud-discovery", "description": "Spring Boot / Java snippet from codingstrain (spring-cloud-discovery)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="480"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;spring-cloud-discovery&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;// ── 1) Eureka Server (registry) ──────────────────────
+@SpringBootApplication
+@EnableEurekaServer
+public class DiscoveryServerApp {
+    public static void main(String[] args) {
+        SpringApplication.run(DiscoveryServerApp.class, args);
+    }
+}
 
-Better than discovering it in prod at 3 a.m.</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-13.drawio">Tweet #13</a></h2>
-      <img src="svg/tweet-13.svg" alt="Tweet 13" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-13.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-13.svg" download>Download .svg</a>
-      </p>
-      <pre>JpaRepository&lt;User, Long&gt; — that&#x27;s your entire DAO for CRUD.
+// ── 2) Client microservice ─────────────────────────────
+// application.yml
+//   spring.application.name: books-service
 
-Spring Data generates the implementation.</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-14.drawio">Tweet #14</a></h2>
-      <img src="svg/tweet-14.svg" alt="Tweet 14" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-14.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-14.svg" download>Download .svg</a>
-      </p>
-      <pre>Load test data in integration tests with one annotation:
+// ── 3) Call another service by name (no fixed IP) ─────
+@FeignClient(name = &amp;quot;author-service&amp;quot;)
+public interface AuthorClient {
+    @GetMapping(&amp;quot;/authors/{id}&amp;quot;)
+    Author getAuthor(@PathVariable String id);
+}&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-52.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Cloud: Eureka service discovery — call services by name, not IP.
 
-@SpringBootTest + @Sql(&quot;/test-data.sql&quot;)
+In microservices, instances change often (scale up/down, deploys, new IPs). Hard-coding host:port breaks fast.
 
-No @BeforeEach seeding boilerplate.</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-15.drawio">Tweet #15</a></h2>
-      <img src="svg/tweet-15.svg" alt="Tweet 15" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-15.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-15.svg" download>Download .svg</a>
-      </p>
-      <pre>Processing 1M rows with findAll() will OOM you.
+✅ Each service registers with Eureka on startup (spring.application.name)
+✅ Eureka tracks healthy instances via heartbeats
+✅ Clients call http://author-service/... — LoadBalancer resolves the name to a live instance
 
-Use a Stream instead.</pre>
+Example (codingstrain libraryapp): books-service fetches authors via @FeignClient(name = &quot;author-service&quot;) — no fixed IP needed.
+#SpringCloud #Microservices #SpringBoot</div>
+      <p class="links">
+        <a href="drawio/tweet-52.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-52.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-52.java" download>Source .java</a>
+      </p>
     </article>
     <article>
-      <h2><a href="drawio/tweet-16.drawio">Tweet #16</a></h2>
-      <img src="svg/tweet-16.svg" alt="Tweet 16" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-16.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-16.svg" download>Download .svg</a>
-      </p>
-      <pre>Stream + EntityManager.clear() every N rows keeps the persistence context from growing forever.</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-17.drawio">Tweet #17</a></h2>
-      <img src="svg/tweet-17.svg" alt="Tweet 17" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-17.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-17.svg" download>Download .svg</a>
-      </p>
-      <pre>Always wrap JPA streams in try-with-resources:
+      <h2>Tweet #53</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-53-diagram.png" alt="Diagram 53" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 53 — libraryapp-openfeign-discovery-circuitbreaker", "description": "Spring Boot / Java snippet from codingstrain (libraryapp-openfeign-discovery-circuitbreaker)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="680"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;libraryapp-openfeign-discovery-circuitbreaker&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;// ── Feign client + circuit breaker on remote call ───
+@FeignClient(name = &amp;quot;author-service&amp;quot;)
+public interface AuthorClient {
 
-try (Stream&lt;User&gt; stream = repository.streamAllUsers()) { ... }
+    @GetMapping(&amp;quot;/authors/getInstance&amp;quot;)
+    @CircuitBreaker(name = &amp;quot;CircuitBreakerService&amp;quot;)
+    String getInstance();
+}
 
-Forgot it? Connection leak.</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-18.drawio">Tweet #18</a></h2>
-      <img src="svg/tweet-18.svg" alt="Tweet 18" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-18.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-18.svg" download>Download .svg</a>
-      </p>
-      <pre>@Transactional(readOnly = true) on read-only batch jobs — hints to the DB and avoids surprises.</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-19.drawio">Tweet #19</a></h2>
-      <img src="svg/tweet-19.svg" alt="Tweet 19" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-19.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-19.svg" download>Download .svg</a>
-      </p>
-      <pre>Spring Kafka producer in 5 lines:</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-20.drawio">Tweet #20</a></h2>
-      <img src="svg/tweet-20.svg" alt="Tweet 20" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-20.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-20.svg" download>Download .svg</a>
-      </p>
-      <pre>Kafka consumer side:</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-21.drawio">Tweet #21</a></h2>
-      <img src="svg/tweet-21.svg" alt="Tweet 21" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-21.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-21.svg" download>Download .svg</a>
-      </p>
-      <pre>auto-offset-reset: earliest in application.yml — new consumer groups read from the start.
+// ── Controller with fallback when circuit is OPEN ───
+@RestController
+public class BookController {
 
-Know when you want latest instead.</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-22.drawio">Tweet #22</a></h2>
-      <img src="svg/tweet-22.svg" alt="Tweet 22" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-22.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-22.svg" download>Download .svg</a>
-      </p>
-      <pre>Decouple services: save to DB, then publish.
+    @GetMapping(&amp;quot;/getAuthorServiceInstance&amp;quot;)
+    @CircuitBreaker(name = &amp;quot;CircuitBreakerApi&amp;quot;,
+            fallbackMethod = &amp;quot;getAuthorServiceInstanceFallback&amp;quot;)
+    public String getAuthorServiceInstance() {
+        return bookService.getAuthorServiceInstance();
+    }
 
-OrderService saves → publishEvent(OrderCreatedEvent).
+    public String getAuthorServiceInstanceFallback(Exception ex) {
+        return &amp;quot;Fallback content&amp;quot;;
+    }
+}
 
-Listeners react without tight coupling.</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-23.drawio">Tweet #23</a></h2>
-      <img src="svg/tweet-23.svg" alt="Tweet 23" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-23.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-23.svg" download>Download .svg</a>
-      </p>
-      <pre>Don&#x27;t send the email before commit:</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-24.drawio">Tweet #24</a></h2>
-      <img src="svg/tweet-24.svg" alt="Tweet 24" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-24.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-24.svg" download>Download .svg</a>
-      </p>
-      <pre>@EnableAsync on your main class.
-@Async(&quot;taskExecutor&quot;) on the method.
+// ── application.yml (Resilience4j) ───────────────────
+// resilience4j.circuitbreaker.instances.CircuitBreakerApi:
+//   failure-rate-threshold: 50
+//   wait-duration-in-open-state: 5s&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-53.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Cloud: OpenFeign + Circuit Breaker — resilience isn&#x27;t an afterthought.
 
-Done.</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-25.drawio">Tweet #25</a></h2>
-      <img src="svg/tweet-25.svg" alt="Tweet 25" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-25.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-25.svg" download>Download .svg</a>
-      </p>
-      <pre>Don&#x27;t use the default executor in prod. Define your pool:</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-26.drawio">Tweet #26</a></h2>
-      <img src="svg/tweet-26.svg" alt="Tweet 26" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-26.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-26.svg" download>Download .svg</a>
-      </p>
-      <pre>Fire 10 async tasks at startup with CommandLineRunner.
+When author-service is slow or down, books-service must not hang or cascade failures.
 
-Watch thread names in logs — you&#x27;ll see Async-*.</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-27.drawio">Tweet #27</a></h2>
-      <img src="svg/tweet-27.svg" alt="Tweet 27" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-27.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-27.svg" download>Download .svg</a>
-      </p>
-      <pre>@Async methods must be called from another Spring bean, not the same class.
+✅ @FeignClient calls remote services by name (via Eureka + LoadBalancer)
+✅ @CircuitBreaker stops calling a failing service after a threshold
+✅ fallbackMethod returns a safe default while the circuit is OPEN
 
-Self-invocation = synchronous. Classic gotcha.</pre>
+Example (codingstrain libraryapp): books-service protects calls to author-service with Resilience4j.
+#SpringCloud #Microservices #SpringBoot #Resilience4j</div>
+      <p class="links">
+        <a href="drawio/tweet-53.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-53.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-53.java" download>Source .java</a>
+      </p>
     </article>
     <article>
-      <h2><a href="drawio/tweet-28.drawio">Tweet #28</a></h2>
-      <img src="svg/tweet-28.svg" alt="Tweet 28" width="560"/>
+      <h2>Tweet #54</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-54-diagram.png" alt="Diagram 54" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 54 — spring-cloud-sample-libraryapp", "description": "Spring Boot / Java snippet from codingstrain (spring-cloud-sample-libraryapp)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;spring-cloud-sample-libraryapp&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;// Contract testing (Pact) and Gatling live beside the microservices.&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-54.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: Contract testing (Pact) and Gatling live beside the microservices.
+#SpringCloud #Testing</div>
       <p class="links">
-        <a href="drawio/tweet-28.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-28.svg" download>Download .svg</a>
+        <a href="drawio/tweet-54.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-54.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-54.java" download>Source .java</a>
       </p>
-      <pre>Slow external API? Cache it:</pre>
     </article>
     <article>
-      <h2><a href="drawio/tweet-29.drawio">Tweet #29</a></h2>
-      <img src="svg/tweet-29.svg" alt="Tweet 29" width="560"/>
+      <h2>Tweet #55</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-55-diagram.png" alt="Diagram 55" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 55 — codingstrain", "description": "Spring Boot / Java snippet from codingstrain (codingstrain)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;codingstrain&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;// codingstrain: clone once, open one module, learn one concept.&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-55.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: codingstrain: clone once, open one module, learn one concept.
+#Java #SpringBoot</div>
       <p class="links">
-        <a href="drawio/tweet-29.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-29.svg" download>Download .svg</a>
+        <a href="drawio/tweet-55.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-55.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-55.java" download>Source .java</a>
       </p>
-      <pre>Redis cache TTL in one bean:</pre>
     </article>
     <article>
-      <h2><a href="drawio/tweet-30.drawio">Tweet #30</a></h2>
-      <img src="svg/tweet-30.svg" alt="Tweet 30" width="560"/>
+      <h2>Tweet #56</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-56-diagram.png" alt="Diagram 56" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 56 — codingstrain", "description": "Spring Boot / Java snippet from codingstrain (codingstrain)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;codingstrain&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;// 🧵 5 Spring Boot mistakes I see in every code review&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-56.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🧵 5 Spring Boot mistakes I see in every code review
+#SpringBoot</div>
       <p class="links">
-        <a href="drawio/tweet-30.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-30.svg" download>Download .svg</a>
+        <a href="drawio/tweet-56.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-56.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-56.java" download>Source .java</a>
       </p>
-      <pre>@EnableCaching + @Cacheable — Spring abstracts Redis.
-
-Swap cache provider later without touching business logic.</pre>
     </article>
     <article>
-      <h2><a href="drawio/tweet-31.drawio">Tweet #31</a></h2>
-      <img src="svg/tweet-31.svg" alt="Tweet 31" width="560"/>
+      <h2>Tweet #57</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-57-diagram.png" alt="Diagram 57" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 57 — spring-streaming-demo", "description": "Spring Boot / Java snippet from codingstrain (spring-streaming-demo)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;spring-streaming-demo&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;// 🧵 JPA memory leaks: findAll() vs Stream + em.clear()&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-57.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🧵 JPA memory leaks: findAll() vs Stream + em.clear()
+#SpringBoot #JPA</div>
       <p class="links">
-        <a href="drawio/tweet-31.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-31.svg" download>Download .svg</a>
+        <a href="drawio/tweet-57.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-57.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-57.java" download>Source .java</a>
       </p>
-      <pre>Global CORS in Spring Boot — configure once, no @CrossOrigin on every controller.</pre>
     </article>
     <article>
-      <h2><a href="drawio/tweet-32.drawio">Tweet #32</a></h2>
-      <img src="svg/tweet-32.svg" alt="Tweet 32" width="560"/>
+      <h2>Tweet #58</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-58-diagram.png" alt="Diagram 58" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 58 — spring-kafka-demo", "description": "Spring Boot / Java snippet from codingstrain (spring-kafka-demo)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;spring-kafka-demo&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;// 🧵 Kafka with Spring Boot in under 10 minutes&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-58.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🧵 Kafka with Spring Boot in under 10 minutes
+#SpringBoot #Kafka</div>
       <p class="links">
-        <a href="drawio/tweet-32.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-32.svg" download>Download .svg</a>
+        <a href="drawio/tweet-58.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-58.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-58.java" download>Source .java</a>
       </p>
-      <pre>Frontend on :3000, API on :8080?
-
-CORS isn&#x27;t a bug — it&#x27;s the browser. Configure it once globally.</pre>
     </article>
     <article>
-      <h2><a href="drawio/tweet-33.drawio">Tweet #33</a></h2>
-      <img src="svg/tweet-33.svg" alt="Tweet 33" width="560"/>
+      <h2>Tweet #59</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-59-diagram.png" alt="Diagram 59" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 59 — spring-boot-validated-config", "description": "Spring Boot / Java snippet from codingstrain (spring-boot-validated-config)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;spring-boot-validated-config&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;// 🧵 @ConfigurationProperties + Bean Validation = fail at startup, not in prod&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-59.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🧵 @ConfigurationProperties + Bean Validation = fail at startup, not in prod
+#SpringBoot</div>
       <p class="links">
-        <a href="drawio/tweet-33.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-33.svg" download>Download .svg</a>
+        <a href="drawio/tweet-59.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-59.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-59.java" download>Source .java</a>
       </p>
-      <pre>Debug HTTP issues with CommonsRequestLoggingFilter:</pre>
     </article>
     <article>
-      <h2><a href="drawio/tweet-34.drawio">Tweet #34</a></h2>
-      <img src="svg/tweet-34.svg" alt="Tweet 34" width="560"/>
+      <h2>Tweet #60</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-60-diagram.png" alt="Diagram 60" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 60 — java-examples/BuilderDemo", "description": "Spring Boot / Java snippet from codingstrain (java-examples/BuilderDemo)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="300"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;java-examples/BuilderDemo&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;// 🧵 Java Builder pattern step-by-step (no Lombok required)&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-60.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🧵 Java Builder pattern step-by-step (no Lombok required)
+#Java #JavaDev</div>
       <p class="links">
-        <a href="drawio/tweet-34.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-34.svg" download>Download .svg</a>
+        <a href="drawio/tweet-60.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-60.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-60.java" download>Source .java</a>
       </p>
-      <pre>Spring Batch: read CSV → process → write in chunks of 5:</pre>
     </article>
-    <article>
-      <h2><a href="drawio/tweet-35.drawio">Tweet #35</a></h2>
-      <img src="svg/tweet-35.svg" alt="Tweet 35" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-35.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-35.svg" download>Download .svg</a>
-      </p>
-      <pre>FlatFileItemReaderBuilder + .linesToSkip(1) — skip the header row automatically.</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-36.drawio">Tweet #36</a></h2>
-      <img src="svg/tweet-36.svg" alt="Tweet 36" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-36.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-36.svg" download>Download .svg</a>
-      </p>
-      <pre>ItemProcessor transforms each row:</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-37.drawio">Tweet #37</a></h2>
-      <img src="svg/tweet-37.svg" alt="Tweet 37" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-37.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-37.svg" download>Download .svg</a>
-      </p>
-      <pre>Parse CSV without reinventing the wheel — Apache Commons CSV + try-with-resources.</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-38.drawio">Tweet #38</a></h2>
-      <img src="svg/tweet-38.svg" alt="Tweet 38" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-38.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-38.svg" download>Download .svg</a>
-      </p>
-      <pre>@MockBean stubs can leak between tests unless reset.
-
-Use @DirtiesContext or Mockito reset.</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-39.drawio">Tweet #39</a></h2>
-      <img src="svg/tweet-39.svg" alt="Tweet 39" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-39.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-39.svg" download>Download .svg</a>
-      </p>
-      <pre>@SpringBootTest loads the full context.
-
-Use it when you need integration truth — not for every unit test.</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-40.drawio">Tweet #40</a></h2>
-      <img src="svg/tweet-40.svg" alt="Tweet 40" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-40.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-40.svg" download>Download .svg</a>
-      </p>
-      <pre>@Sql on tests = reproducible DB state.
-
-No flaky &quot;works on my machine&quot; seeds.</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-41.drawio">Tweet #41</a></h2>
-      <img src="svg/tweet-41.svg" alt="Tweet 41" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-41.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-41.svg" download>Download .svg</a>
-      </p>
-      <pre>Builder pattern without Lombok — required fields in constructor, optional fields chain.</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-42.drawio">Tweet #42</a></h2>
-      <img src="svg/tweet-42.svg" alt="Tweet 42" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-42.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-42.svg" download>Download .svg</a>
-      </p>
-      <pre>LinkedHashMap preserves insertion order. HashMap does not.</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-43.drawio">Tweet #43</a></h2>
-      <img src="svg/tweet-43.svg" alt="Tweet 43" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-43.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-43.svg" download>Download .svg</a>
-      </p>
-      <pre>Parsing &quot;121,234&quot; as a double?
-
-Quick fix: replace comma with dot.
-
-Locale-aware? NumberFormat.getInstance(Locale.ITALY).</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-44.drawio">Tweet #44</a></h2>
-      <img src="svg/tweet-44.svg" alt="Tweet 44" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-44.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-44.svg" download>Download .svg</a>
-      </p>
-      <pre>Italian number format 123.111,234 — don&#x27;t assume . is always the decimal separator.</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-45.drawio">Tweet #45</a></h2>
-      <img src="svg/tweet-45.svg" alt="Tweet 45" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-45.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-45.svg" download>Download .svg</a>
-      </p>
-      <pre>Shallow clone: super.clone() — shared nested objects.
-Deep clone: clone nested Dependency too.</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-46.drawio">Tweet #46</a></h2>
-      <img src="svg/tweet-46.svg" alt="Tweet 46" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-46.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-46.svg" download>Download .svg</a>
-      </p>
-      <pre>Cloneable without overriding clone() correctly → CloneNotSupportedException.
-
-Prefer copy constructors or records for new code.</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-47.drawio">Tweet #47</a></h2>
-      <img src="svg/tweet-47.svg" alt="Tweet 47" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-47.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-47.svg" download>Download .svg</a>
-      </p>
-      <pre>Immutable fields in the Builder pattern:
-
-private final String name;
-private final int age;
-
-Set once at build time — fewer bugs in DTOs.</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-48.drawio">Tweet #48</a></h2>
-      <img src="svg/tweet-48.svg" alt="Tweet 48" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-48.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-48.svg" download>Download .svg</a>
-      </p>
-      <pre>Spring Boot 2.7 + Java 17 in codingstrain — run any module with:
-
-mvn spring-boot:run
-
-Each folder is an independent lesson.
-
-codingstrain.com</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-49.drawio">Tweet #49</a></h2>
-      <img src="svg/tweet-49.svg" alt="Tweet 49" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-49.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-49.svg" download>Download .svg</a>
-      </p>
-      <pre>H2 in-memory DB for REST tutorials — zero Docker, full CRUD.
-
-Swap to Postgres later; controllers stay the same.</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-50.drawio">Tweet #50</a></h2>
-      <img src="svg/tweet-50.svg" alt="Tweet 50" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-50.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-50.svg" download>Download .svg</a>
-      </p>
-      <pre>/actuator/health before you deploy.
-
-Monitoring isn&#x27;t optional.</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-51.drawio">Tweet #51</a></h2>
-      <img src="svg/tweet-51.svg" alt="Tweet 51" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-51.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-51.svg" download>Download .svg</a>
-      </p>
-      <pre>Spring Cloud Config (native + Git) in codingstrain — centralize config before you have 12 copies of application.properties.</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-52.drawio">Tweet #52</a></h2>
-      <img src="svg/tweet-52.svg" alt="Tweet 52" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-52.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-52.svg" download>Download .svg</a>
-      </p>
-      <pre>Eureka service discovery — register clients, call by name not IP.
-
-Microservices 101 in this monorepo.</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-53.drawio">Tweet #53</a></h2>
-      <img src="svg/tweet-53.svg" alt="Tweet 53" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-53.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-53.svg" download>Download .svg</a>
-      </p>
-      <pre>OpenFeign + circuit breaker samples — resilience isn&#x27;t an afterthought.</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-54.drawio">Tweet #54</a></h2>
-      <img src="svg/tweet-54.svg" alt="Tweet 54" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-54.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-54.svg" download>Download .svg</a>
-      </p>
-      <pre>Contract testing (Pact) and Gatling load tests live beside the microservices.
-
-CI-friendly patterns, not slide-deck theory.</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-55.drawio">Tweet #55</a></h2>
-      <img src="svg/tweet-55.svg" alt="Tweet 55" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-55.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-55.svg" download>Download .svg</a>
-      </p>
-      <pre>codingstrain is a multi-module Maven lab — clone once, open one module, learn one concept.
-
-github.com/mcasari/codingstrain</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-56.drawio">Tweet #56</a></h2>
-      <img src="svg/tweet-56.svg" alt="Tweet 56" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-56.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-56.svg" download>Download .svg</a>
-      </p>
-      <pre>🧵 5 Spring Boot mistakes I see in every code review (from real demos in codingstrain)</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-57.drawio">Tweet #57</a></h2>
-      <img src="svg/tweet-57.svg" alt="Tweet 57" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-57.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-57.svg" download>Download .svg</a>
-      </p>
-      <pre>🧵 JPA memory leaks: findAll() vs Stream + em.clear() — thread</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-58.drawio">Tweet #58</a></h2>
-      <img src="svg/tweet-58.svg" alt="Tweet 58" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-58.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-58.svg" download>Download .svg</a>
-      </p>
-      <pre>🧵 Kafka with Spring Boot in under 10 minutes — producer + consumer code</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-59.drawio">Tweet #59</a></h2>
-      <img src="svg/tweet-59.svg" alt="Tweet 59" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-59.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-59.svg" download>Download .svg</a>
-      </p>
-      <pre>🧵 @ConfigurationProperties + Bean Validation = fail at startup, not in prod</pre>
-    </article>
-    <article>
-      <h2><a href="drawio/tweet-60.drawio">Tweet #60</a></h2>
-      <img src="svg/tweet-60.svg" alt="Tweet 60" width="560"/>
-      <p class="links">
-        <a href="drawio/tweet-60.drawio" download>Download .drawio</a> ·
-        <a href="svg/tweet-60.svg" download>Download .svg</a>
-      </p>
-      <pre>🧵 Java Builder pattern step-by-step (no Lombok required)</pre>
-    </article>
+  <script async src="https://public.codepenassets.com/embed/index.js"></script>
 </body>
 </html>

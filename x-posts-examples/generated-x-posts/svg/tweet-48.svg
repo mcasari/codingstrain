@@ -1,28 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="314" viewBox="0 0 560 314">
+<svg xmlns="http://www.w3.org/2000/svg" width="736" height="184" viewBox="0 0 736 184">
   <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
     <style>
-      .card { fill: #15202b; stroke: #38444d; stroke-width: 2; }
-      .header { fill: #1DA1F2; }
-      .title { fill: #ffffff; font: bold 14px sans-serif; }
-      .body { fill: #e7e9ea; font: 13px sans-serif; }
-      .code { fill: #89cff0; font: 11px monospace; }
-      .code-bg { fill: #192734; stroke: #38444d; stroke-width: 1; }
-      .footer { fill: #71767b; font: 10px sans-serif; }
+      .kw { fill:#c792ea; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .ann { fill:#ffb86c; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .str { fill:#c3e88d; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .typ { fill:#ffcb6b; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .met { fill:#82aaff; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .com { fill:#5c6370; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .num { fill:#f78c6c; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .pun { fill:#89ddff; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .txt { fill:#d6deeb; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
     </style>
   </defs>
-  <rect x="0" y="0" width="560" height="314" rx="12" class="card"/>
-  <rect x="0" y="0" width="560" height="44" rx="12" class="header"/>
-  <rect x="0" y="32" width="560" height="12" class="header"/>
-  <text x="20" y="28" class="title">Tweet #48 · codingstrain</text>
-    <text x="28" y="100" class="body">Spring Boot 2.7 + Java 17 in codingstrain — run</text>
-    <text x="28" y="122" class="body">any module with:</text>
-    <text x="28" y="144" class="body"></text>
-    <text x="28" y="166" class="body">mvn spring-boot:run</text>
-    <text x="28" y="188" class="body"></text>
-    <text x="28" y="210" class="body">Each folder is an independent lesson.</text>
-    <text x="28" y="232" class="body"></text>
-    <text x="28" y="254" class="body">codingstrain.com</text>
-
-  <text x="20" y="298" class="footer">Module: codingstrain  #SpringBoot #Java</text>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  <g filter="url(#shadow)">
+    <rect x="48" y="48" width="640" height="88" rx="8" fill="#252836"/>
+    <rect x="48" y="48" width="640" height="32" rx="8" fill="#252836"/>
+    <rect x="48" y="74" width="640" height="6" fill="#252836"/>
+    <circle cx="66" cy="64" r="5.5" fill="#ff5f56"/>
+    <circle cx="84" cy="64" r="5.5" fill="#ffbd2e"/>
+    <circle cx="102" cy="64" r="5.5" fill="#27c93f"/>
+    <rect x="48" y="80" width="640" height="56" fill="#011627"/>
+    <rect x="48" y="128" width="640" height="8" rx="8" fill="#011627"/>
+  </g>
+  <text x="66.0" y="113" class="com">// Run any codingstrain module with mvn spring-boot:run.</text>
 </svg>

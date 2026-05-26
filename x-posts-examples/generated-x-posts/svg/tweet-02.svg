@@ -1,28 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="292" viewBox="0 0 560 292">
+<svg xmlns="http://www.w3.org/2000/svg" width="736" height="344" viewBox="0 0 736 344">
   <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
     <style>
-      .card { fill: #15202b; stroke: #38444d; stroke-width: 2; }
-      .header { fill: #1DA1F2; }
-      .title { fill: #ffffff; font: bold 14px sans-serif; }
-      .body { fill: #e7e9ea; font: 13px sans-serif; }
-      .code { fill: #89cff0; font: 11px monospace; }
-      .code-bg { fill: #192734; stroke: #38444d; stroke-width: 1; }
-      .footer { fill: #71767b; font: 10px sans-serif; }
+      .kw { fill:#c792ea; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .ann { fill:#ffb86c; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .str { fill:#c3e88d; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .typ { fill:#ffcb6b; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .met { fill:#82aaff; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .com { fill:#5c6370; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .num { fill:#f78c6c; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .pun { fill:#89ddff; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .txt { fill:#d6deeb; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
     </style>
   </defs>
-  <rect x="0" y="0" width="560" height="292" rx="12" class="card"/>
-  <rect x="0" y="0" width="560" height="44" rx="12" class="header"/>
-  <rect x="0" y="32" width="560" height="12" class="header"/>
-  <text x="20" y="28" class="title">Tweet #2 · codingstrain</text>
-    <text x="28" y="100" class="body">Constructor injection beats field injection:</text>
-    <text x="28" y="122" class="body"></text>
-    <text x="28" y="144" class="body">public UserController(UserRepository repository)</text>
-    <text x="28" y="166" class="body">{</text>
-    <text x="28" y="188" class="body">  this.repository = repository;</text>
-    <text x="28" y="210" class="body">}</text>
-    <text x="28" y="232" class="body"></text>
-    <text x="28" y="254" class="body">Spring recommends it. Your tests will thank you.</text>
-
-  <text x="20" y="276" class="footer">Module: spring-boot-paged-rest-example  #SpringBoot</text>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  <g filter="url(#shadow)">
+    <rect x="48" y="48" width="640" height="248" rx="8" fill="#252836"/>
+    <rect x="48" y="48" width="640" height="32" rx="8" fill="#252836"/>
+    <rect x="48" y="74" width="640" height="6" fill="#252836"/>
+    <circle cx="66" cy="64" r="5.5" fill="#ff5f56"/>
+    <circle cx="84" cy="64" r="5.5" fill="#ffbd2e"/>
+    <circle cx="102" cy="64" r="5.5" fill="#27c93f"/>
+    <rect x="48" y="80" width="640" height="216" fill="#011627"/>
+    <rect x="48" y="288" width="640" height="8" rx="8" fill="#011627"/>
+  </g>
+  <text x="66.0" y="113" class="ann">@RestController</text>
+  <text x="66.0" y="133" class="kw">public</text>
+  <text x="116.1" y="133" class="txt"> </text>
+  <text x="124.4" y="133" class="kw">class</text>
+  <text x="166.2" y="133" class="txt"> </text>
+  <text x="174.5" y="133" class="typ">UserController</text>
+  <text x="291.4" y="133" class="txt"> </text>
+  <text x="299.8" y="133" class="pun">{</text>
+  <text x="66.0" y="173" class="txt">    </text>
+  <text x="99.4" y="173" class="kw">private</text>
+  <text x="157.8" y="173" class="txt"> </text>
+  <text x="166.2" y="173" class="kw">final</text>
+  <text x="207.9" y="173" class="txt"> </text>
+  <text x="216.3" y="173" class="typ">UserRepository</text>
+  <text x="333.2" y="173" class="txt"> </text>
+  <text x="341.6" y="173" class="txt">repository</text>
+  <text x="425.1" y="173" class="pun">;</text>
+  <text x="66.0" y="213" class="txt">    </text>
+  <text x="99.4" y="213" class="kw">public</text>
+  <text x="149.5" y="213" class="txt"> </text>
+  <text x="157.8" y="213" class="met">UserController</text>
+  <text x="274.8" y="213" class="pun">(</text>
+  <text x="283.1" y="213" class="typ">UserRepository</text>
+  <text x="400.0" y="213" class="txt"> </text>
+  <text x="408.4" y="213" class="txt">repository</text>
+  <text x="491.9" y="213" class="pun">)</text>
+  <text x="500.2" y="213" class="txt"> </text>
+  <text x="508.6" y="213" class="pun">{</text>
+  <text x="66.0" y="233" class="txt">        </text>
+  <text x="132.8" y="233" class="kw">this</text>
+  <text x="166.2" y="233" class="pun">.</text>
+  <text x="174.6" y="233" class="txt">repository</text>
+  <text x="258.1" y="233" class="txt"> </text>
+  <text x="266.4" y="233" class="pun">=</text>
+  <text x="274.8" y="233" class="txt"> </text>
+  <text x="283.1" y="233" class="txt">repository</text>
+  <text x="366.6" y="233" class="pun">;</text>
+  <text x="66.0" y="253" class="txt">    </text>
+  <text x="99.4" y="253" class="pun">}</text>
+  <text x="66.0" y="273" class="pun">}</text>
 </svg>

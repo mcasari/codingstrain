@@ -1,33 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="440" viewBox="0 0 560 440">
+<svg xmlns="http://www.w3.org/2000/svg" width="736" height="404" viewBox="0 0 736 404">
   <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
     <style>
-      .card { fill: #15202b; stroke: #38444d; stroke-width: 2; }
-      .header { fill: #1DA1F2; }
-      .title { fill: #ffffff; font: bold 14px sans-serif; }
-      .body { fill: #e7e9ea; font: 13px sans-serif; }
-      .code { fill: #89cff0; font: 11px monospace; }
-      .code-bg { fill: #192734; stroke: #38444d; stroke-width: 1; }
-      .footer { fill: #71767b; font: 10px sans-serif; }
+      .kw { fill:#c792ea; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .ann { fill:#ffb86c; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .str { fill:#c3e88d; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .typ { fill:#ffcb6b; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .met { fill:#82aaff; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .com { fill:#5c6370; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .num { fill:#f78c6c; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .pun { fill:#89ddff; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .txt { fill:#d6deeb; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
     </style>
   </defs>
-  <rect x="0" y="0" width="560" height="440" rx="12" class="card"/>
-  <rect x="0" y="0" width="560" height="44" rx="12" class="header"/>
-  <rect x="0" y="32" width="560" height="12" class="header"/>
-  <text x="20" y="28" class="title">Tweet #14 · codingstrain</text>
-    <text x="28" y="100" class="body">Load test data in integration tests with one</text>
-    <text x="28" y="122" class="body">annotation:</text>
-    <text x="28" y="144" class="body"></text>
-    <text x="28" y="166" class="body">@SpringBootTest + @Sql(&quot;/test-data.sql&quot;)</text>
-    <text x="28" y="188" class="body"></text>
-    <text x="28" y="210" class="body">No @BeforeEach seeding boilerplate.</text>
-  <rect x="24" y="230" width="512" height="154" rx="6" class="code-bg"/>
-    <text x="36" y="248" class="code">@SpringBootTest</text>
-    <text x="36" y="266" class="code">@Sql(&quot;/test-data.sql&quot;)</text>
-    <text x="36" y="284" class="code">class UserRepositoryTest {</text>
-    <text x="36" y="302" class="code">  @Test void testUserLoadedFromSql() {</text>
-    <text x="36" y="320" class="code">    assertEquals(&quot;Alice&quot;, repo.findById(1L).orElseThrow().getName());</text>
-    <text x="36" y="338" class="code">  }</text>
-    <text x="36" y="356" class="code">}</text>
-  <text x="20" y="424" class="footer">Module: sql-annotation-demo  #SpringBoot #Testing</text>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  <g filter="url(#shadow)">
+    <rect x="48" y="48" width="640" height="308" rx="8" fill="#252836"/>
+    <rect x="48" y="48" width="640" height="32" rx="8" fill="#252836"/>
+    <rect x="48" y="74" width="640" height="6" fill="#252836"/>
+    <circle cx="66" cy="64" r="5.5" fill="#ff5f56"/>
+    <circle cx="84" cy="64" r="5.5" fill="#ffbd2e"/>
+    <circle cx="102" cy="64" r="5.5" fill="#27c93f"/>
+    <rect x="48" y="80" width="640" height="276" fill="#011627"/>
+    <rect x="48" y="348" width="640" height="8" rx="8" fill="#011627"/>
+  </g>
+  <text x="66.0" y="113" class="ann">@SpringBootTest</text>
+  <text x="66.0" y="133" class="ann">@Sql</text>
+  <text x="99.4" y="133" class="pun">(</text>
+  <text x="107.8" y="133" class="str">&quot;/test-data.sql&quot;</text>
+  <text x="241.3" y="133" class="pun">)</text>
+  <text x="66.0" y="153" class="kw">class</text>
+  <text x="107.8" y="153" class="txt"> </text>
+  <text x="116.1" y="153" class="typ">UserRepositoryTest</text>
+  <text x="266.4" y="153" class="txt"> </text>
+  <text x="274.8" y="153" class="pun">{</text>
+  <text x="66.0" y="193" class="txt">    </text>
+  <text x="99.4" y="193" class="ann">@Autowired</text>
+  <text x="182.9" y="193" class="txt"> </text>
+  <text x="191.2" y="193" class="typ">UserRepository</text>
+  <text x="308.1" y="193" class="txt"> </text>
+  <text x="316.5" y="193" class="txt">repo</text>
+  <text x="349.9" y="193" class="pun">;</text>
+  <text x="66.0" y="233" class="txt">    </text>
+  <text x="99.4" y="233" class="ann">@Test</text>
+  <text x="66.0" y="253" class="txt">    </text>
+  <text x="99.4" y="253" class="kw">void</text>
+  <text x="132.8" y="253" class="txt"> </text>
+  <text x="141.2" y="253" class="met">testUserLoadedFromSql</text>
+  <text x="316.5" y="253" class="pun">(</text>
+  <text x="324.9" y="253" class="pun">)</text>
+  <text x="333.2" y="253" class="txt"> </text>
+  <text x="341.6" y="253" class="pun">{</text>
+  <text x="66.0" y="273" class="txt">        </text>
+  <text x="132.8" y="273" class="kw">var</text>
+  <text x="157.9" y="273" class="txt"> </text>
+  <text x="166.2" y="273" class="txt">user</text>
+  <text x="199.6" y="273" class="txt"> </text>
+  <text x="208.0" y="273" class="pun">=</text>
+  <text x="216.3" y="273" class="txt"> </text>
+  <text x="224.7" y="273" class="txt">repo</text>
+  <text x="258.1" y="273" class="pun">.</text>
+  <text x="266.4" y="273" class="met">findById</text>
+  <text x="333.2" y="273" class="pun">(</text>
+  <text x="341.6" y="273" class="num">1</text>
+  <text x="349.9" y="273" class="typ">L</text>
+  <text x="358.3" y="273" class="pun">)</text>
+  <text x="366.6" y="273" class="pun">.</text>
+  <text x="375.0" y="273" class="met">orElseThrow</text>
+  <text x="466.8" y="273" class="pun">(</text>
+  <text x="475.2" y="273" class="pun">)</text>
+  <text x="483.5" y="273" class="pun">;</text>
+  <text x="66.0" y="293" class="txt">        </text>
+  <text x="132.8" y="293" class="met">assertEquals</text>
+  <text x="233.0" y="293" class="pun">(</text>
+  <text x="241.3" y="293" class="str">&quot;Alice&quot;</text>
+  <text x="299.8" y="293" class="pun">,</text>
+  <text x="308.2" y="293" class="txt"> </text>
+  <text x="316.5" y="293" class="txt">user</text>
+  <text x="349.9" y="293" class="pun">.</text>
+  <text x="358.3" y="293" class="met">getName</text>
+  <text x="416.7" y="293" class="pun">(</text>
+  <text x="425.1" y="293" class="pun">)</text>
+  <text x="433.4" y="293" class="pun">)</text>
+  <text x="441.8" y="293" class="pun">;</text>
+  <text x="66.0" y="313" class="txt">    </text>
+  <text x="99.4" y="313" class="pun">}</text>
+  <text x="66.0" y="333" class="pun">}</text>
 </svg>

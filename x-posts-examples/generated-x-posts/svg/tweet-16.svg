@@ -1,26 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="280" viewBox="0 0 560 280">
+<svg xmlns="http://www.w3.org/2000/svg" width="736" height="324" viewBox="0 0 736 324">
   <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
     <style>
-      .card { fill: #15202b; stroke: #38444d; stroke-width: 2; }
-      .header { fill: #1DA1F2; }
-      .title { fill: #ffffff; font: bold 14px sans-serif; }
-      .body { fill: #e7e9ea; font: 13px sans-serif; }
-      .code { fill: #89cff0; font: 11px monospace; }
-      .code-bg { fill: #192734; stroke: #38444d; stroke-width: 1; }
-      .footer { fill: #71767b; font: 10px sans-serif; }
+      .kw { fill:#c792ea; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .ann { fill:#ffb86c; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .str { fill:#c3e88d; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .typ { fill:#ffcb6b; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .met { fill:#82aaff; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .com { fill:#5c6370; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .num { fill:#f78c6c; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .pun { fill:#89ddff; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
+      .txt { fill:#d6deeb; font-family:ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size:13px; }
     </style>
   </defs>
-  <rect x="0" y="0" width="560" height="280" rx="12" class="card"/>
-  <rect x="0" y="0" width="560" height="44" rx="12" class="header"/>
-  <rect x="0" y="32" width="560" height="12" class="header"/>
-  <text x="20" y="28" class="title">Tweet #16 · codingstrain</text>
-    <text x="28" y="100" class="body">Stream + EntityManager.clear() every N rows</text>
-    <text x="28" y="122" class="body">keeps the persistence context from growing</text>
-    <text x="28" y="144" class="body">forever.</text>
-  <rect x="24" y="164" width="512" height="82" rx="6" class="code-bg"/>
-    <text x="36" y="182" class="code">if (counter.incrementAndGet() % 100 == 0) {</text>
-    <text x="36" y="200" class="code">  em.clear();</text>
-    <text x="36" y="218" class="code">}</text>
-  <text x="20" y="264" class="footer">Module: spring-streaming-demo  #SpringBoot #JPA</text>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  <g filter="url(#shadow)">
+    <rect x="48" y="48" width="640" height="228" rx="8" fill="#252836"/>
+    <rect x="48" y="48" width="640" height="32" rx="8" fill="#252836"/>
+    <rect x="48" y="74" width="640" height="6" fill="#252836"/>
+    <circle cx="66" cy="64" r="5.5" fill="#ff5f56"/>
+    <circle cx="84" cy="64" r="5.5" fill="#ffbd2e"/>
+    <circle cx="102" cy="64" r="5.5" fill="#27c93f"/>
+    <rect x="48" y="80" width="640" height="196" fill="#011627"/>
+    <rect x="48" y="268" width="640" height="8" rx="8" fill="#011627"/>
+  </g>
+  <text x="66.0" y="113" class="kw">try</text>
+  <text x="91.0" y="113" class="txt"> </text>
+  <text x="99.4" y="113" class="pun">(</text>
+  <text x="107.7" y="113" class="typ">Stream</text>
+  <text x="157.8" y="113" class="pun">&lt;</text>
+  <text x="166.2" y="113" class="typ">User</text>
+  <text x="199.6" y="113" class="pun">&gt;</text>
+  <text x="207.9" y="113" class="txt"> </text>
+  <text x="216.3" y="113" class="txt">stream</text>
+  <text x="266.4" y="113" class="txt"> </text>
+  <text x="274.8" y="113" class="pun">=</text>
+  <text x="283.1" y="113" class="txt"> </text>
+  <text x="291.5" y="113" class="txt">repository</text>
+  <text x="375.0" y="113" class="pun">.</text>
+  <text x="383.3" y="113" class="met">streamAllUsers</text>
+  <text x="500.2" y="113" class="pun">(</text>
+  <text x="508.6" y="113" class="pun">)</text>
+  <text x="516.9" y="113" class="pun">)</text>
+  <text x="525.3" y="113" class="txt"> </text>
+  <text x="533.6" y="113" class="pun">{</text>
+  <text x="66.0" y="133" class="txt">    </text>
+  <text x="99.4" y="133" class="txt">stream</text>
+  <text x="149.5" y="133" class="pun">.</text>
+  <text x="157.8" y="133" class="met">forEach</text>
+  <text x="216.3" y="133" class="pun">(</text>
+  <text x="224.6" y="133" class="txt">user</text>
+  <text x="258.0" y="133" class="txt"> </text>
+  <text x="266.4" y="133" class="pun">-</text>
+  <text x="274.8" y="133" class="pun">&gt;</text>
+  <text x="283.1" y="133" class="txt"> </text>
+  <text x="291.5" y="133" class="pun">{</text>
+  <text x="66.0" y="153" class="txt">        </text>
+  <text x="132.8" y="153" class="met">process</text>
+  <text x="191.2" y="153" class="pun">(</text>
+  <text x="199.6" y="153" class="txt">user</text>
+  <text x="233.0" y="153" class="pun">)</text>
+  <text x="241.3" y="153" class="pun">;</text>
+  <text x="66.0" y="173" class="txt">        </text>
+  <text x="132.8" y="173" class="kw">if</text>
+  <text x="149.5" y="173" class="txt"> </text>
+  <text x="157.8" y="173" class="pun">(</text>
+  <text x="166.2" y="173" class="txt">counter</text>
+  <text x="224.6" y="173" class="pun">.</text>
+  <text x="233.0" y="173" class="met">incrementAndGet</text>
+  <text x="358.2" y="173" class="pun">(</text>
+  <text x="366.6" y="173" class="pun">)</text>
+  <text x="375.0" y="173" class="txt"> </text>
+  <text x="383.3" y="173" class="pun">%</text>
+  <text x="391.7" y="173" class="txt"> </text>
+  <text x="400.0" y="173" class="num">100</text>
+  <text x="425.1" y="173" class="txt"> </text>
+  <text x="433.4" y="173" class="pun">=</text>
+  <text x="441.8" y="173" class="pun">=</text>
+  <text x="450.1" y="173" class="txt"> </text>
+  <text x="458.5" y="173" class="num">0</text>
+  <text x="466.8" y="173" class="pun">)</text>
+  <text x="475.2" y="173" class="txt"> </text>
+  <text x="483.5" y="173" class="pun">{</text>
+  <text x="66.0" y="193" class="txt">            </text>
+  <text x="166.2" y="193" class="txt">em</text>
+  <text x="182.9" y="193" class="pun">.</text>
+  <text x="191.2" y="193" class="met">clear</text>
+  <text x="233.0" y="193" class="pun">(</text>
+  <text x="241.3" y="193" class="pun">)</text>
+  <text x="249.7" y="193" class="pun">;</text>
+  <text x="66.0" y="213" class="txt">        </text>
+  <text x="132.8" y="213" class="pun">}</text>
+  <text x="66.0" y="233" class="txt">    </text>
+  <text x="99.4" y="233" class="pun">}</text>
+  <text x="107.8" y="233" class="pun">)</text>
+  <text x="116.1" y="233" class="pun">;</text>
+  <text x="66.0" y="253" class="pun">}</text>
 </svg>
