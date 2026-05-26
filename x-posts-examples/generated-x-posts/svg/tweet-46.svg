@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="280" viewBox="0 0 560 280">
+  <defs>
+    <style>
+      .card { fill: #15202b; stroke: #38444d; stroke-width: 2; }
+      .header { fill: #1DA1F2; }
+      .title { fill: #ffffff; font: bold 14px sans-serif; }
+      .body { fill: #e7e9ea; font: 13px sans-serif; }
+      .code { fill: #89cff0; font: 11px monospace; }
+      .code-bg { fill: #192734; stroke: #38444d; stroke-width: 1; }
+      .footer { fill: #71767b; font: 10px sans-serif; }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="560" height="280" rx="12" class="card"/>
+  <rect x="0" y="0" width="560" height="44" rx="12" class="header"/>
+  <rect x="0" y="32" width="560" height="12" class="header"/>
+  <text x="20" y="28" class="title">Tweet #46 · codingstrain</text>
+    <text x="28" y="100" class="body">Cloneable without overriding clone() correctly →</text>
+    <text x="28" y="122" class="body">CloneNotSupportedException.</text>
+    <text x="28" y="144" class="body"></text>
+    <text x="28" y="166" class="body">Prefer copy constructors or records for new</text>
+    <text x="28" y="188" class="body">code.</text>
+
+  <text x="20" y="264" class="footer">Module: java-miscellaneous-tips  #Java</text>
+</svg>

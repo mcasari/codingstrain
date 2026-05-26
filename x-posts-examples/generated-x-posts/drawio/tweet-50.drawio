@@ -1,0 +1,18 @@
+<mxfile host="app.diagrams.net" agent="codingstrain-generator" version="22.1.0" type="device">
+  <diagram id="cdc72650-e218-46e9-82f7-78eb1390a66e" name="Tweet 50">
+    <mxGraphModel pageWidth="600" pageHeight="280">
+      <root>
+        <mxCell id="0"/><mxCell id="1" parent="0"/>
+        <mxCell id="code" value="// /actuator/health before you deploy.&amp;#xa;//&amp;#xa;// Monitoring isn&#x27;t optional." style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        </mxCell>
+        <mxCell id="hdr" value="Tweet #50 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-boot-minimal-rest-h2-actuator  #SpringBoot" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
+          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

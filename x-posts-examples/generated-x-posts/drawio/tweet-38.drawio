@@ -1,0 +1,18 @@
+<mxfile host="app.diagrams.net" agent="codingstrain-generator" version="22.1.0" type="device">
+  <diagram id="dc0bf423-a5a4-41a8-8770-4ca97bbf6ecd" name="Tweet 38">
+    <mxGraphModel pageWidth="600" pageHeight="280">
+      <root>
+        <mxCell id="0"/><mxCell id="1" parent="0"/>
+        <mxCell id="code" value="@Test @Order(1) void testA() {&amp;#xa;  when(myService.getData()).thenReturn(&quot;A&quot;);&amp;#xa;}&amp;#xa;@Test @Order(2) void testB() { /* still &quot;A&quot;? */ }" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        </mxCell>
+        <mxCell id="hdr" value="Tweet #38 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-mock-reset-example  #SpringBoot #Testing" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
+          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

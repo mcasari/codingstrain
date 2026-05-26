@@ -1,0 +1,18 @@
+<mxfile host="app.diagrams.net" agent="codingstrain-generator" version="22.1.0" type="device">
+  <diagram id="0a6ea989-6e93-4147-8bd1-280895dee58a" name="Tweet 19">
+    <mxGraphModel pageWidth="600" pageHeight="308">
+      <root>
+        <mxCell id="0"/><mxCell id="1" parent="0"/>
+        <mxCell id="code" value="@Service&amp;#xa;public class MessageProducer {&amp;#xa;  public void send(String message) {&amp;#xa;    kafkaTemplate.send(&quot;demo-topic&quot;, message);&amp;#xa;  }&amp;#xa;}" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="60" width="520" height="208" as="geometry"/>
+        </mxCell>
+        <mxCell id="hdr" value="Tweet #19 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-kafka-demo  #SpringBoot #Kafka" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
+          <mxGeometry x="20" y="278" width="520" height="24" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

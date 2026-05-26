@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="312" viewBox="0 0 560 312">
+  <defs>
+    <style>
+      .card { fill: #15202b; stroke: #38444d; stroke-width: 2; }
+      .header { fill: #1DA1F2; }
+      .title { fill: #ffffff; font: bold 14px sans-serif; }
+      .body { fill: #e7e9ea; font: 13px sans-serif; }
+      .code { fill: #89cff0; font: 11px monospace; }
+      .code-bg { fill: #192734; stroke: #38444d; stroke-width: 1; }
+      .footer { fill: #71767b; font: 10px sans-serif; }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="560" height="312" rx="12" class="card"/>
+  <rect x="0" y="0" width="560" height="44" rx="12" class="header"/>
+  <rect x="0" y="32" width="560" height="12" class="header"/>
+  <text x="20" y="28" class="title">Tweet #19 · codingstrain</text>
+    <text x="28" y="100" class="body">Spring Kafka producer in 5 lines:</text>
+  <rect x="24" y="120" width="512" height="136" rx="6" class="code-bg"/>
+    <text x="36" y="138" class="code">@Service</text>
+    <text x="36" y="156" class="code">public class MessageProducer {</text>
+    <text x="36" y="174" class="code">  public void send(String message) {</text>
+    <text x="36" y="192" class="code">    kafkaTemplate.send(&quot;demo-topic&quot;, message);</text>
+    <text x="36" y="210" class="code">  }</text>
+    <text x="36" y="228" class="code">}</text>
+  <text x="20" y="296" class="footer">Module: spring-kafka-demo  #SpringBoot #Kafka</text>
+</svg>

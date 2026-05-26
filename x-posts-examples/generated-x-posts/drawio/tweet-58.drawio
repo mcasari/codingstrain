@@ -1,0 +1,18 @@
+<mxfile host="app.diagrams.net" agent="codingstrain-generator" version="22.1.0" type="device">
+  <diagram id="5f74e65e-e35d-4a9b-a2be-abd9d0b3a538" name="Tweet 58">
+    <mxGraphModel pageWidth="600" pageHeight="280">
+      <root>
+        <mxCell id="0"/><mxCell id="1" parent="0"/>
+        <mxCell id="code" value="// 🧵 Kafka with Spring Boot in under 10 minutes — producer + consumer code" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        </mxCell>
+        <mxCell id="hdr" value="Tweet #58 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-kafka-demo  #SpringBoot #Kafka" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
+          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

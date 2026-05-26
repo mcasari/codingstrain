@@ -1,0 +1,18 @@
+<mxfile host="app.diagrams.net" agent="codingstrain-generator" version="22.1.0" type="device">
+  <diagram id="e4cd938d-6ebc-4513-8609-fabf264ebf26" name="Tweet 13">
+    <mxGraphModel pageWidth="600" pageHeight="280">
+      <root>
+        <mxCell id="0"/><mxCell id="1" parent="0"/>
+        <mxCell id="code" value="public interface UserRepository&amp;#xa;    extends JpaRepository&lt;User, Long&gt; {}" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="60" width="520" height="180" as="geometry"/>
+        </mxCell>
+        <mxCell id="hdr" value="Tweet #13 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: sql-annotation-demo  #SpringBoot #Java" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
+          <mxGeometry x="20" y="250" width="520" height="24" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

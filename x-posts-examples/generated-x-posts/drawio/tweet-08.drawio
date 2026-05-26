@@ -1,0 +1,18 @@
+<mxfile host="app.diagrams.net" agent="codingstrain-generator" version="22.1.0" type="device">
+  <diagram id="936363e2-45d3-40cb-80f7-399040af2226" name="Tweet 8">
+    <mxGraphModel pageWidth="600" pageHeight="344">
+      <root>
+        <mxCell id="0"/><mxCell id="1" parent="0"/>
+        <mxCell id="code" value="// Production error JSON checklist:&amp;#xa;// ✅ timestamp&amp;#xa;// ✅ status&amp;#xa;// ✅ error (short code)&amp;#xa;// ✅ message (user-safe)&amp;#xa;// ✅ path&amp;#xa;//&amp;#xa;// Never leak SQL or internal hostnames." style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="60" width="520" height="244" as="geometry"/>
+        </mxCell>
+        <mxCell id="hdr" value="Tweet #8 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: springboot-error-handling-demo  #SpringBoot" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
+          <mxGeometry x="20" y="314" width="520" height="24" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="440" viewBox="0 0 560 440">
+  <defs>
+    <style>
+      .card { fill: #15202b; stroke: #38444d; stroke-width: 2; }
+      .header { fill: #1DA1F2; }
+      .title { fill: #ffffff; font: bold 14px sans-serif; }
+      .body { fill: #e7e9ea; font: 13px sans-serif; }
+      .code { fill: #89cff0; font: 11px monospace; }
+      .code-bg { fill: #192734; stroke: #38444d; stroke-width: 1; }
+      .footer { fill: #71767b; font: 10px sans-serif; }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="560" height="440" rx="12" class="card"/>
+  <rect x="0" y="0" width="560" height="44" rx="12" class="header"/>
+  <rect x="0" y="32" width="560" height="12" class="header"/>
+  <text x="20" y="28" class="title">Tweet #6 · codingstrain</text>
+    <text x="28" y="100" class="body">Stop returning stack traces to clients.</text>
+    <text x="28" y="122" class="body"></text>
+    <text x="28" y="144" class="body">Return structure: timestamp, status, error,</text>
+    <text x="28" y="166" class="body">message, path.</text>
+    <text x="28" y="188" class="body"></text>
+    <text x="28" y="210" class="body">Pair with @ExceptionHandler + @ControllerAdvice.</text>
+  <rect x="24" y="230" width="512" height="154" rx="6" class="code-bg"/>
+    <text x="36" y="248" class="code">public class ErrorResponse {</text>
+    <text x="36" y="266" class="code">  private Instant timestamp;</text>
+    <text x="36" y="284" class="code">  private int status;</text>
+    <text x="36" y="302" class="code">  private String error;</text>
+    <text x="36" y="320" class="code">  private String message;</text>
+    <text x="36" y="338" class="code">  private String path;</text>
+    <text x="36" y="356" class="code">}</text>
+  <text x="20" y="424" class="footer">Module: springboot-error-handling-demo  #SpringBoot</text>
+</svg>

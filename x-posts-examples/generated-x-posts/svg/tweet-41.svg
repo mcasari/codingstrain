@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="298" viewBox="0 0 560 298">
+  <defs>
+    <style>
+      .card { fill: #15202b; stroke: #38444d; stroke-width: 2; }
+      .header { fill: #1DA1F2; }
+      .title { fill: #ffffff; font: bold 14px sans-serif; }
+      .body { fill: #e7e9ea; font: 13px sans-serif; }
+      .code { fill: #89cff0; font: 11px monospace; }
+      .code-bg { fill: #192734; stroke: #38444d; stroke-width: 1; }
+      .footer { fill: #71767b; font: 10px sans-serif; }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="560" height="298" rx="12" class="card"/>
+  <rect x="0" y="0" width="560" height="44" rx="12" class="header"/>
+  <rect x="0" y="32" width="560" height="12" class="header"/>
+  <text x="20" y="28" class="title">Tweet #41 · codingstrain</text>
+    <text x="28" y="100" class="body">Builder pattern without Lombok — required fields</text>
+    <text x="28" y="122" class="body">in constructor, optional fields chain.</text>
+  <rect x="24" y="142" width="512" height="100" rx="6" class="code-bg"/>
+    <text x="36" y="160" class="code">User user = new User.Builder(&quot;Mary&quot;, 30)</text>
+    <text x="36" y="178" class="code">  .email(&quot;mary@example.com&quot;)</text>
+    <text x="36" y="196" class="code">  .address(&quot;Italy&quot;)</text>
+    <text x="36" y="214" class="code">  .build();</text>
+  <text x="20" y="282" class="footer">Module: java-examples/BuilderDemo  #Java</text>
+</svg>

@@ -1,0 +1,18 @@
+<mxfile host="app.diagrams.net" agent="codingstrain-generator" version="22.1.0" type="device">
+  <diagram id="9a414941-58b8-4854-ac02-243f1cca3ead" name="Tweet 48">
+    <mxGraphModel pageWidth="600" pageHeight="326">
+      <root>
+        <mxCell id="0"/><mxCell id="1" parent="0"/>
+        <mxCell id="code" value="// Spring Boot 2.7 + Java 17 in codingstrain — run any module with:&amp;#xa;//&amp;#xa;// mvn spring-boot:run&amp;#xa;//&amp;#xa;// Each folder is an independent lesson.&amp;#xa;//&amp;#xa;// codingstrain.com" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="60" width="520" height="226" as="geometry"/>
+        </mxCell>
+        <mxCell id="hdr" value="Tweet #48 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: codingstrain  #SpringBoot #Java" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
+          <mxGeometry x="20" y="296" width="520" height="24" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="374" viewBox="0 0 560 374">
+  <defs>
+    <style>
+      .card { fill: #15202b; stroke: #38444d; stroke-width: 2; }
+      .header { fill: #1DA1F2; }
+      .title { fill: #ffffff; font: bold 14px sans-serif; }
+      .body { fill: #e7e9ea; font: 13px sans-serif; }
+      .code { fill: #89cff0; font: 11px monospace; }
+      .code-bg { fill: #192734; stroke: #38444d; stroke-width: 1; }
+      .footer { fill: #71767b; font: 10px sans-serif; }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="560" height="374" rx="12" class="card"/>
+  <rect x="0" y="0" width="560" height="44" rx="12" class="header"/>
+  <rect x="0" y="32" width="560" height="12" class="header"/>
+  <text x="20" y="28" class="title">Tweet #10 · codingstrain</text>
+    <text x="28" y="100" class="body">Nested config + validation:</text>
+    <text x="28" y="122" class="body"></text>
+    <text x="28" y="144" class="body">@Valid on nested objects is easy to forget.</text>
+  <rect x="24" y="164" width="512" height="154" rx="6" class="code-bg"/>
+    <text x="36" y="182" class="code">@Valid</text>
+    <text x="36" y="200" class="code">private Security security;</text>
+    <text x="36" y="218" class="code"></text>
+    <text x="36" y="236" class="code">public static class Security {</text>
+    <text x="36" y="254" class="code">  @NotBlank private String username;</text>
+    <text x="36" y="272" class="code">  @NotBlank private String password;</text>
+    <text x="36" y="290" class="code">}</text>
+  <text x="20" y="358" class="footer">Module: spring-boot-validated-config  #SpringBoot</text>
+</svg>

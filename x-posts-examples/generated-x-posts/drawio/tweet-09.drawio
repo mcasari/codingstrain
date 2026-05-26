@@ -1,0 +1,18 @@
+<mxfile host="app.diagrams.net" agent="codingstrain-generator" version="22.1.0" type="device">
+  <diagram id="32a73a7e-9923-471b-b68a-3c66a376dee3" name="Tweet 9">
+    <mxGraphModel pageWidth="600" pageHeight="308">
+      <root>
+        <mxCell id="0"/><mxCell id="1" parent="0"/>
+        <mxCell id="code" value="@Validated&amp;#xa;@ConfigurationProperties(prefix = &quot;app&quot;)&amp;#xa;public class AppProperties {&amp;#xa;  @NotBlank private String name;&amp;#xa;  @Min(1) @Max(60) private Integer timeout;&amp;#xa;}" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="60" width="520" height="208" as="geometry"/>
+        </mxCell>
+        <mxCell id="hdr" value="Tweet #9 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-boot-validated-config  #SpringBoot" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
+          <mxGeometry x="20" y="278" width="520" height="24" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

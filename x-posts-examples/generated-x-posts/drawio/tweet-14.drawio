@@ -1,0 +1,18 @@
+<mxfile host="app.diagrams.net" agent="codingstrain-generator" version="22.1.0" type="device">
+  <diagram id="b6c8129a-1129-4b5e-8b14-4b45b624ee11" name="Tweet 14">
+    <mxGraphModel pageWidth="600" pageHeight="326">
+      <root>
+        <mxCell id="0"/><mxCell id="1" parent="0"/>
+        <mxCell id="code" value="@SpringBootTest&amp;#xa;@Sql(&quot;/test-data.sql&quot;)&amp;#xa;class UserRepositoryTest {&amp;#xa;  @Test void testUserLoadedFromSql() {&amp;#xa;    assertEquals(&quot;Alice&quot;, repo.findById(1L).orElseThrow().getName());&amp;#xa;  }&amp;#xa;}" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="60" width="520" height="226" as="geometry"/>
+        </mxCell>
+        <mxCell id="hdr" value="Tweet #14 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: sql-annotation-demo  #SpringBoot #Testing" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
+          <mxGeometry x="20" y="296" width="520" height="24" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

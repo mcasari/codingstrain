@@ -1,0 +1,18 @@
+<mxfile host="app.diagrams.net" agent="codingstrain-generator" version="22.1.0" type="device">
+  <diagram id="bc58a828-bb1b-4b68-a42e-143d279faa02" name="Tweet 3">
+    <mxGraphModel pageWidth="600" pageHeight="290">
+      <root>
+        <mxCell id="0"/><mxCell id="1" parent="0"/>
+        <mxCell id="code" value="@GetMapping&amp;#xa;public PagedResponse&lt;User&gt; getUsers(Pageable pageable) {&amp;#xa;  Page&lt;User&gt; page = repository.findAll(pageable);&amp;#xa;  return new PagedResponse&lt;&gt;(page.getContent(), ...);&amp;#xa;}" style="rounded=1;fillColor=#011627;fontColor=#d6deeb;fontFamily=Courier New;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="60" width="520" height="190" as="geometry"/>
+        </mxCell>
+        <mxCell id="hdr" value="Tweet #3 · codingstrain" style="text;fontSize=14;fontStyle=1;fontColor=#333;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="400" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="ftr" value="Module: spring-boot-paged-rest-example  #SpringBoot" style="text;fontSize=10;fontColor=#666;" vertex="1" parent="1">
+          <mxGeometry x="20" y="260" width="520" height="24" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

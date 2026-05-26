@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="214" viewBox="0 0 760 214">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea"/>
+      <stop offset="100%" style="stop-color:#764ba2"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <style>
+      .kw { fill: #c792ea; font-family: ui-monospace, 'Cascadia Code', 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size: 14px; }
+      .ann { fill: #ffcb6b; font-family: ui-monospace, 'Cascadia Code', 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size: 14px; }
+      .str { fill: #c3e88d; font-family: ui-monospace, 'Cascadia Code', 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size: 14px; }
+      .typ { fill: #ffcb6b; font-family: ui-monospace, 'Cascadia Code', 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size: 14px; }
+      .met { fill: #82aaff; font-family: ui-monospace, 'Cascadia Code', 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size: 14px; }
+      .com { fill: #637777; font-family: ui-monospace, 'Cascadia Code', 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size: 14px; }
+      .num { fill: #f78c6c; font-family: ui-monospace, 'Cascadia Code', 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size: 14px; }
+      .pun { fill: #7fdbca; font-family: ui-monospace, 'Cascadia Code', 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size: 14px; }
+      .txt { fill: #d6deeb; font-family: ui-monospace, 'Cascadia Code', 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size: 14px; }
+      .ln { fill: #4b6479; font-family: ui-monospace, 'Cascadia Code', 'Fira Code', 'JetBrains Mono', Consolas, monospace; font-size: 14px; text-anchor: end; }
+      .wm { fill: rgba(255,255,255,0.55); font-family: system-ui, sans-serif; font-size: 11px; }
+      .cap { fill: rgba(255,255,255,0.75); font-family: system-ui, sans-serif; font-size: 12px; }
+    </style>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  <g filter="url(#shadow)">
+    <rect x="40" y="40" width="680" height="98" rx="10" fill="#21252b"/>
+    <rect x="40" y="40" width="680" height="36" rx="10" fill="#21252b"/>
+    <rect x="40" y="66" width="680" height="10" fill="#21252b"/>
+    <circle cx="60" cy="58" r="6" fill="#ff5f56"/>
+    <circle cx="80" cy="58" r="6" fill="#ffbd2e"/>
+    <circle cx="100" cy="58" r="6" fill="#27c93f"/>
+    <rect x="40" y="76" width="680" height="62" rx="0" fill="#011627"/>
+    <rect x="40" y="128" width="680" height="10" rx="10" fill="#011627"/>
+  </g>
+  <text x="96" y="112" class="ln">1</text>
+  <text x="108.0" y="112" class="typ">LinkedHashMap</text>
+  <text x="217.8" y="112" class="pun">&lt;</text>
+  <text x="226.3" y="112" class="typ">Integer</text>
+  <text x="285.4" y="112" class="pun">,</text>
+  <text x="293.9" y="112" class="txt"> </text>
+  <text x="302.3" y="112" class="typ">String</text>
+  <text x="353.0" y="112" class="pun">&gt;</text>
+  <text x="361.5" y="112" class="txt"> </text>
+  <text x="369.9" y="112" class="txt">map</text>
+  <text x="395.3" y="112" class="txt"> </text>
+  <text x="403.7" y="112" class="pun">=</text>
+  <text x="412.2" y="112" class="txt"> </text>
+  <text x="420.6" y="112" class="kw">new</text>
+  <text x="446.0" y="112" class="txt"> </text>
+  <text x="454.4" y="112" class="typ">LinkedHashMap</text>
+  <text x="564.3" y="112" class="pun">&lt;</text>
+  <text x="572.8" y="112" class="pun">&gt;</text>
+  <text x="581.2" y="112" class="pun">(</text>
+  <text x="589.7" y="112" class="pun">)</text>
+  <text x="598.1" y="112" class="pun">;</text>
+  <text x="40" y="200" class="cap">Tweet #42 · java-miscellaneous-tips  #Java</text>
+  <text x="720" y="200" class="wm" text-anchor="end">codingstrain · carbon style</text>
+</svg>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="342" viewBox="0 0 560 342">
+  <defs>
+    <style>
+      .card { fill: #15202b; stroke: #38444d; stroke-width: 2; }
+      .header { fill: #1DA1F2; }
+      .title { fill: #ffffff; font: bold 14px sans-serif; }
+      .body { fill: #e7e9ea; font: 13px sans-serif; }
+      .code { fill: #89cff0; font: 11px monospace; }
+      .code-bg { fill: #192734; stroke: #38444d; stroke-width: 1; }
+      .footer { fill: #71767b; font: 10px sans-serif; }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="560" height="342" rx="12" class="card"/>
+  <rect x="0" y="0" width="560" height="44" rx="12" class="header"/>
+  <rect x="0" y="32" width="560" height="12" class="header"/>
+  <text x="20" y="28" class="title">Tweet #38 · codingstrain</text>
+    <text x="28" y="100" class="body">@MockBean stubs can leak between tests unless</text>
+    <text x="28" y="122" class="body">reset.</text>
+    <text x="28" y="144" class="body"></text>
+    <text x="28" y="166" class="body">Use @DirtiesContext or Mockito reset.</text>
+  <rect x="24" y="186" width="512" height="100" rx="6" class="code-bg"/>
+    <text x="36" y="204" class="code">@Test @Order(1) void testA() {</text>
+    <text x="36" y="222" class="code">  when(myService.getData()).thenReturn(&quot;A&quot;);</text>
+    <text x="36" y="240" class="code">}</text>
+    <text x="36" y="258" class="code">@Test @Order(2) void testB() { /* still &quot;A&quot;? */ }</text>
+  <text x="20" y="326" class="footer">Module: spring-mock-reset-example  #SpringBoot #Testing</text>
+</svg>
