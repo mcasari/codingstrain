@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  WordPress WXR 1.2 — Tools → Import → WordPress → upload this file.
+  Content uses Gutenberg block markup (paragraph, heading, code, list, html).
+  Re-import replaces draft if you delete the previous import first.
+-->
+<rss version="2.0"
+  xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
+  xmlns:content="http://wordpress.org/export/1.2/content/"
+  xmlns:wfw="http://wellformedweb.org/CommentAPI/1/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:wp="http://wordpress.org/export/1.2/">
+
+<channel>
+  <title>codingstrain — Java 17 Sealed Classes</title>
+  <link>https://codingstrain.local</link>
+  <description>codingstrain article export</description>
+  <pubDate>Wed, 27 May 2026 21:30:21 +0000</pubDate>
+  <language>en-US</language>
+  <wp:wxr_version>1.2</wp:wxr_version>
+  <wp:base_site_url>https://codingstrain.local</wp:base_site_url>
+  <wp:base_blog_url>https://codingstrain.local</wp:base_blog_url>
+
+  <wp:author>
+    <wp:author_id>1</wp:author_id>
+    <wp:author_login><![CDATA[codingstrain]]></wp:author_login>
+    <wp:author_email><![CDATA[author@example.com]]></wp:author_email>
+    <wp:author_display_name><![CDATA[codingstrain]]></wp:author_display_name>
+    <wp:author_first_name><![CDATA[]]></wp:author_first_name>
+    <wp:author_last_name><![CDATA[]]></wp:author_last_name>
+  </wp:author>
+
+  <item>
+    <title><![CDATA[Java 17 Sealed Classes: Close Your Inheritance Graph with permits]]></title>
+    <link>https://codingstrain.local/?p=61001</link>
+    <pubDate>Wed, 27 May 2026 21:30:21 +0000</pubDate>
+    <dc:creator><![CDATA[codingstrain]]></dc:creator>
+    <guid isPermaLink="false">https://codingstrain.local/?p=61001</guid>
+    <description></description>
+    <content:encoded><![CDATA[<!-- wp:paragraph -->
+<p><em>Estimated reading time: 7 minutes · Sample project: <code>x-posts-examples/java-17-sealed-classes</code></em></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>In object-oriented Java, inheritance has always been <strong>open by default</strong>: any class can extend another (unless you mark it <code>final</code>). That flexibility is powerful, but it creates a long-term problem for library authors and domain modelers: <strong>you never know the full set of subtypes</strong> that might exist at runtime. Framework code that switches on types, serializes polymorphic graphs, or validates business rules cannot rely on the compiler to catch a missing case when someone adds <code>class Surprise extends Payment</code> in another module six months later.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Sealed classes</strong>, delivered in <strong>Java 17</strong> (JEP 409), flip part of that model: you can declare a <strong>closed hierarchy</strong>—a fixed list of permitted subtypes—using the <code>sealed</code> modifier and a <code>permits</code> clause. The compiler then enforces membership and modifier rules at compile time. Together with pattern matching (standardized in later Java releases), sealed types are one of the most practical language features for modeling algebraic data shapes in plain Java without extra frameworks.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This article walks through how <code>permits</code> works, what the three permitted-subclass modifiers mean, how nesting and escape hatches fit together, and how to try a runnable example you can clone from the codingstrain repository.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">What changes with sealed types?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Consider a small geometry API. You want exactly three families of shapes under a common <code>Shape</code> abstraction: circles, rectangles (with known subtypes), and a “fancy” rectangle branch that third parties may extend. Without sealed types, you document the intended hierarchy in Javadoc and hope teams respect it. With sealed types, you encode the contract in the language:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code lang="java" class="language-java">public abstract sealed class Shape
+    permits Circle, Rectangle, FancyRectangle {
+
+    public abstract double area();
+    public abstract String label();
+}</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p>Only <code>Circle</code>, <code>Rectangle</code>, and <code>FancyRectangle</code> may extend <code>Shape</code>. Any other declaration—<code>class Triangle extends Shape</code>—is a <strong>compile-time error</strong>, even if the class is in another package and even if it is never instantiated.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>That is the core idea: <strong>the permitted subclasses are part of the API contract</strong>, checked by <code>javac</code>, not merely a team convention.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">The permits clause</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The <code>permits</code> list names every <strong>direct</strong> subclass of the sealed class or interface. It is not transitive: if <code>Rectangle</code> is permitted by <code>Shape</code>, the subtypes of <code>Rectangle</code> are governed by <code>Rectangle</code>’s own <code>permits</code> clause (when <code>Rectangle</code> is itself sealed).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>You can omit <code>permits</code> when all permitted subclasses are declared in the <strong>same source file</strong> as the sealed type; the compiler infers them. In real projects, explicit <code>permits</code> is clearer and survives refactoring across files.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Sealed types work on <strong>classes and interfaces</strong>. Sealed interfaces are especially useful for state machines, command/event models, and result types (<code>Success | Failure</code>) where the set of variants must stay small and known.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Three modifiers for permitted subtypes</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Every class listed in a <code>permits</code> clause must be declared with exactly one of three modifiers. This is a second, easy-to-miss compiler rule:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<table>
+<thead>
+<tr><th>Modifier</th><th>Meaning</th><th>Typical use</th></tr>
+</thead>
+<tbody>
+<tr><td><code>final</code></td><td>No further subclasses.</td><td>Leaf variants (<code>Circle</code>, <code>Square</code>).</td></tr>
+<tr><td><code>sealed</code></td><td>Another closed level; must declare its own <code>permits</code>.</td><td>Intermediate grouping (<code>Rectangle</code> → <code>Square</code>, <code>Oblong</code>).</td></tr>
+<tr><td><code>non-sealed</code></td><td>Stops sealing here; ordinary open inheritance resumes below.</td><td>Extension point for plugins or user code.</td></tr>
+</tbody>
+</table>
+<!-- /wp:html -->
+
+<!-- wp:paragraph -->
+<p>If you list a class in <code>permits</code> but forget all three modifiers, compilation fails with a message that the permitted subtype must be <code>final</code>, <code>sealed</code>, or <code>non-sealed</code>. That prevents “leaky” hierarchies where a permitted class could still be extended arbitrarily.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Building a nested hierarchy: Shape example</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The following structure matches the diagram and sample project in <code>x-posts-examples/java-17-sealed-classes</code>:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>Shape (abstract sealed)
+├── Circle (final)
+├── Rectangle (sealed, permits Square, Oblong)
+│   ├── Square (final)
+│   └── Oblong (final)
+└── FancyRectangle (non-sealed)
+    └── RoundedRectangle (ordinary class — not in Shape.permits)</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p><strong>Circle</strong> is a leaf: <code>final class Circle extends Shape</code> closes the branch.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Rectangle</strong> is a nested sealed type:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code lang="java" class="language-java">public sealed class Rectangle extends Shape permits Square, Oblong {
+    // width, height, area() ...
+}</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p>Only <code>Square</code> and <code>Oblong</code> may extend <code>Rectangle</code>. Both are <code>final</code>, so the rectangle family is fully closed.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>FancyRectangle</strong> uses the escape hatch:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code lang="java" class="language-java">public non-sealed class FancyRectangle extends Shape {
+    // ...
+}</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p>Because <code>FancyRectangle</code> is <code>non-sealed</code>, any class may extend it—<code>RoundedRectangle</code> does not appear in <code>Shape</code>’s <code>permits</code> list and that is legal. The global hierarchy is closed at the <code>Shape</code> level (only three direct children), but the subtree under <code>FancyRectangle</code> is open again for frameworks or customer extensions.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Choosing <code>non-sealed</code> is deliberate: you keep a stable, enumerable set of top-level variants while allowing unknown subtypes <em>below</em> one branch—similar to how <code>Exception</code> is open but many domain enums are not.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">What the compiler verifies</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>At compile time, the compiler checks at least the following:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><li><strong>Membership:</strong> every direct subclass of a sealed type appears in <code>permits</code> (or is inferred in the same file).</li>
+<li><strong>Modifier on permitted types:</strong> each permitted class is <code>final</code>, <code>sealed</code>, or <code>non-sealed</code>.</li>
+<li><strong>Sealed subclasses with children:</strong> a <code>sealed</code> class that has subclasses must declare <code>permits</code> (or same-file inference).</li>
+<li><strong>No stray extenders:</strong> a class not in the list cannot extend the sealed type.</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>These checks turn design rules into errors you see in the IDE, not surprises in production when a new JAR appears on the classpath.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Why sealed hierarchies matter for application design</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><strong>Domain modeling.</strong> Payment types, order statuses, notification channels, and AST node kinds are classic “sum type” shapes: a value is exactly one of several alternatives. Sealed classes express that intent in Java without bolting on extra libraries.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Exhaustive control flow.</strong> When the compiler knows all subtypes of a sealed type, it can verify that a <code>switch</code> or pattern match covers every case. In Java 21 and later, pattern matching for <code>switch</code> is standard; on Java 17 you still benefit from clearer APIs and from <code>instanceof</code> chains where the set of types is documented and enforced. Fewer <code>default</code> branches that silently swallow new variants means fewer production bugs when someone adds <code>class CryptoPayment extends Payment</code> without updating the fee calculator.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>API stability.</strong> Library maintainers can evolve a sealed hierarchy additively (by adding a new permitted subtype in a minor release) while making it obvious to consumers that the set is curated. Contrast that with open inheritance, where any public non-final class is implicitly extensible forever.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Security and auditing.</strong> Closed hierarchies simplify reasoning about deserialization, reflection, and policy checks: “only these classes may represent a <code>Credential</code>.”</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Common mistakes and compile errors</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><strong>Undeclared subclass.</strong></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code lang="java" class="language-java">class Triangle extends Shape { } // error: cannot extend sealed Shape</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p><strong>Permitted but missing modifier.</strong></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code lang="java" class="language-java">// abstract sealed class Shape permits Bad { }
+class Bad extends Shape { } // error: must be final, sealed, or non-sealed</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p><strong>Sealed intermediate without permits.</strong> If <code>Rectangle</code> has subclasses but no <code>permits</code> clause (and they are not in the same file), compilation fails.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Assuming permits is transitive.</strong> Listing <code>Rectangle</code> under <code>Shape</code> does not automatically permit <code>Square</code>; <code>Rectangle</code> must seal its own children explicitly.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Runnable sample and diagram</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The codingstrain repo includes a minimal Maven module you can run locally:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>cd x-posts-examples/java-17-sealed-classes
+mvn -q compile exec:java</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p>The demo builds several shapes, prints area and a short description, and illustrates how <code>instanceof</code> dispatch reads when the hierarchy is known. Source files live under <code>com.codingstrain.sealed</code>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>For a visual overview, open the diagrams.net file <code>x-posts-examples/diagrams/java-17-sealed-classes.drawio</code> in <a href="https://app.diagrams.net/">diagrams.net</a> (export PNG for your blog featured image). The diagram color-codes <code>final</code>, <code>sealed</code>, and <code>non-sealed</code> nodes and summarizes compiler rules in one view—useful as the hero image for this post.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Sealed classes vs other approaches</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><strong>Enums</strong> work when variants are singletons without per-case fields or when behavior fits in enum constants. Sealed classes fit when each variant carries different state (<code>Circle</code> has radius, <code>Oblong</code> has width and height).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Final-only base classes</strong> prevent extension entirely. Sealed types are the middle ground: curated extension, not zero extension.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Open inheritance + documentation</strong> is the status quo sealed types improve on; the compiler simply did not participate before Java 17.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Practical guidelines</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><li>Start with the <strong>smallest closed set</strong> that models your domain; add variants deliberately.</li>
+<li>Use <code>final</code> for true leaves, <code>sealed</code> for grouping, and <code>non-sealed</code> only where you genuinely need an open plugin line.</li>
+<li>Keep <code>permits</code> explicit in multi-file modules for readability and code review.</li>
+<li>Pair sealed roots with exhaustive <code>switch</code> (Java 21+) or disciplined <code>instanceof</code> handling in libraries still on 17.</li>
+<li>Document migration: adding a permitted subtype is a source-compatible change for callers but may require updating switches—treat it like an API change.</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading">Conclusion</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Java 17 sealed classes turn “these are all the subtypes” from a comment into a <strong>compile-time guarantee</strong>. The <code>permits</code> clause defines who may join the hierarchy; <code>final</code>, <code>sealed</code>, and <code>non-sealed</code> describe what each member may do next. Nested sealing models structured domains; <code>non-sealed</code> preserves escape hatches where openness is still required.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If you model payments, events, AST nodes, or API results as class hierarchies, sealing the root (and sealing intermediate groupings where it helps) is one of the highest-leverage Java 17 upgrades you can adopt without touching frameworks or build tools. Clone the sample project, break the rules on purpose to see the compiler errors, and export the hierarchy diagram for your next post—you will remember the three modifiers faster than any cheat sheet.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Further reading:</strong> JEP 409 (Sealed Classes), OpenJDK documentation on pattern matching for <code>switch</code> (Java 21+), and the <code>java-17-sealed-classes</code> module in codingstrain for hands-on code.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+    <excerpt:encoded><![CDATA[Sealed types let you declare exactly which classes may extend a base type. The compiler enforces permits and requires every permitted subtype to be final, sealed, or non-sealed.]]></excerpt:encoded>
+    <wp:post_id>61001</wp:post_id>
+    <wp:post_date><![CDATA[2026-05-27 21:30:21]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-05-27 21:30:21]]></wp:post_date_gmt>
+    <wp:post_modified><![CDATA[2026-05-27 21:30:21]]></wp:post_modified>
+    <wp:post_modified_gmt><![CDATA[2026-05-27 21:30:21]]></wp:post_modified_gmt>
+    <wp:comment_status><![CDATA[open]]></wp:comment_status>
+    <wp:ping_status><![CDATA[open]]></wp:ping_status>
+    <wp:post_name><![CDATA[java-17-sealed-classes-permits]]></wp:post_name>
+    <wp:status><![CDATA[draft]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[post]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <category domain="category" nicename="java"><![CDATA[Java]]></category>
+    <category domain="post_tag" nicename="java-17"><![CDATA[Java 17]]></category>
+    <category domain="post_tag" nicename="sealed-classes"><![CDATA[sealed classes]]></category>
+    <category domain="post_tag" nicename="permits"><![CDATA[permits]]></category>
+    <category domain="post_tag" nicename="object-oriented-design"><![CDATA[object-oriented design]]></category>
+    <category domain="post_tag" nicename="pattern-matching"><![CDATA[pattern matching]]></category>
+  </item>
+
+</channel>
+</rss>
