@@ -596,6 +596,7 @@ def build_index(tweets: list[dict]) -> str:
     .asset-label {{ font-size: 0.85rem; color: #536471; margin: 0.75rem 0 0.35rem; }}
     .asset-img {{ display: block; max-width: 100%; border-radius: 8px; margin-bottom: 0.5rem; border: 1px solid #eff3f4; }}
     .codepen-wrap {{ margin: 0.5rem 0 1rem; border-radius: 8px; overflow: hidden; border: 1px solid #eff3f4; }}
+    .codepen-wrap--large {{ max-width: 100%; min-height: 640px; }}
     .codepen-links {{ font-size: 0.8rem; margin: 0.35rem 0 0; padding: 0 0.5rem 0.5rem; }}
     .codepen-links a {{ color: #1d9bf0; }}
   </style>
