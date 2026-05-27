@@ -3756,6 +3756,81 @@ Example (codingstrain libraryapp): books-service protects calls to author-servic
         <a href="sources/tweet-60.java" download>Source .java</a>
       </p>
     </article>
+    <article>
+      <h2>Tweet #61</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-61-diagram.png" alt="Diagram 61" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 61 — java-17-sealed-classes", "description": "Spring Boot / Java snippet from codingstrain (java-17-sealed-classes)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="380"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+</pre>
+          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;java-17-sealed-classes&lt;/p&gt;
+&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;// java-17-sealed-classes — closed hierarchy
+
+public abstract sealed class Shape permits Circle, Rectangle, FancyRectangle {
+    public abstract double area();
+}
+
+public final class Circle extends Shape { /* leaf — no further subclasses */ }
+
+public sealed class Rectangle extends Shape permits Square, Oblong { }
+
+public final class Square extends Rectangle { }
+
+public non-sealed class FancyRectangle extends Shape { }
+// RoundedRectangle extends FancyRectangle — not in Shape.permits (open branch)&lt;/code&gt;&lt;/pre&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-61.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">💡 Java 17 — sealed types close the inheritance graph with `permits`.
+
+✅ Only listed subtypes may extend the sealed class/interface
+✅ Each permitted subtype must be `final`, `sealed`, or `non-sealed`
+✅ `non-sealed` is the escape hatch — inheritance opens again below that branch
+#Java #Java17</div>
+      <p class="links">
+        <a href="drawio/tweet-61.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-61.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-61.java" download>Source .java</a>
+      </p>
+    </article>
   <script async src="https://public.codepenassets.com/embed/index.js"></script>
 </body>
 </html>

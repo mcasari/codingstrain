@@ -4,7 +4,10 @@
 from __future__ import annotations
 
 import re
+from pathlib import Path
 from typing import Any
+
+_DIAGRAMS_DIR = Path(__file__).resolve().parent.parent / "diagrams"
 
 from drawio_builder import (
     C,
@@ -50,7 +53,7 @@ def _bullets(tweet: dict, max_n: int = 3) -> list[str]:
 
 def infer_diagram_type(tweet: dict) -> str:
     explicit = tweet.get("diagram_type")
-    if explicit in ("eureka", "circuit_breaker"):
+    if explicit in ("eureka", "circuit_breaker", "sealed_classes"):
         return explicit
 
     module = tweet.get("module", "").lower()
@@ -92,6 +95,8 @@ def infer_diagram_type(tweet: dict) -> str:
         return "actuator"
     if "codingstrain" in module and tweet["id"] in (48, 55, 56):
         return "repo"
+    if "java-17-sealed" in module or ("sealed" in text and "permits" in text):
+        return "sealed_classes"
     if "java-examples" in module or "java-miscellaneous" in module or "builder" in text:
         return "java_pattern"
     if "restcontroller" in code or "getmapping" in code or "minimal-rest" in module or "paged-rest" in module:
@@ -163,6 +168,11 @@ def _concept_diagram(tweet: dict) -> str:
     return b.build()
 
 
+def build_sealed_classes_drawio() -> str:
+    path = _DIAGRAMS_DIR / "java-17-sealed-classes.drawio"
+    return path.read_text(encoding="utf-8")
+
+
 def build_tweet_diagram(tweet: dict) -> str:
     kind = infer_diagram_type(tweet)
 
@@ -170,6 +180,8 @@ def build_tweet_diagram(tweet: dict) -> str:
         return build_eureka_drawio()
     if kind == "circuit_breaker":
         return build_circuit_breaker_drawio()
+    if kind == "sealed_classes":
+        return build_sealed_classes_drawio()
 
     builders: dict[str, Any] = {
         "rest": lambda: _pipeline(
