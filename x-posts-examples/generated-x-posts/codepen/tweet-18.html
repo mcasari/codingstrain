@@ -5,52 +5,108 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Tweet 18 — CodePen</title>
   <style>
-    body { font-family: system-ui, sans-serif; margin: 2rem; background: #f7f9f9; }
-    h1 { font-size: 1.1rem; color: #536471; }
-    .codepen-wrap { max-width: 760px; }
+    html, body { margin: 0; height: 100%; }
+    body { font-family: system-ui, sans-serif; background: #f7f9f9; display: flex; flex-direction: column; }
+    h1 { font-size: 1rem; color: #536471; margin: 0.5rem 1rem; flex-shrink: 0; }
+    .codepen-wrap { flex: 1; display: flex; flex-direction: column; max-width: none; width: 100%; min-height: 0; }
+    .codepen-wrap .codepen { flex: 1; min-height: calc(100vh - 3rem); }
+    .codepen-links { margin: 0.35rem 1rem 0.5rem; flex-shrink: 0; }
+
   </style>
 </head>
 <body>
   <h1>Tweet #18 — <a href="https://codepen.io/">CodePen</a> prefill</h1>
-      <div class="codepen-wrap">
+      <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 18 — spring-streaming-demo", "description": "Spring Boot / Java snippet from codingstrain (spring-streaming-demo)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="300"
+             data-height="640"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
-          <pre data-lang="css">body {
+          <pre data-lang="css">html, body {
   margin: 0;
-  padding: 1rem 1.25rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  width: 100%;
+  height: 100%;
   min-height: 100vh;
   box-sizing: border-box;
 }
-.code-snippet {
-  margin: 0;
-  padding: 1.25rem 1.5rem;
-  background: #011627;
-  border-radius: 8px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
-  overflow: auto;
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: stretch;
+  padding: 0.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
-.code-snippet code {
-  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 13px;
-  line-height: 1.55;
-  color: #d6deeb;
-  white-space: pre;
+.carbon {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: calc(100vh - 1rem);
+  max-width: none;
+  border-radius: 10px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
 }
-.module-tag {
-  font-family: system-ui, sans-serif;
-  font-size: 11px;
-  color: #94a3b8;
-  margin: 0 0 0.75rem;
+.carbon-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 36px;
+  padding: 0 16px;
+  background: #252836;
+  flex-shrink: 0;
+}
+.carbon-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.carbon-dot.red { background: #ff5f56; }
+.carbon-dot.yellow { background: #ffbd2e; }
+.carbon-dot.green { background: #27c93f; }
+.carbon-module {
+  margin-left: auto;
+  font: 13px/1 system-ui, sans-serif;
+  color: #8b949e;
   letter-spacing: 0.02em;
 }
+.carbon-editor {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background: #011627;
+  padding: 1.5rem 2rem 1.75rem;
+  overflow: auto;
+}
+.carbon-editor pre {
+  margin: 0;
+  flex: 1;
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 18px;
+  line-height: 30px;
+  white-space: pre;
+  tab-size: 4;
+}
+.carbon-editor .kw { color: #c792ea; }
+.carbon-editor .ann { color: #ffb86c; }
+.carbon-editor .str { color: #c3e88d; }
+.carbon-editor .typ { color: #ffcb6b; }
+.carbon-editor .met { color: #82aaff; }
+.carbon-editor .com { color: #5c6370; }
+.carbon-editor .num { color: #f78c6c; }
+.carbon-editor .pun { color: #89ddff; }
+.carbon-editor .txt { color: #d6deeb; }
 </pre>
-          <pre data-lang="html">&lt;p class=&quot;module-tag&quot;&gt;spring-streaming-demo&lt;/p&gt;
-&lt;pre class=&quot;code-snippet&quot;&gt;&lt;code&gt;// Use @Transactional(readOnly = true) on read-only batch jobs.&lt;/code&gt;&lt;/pre&gt;</pre>
+          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-streaming-demo&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// 🚀Spring Boot: Use @Transactional(readOnly = true) on read-only batch jobs.&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;//&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// ✅ Use @Transactional(readOnly = true) on read-only batch jobs&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// ✅ Runnable sample: `spring-streaming-demo`&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// ✅ Architecture diagram + Carbon CodePen below&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// #SpringBoot #JavaDev&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-18.html" target="_blank" rel="noopener">Open pen preview</a>

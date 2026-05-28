@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <mxfile host="app.diagrams.net" agent="codingstrain" version="22.1.8" type="device">
-  <diagram id="4284fe2e-7f8a-44ab-8558-373aa4c264f9" name="Tweet 1 · Diagram">
+  <diagram id="b368fbbb-7f04-4813-a4f5-057bde2690cf" name="Tweet 1 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #1 · Your first REST API in 30 seconds with H2." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #1 · Spring Boot: Your first REST API in 30 seconds with H2." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-boot-minimal-rest-h2 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
         <mxCell id="5" value="REST API layers" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -22,12 +22,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="3296491b-0b6e-4f39-9705-8825f6a9c918" name="Tweet 2 · Diagram">
+  <diagram id="9cdcb8c8-ac33-45ac-8b11-3d04161b1fe9" name="Tweet 2 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #2 · Constructor injection beats field injection." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #2 · Spring Boot: Constructor injection beats field injection." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-boot-paged-rest-example · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
         <mxCell id="5" value="REST API layers" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -44,12 +44,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="b9a0955a-604a-4116-9ac4-9b22d99324be" name="Tweet 3 · Diagram">
+  <diagram id="431f67f6-2cb7-4ea0-a169-188d9dd28a9c" name="Tweet 3 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #3 · Pagination without boilerplate — use Pageable." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #3 · Spring Boot: Pagination without boilerplate — use Pageable." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-boot-paged-rest-example · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
         <mxCell id="5" value="REST API layers" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -66,12 +66,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="b38598a1-e331-4c7f-ba82-8aabe6d28573" name="Tweet 4 · Diagram">
+  <diagram id="275249d1-8430-467f-9f3c-cfa812f3b99c" name="Tweet 4 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #4 · @PathVariable vs @RequestParam — know the difference." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #4 · Spring Boot: @PathVariable vs @RequestParam — know the dif…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-boot-minimal-rest-h2 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
         <mxCell id="5" value="REST API layers" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -88,12 +88,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="8dc458e5-080c-4b6d-b4e2-f909320234d7" name="Tweet 5 · Diagram">
+  <diagram id="174144ed-83ff-437d-afc2-b41d653901ac" name="Tweet 5 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="460" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #5 · With @RestControllerAdvice you can handle specific types o…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #5 · Spring Boot: With @RestControllerAdvice you can handle spe…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="springboot-error-handling-demo · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="300" as="geometry"/></mxCell>
         <mxCell id="5" value="Global exception handling" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -109,12 +109,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="1db77a26-3581-4688-a32e-e64edf3252f3" name="Tweet 6 · Diagram">
+  <diagram id="25b600e4-1c18-4b96-9730-1252872207de" name="Tweet 6 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="460" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #6 · Stop returning stack traces to clients — return a stable J…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #6 · Spring Boot: Stop returning stack traces to clients — retu…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="springboot-error-handling-demo · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="300" as="geometry"/></mxCell>
         <mxCell id="5" value="Global exception handling" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -130,12 +130,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="c88a0ee8-c6d7-4432-8a17-971a30c11fa6" name="Tweet 7 · Diagram">
+  <diagram id="8a31c17f-7aba-4ae0-b456-4245622f803c" name="Tweet 7 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="460" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #7 · Always map exceptions to HTTP status + a safe JSON body." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #7 · Spring Boot: Always map exceptions to HTTP status + a safe…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="springboot-error-handling-demo · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="300" as="geometry"/></mxCell>
         <mxCell id="5" value="Global exception handling" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -151,12 +151,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="66fb2398-5a63-42ce-96a4-7c593f4abbe4" name="Tweet 8 · Diagram">
+  <diagram id="4f896fd2-b9f9-4d1c-af09-de90050b3352" name="Tweet 8 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="460" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #8 · Production error JSON checklist." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #8 · Spring Boot: Production error JSON checklist." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="springboot-error-handling-demo · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="300" as="geometry"/></mxCell>
         <mxCell id="5" value="Global exception handling" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -172,12 +172,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="8bb04c6f-fbf2-413c-b8b6-dd1261abe678" name="Tweet 9 · Diagram">
+  <diagram id="848b1958-b5ce-4204-bfdb-cddc9c3cef2d" name="Tweet 9 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #9 · Fail fast at startup with @Validated + @ConfigurationPrope…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #9 · Spring Boot: Fail fast at startup with @Validated + @Confi…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-boot-validated-config · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
         <mxCell id="5" value="Validated configuration" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -192,12 +192,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="196e41f3-4d1b-4901-a224-fa75cb7f4f5d" name="Tweet 10 · Diagram">
+  <diagram id="30725a39-e5db-40a7-95c4-c10a3bac0cfe" name="Tweet 10 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #10 · Use @Valid on nested configuration objects." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #10 · Spring Boot: Use @Valid on nested configuration objects." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-boot-validated-config · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
         <mxCell id="5" value="Validated configuration" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -212,12 +212,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="d4cdff5f-dfc6-4ca3-a388-96fe75b5ac05" name="Tweet 11 · Diagram">
+  <diagram id="dd6b60ae-6179-4edc-8e85-e988627e506e" name="Tweet 11 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #11 · Validate lists in application.yml with Bean Validation." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #11 · Spring Boot: Validate lists in application.yml with Bean V…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-boot-validated-config · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
         <mxCell id="5" value="Validated configuration" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -232,12 +232,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="907771ab-9f92-4bfc-8fd4-c4235137a61d" name="Tweet 12 · Diagram">
+  <diagram id="bb40456b-e849-40c0-80ee-f6060e5fcad6" name="Tweet 12 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #12 · Bad YAML fails at startup — better than discovering miscon…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #12 · Spring Boot: Bad YAML fails at startup — better than disco…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-boot-validated-config · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
         <mxCell id="5" value="Validated configuration" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -252,12 +252,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="ecd4fb57-7661-4d5b-b1e6-679a0647cba5" name="Tweet 13 · Diagram">
+  <diagram id="9414e3d1-334c-4b86-ae15-99ab2e2deede" name="Tweet 13 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #13 · JpaRepository is your entire DAO for CRUD." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #13 · Spring Boot: JpaRepository is your entire DAO for CRUD." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="sql-annotation-demo · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
         <mxCell id="5" value="Spring Data JPA" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -271,12 +271,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="1b15d061-8c73-474c-ba0e-0d9ef9375324" name="Tweet 14 · Diagram">
+  <diagram id="b263fd2c-c7ce-4e44-878c-a8d21d2f6e2c" name="Tweet 14 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #14 · @Sql or @SqlGroup allows you to preload test data for repr…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #14 · Spring Boot: @Sql or @SqlGroup allows you to preload test …" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="sql-annotation-demo · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
         <mxCell id="5" value="Spring Data JPA" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -290,12 +290,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="741c0682-eb54-4e59-a286-4a4075fb33ba" name="Tweet 15 · Diagram">
+  <diagram id="6155404e-f5d7-47ee-a881-37544a6bbc3c" name="Tweet 15 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="460" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #15 · Processing 1M rows with findAll() will OOM you — use a Str…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #15 · Spring Boot: Processing 1M rows with findAll() will OOM yo…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-streaming-demo · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="300" as="geometry"/></mxCell>
         <mxCell id="5" value="Streaming large datasets" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -311,12 +311,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="65896f47-c23e-4f5c-9881-04d60393cb18" name="Tweet 16 · Diagram">
+  <diagram id="7b59d657-dace-49fb-9af4-89672b7c61b4" name="Tweet 16 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="460" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #16 · Call EntityManager.clear() every N rows when streaming." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #16 · Spring Boot: Call EntityManager.clear() every N rows when …" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-streaming-demo · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="300" as="geometry"/></mxCell>
         <mxCell id="5" value="Streaming large datasets" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -332,12 +332,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="cfde89f5-5d99-4ad0-8489-b793a83751ba" name="Tweet 17 · Diagram">
+  <diagram id="e678e339-798d-4012-8034-064f530d5553" name="Tweet 17 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="460" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #17 · Always wrap JPA streams in try-with-resources." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #17 · Spring Boot: Always wrap JPA streams in try-with-resources." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-streaming-demo · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="300" as="geometry"/></mxCell>
         <mxCell id="5" value="Streaming large datasets" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -353,12 +353,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="9e884171-f87d-402f-9087-957283292460" name="Tweet 18 · Diagram">
+  <diagram id="26877e05-965f-4d7a-94ee-7a4bf3447772" name="Tweet 18 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="460" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #18 · Use @Transactional(readOnly = true) on read-only batch jobs." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #18 · Spring Boot: Use @Transactional(readOnly = true) on read-o…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-streaming-demo · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="300" as="geometry"/></mxCell>
         <mxCell id="5" value="Streaming large datasets" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -374,12 +374,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="2a32a9b7-af8f-4be3-b886-567bff98f11d" name="Tweet 19 · Diagram">
+  <diagram id="2d51bd0e-28b7-47fe-a84d-90f080de79a4" name="Tweet 19 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #19 · Spring Boot integrates easily with Kafka for event-driven …" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #19 · Spring Boot: Spring Boot integrates easily with Kafka for …" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-kafka-demo · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
         <mxCell id="5" value="Kafka event flow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -393,12 +393,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="0f12a72b-d7cf-4461-b81f-a5c87b97628c" name="Tweet 20 · Diagram">
+  <diagram id="82c40347-4a49-416d-98db-7307b1af48e1" name="Tweet 20 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #20 · Kafka consumers are simple with @KafkaListener." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #20 · Spring Boot: Kafka consumers are simple with @KafkaListener." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-kafka-demo · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
         <mxCell id="5" value="Kafka event flow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -412,12 +412,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="4cb9a576-31f7-4b72-90ea-4720991941f5" name="Tweet 21 · Diagram">
+  <diagram id="e4c77efc-5e04-4129-b79a-aa18614268a3" name="Tweet 21 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #21 · Know when to use auto-offset-reset: earliest vs latest." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #21 · Spring Boot: Know when to use auto-offset-reset: earliest …" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-kafka-demo · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
         <mxCell id="5" value="Kafka event flow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -431,12 +431,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="5de1c54f-8fc0-4963-8e8b-1cedc2614017" name="Tweet 22 · Diagram">
+  <diagram id="2390dd7f-3e17-49c9-b3e6-a765f88ac2fe" name="Tweet 22 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #22 · Decouple services: save to DB, then publish an application…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #22 · Spring Boot: Decouple services: save to DB, then publish a…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-transactional-event-demo · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
         <mxCell id="5" value="Transactional events" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -450,12 +450,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="248309aa-1760-41e4-9752-00ce32ab282b" name="Tweet 23 · Diagram">
+  <diagram id="b67d5d00-3467-4740-b219-6b11c48af88b" name="Tweet 23 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #23 · Don&#x27;t send the email before commit — use AFTER_COMMIT." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #23 · Spring Boot: Don&#x27;t send the email before commit — use AFTE…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-transactional-event-demo · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
         <mxCell id="5" value="Transactional events" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -469,12 +469,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="eb8ff9f9-fa3c-4e31-b8be-bade237e28a0" name="Tweet 24 · Diagram">
+  <diagram id="b8a7c01c-9d52-435f-b16e-ace6897f2030" name="Tweet 24 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="440" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #24 · Use @Async only for small offloading tasks, and with a pro…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #24 · Spring Boot: Use @Async only for small offloading tasks, a…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="async-demo · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="280" as="geometry"/></mxCell>
         <mxCell id="5" value="Async execution" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -488,12 +488,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="73fd8270-5008-4e12-ba19-1568a00e6828" name="Tweet 25 · Diagram">
+  <diagram id="0003db2f-34ea-48eb-876f-f5c7707f3d34" name="Tweet 25 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="440" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #25 · Don&#x27;t use the default executor in production." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #25 · Spring Boot: Don&#x27;t use the default executor in production." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="async-demo · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="280" as="geometry"/></mxCell>
         <mxCell id="5" value="Async execution" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -507,12 +507,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="962f0c88-66bd-4b69-8396-7ca9cb0be6cf" name="Tweet 26 · Diagram">
+  <diagram id="73d9e5de-36d8-4b35-a30a-3307833dbd2e" name="Tweet 26 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="440" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #26 · Fire async tasks at startup with CommandLineRunner." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #26 · Spring Boot: Fire async tasks at startup with CommandLineR…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="async-demo · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="280" as="geometry"/></mxCell>
         <mxCell id="5" value="Async execution" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -526,12 +526,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="9c22c13f-a475-4f7f-adf2-089075159363" name="Tweet 27 · Diagram">
+  <diagram id="0ba6bc1f-6e74-46b7-93b7-dcca7bd6a3bb" name="Tweet 27 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="440" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #27 · @Async methods must be called from another Spring bean — n…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #27 · Spring Boot: @Async methods must be called from another Sp…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="async-demo · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="280" as="geometry"/></mxCell>
         <mxCell id="5" value="Async execution" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -545,12 +545,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="2777ec8c-3df4-4cc8-8002-1f3ef3b50843" name="Tweet 28 · Diagram">
+  <diagram id="a6b10d23-5ac2-4395-abd7-70fa37f34318" name="Tweet 28 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #28 · Boost performance with @EnableCaching and @Cacheable." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #28 · Spring Boot: Boost performance with @EnableCaching and @Ca…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="springboot-redis-cache-demo · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
         <mxCell id="5" value="Redis caching" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -564,12 +564,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="63fa99e4-da6d-4f0c-87f7-4e6c7571a17d" name="Tweet 29 · Diagram">
+  <diagram id="ea0e3490-761a-4c65-96c7-51a356a995ee" name="Tweet 29 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #29 · Configure Redis cache TTL in one bean." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #29 · Spring Boot: Configure Redis cache TTL in one bean." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="springboot-redis-cache-demo · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
         <mxCell id="5" value="Redis caching" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -583,12 +583,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="7492d454-b563-4484-acfc-606d5080a90b" name="Tweet 30 · Diagram">
+  <diagram id="fa26890c-5d1d-46e9-a462-bde5e96ee797" name="Tweet 30 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #30 · Plug in Redis (or another provider) without changing busin…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #30 · Spring Boot: Plug in Redis (or another provider) without c…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="springboot-redis-cache-demo · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
         <mxCell id="5" value="Redis caching" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -602,12 +602,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="5d5fa049-172f-4430-a0d0-156f3d7d5445" name="Tweet 31 · Diagram">
+  <diagram id="44073740-b340-423d-a246-e790dff3f714" name="Tweet 31 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #31 · Configure global CORS once — no @CrossOrigin on every cont…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #31 · Spring Boot: Configure global CORS once — no @CrossOrigin …" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="cors-demo · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
         <mxCell id="5" value="CORS configuration" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -619,12 +619,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="6989343a-bf17-4c62-b51c-b93bb1a2a910" name="Tweet 32 · Diagram">
+  <diagram id="3435f6cf-58bc-4cce-a8ef-d9c55b25be6e" name="Tweet 32 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #32 · CORS isn&#x27;t a bug — it&#x27;s the browser. Configure it once glo…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #32 · Spring Boot: CORS isn&#x27;t a bug — it&#x27;s the browser. Configur…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="cors-demo · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
         <mxCell id="5" value="CORS configuration" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -636,29 +636,33 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="100ebe21-7c92-426d-97a2-f067b9604ba1" name="Tweet 33 · Diagram">
+  <diagram id="cdba1db5-4c13-4ddd-a166-fa68bd600b67" name="Tweet 33 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #33 · Debug HTTP issues with CommonsRequestLoggingFilter." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #33 · Spring Boot: Debug HTTP issues with CommonsRequestLoggingF…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-request-logging-demo · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="300" as="geometry"/></mxCell>
         <mxCell id="5" value="Concept flow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
         <mxCell id="6" value="Problem / context" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#3B82F6;strokeColor=#1D4ED8;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="120" y="190" width="200" height="70" as="geometry"/></mxCell>
-        <mxCell id="7" value="Debug HTTP issues with CommonsRequestLoggingFilter." style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="360" y="190" width="240" height="70" as="geometry"/></mxCell>
+        <mxCell id="7" value="Debug HTTP issues with CommonsRequestLoggingFilter" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="360" y="190" width="240" height="70" as="geometry"/></mxCell>
         <mxCell id="8" value="→" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="6" target="7"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
-        <mxCell id="9" value="✓ See CodePen for implementation" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#16A34A;" vertex="1" parent="1"><mxGeometry x="840" y="310" width="240" height="56" as="geometry"/></mxCell>
+        <mxCell id="9" value="Runnable sample: `spring-request-logging-demo`" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="620" y="190" width="240" height="70" as="geometry"/></mxCell>
         <mxCell id="10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="7" target="9"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="11" value="Architecture diagram + Carbon CodePen below" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="880" y="190" width="240" height="70" as="geometry"/></mxCell>
+        <mxCell id="12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="9" target="11"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="13" value="✓ See CodePen for implementation" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#16A34A;" vertex="1" parent="1"><mxGeometry x="840" y="310" width="240" height="56" as="geometry"/></mxCell>
+        <mxCell id="14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="11" target="13"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="e2a029f5-d49c-4124-87f2-e686e7fed5cf" name="Tweet 34 · Diagram">
+  <diagram id="05742a65-e05a-4607-a57b-476c7474596c" name="Tweet 34 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #34 · Spring Batch: read CSV, process, write in chunks." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #34 · Spring Boot: Spring Batch: read CSV, process, write in chu…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-batch-csv-sample · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
         <mxCell id="5" value="Spring Batch pipeline" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -672,12 +676,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="8fff3eba-f762-40d8-ae3e-4097e8e39718" name="Tweet 35 · Diagram">
+  <diagram id="aef56ff1-1daa-4ab0-9c44-03261e879ed6" name="Tweet 35 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #35 · FlatFileItemReaderBuilder + linesToSkip(1) skips the CSV h…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #35 · Spring Boot: FlatFileItemReaderBuilder + linesToSkip(1) sk…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-batch-csv-sample · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
         <mxCell id="5" value="Spring Batch pipeline" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -691,12 +695,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="5d3c94cf-9c3f-496a-b81b-e0f1089f484f" name="Tweet 36 · Diagram">
+  <diagram id="79cbc5a8-7114-4120-8502-707ded191881" name="Tweet 36 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #36 · ItemProcessor transforms each row before writing." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #36 · Spring Boot: ItemProcessor transforms each row before writ…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-batch-csv-sample · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
         <mxCell id="5" value="Spring Batch pipeline" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -710,12 +714,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="3d250d86-564d-4b6a-adae-ed4a07a35bb4" name="Tweet 37 · Diagram">
+  <diagram id="8fd5d8c9-5be6-46ff-b4c5-cd5db2cf9adc" name="Tweet 37 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #37 · Parse CSV with Apache Commons CSV and try-with-resources." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #37 · Spring Boot: Parse CSV with Apache Commons CSV and try-wit…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-csv-sample · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
         <mxCell id="5" value="CSV parsing" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -729,12 +733,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="77daef71-9ea0-48d8-b24a-ba27845a7929" name="Tweet 38 · Diagram">
+  <diagram id="421ea1e6-b8c6-425a-8945-e9fe46ca800f" name="Tweet 38 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #38 · @MockBean stubs can leak between tests unless you reset th…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #38 · Spring Boot: @MockBean stubs can leak between tests unless…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-mock-reset-example · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
         <mxCell id="5" value="Spring Boot testing" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -748,12 +752,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="1c15ff1e-d396-4175-a163-3ae4903e7dfb" name="Tweet 39 · Diagram">
+  <diagram id="62b1c1e7-aa34-4a7b-8554-f26ed094c387" name="Tweet 39 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #39 · @SpringBootTest loads the full context — use when you need…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #39 · Spring Boot: @SpringBootTest loads the full context — use …" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-mock-reset-example · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
         <mxCell id="5" value="Spring Boot testing" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -767,12 +771,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="5da45178-b958-493c-84da-3b88827b40bc" name="Tweet 40 · Diagram">
+  <diagram id="1a892383-eb94-427f-8562-13097dad7515" name="Tweet 40 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #40 · @Sql on tests = reproducible DB state every run." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #40 · Spring Boot: @Sql on tests = reproducible DB state every r…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="sql-annotation-demo · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
         <mxCell id="5" value="Spring Data JPA" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -786,7 +790,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="1b009ae1-fc73-4b3f-9c14-060c0150d8e1" name="Tweet 41 · Diagram">
+  <diagram id="956faa66-1bac-46a4-9287-dd905b23e200" name="Tweet 41 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -803,7 +807,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="2fa915e6-c731-44ed-9903-e88477cd53fa" name="Tweet 42 · Diagram">
+  <diagram id="078ffe6f-fb4b-43ee-a899-55f68bc7cadb" name="Tweet 42 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -820,7 +824,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="018b0dbb-08fa-427f-8908-ac107c727721" name="Tweet 43 · Diagram">
+  <diagram id="c32858dc-b9c4-4a25-9a26-aba358fc8b8e" name="Tweet 43 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -837,7 +841,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="9742775f-b518-4101-9487-b3b53d1ce01d" name="Tweet 44 · Diagram">
+  <diagram id="657bccef-bb05-4e1e-9a22-05d9efdd5eda" name="Tweet 44 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -854,7 +858,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="049f8cee-c030-41ad-9672-de22c6b0a165" name="Tweet 45 · Diagram">
+  <diagram id="f3b395d4-fd04-4831-bf47-69b0bcee419d" name="Tweet 45 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -871,7 +875,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="f4d403a0-1431-4e0c-af26-76a86eed152a" name="Tweet 46 · Diagram">
+  <diagram id="bc2dacd1-1d48-4621-a899-02e5a7430c39" name="Tweet 46 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -888,7 +892,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="11c57bf0-0288-43cb-b070-0e3d9019bf81" name="Tweet 47 · Diagram">
+  <diagram id="467f231f-0238-4ab5-bda2-89ee8aa2c8ef" name="Tweet 47 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -905,12 +909,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="4d33b888-ced6-4c75-807a-fb84fe18d048" name="Tweet 48 · Diagram">
+  <diagram id="24ae4930-6b57-4c2f-b09c-d8c091f7934d" name="Tweet 48 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #48 · Run any codingstrain module with mvn spring-boot:run." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #48 · Spring Boot: Run any codingstrain module with mvn spring-b…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="codingstrain · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
         <mxCell id="5" value="codingstrain workflow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -924,12 +928,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="fa4c6f29-0e1b-4d0d-bc8e-6b0c66af35da" name="Tweet 49 · Diagram">
+  <diagram id="92e17e4c-8640-45bc-a543-c8595f448cba" name="Tweet 49 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #49 · H2 in-memory DB for REST tutorials — zero Docker, full CRUD." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #49 · Spring Boot: H2 in-memory DB for REST tutorials — zero Doc…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-boot-minimal-rest-h2 · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
         <mxCell id="5" value="REST API layers" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -946,12 +950,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="4ba378ae-988b-4176-8915-1f32b918a1ba" name="Tweet 50 · Diagram">
+  <diagram id="db3390d9-e383-436e-9af0-e2a8f0359740" name="Tweet 50 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #50 · Check /actuator/health before you deploy." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #50 · Spring Boot: Check /actuator/health before you deploy." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-boot-minimal-rest-h2-actuator · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
         <mxCell id="5" value="Actuator health checks" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -963,12 +967,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="9a06665a-b4fa-42ae-9e34-fff155cb3bd8" name="Tweet 51 · Diagram">
+  <diagram id="c7b2cd30-63b5-499f-93ab-3cebc07889c4" name="Tweet 51 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #51 · Centralize config with Spring Cloud Config before you copy…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #51 · Spring Cloud: Centralize config with Spring Cloud Config b…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-cloud-config-native-server · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
         <mxCell id="5" value="Spring Cloud Config" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -980,7 +984,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="48672109-3d61-453b-9b8a-c2d1974b2c5c" name="Tweet 52 · Diagram">
+  <diagram id="d892d873-3370-47ae-8917-3d492977bde9" name="Tweet 52 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="520" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1013,7 +1017,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="68394861-b6ec-4d96-af44-6c02daa949bc" name="Tweet 53 · Diagram">
+  <diagram id="3b7e67ee-8ff5-47ea-bf8e-aed4b94c1e5f" name="Tweet 53 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="580" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1041,12 +1045,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="0ec539cf-47b9-4488-afe8-7325890b4a2c" name="Tweet 54 · Diagram">
+  <diagram id="6cece35d-f297-4e3a-a3df-a6f706425624" name="Tweet 54 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #54 · Contract testing (Pact) and Gatling live beside the micros…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #54 · Spring Cloud: Contract testing (Pact) and Gatling live bes…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-cloud-sample-libraryapp · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
         <mxCell id="5" value="Microservice testing" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -1058,12 +1062,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="a60d62be-ad05-4afa-9439-4bd4a5b0054f" name="Tweet 55 · Diagram">
+  <diagram id="858ada11-0b31-43a9-b2d5-8d1d7ce8bc89" name="Tweet 55 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #55 · codingstrain: clone once, open one module, learn one conce…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #55 · Spring Boot: codingstrain: clone once, open one module, le…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="codingstrain · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
         <mxCell id="5" value="codingstrain workflow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -1077,7 +1081,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="9fd4352a-6185-4a20-b275-a36ef22fc2be" name="Tweet 56 · Diagram">
+  <diagram id="8796d847-0d28-49bf-b259-89d55816b62c" name="Tweet 56 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1096,7 +1100,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="bc7fd7ed-45ee-42a6-bf62-b107470e71f4" name="Tweet 57 · Diagram">
+  <diagram id="6160d56c-1210-4661-ae9e-f749739982b6" name="Tweet 57 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="460" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1117,7 +1121,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="56a6a27e-1e40-4e2f-9799-3b4823d5abb7" name="Tweet 58 · Diagram">
+  <diagram id="34412e2d-9386-46b4-bb5a-6aed634ef466" name="Tweet 58 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1136,7 +1140,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="89bc28a4-7ef3-49e0-b056-ae609ac4fc5b" name="Tweet 59 · Diagram">
+  <diagram id="103b63ba-1388-453c-8916-e1e3aec7d556" name="Tweet 59 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1156,7 +1160,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="8ca06e25-a5e7-4df2-b075-7fba0ee9dfc8" name="Tweet 60 · Diagram">
+  <diagram id="34aab0df-bbec-4ef3-827a-f340f59484ff" name="Tweet 60 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1173,119 +1177,105 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="sealed-classes-hierarchy" name="Java 17 Sealed Classes">
-    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="920" math="0" shadow="0" background="#FFFFFF">
+  <diagram name="Java 17 Sealed Classes" id="_UWqz1XNtUJx2bBG8tbF">
+    <mxGraphModel dx="1378" dy="743" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ngT1hAYCyIW_FhLVzCGF-1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#1565C0;fontFamily=Helvetica;" value="Java 17 Sealed Classes: Closed Hierarchy Verification" vertex="1">
+          <mxGeometry height="40" width="960" x="120" y="24" as="geometry" />
+        </mxCell>
+        <mxCell id="ngT1hAYCyIW_FhLVzCGF-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE7F6;strokeColor=#7E57C2;fontColor=#4527A0;fontSize=11;fontStyle=1;arcSize=50;" value="permits" vertex="1">
+          <mxGeometry height="22" width="56" x="520" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="ngT1hAYCyIW_FhLVzCGF-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#E3F2FD;strokeColor=#1E88E5;strokeWidth=2;fontColor=#0D47A1;fontSize=12;fontStyle=0;fontFamily=Courier New;align=center;verticalAlign=middle;shadow=1;" value="abstract sealed class Shape&#xa;permits Circle, Rectangle, FancyRectangle" vertex="1">
+          <mxGeometry height="64" width="340" x="380" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="ngT1hAYCyIW_FhLVzCGF-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=2;fontColor=#1B5E20;fontSize=12;fontFamily=Courier New;align=center;verticalAlign=middle;shadow=1;" value="final class Circle extends Shape" vertex="1">
+          <mxGeometry height="52" width="260" x="80" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ngT1hAYCyIW_FhLVzCGF-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#E3F2FD;strokeColor=#1E88E5;strokeWidth=2;fontColor=#0D47A1;fontSize=12;fontFamily=Courier New;align=center;verticalAlign=middle;shadow=1;" value="sealed class Rectangle extends Shape&#xa;permits Square, Oblong" vertex="1">
+          <mxGeometry height="64" width="320" x="390" y="228" as="geometry" />
+        </mxCell>
+        <mxCell id="ngT1hAYCyIW_FhLVzCGF-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE7F6;strokeColor=#7E57C2;fontColor=#4527A0;fontSize=10;fontStyle=1;arcSize=50;" value="permits" vertex="1">
+          <mxGeometry height="20" width="56" x="522" y="203" as="geometry" />
+        </mxCell>
+        <mxCell id="ngT1hAYCyIW_FhLVzCGF-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#FFF3E0;strokeColor=#EF6C00;strokeWidth=2;fontColor=#E65100;fontSize=12;fontFamily=Courier New;align=center;verticalAlign=middle;shadow=1;" value="non-sealed class FancyRectangle extends Shape" vertex="1">
+          <mxGeometry height="52" width="320" x="917" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ngT1hAYCyIW_FhLVzCGF-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=2;fontColor=#1B5E20;fontSize=12;fontFamily=Courier New;align=center;verticalAlign=middle;shadow=1;" value="final class Square extends Rectangle" vertex="1">
+          <mxGeometry height="52" width="260" x="320" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="ngT1hAYCyIW_FhLVzCGF-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=2;fontColor=#1B5E20;fontSize=12;fontFamily=Courier New;align=center;verticalAlign=middle;shadow=1;" value="final class Oblong extends Rectangle" vertex="1">
+          <mxGeometry height="52" width="270" x="620" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="ngT1hAYCyIW_FhLVzCGF-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#FFF3E0;strokeColor=#EF6C00;strokeWidth=2;fontColor=#E65100;fontSize=12;fontFamily=Courier New;align=center;verticalAlign=middle;shadow=1;" value="class RoundedRectangle extends FancyRectangle" vertex="1">
+          <mxGeometry height="52" width="320" x="923" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="ngT1hAYCyIW_FhLVzCGF-11" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=2;fontColor=#EF6C00;" value="open extension" vertex="1">
+          <mxGeometry height="24" width="100" x="1243" y="395" as="geometry" />
+        </mxCell>
+        <mxCell id="ngT1hAYCyIW_FhLVzCGF-12" edge="1" parent="1" source="ngT1hAYCyIW_FhLVzCGF-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#37474F;strokeWidth=2;" target="ngT1hAYCyIW_FhLVzCGF-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ngT1hAYCyIW_FhLVzCGF-13" edge="1" parent="1" source="ngT1hAYCyIW_FhLVzCGF-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#37474F;strokeWidth=2;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="550" y="200" />
+              <mxPoint x="550" y="200" />
+            </Array>
+            <mxPoint x="550" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ngT1hAYCyIW_FhLVzCGF-14" edge="1" parent="1" source="ngT1hAYCyIW_FhLVzCGF-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#37474F;strokeWidth=2;" target="ngT1hAYCyIW_FhLVzCGF-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ngT1hAYCyIW_FhLVzCGF-15" edge="1" parent="1" source="ngT1hAYCyIW_FhLVzCGF-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#37474F;strokeWidth=2;" target="ngT1hAYCyIW_FhLVzCGF-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ngT1hAYCyIW_FhLVzCGF-16" edge="1" parent="1" source="ngT1hAYCyIW_FhLVzCGF-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#37474F;strokeWidth=2;" target="ngT1hAYCyIW_FhLVzCGF-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ngT1hAYCyIW_FhLVzCGF-17" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#EF6C00;strokeWidth=2;dashed=1;dashPattern=8 6;" target="ngT1hAYCyIW_FhLVzCGF-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1082" y="292" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ngT1hAYCyIW_FhLVzCGF-18" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=16;fontStyle=1;fontColor=#37474F;" value="Legend &amp;amp; Compiler Rules" vertex="1">
+          <mxGeometry height="28" width="960" x="120" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="ngT1hAYCyIW_FhLVzCGF-19" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#E3F2FD;strokeColor=#1E88E5;strokeWidth=2;fontColor=#0D47A1;fontSize=12;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;" value="&lt;b&gt;sealed class&lt;/b&gt;&lt;br&gt;• Must use permits&lt;br&gt;• Restricts inheritance" vertex="1">
+          <mxGeometry height="88" width="300" x="80" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="ngT1hAYCyIW_FhLVzCGF-20" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=2;fontColor=#1B5E20;fontSize=12;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;" value="&lt;b&gt;final class&lt;/b&gt;&lt;br&gt;• No further inheritance&lt;br&gt;• Leaf node" vertex="1">
+          <mxGeometry height="88" width="300" x="420" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="ngT1hAYCyIW_FhLVzCGF-21" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#FFF3E0;strokeColor=#EF6C00;strokeWidth=2;fontColor=#E65100;fontSize=12;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;" value="&lt;b&gt;non-sealed class&lt;/b&gt;&lt;br&gt;• Reverts to open inheritance&lt;br&gt;• Escape hatch" vertex="1">
+          <mxGeometry height="88" width="340" x="760" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="ngT1hAYCyIW_FhLVzCGF-22" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFEBEE;strokeColor=#C62828;strokeWidth=2;dashed=1;dashPattern=10 6;fontColor=#B71C1C;fontSize=12;align=center;verticalAlign=middle;spacingTop=8;spacingBottom=8;" value="&lt;b&gt;COMPILER VERIFICATION:&lt;/b&gt; Every permitted subclass MUST be final, sealed, or non-sealed&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Missing modifier on a permitted type gives compile error. Undeclared subclass gives compile error.&lt;/b&gt;" vertex="1">
+          <mxGeometry height="130" width="1080" x="60" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="ngT1hAYCyIW_FhLVzCGF-23" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#E8EAF6;strokeColor=#3949AB;strokeWidth=2;fontColor=#1A237E;fontSize=12;align=center;verticalAlign=middle;spacingTop=6;spacingBottom=6;" value="&lt;b&gt;Why it matters:&lt;/b&gt; No surprise subtypes outside &lt;code&gt;permits&lt;/code&gt; (until a &lt;code&gt;non-sealed&lt;/code&gt; branch re-opens inheritance)." vertex="1">
+          <mxGeometry height="56" width="1080" x="60" y="770" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="91291d88-c8de-47d7-9731-6efdd1f5104a" name="Tweet 62 · Diagram">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-
-        <!-- Title -->
-        <mxCell id="title" value="Java 17 Sealed Classes: Closed Hierarchy Verification" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#1565C0;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="120" y="24" width="960" height="40" as="geometry"/>
-        </mxCell>
-
-        <!-- permits tag -->
-        <mxCell id="permits-tag" value="permits" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE7F6;strokeColor=#7E57C2;fontColor=#4527A0;fontSize=11;fontStyle=1;arcSize=50;" vertex="1" parent="1">
-          <mxGeometry x="520" y="78" width="56" height="22" as="geometry"/>
-        </mxCell>
-
-        <!-- Root: Shape (sealed) -->
-        <mxCell id="shape" value="abstract sealed class Shape&#xa;permits Circle, Rectangle, FancyRectangle" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#E3F2FD;strokeColor=#1E88E5;strokeWidth=2;fontColor=#0D47A1;fontSize=12;fontStyle=0;fontFamily=Courier New;align=center;verticalAlign=middle;shadow=1;" vertex="1" parent="1">
-          <mxGeometry x="380" y="100" width="340" height="64" as="geometry"/>
-        </mxCell>
-
-        <!-- Level 1: Circle (final) -->
-        <mxCell id="circle" value="final class Circle extends Shape" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=2;fontColor=#1B5E20;fontSize=12;fontFamily=Courier New;align=center;verticalAlign=middle;shadow=1;" vertex="1" parent="1">
-          <mxGeometry x="80" y="240" width="260" height="52" as="geometry"/>
-        </mxCell>
-
-        <!-- Level 1: Rectangle (sealed) -->
-        <mxCell id="rectangle" value="sealed class Rectangle extends Shape&#xa;permits Square, Oblong" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#E3F2FD;strokeColor=#1E88E5;strokeWidth=2;fontColor=#0D47A1;fontSize=12;fontFamily=Courier New;align=center;verticalAlign=middle;shadow=1;" vertex="1" parent="1">
-          <mxGeometry x="400" y="228" width="320" height="64" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="permits-rect-tag" value="permits" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE7F6;strokeColor=#7E57C2;fontColor=#4527A0;fontSize=10;fontStyle=1;arcSize=50;" vertex="1" parent="1">
-          <mxGeometry x="532" y="218" width="56" height="20" as="geometry"/>
-        </mxCell>
-
-        <!-- Level 1: FancyRectangle (non-sealed) -->
-        <mxCell id="fancy" value="non-sealed class FancyRectangle extends Shape" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#FFF3E0;strokeColor=#EF6C00;strokeWidth=2;fontColor=#E65100;fontSize=12;fontFamily=Courier New;align=center;verticalAlign=middle;shadow=1;" vertex="1" parent="1">
-          <mxGeometry x="780" y="240" width="320" height="52" as="geometry"/>
-        </mxCell>
-
-        <!-- Level 2 under Rectangle: Square -->
-        <mxCell id="square" value="final class Square extends Rectangle" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=2;fontColor=#1B5E20;fontSize=12;fontFamily=Courier New;align=center;verticalAlign=middle;shadow=1;" vertex="1" parent="1">
-          <mxGeometry x="320" y="380" width="260" height="52" as="geometry"/>
-        </mxCell>
-
-        <!-- Level 2 under Rectangle: Oblong -->
-        <mxCell id="oblong" value="final class Oblong extends Rectangle" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=2;fontColor=#1B5E20;fontSize=12;fontFamily=Courier New;align=center;verticalAlign=middle;shadow=1;" vertex="1" parent="1">
-          <mxGeometry x="620" y="380" width="270" height="52" as="geometry"/>
-        </mxCell>
-
-        <!-- Level 2 under FancyRectangle: RoundedRectangle -->
-        <mxCell id="rounded" value="class RoundedRectangle extends FancyRectangle" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#FFF3E0;strokeColor=#EF6C00;strokeWidth=2;fontColor=#E65100;fontSize=12;fontFamily=Courier New;align=center;verticalAlign=middle;shadow=1;" vertex="1" parent="1">
-          <mxGeometry x="800" y="380" width="320" height="52" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="open-ext" value="open extension" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=2;fontColor=#EF6C00;" vertex="1" parent="1">
-          <mxGeometry x="1130" y="395" width="100" height="24" as="geometry"/>
-        </mxCell>
-
-        <!-- Edges: Shape -> children -->
-        <mxCell id="e-shape-circle" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#37474F;strokeWidth=2;" edge="1" parent="1" source="shape" target="circle">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="e-shape-rect" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#37474F;strokeWidth=2;" edge="1" parent="1" source="shape" target="rectangle">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="e-shape-fancy" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#37474F;strokeWidth=2;" edge="1" parent="1" source="shape" target="fancy">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <!-- Edges: Rectangle -> Square, Oblong -->
-        <mxCell id="e-rect-square" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#37474F;strokeWidth=2;" edge="1" parent="1" source="rectangle" target="square">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="e-rect-oblong" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#37474F;strokeWidth=2;" edge="1" parent="1" source="rectangle" target="oblong">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <!-- Dashed edge: FancyRectangle -> RoundedRectangle -->
-        <mxCell id="e-fancy-rounded" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#EF6C00;strokeWidth=2;dashed=1;dashPattern=8 6;" edge="1" parent="1" source="fancy" target="rounded">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <!-- Legend title -->
-        <mxCell id="legend-title" value="Legend &amp;amp; Compiler Rules" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=16;fontStyle=1;fontColor=#37474F;" vertex="1" parent="1">
-          <mxGeometry x="120" y="470" width="960" height="28" as="geometry"/>
-        </mxCell>
-
-        <!-- Legend: sealed -->
-        <mxCell id="leg-sealed" value="&lt;b&gt;sealed class&lt;/b&gt;&lt;br&gt;• Must use permits&lt;br&gt;• Restricts inheritance" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#E3F2FD;strokeColor=#1E88E5;strokeWidth=2;fontColor=#0D47A1;fontSize=12;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;" vertex="1" parent="1">
-          <mxGeometry x="80" y="510" width="300" height="88" as="geometry"/>
-        </mxCell>
-
-        <!-- Legend: final -->
-        <mxCell id="leg-final" value="&lt;b&gt;final class&lt;/b&gt;&lt;br&gt;• No further inheritance&lt;br&gt;• Leaf node" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=2;fontColor=#1B5E20;fontSize=12;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;" vertex="1" parent="1">
-          <mxGeometry x="420" y="510" width="300" height="88" as="geometry"/>
-        </mxCell>
-
-        <!-- Legend: non-sealed -->
-        <mxCell id="leg-nonsealed" value="&lt;b&gt;non-sealed class&lt;/b&gt;&lt;br&gt;• Reverts to open inheritance&lt;br&gt;• Escape hatch" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#FFF3E0;strokeColor=#EF6C00;strokeWidth=2;fontColor=#E65100;fontSize=12;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;" vertex="1" parent="1">
-          <mxGeometry x="760" y="510" width="340" height="88" as="geometry"/>
-        </mxCell>
-
-        <!-- Compiler verification box -->
-        <mxCell id="verify-box" value="&lt;b&gt;COMPILER VERIFICATION:&lt;/b&gt; Every permitted subclass MUST be final, sealed, or non-sealed&lt;br&gt;&lt;br&gt;• Circle → final ✓   • Rectangle → sealed ✓   • FancyRectangle → non-sealed ✓&lt;br&gt;• Square / Oblong → final ✓   • RoundedRectangle → extends non-sealed parent (not in permits) ✓&lt;br&gt;&lt;br&gt;&lt;b&gt;Missing modifier on a permitted type → compile error. Undeclared subclass → compile error.&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFEBEE;strokeColor=#C62828;strokeWidth=2;dashed=1;dashPattern=10 6;fontColor=#B71C1C;fontSize=12;align=center;verticalAlign=middle;spacingTop=8;spacingBottom=8;" vertex="1" parent="1">
-          <mxGeometry x="60" y="620" width="1080" height="130" as="geometry"/>
-        </mxCell>
-
-        <!-- Pattern matching payoff -->
-        <mxCell id="switch-box" value="&lt;b&gt;Why it matters:&lt;/b&gt; A closed hierarchy lets the compiler prove exhaustiveness in &lt;code&gt;switch&lt;/code&gt; / pattern matching — no surprise subtypes outside &lt;code&gt;permits&lt;/code&gt; (until a &lt;code&gt;non-sealed&lt;/code&gt; branch re-opens inheritance)." style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#E8EAF6;strokeColor=#3949AB;strokeWidth=2;fontColor=#1A237E;fontSize=12;align=center;verticalAlign=middle;spacingTop=6;spacingBottom=6;" vertex="1" parent="1">
-          <mxGeometry x="60" y="770" width="1080" height="56" as="geometry"/>
-        </mxCell>
-
+        <mxCell id="2" value="Tweet #62 · Java 14+ switch expressions are exhaustive by design." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="3" value="java-miscellaneous-tips · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
+        <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
+        <mxCell id="5" value="Java pattern" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
+        <mxCell id="6" value="Caller code" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#3B82F6;strokeColor=#1D4ED8;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="133" y="200" width="200" height="78" as="geometry"/></mxCell>
+        <mxCell id="7" value="Builder / API" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="479" y="200" width="200" height="78" as="geometry"/></mxCell>
+        <mxCell id="8" value="Immutable object" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#F59E0B;strokeColor=#D97706;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="825" y="200" width="200" height="78" as="geometry"/></mxCell>
+        <mxCell id="9" value="fluent API" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="6" target="7"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="10" value=".build()" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="7" target="8"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
       </root>
     </mxGraphModel>
   </diagram>

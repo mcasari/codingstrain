@@ -81,46 +81,100 @@ def xml_escape(text: str) -> str:
     return html.escape(text, quote=True)
 
 
-def format_twitter_body(tweet: dict) -> str:
-    """Format tweet text like @mario_casari posts in twitter-2026-05-15 archive."""
-    body = tweet["body"].strip()
+def normalize_tweet_body(tweet: dict) -> str:
+    """Tweet #61 format: hook, blank line, three ✅ bullets, hashtags."""
+    raw = tweet.get("body", "").strip()
     tags = tweet.get("tags", "").strip()
-
-    if body.startswith(("🚀", "💡", "🧵", "Java Tip")):
-        return body if not tags or tags in body else f"{body}\n{tags}"
-
     module = tweet.get("module", "").lower()
-    is_java_only = "java" in module and "spring" not in module
+    lines = [ln.strip() for ln in raw.split("\n") if ln.strip()]
 
-    lines = [ln.strip() for ln in body.split("\n") if ln.strip()]
-    hook = lines[0] if lines else body
-
-    if is_java_only:
-        prefix = "💡 Java tip: " if not hook.lower().startswith("java") else "💡 "
-        main = prefix + hook.replace("Java tip:", "").strip()
-    else:
-        if hook.lower().startswith("spring boot"):
-            main = f"🚀{hook}" if not hook.startswith("🚀") else hook
-        else:
-            main = f"🚀Spring Boot: {hook}"
-
+    hook = ""
     bullets: list[str] = []
-    for line in lines[1:]:
-        cleaned = line.lstrip("•-* ").strip()
-        if not cleaned:
-            continue
-        if cleaned.startswith("✅") or cleaned.startswith("🟢"):
-            bullets.append(cleaned if cleaned.startswith("✅") else "✅ " + cleaned[2:].strip())
-        elif len(bullets) < 3:
-            bullets.append(f"✅ {cleaned}")
+    for line in lines:
+        if line.startswith("✅") or line.startswith("🟢"):
+            bullet = line if line.startswith("✅") else "✅ " + line[2:].strip()
+            if bullet not in bullets:
+                bullets.append(bullet)
+        elif line.startswith(("🚀", "💡", "🧵")) and not hook:
+            hook = line
 
-    parts = [main]
-    if bullets:
-        parts.append("")
-        parts.extend(bullets)
-    if tags and tags not in body:
+    if not hook and lines:
+        first = lines[0]
+        java_only = (
+            ("java" in module or module.startswith("java-"))
+            and "spring" not in module
+            and "cloud" not in module
+        )
+        cloudish = "cloud" in module or "feign" in module or "eureka" in raw.lower()
+        if java_only:
+            hook = first if first.startswith("💡") else f"💡 {first}"
+        elif cloudish:
+            if first.startswith("🚀"):
+                hook = first
+            elif first.lower().startswith("spring cloud"):
+                hook = f"🚀Spring Cloud: {first.split(':', 1)[-1].strip()}"
+            else:
+                hook = f"🚀Spring Cloud: {first}"
+        elif first.lower().startswith("spring boot"):
+            hook = first if first.startswith("🚀") else f"🚀Spring Boot: {first}"
+        else:
+            hook = first if first.startswith("🚀") else f"🚀Spring Boot: {first}"
+
+    if hook.startswith("🧵"):
+        hook = "💡 " + hook[1:].strip()
+
+    skip_phrases = ("example (", "in microservices", "when author-service")
+    for line in lines:
+        if line == hook or line.startswith(("🚀", "💡", "🧵", "✅", "🟢")):
+            continue
+        low = line.lower()
+        if any(p in low for p in skip_phrases) or len(line) > 120:
+            continue
+        candidate = f"✅ {line.rstrip('.')}"
+        if candidate not in bullets and len(bullets) < 3:
+            bullets.append(candidate)
+
+    code = tweet.get("code", "") or ""
+    if len(bullets) < 3 and code:
+        for ann in re.findall(
+            r"@(RestController|RestControllerAdvice|GetMapping|PostMapping|FeignClient|"
+            r"CircuitBreaker|Validated|ConfigurationProperties|KafkaListener|Cacheable|"
+            r"Async|Transactional|Sql|SpringBootTest|EnableEurekaServer|ExceptionHandler)\b",
+            code,
+        ):
+            if len(bullets) >= 3:
+                break
+            bullet = f"✅ Uses `@{ann}` in the snippet"
+            if not any(ann in b for b in bullets):
+                bullets.append(bullet)
+
+    mod_short = tweet.get("module", "codingstrain").split("/")[-1]
+    for fallback in (
+        f"✅ Runnable sample: `{mod_short}`",
+        "✅ Architecture diagram + Carbon CodePen below",
+        "✅ From the codingstrain examples repo",
+    ):
+        if len(bullets) >= 3:
+            break
+        if fallback not in bullets:
+            bullets.append(fallback)
+
+    parts = [hook, ""] + bullets[:3]
+    if tags and tags not in raw:
         parts.append(tags)
     return "\n".join(parts)
+
+
+def apply_tweet61_defaults(tweet: dict) -> None:
+    """Align tweet metadata and body with tweet #61 style."""
+    tweet["codepen_style"] = "carbon"
+    tweet["codepen_large"] = True
+    tweet["body"] = normalize_tweet_body(tweet)
+
+
+def format_twitter_body(tweet: dict) -> str:
+    """Format tweet text (tweet #61 layout)."""
+    return normalize_tweet_body(tweet)
 
 
 def image_source(tweet: dict) -> str:
@@ -583,7 +637,7 @@ def build_index(tweets: list[dict]) -> str:
   <meta charset="UTF-8"/>
   <title>codingstrain X Posts — @mario_casari style</title>
   <style>
-    body {{ font-family: system-ui, sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1rem; background: #f7f9f9; }}
+    body {{ font-family: system-ui, sans-serif; max-width: 960px; margin: 2rem auto; padding: 0 1rem; background: #f7f9f9; }}
     article {{ background: #fff; border-radius: 16px; padding: 1.25rem; margin-bottom: 2rem; box-shadow: 0 1px 3px rgba(0,0,0,.08); }}
     h2 {{ margin: 0 0 1rem; font-size: 0.9rem; color: #536471; }}
     .tweet-text {{ white-space: pre-wrap; font-size: 15px; line-height: 1.4; margin: 1rem 0; padding: 1rem; background: #f7f9f9; border-radius: 12px; border: 1px solid #eff3f4; }}
@@ -629,7 +683,24 @@ def export_diagram_png(drawio_path: Path, png_path: Path) -> bool:
 
 
 def main() -> None:
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Generate x-post assets")
+    parser.add_argument(
+        "--skip-png",
+        action="store_true",
+        help="Skip draw.io PNG export (faster; reuses existing PNGs)",
+    )
+    args = parser.parse_args()
+
     tweets = json.loads(TWEETS_FILE.read_text(encoding="utf-8"))
+    for tweet in tweets:
+        apply_tweet61_defaults(tweet)
+    TWEETS_FILE.write_text(
+        json.dumps(tweets, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+
     DRAWIO_DIR.mkdir(parents=True, exist_ok=True)
     CODEPEN_DIR.mkdir(parents=True, exist_ok=True)
     PNG_DIR.mkdir(parents=True, exist_ok=True)
@@ -645,7 +716,8 @@ def main() -> None:
         )
         drawio_path = DRAWIO_DIR / f"{stem}.drawio"
         drawio_path.write_text(build_drawio_diagram(tweet), encoding="utf-8")
-        export_diagram_png(drawio_path, PNG_DIR / f"{stem}-diagram.png")
+        if not args.skip_png:
+            export_diagram_png(drawio_path, PNG_DIR / f"{stem}-diagram.png")
         stale_code_png = PNG_DIR / f"{stem}-code.png"
         if stale_code_png.exists():
             stale_code_png.unlink()
@@ -661,8 +733,8 @@ def main() -> None:
 
 | Element | Format |
 |---------|--------|
-| Tweet text | `🚀Spring Boot: …` + `✅` bullets + `#SpringBoot` hashtags |
-| Code | [CodePen](https://codepen.io/) Prefill pens (editable embeds) |
+| Tweet text | `💡` / `🚀` hook + 3 `✅` bullets + hashtags (tweet #61 layout) |
+| Code | [CodePen](https://codepen.io/) Carbon-style pens (syntax highlighting, large embed) |
 | Diagrams | [diagrams.net](https://app.diagrams.net/) `.drawio` (architecture only, all tweets) |
 | Java tips | `💡 Java tip: …` |
 
@@ -679,7 +751,8 @@ def main() -> None:
 ## Regenerate
 
 ```bash
-python3 generate_assets.py
+python3 generate_assets.py --skip-png   # fast: codepen + index + tweets.json
+python3 generate_assets.py              # also exports diagram PNGs (slow)
 ```
 
 Diagram PNGs: `npx draw.io-export`. Code pens load via [CodePen Prefill embeds](https://blog.codepen.io/documentation/prefill-embeds/).

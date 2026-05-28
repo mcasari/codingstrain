@@ -1,1 +1,6 @@
-// Centralize config with Spring Cloud Config before you copy application.properties everywhere.
+// 🚀Spring Cloud: Centralize config with Spring Cloud Config before you copy application.properties everywhere.
+//
+// ✅ Centralize config with Spring Cloud Config before you copy application.properties everywhere
+// ✅ Runnable sample: `spring-cloud-config-native-server`
+// ✅ Architecture diagram + Carbon CodePen below
+// #SpringCloud #Microservices

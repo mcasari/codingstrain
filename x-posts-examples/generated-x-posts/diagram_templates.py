@@ -169,8 +169,17 @@ def _concept_diagram(tweet: dict) -> str:
 
 
 def build_sealed_classes_drawio() -> str:
-    path = _DIAGRAMS_DIR / "java-17-sealed-classes.drawio"
-    return path.read_text(encoding="utf-8")
+    candidates = (
+        _DIAGRAMS_DIR / "java-17-sealed-classes.drawio",
+        Path(__file__).resolve().parent / "drawio" / "tweet-61.drawio",
+    )
+    for path in candidates:
+        if path.is_file():
+            return path.read_text(encoding="utf-8")
+    raise FileNotFoundError(
+        "Sealed-classes diagram missing. Add diagrams/java-17-sealed-classes.drawio "
+        "or run a prior export to drawio/tweet-61.drawio."
+    )
 
 
 def build_tweet_diagram(tweet: dict) -> str:
