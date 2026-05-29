@@ -1,6 +1,6 @@
 # Generated X Post Assets
 
-62 posts styled like **@mario_casari** tweets from `twitter-2026-05-15`.
+63 posts styled like **@mario_casari** tweets from `twitter-2026-05-15`.
 
 ## Style
 

@@ -3,4 +3,3 @@
 // ✅ Runnable sample: `BuilderDemo`
 // ✅ Architecture diagram + Carbon CodePen below
 // ✅ From the codingstrain examples repo
-// #Java #JavaDev
