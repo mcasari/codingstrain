@@ -88,6 +88,46 @@ body {
 .carbon-editor .num { color: #f78c6c; }
 .carbon-editor .pun { color: #89ddff; }
 .carbon-editor .txt { color: #d6deeb; }
+.carbon-editor.cols {
+  flex-direction: row;
+  gap: 1.75rem;
+  align-items: stretch;
+}
+.carbon-editor.cols .col {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.carbon-editor.cols .col pre {
+  flex: 1;
+  font-size: 15px;
+  line-height: 24px;
+}
+.carbon-editor.cols .col-divider {
+  align-self: stretch;
+  position: relative;
+  width: 1px;
+  background: #1d3b53;
+  flex: 0 0 auto;
+}
+.carbon-editor.cols .col-divider::after {
+  content: "\\2192";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #011627;
+  border: 1px solid #1d3b53;
+  color: #82aaff;
+  font-size: 16px;
+}
 """
 
 JAVA_KEYWORDS = frozenset({
@@ -221,6 +261,84 @@ def highlight_java_html(code: str, module: str) -> str:
     )
 
 
+def _render_block(lines: list[str]) -> str:
+    return "\n".join(
+        "".join(_span(kind, text) for kind, text in tokenize_java_line(line))
+        for line in lines
+    )
+
+
+_TYPE_DECL = re.compile(
+    r"^(?:(?:public|private|protected|final|abstract|sealed|non-sealed|static|strictfp)\s+)*"
+    r"(?:class|interface|enum|record)\b"
+)
+
+
+def _split_columns(lines: list[str]) -> tuple[list[str], list[str]]:
+    """Split source lines into two columns.
+
+    Prefer a top-level type boundary so the first class lands entirely in the
+    left column; fall back to a balanced blank-line split otherwise.
+    """
+    n = len(lines)
+    decls = [i for i, ln in enumerate(lines) if _TYPE_DECL.match(ln)]
+
+    if len(decls) >= 2:
+        split = decls[1]
+        # Pull leading annotations / comments of the second type into the right column.
+        j = split - 1
+        while j >= 0:
+            s = lines[j].strip()
+            if s.startswith(("@", "//", "*", "/*")) or s.endswith("*/"):
+                j -= 1
+            else:
+                break
+        split = j + 1
+    else:
+        mid = n // 2
+        split = mid
+        for off in range(n):
+            for cand in (mid - off, mid + off):
+                if 0 < cand < n and lines[cand].strip() == "":
+                    split = cand
+                    break
+            else:
+                continue
+            break
+
+    left = lines[:split]
+    right = lines[split:]
+    while right and right[0].strip() == "":
+        right.pop(0)
+    while left and left[-1].strip() == "":
+        left.pop()
+    return left, right
+
+
+def highlight_java_html_columns(code: str, module: str) -> str:
+    """Carbon window with the code split across two adjacent columns."""
+    left, right = _split_columns(code.split("\n"))
+    mod = html.escape(module)
+    return (
+        '<div class="carbon">'
+        '<div class="carbon-titlebar">'
+        '<span class="carbon-dot red"></span>'
+        '<span class="carbon-dot yellow"></span>'
+        '<span class="carbon-dot green"></span>'
+        f'<span class="carbon-module">{mod}</span>'
+        "</div>"
+        '<div class="carbon-editor cols">'
+        '<div class="col">'
+        f'<pre><code>{_render_block(left)}</code></pre>'
+        "</div>"
+        '<span class="col-divider"></span>'
+        '<div class="col">'
+        f'<pre><code>{_render_block(right)}</code></pre>'
+        "</div>"
+        "</div></div>"
+    )
+
+
 def _pre_block(text: str) -> str:
   return text.replace("&", "&amp;").replace("<", "&lt;")
 
@@ -230,8 +348,9 @@ def _prefill_attr(meta: dict[str, Any]) -> str:
   return raw.replace("&", "&amp;").replace("'", "&#39;")
 
 
-def _embed_height(code: str, *, carbon: bool = False, large: bool = False) -> int:
-    lines = code.count("\n") + 1
+def _embed_height(code: str, *, carbon: bool = False, large: bool = False,
+                  line_count: int | None = None) -> int:
+    lines = line_count if line_count is not None else code.count("\n") + 1
     if carbon:
         floor = 640 if large else 560
         cap = 960 if large else 880
@@ -251,7 +370,14 @@ def build_codepen_embed(tweet: dict, code: str) -> str:
     title = f"Tweet {tid} — {module}"
     carbon = _use_carbon_style(tweet)
     large = bool(tweet.get("codepen_large", carbon))
-    height = _embed_height(code, carbon=carbon, large=large)
+    columns = carbon and int(tweet.get("codepen_columns", 1)) >= 2
+
+    if columns:
+        left, right = _split_columns(code.split("\n"))
+        col_lines = max(len(left), len(right))
+        height = _embed_height(code, carbon=carbon, large=large, line_count=col_lines)
+    else:
+        height = _embed_height(code, carbon=carbon, large=large)
 
     meta = {
         "title": title,
@@ -262,7 +388,11 @@ def build_codepen_embed(tweet: dict, code: str) -> str:
     wrap_class = "codepen-wrap codepen-wrap--large" if large else "codepen-wrap"
 
     if carbon:
-        html_block = highlight_java_html(code, module)
+        html_block = (
+            highlight_java_html_columns(code, module)
+            if columns
+            else highlight_java_html(code, module)
+        )
         css = CARBON_CSS
     else:
         css = _LEGACY_CSS

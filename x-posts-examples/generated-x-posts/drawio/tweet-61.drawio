@@ -1,86 +1,23 @@
-<mxfile host="app.diagrams.net">
-  <diagram name="Java 17 Sealed Classes" id="_UWqz1XNtUJx2bBG8tbF">
-    <mxGraphModel dx="1378" dy="743" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="codingstrain" version="22.1.8" type="device">
+  <diagram id="0e9c0820-11d1-4017-8678-4d3fc34d69de" name="Tweet 61 · Diagram">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#1565C0;fontFamily=Helvetica;" value="Java 17 Sealed Classes: Closed Hierarchy Verification" vertex="1">
-          <mxGeometry height="40" width="960" x="120" y="24" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE7F6;strokeColor=#7E57C2;fontColor=#4527A0;fontSize=11;fontStyle=1;arcSize=50;" value="permits" vertex="1">
-          <mxGeometry height="22" width="56" x="520" y="78" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#E3F2FD;strokeColor=#1E88E5;strokeWidth=2;fontColor=#0D47A1;fontSize=12;fontStyle=0;fontFamily=Courier New;align=center;verticalAlign=middle;shadow=1;" value="abstract sealed class Shape&#xa;permits Circle, Rectangle, FancyRectangle" vertex="1">
-          <mxGeometry height="64" width="340" x="380" y="100" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=2;fontColor=#1B5E20;fontSize=12;fontFamily=Courier New;align=center;verticalAlign=middle;shadow=1;" value="final class Circle extends Shape" vertex="1">
-          <mxGeometry height="52" width="260" x="80" y="240" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#E3F2FD;strokeColor=#1E88E5;strokeWidth=2;fontColor=#0D47A1;fontSize=12;fontFamily=Courier New;align=center;verticalAlign=middle;shadow=1;" value="sealed class Rectangle extends Shape&#xa;permits Square, Oblong" vertex="1">
-          <mxGeometry height="64" width="320" x="390" y="228" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE7F6;strokeColor=#7E57C2;fontColor=#4527A0;fontSize=10;fontStyle=1;arcSize=50;" value="permits" vertex="1">
-          <mxGeometry height="20" width="56" x="522" y="203" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#FFF3E0;strokeColor=#EF6C00;strokeWidth=2;fontColor=#E65100;fontSize=12;fontFamily=Courier New;align=center;verticalAlign=middle;shadow=1;" value="non-sealed class FancyRectangle extends Shape" vertex="1">
-          <mxGeometry height="52" width="320" x="917" y="240" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=2;fontColor=#1B5E20;fontSize=12;fontFamily=Courier New;align=center;verticalAlign=middle;shadow=1;" value="final class Square extends Rectangle" vertex="1">
-          <mxGeometry height="52" width="260" x="320" y="380" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=2;fontColor=#1B5E20;fontSize=12;fontFamily=Courier New;align=center;verticalAlign=middle;shadow=1;" value="final class Oblong extends Rectangle" vertex="1">
-          <mxGeometry height="52" width="270" x="620" y="380" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#FFF3E0;strokeColor=#EF6C00;strokeWidth=2;fontColor=#E65100;fontSize=12;fontFamily=Courier New;align=center;verticalAlign=middle;shadow=1;" value="class RoundedRectangle extends FancyRectangle" vertex="1">
-          <mxGeometry height="52" width="320" x="923" y="380" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-11" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=2;fontColor=#EF6C00;" value="open extension" vertex="1">
-          <mxGeometry height="24" width="100" x="1243" y="395" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-12" edge="1" parent="1" source="ngT1hAYCyIW_FhLVzCGF-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#37474F;strokeWidth=2;" target="ngT1hAYCyIW_FhLVzCGF-4">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-13" edge="1" parent="1" source="ngT1hAYCyIW_FhLVzCGF-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#37474F;strokeWidth=2;">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="550" y="200" />
-              <mxPoint x="550" y="200" />
-            </Array>
-            <mxPoint x="550" y="200" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-14" edge="1" parent="1" source="ngT1hAYCyIW_FhLVzCGF-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#37474F;strokeWidth=2;" target="ngT1hAYCyIW_FhLVzCGF-7">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-15" edge="1" parent="1" source="ngT1hAYCyIW_FhLVzCGF-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#37474F;strokeWidth=2;" target="ngT1hAYCyIW_FhLVzCGF-8">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-16" edge="1" parent="1" source="ngT1hAYCyIW_FhLVzCGF-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#37474F;strokeWidth=2;" target="ngT1hAYCyIW_FhLVzCGF-9">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-17" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#EF6C00;strokeWidth=2;dashed=1;dashPattern=8 6;" target="ngT1hAYCyIW_FhLVzCGF-10">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1082" y="292" as="sourcePoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-18" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=16;fontStyle=1;fontColor=#37474F;" value="Legend &amp;amp; Compiler Rules" vertex="1">
-          <mxGeometry height="28" width="960" x="120" y="470" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-19" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#E3F2FD;strokeColor=#1E88E5;strokeWidth=2;fontColor=#0D47A1;fontSize=12;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;" value="&lt;b&gt;sealed class&lt;/b&gt;&lt;br&gt;• Must use permits&lt;br&gt;• Restricts inheritance" vertex="1">
-          <mxGeometry height="88" width="300" x="80" y="510" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-20" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=2;fontColor=#1B5E20;fontSize=12;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;" value="&lt;b&gt;final class&lt;/b&gt;&lt;br&gt;• No further inheritance&lt;br&gt;• Leaf node" vertex="1">
-          <mxGeometry height="88" width="300" x="420" y="510" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-21" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#FFF3E0;strokeColor=#EF6C00;strokeWidth=2;fontColor=#E65100;fontSize=12;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;" value="&lt;b&gt;non-sealed class&lt;/b&gt;&lt;br&gt;• Reverts to open inheritance&lt;br&gt;• Escape hatch" vertex="1">
-          <mxGeometry height="88" width="340" x="760" y="510" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-22" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFEBEE;strokeColor=#C62828;strokeWidth=2;dashed=1;dashPattern=10 6;fontColor=#B71C1C;fontSize=12;align=center;verticalAlign=middle;spacingTop=8;spacingBottom=8;" value="&lt;b&gt;COMPILER VERIFICATION:&lt;/b&gt; Every permitted subclass MUST be final, sealed, or non-sealed&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Missing modifier on a permitted type gives compile error. Undeclared subclass gives compile error.&lt;/b&gt;" vertex="1">
-          <mxGeometry height="130" width="1080" x="60" y="620" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-23" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#E8EAF6;strokeColor=#3949AB;strokeWidth=2;fontColor=#1A237E;fontSize=12;align=center;verticalAlign=middle;spacingTop=6;spacingBottom=6;" value="&lt;b&gt;Why it matters:&lt;/b&gt; No surprise subtypes outside &lt;code&gt;permits&lt;/code&gt; (until a &lt;code&gt;non-sealed&lt;/code&gt; branch re-opens inheritance)." vertex="1">
-          <mxGeometry height="56" width="1080" x="60" y="770" as="geometry" />
-        </mxCell>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="2" value="Tweet #61 · JUnit 5&#x27;s Extension API replaces JUnit 4&#x27;s `@RunWith` Runn…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="3" value="junit5-extension-api-demo · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
+        <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="300" as="geometry"/></mxCell>
+        <mxCell id="5" value="Concept flow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
+        <mxCell id="6" value="Problem / context" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#3B82F6;strokeColor=#1D4ED8;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="120" y="190" width="200" height="70" as="geometry"/></mxCell>
+        <mxCell id="7" value="💡 JUnit 5&#x27;s Extension API replaces JUnit 4&#x27;s `@RunWith` Runner and `@R" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="360" y="190" width="240" height="70" as="geometry"/></mxCell>
+        <mxCell id="8" value="→" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="6" target="7"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="9" value="One model: implement lifecycle hooks like `BeforeEachCallback` instead" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="620" y="190" width="240" height="70" as="geometry"/></mxCell>
+        <mxCell id="10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="7" target="9"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="11" value="`ParameterResolver` injects test dependencies — no base-class inherita" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="880" y="190" width="240" height="70" as="geometry"/></mxCell>
+        <mxCell id="12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="9" target="11"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="13" value="✓ See CodePen for implementation" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#16A34A;" vertex="1" parent="1"><mxGeometry x="840" y="310" width="240" height="56" as="geometry"/></mxCell>
+        <mxCell id="14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="11" target="13"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
       </root>
     </mxGraphModel>
   </diagram>

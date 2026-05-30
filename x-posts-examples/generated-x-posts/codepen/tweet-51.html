@@ -100,6 +100,46 @@ body {
 .carbon-editor .num { color: #f78c6c; }
 .carbon-editor .pun { color: #89ddff; }
 .carbon-editor .txt { color: #d6deeb; }
+.carbon-editor.cols {
+  flex-direction: row;
+  gap: 1.75rem;
+  align-items: stretch;
+}
+.carbon-editor.cols .col {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.carbon-editor.cols .col pre {
+  flex: 1;
+  font-size: 15px;
+  line-height: 24px;
+}
+.carbon-editor.cols .col-divider {
+  align-self: stretch;
+  position: relative;
+  width: 1px;
+  background: #1d3b53;
+  flex: 0 0 auto;
+}
+.carbon-editor.cols .col-divider::after {
+  content: "\2192";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #011627;
+  border: 1px solid #1d3b53;
+  color: #82aaff;
+  font-size: 16px;
+}
 </pre>
           <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-cloud-config-native-server&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// 🚀Spring Cloud: Centralize config with Spring Cloud Config before you copy application.properties everywhere.&lt;/span&gt;
 &lt;span class=&quot;com&quot;&gt;//&lt;/span&gt;

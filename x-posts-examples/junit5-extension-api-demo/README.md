@@ -41,4 +41,4 @@ base class. The test class (`OrderServiceTest`) extends nothing.
 
 ## Related tweet asset
 
-- `x-posts-examples/generated-x-posts/sources/tweet-64.java`
+- `x-posts-examples/generated-x-posts/sources/tweet-61.java`

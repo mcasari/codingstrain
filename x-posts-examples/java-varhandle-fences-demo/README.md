@@ -33,4 +33,4 @@ plain (no `volatile` keyword) — ordering comes entirely from the VarHandle acc
 
 ## Related tweet asset
 
-- `x-posts-examples/generated-x-posts/sources/tweet-63.java`
+- `x-posts-examples/generated-x-posts/sources/tweet-60.java`

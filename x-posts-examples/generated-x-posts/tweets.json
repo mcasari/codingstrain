@@ -499,30 +499,6 @@
   },
   {
     "id": 58,
-    "module": "spring-kafka-demo",
-    "body": "💡 Kafka with Spring Boot in under 10 minutes\n\n✅ Runnable sample: `spring-kafka-demo`\n✅ Architecture diagram + Carbon CodePen below\n✅ From the codingstrain examples repo",
-    "tags": "#SpringBoot #Kafka",
-    "codepen_style": "carbon",
-    "codepen_large": true
-  },
-  {
-    "id": 59,
-    "module": "spring-boot-validated-config",
-    "body": "💡 @ConfigurationProperties + Bean Validation = fail at startup, not in prod\n\n✅ Runnable sample: `spring-boot-validated-config`\n✅ Architecture diagram + Carbon CodePen below\n✅ From the codingstrain examples repo",
-    "tags": "#SpringBoot",
-    "codepen_style": "carbon",
-    "codepen_large": true
-  },
-  {
-    "id": 60,
-    "module": "java-examples/BuilderDemo",
-    "body": "💡 Java Builder pattern step-by-step (no Lombok required)\n\n✅ Runnable sample: `BuilderDemo`\n✅ Architecture diagram + Carbon CodePen below\n✅ From the codingstrain examples repo",
-    "tags": "#Java #JavaDev",
-    "codepen_style": "carbon",
-    "codepen_large": true
-  },
-  {
-    "id": 61,
     "module": "java-17-sealed-classes",
     "diagram_type": "sealed_classes",
     "codepen_style": "carbon",
@@ -532,7 +508,7 @@
     "tags": "#Java #Java17"
   },
   {
-    "id": 62,
+    "id": 59,
     "module": "java-switch-expressions-demo",
     "body": "💡 Java 14+ switch expressions: the compiler checks exhaustiveness for you.\n\n✅ Skip an enum constant → compile error\n✅ Fix it by handling every value or adding `default`\n✅ Fewer forgotten branches when enums evolve",
     "code": "enum Status {\n    NEW,\n    RUNNING,\n    DONE\n}\n\npublic static void main(String[] args) {\n    List<Status> statuses = List.of(Status.NEW, Status.RUNNING, Status.DONE);\n\n    for (Status status : statuses) {\n        String message = toLabel(status);\n        System.out.printf(\"%s -> %s%n\", status, message);\n    }\n\n    System.out.println();\n    System.out.println(\"Tip: add FAILED to Status and this switch expression\");\n    System.out.println(\"will not compile until you handle FAILED or add default.\");\n}\n\nstatic String toLabel(Status status) {\n    return switch (status) {\n        case NEW -> \"queued\";\n        case RUNNING -> \"in progress\";\n        case DONE -> \"finished\";\n    };\n}",
@@ -541,7 +517,7 @@
     "codepen_large": true
   },
   {
-    "id": 63,
+    "id": 60,
     "module": "java-varhandle-fences-demo",
     "body": "💡 VarHandle fences in plain English (a lighter alternative to `volatile`) 🧵\n\n✅ When two threads share a variable, the CPU can reorder and cache writes. One thread updates a value, the other keeps seeing the old one. That's the bug VarHandle fences help you avoid. 🧵\n\n✅ `volatile` fixes it by fully syncing every read and write. Safe, but it's the heavy hammer — often stronger (and slower) than you actually need. 🧵\n\n✅ setRelease = \"publish\". The writer says: \"I'm done. Everything I wrote before this is now safe to read.\" Like hitting Save + Publish on a post. 🧵\n\n✅ getAcquire = \"subscribe\". The reader says: \"Give me the published value — and I'll correctly see everything written before it.\" Like opening the finished post, never a half-written draft. 🧵\n\n✅ setRelease + getAcquire work as a pair: if the reader sees the flag, it also sees all the data written before the flag. 🧵\n\n✅ setOpaque = the cheapest option: \"I'm the only writer — just keep my own writes in order.\" No heavy cross-thread coordination. 🧵\n\n✅ Bottom line: volatile does all of this at once, but expensively. VarHandle lets you pick only the guarantee you need — handy in hot, performance-critical code. 🧵\n#Java #Concurrency #JMM",
     "code": "package com.codingstrain.varhandle;\n\nimport java.lang.invoke.MethodHandles;\nimport java.lang.invoke.VarHandle;\n\n/**\n * Demonstrates VarHandle fence operations that are weaker (and cheaper) than\n * {@code volatile}:\n *\n * <ul>\n *   <li>{@code setOpaque} — single-writer ordering, no full barrier</li>\n *   <li>{@code setRelease} — publish writes (release-store)</li>\n *   <li>{@code getAcquire} — subscribe (acquire-load) so prior writes are visible</li>\n * </ul>\n */\npublic final class VarHandleFencesDemo {\n\n    /** Plain field accessed through a VarHandle (no {@code volatile} keyword). */\n    static final class Holder {\n        boolean flag;\n        int payload;\n    }\n\n    private static final VarHandle FLAG;\n    private static final VarHandle PAYLOAD;\n\n    static {\n        try {\n            MethodHandles.Lookup lookup = MethodHandles.lookup();\n            FLAG = lookup.findVarHandle(Holder.class, \"flag\", boolean.class);\n            PAYLOAD = lookup.findVarHandle(Holder.class, \"payload\", int.class);\n        } catch (ReflectiveOperationException e) {\n            throw new ExceptionInInitializerError(e);\n        }\n    }\n\n    public static void main(String[] args) throws InterruptedException {\n        opaqueExample();\n        releaseAcquireExample();\n    }\n\n    /**\n     * {@code setOpaque} / {@code getOpaque}: guarantees a single writer's updates\n     * become visible in program order, without the stronger barriers of volatile.\n     */\n    static void opaqueExample() {\n        Holder holder = new Holder();\n\n        FLAG.setOpaque(holder, true);\n        boolean current = (boolean) FLAG.getOpaque(holder);\n\n        System.out.println(\"[opaque] single-writer ordering, flag = \" + current);\n    }\n\n    /**\n     * {@code setRelease} (publish) pairs with {@code getAcquire} (subscribe):\n     * everything written before the release-store is visible to a thread that\n     * observes the value via an acquire-load.\n     */\n    static void releaseAcquireExample() throws InterruptedException {\n        Holder holder = new Holder();\n\n        Thread publisher = new Thread(() -> {\n            holder.payload = 42;                 // ordinary write\n            FLAG.setRelease(holder, true);       // publish: release-store\n        }, \"publisher\");\n\n        Thread subscriber = new Thread(() -> {\n            while (!(boolean) FLAG.getAcquire(holder)) {\n                Thread.onSpinWait();             // subscribe: acquire-load\n            }\n            // Guaranteed to see payload == 42 because of release/acquire pairing.\n            System.out.println(\"[release/acquire] observed payload = \" + holder.payload);\n        }, \"subscriber\");\n\n        subscriber.start();\n        publisher.start();\n        publisher.join();\n        subscriber.join();\n    }\n}",
@@ -550,12 +526,13 @@
     "codepen_large": true
   },
   {
-    "id": 64,
+    "id": 61,
     "module": "junit5-extension-api-demo",
     "body": "💡 JUnit 5's Extension API replaces JUnit 4's `@RunWith` Runner and `@Rule`.\n\n✅ One model: implement lifecycle hooks like `BeforeEachCallback` instead of an exclusive Runner\n✅ `ParameterResolver` injects test dependencies — no base-class inheritance needed\n✅ Extensions compose: stack several with `@ExtendWith` and they just work together\n#Java #JUnit5 #Testing",
     "code": "package com.codingstrain.junit5;\n\nimport org.junit.jupiter.api.Test;\nimport org.junit.jupiter.api.extension.BeforeEachCallback;\nimport org.junit.jupiter.api.extension.ExtendWith;\nimport org.junit.jupiter.api.extension.ExtensionContext;\nimport org.junit.jupiter.api.extension.ParameterContext;\nimport org.junit.jupiter.api.extension.ParameterResolver;\n\n/**\n * JUnit 5 Extension API: one composable model that replaces JUnit 4's\n * {@code @RunWith} Runner (single, exclusive) and {@code @Rule} (inheritance-based).\n */\nclass TimingExtension implements BeforeEachCallback, ParameterResolver {\n\n    private static final ExtensionContext.Namespace NS =\n        ExtensionContext.Namespace.create(TimingExtension.class);\n\n    @Override\n    public void beforeEach(ExtensionContext context) {\n        context.getStore(NS).put(\"start\", System.nanoTime());\n    }\n\n    @Override\n    public boolean supportsParameter(ParameterContext pc, ExtensionContext ec) {\n        return pc.getParameter().getType() == Stopwatch.class;\n    }\n\n    @Override\n    public Object resolveParameter(ParameterContext pc, ExtensionContext ec) {\n        long start = ec.getStore(NS).get(\"start\", long.class);\n        return new Stopwatch(start);\n    }\n}\n\n// No inheritance, no Runner: just declare the extensions you want.\n@ExtendWith(TimingExtension.class)\nclass OrderServiceTest {\n\n    @Test\n    void placesOrder(Stopwatch stopwatch) {   // injected by ParameterResolver\n        // ... exercise the system under test ...\n        System.out.println(\"elapsed = \" + stopwatch.elapsedMillis() + \"ms\");\n    }\n}",
     "tags": "#Java #JUnit5 #Testing",
     "codepen_style": "carbon",
-    "codepen_large": true
+    "codepen_large": true,
+    "codepen_columns": 2
   }
 ]

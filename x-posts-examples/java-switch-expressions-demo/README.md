@@ -27,4 +27,4 @@ java -cp target/classes com.codingstrain.switchexpr.SwitchExpressionsDemo
 
 ## Related tweet asset
 
-- `x-posts-examples/generated-x-posts/sources/tweet-62.java`
+- `x-posts-examples/generated-x-posts/sources/tweet-59.java`

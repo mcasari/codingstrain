@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <mxfile host="app.diagrams.net" agent="codingstrain" version="22.1.8" type="device">
-  <diagram id="d8bacee6-b1d0-424f-92b8-a4f7a56acbf0" name="Tweet 1 · Diagram">
+  <diagram id="4ae07d4f-04e4-46e1-85ff-b2a5e8d3cf6d" name="Tweet 1 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -22,7 +22,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="b4e16f6f-ebd4-424c-90cc-f0f9fc40625b" name="Tweet 2 · Diagram">
+  <diagram id="319bda7b-1140-4f1d-8e33-6a2cc0afa40b" name="Tweet 2 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -44,7 +44,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="130fe98f-d2e6-4ec9-bd51-a48f939d5aec" name="Tweet 3 · Diagram">
+  <diagram id="a443d919-abad-41ff-a688-9c086f249019" name="Tweet 3 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -66,7 +66,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="987d11fa-cef9-4b17-a50e-2ffade6eaac2" name="Tweet 4 · Diagram">
+  <diagram id="f810845f-e656-4cc1-a64e-9b0eabbd17fd" name="Tweet 4 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -88,7 +88,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="7541e38c-a756-4a70-a1bf-4e2595e20145" name="Tweet 5 · Diagram">
+  <diagram id="07c04e94-f56d-4d32-a461-212a6e9aa1d2" name="Tweet 5 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="460" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -109,7 +109,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="86322de7-0bac-4de6-8015-f341784c3d3d" name="Tweet 6 · Diagram">
+  <diagram id="2b711854-5894-46da-885c-c795a5ed5464" name="Tweet 6 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="460" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -130,7 +130,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="9ad41a47-a8a2-42a4-b592-51ccd1e0c8d3" name="Tweet 7 · Diagram">
+  <diagram id="edb90b90-4258-4ec4-934d-6e2eabd1028c" name="Tweet 7 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="460" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -151,7 +151,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="7f4905dc-8b5e-4114-a5ab-6cf679dcf34b" name="Tweet 8 · Diagram">
+  <diagram id="1e2d29ce-f64f-40e6-a851-ddda2b07c68b" name="Tweet 8 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="460" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -172,7 +172,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="864865b2-7c15-4b11-9d34-64c0d5e2b5a0" name="Tweet 9 · Diagram">
+  <diagram id="6cb9bf47-a04d-40d8-bca8-d29dcbc6e613" name="Tweet 9 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -192,7 +192,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="fa6d42ff-d076-4ba5-a4fc-689ff8be6080" name="Tweet 10 · Diagram">
+  <diagram id="05270259-d3e4-41d6-ab2a-8a16fb128b4d" name="Tweet 10 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -212,7 +212,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="a718823f-27db-4e50-880a-374e891b2520" name="Tweet 11 · Diagram">
+  <diagram id="122561b5-bf96-4762-87dd-8e9e9209780b" name="Tweet 11 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -232,7 +232,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="e8b0719a-35f4-4997-96c6-66abd0782115" name="Tweet 12 · Diagram">
+  <diagram id="5eed6dbd-64e1-4bc6-a54d-18da0df603cd" name="Tweet 12 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -252,7 +252,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="fdc3e0c3-1a6c-4e87-ba88-996cad941b4b" name="Tweet 13 · Diagram">
+  <diagram id="ac7e8af1-e672-45b8-9e03-9d1790770b3f" name="Tweet 13 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -271,7 +271,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="5c79b490-694b-489a-9c6d-b715df3df38f" name="Tweet 14 · Diagram">
+  <diagram id="8e9e491c-d49e-4295-abfd-af2135c0a433" name="Tweet 14 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -290,7 +290,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="0e6dda93-2155-4ce4-8161-6246a135da56" name="Tweet 15 · Diagram">
+  <diagram id="24e78297-cdb5-4417-b3ec-7636fa1ba971" name="Tweet 15 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="460" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -311,7 +311,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="444329bb-1ed1-4e48-953a-cedd696f73ce" name="Tweet 16 · Diagram">
+  <diagram id="aceeebc3-3db0-4477-8795-e5535b5a8321" name="Tweet 16 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="460" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -332,7 +332,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="8bb13534-656b-4341-9f2c-4f28081eb67c" name="Tweet 17 · Diagram">
+  <diagram id="e9853a6c-af68-42db-9669-f5daef0a48d7" name="Tweet 17 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="460" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -353,7 +353,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="b945f946-445f-4816-8698-9b4dcf9492b1" name="Tweet 18 · Diagram">
+  <diagram id="80d7b000-9548-4505-bc73-804728d78a67" name="Tweet 18 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="460" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -374,7 +374,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="bacc46fb-04c9-4572-9b79-c0514a5373e8" name="Tweet 19 · Diagram">
+  <diagram id="1a0dfab0-9a5f-4140-a704-9baeabd85ec9" name="Tweet 19 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -393,7 +393,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="05d9a325-bab5-4460-9d52-f754b7fd452b" name="Tweet 20 · Diagram">
+  <diagram id="f21c2b81-3e85-4bcf-88f1-9586a4c86c43" name="Tweet 20 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -412,7 +412,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="65a9b956-a9a5-4b5f-8cca-97ee538fe242" name="Tweet 21 · Diagram">
+  <diagram id="8495735f-b5a9-4052-a70c-7566271da05b" name="Tweet 21 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -431,7 +431,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="756873a0-5c21-4af8-9fec-8ab2ec7b3df4" name="Tweet 22 · Diagram">
+  <diagram id="64ec9345-f800-4e10-a3cf-7826f6829d9e" name="Tweet 22 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -450,7 +450,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="ab745411-86f8-4b7f-aa1b-4741b129ddd0" name="Tweet 23 · Diagram">
+  <diagram id="161b53a3-5f0d-4044-b77a-cc0f55dba138" name="Tweet 23 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -469,7 +469,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="34fc3b8c-4382-4b78-857a-1c6f8afd670e" name="Tweet 24 · Diagram">
+  <diagram id="fb4ac534-9b3a-404f-9fb7-9fb67e8844d8" name="Tweet 24 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="440" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -488,7 +488,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="38a9aef9-aa19-4b7c-aefa-120cb86e3ccc" name="Tweet 25 · Diagram">
+  <diagram id="5d85173d-1752-40e6-a63e-e04398ff64c7" name="Tweet 25 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="440" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -507,7 +507,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="118e3a3a-a0f2-406c-8932-a5f4af022d81" name="Tweet 26 · Diagram">
+  <diagram id="eee95229-7a7a-4602-b15c-b5646432681a" name="Tweet 26 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="440" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -526,7 +526,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="f7ffdc48-4a06-4800-9295-093e8473168b" name="Tweet 27 · Diagram">
+  <diagram id="36c9b55b-9128-4409-9c36-228cb53a8631" name="Tweet 27 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="440" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -545,7 +545,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="194d5ea1-7da4-4fb5-80e3-bf9f05c88c9a" name="Tweet 28 · Diagram">
+  <diagram id="cb44daf3-c328-4715-a507-9c10c435e0c7" name="Tweet 28 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -564,7 +564,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="e94307f3-3641-4a02-9867-8c15ae691c0a" name="Tweet 29 · Diagram">
+  <diagram id="049c7f2d-1e1a-4ed4-b287-e5f9ebf2f966" name="Tweet 29 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -583,7 +583,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="0e2cf151-67fc-4cd7-848a-c1d903e091bf" name="Tweet 30 · Diagram">
+  <diagram id="53012d4b-f3cf-4fc8-a155-17391a840f1e" name="Tweet 30 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -602,7 +602,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="f82062ca-9bdf-48fa-9ef9-159d34e240ce" name="Tweet 31 · Diagram">
+  <diagram id="719352eb-4d50-41f3-b4aa-1ce80df60981" name="Tweet 31 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -619,7 +619,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="346add6b-0463-4175-b3c0-56b9eb90f3b1" name="Tweet 32 · Diagram">
+  <diagram id="ea404b81-21f8-4282-8ea2-c0a5ae823d98" name="Tweet 32 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -636,7 +636,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="3d504c51-d228-4327-a3cd-0c0fa686dc15" name="Tweet 33 · Diagram">
+  <diagram id="547a5d83-94ed-45c0-a8bd-89cb6890e2c5" name="Tweet 33 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -657,7 +657,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="30351c4a-f0a9-4f41-a0e2-38d4e3306898" name="Tweet 34 · Diagram">
+  <diagram id="f3d94d72-444f-4e3b-9d05-3f3aef11f45d" name="Tweet 34 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -676,7 +676,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="0c4d4a9d-3629-44c4-b1c1-3ada4133b5c4" name="Tweet 35 · Diagram">
+  <diagram id="287e6285-5a72-4c25-899c-56d8ef0f2661" name="Tweet 35 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -695,7 +695,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="de317cbd-6c97-497e-a406-107eb218a338" name="Tweet 36 · Diagram">
+  <diagram id="50017096-f7cd-4e76-9eee-d7bb6179c3d0" name="Tweet 36 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -714,7 +714,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="702fc812-f09a-47d7-95ed-acca2fe240c5" name="Tweet 37 · Diagram">
+  <diagram id="fa6c96f6-390d-4bff-bdc0-732b19e21a38" name="Tweet 37 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -733,7 +733,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="42e90be7-2d63-40f5-a7c2-5c0e5bb16998" name="Tweet 38 · Diagram">
+  <diagram id="651c7474-3f4a-4ebc-803f-e646781b15cc" name="Tweet 38 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -752,7 +752,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="e26d55c1-95f8-41b6-91f3-9bd8949d7a2e" name="Tweet 39 · Diagram">
+  <diagram id="5a993822-6fe1-4b56-b031-53acb795ace7" name="Tweet 39 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -771,7 +771,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="92b34877-d345-4f03-890d-af7d0c1da8bb" name="Tweet 40 · Diagram">
+  <diagram id="468c0e4e-c643-4318-b7e7-cb1469641b73" name="Tweet 40 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -790,7 +790,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="1fe2a49e-b783-4b60-a1c4-53b5f9bd423f" name="Tweet 41 · Diagram">
+  <diagram id="81d5b0a9-f50c-4f84-8878-d3e8a58fcabb" name="Tweet 41 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -807,7 +807,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="eb030846-de90-485f-800c-d3f64d0f71d2" name="Tweet 42 · Diagram">
+  <diagram id="5fb5ce97-4c4b-477e-820e-9d84af83ab32" name="Tweet 42 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -824,7 +824,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="86353e7f-9418-4f9f-94da-1c6724442f19" name="Tweet 43 · Diagram">
+  <diagram id="e38bc2e4-1463-4ae2-babc-9d33e65e0926" name="Tweet 43 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -841,7 +841,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="595211cc-1b7c-4f7e-8d34-016defb6bcb0" name="Tweet 44 · Diagram">
+  <diagram id="1f2d47b7-70a9-4a74-a943-0524b13e5e40" name="Tweet 44 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -858,7 +858,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="2d472358-130a-4ab3-8f79-710f4af81f73" name="Tweet 45 · Diagram">
+  <diagram id="b3b3b9f1-ad2d-4a37-a4c1-c3e849fd3650" name="Tweet 45 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -875,7 +875,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="3a4bcb23-9de2-4921-8f2b-a2f891d45280" name="Tweet 46 · Diagram">
+  <diagram id="00145daf-ac55-4024-be56-2c63034837ab" name="Tweet 46 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -892,7 +892,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="ab5c0fd8-a4d8-449d-9ac1-c8e8c9e079cd" name="Tweet 47 · Diagram">
+  <diagram id="a706da17-b605-4201-a4f1-b216fce29e76" name="Tweet 47 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -909,7 +909,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="8172c88e-c84a-47bf-a95d-c89ffbbb2d49" name="Tweet 48 · Diagram">
+  <diagram id="831ea788-b547-4b44-add3-30ccf72d7616" name="Tweet 48 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -928,7 +928,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="f8d4c264-27c2-49c3-a081-02569c5cbb5f" name="Tweet 49 · Diagram">
+  <diagram id="144386b8-a3ab-464f-8ac7-8e7978074438" name="Tweet 49 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -950,7 +950,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="4c762acc-8b76-4a20-a344-686fe9e5d7c0" name="Tweet 50 · Diagram">
+  <diagram id="4d83b985-a3d0-429a-8bbd-a0c339db8cf4" name="Tweet 50 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -967,7 +967,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="ec6bcef4-0889-495b-9a58-73816ddbf439" name="Tweet 51 · Diagram">
+  <diagram id="5ba5ee2c-dab2-4d2e-8245-6b5421b9ab76" name="Tweet 51 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -984,7 +984,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="d77aae76-322b-4698-89dc-5b20a8b465b7" name="Tweet 52 · Diagram">
+  <diagram id="a10d4c63-a8c5-44b4-853c-787a03e493d9" name="Tweet 52 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="520" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1017,7 +1017,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="4f81a4a1-5c53-442f-a775-93c3359f92dd" name="Tweet 53 · Diagram">
+  <diagram id="83584f08-5b0d-41a1-992a-d8ea959de708" name="Tweet 53 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="580" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1045,7 +1045,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="3723c451-b6c6-4d49-af25-a74d86d37d8c" name="Tweet 54 · Diagram">
+  <diagram id="46f749fb-1c83-472e-b8e4-72fd5b6c0430" name="Tweet 54 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1062,7 +1062,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="2ebd55da-39f6-4397-8dfc-9a12f09e1aa8" name="Tweet 55 · Diagram">
+  <diagram id="e865ca89-d7bb-4a17-9b01-8799aa15ba08" name="Tweet 55 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1081,7 +1081,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="cfef934d-5748-41ae-89c8-7f09d4c51f1d" name="Tweet 56 · Diagram">
+  <diagram id="761ab94d-8991-434c-99f8-726078f0c8df" name="Tweet 56 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1100,7 +1100,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="3dac0002-d962-4785-9937-2aaf94ced9c2" name="Tweet 57 · Diagram">
+  <diagram id="29e9879a-6c30-43f9-9d53-c99a798128c9" name="Tweet 57 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="460" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1121,153 +1121,33 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="4c0964bc-2f87-4fa3-aaf4-c19168977333" name="Tweet 58 · Diagram">
-    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
-      <root>
-        <mxCell id="0"/>
-        <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #58 · Kafka with Spring Boot in under 10 minutes" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
-        <mxCell id="3" value="spring-kafka-demo · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
-        <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
-        <mxCell id="5" value="Kafka event flow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
-        <mxCell id="6" value="MessageProducer" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="90" y="200" width="200" height="78" as="geometry"/></mxCell>
-        <mxCell id="7" value="Kafka Topic" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#F97316;strokeColor=#EA580C;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="350" y="200" width="200" height="78" as="geometry"/></mxCell>
-        <mxCell id="8" value="@KafkaListener" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#10B981;strokeColor=#059669;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="610" y="200" width="200" height="78" as="geometry"/></mxCell>
-        <mxCell id="9" value="Consumer logic" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="870" y="200" width="200" height="78" as="geometry"/></mxCell>
-        <mxCell id="10" value="send()" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="6" target="7"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
-        <mxCell id="11" value="demo-topic" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="7" target="8"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
-        <mxCell id="12" value="groupId" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="8" target="9"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
-  <diagram id="36854f73-e26b-4f81-afc5-e5d5f3484484" name="Tweet 59 · Diagram">
-    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
-      <root>
-        <mxCell id="0"/>
-        <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #59 · @ConfigurationProperties + Bean Validation = fail at start…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
-        <mxCell id="3" value="spring-boot-validated-config · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
-        <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
-        <mxCell id="5" value="Validated configuration" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
-        <mxCell id="6" value="application.yml" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#6366F1;strokeColor=#4F46E5;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="90" y="200" width="200" height="78" as="geometry"/></mxCell>
-        <mxCell id="7" value="@ConfigurationProperties" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#6366F1;strokeColor=#4F46E5;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="350" y="200" width="200" height="78" as="geometry"/></mxCell>
-        <mxCell id="8" value="@Validated" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#EC4899;strokeColor=#DB2777;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="610" y="200" width="200" height="78" as="geometry"/></mxCell>
-        <mxCell id="9" value="Spring Context" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="870" y="200" width="200" height="78" as="geometry"/></mxCell>
-        <mxCell id="10" value="bind" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="6" target="7"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
-        <mxCell id="11" value="Bean Validation" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="7" target="8"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
-        <mxCell id="12" value="startup" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="8" target="9"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
-        <mxCell id="13" value="✓ Fail at startup, not in production" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#16A34A;" vertex="1" parent="1"><mxGeometry x="80" y="330" width="500" height="34" as="geometry"/></mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
-  <diagram id="b3ba7de5-5502-4c7b-be18-fe34a26b287e" name="Tweet 60 · Diagram">
-    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
-      <root>
-        <mxCell id="0"/>
-        <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #60 · Java Builder pattern step-by-step (no Lombok required)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
-        <mxCell id="3" value="java-examples/BuilderDemo · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
-        <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
-        <mxCell id="5" value="Java pattern" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
-        <mxCell id="6" value="Caller code" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#3B82F6;strokeColor=#1D4ED8;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="133" y="200" width="200" height="78" as="geometry"/></mxCell>
-        <mxCell id="7" value="Builder / API" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="479" y="200" width="200" height="78" as="geometry"/></mxCell>
-        <mxCell id="8" value="Immutable object" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#F59E0B;strokeColor=#D97706;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="825" y="200" width="200" height="78" as="geometry"/></mxCell>
-        <mxCell id="9" value="fluent API" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="6" target="7"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
-        <mxCell id="10" value=".build()" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="7" target="8"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
-  <diagram name="Java 17 Sealed Classes" id="_UWqz1XNtUJx2bBG8tbF">
-    <mxGraphModel dx="1378" dy="743" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
-      <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#1565C0;fontFamily=Helvetica;" value="Java 17 Sealed Classes: Closed Hierarchy Verification" vertex="1">
-          <mxGeometry height="40" width="960" x="120" y="24" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE7F6;strokeColor=#7E57C2;fontColor=#4527A0;fontSize=11;fontStyle=1;arcSize=50;" value="permits" vertex="1">
-          <mxGeometry height="22" width="56" x="520" y="78" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#E3F2FD;strokeColor=#1E88E5;strokeWidth=2;fontColor=#0D47A1;fontSize=12;fontStyle=0;fontFamily=Courier New;align=center;verticalAlign=middle;shadow=1;" value="abstract sealed class Shape&#xa;permits Circle, Rectangle, FancyRectangle" vertex="1">
-          <mxGeometry height="64" width="340" x="380" y="100" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=2;fontColor=#1B5E20;fontSize=12;fontFamily=Courier New;align=center;verticalAlign=middle;shadow=1;" value="final class Circle extends Shape" vertex="1">
-          <mxGeometry height="52" width="260" x="80" y="240" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#E3F2FD;strokeColor=#1E88E5;strokeWidth=2;fontColor=#0D47A1;fontSize=12;fontFamily=Courier New;align=center;verticalAlign=middle;shadow=1;" value="sealed class Rectangle extends Shape&#xa;permits Square, Oblong" vertex="1">
-          <mxGeometry height="64" width="320" x="390" y="228" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE7F6;strokeColor=#7E57C2;fontColor=#4527A0;fontSize=10;fontStyle=1;arcSize=50;" value="permits" vertex="1">
-          <mxGeometry height="20" width="56" x="522" y="203" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#FFF3E0;strokeColor=#EF6C00;strokeWidth=2;fontColor=#E65100;fontSize=12;fontFamily=Courier New;align=center;verticalAlign=middle;shadow=1;" value="non-sealed class FancyRectangle extends Shape" vertex="1">
-          <mxGeometry height="52" width="320" x="917" y="240" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=2;fontColor=#1B5E20;fontSize=12;fontFamily=Courier New;align=center;verticalAlign=middle;shadow=1;" value="final class Square extends Rectangle" vertex="1">
-          <mxGeometry height="52" width="260" x="320" y="380" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=2;fontColor=#1B5E20;fontSize=12;fontFamily=Courier New;align=center;verticalAlign=middle;shadow=1;" value="final class Oblong extends Rectangle" vertex="1">
-          <mxGeometry height="52" width="270" x="620" y="380" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#FFF3E0;strokeColor=#EF6C00;strokeWidth=2;fontColor=#E65100;fontSize=12;fontFamily=Courier New;align=center;verticalAlign=middle;shadow=1;" value="class RoundedRectangle extends FancyRectangle" vertex="1">
-          <mxGeometry height="52" width="320" x="923" y="380" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-11" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=2;fontColor=#EF6C00;" value="open extension" vertex="1">
-          <mxGeometry height="24" width="100" x="1243" y="395" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-12" edge="1" parent="1" source="ngT1hAYCyIW_FhLVzCGF-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#37474F;strokeWidth=2;" target="ngT1hAYCyIW_FhLVzCGF-4">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-13" edge="1" parent="1" source="ngT1hAYCyIW_FhLVzCGF-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#37474F;strokeWidth=2;">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="550" y="200" />
-              <mxPoint x="550" y="200" />
-            </Array>
-            <mxPoint x="550" y="200" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-14" edge="1" parent="1" source="ngT1hAYCyIW_FhLVzCGF-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#37474F;strokeWidth=2;" target="ngT1hAYCyIW_FhLVzCGF-7">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-15" edge="1" parent="1" source="ngT1hAYCyIW_FhLVzCGF-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#37474F;strokeWidth=2;" target="ngT1hAYCyIW_FhLVzCGF-8">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-16" edge="1" parent="1" source="ngT1hAYCyIW_FhLVzCGF-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#37474F;strokeWidth=2;" target="ngT1hAYCyIW_FhLVzCGF-9">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-17" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#EF6C00;strokeWidth=2;dashed=1;dashPattern=8 6;" target="ngT1hAYCyIW_FhLVzCGF-10">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1082" y="292" as="sourcePoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-18" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=16;fontStyle=1;fontColor=#37474F;" value="Legend &amp;amp; Compiler Rules" vertex="1">
-          <mxGeometry height="28" width="960" x="120" y="470" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-19" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#E3F2FD;strokeColor=#1E88E5;strokeWidth=2;fontColor=#0D47A1;fontSize=12;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;" value="&lt;b&gt;sealed class&lt;/b&gt;&lt;br&gt;• Must use permits&lt;br&gt;• Restricts inheritance" vertex="1">
-          <mxGeometry height="88" width="300" x="80" y="510" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-20" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=2;fontColor=#1B5E20;fontSize=12;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;" value="&lt;b&gt;final class&lt;/b&gt;&lt;br&gt;• No further inheritance&lt;br&gt;• Leaf node" vertex="1">
-          <mxGeometry height="88" width="300" x="420" y="510" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-21" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#FFF3E0;strokeColor=#EF6C00;strokeWidth=2;fontColor=#E65100;fontSize=12;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;" value="&lt;b&gt;non-sealed class&lt;/b&gt;&lt;br&gt;• Reverts to open inheritance&lt;br&gt;• Escape hatch" vertex="1">
-          <mxGeometry height="88" width="340" x="760" y="510" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-22" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFEBEE;strokeColor=#C62828;strokeWidth=2;dashed=1;dashPattern=10 6;fontColor=#B71C1C;fontSize=12;align=center;verticalAlign=middle;spacingTop=8;spacingBottom=8;" value="&lt;b&gt;COMPILER VERIFICATION:&lt;/b&gt; Every permitted subclass MUST be final, sealed, or non-sealed&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Missing modifier on a permitted type gives compile error. Undeclared subclass gives compile error.&lt;/b&gt;" vertex="1">
-          <mxGeometry height="130" width="1080" x="60" y="620" as="geometry" />
-        </mxCell>
-        <mxCell id="ngT1hAYCyIW_FhLVzCGF-23" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#E8EAF6;strokeColor=#3949AB;strokeWidth=2;fontColor=#1A237E;fontSize=12;align=center;verticalAlign=middle;spacingTop=6;spacingBottom=6;" value="&lt;b&gt;Why it matters:&lt;/b&gt; No surprise subtypes outside &lt;code&gt;permits&lt;/code&gt; (until a &lt;code&gt;non-sealed&lt;/code&gt; branch re-opens inheritance)." vertex="1">
-          <mxGeometry height="56" width="1080" x="60" y="770" as="geometry" />
-        </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
-  <diagram id="89ab6a3d-0638-4061-8d4d-88e91ffcfe30" name="Tweet 62 · Diagram">
+  <diagram id="0e9c0820-11d1-4017-8678-4d3fc34d69de" name="Tweet 61 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #62 · Java 14+ switch expressions: the compiler checks exhaustiv…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #61 · JUnit 5&#x27;s Extension API replaces JUnit 4&#x27;s `@RunWith` Runn…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="3" value="junit5-extension-api-demo · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
+        <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="300" as="geometry"/></mxCell>
+        <mxCell id="5" value="Concept flow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
+        <mxCell id="6" value="Problem / context" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#3B82F6;strokeColor=#1D4ED8;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="120" y="190" width="200" height="70" as="geometry"/></mxCell>
+        <mxCell id="7" value="💡 JUnit 5&#x27;s Extension API replaces JUnit 4&#x27;s `@RunWith` Runner and `@R" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="360" y="190" width="240" height="70" as="geometry"/></mxCell>
+        <mxCell id="8" value="→" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="6" target="7"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="9" value="One model: implement lifecycle hooks like `BeforeEachCallback` instead" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="620" y="190" width="240" height="70" as="geometry"/></mxCell>
+        <mxCell id="10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="7" target="9"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="11" value="`ParameterResolver` injects test dependencies — no base-class inherita" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="880" y="190" width="240" height="70" as="geometry"/></mxCell>
+        <mxCell id="12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="9" target="11"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="13" value="✓ See CodePen for implementation" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#16A34A;" vertex="1" parent="1"><mxGeometry x="840" y="310" width="240" height="56" as="geometry"/></mxCell>
+        <mxCell id="14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="11" target="13"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="95a9c853-0776-4afc-820c-6a77946d756c" name="Tweet 59 · Diagram">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="2" value="Tweet #59 · Java 14+ switch expressions: the compiler checks exhaustiv…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="java-switch-expressions-demo · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="300" as="geometry"/></mxCell>
         <mxCell id="5" value="Concept flow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
@@ -1283,21 +1163,42 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="7ca94683-3650-43fb-80be-deb51978fd6d" name="Tweet 63 · Diagram">
+  <diagram id="91e9c602-da73-4364-abbd-b550d6f6f849" name="Tweet 60 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #63 · VarHandle gives you memory fences weaker (and cheaper) tha…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #60 · VarHandle fences in plain English (a lighter alternative t…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="java-varhandle-fences-demo · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="300" as="geometry"/></mxCell>
         <mxCell id="5" value="Concept flow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
         <mxCell id="6" value="Problem / context" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#3B82F6;strokeColor=#1D4ED8;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="120" y="190" width="200" height="70" as="geometry"/></mxCell>
-        <mxCell id="7" value="💡 VarHandle gives you memory fences weaker (and cheaper) than `volatil" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="360" y="190" width="240" height="70" as="geometry"/></mxCell>
+        <mxCell id="7" value="💡 VarHandle fences in plain English (a lighter alternative to `volatil" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="360" y="190" width="240" height="70" as="geometry"/></mxCell>
         <mxCell id="8" value="→" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="6" target="7"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
-        <mxCell id="9" value="setOpaque → single-writer ordering, no full barrier" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="620" y="190" width="240" height="70" as="geometry"/></mxCell>
+        <mxCell id="9" value="When two threads share a variable, the CPU can reorder and cache write" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="620" y="190" width="240" height="70" as="geometry"/></mxCell>
         <mxCell id="10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="7" target="9"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
-        <mxCell id="11" value="setRelease → publish writes for others to see" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="880" y="190" width="240" height="70" as="geometry"/></mxCell>
+        <mxCell id="11" value="`volatile` fixes it by fully syncing every read and write. Safe, but i" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="880" y="190" width="240" height="70" as="geometry"/></mxCell>
+        <mxCell id="12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="9" target="11"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="13" value="✓ See CodePen for implementation" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#16A34A;" vertex="1" parent="1"><mxGeometry x="840" y="310" width="240" height="56" as="geometry"/></mxCell>
+        <mxCell id="14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="11" target="13"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="ce860442-33c3-4370-91a6-8ee0131063d3" name="Tweet 61 · Diagram">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="2" value="Tweet #61 · JUnit 5&#x27;s Extension API replaces JUnit 4&#x27;s `@RunWith` Runn…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="3" value="junit5-extension-api-demo · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
+        <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="300" as="geometry"/></mxCell>
+        <mxCell id="5" value="Concept flow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
+        <mxCell id="6" value="Problem / context" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#3B82F6;strokeColor=#1D4ED8;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="120" y="190" width="200" height="70" as="geometry"/></mxCell>
+        <mxCell id="7" value="💡 JUnit 5&#x27;s Extension API replaces JUnit 4&#x27;s `@RunWith` Runner and `@R" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="360" y="190" width="240" height="70" as="geometry"/></mxCell>
+        <mxCell id="8" value="→" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="6" target="7"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="9" value="One model: implement lifecycle hooks like `BeforeEachCallback` instead" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="620" y="190" width="240" height="70" as="geometry"/></mxCell>
+        <mxCell id="10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="7" target="9"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="11" value="`ParameterResolver` injects test dependencies — no base-class inherita" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="880" y="190" width="240" height="70" as="geometry"/></mxCell>
         <mxCell id="12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="9" target="11"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
         <mxCell id="13" value="✓ See CodePen for implementation" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#16A34A;" vertex="1" parent="1"><mxGeometry x="840" y="310" width="240" height="56" as="geometry"/></mxCell>
         <mxCell id="14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="11" target="13"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
