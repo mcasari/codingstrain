@@ -1,0 +1,2 @@
+// 💡 Java tip: Use interface default methods to handle backward compatibility (starting from Java 8).
+// #Java #Interfaces

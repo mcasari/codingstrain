@@ -1,0 +1,1 @@
+// Java Tip 💡: Avoid catching generic `Exception` or `Throwable`. Be specific. #Java #ErrorHandling

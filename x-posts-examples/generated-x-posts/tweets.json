@@ -413,38 +413,27 @@
   },
   {
     "id": 48,
-    "module": "codingstrain",
-    "body": "🚀Spring Boot: Run any codingstrain module with mvn spring-boot:run.\n\n✅ Run any codingstrain module with mvn spring-boot:run\n✅ Runnable sample: `codingstrain`\n✅ Architecture diagram + Carbon CodePen below",
-    "tags": "#SpringBoot #Java",
+    "module": "spring-boot-minimal-rest-h2",
+    "body": "🚀Spring Boot: A full REST API on an H2 in-memory database — no Docker, nothing to install.\n\n✅ H2 lives inside the app's memory: the database is created on startup and thrown away on shutdown — ideal for demos and tests\n✅ Extend JpaRepository and you get full CRUD (list, fetch, create, update, delete) without writing SQL\n✅ Just run the app — the schema and sample rows load automatically, and you can browse them at /h2-console",
+    "tags": "#SpringBoot",
     "codepen_style": "carbon",
-    "codepen_large": true
+    "codepen_large": true,
+    "code": "// 1) JPA entity mapped to a table in the H2 database\n@Entity\n@Table(name = \"Book\")\npublic class Book {\n    @Id private String id;\n    private String title;\n    private String author;\n    // getters / setters omitted\n}\n\n// 2) Repository — extend JpaRepository for full CRUD, add finders as needed\n@Repository\npublic interface BookRepository extends JpaRepository<Book, String> {\n    List<Book> findByAuthor(String author);\n}\n\n// 3) REST controller exposes the CRUD over HTTP\n@RestController\n@RequestMapping(\"/library\")\npublic class BookController {\n\n    @Autowired\n    private BookService books;\n\n    @GetMapping(\"/book\")\n    public List<Book> findAll() { return books.findAll(); }\n\n    @PostMapping(\"/book\")\n    public Book add(@RequestBody Book book) { return books.save(book); }\n\n    @DeleteMapping(\"/book/{id}\")\n    public void delete(@PathVariable String id) { books.deleteById(id); }\n}\n\n// 4) application.yaml — in-memory H2, nothing to install\n// spring.datasource.url: jdbc:h2:mem:mydb\n// spring.sql.init.mode: always       # auto-runs schema.sql + import.sql\n// spring.h2.console.enabled: true    # browse data at /h2-console",
+    "diagram_type": "rest",
+    "codepen_columns": 2,
+    "codepen_split_decl": 2
   },
   {
     "id": 49,
-    "module": "spring-boot-minimal-rest-h2",
-    "body": "🚀Spring Boot: H2 in-memory DB for REST tutorials — zero Docker, full CRUD.\n\n✅ H2 in-memory DB for REST tutorials — zero Docker, full CRUD\n✅ Runnable sample: `spring-boot-minimal-rest-h2`\n✅ Architecture diagram + Carbon CodePen below",
-    "tags": "#SpringBoot",
-    "codepen_style": "carbon",
-    "codepen_large": true
-  },
-  {
-    "id": 50,
-    "module": "spring-boot-minimal-rest-h2-actuator",
-    "body": "🚀Spring Boot: Check /actuator/health before you deploy.\n\n✅ Check /actuator/health before you deploy\n✅ Runnable sample: `spring-boot-minimal-rest-h2-actuator`\n✅ Architecture diagram + Carbon CodePen below",
-    "tags": "#SpringBoot #JavaDev",
-    "codepen_style": "carbon",
-    "codepen_large": true
-  },
-  {
-    "id": 51,
     "module": "spring-cloud-config-native-server",
     "body": "🚀Spring Cloud: Centralize config with Spring Cloud Config before you copy application.properties everywhere.\n\n✅ Centralize config with Spring Cloud Config before you copy application.properties everywhere\n✅ Runnable sample: `spring-cloud-config-native-server`\n✅ Architecture diagram + Carbon CodePen below",
     "tags": "#SpringCloud #Microservices",
     "codepen_style": "carbon",
-    "codepen_large": true
+    "codepen_large": true,
+    "code": "// ── 1) Config Server: one place serves every service's config ──\n@SpringBootApplication\n@EnableConfigServer\npublic class ConfigServerApp {\n    public static void main(String[] args) {\n        new SpringApplicationBuilder(ConfigServerApp.class).run(args);\n    }\n}\n\n// ── 2) Server application.yaml (serve files from the classpath) ──\n// spring.profiles.active: native        # local files, no git needed\n// spring.cloud.config.server.native.search-locations: classpath:/config\n// server.port: 8888\n\n// ── 3) /config/client-service.yaml (config for \"client-service\") ──\n// myproperty: value\n\n// ── 4) Client: import config from the server at startup ──\n// spring.application.name: client-service\n// spring.config.import: optional:configserver:http://localhost:8888\n\n@Component\npublic class GreetingClient {\n    @Value(\"${myproperty}\")               // resolved from the Config Server\n    private String myProperty;\n}"
   },
   {
-    "id": 52,
+    "id": 50,
     "module": "spring-cloud-discovery",
     "has_diagram": true,
     "diagram_type": "eureka",
@@ -455,7 +444,7 @@
     "codepen_large": true
   },
   {
-    "id": 53,
+    "id": 51,
     "module": "libraryapp-openfeign-discovery-circuitbreaker",
     "has_diagram": true,
     "diagram_type": "circuit_breaker",
@@ -466,39 +455,28 @@
     "codepen_large": true
   },
   {
-    "id": 54,
+    "id": 52,
     "module": "spring-cloud-sample-libraryapp",
-    "body": "🚀Spring Cloud: Contract testing (Pact) and Gatling live beside the microservices.\n\n✅ Contract testing (Pact) and Gatling live beside the microservices\n✅ Runnable sample: `spring-cloud-sample-libraryapp`\n✅ Architecture diagram + Carbon CodePen below",
+    "body": "🚀Spring Cloud: Contract testing with Pact — make sure two services still agree on their API.\n\n✅ The consumer writes down the response it expects and tests against a mock — the real provider doesn't need to be running\n✅ The provider replays that same contract against the real app and fails if it no longer matches\n✅ Each side is verified separately, so a breaking change shows up long before deployment",
+    "tags": "#SpringCloud #Testing",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "// ── CONSUMER (books-service): declare what you expect from author-service ──\n@ExtendWith(PactConsumerTestExt.class)\nclass AuthorClientContractTest {\n\n    @Pact(consumer = \"books-service\", provider = \"author-service\")\n    V4Pact getAuthor(PactDslWithProvider builder) {\n        return builder.given(\"author Goethe exists\")\n            .uponReceiving(\"GET author by name\")\n                .path(\"/authors/findAuthor\").query(\"name=Goethe\").method(\"GET\")\n            .willRespondWith()\n                .status(200)\n                .body(\"{\\\"name\\\":\\\"Goethe\\\",\\\"biography\\\":\\\"Bio info\\\"}\")\n            .toPact(V4Pact.class);\n    }\n\n    @Test\n    @PactTestFor(pactMethod = \"getAuthor\")        // runs against a mock provider\n    void callsAuthorService(MockServer mock) {\n        String body = new RestTemplate().getForObject(\n            mock.getUrl() + \"/authors/findAuthor?name=Goethe\", String.class);\n        assertEquals(\"{\\\"name\\\":\\\"Goethe\\\",\\\"biography\\\":\\\"Bio info\\\"}\", body);\n    }\n}\n\n// ── PROVIDER (author-service): prove the real service honours the contract ──\n@Provider(\"author-service\")\n@SpringBootTest(webEnvironment = RANDOM_PORT)\n@PactBroker(url = \"http://localhost:9292\")\nclass AuthorProviderPactTest {\n\n    @TestTemplate\n    @ExtendWith(PactVerificationInvocationContextProvider.class)\n    void verifyContracts(PactVerificationContext ctx) {\n        ctx.verifyInteraction();                  // replay contract on the real app\n    }\n}",
+    "codepen_columns": 2,
+    "diagram_type": "pact"
+  },
+  {
+    "id": 53,
+    "module": "spring-cloud-sample-libraryapp",
+    "body": "🚀Spring Cloud: Load testing with Gatling — check a service survives real traffic.\n\n✅ Describe a scenario (e.g. POST /library/book) and ramp virtual users up over time\n✅ Feed randomized data with Faker so every request looks realistic\n✅ Assert SLAs on the whole run — fail it if it gets too slow (≤10s) or drops below >90% success",
+    "code": "// Gatling: load-test the books endpoint and assert SLAs\npublic class BookSaveSimulation extends Simulation {\n\n    {\n        setUp(buildScenario()\n            .injectOpen(rampUsersPerSec(1).to(100).during(ofSeconds(300)))\n            .protocols(http.baseUrl(\"http://localhost:8080\")))\n        .assertions(\n            global().responseTime().max().lte(10000),            // <= 10s\n            global().successfulRequests().percent().gt(90.0));   // > 90% OK\n    }\n\n    ScenarioBuilder buildScenario() {\n        return scenario(\"Load POST\")\n            .feed(randomTitles())                  // Faker-generated book titles\n            .exec(http(\"create-book\").post(\"/library/book\")\n                .header(\"Content-Type\", \"application/json\")\n                .body(StringBody(\"{ \\\"title\\\": \\\"${title}\\\" }\")));\n    }\n}",
+    "diagram_type": "gatling",
     "tags": "#SpringCloud #Testing",
     "codepen_style": "carbon",
     "codepen_large": true
   },
   {
-    "id": 55,
-    "module": "codingstrain",
-    "body": "🚀Spring Boot: codingstrain: clone once, open one module, learn one concept.\n\n✅ codingstrain: clone once, open one module, learn one concept\n✅ Runnable sample: `codingstrain`\n✅ Architecture diagram + Carbon CodePen below",
-    "tags": "#Java #SpringBoot",
-    "codepen_style": "carbon",
-    "codepen_large": true
-  },
-  {
-    "id": 56,
-    "module": "codingstrain",
-    "body": "💡 5 Spring Boot mistakes I see in every code review\n\n✅ Runnable sample: `codingstrain`\n✅ Architecture diagram + Carbon CodePen below\n✅ From the codingstrain examples repo",
-    "tags": "#SpringBoot",
-    "codepen_style": "carbon",
-    "codepen_large": true
-  },
-  {
-    "id": 57,
-    "module": "spring-streaming-demo",
-    "body": "💡 JPA memory leaks: findAll() vs Stream + em.clear()\n\n✅ Runnable sample: `spring-streaming-demo`\n✅ Architecture diagram + Carbon CodePen below\n✅ From the codingstrain examples repo",
-    "tags": "#SpringBoot #JPA",
-    "codepen_style": "carbon",
-    "codepen_large": true
-  },
-  {
-    "id": 58,
+    "id": 54,
     "module": "java-17-sealed-classes",
     "diagram_type": "sealed_classes",
     "codepen_style": "carbon",
@@ -508,7 +486,7 @@
     "tags": "#Java #Java17"
   },
   {
-    "id": 59,
+    "id": 55,
     "module": "java-switch-expressions-demo",
     "body": "💡 Java 14+ switch expressions: the compiler checks exhaustiveness for you.\n\n✅ Skip an enum constant → compile error\n✅ Fix it by handling every value or adding `default`\n✅ Fewer forgotten branches when enums evolve",
     "code": "enum Status {\n    NEW,\n    RUNNING,\n    DONE\n}\n\npublic static void main(String[] args) {\n    List<Status> statuses = List.of(Status.NEW, Status.RUNNING, Status.DONE);\n\n    for (Status status : statuses) {\n        String message = toLabel(status);\n        System.out.printf(\"%s -> %s%n\", status, message);\n    }\n\n    System.out.println();\n    System.out.println(\"Tip: add FAILED to Status and this switch expression\");\n    System.out.println(\"will not compile until you handle FAILED or add default.\");\n}\n\nstatic String toLabel(Status status) {\n    return switch (status) {\n        case NEW -> \"queued\";\n        case RUNNING -> \"in progress\";\n        case DONE -> \"finished\";\n    };\n}",
@@ -517,7 +495,7 @@
     "codepen_large": true
   },
   {
-    "id": 60,
+    "id": 56,
     "module": "java-varhandle-fences-demo",
     "body": "💡 VarHandle fences in plain English (a lighter alternative to `volatile`) 🧵\n\n✅ When two threads share a variable, the CPU can reorder and cache writes. One thread updates a value, the other keeps seeing the old one. That's the bug VarHandle fences help you avoid. 🧵\n\n✅ `volatile` fixes it by fully syncing every read and write. Safe, but it's the heavy hammer — often stronger (and slower) than you actually need. 🧵\n\n✅ setRelease = \"publish\". The writer says: \"I'm done. Everything I wrote before this is now safe to read.\" Like hitting Save + Publish on a post. 🧵\n\n✅ getAcquire = \"subscribe\". The reader says: \"Give me the published value — and I'll correctly see everything written before it.\" Like opening the finished post, never a half-written draft. 🧵\n\n✅ setRelease + getAcquire work as a pair: if the reader sees the flag, it also sees all the data written before the flag. 🧵\n\n✅ setOpaque = the cheapest option: \"I'm the only writer — just keep my own writes in order.\" No heavy cross-thread coordination. 🧵\n\n✅ Bottom line: volatile does all of this at once, but expensively. VarHandle lets you pick only the guarantee you need — handy in hot, performance-critical code. 🧵\n#Java #Concurrency #JMM",
     "code": "package com.codingstrain.varhandle;\n\nimport java.lang.invoke.MethodHandles;\nimport java.lang.invoke.VarHandle;\n\n/**\n * Demonstrates VarHandle fence operations that are weaker (and cheaper) than\n * {@code volatile}:\n *\n * <ul>\n *   <li>{@code setOpaque} — single-writer ordering, no full barrier</li>\n *   <li>{@code setRelease} — publish writes (release-store)</li>\n *   <li>{@code getAcquire} — subscribe (acquire-load) so prior writes are visible</li>\n * </ul>\n */\npublic final class VarHandleFencesDemo {\n\n    /** Plain field accessed through a VarHandle (no {@code volatile} keyword). */\n    static final class Holder {\n        boolean flag;\n        int payload;\n    }\n\n    private static final VarHandle FLAG;\n    private static final VarHandle PAYLOAD;\n\n    static {\n        try {\n            MethodHandles.Lookup lookup = MethodHandles.lookup();\n            FLAG = lookup.findVarHandle(Holder.class, \"flag\", boolean.class);\n            PAYLOAD = lookup.findVarHandle(Holder.class, \"payload\", int.class);\n        } catch (ReflectiveOperationException e) {\n            throw new ExceptionInInitializerError(e);\n        }\n    }\n\n    public static void main(String[] args) throws InterruptedException {\n        opaqueExample();\n        releaseAcquireExample();\n    }\n\n    /**\n     * {@code setOpaque} / {@code getOpaque}: guarantees a single writer's updates\n     * become visible in program order, without the stronger barriers of volatile.\n     */\n    static void opaqueExample() {\n        Holder holder = new Holder();\n\n        FLAG.setOpaque(holder, true);\n        boolean current = (boolean) FLAG.getOpaque(holder);\n\n        System.out.println(\"[opaque] single-writer ordering, flag = \" + current);\n    }\n\n    /**\n     * {@code setRelease} (publish) pairs with {@code getAcquire} (subscribe):\n     * everything written before the release-store is visible to a thread that\n     * observes the value via an acquire-load.\n     */\n    static void releaseAcquireExample() throws InterruptedException {\n        Holder holder = new Holder();\n\n        Thread publisher = new Thread(() -> {\n            holder.payload = 42;                 // ordinary write\n            FLAG.setRelease(holder, true);       // publish: release-store\n        }, \"publisher\");\n\n        Thread subscriber = new Thread(() -> {\n            while (!(boolean) FLAG.getAcquire(holder)) {\n                Thread.onSpinWait();             // subscribe: acquire-load\n            }\n            // Guaranteed to see payload == 42 because of release/acquire pairing.\n            System.out.println(\"[release/acquire] observed payload = \" + holder.payload);\n        }, \"subscriber\");\n\n        subscriber.start();\n        publisher.start();\n        publisher.join();\n        subscriber.join();\n    }\n}",
@@ -526,7 +504,7 @@
     "codepen_large": true
   },
   {
-    "id": 61,
+    "id": 57,
     "module": "junit5-extension-api-demo",
     "body": "💡 JUnit 5's Extension API replaces JUnit 4's `@RunWith` Runner and `@Rule`.\n\n✅ One model: implement lifecycle hooks like `BeforeEachCallback` instead of an exclusive Runner\n✅ `ParameterResolver` injects test dependencies — no base-class inheritance needed\n✅ Extensions compose: stack several with `@ExtendWith` and they just work together\n#Java #JUnit5 #Testing",
     "code": "package com.codingstrain.junit5;\n\nimport org.junit.jupiter.api.Test;\nimport org.junit.jupiter.api.extension.BeforeEachCallback;\nimport org.junit.jupiter.api.extension.ExtendWith;\nimport org.junit.jupiter.api.extension.ExtensionContext;\nimport org.junit.jupiter.api.extension.ParameterContext;\nimport org.junit.jupiter.api.extension.ParameterResolver;\n\n/**\n * JUnit 5 Extension API: one composable model that replaces JUnit 4's\n * {@code @RunWith} Runner (single, exclusive) and {@code @Rule} (inheritance-based).\n */\nclass TimingExtension implements BeforeEachCallback, ParameterResolver {\n\n    private static final ExtensionContext.Namespace NS =\n        ExtensionContext.Namespace.create(TimingExtension.class);\n\n    @Override\n    public void beforeEach(ExtensionContext context) {\n        context.getStore(NS).put(\"start\", System.nanoTime());\n    }\n\n    @Override\n    public boolean supportsParameter(ParameterContext pc, ExtensionContext ec) {\n        return pc.getParameter().getType() == Stopwatch.class;\n    }\n\n    @Override\n    public Object resolveParameter(ParameterContext pc, ExtensionContext ec) {\n        long start = ec.getStore(NS).get(\"start\", long.class);\n        return new Stopwatch(start);\n    }\n}\n\n// No inheritance, no Runner: just declare the extensions you want.\n@ExtendWith(TimingExtension.class)\nclass OrderServiceTest {\n\n    @Test\n    void placesOrder(Stopwatch stopwatch) {   // injected by ParameterResolver\n        // ... exercise the system under test ...\n        System.out.println(\"elapsed = \" + stopwatch.elapsedMillis() + \"ms\");\n    }\n}",
@@ -534,5 +512,1715 @@
     "codepen_style": "carbon",
     "codepen_large": true,
     "codepen_columns": 2
+  },
+  {
+    "id": 58,
+    "module": "java-tips",
+    "body": "Java tip💡: Use StringBuilder instead of String for concatenating strings in loops.\n\n❌ String is immutable, making it inefficient in loops, especially large ones.\n\n✅ StringBuilder is mutable and optimized for repeated string appends.\n#Java #CodeTips",
+    "tags": "#Java #CodeTips",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "// ❌ A new String object on every iteration\nString csv = \"\";\nfor (String item : items) {\n    csv += item + \",\";\n}\n\n// ✅ One mutable buffer — no garbage\nStringBuilder sb = new StringBuilder();\nfor (String item : items) {\n    sb.append(item).append(',');\n}\nString csv = sb.toString();"
+  },
+  {
+    "id": 59,
+    "module": "java-tips",
+    "body": "Java tip💡: always close resources like BufferedReader, InputStream, OutputStream, using try-with-resources to avoid memory leaks.\n\n#Java #BestPractices",
+    "tags": "#Java #BestPractices",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "// ✅ Auto-closes the stream, even if an exception is thrown\ntry (BufferedReader reader =\n         new BufferedReader(new FileReader(\"data.txt\"))) {\n    String line;\n    while ((line = reader.readLine()) != null) {\n        System.out.println(line);\n    }\n}\n// No finally block, no leaked file handles"
+  },
+  {
+    "id": 60,
+    "module": "java-tips",
+    "body": "Java Tip #4 💡: Threads may cache variables values. Mark the variable with the 'volatile' keyword to ensure that any change is  seen by other threads. This is the most basic synchronization mechanism of Java. #Java #JavaTips #Multithreading",
+    "tags": "#Java #JavaTips #Multithreading",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "public class Worker {\n    // Without volatile a thread may read a stale, cached value\n    private volatile boolean running = true;\n\n    public void stop() { running = false; }\n\n    public void run() {\n        while (running) {\n            // sees stop() called from another thread\n        }\n    }\n}"
+  },
+  {
+    "id": 61,
+    "module": "java-tips",
+    "body": "Java Tip #6 💡: Keep your class responsibilities focused. Follow the Single Responsibility Principle. #Java #OOP",
+    "tags": "#Java #OOP",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 62,
+    "module": "java-tips",
+    "body": "💡Java tip: Use the Stream API for declarative collection processing.\n\n✅ Express what you want, not how to do it, and avoid  writing verbose loops\n#Java #Collections",
+    "tags": "#Java #Collections",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "List<String> names = users.stream()\n    .filter(User::isActive)\n    .map(User::getName)\n    .sorted()\n    .toList();\n// Declarative: say WHAT you want, not HOW to loop"
+  },
+  {
+    "id": 63,
+    "module": "java-tips",
+    "body": "Java Tip #9💡: Avoid excessive number of method parameters. Group related values into objects. #Java #Refactoring",
+    "tags": "#Java #Refactoring",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 64,
+    "module": "java-tips",
+    "body": "Java Tip💡:  Use meaningful method names that reflect their purpose. #Java #CleanCode",
+    "tags": "#Java #CleanCode",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 65,
+    "module": "java-tips",
+    "body": "💡Java: With polymorphism, you can replace the use of instanceof in your code as a tool to fork logic. Let objects decide their behavior. #Java #OO",
+    "tags": "#Java #OO",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "// ❌ Type checks scattered everywhere\nif (animal instanceof Dog d) { d.bark(); }\nelse if (animal instanceof Cat c) { c.meow(); }\n\n// ✅ Let polymorphism decide\nanimal.makeSound();"
+  },
+  {
+    "id": 66,
+    "module": "java-tips",
+    "body": "Java Tip💡: Starting from Java 14 you can use \"record\" to create short, immutable, data-carrying objects.\n\n✅ They are shorter than ordinary POJOs\n✅ They have built-in equals(), hashCode(), toString()\n✅ They are immutable by default\n#Java #Records",
+    "tags": "#Java #Records",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "// One line replaces ~40 lines of boilerplate\npublic record Point(int x, int y) {}\n\n// Auto-generated: constructor, accessors, equals, hashCode, toString\nPoint p = new Point(3, 4);\nint x = p.x();"
+  },
+  {
+    "id": 67,
+    "module": "java-tips",
+    "body": "Java Tip #14💡: Enable compiler warnings and treat them as errors. They help prevent bugs early. #Java #BestPractices",
+    "tags": "#Java #BestPractices",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 68,
+    "module": "java-tips",
+    "body": "Java Tip #15💡: Use logging frameworks like SLF4J instead of `System.out.println`. #Java #Logging",
+    "tags": "#Java #Logging",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "private static final Logger log =\n    LoggerFactory.getLogger(OrderService.class);\n\nlog.info(\"Created order {} for {}\", orderId, customer);\n// Lazy formatting, log levels, no System.out"
+  },
+  {
+    "id": 69,
+    "module": "java-tips",
+    "body": "💡Java tip: Starting from Java 8 prefer java.time over Date and Calendar.\n\n#ModernJava #DevTips",
+    "tags": "#ModernJava #DevTips",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 70,
+    "module": "java-tips",
+    "body": "Java Tip #17💡: Avoid public fields. Use private fields with getters/setters for encapsulation. #Java #OOP",
+    "tags": "#Java #OOP",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 71,
+    "module": "java-tips",
+    "body": "💡 Java tip: Catch mistakes at compile time by annotating overridden methods with @Override.\n#Java #Annotations",
+    "tags": "#Java #Annotations",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 72,
+    "module": "java-tips",
+    "body": "💡Use EnumSet for enum values in sets. EnumSet, a Set interface implementation, is specialized for enums, offering memory efficiency and speed via bit-vector representation.\n\n✅ Example usage:\n\nEnumSet<Month> months = EnumSet.range(Month.JANUARY, Month.DECEMBER);\n\nSystem.out.println(months);\n\n#Java #ProgrammingTips",
+    "tags": "#Java #ProgrammingTips",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "private static final Logger log =\n    LoggerFactory.getLogger(OrderService.class);\n\nlog.info(\"Created order {} for {}\", orderId, customer);\n// Lazy formatting, log levels, no System.out"
+  },
+  {
+    "id": 73,
+    "module": "java-tips",
+    "body": "Java Tip #20💡: Always check for null values or use 'Optional' to avoid null pointer exceptions. #Java #NullSafety",
+    "tags": "#Java #NullSafety",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "// ❌ A NullPointerException waiting to happen\nUser u = repo.find(id);\nreturn u.getEmail();\n\n// ✅ Make \"maybe absent\" explicit\nreturn repo.findById(id)\n    .map(User::getEmail)\n    .orElse(\"no-email\");"
+  },
+  {
+    "id": 74,
+    "module": "java-tips",
+    "body": "💡Java Tip: Avoid magic numbers. In Java, a Magic Number refers to a hard-coded numeric value used in code without any explanation of what it represents.\n\nMagic numbers reduce readability and make maintenance harder.\n\n#Java #CleanCode",
+    "tags": "#Java #CleanCode",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 75,
+    "module": "java-tips",
+    "body": "💡 Java tip: Use interface default methods to handle backward compatibility (starting from Java 8).\n#Java #Interfaces",
+    "tags": "#Java #Interfaces",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 76,
+    "module": "java-tips",
+    "body": "💡Java Patterns: The Builder Pattern allows for flexible, clear construction of complex objects. #Java #DesignPatterns",
+    "tags": "#Java #DesignPatterns",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 77,
+    "module": "java-tips",
+    "body": "Java Tip 💡: Use tools like VisualVM to profile your project and identify performance bottlenecks. #Java #Performance",
+    "tags": "#Java #Performance",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "@Bean\n@Profile(\"dev\")\nDataSource devDataSource() { return new H2DataSource(); }\n\n@Bean\n@Profile(\"prod\")\nDataSource prodDataSource() { return new PgDataSource(); }"
+  },
+  {
+    "id": 78,
+    "module": "java-tips",
+    "body": "Java Tip 💡: Avoid catching generic `Exception` or `Throwable`. Be specific. #Java #ErrorHandling",
+    "tags": "#Java #ErrorHandling",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 79,
+    "module": "java-tips",
+    "body": "💡 Use `CompletableFuture` for async programming in Java 8+. #Java #Concurrency",
+    "tags": "#Java #Concurrency",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "CompletableFuture\n    .supplyAsync(() -> fetchUser(id))\n    .thenApply(User::getName)\n    .thenAccept(System.out::println);"
+  },
+  {
+    "id": 80,
+    "module": "java-tips",
+    "body": "Java Tip 💡: Validate user input. Never trust external input directly. #Java #Security",
+    "tags": "#Java #Security",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 81,
+    "module": "java-tips",
+    "body": "Java Tip 💡: Prefer immutable objects to ensure thread safety. #Java #Concurrency",
+    "tags": "#Java #Concurrency",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 82,
+    "module": "java-tips",
+    "body": "Java Tip 💡: Enforce encapsulation using access modifiers wisely. #Java #OOP",
+    "tags": "#Java #OOP",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 83,
+    "module": "java-tips",
+    "body": "💡 Java tip:  Clean up unused imports and variables for better readability.\n\n#Java #CleanCode",
+    "tags": "#Java #CleanCode",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 84,
+    "module": "java-tips",
+    "body": "Java Tip 💡: Use `try-catch` blocks sparingly—don't use them for flow control. #Java #BestPractices",
+    "tags": "#Java #BestPractices",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 85,
+    "module": "java-tips",
+    "body": "Java Tip 💡: Avoid deeply nested if-else statements. Use guard clauses instead. #Java #CleanCode",
+    "tags": "#Java #CleanCode",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 86,
+    "module": "java-tips",
+    "body": "Java Tip 💡: Split large methods into smaller helper methods for clarity. #Java #Refactoring",
+    "tags": "#Java #Refactoring",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 87,
+    "module": "java-tips",
+    "body": "Java Tip 💡: When possible, avoid returning mutable internal collections from methods, so that:\n\n1) You don't expose internal state, improving security\n2) You can change the implementation without breaking other parts\n#Java #JavaDev",
+    "tags": "#Java #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 88,
+    "module": "java-tips",
+    "body": "Java Tip 💡: Try to avoid static variables unless they store truly global values.\n\n• They hinder testing by making it harder to isolate classes due to shared state.\n• They reduce code reusability. For example:\n\npublic class Config {\n    ...\n    public static String getConfigPath() {\n        return configPath;\n    }\n}\n\nThe configuration path is shared globally, and changing it in one place could affect others.",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 89,
+    "module": "java-tips",
+    "body": "Java tip💡: Catch exceptions at the right level, not too early or too late. #Java #ErrorHandling",
+    "tags": "#Java #ErrorHandling",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 90,
+    "module": "java-tips",
+    "body": "Java tip 💡: You can use List.of() and Set.of() to create immutable collections.\n\nThese are a quick ways to create unmodifiable lists and sets without using Collections.unmodifiableList().\n\n#Java #Collections",
+    "tags": "#Java #Collections",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "// Immutable, null-hostile, concise\nList<String> roles = List.of(\"ADMIN\", \"USER\");\nMap<String, Integer> limits = Map.of(\"free\", 10, \"pro\", 100);\n\n// roles.add(\"X\") -> UnsupportedOperationException"
+  },
+  {
+    "id": 91,
+    "module": "java-tips",
+    "body": "Java Tip 💡: Learn and follow Java naming conventions for classes, variables, and methods. #Java #CleanCode",
+    "tags": "#Java #CleanCode",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 92,
+    "module": "java-tips",
+    "body": "Java tip💡: Avoid using `Thread.sleep()` for timing. Use proper synchronization or schedulers. #Java #Concurrency",
+    "tags": "#Java #Concurrency",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 93,
+    "module": "java-tips",
+    "body": "Java Tip 💡: Understand the difference between `==` and `.equals()` for object comparison. #Java #Basics",
+    "tags": "#Java #Basics",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 94,
+    "module": "java-tips",
+    "body": "Java Tip 💡: Always override `hashCode()` when you override `equals()`. #Java #OOP",
+    "tags": "#Java #OOP",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 95,
+    "module": "java-tips",
+    "body": "Java Tip 💡: Use `Optional.ifPresentOrElse()` for elegant null handling (Java 9+). #Java #Optional",
+    "tags": "#Java #Optional",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "// ❌ A NullPointerException waiting to happen\nUser u = repo.find(id);\nreturn u.getEmail();\n\n// ✅ Make \"maybe absent\" explicit\nreturn repo.findById(id)\n    .map(User::getEmail)\n    .orElse(\"no-email\");"
+  },
+  {
+    "id": 96,
+    "module": "java-tips",
+    "body": "Java Tip 💡: Avoid exposing internal object state. Use DTOs when needed. #Java #Encapsulation",
+    "tags": "#Java #Encapsulation",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 97,
+    "module": "java-tips",
+    "body": "Java Tip 💡: Understand the difference between checked and unchecked exceptions.\n#Java #ErrorHandling // Checked",
+    "tags": "#Java #ErrorHandling",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 98,
+    "module": "java-tips",
+    "body": "Java Tip 💡: Use helper classes to implement reusable logic, but avoid all-knowing God classes.\n#Java #CodeOrganization\n\n#Java #CleanCode",
+    "tags": "#Java #CodeOrganization #CleanCode",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 99,
+    "module": "java-tips",
+    "body": "Java Tip 💡: Refactor legacy code gradually. Use tests to ensure stability. #Java #LegacyCode",
+    "tags": "#Java #LegacyCode",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 100,
+    "module": "java-tips",
+    "body": "Java tip💡: Use 'volatile' to declare simple flags shared across threads. #Java #Multithreading",
+    "tags": "#Java #Multithreading",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "public class Worker {\n    // Without volatile a thread may read a stale, cached value\n    private volatile boolean running = true;\n\n    public void stop() { running = false; }\n\n    public void run() {\n        while (running) {\n            // sees stop() called from another thread\n        }\n    }\n}"
+  },
+  {
+    "id": 101,
+    "module": "java-tips",
+    "body": "Java tip 💡: Don’t reinvent the wheel—use proven Java libraries and frameworks. #Java #Productivity",
+    "tags": "#Java #Productivity",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 102,
+    "module": "java-tips",
+    "body": "💡 Use `Pattern` and `Matcher` for complex regex operations. #Java #Regex",
+    "tags": "#Java #Regex",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "// Compile once and reuse — not on every call\nprivate static final Pattern EMAIL =\n    Pattern.compile(\"^[^@\\\\s]+@[^@\\\\s]+$\");\n\nboolean ok = EMAIL.matcher(input).matches();"
+  },
+  {
+    "id": 103,
+    "module": "java-tips",
+    "body": "Java tip 💡: Format your code consistently. Use tools like Checkstyle or Spotless. #Java #CleanCode",
+    "tags": "#Java #CleanCode",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 104,
+    "module": "java-tips",
+    "body": "Java Tip 💡: Avoid initializing objects you may never use. Lazy-load when appropriate. #Java #Performance",
+    "tags": "#Java #Performance",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 105,
+    "module": "java-tips",
+    "body": "Java Tip 💡: Use `Deque` over `Stack`—it’s more modern and flexible. #Java #Collections",
+    "tags": "#Java #Collections",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 106,
+    "module": "java-tips",
+    "body": "💡Java Tip : Prefer constructor injection over field injection.\n#JavaTips",
+    "tags": "#JavaTips",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 107,
+    "module": "java-tips",
+    "body": "Java Tip 💡: Use `Comparator.comparing()` for sorting with lambdas. #Java #FunctionalProgramming",
+    "tags": "#Java #FunctionalProgramming",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "users.sort(\n    Comparator.comparing(User::getLastName)\n              .thenComparing(User::getFirstName));"
+  },
+  {
+    "id": 108,
+    "module": "java-tips",
+    "body": "💡 Measure code coverage but don’t obsess over 100%. #Java #Testing",
+    "tags": "#Java #Testing",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 109,
+    "module": "java-tips",
+    "body": "Java Tip 💡: Test edge cases—nulls, empty lists, and extreme values. #Java #Testing",
+    "tags": "#Java #Testing",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 110,
+    "module": "java-tips",
+    "body": "Java Tip 💡:  Don’t overuse inheritance. Favor delegation when possible. Inheritance creates tight coupling, and this can lead to problems if the superclass changes. #Java #OOP",
+    "tags": "#Java #OOP",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 111,
+    "module": "java-tips",
+    "body": "Java tip💡: Use `String.format()` or `MessageFormat` for readable formatting. #Java #StringTips",
+    "tags": "#Java #StringTips",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 112,
+    "module": "java-tips",
+    "body": "Java tip 💡: Don’t rely blindly on Garbage Collection; memory leaks are still possible.\n#Java #SoftwareEngineering",
+    "tags": "#Java #SoftwareEngineering",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 113,
+    "module": "java-tips",
+    "body": "Java tip💡: Avoid premature optimization. Focus on clean, working code first. #Java #BestPractices Java tip💡: Avoid premature optimization. Write clean, working code first and focus on functional requirements. #Java #BestPractices\n\n🧵1/3 A very trivial example could be:\n\n        String helloThere = \"Hello \" + \"there\" + \"!\";\n        System.out.println(helloThere);\n\nThe above line of code is clear and works as intended.\n\n🧵2/3 In a later time you can think of optimizing it using StringBuilder:\n\n        StringBuilder sb = new StringBuilder();\n        sb.append(\"Hello \");\n        sb.append(\"there\");\n        sb.append(\"!\");\n        System.out.println(sb.toString());",
+    "tags": "#Java #BestPractices",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "// ❌ A new String object on every iteration\nString csv = \"\";\nfor (String item : items) {\n    csv += item + \",\";\n}\n\n// ✅ One mutable buffer — no garbage\nStringBuilder sb = new StringBuilder();\nfor (String item : items) {\n    sb.append(item).append(',');\n}\nString csv = sb.toString();"
+  },
+  {
+    "id": 114,
+    "module": "java-tips",
+    "body": "Java Tip 💡: Use enums for state machines—it improves readability. #Java #StatePattern",
+    "tags": "#Java #StatePattern",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 115,
+    "module": "java-tips",
+    "body": "💡 Cache expensive operations when possible. Use `ConcurrentMap` if needed. #Java #Performance",
+    "tags": "#Java #Performance",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 116,
+    "module": "java-tips",
+    "body": "💡 Explore virtual threads (Java 19+) for lightweight concurrency. #Java #ProjectLoom",
+    "tags": "#Java #ProjectLoom",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 117,
+    "module": "java-tips",
+    "body": "Java Tip 💡: Use `Files.walk()` to recursively process files in a directory. #Java #IO",
+    "tags": "#Java #IO",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "List<String> lines = Files.readAllLines(Path.of(\"data.txt\"));\nFiles.writeString(Path.of(\"out.txt\"), \"hello\");"
+  },
+  {
+    "id": 118,
+    "module": "java-tips",
+    "body": "Java Tip 💡:Use `Path` and `Files` from NIO.2 for modern file handling. #Java #NIO",
+    "tags": "#Java #NIO",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "List<String> lines = Files.readAllLines(Path.of(\"data.txt\"));\nFiles.writeString(Path.of(\"out.txt\"), \"hello\");"
+  },
+  {
+    "id": 119,
+    "module": "java-tips",
+    "body": "Java Tip 💡: Make use of annotations like `@NotNull`, `@Nullable` for better tooling support. #Java #Annotations",
+    "tags": "#Java #Annotations",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "public record SignupRequest(\n        @NotBlank String name,\n        @Email String email) {}\n\n@PostMapping(\"/signup\")\npublic void signup(@Valid @RequestBody SignupRequest req) {\n    service.register(req);\n}"
+  },
+  {
+    "id": 120,
+    "module": "java-tips",
+    "body": "💡 Learn design patterns to write reusable, maintainable code. #Java #DesignPatterns",
+    "tags": "#Java #DesignPatterns",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 121,
+    "module": "java-tips",
+    "body": "Java Tip 💡: Refactor large switch statements into polymorphic classes. #Java #Refactoring",
+    "tags": "#Java #Refactoring",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "// Arrow form: no fall-through, returns a value\nString label = switch (status) {\n    case ACTIVE  -> \"running\";\n    case PAUSED  -> \"on hold\";\n    case STOPPED -> \"done\";\n};"
+  },
+  {
+    "id": 122,
+    "module": "java-tips",
+    "body": "Java tip:💡: Use thread pools (`Executors`) instead of manually managing threads. #Java #Concurrency",
+    "tags": "#Java #Concurrency",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 123,
+    "module": "java-tips",
+    "body": "Java Tip 💡: Master the SOLID principles to write cleaner, more maintainable object-oriented code.\nEach letter stands for a key design principle:\n\nS: Single Responsibility – A class should have only one reason to change.\n\nO: Open/Closed – Classes should be open for extension, but closed for modification.\n\nL: Liskov Substitution – Subtypes should be replaceable for their base types without breaking behavior.\n\nI: Interface Segregation – Prefer many small, specific interfaces over one large general-purpose interface.\n\nD: Dependency Inversion – Depend on abstractions, not concrete implementations.\n\nApplying SOLID improves code flexibility, testability, and scalability.\n#Java #CleanCode #OOP #SoftwareDesign",
+    "tags": "#Java #CleanCode #OOP #SoftwareDesign",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 124,
+    "module": "java-tips",
+    "body": "Java tip:💡: Avoid synchronized blocks when higher-level abstractions exist. #Java #Concurrency",
+    "tags": "#Java #Concurrency",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 125,
+    "module": "java-tips",
+    "body": "Java tip 💡: With Map objects, instead of manual null checks, you can use Map.getOrDefault().\n\nMap<String, Integer> map = new HashMap<>();\nInteger discount = map.getOrDefault(\"item1\", 0);",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "public Order(Customer customer) {\n    // Fail fast at construction with a clear message\n    this.customer = Objects.requireNonNull(customer, \"customer\");\n}"
+  },
+  {
+    "id": 126,
+    "module": "java-tips",
+    "body": "Java Tip : To populate Map values, like lists, you can use computeIfAbsent(). #Java #Collections",
+    "tags": "#Java #Collections",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 127,
+    "module": "java-tips",
+    "body": "Java tip 💡:\n\nIf you want to count the occurrences of an element in a list, you can use Collections.frequency(...).\n\n#Java #Collections",
+    "tags": "#Java #Collections",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 128,
+    "module": "java-tips",
+    "body": "Java tip 💡: Instead of using HashSet for enum types, consider using EnumSet, it's faster and more memory-efficient.\n\n✅Example:\n\nEnumSet<Month> months = EnumSet.of(Month.JANUARY, Month.APRIL);\n\n#Java #Collections",
+    "tags": "#Java #Collections",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "// Immutable, null-hostile, concise\nList<String> roles = List.of(\"ADMIN\", \"USER\");\nMap<String, Integer> limits = Map.of(\"free\", 10, \"pro\", 100);\n\n// roles.add(\"X\") -> UnsupportedOperationException"
+  },
+  {
+    "id": 129,
+    "module": "java-tips",
+    "body": "Java tip💡: If you have a list of elements, you want to remove duplicates, and sort them in natural order or by a custom comparator, you can use TreeSet.\n\n#Java #Collections",
+    "tags": "#Java #Collections",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "users.sort(\n    Comparator.comparing(User::getLastName)\n              .thenComparing(User::getFirstName));"
+  },
+  {
+    "id": 130,
+    "module": "java-tips",
+    "body": "Java Tip 💡: You can use LinkedHashMap to easily implement an LRU (Least Recently Used) Cache.\n#Java #Collections",
+    "tags": "#Java #Collections",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 131,
+    "module": "java-tips",
+    "body": "Java tip : Starting from Java 19 you can explore a feature called \"virtual threads\". Virtual threads are lightweight threads managed by the JVM rather than the OS. #Java #Concurrency",
+    "tags": "#Java #Concurrency",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 132,
+    "module": "java-tips",
+    "body": "Java tip 💡: Return Collections.emptyList(), List.of() or Set.of() instead of null collections to avoid null checks in calling code. #JavaBestPractice",
+    "tags": "#JavaBestPractice",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "// Immutable, null-hostile, concise\nList<String> roles = List.of(\"ADMIN\", \"USER\");\nMap<String, Integer> limits = Map.of(\"free\", 10, \"pro\", 100);\n\n// roles.add(\"X\") -> UnsupportedOperationException"
+  },
+  {
+    "id": 133,
+    "module": "java-tips",
+    "body": "Java tip 💡: Try to avoid sharing data across threads.\n\n✅Use immutable objects\n✅Or make threads communicate through messages, without directly modifying shared state.\n\n#Java #Concurrency",
+    "tags": "#Java #Concurrency",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 134,
+    "module": "java-tips",
+    "body": "Java Tip 💡: Override hashCode() when overriding equals() to ensure collections like HashMap work correctly.\n\nHashMap is based on an hash table data structure, and uses hashCode() to determine the bucket index.\n\n#Java #Collections",
+    "tags": "#Java #Collections",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 135,
+    "module": "java-tips",
+    "body": "💡Java tip: Starting from Java 8,  for parallel processing of collections you can use parallelStream().\n\n✅ Uses multiple threads\n✅ Good for CPU-intensive processing\n⚠️ Sharing mutable state is not safe\n#Java #JavaDev",
+    "tags": "#Java #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 136,
+    "module": "java-tips",
+    "body": "💡 Java tip: Use Objects.requireNonNullElse(value, defaultValue) to avoid null checks.\n\n#Java #CodeTips #NullSafety",
+    "tags": "#Java #CodeTips #NullSafety",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "public Order(Customer customer) {\n    // Fail fast at construction with a clear message\n    this.customer = Objects.requireNonNull(customer, \"customer\");\n}"
+  },
+  {
+    "id": 137,
+    "module": "java-tips",
+    "body": "🚀 Open/Closed Principle (OCP): OCP is a SOLID principle that states classes should be open for extension but closed for modification.\n\n✅Instead of touching existing implementation, you should use Java interfaces and inheritance to add new behavior.\n#Java #JavaDev",
+    "tags": "#Java #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 138,
+    "module": "java-tips",
+    "body": "💡Java tip: Use HashMap as Map implementation when you need greatest general-purpose performance.\n\n#Java   #DataStructures",
+    "tags": "#Java #DataStructures",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 139,
+    "module": "java-tips",
+    "body": "💡SOLID principles: The Liskov Substitution Principle (LSP) states that objects of a superclass should be replaceable with objects of a subclass.\n\n✅ Subclasses should not behave differently than the base class.\n\n❌ Example that breaks LSP:\n\nclass Vehicle {\n    public void startEngine() {\n        ...\n    }\n}\n\nclass Bicycle extends Vehicle {\n\n@Override\n\n    public void startEngine() {\n        throw new UnsupportedOperationException(\"Bicycles don't have engines!\");\n    }\n}\n\nIf you write a test for the Vehicle class, you would expect every subclass could start the engine. But as we've seen, Bicycle can't, it has no engine and throws an Exception.\n\nThis violates LSP. To fix it, we need to change the design so that only appropriate classes have the startEngine() behavior.\n\n✅ We can for example define two separate interfaces:\n\ninterface Vehicle {...}\n\ninterface Motorized {\n    void startEngine();\n}\n\nclass Car implements Vehicle, Motorized {\n    //Vehicle methods implementations\n\n     //Motorized implementation\n    public void startEngine() {\n         ...\n    }\n}\n\nclass Bicycle implements Vehicle {\n    // No engine, it implements only Vehicle\n}\n\n✅ An alternative could be creating a default Vehicle implementation, and extending it while implementing the Motorized interface only for vehicles that have engines.\n\n#SOLID #SoftwareDesign",
+    "tags": "#SOLID #SoftwareDesign",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 140,
+    "module": "java-tips",
+    "body": "💡 SOLID Principles: Interface Segregation Principle (ISP) states that clients shouldn’t depend on methods they don’t use.\n\n✅ So called \"fat\"interfaces (large, general-purpose interfaces) should be broken down into smaller, more specific ones. Classes shouldn't be forced to implement methods that are irrelevant to them.\n\n#Java #JavaDev",
+    "tags": "#Java #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 141,
+    "module": "java-tips",
+    "body": "💡SOLID principles: Dependency Inversion Principle (DIP) states that high-level modules should not depend on low-level modules; instead, both should depend on abstractions.\n\n#SOLID #SoftwareDesign",
+    "tags": "#SOLID #SoftwareDesign",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 142,
+    "module": "java-tips",
+    "body": "💡Java tip: Starting from Java 14 you can use switch expressions for shorter and cleaner multi-branch logic:\n\n#Java #ModernJava",
+    "tags": "#Java #ModernJava",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "// Arrow form: no fall-through, returns a value\nString label = switch (status) {\n    case ACTIVE  -> \"running\";\n    case PAUSED  -> \"on hold\";\n    case STOPPED -> \"done\";\n};"
+  },
+  {
+    "id": 143,
+    "module": "java-tips",
+    "body": "Java tip: Collectors.toMap() will throw an error if your keys collide. Always consider a merge function. #Java #Streams\n\nExample:\n\n❌ Throws: IllegalStateException: Duplicate key:\n\nList<Integer> nums = Arrays.asList(1, 2, 3, 4);\nMap<Integer, Integer> squares = nums.stream()\n.collect(Collectors.toMap(\nn -> n % 2,\nn -> n * n\n));\n\n✅ Fix: merge duplicates by summing values:\n\nMap<Integer, Integer> squaresMerged = nums.stream()\n.collect(Collectors.toMap(\nn -> n % 2,\nn -> n * n,\nInteger::sum\n));",
+    "tags": "#Java #Streams",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "Map<Dept, List<Employee>> byDept = employees.stream()\n    .collect(Collectors.groupingBy(Employee::getDept));\n\nlong active = employees.stream()\n    .filter(Employee::isActive)\n    .count();"
+  },
+  {
+    "id": 144,
+    "module": "java-tips",
+    "body": "💡 Java tip: Use parallelStream() with care. It's ideal for CPU-intensive tasks, not I/O operations.\n\n#Java #JavaStreams",
+    "tags": "#Java #JavaStreams",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 145,
+    "module": "java-tips",
+    "body": "💡 Java tip: Records are not limited to data only, you can add custom constructors or methods for validation.\n\n✅ They can have constructors, static methods, and instance methods:\n\n#Java #ModernJava",
+    "tags": "#Java #ModernJava",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 146,
+    "module": "java-tips",
+    "body": "💡Java tip: Use WeakHashMap for caching when the unreferenced keys should be garbage-collected.\n\n#Java",
+    "tags": "#Java",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "@Cacheable(\"users\")\npublic User findById(Long id) {\n    return repo.findById(id).orElseThrow();\n}\n// Enable with @EnableCaching"
+  },
+  {
+    "id": 147,
+    "module": "java-tips",
+    "body": "💡 Java tip: Use Files.readString() and Files.writeString() for straightforward file I/O.\n\n#Java",
+    "tags": "#Java",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "List<String> lines = Files.readAllLines(Path.of(\"data.txt\"));\nFiles.writeString(Path.of(\"out.txt\"), \"hello\");"
+  },
+  {
+    "id": 148,
+    "module": "java-tips",
+    "body": "💡 Java tip: Avoid boxing overhead by using primitive streams.\n#Java",
+    "tags": "#Java",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 149,
+    "module": "java-tips",
+    "body": "💡Java tip: Starting from Java 15 you can use String.formatted(...) for string formatting instead of String.format(...).\n\n#Java",
+    "tags": "#Java",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 150,
+    "module": "java-tips",
+    "body": "💡 Java tip: Use Duration and Instant for precise time calculations.\n\n#Java",
+    "tags": "#Java",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 151,
+    "module": "java-tips",
+    "body": "💡 Java tip: Starting from Java 11, you can use String.strip() instead of trim(), since it handles Unicode whitespaces correctly.\n\n#Java #JavaTips",
+    "tags": "#Java #JavaTips",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 152,
+    "module": "java-tips",
+    "body": "💡 Java tip: Use var for local variables only when the type is obvious from the right-hand side or when the generic type is too verbose.\n#Java #JavaTips",
+    "tags": "#Java #JavaTips",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "// Type is still static — just inferred by the compiler\nvar users = new ArrayList<User>();\nvar entry = Map.entry(\"k\", 1);\nfor (var u : users) {\n    System.out.println(u.getName());\n}"
+  },
+  {
+    "id": 153,
+    "module": "java-tips",
+    "body": "Java tip: Starting from Java 11, if you need to repeat n times a specific string, you can use the String method repeat(n). Example: String result = \"$\".repeat(10); System.out.println(result); // $$$$$$$$$$ #Java #JavaTips",
+    "tags": "#Java #JavaTips",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "private static final Logger log =\n    LoggerFactory.getLogger(OrderService.class);\n\nlog.info(\"Created order {} for {}\", orderId, customer);\n// Lazy formatting, log levels, no System.out"
+  },
+  {
+    "id": 154,
+    "module": "java-tips",
+    "body": "Java tip: Starting from java 9 you can use Stream.takeWhile() for easy slicing of lists by streams.  #Java #JavaTips",
+    "tags": "#Java #JavaTips",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "List<String> names = users.stream()\n    .filter(User::isActive)\n    .map(User::getName)\n    .sorted()\n    .toList();\n// Declarative: say WHAT you want, not HOW to loop"
+  },
+  {
+    "id": 155,
+    "module": "java-tips",
+    "body": "Java tip: You can use Collectors.joining(\", \") to turn a stream into a comma-separated string (or another custom separator).  #Java #JavaTips",
+    "tags": "#Java #JavaTips",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "Map<Dept, List<Employee>> byDept = employees.stream()\n    .collect(Collectors.groupingBy(Employee::getDept));\n\nlong active = employees.stream()\n    .filter(Employee::isActive)\n    .count();"
+  },
+  {
+    "id": 156,
+    "module": "java-tips",
+    "body": "Java tip: From Java 9 you can use Objects.checkIndex() to replace manual if checks for validating index bounds. It is a small feature that helps making the code cleaner.  #Java #JavaTip",
+    "tags": "#Java #JavaTip",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 157,
+    "module": "java-tips",
+    "body": "Java tip : Avoid static variables unless they store truly global values. They hinder testing by making it harder to isolate classes due to shared state. It can cause subtle bugs. For example: public class BankAccount { public static double balance; public BankAccount(double initialBalance) { balance = initialBalance; } public void deposit(double amount) { balance += amount; } public void printBalance() { System.out.println(\"Balance: \" + balance); } } BankAccount acc1 = new BankAccount(1000); BankAccount acc2 = new BankAccount(500); acc1.deposit(200); acc2.printBalance(); // Balance: 700 (should be 500) The balance variable is shared globally, and changing it in one object affects the others. #Java #JavaTips",
+    "tags": "#Java #JavaTips",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "private static final Logger log =\n    LoggerFactory.getLogger(OrderService.class);\n\nlog.info(\"Created order {} for {}\", orderId, customer);\n// Lazy formatting, log levels, no System.out"
+  },
+  {
+    "id": 158,
+    "module": "java-tips",
+    "body": "Java tip: Use List.copyOf(list) for a safe, unmodifiable copy, while avoiding accidental changes.  #Java #JavaTips",
+    "tags": "#Java #JavaTips",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 159,
+    "module": "java-tips",
+    "body": "Java tip: Starting from Java 8 you can use List.removeIf(<predicate>) to clean up collections in one line. #JavaTips",
+    "tags": "#JavaTips",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 160,
+    "module": "java-tips",
+    "body": "💡Java tip: Use ThreadLocal.withInitial(...) to provide each thread its own safe default value.\n\n✅ The value is created lazily\n#Java #JavaDev",
+    "tags": "#Java #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 161,
+    "module": "java-tips",
+    "body": "💡 Java tip: Starting from Java 8, you can remove nulls easily with list.removeIf(Objects::isNull).\n\n#Java #JavaTips",
+    "tags": "#Java #JavaTips",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 162,
+    "module": "java-tips",
+    "body": "💡 Java tip: Starting from Java 12, you can use String.indent(n)  to format multi-line strings with indentation.\n\n#Java #ModernJava",
+    "tags": "#Java #ModernJava",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 163,
+    "module": "java-tips",
+    "body": "💡 Java tip: Stream.toArray(Type[]::new) is a clean, type-safe way to get arrays from streams.\n\n✅ Avoids Object[] and casting.\n#Java #JavaDev",
+    "tags": "#Java #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 164,
+    "module": "java-tips",
+    "body": "💡 Java tip: Starting from Java 8 you can use ChronoUnit.between(start, end) to calculate time intervals in a specific unit (days, hours, minutes) without manual math.\n#Java #JavaDev",
+    "tags": "#Java #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 165,
+    "module": "java-tips",
+    "body": "💡Java tip: Use Collectors.groupingBy(...) to group stream results by a classifier.\n#Java #JavaDev",
+    "tags": "#Java #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "Map<Dept, List<Employee>> byDept = employees.stream()\n    .collect(Collectors.groupingBy(Employee::getDept));\n\nlong active = employees.stream()\n    .filter(Employee::isActive)\n    .count();"
+  },
+  {
+    "id": 166,
+    "module": "java-tips",
+    "body": "💡 Java tip: Use Stream.peek() for debugging in pipelines, not for business logic.\n\n✅ Stream.peek() lets you perform logging or inspection on each element as it flows through a stream without modifying it.\n#Java #JavaDev",
+    "tags": "#Java #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "List<String> names = users.stream()\n    .filter(User::isActive)\n    .map(User::getName)\n    .sorted()\n    .toList();\n// Declarative: say WHAT you want, not HOW to loop"
+  },
+  {
+    "id": 167,
+    "module": "java-tips",
+    "body": "💡 Java tip: List.reversed() returns an unmodifiable reversed view of the original list. #Java #JavaDev",
+    "tags": "#Java #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 168,
+    "module": "java-tips",
+    "body": "💡 Java tip: Starting from Java 12 you can use String.transform(Function) to apply lambdas directly to strings.\n#Java #JavaDev",
+    "tags": "#Java #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 169,
+    "module": "java-tips",
+    "body": "💡 Java tip: Use Optional.filter(...) to add inline conditions to an Optional object.\n\n✅ It lets you apply a condition directly and it returns the original Optional if the predicate passes, an empty one otherwise.\n#Java #JavaDev",
+    "tags": "#Java #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "// ❌ A NullPointerException waiting to happen\nUser u = repo.find(id);\nreturn u.getEmail();\n\n// ✅ Make \"maybe absent\" explicit\nreturn repo.findById(id)\n    .map(User::getEmail)\n    .orElse(\"no-email\");"
+  },
+  {
+    "id": 170,
+    "module": "java-tips",
+    "body": "🚀 Java: With CompletableFuture.allOf(...) you can wait on multiple async tasks without manual join handling.\n#Java #JavaDev",
+    "tags": "#Java #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "CompletableFuture\n    .supplyAsync(() -> fetchUser(id))\n    .thenApply(User::getName)\n    .thenAccept(System.out::println);"
+  },
+  {
+    "id": 171,
+    "module": "java-tips",
+    "body": "🚀 With Collectors.summarizingInt() you can getcount, sum, min, max, avg in one pass.\n#Java #JavaDev",
+    "tags": "#Java #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "Map<Dept, List<Employee>> byDept = employees.stream()\n    .collect(Collectors.groupingBy(Employee::getDept));\n\nlong active = employees.stream()\n    .filter(Employee::isActive)\n    .count();"
+  },
+  {
+    "id": 172,
+    "module": "java-tips",
+    "body": "🚀 Use ReentrantReadWriteLock Java concurrence utility if you have to deal with frequent reads and fewer writes. #Java #JavaDev",
+    "tags": "#Java #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 173,
+    "module": "java-tips",
+    "body": "🚀  Use Files.isSameFile(path1, path2) to check if two paths refer to the same file. It resolves symlinks too.\n\n✅ It checks whether two Path objects refer to the same actual file in the file system.\n#Java #JavaDev",
+    "tags": "#Java #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "List<String> lines = Files.readAllLines(Path.of(\"data.txt\"));\nFiles.writeString(Path.of(\"out.txt\"), \"hello\");"
+  },
+  {
+    "id": 174,
+    "module": "java-tips",
+    "body": "💡Java tip: With pattern matching for the instanceof operator, Java lets you declare a variable directly inside the instanceof check.\n#Java #JavaDev",
+    "tags": "#Java #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "// ❌ Type checks scattered everywhere\nif (animal instanceof Dog d) { d.bark(); }\nelse if (animal instanceof Cat c) { c.meow(); }\n\n// ✅ Let polymorphism decide\nanimal.makeSound();"
+  },
+  {
+    "id": 175,
+    "module": "java-tips",
+    "body": "⌛️⏲️ Java tip: Instant.truncatedTo(...) is useful for comparing times at minute/hour/day precision.\n\n✅ It avoids equality checks failing due to overly precise values.\n#Java #SoftwareEngineering",
+    "tags": "#Java #SoftwareEngineering",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 176,
+    "module": "java-tips",
+    "body": "💡 Java: Do not apply logic in Stream.peek(), use it only for debugging purposes.\n#Java #JavaDev",
+    "tags": "#Java #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 177,
+    "module": "java-tips",
+    "body": "🚀 Java: Use Comparator.nullsFirst() or Comparator.nullsLast() for safe sorting.\n\n🔴 Null values can cause a NullPointerException if your comparator doesn’t explicitly handle them.\n#Java #JavaDev",
+    "tags": "#Java #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "users.sort(\n    Comparator.comparing(User::getLastName)\n              .thenComparing(User::getFirstName));"
+  },
+  {
+    "id": 178,
+    "module": "java-tips",
+    "body": "Java: Objects.equals(a, b) is a choice for null-safe comparisons.\n\n✅ If both are null, returns true\n✅ If one is null, returns false\n✅ If neither is null, calls a.equals(b)\n\n#Java #JavaDev",
+    "tags": "#Java #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 179,
+    "module": "java-tips",
+    "body": "🚀 Java: A very interesting project by https://github.com/Mirkoddd, named Sift,  replaces the cryptic, string-based approach of the Java Regex engine with a fluent API.\n#Java #JavaDev\n🧵A link to the GitHub project to follow",
+    "tags": "#Java #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "// Compile once and reuse — not on every call\nprivate static final Pattern EMAIL =\n    Pattern.compile(\"^[^@\\\\s]+@[^@\\\\s]+$\");\n\nboolean ok = EMAIL.matcher(input).matches();"
+  },
+  {
+    "id": 180,
+    "module": "java-tips",
+    "body": "💡Java: If you have to read small files, you can use Files.readAllLines(), it's more direct and simple.\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "List<String> lines = Files.readAllLines(Path.of(\"data.txt\"));\nFiles.writeString(Path.of(\"out.txt\"), \"hello\");"
+  },
+  {
+    "id": 181,
+    "module": "java-tips",
+    "body": "🚀 Java: You can use Optional.orElseThrow() to implement so called fail-fast behavior.\n\n✅ Fail-fast means you can catch bugs closer to their source, making stack traces easier to understand\n#Java #SoftwareDevelopment",
+    "tags": "#Java #SoftwareDevelopment",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "// ❌ A NullPointerException waiting to happen\nUser u = repo.find(id);\nreturn u.getEmail();\n\n// ✅ Make \"maybe absent\" explicit\nreturn repo.findById(id)\n    .map(User::getEmail)\n    .orElse(\"no-email\");"
+  },
+  {
+    "id": 182,
+    "module": "java-tips",
+    "body": "💡Java: If you need to write OS-native newlines, you can use System.lineSeparator().\n#Java #JavaDev",
+    "tags": "#Java #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 183,
+    "module": "java-tips",
+    "body": "🚀Java: Use Files.copy() for quick file duplication\n#Java #SoftwareDevelopment",
+    "tags": "#Java #SoftwareDevelopment",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "List<String> lines = Files.readAllLines(Path.of(\"data.txt\"));\nFiles.writeString(Path.of(\"out.txt\"), \"hello\");"
+  },
+  {
+    "id": 184,
+    "module": "java-tips",
+    "body": "🚀 Java: You can use Stream.limit(n) to set a bound to infinite streams.\n#Java #SoftwareDevelopment",
+    "tags": "#Java #SoftwareDevelopment",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "List<String> names = users.stream()\n    .filter(User::isActive)\n    .map(User::getName)\n    .sorted()\n    .toList();\n// Declarative: say WHAT you want, not HOW to loop"
+  },
+  {
+    "id": 185,
+    "module": "spring-boot-tips",
+    "body": "Spring Boot: To write cleaner REST controllers, use\n@RestController instead of  @Controller + @ResponseBody\n\n#SpringBoot #CleanCode",
+    "tags": "#SpringBoot #CleanCode",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "// @RestController = @Controller + @ResponseBody\n@RestController\n@RequestMapping(\"/api\")\npublic class UserController {\n\n    @GetMapping(\"/users\")\n    public List<User> all() {\n        return service.findAll();   // serialized to JSON\n    }\n}"
+  },
+  {
+    "id": 186,
+    "module": "spring-boot-tips",
+    "body": "💡 Sample repo to learn Spring Boot: github.com/spring-projects/spring-boot-samples\n\n✅ 65+ runnable mini-apps\n✅ Spring Boot 3.3, WebFlux, Security, Kafka, GraalVM\n✅ Official Spring team code\n\nThe Spring Boot Samples repository is an official collection of over 65 runnable mini-applications maintained by the Spring team. Each sample demonstrates a specific feature:\n\n✅ Basic REST APIs\n✅ Spring WebFlux\n✅ Spring Security\n✅ Kafka messaging\n\n#SpringBoot #Java #Kafka #Microservices #GraalVM #DevCommunity",
+    "tags": "#SpringBoot #Java #Kafka #Microservices #GraalVM #DevCommunity",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "@Bean\nSecurityFilterChain security(HttpSecurity http) throws Exception {\n    return http\n        .authorizeHttpRequests(a -> a\n            .requestMatchers(\"/public/**\").permitAll()\n            .anyRequest().authenticated())\n        .httpBasic(Customizer.withDefaults())\n        .build();\n}"
+  },
+  {
+    "id": 187,
+    "module": "spring-boot-tips",
+    "body": "💡Spring Boot tip: Use\n@Profile\n to group and load beans/configurations in specific environments.\n\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "@Bean\n@Profile(\"dev\")\nDataSource devDataSource() { return new H2DataSource(); }\n\n@Bean\n@Profile(\"prod\")\nDataSource prodDataSource() { return new PgDataSource(); }"
+  },
+  {
+    "id": 188,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot tip: With Spring Boot and Spring Security you can secure endpoints easily.\n\n#SpringBoot #SpringSecurity #Java",
+    "tags": "#SpringBoot #SpringSecurity #Java",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "@Bean\nSecurityFilterChain security(HttpSecurity http) throws Exception {\n    return http\n        .authorizeHttpRequests(a -> a\n            .requestMatchers(\"/public/**\").permitAll()\n            .anyRequest().authenticated())\n        .httpBasic(Customizer.withDefaults())\n        .build();\n}"
+  },
+  {
+    "id": 189,
+    "module": "spring-boot-tips",
+    "body": "💡 Spring Boot Tip: If you want DTOs to ignore extra JSON fields from clients without breaking your API use @JsonIgnoreProperties(ignoreUnknown = true).\n\n#SpringBoot #CodingTips #SoftwareEngineering",
+    "tags": "#SpringBoot #CodingTips #SoftwareEngineering",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "// Ignore unknown JSON fields instead of failing\n@JsonIgnoreProperties(ignoreUnknown = true)\npublic record UserDto(String name, String email) {}"
+  },
+  {
+    "id": 190,
+    "module": "spring-boot-tips",
+    "body": "💡 Spring Boot tip: Spring Boot prints a banner in the console when your app starts. You can customize it for branding or just fun.\n\n✅ Add a file banner.txt  in src/main/resources and put whatever content you want.\n\n✅ You can also use placeholders like ${spring-boot.version} or ${java.version} to inject values inside it.\n\n✅ If you want, you can disable the banner with the following configuration property:\n\nspring.main.banner-mode=off\n\n#Java #SpringBoot",
+    "tags": "#Java #SpringBoot",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 191,
+    "module": "spring-boot-tips",
+    "body": "💡 Spring Boot tip: You can run jobs at fixed intervals without setting up Quartz or external schedulers.\n#Java #SpringBoot",
+    "tags": "#Java #SpringBoot",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "@Scheduled(fixedRate = 5000)\npublic void poll() {\n    log.info(\"tick\");\n}\n// Enable with @EnableScheduling on a @Configuration class"
+  },
+  {
+    "id": 192,
+    "module": "spring-boot-tips",
+    "body": "🚀Spring Boot DevTools is a tool to ease developer's work a bit. It watches code and configuration for changes, then automatically reloads or restarts your app.\n#SpringBoot #SoftwareDevelopment",
+    "tags": "#SpringBoot #SoftwareDevelopment",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 193,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot tip: In development, you can package and run an application from the source code with just one command:\n\n✅ When you’re in development, you can skip packaging and just run directly:\n\n./mvnw spring-boot:run\n\n✅ If you want, you can combine packaging and run in one command:\n\n./mvnw clean package && java -jar target/myapp-0.0.1-SNAPSHOT.jar\n\n#Java #SpringBoot",
+    "tags": "#Java #SpringBoot",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 194,
+    "module": "spring-boot-tips",
+    "body": "🚀Spring Boot: Use TaskScheduler to implement lightweight dynamic tasks (consider Quartz for more complex requirements).\n#SpringBoot #SoftwareDevelopment",
+    "tags": "#SpringBoot #SoftwareDevelopment",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 195,
+    "module": "spring-boot-tips",
+    "body": "💡 Spring Boot tip: Use CommandLineRunner for executing startup logic.\n\nCommandLineRunner is a Spring Boot interface that can be implemented to run code after the application context is fully initialized.\n\n#SpringBoot #Java",
+    "tags": "#SpringBoot #Java",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "@Bean\nCommandLineRunner init(UserRepository repo) {\n    return args -> repo.save(new User(\"Mario\"));\n}\n// Runs once, right after the context starts"
+  },
+  {
+    "id": 196,
+    "module": "spring-boot-tips",
+    "body": "💡 Spring Boot tip: Use spring-boot-starter-logging (Logback) for logging, it is already included as default.\n\n✅ spring-boot-starter-logging is already included in most starters (spring-boot-starter-web, spring-boot-starter-data-jpa, etc.)\n\n✅ You can customize log levels by editing application.yml:\n\nlogging:\n  level:\n    root: INFO\n    com.myapp: DEBUG\n\n✅ To customize format and rotation, create a logback-spring.xml in src/main/resources.\n\n#SpringBoot #Java",
+    "tags": "#SpringBoot #Java",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "private static final Logger log =\n    LoggerFactory.getLogger(OrderService.class);\n\nlog.info(\"Created order {} for {}\", orderId, customer);\n// Lazy formatting, log levels, no System.out"
+  },
+  {
+    "id": 197,
+    "module": "spring-boot-tips",
+    "body": "💡Spring Boot tip: Use H2 if you need an in-memory   database for dev/testing.\n\n    #SpringBoot #Java",
+    "tags": "#SpringBoot #Java",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 198,
+    "module": "spring-boot-tips",
+    "body": "🚀Spring Boot tip: Boost performance in Spring Boot with @EnableCaching and\n@Cacheable\n.\n\n🟢 Avoids repeated DB/API calls\n🟢 Reduces latency\n🟢 By default, Spring uses an in-memory map, but you  can plug in an external provider for production.\n#SpringBoot #Performance",
+    "tags": "#SpringBoot #Performance",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "@Cacheable(\"users\")\npublic User findById(Long id) {\n    return repo.findById(id).orElseThrow();\n}\n// Enable with @EnableCaching"
+  },
+  {
+    "id": 199,
+    "module": "spring-boot-tips",
+    "body": "💡 Spring Boot tip: use\n@Transactional\n at the service layer, not on repositories.\n\n✅  You coordinate business logic in the service layer, and a service method:\n\n🟢 Calls one or more repositories\n🟢 Implements business rules\n🟢 Needs everything to succeed or fail together\n#SpringBoot",
+    "tags": "#SpringBoot",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "@Transactional\npublic void transfer(Long from, Long to, BigDecimal amount) {\n    accounts.debit(from, amount);\n    accounts.credit(to, amount);   // both commit, or both roll back\n}"
+  },
+  {
+    "id": 200,
+    "module": "spring-boot-tips",
+    "body": "💡 Spring Boot tip: Use @SpringBootTest(webEnvironment = RANDOM_PORT) for integration tests when testing controllers.\n\n✅ Starts a real embedded server\n✅ The server runs on a random port.\n✅ You can test controllers via TestRestTemplate or WebTestClient.\n#SpringBoot",
+    "tags": "#SpringBoot",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "WebClient client = WebClient.create(\"https://api.example.com\");\n\nMono<User> user = client.get()\n    .uri(\"/users/{id}\", id)\n    .retrieve()\n    .bodyToMono(User.class);"
+  },
+  {
+    "id": 201,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: springdoc-openapi automatically generates OpenAPI 3.0 (Swagger) documentation from your Spring Boot REST controllers.\n\nYou will get:\n\n✅ An interactive Swagger UI\n✅ Auto-scanned from your code\n✅ Export API docs in JSON/YAML\n#SpringBoot",
+    "tags": "#SpringBoot",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 202,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: You can enable a smooth shutdown with \"server.shutdown=graceful\" in your configuration.\n\n✅  It helps you avoid these situations:\n\n🔴 Active HTTP requests failing abruptly\n🔴 Database rolling back unexpectedly\n🔴 Threads interrupted before finishing\n#SpringBoot",
+    "tags": "#SpringBoot",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 203,
+    "module": "spring-boot-tips",
+    "body": "💡 Pin the Spring Boot version in the spring-boot-dependencies BOM to ensure consistent dependency management.\n\n✅  The spring-boot-dependencies BOM allows you to omit versions of libraries that Spring Boot integrates with in your pom.xml.\n#SpringBoot",
+    "tags": "#SpringBoot",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 204,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: Use ResponseEntity<T> to get fine-grained control over HTTP responses.\n\nYou can explicitly specify Status, Headers and Body\n#SpringBoot",
+    "tags": "#SpringBoot",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 205,
+    "module": "spring-boot-tips",
+    "body": "🚀  Spring Boot: Use spring-boot-starter-mail for sending emails.\n\n✅ It wraps all the necessary configuration and dependencies, making the process of sending emails simple and clear.\n#SpringBoot",
+    "tags": "#SpringBoot",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 206,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: With @DataJpaTest you can test JPA repositories in isolation.\n\n@DataJpaTest only loads only the JPA layer and not the entire application context, using an in-memory database (H2), and rolls back transactions after each test.\n#SpringBoot #Java",
+    "tags": "#SpringBoot #Java",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 207,
+    "module": "spring-boot-tips",
+    "body": "💡 Spring Boot: To better handle circular dependencies, use constructor injection instead of field injection.\n\n✅ Forces all required dependencies to be provided at creation time, allowing early detection.\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 208,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: Use @SpringBootApplication(exclude = …) to disable specific auto-configuration classes.\n\n✅ One possible reason could be that you have a custom configuration that conflicts with the default.\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 209,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: If you need to inject grouped configuration properties into classes, you can use @ConfigurationProperties instead of @Value\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "@ConfigurationProperties(prefix = \"app\")\npublic record AppProps(String name, int timeout) {}\n\n// Binds app.name / app.timeout from application.yaml"
+  },
+  {
+    "id": 210,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: In development phase, use spring.main.lazy-initialization=true to speed up the startup of the application.\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 211,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: You can validate your input DTO objects with @Valid + @NotBlank, @Email, etc.\n#Java #SoftwareDevelopment",
+    "tags": "#Java #SoftwareDevelopment",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "public record SignupRequest(\n        @NotBlank String name,\n        @Email String email) {}\n\n@PostMapping(\"/signup\")\npublic void signup(@Valid @RequestBody SignupRequest req) {\n    service.register(req);\n}"
+  },
+  {
+    "id": 212,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: Spring Data JPA has a built-in support for pagination with Pageable.\n\n✅You should use pagination in your repositories instead of fetching all.\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 213,
+    "module": "spring-boot-tips",
+    "body": "💡Spring Boot tip: If you need to implement integrations tests for Spring MVC controllers, and mock everything else, use @WebMvcTest to load only MVC-related beans.\n\n#SpringBoot #IntegrationTesting",
+    "tags": "#SpringBoot #IntegrationTesting",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 214,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: You can use @Retryable to cope with unstable external services.\n#SpringBoot #SoftwareDevelopment",
+    "tags": "#SpringBoot #SoftwareDevelopment",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 215,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: With @ConditionalOnMissingBean, you can define a default bean that can be possibly overridden by a user using a standard definition.\n#SpringBoot #SoftwareDevelopment",
+    "tags": "#SpringBoot #SoftwareDevelopment",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 216,
+    "module": "spring-boot-tips",
+    "body": "🚀Spring Boot: You have the choice of using WebClient over RestTemplate in new apps.\n\n✅ It’s reactive and non-blocking\n✅ Based on event-loop instead of thread-per-request\n✅ Especially fitted for microservices\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "WebClient client = WebClient.create(\"https://api.example.com\");\n\nMono<User> user = client.get()\n    .uri(\"/users/{id}\", id)\n    .retrieve()\n    .bodyToMono(User.class);"
+  },
+  {
+    "id": 217,
+    "module": "spring-boot-tips",
+    "body": "🚀 SpringBoot: Add global OpenAPI metadata with @OpenAPIDefinition.\n\n✅ It should be put on your main Spring Boot application class, or a dedicated configuration class\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 218,
+    "module": "spring-boot-tips",
+    "body": "💡 SpringBoot: Define @ComponentScan boundaries carefully to avoid to avoid scanning entire packages accidentally.\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 219,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: You can cache expensive API calls using\n@Cacheable\n and Redis.\n\n✅First request with a specific key: real API call\n✅Subsequent requests: Redis (milliseconds)\n#SpringBoot #JavaDev\n🧵Spring Boot demo link to follow:",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "@Cacheable(\"users\")\npublic User findById(Long id) {\n    return repo.findById(id).orElseThrow();\n}\n// Enable with @EnableCaching"
+  },
+  {
+    "id": 220,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: To make your services return a paginated response, instead of a giant list, you can use Page<T> and Pageable.\n#SpringBoot #JavaDev\n🧵A link to an example to follow:",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 221,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: If your code uses RestTemplate, you can implement tests by mocking external calls with MockRestServiceServer.\n\n✅ MockRestServiceServer works by intercepting HTTP requests\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "WebClient client = WebClient.create(\"https://api.example.com\");\n\nMono<User> user = client.get()\n    .uri(\"/users/{id}\", id)\n    .retrieve()\n    .bodyToMono(User.class);"
+  },
+  {
+    "id": 222,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: To make Jackson create your objects from JSON in an explicit, and predictable way, you can use @JsonCreator.\n\n🟢 This way, each parameter is explicitly bound\n\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 223,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot:  To execute SQL scripts before or after a test method, you can use the @Sql annotation.\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 224,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: If your application uses RestTemplate for REST calls, you can centralize timeouts with RestTemplateBuilder .\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "WebClient client = WebClient.create(\"https://api.example.com\");\n\nMono<User> user = client.get()\n    .uri(\"/users/{id}\", id)\n    .retrieve()\n    .bodyToMono(User.class);"
+  },
+  {
+    "id": 225,
+    "module": "spring-boot-tips",
+    "body": "🚀Spring Boot: To exclude any fields whose value is null in Jackson serialization you can use @JsonInclude(Include.NON_NULL) .\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 226,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: Better avoid wildcard exclusions for transitive dependencies in POMs, because they can hide problems.\n\n❌ Wildcard exclusions just remove the symptom and mask the underlying version mismatch\n\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 227,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: Keep controllers thin, put logic in services.\n\n✅ Controllers main job is just to handle HTTP concerns\n\n#SpringBoot #SoftwareEngineering",
+    "tags": "#SpringBoot #SoftwareEngineering",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 228,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: Avoid FetchType.EAGER unless you really need it.\n\n❌ Marking a relationship as EAGER tells the ORM to load it whenever the entity is loaded, regardless of whether you actually invoke the relationship's method.\n#Springboot #SoftwareDevelopment",
+    "tags": "#Springboot #SoftwareDevelopment",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 229,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: You can implement optimistic locking using the @Version annotation.\n\n✅ Ideal when:\n\nReads are frequent\nWrites are relatively rare\nConflicts are uncommon\n\n❌ Not Ideal when:\n\nConflicts are frequent\nStrict serialization is needed\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 230,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: Prefer static utility classes over Spring beans only if they don't hold state, they have no dependencies and they don't need mocking or AOP.\n#SpringBoot #SoftwareDevelopment",
+    "tags": "#SpringBoot #SoftwareDevelopment",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 231,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot:  Better not expose JPA entities directly, use DTOs at boundaries instead.\n\n✅This allows to:\n\n🟢 Make API independent on the persistence layer\n🟢 Prevent lazy loading problems\n🟢 Improve security\n\n#SpringBoot #SoftwareEngineer",
+    "tags": "#SpringBoot #SoftwareEngineer",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 232,
+    "module": "spring-boot-tips",
+    "body": "🚀 You can use async logging in Spring Boot by configuring logback (logback-spring.xml).\n\n✅ Log messages are sent into a queue,  and are elaborated by a separate background thread.\n\n✅ This reduces I/O bottlenecks.\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "private static final Logger log =\n    LoggerFactory.getLogger(OrderService.class);\n\nlog.info(\"Created order {} for {}\", orderId, customer);\n// Lazy formatting, log levels, no System.out"
+  },
+  {
+    "id": 233,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: @AutoConfigureMockMvc allows you to test controllers without starting the server. It tells Spring Boot to automatically configure a MockMvc instance in the test context.\n#SpringBoot #Java",
+    "tags": "#SpringBoot #Java",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 234,
+    "module": "spring-boot-tips",
+    "body": "Spring Boot: Use spring.mvc.publish-request-params=true only in dev. It's dangerous in production.\n\n🔴In production, logging request details can expose sensitive information.\n\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 235,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: Better keep the default spring.main.allow-bean-definition-overriding=false configuration.\n\n✅This way Spring fails to start if two beans share the same name.\n\n✅Useful because bean overriding can hide configuration bugs\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 236,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: Better use global filters/interceptors only for true cross-cutting concerns, and avoid business logic. They are executed for every incoming HTTP request.\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 237,
+    "module": "spring-boot-tips",
+    "body": "Spring Boot: Avoid importing the full spring-boot-starter-web if you only need Spring MVC, because the full starter brings in extra components like an embedded server that you may not need.\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 238,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: You can use the \"spring.jpa.properties.hibernate.jdbc.batch_size\" property to make Hibernate handle batch inserts.\n\n🟢Fewer network calls\n🟢Less JDBC overhead\n🟢Faster bulk operations\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 239,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: You can enable /actuator/beans to debug missing beans.\n\nBy hitting the actuator endpoint, you will see information like:\n\n✅ Bean name\n✅ Bean type\n✅ Bean scope\n✅ Bean dependencies\n\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "# application.yaml\nmanagement:\n  endpoints:\n    web:\n      exposure:\n        include: health, info, metrics\n# -> GET /actuator/health"
+  },
+  {
+    "id": 240,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: A webhook is when another system  sends a POST request to your app when something happens. In Spring Boot you implement it simply exposing an endpoint that receives that POST request.\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 241,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: Use @TestConfiguration to use test-specific beans that must not be loaded in production.\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 242,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot testing: @MockBean by default resets the mocks between tests, to keep them independent. You can disable this behaviour with @MockBean(reset = MockReset.NONE).\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 243,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot testing: Using spring.main.log-startup-info=false, you can skip the verbose startup summary.\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 244,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: You can validate config classes with the @Validated annotation.\n\n✅ It makes your app fail fast at startup if the configuration is invalid.\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "public Order(Customer customer) {\n    // Fail fast at construction with a clear message\n    this.customer = Objects.requireNonNull(customer, \"customer\");\n}"
+  },
+  {
+    "id": 245,
+    "module": "spring-boot-tips",
+    "body": "Spring Boot: Better avoid logging inside tight loops, since you could affect the application performance and flood log files.\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "List<String> lines = Files.readAllLines(Path.of(\"data.txt\"));\nFiles.writeString(Path.of(\"out.txt\"), \"hello\");"
+  },
+  {
+    "id": 246,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: Better use SpringBootTest.WebEnvironment.RANDOM_PORT  instead of hardcoding ports in tests to avoid conflicts.\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 247,
+    "module": "spring-boot-tips",
+    "body": "🚀Spring Boot by default does not include stacktrace in the response of REST service calls. Only for fast debugging purposes (don't do it in production), you can enable it with the configuration property include-stacktrace: always.\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 248,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: You have the option of using streaming (Stream<T>) for queries with large datasets.\n\n✅Results are fetched in chunks, with only a small subset in memory at any time\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 249,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: @TransactionalEventListener can be used to implement post-commit actions.\n#SpringBoot #JavaDev\n🧵A full article with an example to follow",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "@Transactional\npublic void transfer(Long from, Long to, BigDecimal amount) {\n    accounts.debit(from, amount);\n    accounts.credit(to, amount);   // both commit, or both roll back\n}"
+  },
+  {
+    "id": 250,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: You can handle CORS globally with a WebMvcConfigurer\n\n✅CORS is the mechanism that allows a web application on one domain (origin) to access resources from a different domain.\n#SpringBoot #SoftwareDevelopment",
+    "tags": "#SpringBoot #SoftwareDevelopment",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 251,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: An efficient way of handling large CSV files is by using Spring Batch features.\n\nSpring Batch is configurable with options like:\n\n✅ Chunking\n✅ Parallelism\n✅ Retry\n\n#SpringBoot #SoftwareDevelopment",
+    "tags": "#SpringBoot #SoftwareDevelopment",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 252,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: It's important to validate the input of your APIS, even of the internal ones.\n#SpringBoot #SoftwareDevelopment",
+    "tags": "#SpringBoot #SoftwareDevelopment",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 253,
+    "module": "spring-boot-tips",
+    "body": "🚀Spring Boot: Use @EntityGraph to control fetch strategies and prevent N+1 queries.\n#SpringBoot #SoftwareEngineering",
+    "tags": "#SpringBoot #SoftwareEngineering",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 254,
+    "module": "spring-boot-tips",
+    "body": "🚀Spring Boot: You can keep full traceability while handling exceptions in a centralized way, and returning safe API responses with @RestControllerAdvice\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "@RestControllerAdvice\npublic class ApiExceptionHandler {\n\n    @ExceptionHandler(NotFoundException.class)\n    public ResponseEntity<String> handle(NotFoundException e) {\n        return ResponseEntity.status(404).body(e.getMessage());\n    }\n}\n// Controllers stay clean — no try/catch everywhere"
+  },
+  {
+    "id": 255,
+    "module": "spring-boot-tips",
+    "body": "🚀Spring Boot: Adding request tracing is very important for debugging APIs\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 256,
+    "module": "spring-boot-tips",
+    "body": "🚀@Sql or @SqlGroup allows you to preload test data to perform reproducible tests.\n\nIt allows:\n\n✅Insert test data\n✅Clean up tables\n✅Reset database state\n\n#SpringBoot #IntegrationTesting",
+    "tags": "#SpringBoot #IntegrationTesting",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 257,
+    "module": "spring-boot-tips",
+    "body": "🚀Spring Boot: With org.hibernate.SQL=DEBUG, you can get a deeper insight into Hibernate queries from the logs.\n#SpringBoot #Hibernate",
+    "tags": "#SpringBoot #Hibernate",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 258,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: Better externalize scheduled tasks fixedRateString's value.\n#SpringBoot #Java",
+    "tags": "#SpringBoot #Java",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 259,
+    "module": "spring-boot-tips",
+    "body": "🚀Spring Boot: Using Spring Cloud Config for centralized configuration management is important.\n\n✅Instead of many services each carrying their own application.yml, you pull it from a single source.\n#SpringCloud #Microservices\n🧵1/6\n\n🧵2/6\n\n✅First of all, you have to configure the config server.\n✅You will have a config server app annotated with @EnableConfigServer and a Git repo holding all your .yml files.\n✅The server serves configurations over HTTP and clients fetch them at startup.\n\n🧵3/6\n\n✅The Git repo structure will follow Spring Boot's naming convention: {application-name}-{profile}.yml or {application-name}/{profile}.yml:\n\n🧵4/6\n\nThe Client application needs to be set up with the starter dependency and a bit of configuration:\n\n🧵5/6\n\nYou can can get dynamic refresh without restart by making beans reloadable with @RefreshScope:\n\n🧵6/6\n\nSensitive information must be encrypted in the configuration files:\n#MicroservicesSecurity",
+    "tags": "#SpringCloud #Microservices #MicroservicesSecurity",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "List<String> lines = Files.readAllLines(Path.of(\"data.txt\"));\nFiles.writeString(Path.of(\"out.txt\"), \"hello\");"
+  },
+  {
+    "id": 260,
+    "module": "spring-boot-tips",
+    "body": "🚀Spring Boot integrates easily with Kafka to implement event-driven architectures.\n🧵1/3\n#SpringBoot #JavaDev\n\n🧵2/3\nFirst, you set the required dependency on the pom, then you can configure it in the application.xml, defining how to reach the Kafka cluster, and how consumers and producers are defined.\n\n🧵3/3\n\nThe final step is implementing consumer and producers as Java objects:",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 261,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: @ConditionalOnClass is a Spring Boot annotation used in auto-configuration.\n\n✅It conditionally enables a bean or configuration only if a specified class is present on the classpath\n#SpringBoot #Microservices",
+    "tags": "#SpringBoot #Microservices",
+    "codepen_style": "carbon",
+    "codepen_large": true
+  },
+  {
+    "id": 262,
+    "module": "spring-boot-tips",
+    "body": "🚀Spring Boot: spring.main.lazy-initialization=true doesn't just delay bean creation, it skips @PostConstruct entirely until first use. Be careful and watch for side effects.\n#SpringBoot #SoftwareDevelopment",
+    "tags": "#SpringBoot #SoftwareDevelopment",
+    "codepen_style": "carbon",
+    "codepen_large": true
   }
 ]

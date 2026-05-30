@@ -1,0 +1,2 @@
+// 💡 Java tip: Catch mistakes at compile time by annotating overridden methods with @Override.
+// #Java #Annotations

@@ -1,0 +1,4 @@
+// 🚀 Spring Boot: You can handle CORS globally with a WebMvcConfigurer
+//
+// ✅CORS is the mechanism that allows a web application on one domain (origin) to access resources from a different domain.
+// #SpringBoot #SoftwareDevelopment

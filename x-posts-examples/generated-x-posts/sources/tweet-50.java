@@ -1,5 +1,17 @@
-// 🚀Spring Boot: Check /actuator/health before you deploy.
-//
-// ✅ Check /actuator/health before you deploy
-// ✅ Runnable sample: `spring-boot-minimal-rest-h2-actuator`
-// ✅ Architecture diagram + Carbon CodePen below
+// 1) Eureka Server — service registry
+@SpringBootApplication
+@EnableEurekaServer
+public class DiscoveryServerApp {
+    public static void main(String[] args) {
+        SpringApplication.run(DiscoveryServerApp.class, args);
+    }
+}
+
+// 2) Microservice — registers as "books-service"
+// application.yml → spring.application.name: books-service
+
+@FeignClient(name = "author-service")
+public interface AuthorClient {
+    @GetMapping("/authors/{id}")
+    Author getAuthor(@PathVariable String id);
+}

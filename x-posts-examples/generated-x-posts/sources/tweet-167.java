@@ -1,0 +1,1 @@
+// 💡 Java tip: List.reversed() returns an unmodifiable reversed view of the original list. #Java #JavaDev

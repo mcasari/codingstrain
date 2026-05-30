@@ -18,8 +18,8 @@
   <h1>Tweet #49 — <a href="https://codepen.io/">CodePen</a> prefill</h1>
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
-             data-prefill='{"title": "Tweet 49 — spring-boot-minimal-rest-h2", "description": "Spring Boot / Java snippet from codingstrain (spring-boot-minimal-rest-h2)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="640"
+             data-prefill='{"title": "Tweet 49 — spring-cloud-config-native-server", "description": "Spring Boot / Java snippet from codingstrain (spring-cloud-config-native-server)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="960"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -141,11 +141,32 @@ body {
   font-size: 16px;
 }
 </pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot-minimal-rest-h2&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// 🚀Spring Boot: H2 in-memory DB for REST tutorials — zero Docker, full CRUD.&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// ✅ H2 in-memory DB for REST tutorials — zero Docker, full CRUD&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// ✅ Runnable sample: `spring-boot-minimal-rest-h2`&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// ✅ Architecture diagram + Carbon CodePen below&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-cloud-config-native-server&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// ── 1) Config Server: one place serves every service&amp;#x27;s config ──&lt;/span&gt;
+&lt;span class=&quot;ann&quot;&gt;@SpringBootApplication&lt;/span&gt;
+&lt;span class=&quot;ann&quot;&gt;@EnableConfigServer&lt;/span&gt;
+&lt;span class=&quot;kw&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;ConfigServerApp&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;static&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;SpringApplicationBuilder&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;ConfigServerApp&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;com&quot;&gt;// ── 2) Server application.yaml (serve files from the classpath) ──&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// spring.profiles.active: native        # local files, no git needed&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// spring.cloud.config.server.native.search-locations: classpath:/config&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// server.port: 8888&lt;/span&gt;
+
+&lt;span class=&quot;com&quot;&gt;// ── 3) /config/client-service.yaml (config for &amp;quot;client-service&amp;quot;) ──&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// myproperty: value&lt;/span&gt;
+
+&lt;span class=&quot;com&quot;&gt;// ── 4) Client: import config from the server at startup ──&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// spring.application.name: client-service&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// spring.config.import: optional:configserver:http://localhost:8888&lt;/span&gt;
+
+&lt;span class=&quot;ann&quot;&gt;@Component&lt;/span&gt;
+&lt;span class=&quot;kw&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;GreetingClient&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;ann&quot;&gt;@Value&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;${myproperty}&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;               &lt;/span&gt;&lt;span class=&quot;com&quot;&gt;// resolved from the Config Server&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;private&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;myProperty&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-49.html" target="_blank" rel="noopener">Open pen preview</a>

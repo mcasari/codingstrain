@@ -53,7 +53,7 @@ def _bullets(tweet: dict, max_n: int = 3) -> list[str]:
 
 def infer_diagram_type(tweet: dict) -> str:
     explicit = tweet.get("diagram_type")
-    if explicit in ("eureka", "circuit_breaker", "sealed_classes"):
+    if explicit in ("eureka", "circuit_breaker", "sealed_classes", "pact", "gatling", "rest"):
         return explicit
 
     module = tweet.get("module", "").lower()
@@ -89,8 +89,10 @@ def infer_diagram_type(tweet: dict) -> str:
         return "jpa"
     if "mock-reset" in module or "springboottest" in code or "mockbean" in code:
         return "testing"
-    if "pact" in text or "gatling" in text:
-        return "microservice_test"
+    if "gatling" in text:
+        return "gatling"
+    if "pact" in text:
+        return "pact"
     if "actuator" in module or "actuator/health" in body:
         return "actuator"
     if "codingstrain" in module and tweet["id"] in (48, 55, 56):
@@ -182,15 +184,80 @@ def build_sealed_classes_drawio() -> str:
     )
 
 
+def build_pact_drawio(tweet: dict) -> str:
+    """Pact contract testing flow: consumer → broker → provider, with mock stand-in."""
+    b = DrawioBuilder(f"Tweet {tweet['id']} · Diagram", w=1160, h=420)
+    M, PW = 40, 1080
+    _header(b, tweet)
+
+    ay = b.section(M, 78, PW, 300, "Contract testing with Pact — do the services still agree?")
+    consumer = b.box(
+        M + 40, ay + 80, 230, 90,
+        "books-service&#xa;(consumer)&#xa;declares the response it expects",
+        _shape(*N["controller"]),
+    )
+    mock = b.box(
+        M + 40, ay + 186, 230, 40,
+        "MockServer — contract stand-in", _shape(*N["file"]),
+    )
+    broker = b.box(
+        M + 455, ay + 40, 210, 76,
+        "Pact Broker&#xa;:9292&#xa;stores contracts", _shape(*N["config"]),
+    )
+    provider = b.box(
+        M + 810, ay + 80, 230, 90,
+        "author-service&#xa;(provider)&#xa;real app replays + verifies",
+        _shape(*N["service"]),
+    )
+    b.edge(consumer, mock, "test runs against", dashed=True)
+    b.edge(consumer, broker, "1 · publish pact")
+    b.edge(broker, provider, "2 · verify interactions")
+    b.box(
+        M + 300, ay + 212, 500, 30,
+        "✓ Each side tested on its own — no full system spin-up",
+        _text_style(12, C["good"], "center", True),
+    )
+    return b.build()
+
+
+def build_gatling_drawio(tweet: dict) -> str:
+    """Gatling load testing flow: simulation ramps virtual users into a service + SLA gate."""
+    b = DrawioBuilder(f"Tweet {tweet['id']} · Diagram", w=1160, h=420)
+    M, PW = 40, 1080
+    _header(b, tweet)
+
+    by = b.section(M, 78, PW, 300, "Load testing with Gatling — can it take the traffic?")
+    gatling = b.box(
+        M + 40, by + 70, 250, 90,
+        "BookSaveSimulation&#xa;ramp 0 → 100 users&#xa;Faker random titles",
+        _shape(*N["advice"]),
+    )
+    service = b.box(
+        M + 770, by + 70, 250, 90,
+        "books-service&#xa;POST /library/book", _shape(*N["controller"]),
+    )
+    b.edge(gatling, service, "ramped virtual users")
+    b.box(
+        M + 330, by + 170, 400, 64,
+        "Assert SLAs&#xa;max responseTime ≤ 10s&#xa;success &gt; 90%",
+        _shape(C["good"], "#15803D"),
+    )
+    return b.build()
+
+
 def build_tweet_diagram(tweet: dict) -> str:
     kind = infer_diagram_type(tweet)
 
     if kind == "eureka":
-        return build_eureka_drawio()
+        return build_eureka_drawio(tweet["id"])
     if kind == "circuit_breaker":
-        return build_circuit_breaker_drawio()
+        return build_circuit_breaker_drawio(tweet["id"])
     if kind == "sealed_classes":
         return build_sealed_classes_drawio()
+    if kind == "pact":
+        return build_pact_drawio(tweet)
+    if kind == "gatling":
+        return build_gatling_drawio(tweet)
 
     builders: dict[str, Any] = {
         "rest": lambda: _pipeline(
@@ -352,16 +419,6 @@ def build_tweet_diagram(tweet: dict) -> str:
                 ("Config repo (git/native)", "db"),
             ],
             ["bootstrap", "centralized YAML"],
-        ),
-        "microservice_test": lambda: _pipeline(
-            tweet,
-            "Microservice testing",
-            [
-                ("books-service", "service"),
-                ("Pact / Gatling", "advice"),
-                ("author-service", "service"),
-            ],
-            ["contract tests", "load tests"],
         ),
         "actuator": lambda: _pipeline(
             tweet,

@@ -1,0 +1,4 @@
+// 🚀 Spring Boot: You have the option of using streaming (Stream<T>) for queries with large datasets.
+//
+// ✅Results are fetched in chunks, with only a small subset in memory at any time
+// #SpringBoot #JavaDev

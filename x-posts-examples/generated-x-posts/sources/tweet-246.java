@@ -1,0 +1,2 @@
+// 🚀 Spring Boot: Better use SpringBootTest.WebEnvironment.RANDOM_PORT  instead of hardcoding ports in tests to avoid conflicts.
+// #SpringBoot #JavaDev

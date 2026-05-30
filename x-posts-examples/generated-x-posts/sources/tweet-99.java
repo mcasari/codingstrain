@@ -1,0 +1,1 @@
+// Java Tip 💡: Refactor legacy code gradually. Use tests to ensure stability. #Java #LegacyCode

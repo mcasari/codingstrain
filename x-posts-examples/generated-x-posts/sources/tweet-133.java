@@ -1,0 +1,6 @@
+// Java tip 💡: Try to avoid sharing data across threads.
+//
+// ✅Use immutable objects
+// ✅Or make threads communicate through messages, without directly modifying shared state.
+//
+// #Java #Concurrency

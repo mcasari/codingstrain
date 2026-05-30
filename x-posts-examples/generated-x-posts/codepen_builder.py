@@ -274,17 +274,20 @@ _TYPE_DECL = re.compile(
 )
 
 
-def _split_columns(lines: list[str]) -> tuple[list[str], list[str]]:
+def _split_columns(lines: list[str], prefer_decl: int = 1) -> tuple[list[str], list[str]]:
     """Split source lines into two columns.
 
     Prefer a top-level type boundary so the first class lands entirely in the
     left column; fall back to a balanced blank-line split otherwise.
+
+    ``prefer_decl`` selects which type declaration (by ordinal) starts the right
+    column, so callers can balance the columns when there are 3+ top-level types.
     """
     n = len(lines)
     decls = [i for i, ln in enumerate(lines) if _TYPE_DECL.match(ln)]
 
-    if len(decls) >= 2:
-        split = decls[1]
+    if len(decls) > prefer_decl:
+        split = decls[prefer_decl]
         # Pull leading annotations / comments of the second type into the right column.
         j = split - 1
         while j >= 0:
@@ -315,9 +318,9 @@ def _split_columns(lines: list[str]) -> tuple[list[str], list[str]]:
     return left, right
 
 
-def highlight_java_html_columns(code: str, module: str) -> str:
+def highlight_java_html_columns(code: str, module: str, prefer_decl: int = 1) -> str:
     """Carbon window with the code split across two adjacent columns."""
-    left, right = _split_columns(code.split("\n"))
+    left, right = _split_columns(code.split("\n"), prefer_decl)
     mod = html.escape(module)
     return (
         '<div class="carbon">'
@@ -371,9 +374,10 @@ def build_codepen_embed(tweet: dict, code: str) -> str:
     carbon = _use_carbon_style(tweet)
     large = bool(tweet.get("codepen_large", carbon))
     columns = carbon and int(tweet.get("codepen_columns", 1)) >= 2
+    split_decl = int(tweet.get("codepen_split_decl", 1))
 
     if columns:
-        left, right = _split_columns(code.split("\n"))
+        left, right = _split_columns(code.split("\n"), split_decl)
         col_lines = max(len(left), len(right))
         height = _embed_height(code, carbon=carbon, large=large, line_count=col_lines)
     else:
@@ -389,7 +393,7 @@ def build_codepen_embed(tweet: dict, code: str) -> str:
 
     if carbon:
         html_block = (
-            highlight_java_html_columns(code, module)
+            highlight_java_html_columns(code, module, split_decl)
             if columns
             else highlight_java_html(code, module)
         )

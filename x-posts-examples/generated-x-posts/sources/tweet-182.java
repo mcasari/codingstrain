@@ -1,0 +1,2 @@
+// 💡Java: If you need to write OS-native newlines, you can use System.lineSeparator().
+// #Java #JavaDev

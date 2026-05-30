@@ -1,0 +1,2 @@
+// 💡 SpringBoot: Define @ComponentScan boundaries carefully to avoid to avoid scanning entire packages accidentally.
+// #SpringBoot #JavaDev

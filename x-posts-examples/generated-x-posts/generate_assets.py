@@ -30,10 +30,9 @@ PNG_DIR = ROOT / "png"
 SOURCES_DIR = ROOT / "sources"
 INDEX_HTML = ROOT / "index.html"
 
-EXTENDED_CODE_SNIPPETS: dict[int, str] = {
-    52: EUREKA_CODE_SNIPPET,
-    53: CIRCUIT_BREAKER_CODE_SNIPPET,
-}
+# Code now lives in each tweet's "code" field (tweets.json), so image_source is
+# id-independent and survives renumbering. Kept empty intentionally.
+EXTENDED_CODE_SNIPPETS: dict[int, str] = {}
 
 # Carbon.now.sh–style theme (Night Owl editor + gradient canvas)
 THEME = {
@@ -616,17 +615,28 @@ def build_index(tweets: list[dict]) -> str:
         stem = f"tweet-{tid:02d}"
         text = xml_escape(format_twitter_body(t))
         pen = build_codepen_embed(t, image_source(t))
+        has_png = (PNG_DIR / f"{stem}-diagram.png").is_file()
+        has_drawio = (DRAWIO_DIR / f"{stem}.drawio").is_file()
+        diagram_block = (
+            f"""      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/{stem}-diagram.png" alt="Diagram {tid}" width="720" class="asset-img"/>
+"""
+            if has_png
+            else ""
+        )
+        drawio_link = (
+            f'        <a href="drawio/{stem}.drawio" download>.drawio diagram</a> ·\n'
+            if has_drawio
+            else ""
+        )
         rows.append(
             f"""    <article>
       <h2>Tweet #{tid}</h2>
-      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
-      <img src="png/{stem}-diagram.png" alt="Diagram {tid}" width="720" class="asset-img"/>
-      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+{diagram_block}      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
 {pen}
       <div class="tweet-text">{text}</div>
       <p class="links">
-        <a href="drawio/{stem}.drawio" download>.drawio diagram</a> ·
-        <a href="codepen/{stem}.html" target="_blank" rel="noopener">CodePen preview</a> ·
+{drawio_link}        <a href="codepen/{stem}.html" target="_blank" rel="noopener">CodePen preview</a> ·
         <a href="sources/{stem}.java" download>Source .java</a>
       </p>
     </article>"""

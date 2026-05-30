@@ -31,5 +31,5 @@
     <rect x="48" y="80" width="640" height="56" fill="#011627"/>
     <rect x="48" y="128" width="640" height="8" rx="8" fill="#011627"/>
   </g>
-  <text x="66.0" y="113" class="com">// Run any codingstrain module with mvn spring-boot:run.</text>
+  <text x="66.0" y="113" class="com">// H2 in-memory DB for REST tutorials — zero Docker, full CRUD.</text>
 </svg>

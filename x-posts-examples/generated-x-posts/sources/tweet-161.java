@@ -1,0 +1,3 @@
+// 💡 Java tip: Starting from Java 8, you can remove nulls easily with list.removeIf(Objects::isNull).
+//
+// #Java #JavaTips

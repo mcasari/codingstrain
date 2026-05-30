@@ -170,13 +170,13 @@ class DrawioBuilder:
 </mxfile>"""
 
 
-def build_eureka_drawio() -> str:
-    """Tweet #52 — diagrams.net architecture only (code → CodePen)."""
-    b = DrawioBuilder("Tweet 52 · Diagram", w=1160, h=520)
+def build_eureka_drawio(tid: int = 52) -> str:
+    """Eureka service discovery — diagrams.net architecture only (code → CodePen)."""
+    b = DrawioBuilder(f"Tweet {tid} · Diagram", w=1160, h=520)
     M = 40
     PW = 1080
 
-    b.box(M, 16, 520, 32, "Tweet #52 · Eureka Service Discovery", _text_style(20, C["title"], bold=True))
+    b.box(M, 16, 520, 32, f"Tweet #{tid} · Eureka Service Discovery", _text_style(20, C["title"], bold=True))
     b.box(M, 48, 400, 22, "spring-cloud-discovery · codingstrain.com", _text_style(11, C["subtitle"]))
 
     inner_y = b.section(M, 78, PW, 400, "Service discovery flow")
@@ -211,13 +211,13 @@ def build_eureka_drawio() -> str:
     return b.build()
 
 
-def build_circuit_breaker_drawio() -> str:
-    """Tweet #53 — diagrams.net architecture only (code → CodePen)."""
-    b = DrawioBuilder("Tweet 53 · Diagram", w=1160, h=580)
+def build_circuit_breaker_drawio(tid: int = 53) -> str:
+    """OpenFeign + Circuit Breaker — diagrams.net architecture only (code → CodePen)."""
+    b = DrawioBuilder(f"Tweet {tid} · Diagram", w=1160, h=580)
     M = 40
     PW = 1080
 
-    b.box(M, 16, 560, 32, "Tweet #53 · OpenFeign + Circuit Breaker", _text_style(20, C["title"], bold=True))
+    b.box(M, 16, 560, 32, f"Tweet #{tid} · OpenFeign + Circuit Breaker", _text_style(20, C["title"], bold=True))
     b.box(M, 48, 520, 22, "libraryapp-openfeign-discovery-circuitbreaker", _text_style(11, C["subtitle"]))
 
     inner_y = b.section(M, 78, PW, 440, "Resilience4j + OpenFeign")

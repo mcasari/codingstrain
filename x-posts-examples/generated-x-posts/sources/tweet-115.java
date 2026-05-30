@@ -1,0 +1,1 @@
+// 💡 Cache expensive operations when possible. Use `ConcurrentMap` if needed. #Java #Performance

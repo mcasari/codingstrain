@@ -1,29 +1,20 @@
-// ── Feign client + circuit breaker on remote call ───
-@FeignClient(name = "author-service")
-public interface AuthorClient {
+// Gatling: load-test the books endpoint and assert SLAs
+public class BookSaveSimulation extends Simulation {
 
-    @GetMapping("/authors/getInstance")
-    @CircuitBreaker(name = "CircuitBreakerService")
-    String getInstance();
-}
-
-// ── Controller with fallback when circuit is OPEN ───
-@RestController
-public class BookController {
-
-    @GetMapping("/getAuthorServiceInstance")
-    @CircuitBreaker(name = "CircuitBreakerApi",
-            fallbackMethod = "getAuthorServiceInstanceFallback")
-    public String getAuthorServiceInstance() {
-        return bookService.getAuthorServiceInstance();
+    {
+        setUp(buildScenario()
+            .injectOpen(rampUsersPerSec(1).to(100).during(ofSeconds(300)))
+            .protocols(http.baseUrl("http://localhost:8080")))
+        .assertions(
+            global().responseTime().max().lte(10000),            // <= 10s
+            global().successfulRequests().percent().gt(90.0));   // > 90% OK
     }
 
-    public String getAuthorServiceInstanceFallback(Exception ex) {
-        return "Fallback content";
+    ScenarioBuilder buildScenario() {
+        return scenario("Load POST")
+            .feed(randomTitles())                  // Faker-generated book titles
+            .exec(http("create-book").post("/library/book")
+                .header("Content-Type", "application/json")
+                .body(StringBody("{ \"title\": \"${title}\" }")));
     }
 }
-
-// ── application.yml (Resilience4j) ───────────────────
-// resilience4j.circuitbreaker.instances.CircuitBreakerApi:
-//   failure-rate-threshold: 50
-//   wait-duration-in-open-state: 5s

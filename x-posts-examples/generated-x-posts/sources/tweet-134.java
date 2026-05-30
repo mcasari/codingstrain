@@ -1,0 +1,5 @@
+// Java Tip 💡: Override hashCode() when overriding equals() to ensure collections like HashMap work correctly.
+//
+// HashMap is based on an hash table data structure, and uses hashCode() to determine the bucket index.
+//
+// #Java #Collections

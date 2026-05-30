@@ -18,8 +18,8 @@
   <h1>Tweet #51 — <a href="https://codepen.io/">CodePen</a> prefill</h1>
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
-             data-prefill='{"title": "Tweet 51 — spring-cloud-config-native-server", "description": "Spring Boot / Java snippet from codingstrain (spring-cloud-config-native-server)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="640"
+             data-prefill='{"title": "Tweet 51 — libraryapp-openfeign-discovery-circuitbreaker", "description": "Spring Boot / Java snippet from codingstrain (libraryapp-openfeign-discovery-circuitbreaker)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="960"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -141,11 +141,33 @@ body {
   font-size: 16px;
 }
 </pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-cloud-config-native-server&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// 🚀Spring Cloud: Centralize config with Spring Cloud Config before you copy application.properties everywhere.&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// ✅ Centralize config with Spring Cloud Config before you copy application.properties everywhere&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// ✅ Runnable sample: `spring-cloud-config-native-server`&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// ✅ Architecture diagram + Carbon CodePen below&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;libraryapp-openfeign-discovery-circuitbreaker&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;ann&quot;&gt;@FeignClient&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;author-service&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kw&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;interface&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;AuthorClient&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
+
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;ann&quot;&gt;@GetMapping&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;/authors/getInstance&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;ann&quot;&gt;@CircuitBreaker&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;CircuitBreakerService&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;ann&quot;&gt;@RestController&lt;/span&gt;
+&lt;span class=&quot;kw&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;BookController&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
+
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;ann&quot;&gt;@GetMapping&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;/getAuthorServiceInstance&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;ann&quot;&gt;@CircuitBreaker&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;CircuitBreakerApi&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;                    &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;fallbackMethod&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;getAuthorServiceInstanceFallback&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;getAuthorServiceInstance&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;bookService&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;getAuthorServiceInstance&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;getAuthorServiceInstanceFallback&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Exception&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;Fallback content&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;com&quot;&gt;// application.yml&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// resilience4j.circuitbreaker.instances.CircuitBreakerApi:&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;//   failure-rate-threshold: 50&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;//   wait-duration-in-open-state: 5s&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-51.html" target="_blank" rel="noopener">Open pen preview</a>

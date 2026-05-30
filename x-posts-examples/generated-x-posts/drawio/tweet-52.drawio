@@ -1,35 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mxfile host="app.diagrams.net" agent="codingstrain" version="22.1.8" type="device">
-  <diagram id="43b6f5bb-0576-4bee-82e2-055da9aeefc6" name="Tweet 52 · Diagram">
-    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="520" math="0" shadow="0" background="#F8FAFC">
+  <diagram id="6a096fbf-8496-41c3-8f33-6c4aa5dedaf5" name="Tweet 52 · Diagram">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #52 · Eureka Service Discovery" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="520" height="32" as="geometry"/></mxCell>
-        <mxCell id="3" value="spring-cloud-discovery · codingstrain.com" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="400" height="22" as="geometry"/></mxCell>
-        <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="400" as="geometry"/></mxCell>
-        <mxCell id="5" value="Service discovery flow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
-        <mxCell id="6" value="Eureka Server&amp;#xa;:8761&amp;#xa;service registry" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#4F46E5;strokeColor=#3730A3;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="470" y="150" width="220" height="88" as="geometry"/></mxCell>
-        <mxCell id="7" value="books-service&amp;#xa;:8081" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#10B981;strokeColor=#059669;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="100" y="330" width="200" height="82" as="geometry"/></mxCell>
-        <mxCell id="8" value="author-service&amp;#xa;:8082" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="480" y="330" width="200" height="82" as="geometry"/></mxCell>
-        <mxCell id="9" value="review-service&amp;#xa;:8083" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#F59E0B;strokeColor=#D97706;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="860" y="330" width="200" height="82" as="geometry"/></mxCell>
-        <mxCell id="10" value="register" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="7" target="6"><mxGeometry relative="1" as="geometry"><Array as="points">
-            <mxPoint x="200" y="305"/>
-            <mxPoint x="540" y="305"/>
-          </Array></mxGeometry></mxCell>
-        <mxCell id="11" value="register" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="8" target="6"><mxGeometry relative="1" as="geometry"><Array as="points">
-            <mxPoint x="580" y="305"/>
-          </Array></mxGeometry></mxCell>
-        <mxCell id="12" value="register" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="9" target="6"><mxGeometry relative="1" as="geometry"><Array as="points">
-            <mxPoint x="960" y="305"/>
-            <mxPoint x="660" y="305"/>
-          </Array></mxGeometry></mxCell>
-        <mxCell id="13" value="GET /authors/{id}" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#0EA5E9;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="7" target="8"><mxGeometry relative="1" as="geometry"><Array as="points">
-            <mxPoint x="200" y="430"/>
-            <mxPoint x="580" y="430"/>
-          </Array></mxGeometry></mxCell>
-        <mxCell id="14" value="✗  http://192.168.1.42:8082  (hard-coded IP)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#DC2626;" vertex="1" parent="1"><mxGeometry x="90" y="460" width="420" height="36" as="geometry"/></mxCell>
-        <mxCell id="15" value="✓  http://author-service/authors/1  (logical name)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#16A34A;" vertex="1" parent="1"><mxGeometry x="560" y="460" width="480" height="36" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #52 · Spring Cloud: Contract testing with Pact — make sure two s…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="3" value="spring-cloud-sample-libraryapp · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
+        <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="300" as="geometry"/></mxCell>
+        <mxCell id="5" value="Contract testing with Pact — do the services still agree?" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
+        <mxCell id="6" value="books-service&amp;#xa;(consumer)&amp;#xa;declares the response it expects" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#10B981;strokeColor=#059669;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="80" y="210" width="230" height="90" as="geometry"/></mxCell>
+        <mxCell id="7" value="MockServer — contract stand-in" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#64748B;strokeColor=#475569;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="80" y="316" width="230" height="40" as="geometry"/></mxCell>
+        <mxCell id="8" value="Pact Broker&amp;#xa;:9292&amp;#xa;stores contracts" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#6366F1;strokeColor=#4F46E5;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="495" y="170" width="210" height="76" as="geometry"/></mxCell>
+        <mxCell id="9" value="author-service&amp;#xa;(provider)&amp;#xa;real app replays + verifies" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="850" y="210" width="230" height="90" as="geometry"/></mxCell>
+        <mxCell id="10" value="test runs against" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;dashed=1;dashPattern=8 6;" edge="1" parent="1" source="6" target="7"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="11" value="1 · publish pact" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="6" target="8"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="12" value="2 · verify interactions" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="8" target="9"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="13" value="✓ Each side tested on its own — no full system spin-up" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#16A34A;" vertex="1" parent="1"><mxGeometry x="340" y="342" width="500" height="30" as="geometry"/></mxCell>
       </root>
     </mxGraphModel>
   </diagram>

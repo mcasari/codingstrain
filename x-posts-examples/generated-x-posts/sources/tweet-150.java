@@ -1,0 +1,3 @@
+// 💡 Java tip: Use Duration and Instant for precise time calculations.
+//
+// #Java

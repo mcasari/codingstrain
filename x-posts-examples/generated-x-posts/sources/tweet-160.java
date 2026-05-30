@@ -1,0 +1,4 @@
+// 💡Java tip: Use ThreadLocal.withInitial(...) to provide each thread its own safe default value.
+//
+// ✅ The value is created lazily
+// #Java #JavaDev

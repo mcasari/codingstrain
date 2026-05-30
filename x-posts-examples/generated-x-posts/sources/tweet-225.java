@@ -1,0 +1,2 @@
+// 🚀Spring Boot: To exclude any fields whose value is null in Jackson serialization you can use @JsonInclude(Include.NON_NULL) .
+// #SpringBoot #JavaDev
