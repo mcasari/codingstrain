@@ -548,5 +548,14 @@
     "tags": "#Java #Concurrency #JMM",
     "codepen_style": "carbon",
     "codepen_large": true
+  },
+  {
+    "id": 64,
+    "module": "junit5-extension-api-demo",
+    "body": "💡 JUnit 5's Extension API replaces JUnit 4's `@RunWith` Runner and `@Rule`.\n\n✅ One model: implement lifecycle hooks like `BeforeEachCallback` instead of an exclusive Runner\n✅ `ParameterResolver` injects test dependencies — no base-class inheritance needed\n✅ Extensions compose: stack several with `@ExtendWith` and they just work together\n#Java #JUnit5 #Testing",
+    "code": "package com.codingstrain.junit5;\n\nimport org.junit.jupiter.api.Test;\nimport org.junit.jupiter.api.extension.BeforeEachCallback;\nimport org.junit.jupiter.api.extension.ExtendWith;\nimport org.junit.jupiter.api.extension.ExtensionContext;\nimport org.junit.jupiter.api.extension.ParameterContext;\nimport org.junit.jupiter.api.extension.ParameterResolver;\n\n/**\n * JUnit 5 Extension API: one composable model that replaces JUnit 4's\n * {@code @RunWith} Runner (single, exclusive) and {@code @Rule} (inheritance-based).\n */\nclass TimingExtension implements BeforeEachCallback, ParameterResolver {\n\n    private static final ExtensionContext.Namespace NS =\n        ExtensionContext.Namespace.create(TimingExtension.class);\n\n    @Override\n    public void beforeEach(ExtensionContext context) {\n        context.getStore(NS).put(\"start\", System.nanoTime());\n    }\n\n    @Override\n    public boolean supportsParameter(ParameterContext pc, ExtensionContext ec) {\n        return pc.getParameter().getType() == Stopwatch.class;\n    }\n\n    @Override\n    public Object resolveParameter(ParameterContext pc, ExtensionContext ec) {\n        long start = ec.getStore(NS).get(\"start\", long.class);\n        return new Stopwatch(start);\n    }\n}\n\n// No inheritance, no Runner: just declare the extensions you want.\n@ExtendWith(TimingExtension.class)\nclass OrderServiceTest {\n\n    @Test\n    void placesOrder(Stopwatch stopwatch) {   // injected by ParameterResolver\n        // ... exercise the system under test ...\n        System.out.println(\"elapsed = \" + stopwatch.elapsedMillis() + \"ms\");\n    }\n}",
+    "tags": "#Java #JUnit5 #Testing",
+    "codepen_style": "carbon",
+    "codepen_large": true
   }
 ]
