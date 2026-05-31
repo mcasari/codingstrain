@@ -563,7 +563,8 @@
     "body": "Java Tip #9💡: Avoid excessive number of method parameters. Group related values into objects. #Java #Refactoring",
     "tags": "#Java #Refactoring",
     "codepen_style": "carbon",
-    "codepen_large": true
+    "codepen_large": true,
+    "code": "// ❌ Too many parameters — easy to pass them in the wrong order\npublic void createUser(String firstName, String lastName,\n                       String street, String city,\n                       String zip, String country) {\n    // ...\n}\n\ncreateUser(\"Mario\", \"Rossi\", \"Via Roma\", \"Rome\", \"00100\", \"IT\");\n\n\n// ✅ Group related values into a cohesive object\npublic record Address(String street, String city,\n                      String zip, String country) {}\n\npublic void createUser(String firstName, String lastName,\n                       Address address) {\n    // ...\n}\n\ncreateUser(\"Mario\", \"Rossi\",\n    new Address(\"Via Roma\", \"Rome\", \"00100\", \"IT\"));"
   },
   {
     "id": 64,
@@ -571,7 +572,8 @@
     "body": "Java Tip💡:  Use meaningful method names that reflect their purpose. #Java #CleanCode",
     "tags": "#Java #CleanCode",
     "codepen_style": "carbon",
-    "codepen_large": true
+    "codepen_large": true,
+    "code": "// ❌ Vague names — you must read the body to know what they do\npublic List<User> get(boolean b) { ... }\npublic void process(Order o) { ... }\npublic BigDecimal calc(Cart c) { ... }\n\n// ✅ Names that reveal intent — the call site reads like a sentence\npublic List<User> findActiveUsers() { ... }\npublic void cancelOrder(Order order) { ... }\npublic BigDecimal calculateCartTotal(Cart cart) { ... }\n\nList<User> active = findActiveUsers();\nBigDecimal total = calculateCartTotal(cart);"
   },
   {
     "id": 65,
@@ -580,7 +582,9 @@
     "tags": "#Java #OO",
     "codepen_style": "carbon",
     "codepen_large": true,
-    "code": "// ❌ Type checks scattered everywhere\nif (animal instanceof Dog d) { d.bark(); }\nelse if (animal instanceof Cat c) { c.meow(); }\n\n// ✅ Let polymorphism decide\nanimal.makeSound();"
+    "code": "// ❌ BEFORE: instanceof chains to fork behavior\npublic String describe(Animal animal) {\n    if (animal instanceof Dog) {\n        return \"Woof\";\n    } else if (animal instanceof Cat) {\n        return \"Meow\";\n    } else if (animal instanceof Cow) {\n        return \"Moo\";\n    }\n    throw new IllegalArgumentException(\"Unknown animal\");\n}\n// Add an animal => you must edit this method\n\n// ✅ AFTER: let each type own its behavior\npublic interface Animal {\n    String sound();\n}\n\npublic final class Dog implements Animal {\n    public String sound() { return \"Woof\"; }\n}\n\npublic final class Cat implements Animal {\n    public String sound() { return \"Meow\"; }\n}\n\npublic final class Cow implements Animal {\n    public String sound() { return \"Moo\"; }\n}\n\n// Call site: no type checks, no casts\npublic String describe(Animal animal) {\n    return animal.sound();\n}\n// Add an animal => just add a class (open/closed)",
+    "codepen_columns": 2,
+    "codepen_split_decl": 0
   },
   {
     "id": 66,
