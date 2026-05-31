@@ -608,29 +608,60 @@ def build_combined_drawio(tweets: list[dict]) -> str:
     return "\n  ".join(parts)
 
 
-def build_index(tweets: list[dict]) -> str:
-    rows = []
-    for t in tweets:
-        tid = t["id"]
-        stem = f"tweet-{tid:02d}"
-        text = xml_escape(format_twitter_body(t))
-        pen = build_codepen_embed(t, image_source(t))
-        has_png = (PNG_DIR / f"{stem}-diagram.png").is_file()
-        has_drawio = (DRAWIO_DIR / f"{stem}.drawio").is_file()
-        diagram_block = (
-            f"""      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+INDEX_PAGE_SIZE = 20
+
+INDEX_STYLES = """
+    body { font-family: system-ui, sans-serif; max-width: 960px; margin: 2rem auto; padding: 0 1rem; background: #f7f9f9; }
+    article { background: #fff; border-radius: 16px; padding: 1.25rem; margin-bottom: 2rem; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+    h2 { margin: 0 0 1rem; font-size: 0.9rem; color: #536471; }
+    .tweet-text { white-space: pre-wrap; font-size: 15px; line-height: 1.4; margin: 1rem 0; padding: 1rem; background: #f7f9f9; border-radius: 12px; border: 1px solid #eff3f4; }
+    .links a { color: #1d9bf0; }
+    .banner { background: #1d9bf0; color: #fff; padding: 1.25rem; border-radius: 12px; margin-bottom: 1rem; }
+    .banner p { margin: 0.5rem 0 0; opacity: 0.95; }
+    .banner a { color: #fff; }
+    .drawio-box { background: #e8f4fc; border: 1px solid #1d9bf0; border-radius: 12px; padding: 1rem; margin-bottom: 1rem; }
+    .drawio-box ol { margin: 0.5rem 0 0; padding-left: 1.25rem; }
+    .drawio-box li { margin: 0.35rem 0; }
+    .asset-label { font-size: 0.85rem; color: #536471; margin: 0.75rem 0 0.35rem; }
+    .asset-img { display: block; max-width: 100%; border-radius: 8px; margin-bottom: 0.5rem; border: 1px solid #eff3f4; }
+    .codepen-wrap { margin: 0.5rem 0 1rem; border-radius: 8px; overflow: hidden; border: 1px solid #eff3f4; }
+    .codepen-wrap--large { max-width: 100%; min-height: 640px; }
+    .codepen-links { font-size: 0.8rem; margin: 0.35rem 0 0; padding: 0 0.5rem 0.5rem; }
+    .codepen-links a { color: #1d9bf0; }
+    .pagination { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.75rem; background: #fff; border: 1px solid #eff3f4; border-radius: 12px; padding: 0.75rem 1rem; margin-bottom: 1.5rem; font-size: 0.9rem; }
+    .pagination a { color: #1d9bf0; text-decoration: none; }
+    .pagination a:hover { text-decoration: underline; }
+    .pagination .page-current { font-weight: 700; color: #0f1419; }
+    .pagination .page-meta { color: #536471; margin-left: auto; }
+    .pagination .page-nav { font-weight: 600; }
+    .pagination .page-nav.disabled { color: #aab8c2; pointer-events: none; }
+"""
+
+
+def _index_page_href(page: int) -> str:
+    return "index.html" if page == 1 else f"page-{page}.html"
+
+
+def build_article(t: dict) -> str:
+    tid = t["id"]
+    stem = f"tweet-{tid:02d}"
+    text = xml_escape(format_twitter_body(t))
+    pen = build_codepen_embed(t, image_source(t))
+    has_png = (PNG_DIR / f"{stem}-diagram.png").is_file()
+    has_drawio = (DRAWIO_DIR / f"{stem}.drawio").is_file()
+    diagram_block = (
+        f"""      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
       <img src="png/{stem}-diagram.png" alt="Diagram {tid}" width="720" class="asset-img"/>
 """
-            if has_png
-            else ""
-        )
-        drawio_link = (
-            f'        <a href="drawio/{stem}.drawio" download>.drawio diagram</a> ·\n'
-            if has_drawio
-            else ""
-        )
-        rows.append(
-            f"""    <article>
+        if has_png
+        else ""
+    )
+    drawio_link = (
+        f'        <a href="drawio/{stem}.drawio" download>.drawio diagram</a> ·\n'
+        if has_drawio
+        else ""
+    )
+    return f"""    <article>
       <h2>Tweet #{tid}</h2>
 {diagram_block}      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
 {pen}
@@ -640,29 +671,45 @@ def build_index(tweets: list[dict]) -> str:
         <a href="sources/{stem}.java" download>Source .java</a>
       </p>
     </article>"""
-        )
+
+
+def build_pagination_nav(
+    page: int, total_pages: int, first_tid: int, last_tid: int, total_tweets: int
+) -> str:
+    prev_cls = "page-nav disabled" if page <= 1 else "page-nav"
+    next_cls = "page-nav disabled" if page >= total_pages else "page-nav"
+    prev_href = _index_page_href(page - 1) if page > 1 else "#"
+    next_href = _index_page_href(page + 1) if page < total_pages else "#"
+    page_links = []
+    for p in range(1, total_pages + 1):
+        if p == page:
+            page_links.append(f'<span class="page-current">{p}</span>')
+        else:
+            page_links.append(f'<a href="{_index_page_href(p)}">{p}</a>')
+    return f"""  <nav class="pagination" aria-label="Tweet pages">
+    <a class="{prev_cls}" href="{prev_href}">← Prev</a>
+    {' · '.join(page_links)}
+    <a class="{next_cls}" href="{next_href}">Next →</a>
+    <span class="page-meta">Tweets #{first_tid}–#{last_tid} of {total_tweets} · page {page}/{total_pages}</span>
+  </nav>"""
+
+
+def build_index_page(tweets: list[dict], page: int, page_size: int = INDEX_PAGE_SIZE) -> str:
+    total = len(tweets)
+    total_pages = max(1, (total + page_size - 1) // page_size)
+    page = max(1, min(page, total_pages))
+    chunk = tweets[(page - 1) * page_size : page * page_size]
+    first_tid = chunk[0]["id"] if chunk else 0
+    last_tid = chunk[-1]["id"] if chunk else 0
+    nav = build_pagination_nav(page, total_pages, first_tid, last_tid, total)
+    articles = "\n".join(build_article(t) for t in chunk)
+    title_suffix = f" — page {page}/{total_pages}" if total_pages > 1 else ""
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
-  <title>codingstrain X Posts — @mario_casari style</title>
-  <style>
-    body {{ font-family: system-ui, sans-serif; max-width: 960px; margin: 2rem auto; padding: 0 1rem; background: #f7f9f9; }}
-    article {{ background: #fff; border-radius: 16px; padding: 1.25rem; margin-bottom: 2rem; box-shadow: 0 1px 3px rgba(0,0,0,.08); }}
-    h2 {{ margin: 0 0 1rem; font-size: 0.9rem; color: #536471; }}
-    .tweet-text {{ white-space: pre-wrap; font-size: 15px; line-height: 1.4; margin: 1rem 0; padding: 1rem; background: #f7f9f9; border-radius: 12px; border: 1px solid #eff3f4; }}
-    .links a {{ color: #1d9bf0; }}
-    .banner {{ background: #1d9bf0; color: #fff; padding: 1.25rem; border-radius: 12px; margin-bottom: 2rem; }}
-    .banner p {{ margin: 0.5rem 0 0; opacity: 0.95; }}
-    .drawio-box {{ background: #e8f4fc; border: 1px solid #1d9bf0; border-radius: 12px; padding: 1rem; margin-bottom: 1rem; }}
-    .drawio-box ol {{ margin: 0.5rem 0 0; padding-left: 1.25rem; }}
-    .drawio-box li {{ margin: 0.35rem 0; }}
-    .asset-label {{ font-size: 0.85rem; color: #536471; margin: 0.75rem 0 0.35rem; }}
-    .asset-img {{ display: block; max-width: 100%; border-radius: 8px; margin-bottom: 0.5rem; border: 1px solid #eff3f4; }}
-    .codepen-wrap {{ margin: 0.5rem 0 1rem; border-radius: 8px; overflow: hidden; border: 1px solid #eff3f4; }}
-    .codepen-wrap--large {{ max-width: 100%; min-height: 640px; }}
-    .codepen-links {{ font-size: 0.8rem; margin: 0.35rem 0 0; padding: 0 0.5rem 0.5rem; }}
-    .codepen-links a {{ color: #1d9bf0; }}
+  <title>codingstrain X Posts{title_suffix}</title>
+  <style>{INDEX_STYLES}
   </style>
 </head>
 <body>
@@ -670,11 +717,36 @@ def build_index(tweets: list[dict]) -> str:
     <h1>Spring Boot &amp; Java X Posts</h1>
     <p>Every tweet: <a href="https://app.diagrams.net/">diagrams.net</a> architecture diagram + <a href="https://codepen.io/">CodePen</a> code pen.</p>
   </div>
-{chr(10).join(rows)}
+{nav}
+{articles}
+{nav}
   <script async src="{CODEPEN_SCRIPT}"></script>
 </body>
 </html>
 """
+
+
+def build_index(tweets: list[dict]) -> str:
+    """Single-page preview (page 1 only). Prefer write_index_pages()."""
+    return build_index_page(tweets, 1)
+
+
+def write_index_pages(tweets: list[dict], page_size: int = INDEX_PAGE_SIZE) -> list[Path]:
+    """Write paginated index.html + page-2.html … and remove stale page files."""
+    total_pages = max(1, (len(tweets) + page_size - 1) // page_size)
+    written: list[Path] = []
+    for page in range(1, total_pages + 1):
+        path = INDEX_HTML if page == 1 else ROOT / f"page-{page}.html"
+        path.write_text(build_index_page(tweets, page, page_size), encoding="utf-8")
+        written.append(path)
+    for stale in ROOT.glob("page-*.html"):
+        try:
+            n = int(stale.stem.split("-", 1)[1])
+        except (IndexError, ValueError):
+            continue
+        if n > total_pages:
+            stale.unlink()
+    return written
 
 
 def export_diagram_png(drawio_path: Path, png_path: Path) -> bool:
@@ -733,7 +805,7 @@ def main() -> None:
             stale_code_png.unlink()
 
     (DRAWIO_DIR / "all-tweets.drawio").write_text(build_combined_drawio(tweets), encoding="utf-8")
-    INDEX_HTML.write_text(build_index(tweets), encoding="utf-8")
+    pages = write_index_pages(tweets)
 
     readme = f"""# Generated X Post Assets
 
@@ -756,7 +828,8 @@ def main() -> None:
 | `png/` | Diagram PNG exports (one per tweet) |
 | `drawio/` | diagrams.net architecture diagrams |
 | `sources/` | `.java` snippets — copy into a CodePen pen to edit |
-| `index.html` | Preview tweet text + CodePen embeds |
+| `index.html` | Preview page 1 ({INDEX_PAGE_SIZE} tweets per page) |
+| `page-2.html` … | Additional preview pages when there are more than {INDEX_PAGE_SIZE} tweets |
 
 ## Regenerate
 
@@ -772,7 +845,7 @@ Diagram PNGs: `npx draw.io-export`. Code pens load via [CodePen Prefill embeds](
     print(f"  codepen/ → {CODEPEN_DIR}")
     print(f"  diagrams.net → {DRAWIO_DIR}")
     print(f"  png/ → {PNG_DIR} (diagram exports)")
-    print(f"  preview → {INDEX_HTML}")
+    print(f"  preview → {len(pages)} pages ({INDEX_PAGE_SIZE} tweets/page), start at {INDEX_HTML}")
 
 
 if __name__ == "__main__":

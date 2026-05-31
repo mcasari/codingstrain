@@ -619,7 +619,8 @@
     "body": "💡Java tip: Starting from Java 8 prefer java.time over Date and Calendar.\n\n#ModernJava #DevTips",
     "tags": "#ModernJava #DevTips",
     "codepen_style": "carbon",
-    "codepen_large": true
+    "codepen_large": true,
+    "code": "// ❌ Date / Calendar — mutable, easy to get wrong\nCalendar cal = Calendar.getInstance();\ncal.set(2026, 5, 31);                // looks like May — but month 5 is June!\ncal.add(Calendar.DAY_OF_MONTH, 7);\nDate deadline = cal.getTime();\n\nSimpleDateFormat fmt = new SimpleDateFormat(\"yyyy-MM-dd\");\nString text = fmt.format(deadline);    // SimpleDateFormat is not thread-safe\n\n// ✅ java.time — immutable, readable, thread-safe\nLocalDate today = LocalDate.of(2026, 5, 31);   // 5 = May, as you'd expect\nLocalDate deadline = today.plusDays(7);\n\nString text = deadline.format(DateTimeFormatter.ISO_LOCAL_DATE);\n// \"2026-06-07\"\n\nLocalDateTime meeting = LocalDateTime.of(2026, 5, 31, 14, 30);\nZonedDateTime rome = meeting.atZone(ZoneId.of(\"Europe/Rome\"));"
   },
   {
     "id": 70,
