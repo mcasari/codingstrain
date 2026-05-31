@@ -1,13 +1,9 @@
-// 🚀 Spring Boot: You can implement optimistic locking using the @Version annotation.
+// 🚀 Spring Boot:  Better not expose JPA entities directly, use DTOs at boundaries instead.
 //
-// ✅ Ideal when:
+// ✅This allows to:
 //
-// Reads are frequent
-// Writes are relatively rare
-// Conflicts are uncommon
+// 🟢 Make API independent on the persistence layer
+// 🟢 Prevent lazy loading problems
+// 🟢 Improve security
 //
-// ❌ Not Ideal when:
-//
-// Conflicts are frequent
-// Strict serialization is needed
-// #SpringBoot #JavaDev
+// #SpringBoot #SoftwareEngineer

@@ -1,3 +1,5 @@
-// 💡 Java tip: Use parallelStream() with care. It's ideal for CPU-intensive tasks, not I/O operations.
-//
-// #Java #JavaStreams
+@Cacheable("users")
+public User findById(Long id) {
+    return repo.findById(id).orElseThrow();
+}
+// Enable with @EnableCaching

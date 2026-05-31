@@ -1,2 +1,2 @@
-// 🚀Spring Boot: Use @EntityGraph to control fetch strategies and prevent N+1 queries.
-// #SpringBoot #SoftwareEngineering
+// 🚀Spring Boot: Adding request tracing is very important for debugging APIs
+// #SpringBoot #JavaDev

@@ -1,4 +1,4 @@
-// 🚀 Spring Boot: With @DataJpaTest you can test JPA repositories in isolation.
+// 🚀 Spring Boot: Use @SpringBootApplication(exclude = …) to disable specific auto-configuration classes.
 //
-// @DataJpaTest only loads only the JPA layer and not the entire application context, using an in-memory database (H2), and rolls back transactions after each test.
-// #SpringBoot #Java
+// ✅ One possible reason could be that you have a custom configuration that conflicts with the default.
+// #SpringBoot #JavaDev

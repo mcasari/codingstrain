@@ -1,5 +1,8 @@
-@Transactional
-public void transfer(Long from, Long to, BigDecimal amount) {
-    accounts.debit(from, amount);
-    accounts.credit(to, amount);   // both commit, or both roll back
-}
+// 🚀 Spring Boot: springdoc-openapi automatically generates OpenAPI 3.0 (Swagger) documentation from your Spring Boot REST controllers.
+//
+// You will get:
+//
+// ✅ An interactive Swagger UI
+// ✅ Auto-scanned from your code
+// ✅ Export API docs in JSON/YAML
+// #SpringBoot

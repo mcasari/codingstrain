@@ -19,7 +19,7 @@
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 71 — java-tips", "description": "Spring Boot / Java snippet from codingstrain (java-tips)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="640"
+             data-height="960"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -141,8 +141,33 @@ body {
   font-size: 16px;
 }
 </pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;java-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// 💡 Java tip: Catch mistakes at compile time by annotating overridden methods with @Override.&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// #Java #Annotations&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;java-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// ❌ Typo in the method name — compiles, but you did NOT override toString()&lt;/span&gt;
+&lt;span class=&quot;kw&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;private&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;final&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;toStrng&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;   &lt;/span&gt;&lt;span class=&quot;com&quot;&gt;// meant toString() — new method, not an override&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// Bug ships silently — println(user) won&amp;#x27;t use your method&lt;/span&gt;
+
+
+&lt;span class=&quot;com&quot;&gt;// ✅ @Override turns a typo into a compile error&lt;/span&gt;
+&lt;span class=&quot;kw&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;private&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;final&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;ann&quot;&gt;@Override&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;User(&amp;quot;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;)&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;com&quot;&gt;// @Override public String toStrng() { ... }&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// -&amp;gt; method does not override or implement a method from a supertype&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-71.html" target="_blank" rel="noopener">Open pen preview</a>

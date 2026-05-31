@@ -1,6 +1,4 @@
-// 💡Java tip: Starting from Java 8,  for parallel processing of collections you can use parallelStream().
+// 🚀 Open/Closed Principle (OCP): OCP is a SOLID principle that states classes should be open for extension but closed for modification.
 //
-// ✅ Uses multiple threads
-// ✅ Good for CPU-intensive processing
-// ⚠️ Sharing mutable state is not safe
+// ✅Instead of touching existing implementation, you should use Java interfaces and inheritance to add new behavior.
 // #Java #JavaDev

@@ -1,6 +1,2 @@
-Map<Dept, List<Employee>> byDept = employees.stream()
-    .collect(Collectors.groupingBy(Employee::getDept));
-
-long active = employees.stream()
-    .filter(Employee::isActive)
-    .count();
+List<String> lines = Files.readAllLines(Path.of("data.txt"));
+Files.writeString(Path.of("out.txt"), "hello");

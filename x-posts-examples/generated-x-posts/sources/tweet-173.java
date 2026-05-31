@@ -1,2 +1,4 @@
-List<String> lines = Files.readAllLines(Path.of("data.txt"));
-Files.writeString(Path.of("out.txt"), "hello");
+// ⌛️⏲️ Java tip: Instant.truncatedTo(...) is useful for comparing times at minute/hour/day precision.
+//
+// ✅ It avoids equality checks failing due to overly precise values.
+// #Java #SoftwareEngineering

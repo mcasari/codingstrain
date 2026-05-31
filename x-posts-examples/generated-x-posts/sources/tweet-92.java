@@ -1,1 +1,1 @@
-// Java tip💡: Avoid using `Thread.sleep()` for timing. Use proper synchronization or schedulers. #Java #Concurrency
+// Java Tip 💡: Always override `hashCode()` when you override `equals()`. #Java #OOP

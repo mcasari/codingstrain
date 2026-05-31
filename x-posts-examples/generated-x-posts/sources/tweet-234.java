@@ -1,5 +1,2 @@
-// Spring Boot: Use spring.mvc.publish-request-params=true only in dev. It's dangerous in production.
-//
-// 🔴In production, logging request details can expose sensitive information.
-//
+// 🚀 Spring Boot: Better use global filters/interceptors only for true cross-cutting concerns, and avoid business logic. They are executed for every incoming HTTP request.
 // #SpringBoot #JavaDev

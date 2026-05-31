@@ -1,2 +1,1 @@
-// 💡Java Tip : Prefer constructor injection over field injection.
-// #JavaTips
+// 💡 Measure code coverage but don’t obsess over 100%. #Java #Testing

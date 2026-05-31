@@ -1,2 +1,1 @@
-// Java tip 💡: Don’t rely blindly on Garbage Collection; memory leaks are still possible.
-// #Java #SoftwareEngineering
+// Java Tip 💡: Use enums for state machines—it improves readability. #Java #StatePattern

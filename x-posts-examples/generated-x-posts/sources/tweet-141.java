@@ -1,3 +1,6 @@
-// 💡SOLID principles: Dependency Inversion Principle (DIP) states that high-level modules should not depend on low-level modules; instead, both should depend on abstractions.
-//
-// #SOLID #SoftwareDesign
+Map<Dept, List<Employee>> byDept = employees.stream()
+    .collect(Collectors.groupingBy(Employee::getDept));
+
+long active = employees.stream()
+    .filter(Employee::isActive)
+    .count();

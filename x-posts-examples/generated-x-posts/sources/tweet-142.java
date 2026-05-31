@@ -1,6 +1,3 @@
-// Arrow form: no fall-through, returns a value
-String label = switch (status) {
-    case ACTIVE  -> "running";
-    case PAUSED  -> "on hold";
-    case STOPPED -> "done";
-};
+// 💡 Java tip: Use parallelStream() with care. It's ideal for CPU-intensive tasks, not I/O operations.
+//
+// #Java #JavaStreams

@@ -1,12 +1,5 @@
-public class Worker {
-    // Without volatile a thread may read a stale, cached value
-    private volatile boolean running = true;
+// Compile once and reuse — not on every call
+private static final Pattern EMAIL =
+    Pattern.compile("^[^@\\s]+@[^@\\s]+$");
 
-    public void stop() { running = false; }
-
-    public void run() {
-        while (running) {
-            // sees stop() called from another thread
-        }
-    }
-}
+boolean ok = EMAIL.matcher(input).matches();

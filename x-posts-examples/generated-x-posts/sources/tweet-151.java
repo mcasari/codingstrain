@@ -1,3 +1,5 @@
-// 💡 Java tip: Starting from Java 11, you can use String.strip() instead of trim(), since it handles Unicode whitespaces correctly.
-//
-// #Java #JavaTips
+private static final Logger log =
+    LoggerFactory.getLogger(OrderService.class);
+
+log.info("Created order {} for {}", orderId, customer);
+// Lazy formatting, log levels, no System.out

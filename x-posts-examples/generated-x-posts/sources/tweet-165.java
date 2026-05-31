@@ -1,6 +1,1 @@
-Map<Dept, List<Employee>> byDept = employees.stream()
-    .collect(Collectors.groupingBy(Employee::getDept));
-
-long active = employees.stream()
-    .filter(Employee::isActive)
-    .count();
+// 💡 Java tip: List.reversed() returns an unmodifiable reversed view of the original list. #Java #JavaDev

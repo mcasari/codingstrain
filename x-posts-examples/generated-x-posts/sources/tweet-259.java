@@ -1,2 +1,4 @@
-List<String> lines = Files.readAllLines(Path.of("data.txt"));
-Files.writeString(Path.of("out.txt"), "hello");
+// 🚀 Spring Boot: @ConditionalOnClass is a Spring Boot annotation used in auto-configuration.
+//
+// ✅It conditionally enables a bean or configuration only if a specified class is present on the classpath
+// #SpringBoot #Microservices

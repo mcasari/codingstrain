@@ -1,8 +1,3 @@
-public record SignupRequest(
-        @NotBlank String name,
-        @Email String email) {}
-
-@PostMapping("/signup")
-public void signup(@Valid @RequestBody SignupRequest req) {
-    service.register(req);
-}
+// 💡Spring Boot tip: If you need to implement integrations tests for Spring MVC controllers, and mock everything else, use @WebMvcTest to load only MVC-related beans.
+//
+// #SpringBoot #IntegrationTesting

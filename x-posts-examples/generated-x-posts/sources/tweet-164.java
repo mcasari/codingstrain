@@ -1,2 +1,6 @@
-// 💡 Java tip: Starting from Java 8 you can use ChronoUnit.between(start, end) to calculate time intervals in a specific unit (days, hours, minutes) without manual math.
-// #Java #JavaDev
+List<String> names = users.stream()
+    .filter(User::isActive)
+    .map(User::getName)
+    .sorted()
+    .toList();
+// Declarative: say WHAT you want, not HOW to loop

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
-  <title>codingstrain X Posts — page 10/14</title>
+  <title>codingstrain X Posts — page 10/13</title>
   <style>
     body { font-family: system-ui, sans-serif; max-width: 960px; margin: 2rem auto; padding: 0 1rem; background: #f7f9f9; }
     article { background: #fff; border-radius: 16px; padding: 1.25rem; margin-bottom: 2rem; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
@@ -38,9 +38,9 @@
   </div>
   <nav class="pagination" aria-label="Tweet pages">
     <a class="page-nav" href="page-9.html">← Prev</a>
-    <a href="index.html">1</a> · <a href="page-2.html">2</a> · <a href="page-3.html">3</a> · <a href="page-4.html">4</a> · <a href="page-5.html">5</a> · <a href="page-6.html">6</a> · <a href="page-7.html">7</a> · <a href="page-8.html">8</a> · <a href="page-9.html">9</a> · <span class="page-current">10</span> · <a href="page-11.html">11</a> · <a href="page-12.html">12</a> · <a href="page-13.html">13</a> · <a href="page-14.html">14</a>
+    <a href="index.html">1</a> · <a href="page-2.html">2</a> · <a href="page-3.html">3</a> · <a href="page-4.html">4</a> · <a href="page-5.html">5</a> · <a href="page-6.html">6</a> · <a href="page-7.html">7</a> · <a href="page-8.html">8</a> · <a href="page-9.html">9</a> · <span class="page-current">10</span> · <a href="page-11.html">11</a> · <a href="page-12.html">12</a> · <a href="page-13.html">13</a>
     <a class="page-nav" href="page-11.html">Next →</a>
-    <span class="page-meta">Tweets #181–#200 of 262 · page 10/14</span>
+    <span class="page-meta">Tweets #181–#200 of 260 · page 10/13</span>
   </nav>
     <article>
       <h2>Tweet #181</h2>
@@ -170,23 +170,15 @@ body {
   font-size: 16px;
 }
 </pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;java-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// ❌ A NullPointerException waiting to happen&lt;/span&gt;
-&lt;span class=&quot;typ&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;repo&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kw&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;getEmail&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;com&quot;&gt;// ✅ Make &amp;quot;maybe absent&amp;quot; explicit&lt;/span&gt;
-&lt;span class=&quot;kw&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;repo&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;findById&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;getEmail&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;orElse&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;no-email&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;java-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;typ&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;lines&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;readAllLines&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;data.txt&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;typ&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;writeString&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;out.txt&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;hello&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-181.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <div class="tweet-text">🚀 Java: You can use Optional.orElseThrow() to implement so called fail-fast behavior.
-
-✅ Fail-fast means you can catch bugs closer to their source, making stack traces easier to understand
+      <div class="tweet-text">🚀Java: Use Files.copy() for quick file duplication
 #Java #SoftwareDevelopment</div>
       <p class="links">
         <a href="drawio/tweet-181.drawio" download>.drawio diagram</a> ·
@@ -322,16 +314,20 @@ body {
   font-size: 16px;
 }
 </pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;java-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// 💡Java: If you need to write OS-native newlines, you can use System.lineSeparator().&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// #Java #JavaDev&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;java-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;typ&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;names&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;users&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;stream&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;isActive&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;getName&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;toList&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// Declarative: say WHAT you want, not HOW to loop&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-182.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <div class="tweet-text">💡Java: If you need to write OS-native newlines, you can use System.lineSeparator().
-#Java #JavaDev</div>
+      <div class="tweet-text">🚀 Java: You can use Stream.limit(n) to set a bound to infinite streams.
+#Java #SoftwareDevelopment</div>
       <p class="links">
         <a href="drawio/tweet-182.drawio" download>.drawio diagram</a> ·
         <a href="codepen/tweet-182.html" target="_blank" rel="noopener">CodePen preview</a> ·
@@ -343,299 +339,7 @@ body {
       <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
-             data-prefill='{"title": "Tweet 183 — java-tips", "description": "Spring Boot / Java snippet from codingstrain (java-tips)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="640"
-             data-theme-id="dark"
-             data-default-tab="html,result"
-             data-editable="true">
-          <pre data-lang="css">html, body {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  min-height: 100vh;
-  box-sizing: border-box;
-}
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: stretch;
-  padding: 0.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-.carbon {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-height: calc(100vh - 1rem);
-  max-width: none;
-  border-radius: 10px;
-  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-}
-.carbon-titlebar {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  height: 36px;
-  padding: 0 16px;
-  background: #252836;
-  flex-shrink: 0;
-}
-.carbon-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-.carbon-dot.red { background: #ff5f56; }
-.carbon-dot.yellow { background: #ffbd2e; }
-.carbon-dot.green { background: #27c93f; }
-.carbon-module {
-  margin-left: auto;
-  font: 13px/1 system-ui, sans-serif;
-  color: #8b949e;
-  letter-spacing: 0.02em;
-}
-.carbon-editor {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  background: #011627;
-  padding: 1.5rem 2rem 1.75rem;
-  overflow: auto;
-}
-.carbon-editor pre {
-  margin: 0;
-  flex: 1;
-  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
-  white-space: pre;
-  tab-size: 4;
-}
-.carbon-editor .kw { color: #c792ea; }
-.carbon-editor .ann { color: #ffb86c; }
-.carbon-editor .str { color: #c3e88d; }
-.carbon-editor .typ { color: #ffcb6b; }
-.carbon-editor .met { color: #82aaff; }
-.carbon-editor .com { color: #5c6370; }
-.carbon-editor .num { color: #f78c6c; }
-.carbon-editor .pun { color: #89ddff; }
-.carbon-editor .txt { color: #d6deeb; }
-.carbon-editor.cols {
-  flex-direction: row;
-  gap: 1.75rem;
-  align-items: stretch;
-}
-.carbon-editor.cols .col {
-  flex: 1 1 0;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-}
-.carbon-editor.cols .col pre {
-  flex: 1;
-  font-size: 15px;
-  line-height: 24px;
-}
-.carbon-editor.cols .col-divider {
-  align-self: stretch;
-  position: relative;
-  width: 1px;
-  background: #1d3b53;
-  flex: 0 0 auto;
-}
-.carbon-editor.cols .col-divider::after {
-  content: "\2192";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: #011627;
-  border: 1px solid #1d3b53;
-  color: #82aaff;
-  font-size: 16px;
-}
-</pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;java-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;typ&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;lines&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;readAllLines&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;data.txt&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;typ&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;writeString&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;out.txt&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;hello&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
-        </div>
-        <p class="codepen-links">
-          <a href="codepen/tweet-183.html" target="_blank" rel="noopener">Open pen preview</a>
-          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
-        </p>
-      </div>
-      <div class="tweet-text">🚀Java: Use Files.copy() for quick file duplication
-#Java #SoftwareDevelopment</div>
-      <p class="links">
-        <a href="drawio/tweet-183.drawio" download>.drawio diagram</a> ·
-        <a href="codepen/tweet-183.html" target="_blank" rel="noopener">CodePen preview</a> ·
-        <a href="sources/tweet-183.java" download>Source .java</a>
-      </p>
-    </article>
-    <article>
-      <h2>Tweet #184</h2>
-      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
-      <div class="codepen-wrap codepen-wrap--large">
-        <div class="codepen"
-             data-prefill='{"title": "Tweet 184 — java-tips", "description": "Spring Boot / Java snippet from codingstrain (java-tips)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="640"
-             data-theme-id="dark"
-             data-default-tab="html,result"
-             data-editable="true">
-          <pre data-lang="css">html, body {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  min-height: 100vh;
-  box-sizing: border-box;
-}
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: stretch;
-  padding: 0.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-.carbon {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-height: calc(100vh - 1rem);
-  max-width: none;
-  border-radius: 10px;
-  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-}
-.carbon-titlebar {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  height: 36px;
-  padding: 0 16px;
-  background: #252836;
-  flex-shrink: 0;
-}
-.carbon-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-.carbon-dot.red { background: #ff5f56; }
-.carbon-dot.yellow { background: #ffbd2e; }
-.carbon-dot.green { background: #27c93f; }
-.carbon-module {
-  margin-left: auto;
-  font: 13px/1 system-ui, sans-serif;
-  color: #8b949e;
-  letter-spacing: 0.02em;
-}
-.carbon-editor {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  background: #011627;
-  padding: 1.5rem 2rem 1.75rem;
-  overflow: auto;
-}
-.carbon-editor pre {
-  margin: 0;
-  flex: 1;
-  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
-  white-space: pre;
-  tab-size: 4;
-}
-.carbon-editor .kw { color: #c792ea; }
-.carbon-editor .ann { color: #ffb86c; }
-.carbon-editor .str { color: #c3e88d; }
-.carbon-editor .typ { color: #ffcb6b; }
-.carbon-editor .met { color: #82aaff; }
-.carbon-editor .com { color: #5c6370; }
-.carbon-editor .num { color: #f78c6c; }
-.carbon-editor .pun { color: #89ddff; }
-.carbon-editor .txt { color: #d6deeb; }
-.carbon-editor.cols {
-  flex-direction: row;
-  gap: 1.75rem;
-  align-items: stretch;
-}
-.carbon-editor.cols .col {
-  flex: 1 1 0;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-}
-.carbon-editor.cols .col pre {
-  flex: 1;
-  font-size: 15px;
-  line-height: 24px;
-}
-.carbon-editor.cols .col-divider {
-  align-self: stretch;
-  position: relative;
-  width: 1px;
-  background: #1d3b53;
-  flex: 0 0 auto;
-}
-.carbon-editor.cols .col-divider::after {
-  content: "\2192";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: #011627;
-  border: 1px solid #1d3b53;
-  color: #82aaff;
-  font-size: 16px;
-}
-</pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;java-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;typ&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;names&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;users&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;stream&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;isActive&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;getName&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;toList&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// Declarative: say WHAT you want, not HOW to loop&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
-        </div>
-        <p class="codepen-links">
-          <a href="codepen/tweet-184.html" target="_blank" rel="noopener">Open pen preview</a>
-          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
-        </p>
-      </div>
-      <div class="tweet-text">🚀 Java: You can use Stream.limit(n) to set a bound to infinite streams.
-#Java #SoftwareDevelopment</div>
-      <p class="links">
-        <a href="drawio/tweet-184.drawio" download>.drawio diagram</a> ·
-        <a href="codepen/tweet-184.html" target="_blank" rel="noopener">CodePen preview</a> ·
-        <a href="sources/tweet-184.java" download>Source .java</a>
-      </p>
-    </article>
-    <article>
-      <h2>Tweet #185</h2>
-      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
-      <div class="codepen-wrap codepen-wrap--large">
-        <div class="codepen"
-             data-prefill='{"title": "Tweet 185 — spring-boot-tips", "description": "Spring Boot / Java snippet from codingstrain (spring-boot-tips)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-prefill='{"title": "Tweet 183 — spring-boot-tips", "description": "Spring Boot / Java snippet from codingstrain (spring-boot-tips)", "tags": ["java", "springboot", "codingstrain"]}'
              data-height="640"
              data-theme-id="dark"
              data-default-tab="html,result"
@@ -770,7 +474,7 @@ body {
 &lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
-          <a href="codepen/tweet-185.html" target="_blank" rel="noopener">Open pen preview</a>
+          <a href="codepen/tweet-183.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
@@ -778,6 +482,321 @@ body {
 @RestController instead of  @Controller + @ResponseBody
 
 #SpringBoot #CleanCode</div>
+      <p class="links">
+        <a href="drawio/tweet-183.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-183.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-183.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #184</h2>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap codepen-wrap--large">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 184 — spring-boot-tips", "description": "Spring Boot / Java snippet from codingstrain (spring-boot-tips)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="640"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: stretch;
+  padding: 0.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+.carbon {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: calc(100vh - 1rem);
+  max-width: none;
+  border-radius: 10px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.carbon-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 36px;
+  padding: 0 16px;
+  background: #252836;
+  flex-shrink: 0;
+}
+.carbon-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.carbon-dot.red { background: #ff5f56; }
+.carbon-dot.yellow { background: #ffbd2e; }
+.carbon-dot.green { background: #27c93f; }
+.carbon-module {
+  margin-left: auto;
+  font: 13px/1 system-ui, sans-serif;
+  color: #8b949e;
+  letter-spacing: 0.02em;
+}
+.carbon-editor {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background: #011627;
+  padding: 1.5rem 2rem 1.75rem;
+  overflow: auto;
+}
+.carbon-editor pre {
+  margin: 0;
+  flex: 1;
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 18px;
+  line-height: 30px;
+  white-space: pre;
+  tab-size: 4;
+}
+.carbon-editor .kw { color: #c792ea; }
+.carbon-editor .ann { color: #ffb86c; }
+.carbon-editor .str { color: #c3e88d; }
+.carbon-editor .typ { color: #ffcb6b; }
+.carbon-editor .met { color: #82aaff; }
+.carbon-editor .com { color: #5c6370; }
+.carbon-editor .num { color: #f78c6c; }
+.carbon-editor .pun { color: #89ddff; }
+.carbon-editor .txt { color: #d6deeb; }
+.carbon-editor.cols {
+  flex-direction: row;
+  gap: 1.75rem;
+  align-items: stretch;
+}
+.carbon-editor.cols .col {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.carbon-editor.cols .col pre {
+  flex: 1;
+  font-size: 15px;
+  line-height: 24px;
+}
+.carbon-editor.cols .col-divider {
+  align-self: stretch;
+  position: relative;
+  width: 1px;
+  background: #1d3b53;
+  flex: 0 0 auto;
+}
+.carbon-editor.cols .col-divider::after {
+  content: "\2192";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #011627;
+  border: 1px solid #1d3b53;
+  color: #82aaff;
+  font-size: 16px;
+}
+</pre>
+          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;ann&quot;&gt;@Bean&lt;/span&gt;
+&lt;span class=&quot;typ&quot;&gt;SecurityFilterChain&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;security&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;HttpSecurity&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;throws&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Exception&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;http&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;authorizeHttpRequests&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;a&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;            &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;requestMatchers&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;/public/**&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;permitAll&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;            &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;anyRequest&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;authenticated&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;httpBasic&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Customizer&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;withDefaults&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-184.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">💡 Sample repo to learn Spring Boot: github.com/spring-projects/spring-boot-samples
+
+✅ 65+ runnable mini-apps
+✅ Spring Boot 3.3, WebFlux, Security, Kafka, GraalVM
+✅ Official Spring team code
+
+The Spring Boot Samples repository is an official collection of over 65 runnable mini-applications maintained by the Spring team. Each sample demonstrates a specific feature:
+
+✅ Basic REST APIs
+✅ Spring WebFlux
+✅ Spring Security
+✅ Kafka messaging
+
+#SpringBoot #Java #Kafka #Microservices #GraalVM #DevCommunity</div>
+      <p class="links">
+        <a href="drawio/tweet-184.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-184.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-184.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #185</h2>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap codepen-wrap--large">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 185 — spring-boot-tips", "description": "Spring Boot / Java snippet from codingstrain (spring-boot-tips)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="640"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: stretch;
+  padding: 0.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+.carbon {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: calc(100vh - 1rem);
+  max-width: none;
+  border-radius: 10px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.carbon-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 36px;
+  padding: 0 16px;
+  background: #252836;
+  flex-shrink: 0;
+}
+.carbon-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.carbon-dot.red { background: #ff5f56; }
+.carbon-dot.yellow { background: #ffbd2e; }
+.carbon-dot.green { background: #27c93f; }
+.carbon-module {
+  margin-left: auto;
+  font: 13px/1 system-ui, sans-serif;
+  color: #8b949e;
+  letter-spacing: 0.02em;
+}
+.carbon-editor {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background: #011627;
+  padding: 1.5rem 2rem 1.75rem;
+  overflow: auto;
+}
+.carbon-editor pre {
+  margin: 0;
+  flex: 1;
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 18px;
+  line-height: 30px;
+  white-space: pre;
+  tab-size: 4;
+}
+.carbon-editor .kw { color: #c792ea; }
+.carbon-editor .ann { color: #ffb86c; }
+.carbon-editor .str { color: #c3e88d; }
+.carbon-editor .typ { color: #ffcb6b; }
+.carbon-editor .met { color: #82aaff; }
+.carbon-editor .com { color: #5c6370; }
+.carbon-editor .num { color: #f78c6c; }
+.carbon-editor .pun { color: #89ddff; }
+.carbon-editor .txt { color: #d6deeb; }
+.carbon-editor.cols {
+  flex-direction: row;
+  gap: 1.75rem;
+  align-items: stretch;
+}
+.carbon-editor.cols .col {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.carbon-editor.cols .col pre {
+  flex: 1;
+  font-size: 15px;
+  line-height: 24px;
+}
+.carbon-editor.cols .col-divider {
+  align-self: stretch;
+  position: relative;
+  width: 1px;
+  background: #1d3b53;
+  flex: 0 0 auto;
+}
+.carbon-editor.cols .col-divider::after {
+  content: "\2192";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #011627;
+  border: 1px solid #1d3b53;
+  color: #82aaff;
+  font-size: 16px;
+}
+</pre>
+          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;ann&quot;&gt;@Bean&lt;/span&gt;
+&lt;span class=&quot;ann&quot;&gt;@Profile&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;dev&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;typ&quot;&gt;DataSource&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;devDataSource&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;H2DataSource&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;ann&quot;&gt;@Bean&lt;/span&gt;
+&lt;span class=&quot;ann&quot;&gt;@Profile&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;prod&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;typ&quot;&gt;DataSource&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;prodDataSource&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;PgDataSource&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-185.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">💡Spring Boot tip: Use
+@Profile
+ to group and load beans/configurations in specific environments.
+
+#SpringBoot #JavaDev</div>
       <p class="links">
         <a href="drawio/tweet-185.drawio" download>.drawio diagram</a> ·
         <a href="codepen/tweet-185.html" target="_blank" rel="noopener">CodePen preview</a> ·
@@ -927,20 +946,9 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <div class="tweet-text">💡 Sample repo to learn Spring Boot: github.com/spring-projects/spring-boot-samples
+      <div class="tweet-text">🚀 Spring Boot tip: With Spring Boot and Spring Security you can secure endpoints easily.
 
-✅ 65+ runnable mini-apps
-✅ Spring Boot 3.3, WebFlux, Security, Kafka, GraalVM
-✅ Official Spring team code
-
-The Spring Boot Samples repository is an official collection of over 65 runnable mini-applications maintained by the Spring team. Each sample demonstrates a specific feature:
-
-✅ Basic REST APIs
-✅ Spring WebFlux
-✅ Spring Security
-✅ Kafka messaging
-
-#SpringBoot #Java #Kafka #Microservices #GraalVM #DevCommunity</div>
+#SpringBoot #SpringSecurity #Java</div>
       <p class="links">
         <a href="drawio/tweet-186.drawio" download>.drawio diagram</a> ·
         <a href="codepen/tweet-186.html" target="_blank" rel="noopener">CodePen preview</a> ·
@@ -1075,24 +1083,18 @@ body {
   font-size: 16px;
 }
 </pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;ann&quot;&gt;@Bean&lt;/span&gt;
-&lt;span class=&quot;ann&quot;&gt;@Profile&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;dev&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;typ&quot;&gt;DataSource&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;devDataSource&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;H2DataSource&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;ann&quot;&gt;@Bean&lt;/span&gt;
-&lt;span class=&quot;ann&quot;&gt;@Profile&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;prod&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;typ&quot;&gt;DataSource&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;prodDataSource&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;PgDataSource&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// Ignore unknown JSON fields instead of failing&lt;/span&gt;
+&lt;span class=&quot;ann&quot;&gt;@JsonIgnoreProperties&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;ignoreUnknown&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kw&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;record&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;UserDto&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-187.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <div class="tweet-text">💡Spring Boot tip: Use
-@Profile
- to group and load beans/configurations in specific environments.
+      <div class="tweet-text">💡 Spring Boot Tip: If you want DTOs to ignore extra JSON fields from clients without breaking your API use @JsonIgnoreProperties(ignoreUnknown = true).
 
-#SpringBoot #JavaDev</div>
+#SpringBoot #CodingTips #SoftwareEngineering</div>
       <p class="links">
         <a href="drawio/tweet-187.drawio" download>.drawio diagram</a> ·
         <a href="codepen/tweet-187.html" target="_blank" rel="noopener">CodePen preview</a> ·
@@ -1105,304 +1107,6 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 188 — spring-boot-tips", "description": "Spring Boot / Java snippet from codingstrain (spring-boot-tips)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="640"
-             data-theme-id="dark"
-             data-default-tab="html,result"
-             data-editable="true">
-          <pre data-lang="css">html, body {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  min-height: 100vh;
-  box-sizing: border-box;
-}
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: stretch;
-  padding: 0.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-.carbon {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-height: calc(100vh - 1rem);
-  max-width: none;
-  border-radius: 10px;
-  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-}
-.carbon-titlebar {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  height: 36px;
-  padding: 0 16px;
-  background: #252836;
-  flex-shrink: 0;
-}
-.carbon-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-.carbon-dot.red { background: #ff5f56; }
-.carbon-dot.yellow { background: #ffbd2e; }
-.carbon-dot.green { background: #27c93f; }
-.carbon-module {
-  margin-left: auto;
-  font: 13px/1 system-ui, sans-serif;
-  color: #8b949e;
-  letter-spacing: 0.02em;
-}
-.carbon-editor {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  background: #011627;
-  padding: 1.5rem 2rem 1.75rem;
-  overflow: auto;
-}
-.carbon-editor pre {
-  margin: 0;
-  flex: 1;
-  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
-  white-space: pre;
-  tab-size: 4;
-}
-.carbon-editor .kw { color: #c792ea; }
-.carbon-editor .ann { color: #ffb86c; }
-.carbon-editor .str { color: #c3e88d; }
-.carbon-editor .typ { color: #ffcb6b; }
-.carbon-editor .met { color: #82aaff; }
-.carbon-editor .com { color: #5c6370; }
-.carbon-editor .num { color: #f78c6c; }
-.carbon-editor .pun { color: #89ddff; }
-.carbon-editor .txt { color: #d6deeb; }
-.carbon-editor.cols {
-  flex-direction: row;
-  gap: 1.75rem;
-  align-items: stretch;
-}
-.carbon-editor.cols .col {
-  flex: 1 1 0;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-}
-.carbon-editor.cols .col pre {
-  flex: 1;
-  font-size: 15px;
-  line-height: 24px;
-}
-.carbon-editor.cols .col-divider {
-  align-self: stretch;
-  position: relative;
-  width: 1px;
-  background: #1d3b53;
-  flex: 0 0 auto;
-}
-.carbon-editor.cols .col-divider::after {
-  content: "\2192";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: #011627;
-  border: 1px solid #1d3b53;
-  color: #82aaff;
-  font-size: 16px;
-}
-</pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;ann&quot;&gt;@Bean&lt;/span&gt;
-&lt;span class=&quot;typ&quot;&gt;SecurityFilterChain&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;security&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;HttpSecurity&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;throws&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Exception&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;http&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;authorizeHttpRequests&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;a&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;            &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;requestMatchers&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;/public/**&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;permitAll&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;            &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;anyRequest&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;authenticated&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;httpBasic&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Customizer&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;withDefaults&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
-        </div>
-        <p class="codepen-links">
-          <a href="codepen/tweet-188.html" target="_blank" rel="noopener">Open pen preview</a>
-          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
-        </p>
-      </div>
-      <div class="tweet-text">🚀 Spring Boot tip: With Spring Boot and Spring Security you can secure endpoints easily.
-
-#SpringBoot #SpringSecurity #Java</div>
-      <p class="links">
-        <a href="drawio/tweet-188.drawio" download>.drawio diagram</a> ·
-        <a href="codepen/tweet-188.html" target="_blank" rel="noopener">CodePen preview</a> ·
-        <a href="sources/tweet-188.java" download>Source .java</a>
-      </p>
-    </article>
-    <article>
-      <h2>Tweet #189</h2>
-      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
-      <div class="codepen-wrap codepen-wrap--large">
-        <div class="codepen"
-             data-prefill='{"title": "Tweet 189 — spring-boot-tips", "description": "Spring Boot / Java snippet from codingstrain (spring-boot-tips)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="640"
-             data-theme-id="dark"
-             data-default-tab="html,result"
-             data-editable="true">
-          <pre data-lang="css">html, body {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  min-height: 100vh;
-  box-sizing: border-box;
-}
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: stretch;
-  padding: 0.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-.carbon {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-height: calc(100vh - 1rem);
-  max-width: none;
-  border-radius: 10px;
-  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-}
-.carbon-titlebar {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  height: 36px;
-  padding: 0 16px;
-  background: #252836;
-  flex-shrink: 0;
-}
-.carbon-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-.carbon-dot.red { background: #ff5f56; }
-.carbon-dot.yellow { background: #ffbd2e; }
-.carbon-dot.green { background: #27c93f; }
-.carbon-module {
-  margin-left: auto;
-  font: 13px/1 system-ui, sans-serif;
-  color: #8b949e;
-  letter-spacing: 0.02em;
-}
-.carbon-editor {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  background: #011627;
-  padding: 1.5rem 2rem 1.75rem;
-  overflow: auto;
-}
-.carbon-editor pre {
-  margin: 0;
-  flex: 1;
-  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
-  white-space: pre;
-  tab-size: 4;
-}
-.carbon-editor .kw { color: #c792ea; }
-.carbon-editor .ann { color: #ffb86c; }
-.carbon-editor .str { color: #c3e88d; }
-.carbon-editor .typ { color: #ffcb6b; }
-.carbon-editor .met { color: #82aaff; }
-.carbon-editor .com { color: #5c6370; }
-.carbon-editor .num { color: #f78c6c; }
-.carbon-editor .pun { color: #89ddff; }
-.carbon-editor .txt { color: #d6deeb; }
-.carbon-editor.cols {
-  flex-direction: row;
-  gap: 1.75rem;
-  align-items: stretch;
-}
-.carbon-editor.cols .col {
-  flex: 1 1 0;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-}
-.carbon-editor.cols .col pre {
-  flex: 1;
-  font-size: 15px;
-  line-height: 24px;
-}
-.carbon-editor.cols .col-divider {
-  align-self: stretch;
-  position: relative;
-  width: 1px;
-  background: #1d3b53;
-  flex: 0 0 auto;
-}
-.carbon-editor.cols .col-divider::after {
-  content: "\2192";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: #011627;
-  border: 1px solid #1d3b53;
-  color: #82aaff;
-  font-size: 16px;
-}
-</pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// Ignore unknown JSON fields instead of failing&lt;/span&gt;
-&lt;span class=&quot;ann&quot;&gt;@JsonIgnoreProperties&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;ignoreUnknown&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;kw&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;record&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;UserDto&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
-        </div>
-        <p class="codepen-links">
-          <a href="codepen/tweet-189.html" target="_blank" rel="noopener">Open pen preview</a>
-          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
-        </p>
-      </div>
-      <div class="tweet-text">💡 Spring Boot Tip: If you want DTOs to ignore extra JSON fields from clients without breaking your API use @JsonIgnoreProperties(ignoreUnknown = true).
-
-#SpringBoot #CodingTips #SoftwareEngineering</div>
-      <p class="links">
-        <a href="drawio/tweet-189.drawio" download>.drawio diagram</a> ·
-        <a href="codepen/tweet-189.html" target="_blank" rel="noopener">CodePen preview</a> ·
-        <a href="sources/tweet-189.java" download>Source .java</a>
-      </p>
-    </article>
-    <article>
-      <h2>Tweet #190</h2>
-      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
-      <div class="codepen-wrap codepen-wrap--large">
-        <div class="codepen"
-             data-prefill='{"title": "Tweet 190 — spring-boot-tips", "description": "Spring Boot / Java snippet from codingstrain (spring-boot-tips)", "tags": ["java", "springboot", "codingstrain"]}'
              data-height="640"
              data-theme-id="dark"
              data-default-tab="html,result"
@@ -1538,7 +1242,7 @@ body {
 &lt;span class=&quot;com&quot;&gt;// #Java #SpringBoot&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
-          <a href="codepen/tweet-190.html" target="_blank" rel="noopener">Open pen preview</a>
+          <a href="codepen/tweet-188.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
@@ -1554,17 +1258,17 @@ spring.main.banner-mode=off
 
 #Java #SpringBoot</div>
       <p class="links">
-        <a href="drawio/tweet-190.drawio" download>.drawio diagram</a> ·
-        <a href="codepen/tweet-190.html" target="_blank" rel="noopener">CodePen preview</a> ·
-        <a href="sources/tweet-190.java" download>Source .java</a>
+        <a href="drawio/tweet-188.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-188.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-188.java" download>Source .java</a>
       </p>
     </article>
     <article>
-      <h2>Tweet #191</h2>
+      <h2>Tweet #189</h2>
       <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
-             data-prefill='{"title": "Tweet 191 — spring-boot-tips", "description": "Spring Boot / Java snippet from codingstrain (spring-boot-tips)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-prefill='{"title": "Tweet 189 — spring-boot-tips", "description": "Spring Boot / Java snippet from codingstrain (spring-boot-tips)", "tags": ["java", "springboot", "codingstrain"]}'
              data-height="640"
              data-theme-id="dark"
              data-default-tab="html,result"
@@ -1694,24 +1398,24 @@ body {
 &lt;span class=&quot;com&quot;&gt;// Enable with @EnableScheduling on a @Configuration class&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
-          <a href="codepen/tweet-191.html" target="_blank" rel="noopener">Open pen preview</a>
+          <a href="codepen/tweet-189.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
       <div class="tweet-text">💡 Spring Boot tip: You can run jobs at fixed intervals without setting up Quartz or external schedulers.
 #Java #SpringBoot</div>
       <p class="links">
-        <a href="drawio/tweet-191.drawio" download>.drawio diagram</a> ·
-        <a href="codepen/tweet-191.html" target="_blank" rel="noopener">CodePen preview</a> ·
-        <a href="sources/tweet-191.java" download>Source .java</a>
+        <a href="drawio/tweet-189.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-189.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-189.java" download>Source .java</a>
       </p>
     </article>
     <article>
-      <h2>Tweet #192</h2>
+      <h2>Tweet #190</h2>
       <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
-             data-prefill='{"title": "Tweet 192 — spring-boot-tips", "description": "Spring Boot / Java snippet from codingstrain (spring-boot-tips)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-prefill='{"title": "Tweet 190 — spring-boot-tips", "description": "Spring Boot / Java snippet from codingstrain (spring-boot-tips)", "tags": ["java", "springboot", "codingstrain"]}'
              data-height="640"
              data-theme-id="dark"
              data-default-tab="html,result"
@@ -1838,24 +1542,24 @@ body {
 &lt;span class=&quot;com&quot;&gt;// #SpringBoot #SoftwareDevelopment&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
-          <a href="codepen/tweet-192.html" target="_blank" rel="noopener">Open pen preview</a>
+          <a href="codepen/tweet-190.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
       <div class="tweet-text">🚀Spring Boot DevTools is a tool to ease developer&#x27;s work a bit. It watches code and configuration for changes, then automatically reloads or restarts your app.
 #SpringBoot #SoftwareDevelopment</div>
       <p class="links">
-        <a href="drawio/tweet-192.drawio" download>.drawio diagram</a> ·
-        <a href="codepen/tweet-192.html" target="_blank" rel="noopener">CodePen preview</a> ·
-        <a href="sources/tweet-192.java" download>Source .java</a>
+        <a href="drawio/tweet-190.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-190.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-190.java" download>Source .java</a>
       </p>
     </article>
     <article>
-      <h2>Tweet #193</h2>
+      <h2>Tweet #191</h2>
       <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
-             data-prefill='{"title": "Tweet 193 — spring-boot-tips", "description": "Spring Boot / Java snippet from codingstrain (spring-boot-tips)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-prefill='{"title": "Tweet 191 — spring-boot-tips", "description": "Spring Boot / Java snippet from codingstrain (spring-boot-tips)", "tags": ["java", "springboot", "codingstrain"]}'
              data-height="640"
              data-theme-id="dark"
              data-default-tab="html,result"
@@ -1991,7 +1695,7 @@ body {
 &lt;span class=&quot;com&quot;&gt;// #Java #SpringBoot&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
-          <a href="codepen/tweet-193.html" target="_blank" rel="noopener">Open pen preview</a>
+          <a href="codepen/tweet-191.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
@@ -2006,6 +1710,300 @@ body {
 ./mvnw clean package &amp;&amp; java -jar target/myapp-0.0.1-SNAPSHOT.jar
 
 #Java #SpringBoot</div>
+      <p class="links">
+        <a href="drawio/tweet-191.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-191.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-191.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #192</h2>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap codepen-wrap--large">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 192 — spring-boot-tips", "description": "Spring Boot / Java snippet from codingstrain (spring-boot-tips)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="640"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: stretch;
+  padding: 0.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+.carbon {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: calc(100vh - 1rem);
+  max-width: none;
+  border-radius: 10px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.carbon-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 36px;
+  padding: 0 16px;
+  background: #252836;
+  flex-shrink: 0;
+}
+.carbon-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.carbon-dot.red { background: #ff5f56; }
+.carbon-dot.yellow { background: #ffbd2e; }
+.carbon-dot.green { background: #27c93f; }
+.carbon-module {
+  margin-left: auto;
+  font: 13px/1 system-ui, sans-serif;
+  color: #8b949e;
+  letter-spacing: 0.02em;
+}
+.carbon-editor {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background: #011627;
+  padding: 1.5rem 2rem 1.75rem;
+  overflow: auto;
+}
+.carbon-editor pre {
+  margin: 0;
+  flex: 1;
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 18px;
+  line-height: 30px;
+  white-space: pre;
+  tab-size: 4;
+}
+.carbon-editor .kw { color: #c792ea; }
+.carbon-editor .ann { color: #ffb86c; }
+.carbon-editor .str { color: #c3e88d; }
+.carbon-editor .typ { color: #ffcb6b; }
+.carbon-editor .met { color: #82aaff; }
+.carbon-editor .com { color: #5c6370; }
+.carbon-editor .num { color: #f78c6c; }
+.carbon-editor .pun { color: #89ddff; }
+.carbon-editor .txt { color: #d6deeb; }
+.carbon-editor.cols {
+  flex-direction: row;
+  gap: 1.75rem;
+  align-items: stretch;
+}
+.carbon-editor.cols .col {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.carbon-editor.cols .col pre {
+  flex: 1;
+  font-size: 15px;
+  line-height: 24px;
+}
+.carbon-editor.cols .col-divider {
+  align-self: stretch;
+  position: relative;
+  width: 1px;
+  background: #1d3b53;
+  flex: 0 0 auto;
+}
+.carbon-editor.cols .col-divider::after {
+  content: "\2192";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #011627;
+  border: 1px solid #1d3b53;
+  color: #82aaff;
+  font-size: 16px;
+}
+</pre>
+          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// 🚀Spring Boot: Use TaskScheduler to implement lightweight dynamic tasks (consider Quartz for more complex requirements).&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// #SpringBoot #SoftwareDevelopment&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-192.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">🚀Spring Boot: Use TaskScheduler to implement lightweight dynamic tasks (consider Quartz for more complex requirements).
+#SpringBoot #SoftwareDevelopment</div>
+      <p class="links">
+        <a href="drawio/tweet-192.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-192.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-192.java" download>Source .java</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #193</h2>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap codepen-wrap--large">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 193 — spring-boot-tips", "description": "Spring Boot / Java snippet from codingstrain (spring-boot-tips)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="640"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: stretch;
+  padding: 0.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+.carbon {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: calc(100vh - 1rem);
+  max-width: none;
+  border-radius: 10px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.carbon-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 36px;
+  padding: 0 16px;
+  background: #252836;
+  flex-shrink: 0;
+}
+.carbon-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.carbon-dot.red { background: #ff5f56; }
+.carbon-dot.yellow { background: #ffbd2e; }
+.carbon-dot.green { background: #27c93f; }
+.carbon-module {
+  margin-left: auto;
+  font: 13px/1 system-ui, sans-serif;
+  color: #8b949e;
+  letter-spacing: 0.02em;
+}
+.carbon-editor {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background: #011627;
+  padding: 1.5rem 2rem 1.75rem;
+  overflow: auto;
+}
+.carbon-editor pre {
+  margin: 0;
+  flex: 1;
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 18px;
+  line-height: 30px;
+  white-space: pre;
+  tab-size: 4;
+}
+.carbon-editor .kw { color: #c792ea; }
+.carbon-editor .ann { color: #ffb86c; }
+.carbon-editor .str { color: #c3e88d; }
+.carbon-editor .typ { color: #ffcb6b; }
+.carbon-editor .met { color: #82aaff; }
+.carbon-editor .com { color: #5c6370; }
+.carbon-editor .num { color: #f78c6c; }
+.carbon-editor .pun { color: #89ddff; }
+.carbon-editor .txt { color: #d6deeb; }
+.carbon-editor.cols {
+  flex-direction: row;
+  gap: 1.75rem;
+  align-items: stretch;
+}
+.carbon-editor.cols .col {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.carbon-editor.cols .col pre {
+  flex: 1;
+  font-size: 15px;
+  line-height: 24px;
+}
+.carbon-editor.cols .col-divider {
+  align-self: stretch;
+  position: relative;
+  width: 1px;
+  background: #1d3b53;
+  flex: 0 0 auto;
+}
+.carbon-editor.cols .col-divider::after {
+  content: "\2192";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #011627;
+  border: 1px solid #1d3b53;
+  color: #82aaff;
+  font-size: 16px;
+}
+</pre>
+          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;ann&quot;&gt;@Bean&lt;/span&gt;
+&lt;span class=&quot;typ&quot;&gt;CommandLineRunner&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;UserRepository&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;repo&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;repo&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;Mario&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// Runs once, right after the context starts&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-193.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <div class="tweet-text">💡 Spring Boot tip: Use CommandLineRunner for executing startup logic.
+
+CommandLineRunner is a Spring Boot interface that can be implemented to run code after the application context is fully initialized.
+
+#SpringBoot #Java</div>
       <p class="links">
         <a href="drawio/tweet-193.drawio" download>.drawio diagram</a> ·
         <a href="codepen/tweet-193.html" target="_blank" rel="noopener">CodePen preview</a> ·
@@ -2140,16 +2138,31 @@ body {
   font-size: 16px;
 }
 </pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// 🚀Spring Boot: Use TaskScheduler to implement lightweight dynamic tasks (consider Quartz for more complex requirements).&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// #SpringBoot #SoftwareDevelopment&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;kw&quot;&gt;private&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;static&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;final&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Logger&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;LoggerFactory&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;getLogger&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;OrderService&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;txt&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;Created order {} for {}&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;orderId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;customer&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// Lazy formatting, log levels, no System.out&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-194.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <div class="tweet-text">🚀Spring Boot: Use TaskScheduler to implement lightweight dynamic tasks (consider Quartz for more complex requirements).
-#SpringBoot #SoftwareDevelopment</div>
+      <div class="tweet-text">💡 Spring Boot tip: Use spring-boot-starter-logging (Logback) for logging, it is already included as default.
+
+✅ spring-boot-starter-logging is already included in most starters (spring-boot-starter-web, spring-boot-starter-data-jpa, etc.)
+
+✅ You can customize log levels by editing application.yml:
+
+logging:
+  level:
+    root: INFO
+    com.myapp: DEBUG
+
+✅ To customize format and rotation, create a logback-spring.xml in src/main/resources.
+
+#SpringBoot #Java</div>
       <p class="links">
         <a href="drawio/tweet-194.drawio" download>.drawio diagram</a> ·
         <a href="codepen/tweet-194.html" target="_blank" rel="noopener">CodePen preview</a> ·
@@ -2284,22 +2297,18 @@ body {
   font-size: 16px;
 }
 </pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;ann&quot;&gt;@Bean&lt;/span&gt;
-&lt;span class=&quot;typ&quot;&gt;CommandLineRunner&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;UserRepository&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;repo&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;repo&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;Mario&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// Runs once, right after the context starts&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// 💡Spring Boot tip: Use H2 if you need an in-memory   database for dev/testing.&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;//&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;//     #SpringBoot #Java&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-195.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <div class="tweet-text">💡 Spring Boot tip: Use CommandLineRunner for executing startup logic.
+      <div class="tweet-text">💡Spring Boot tip: Use H2 if you need an in-memory   database for dev/testing.
 
-CommandLineRunner is a Spring Boot interface that can be implemented to run code after the application context is fully initialized.
-
-#SpringBoot #Java</div>
+    #SpringBoot #Java</div>
       <p class="links">
         <a href="drawio/tweet-195.drawio" download>.drawio diagram</a> ·
         <a href="codepen/tweet-195.html" target="_blank" rel="noopener">CodePen preview</a> ·
@@ -2434,31 +2443,25 @@ body {
   font-size: 16px;
 }
 </pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;kw&quot;&gt;private&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;static&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;final&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Logger&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;LoggerFactory&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;getLogger&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;OrderService&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;txt&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;Created order {} for {}&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;orderId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;customer&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// Lazy formatting, log levels, no System.out&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;ann&quot;&gt;@Cacheable&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;users&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kw&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;findById&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Long&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;repo&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;findById&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;orElseThrow&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// Enable with @EnableCaching&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-196.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <div class="tweet-text">💡 Spring Boot tip: Use spring-boot-starter-logging (Logback) for logging, it is already included as default.
+      <div class="tweet-text">🚀Spring Boot tip: Boost performance in Spring Boot with @EnableCaching and
+@Cacheable
+.
 
-✅ spring-boot-starter-logging is already included in most starters (spring-boot-starter-web, spring-boot-starter-data-jpa, etc.)
-
-✅ You can customize log levels by editing application.yml:
-
-logging:
-  level:
-    root: INFO
-    com.myapp: DEBUG
-
-✅ To customize format and rotation, create a logback-spring.xml in src/main/resources.
-
-#SpringBoot #Java</div>
+🟢 Avoids repeated DB/API calls
+🟢 Reduces latency
+🟢 By default, Spring uses an in-memory map, but you  can plug in an external provider for production.
+#SpringBoot #Performance</div>
       <p class="links">
         <a href="drawio/tweet-196.drawio" download>.drawio diagram</a> ·
         <a href="codepen/tweet-196.html" target="_blank" rel="noopener">CodePen preview</a> ·
@@ -2593,18 +2596,27 @@ body {
   font-size: 16px;
 }
 </pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// 💡Spring Boot tip: Use H2 if you need an in-memory   database for dev/testing.&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//     #SpringBoot #Java&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;ann&quot;&gt;@Transactional&lt;/span&gt;
+&lt;span class=&quot;kw&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;transfer&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Long&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Long&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;BigDecimal&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;amount&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;accounts&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;debit&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;amount&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;accounts&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;credit&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;amount&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;   &lt;/span&gt;&lt;span class=&quot;com&quot;&gt;// both commit, or both roll back&lt;/span&gt;
+&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-197.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <div class="tweet-text">💡Spring Boot tip: Use H2 if you need an in-memory   database for dev/testing.
+      <div class="tweet-text">💡 Spring Boot tip: use
+@Transactional
+ at the service layer, not on repositories.
 
-    #SpringBoot #Java</div>
+✅  You coordinate business logic in the service layer, and a service method:
+
+🟢 Calls one or more repositories
+🟢 Implements business rules
+🟢 Needs everything to succeed or fail together
+#SpringBoot</div>
       <p class="links">
         <a href="drawio/tweet-197.drawio" download>.drawio diagram</a> ·
         <a href="codepen/tweet-197.html" target="_blank" rel="noopener">CodePen preview</a> ·
@@ -2739,25 +2751,24 @@ body {
   font-size: 16px;
 }
 </pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;ann&quot;&gt;@Cacheable&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;users&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;kw&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;findById&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Long&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;repo&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;findById&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;orElseThrow&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// Enable with @EnableCaching&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;typ&quot;&gt;WebClient&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;WebClient&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;https://api.example.com&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;typ&quot;&gt;Mono&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;/users/{id}&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;retrieve&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;bodyToMono&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-198.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <div class="tweet-text">🚀Spring Boot tip: Boost performance in Spring Boot with @EnableCaching and
-@Cacheable
-.
+      <div class="tweet-text">💡 Spring Boot tip: Use @SpringBootTest(webEnvironment = RANDOM_PORT) for integration tests when testing controllers.
 
-🟢 Avoids repeated DB/API calls
-🟢 Reduces latency
-🟢 By default, Spring uses an in-memory map, but you  can plug in an external provider for production.
-#SpringBoot #Performance</div>
+✅ Starts a real embedded server
+✅ The server runs on a random port.
+✅ You can test controllers via TestRestTemplate or WebTestClient.
+#SpringBoot</div>
       <p class="links">
         <a href="drawio/tweet-198.drawio" download>.drawio diagram</a> ·
         <a href="codepen/tweet-198.html" target="_blank" rel="noopener">CodePen preview</a> ·
@@ -2892,26 +2903,27 @@ body {
   font-size: 16px;
 }
 </pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;ann&quot;&gt;@Transactional&lt;/span&gt;
-&lt;span class=&quot;kw&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;transfer&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Long&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Long&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;BigDecimal&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;amount&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;accounts&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;debit&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;amount&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;accounts&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;credit&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;amount&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;   &lt;/span&gt;&lt;span class=&quot;com&quot;&gt;// both commit, or both roll back&lt;/span&gt;
-&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// 🚀 Spring Boot: springdoc-openapi automatically generates OpenAPI 3.0 (Swagger) documentation from your Spring Boot REST controllers.&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;//&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// You will get:&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;//&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// ✅ An interactive Swagger UI&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// ✅ Auto-scanned from your code&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// ✅ Export API docs in JSON/YAML&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// #SpringBoot&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-199.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <div class="tweet-text">💡 Spring Boot tip: use
-@Transactional
- at the service layer, not on repositories.
+      <div class="tweet-text">🚀 Spring Boot: springdoc-openapi automatically generates OpenAPI 3.0 (Swagger) documentation from your Spring Boot REST controllers.
 
-✅  You coordinate business logic in the service layer, and a service method:
+You will get:
 
-🟢 Calls one or more repositories
-🟢 Implements business rules
-🟢 Needs everything to succeed or fail together
+✅ An interactive Swagger UI
+✅ Auto-scanned from your code
+✅ Export API docs in JSON/YAML
 #SpringBoot</div>
       <p class="links">
         <a href="drawio/tweet-199.drawio" download>.drawio diagram</a> ·
@@ -3047,23 +3059,27 @@ body {
   font-size: 16px;
 }
 </pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;typ&quot;&gt;WebClient&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;WebClient&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;https://api.example.com&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;typ&quot;&gt;Mono&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;/users/{id}&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;retrieve&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;bodyToMono&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// 🚀 Spring Boot: You can enable a smooth shutdown with &amp;quot;server.shutdown=graceful&amp;quot; in your configuration.&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;//&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// ✅  It helps you avoid these situations:&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;//&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// 🔴 Active HTTP requests failing abruptly&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// 🔴 Database rolling back unexpectedly&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// 🔴 Threads interrupted before finishing&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// #SpringBoot&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-200.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <div class="tweet-text">💡 Spring Boot tip: Use @SpringBootTest(webEnvironment = RANDOM_PORT) for integration tests when testing controllers.
+      <div class="tweet-text">🚀 Spring Boot: You can enable a smooth shutdown with &quot;server.shutdown=graceful&quot; in your configuration.
 
-✅ Starts a real embedded server
-✅ The server runs on a random port.
-✅ You can test controllers via TestRestTemplate or WebTestClient.
+✅  It helps you avoid these situations:
+
+🔴 Active HTTP requests failing abruptly
+🔴 Database rolling back unexpectedly
+🔴 Threads interrupted before finishing
 #SpringBoot</div>
       <p class="links">
         <a href="drawio/tweet-200.drawio" download>.drawio diagram</a> ·
@@ -3073,9 +3089,9 @@ body {
     </article>
   <nav class="pagination" aria-label="Tweet pages">
     <a class="page-nav" href="page-9.html">← Prev</a>
-    <a href="index.html">1</a> · <a href="page-2.html">2</a> · <a href="page-3.html">3</a> · <a href="page-4.html">4</a> · <a href="page-5.html">5</a> · <a href="page-6.html">6</a> · <a href="page-7.html">7</a> · <a href="page-8.html">8</a> · <a href="page-9.html">9</a> · <span class="page-current">10</span> · <a href="page-11.html">11</a> · <a href="page-12.html">12</a> · <a href="page-13.html">13</a> · <a href="page-14.html">14</a>
+    <a href="index.html">1</a> · <a href="page-2.html">2</a> · <a href="page-3.html">3</a> · <a href="page-4.html">4</a> · <a href="page-5.html">5</a> · <a href="page-6.html">6</a> · <a href="page-7.html">7</a> · <a href="page-8.html">8</a> · <a href="page-9.html">9</a> · <span class="page-current">10</span> · <a href="page-11.html">11</a> · <a href="page-12.html">12</a> · <a href="page-13.html">13</a>
     <a class="page-nav" href="page-11.html">Next →</a>
-    <span class="page-meta">Tweets #181–#200 of 262 · page 10/14</span>
+    <span class="page-meta">Tweets #181–#200 of 260 · page 10/13</span>
   </nav>
   <script async src="https://public.codepenassets.com/embed/index.js"></script>
 </body>

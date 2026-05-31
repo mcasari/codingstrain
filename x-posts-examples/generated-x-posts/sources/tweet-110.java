@@ -1,1 +1,2 @@
-// Java Tip 💡:  Don’t overuse inheritance. Favor delegation when possible. Inheritance creates tight coupling, and this can lead to problems if the superclass changes. #Java #OOP
+// Java tip 💡: Don’t rely blindly on Garbage Collection; memory leaks are still possible.
+// #Java #SoftwareEngineering

@@ -1,6 +1,2 @@
-WebClient client = WebClient.create("https://api.example.com");
-
-Mono<User> user = client.get()
-    .uri("/users/{id}", id)
-    .retrieve()
-    .bodyToMono(User.class);
+// 💡 SpringBoot: Define @ComponentScan boundaries carefully to avoid to avoid scanning entire packages accidentally.
+// #SpringBoot #JavaDev

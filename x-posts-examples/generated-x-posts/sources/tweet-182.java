@@ -1,2 +1,6 @@
-// 💡Java: If you need to write OS-native newlines, you can use System.lineSeparator().
-// #Java #JavaDev
+List<String> names = users.stream()
+    .filter(User::isActive)
+    .map(User::getName)
+    .sorted()
+    .toList();
+// Declarative: say WHAT you want, not HOW to loop

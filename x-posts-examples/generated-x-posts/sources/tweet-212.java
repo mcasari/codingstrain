@@ -1,4 +1,2 @@
-// 🚀 Spring Boot: Spring Data JPA has a built-in support for pagination with Pageable.
-//
-// ✅You should use pagination in your repositories instead of fetching all.
-// #SpringBoot #JavaDev
+// 🚀 Spring Boot: You can use @Retryable to cope with unstable external services.
+// #SpringBoot #SoftwareDevelopment

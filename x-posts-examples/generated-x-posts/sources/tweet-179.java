@@ -1,5 +1,8 @@
-// Compile once and reuse — not on every call
-private static final Pattern EMAIL =
-    Pattern.compile("^[^@\\s]+@[^@\\s]+$");
+// ❌ A NullPointerException waiting to happen
+User u = repo.find(id);
+return u.getEmail();
 
-boolean ok = EMAIL.matcher(input).matches();
+// ✅ Make "maybe absent" explicit
+return repo.findById(id)
+    .map(User::getEmail)
+    .orElse("no-email");

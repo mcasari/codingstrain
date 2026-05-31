@@ -1,5 +1,3 @@
-@Bean
-CommandLineRunner init(UserRepository repo) {
-    return args -> repo.save(new User("Mario"));
-}
-// Runs once, right after the context starts
+// 💡Spring Boot tip: Use H2 if you need an in-memory   database for dev/testing.
+//
+//     #SpringBoot #Java

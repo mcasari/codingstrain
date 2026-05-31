@@ -1,2 +1,5 @@
-// 🚀Spring Boot: Use TaskScheduler to implement lightweight dynamic tasks (consider Quartz for more complex requirements).
-// #SpringBoot #SoftwareDevelopment
+private static final Logger log =
+    LoggerFactory.getLogger(OrderService.class);
+
+log.info("Created order {} for {}", orderId, customer);
+// Lazy formatting, log levels, no System.out

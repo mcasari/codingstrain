@@ -1,5 +1,1 @@
-private static final Logger log =
-    LoggerFactory.getLogger(OrderService.class);
-
-log.info("Created order {} for {}", orderId, customer);
-// Lazy formatting, log levels, no System.out
+// Java tip: Starting from Java 8 you can use List.removeIf(<predicate>) to clean up collections in one line. #JavaTips

@@ -1,4 +1,8 @@
-@ConfigurationProperties(prefix = "app")
-public record AppProps(String name, int timeout) {}
+public record SignupRequest(
+        @NotBlank String name,
+        @Email String email) {}
 
-// Binds app.name / app.timeout from application.yaml
+@PostMapping("/signup")
+public void signup(@Valid @RequestBody SignupRequest req) {
+    service.register(req);
+}

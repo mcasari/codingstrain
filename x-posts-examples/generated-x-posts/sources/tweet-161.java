@@ -1,3 +1,4 @@
-// 💡 Java tip: Starting from Java 8, you can remove nulls easily with list.removeIf(Objects::isNull).
+// 💡 Java tip: Stream.toArray(Type[]::new) is a clean, type-safe way to get arrays from streams.
 //
-// #Java #JavaTips
+// ✅ Avoids Object[] and casting.
+// #Java #JavaDev

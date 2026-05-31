@@ -1,2 +1,2 @@
-// 🚀Spring Boot DevTools is a tool to ease developer's work a bit. It watches code and configuration for changes, then automatically reloads or restarts your app.
+// 🚀Spring Boot: Use TaskScheduler to implement lightweight dynamic tasks (consider Quartz for more complex requirements).
 // #SpringBoot #SoftwareDevelopment

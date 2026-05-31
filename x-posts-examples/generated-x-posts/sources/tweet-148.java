@@ -1,2 +1,3 @@
-// 💡 Java tip: Avoid boxing overhead by using primitive streams.
+// 💡 Java tip: Use Duration and Instant for precise time calculations.
+//
 // #Java

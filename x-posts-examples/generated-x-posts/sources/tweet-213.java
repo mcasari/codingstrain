@@ -1,3 +1,2 @@
-// 💡Spring Boot tip: If you need to implement integrations tests for Spring MVC controllers, and mock everything else, use @WebMvcTest to load only MVC-related beans.
-//
-// #SpringBoot #IntegrationTesting
+// 🚀 Spring Boot: With @ConditionalOnMissingBean, you can define a default bean that can be possibly overridden by a user using a standard definition.
+// #SpringBoot #SoftwareDevelopment

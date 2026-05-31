@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mxfile host="app.diagrams.net" agent="codingstrain" version="22.1.8" type="device">
-  <diagram id="4bce6e80-7946-4902-b04c-9c7a036d174e" name="Tweet 241 · Diagram">
+  <diagram id="264b6f60-031d-4095-a0f6-a295a5b5755b" name="Tweet 241 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #241 · Spring Boot: Use @TestConfiguration to use test-specific b…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #241 · Spring Boot testing: Using spring.main.log-startup-info=fa…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-boot-tips · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="300" as="geometry"/></mxCell>
         <mxCell id="5" value="Concept flow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>

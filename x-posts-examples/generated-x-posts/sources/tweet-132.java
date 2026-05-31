@@ -1,5 +1,5 @@
-// Immutable, null-hostile, concise
-List<String> roles = List.of("ADMIN", "USER");
-Map<String, Integer> limits = Map.of("free", 10, "pro", 100);
-
-// roles.add("X") -> UnsupportedOperationException
+// Java Tip 💡: Override hashCode() when overriding equals() to ensure collections like HashMap work correctly.
+//
+// HashMap is based on an hash table data structure, and uses hashCode() to determine the bucket index.
+//
+// #Java #Collections

@@ -1,2 +1,1 @@
-List<String> lines = Files.readAllLines(Path.of("data.txt"));
-Files.writeString(Path.of("out.txt"), "hello");
+// 💡 Learn design patterns to write reusable, maintainable code. #Java #DesignPatterns

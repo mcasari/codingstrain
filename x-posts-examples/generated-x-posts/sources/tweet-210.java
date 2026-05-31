@@ -1,2 +1,4 @@
-// 🚀 Spring Boot: In development phase, use spring.main.lazy-initialization=true to speed up the startup of the application.
+// 🚀 Spring Boot: Spring Data JPA has a built-in support for pagination with Pageable.
+//
+// ✅You should use pagination in your repositories instead of fetching all.
 // #SpringBoot #JavaDev

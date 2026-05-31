@@ -1,1 +1,1 @@
-// Java Tip 💡: Refactor legacy code gradually. Use tests to ensure stability. #Java #LegacyCode
+// Java tip 💡: Don’t reinvent the wheel—use proven Java libraries and frameworks. #Java #Productivity

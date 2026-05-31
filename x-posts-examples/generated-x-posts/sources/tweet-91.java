@@ -1,1 +1,1 @@
-// Java Tip 💡: Learn and follow Java naming conventions for classes, variables, and methods. #Java #CleanCode
+// Java Tip 💡: Understand the difference between `==` and `.equals()` for object comparison. #Java #Basics

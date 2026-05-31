@@ -1,5 +1,4 @@
-// 🚀 Spring Boot: Better avoid wildcard exclusions for transitive dependencies in POMs, because they can hide problems.
+// 🚀 Spring Boot: Avoid FetchType.EAGER unless you really need it.
 //
-// ❌ Wildcard exclusions just remove the symptom and mask the underlying version mismatch
-//
-// #SpringBoot #JavaDev
+// ❌ Marking a relationship as EAGER tells the ORM to load it whenever the entity is loaded, regardless of whether you actually invoke the relationship's method.
+// #Springboot #SoftwareDevelopment

@@ -1,1 +1,6 @@
-// Java tip : Starting from Java 19 you can explore a feature called "virtual threads". Virtual threads are lightweight threads managed by the JVM rather than the OS. #Java #Concurrency
+// Java tip 💡: Try to avoid sharing data across threads.
+//
+// ✅Use immutable objects
+// ✅Or make threads communicate through messages, without directly modifying shared state.
+//
+// #Java #Concurrency

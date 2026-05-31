@@ -1,5 +1,2 @@
-// Immutable, null-hostile, concise
-List<String> roles = List.of("ADMIN", "USER");
-Map<String, Integer> limits = Map.of("free", 10, "pro", 100);
-
-// roles.add("X") -> UnsupportedOperationException
+// Java Tip 💡: You can use LinkedHashMap to easily implement an LRU (Least Recently Used) Cache.
+// #Java #Collections

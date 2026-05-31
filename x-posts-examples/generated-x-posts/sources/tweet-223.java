@@ -1,2 +1,2 @@
-// 🚀 Spring Boot:  To execute SQL scripts before or after a test method, you can use the @Sql annotation.
+// 🚀Spring Boot: To exclude any fields whose value is null in Jackson serialization you can use @JsonInclude(Include.NON_NULL) .
 // #SpringBoot #JavaDev

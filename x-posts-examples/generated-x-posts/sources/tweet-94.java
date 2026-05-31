@@ -1,1 +1,1 @@
-// Java Tip 💡: Always override `hashCode()` when you override `equals()`. #Java #OOP
+// Java Tip 💡: Avoid exposing internal object state. Use DTOs when needed. #Java #Encapsulation

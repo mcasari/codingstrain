@@ -1,1 +1,1 @@
-// Java Tip 💡: Use `try-catch` blocks sparingly—don't use them for flow control. #Java #BestPractices
+// Java Tip 💡: Split large methods into smaller helper methods for clarity. #Java #Refactoring

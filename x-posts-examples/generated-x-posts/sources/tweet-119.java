@@ -1,8 +1,6 @@
-public record SignupRequest(
-        @NotBlank String name,
-        @Email String email) {}
-
-@PostMapping("/signup")
-public void signup(@Valid @RequestBody SignupRequest req) {
-    service.register(req);
-}
+// Arrow form: no fall-through, returns a value
+String label = switch (status) {
+    case ACTIVE  -> "running";
+    case PAUSED  -> "on hold";
+    case STOPPED -> "done";
+};

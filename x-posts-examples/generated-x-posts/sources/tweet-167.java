@@ -1,1 +1,8 @@
-// 💡 Java tip: List.reversed() returns an unmodifiable reversed view of the original list. #Java #JavaDev
+// ❌ A NullPointerException waiting to happen
+User u = repo.find(id);
+return u.getEmail();
+
+// ✅ Make "maybe absent" explicit
+return repo.findById(id)
+    .map(User::getEmail)
+    .orElse("no-email");

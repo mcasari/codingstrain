@@ -1,4 +1,2 @@
-public Order(Customer customer) {
-    // Fail fast at construction with a clear message
-    this.customer = Objects.requireNonNull(customer, "customer");
-}
+// 🚀 Spring Boot: Better use SpringBootTest.WebEnvironment.RANDOM_PORT  instead of hardcoding ports in tests to avoid conflicts.
+// #SpringBoot #JavaDev

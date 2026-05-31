@@ -1,1 +1,2 @@
-// 💡 Explore virtual threads (Java 19+) for lightweight concurrency. #Java #ProjectLoom
+List<String> lines = Files.readAllLines(Path.of("data.txt"));
+Files.writeString(Path.of("out.txt"), "hello");

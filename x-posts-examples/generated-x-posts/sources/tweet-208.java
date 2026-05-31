@@ -1,4 +1,2 @@
-// 🚀 Spring Boot: Use @SpringBootApplication(exclude = …) to disable specific auto-configuration classes.
-//
-// ✅ One possible reason could be that you have a custom configuration that conflicts with the default.
+// 🚀 Spring Boot: In development phase, use spring.main.lazy-initialization=true to speed up the startup of the application.
 // #SpringBoot #JavaDev

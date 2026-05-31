@@ -1,4 +1,3 @@
-// 💡Java tip: Use ThreadLocal.withInitial(...) to provide each thread its own safe default value.
+// 💡 Java tip: Starting from Java 12, you can use String.indent(n)  to format multi-line strings with indentation.
 //
-// ✅ The value is created lazily
-// #Java #JavaDev
+// #Java #ModernJava

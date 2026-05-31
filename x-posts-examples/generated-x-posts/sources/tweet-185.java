@@ -1,10 +1,7 @@
-// @RestController = @Controller + @ResponseBody
-@RestController
-@RequestMapping("/api")
-public class UserController {
+@Bean
+@Profile("dev")
+DataSource devDataSource() { return new H2DataSource(); }
 
-    @GetMapping("/users")
-    public List<User> all() {
-        return service.findAll();   // serialized to JSON
-    }
-}
+@Bean
+@Profile("prod")
+DataSource prodDataSource() { return new PgDataSource(); }

@@ -1,1 +1,1 @@
-// Java tip 💡: Don’t reinvent the wheel—use proven Java libraries and frameworks. #Java #Productivity
+// Java tip 💡: Format your code consistently. Use tools like Checkstyle or Spotless. #Java #CleanCode

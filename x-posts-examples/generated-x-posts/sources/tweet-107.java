@@ -1,3 +1,1 @@
-users.sort(
-    Comparator.comparing(User::getLastName)
-              .thenComparing(User::getFirstName));
+// Java Tip 💡: Test edge cases—nulls, empty lists, and extreme values. #Java #Testing

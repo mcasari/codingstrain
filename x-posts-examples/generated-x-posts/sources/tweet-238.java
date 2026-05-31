@@ -1,6 +1,2 @@
-// 🚀 Spring Boot: You can use the "spring.jpa.properties.hibernate.jdbc.batch_size" property to make Hibernate handle batch inserts.
-//
-// 🟢Fewer network calls
-// 🟢Less JDBC overhead
-// 🟢Faster bulk operations
+// 🚀 Spring Boot: A webhook is when another system  sends a POST request to your app when something happens. In Spring Boot you implement it simply exposing an endpoint that receives that POST request.
 // #SpringBoot #JavaDev

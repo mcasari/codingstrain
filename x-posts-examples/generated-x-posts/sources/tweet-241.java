@@ -1,2 +1,2 @@
-// 🚀 Spring Boot: Use @TestConfiguration to use test-specific beans that must not be loaded in production.
+// 🚀 Spring Boot testing: Using spring.main.log-startup-info=false, you can skip the verbose startup summary.
 // #SpringBoot #JavaDev

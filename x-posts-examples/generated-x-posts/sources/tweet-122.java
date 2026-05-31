@@ -1,1 +1,1 @@
-// Java tip:💡: Use thread pools (`Executors`) instead of manually managing threads. #Java #Concurrency
+// Java tip:💡: Avoid synchronized blocks when higher-level abstractions exist. #Java #Concurrency

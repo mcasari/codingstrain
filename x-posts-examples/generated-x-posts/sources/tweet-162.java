@@ -1,3 +1,2 @@
-// 💡 Java tip: Starting from Java 12, you can use String.indent(n)  to format multi-line strings with indentation.
-//
-// #Java #ModernJava
+// 💡 Java tip: Starting from Java 8 you can use ChronoUnit.between(start, end) to calculate time intervals in a specific unit (days, hours, minutes) without manual math.
+// #Java #JavaDev

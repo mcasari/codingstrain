@@ -1,1 +1,4 @@
-// Java tip: Use List.copyOf(list) for a safe, unmodifiable copy, while avoiding accidental changes.  #Java #JavaTips
+// 💡Java tip: Use ThreadLocal.withInitial(...) to provide each thread its own safe default value.
+//
+// ✅ The value is created lazily
+// #Java #JavaDev

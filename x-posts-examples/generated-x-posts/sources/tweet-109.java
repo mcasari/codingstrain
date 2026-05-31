@@ -1,1 +1,1 @@
-// Java Tip 💡: Test edge cases—nulls, empty lists, and extreme values. #Java #Testing
+// Java tip💡: Use `String.format()` or `MessageFormat` for readable formatting. #Java #StringTips

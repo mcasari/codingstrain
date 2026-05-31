@@ -1,6 +1,9 @@
-List<String> names = users.stream()
-    .filter(User::isActive)
-    .map(User::getName)
-    .sorted()
-    .toList();
-// Declarative: say WHAT you want, not HOW to loop
+@Bean
+SecurityFilterChain security(HttpSecurity http) throws Exception {
+    return http
+        .authorizeHttpRequests(a -> a
+            .requestMatchers("/public/**").permitAll()
+            .anyRequest().authenticated())
+        .httpBasic(Customizer.withDefaults())
+        .build();
+}

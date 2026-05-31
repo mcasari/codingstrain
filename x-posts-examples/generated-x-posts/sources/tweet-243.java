@@ -1,2 +1,2 @@
-// 🚀 Spring Boot testing: Using spring.main.log-startup-info=false, you can skip the verbose startup summary.
-// #SpringBoot #JavaDev
+List<String> lines = Files.readAllLines(Path.of("data.txt"));
+Files.writeString(Path.of("out.txt"), "hello");

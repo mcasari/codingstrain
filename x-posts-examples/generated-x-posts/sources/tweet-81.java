@@ -1,1 +1,3 @@
-// Java Tip 💡: Prefer immutable objects to ensure thread safety. #Java #Concurrency
+// 💡 Java tip:  Clean up unused imports and variables for better readability.
+//
+// #Java #CleanCode

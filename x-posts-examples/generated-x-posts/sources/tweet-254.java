@@ -1,9 +1,9 @@
-@RestControllerAdvice
-public class ApiExceptionHandler {
-
-    @ExceptionHandler(NotFoundException.class)
-    public ResponseEntity<String> handle(NotFoundException e) {
-        return ResponseEntity.status(404).body(e.getMessage());
-    }
-}
-// Controllers stay clean — no try/catch everywhere
+// 🚀@Sql or @SqlGroup allows you to preload test data to perform reproducible tests.
+//
+// It allows:
+//
+// ✅Insert test data
+// ✅Clean up tables
+// ✅Reset database state
+//
+// #SpringBoot #IntegrationTesting

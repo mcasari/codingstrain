@@ -1,1 +1,4 @@
-// Java Tip 💡: Avoid exposing internal object state. Use DTOs when needed. #Java #Encapsulation
+// Java Tip 💡: Use helper classes to implement reusable logic, but avoid all-knowing God classes.
+// #Java #CodeOrganization
+//
+// #Java #CleanCode

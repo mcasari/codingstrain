@@ -1,4 +1,3 @@
-public Order(Customer customer) {
-    // Fail fast at construction with a clear message
-    this.customer = Objects.requireNonNull(customer, "customer");
-}
+// 💡Java tip: Use HashMap as Map implementation when you need greatest general-purpose performance.
+//
+// #Java   #DataStructures

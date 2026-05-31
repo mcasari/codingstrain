@@ -1,4 +1,5 @@
-// 🚀 SpringBoot: Add global OpenAPI metadata with @OpenAPIDefinition.
-//
-// ✅ It should be put on your main Spring Boot application class, or a dedicated configuration class
-// #SpringBoot #JavaDev
+@Cacheable("users")
+public User findById(Long id) {
+    return repo.findById(id).orElseThrow();
+}
+// Enable with @EnableCaching

@@ -1,8 +1,6 @@
-// ❌ A NullPointerException waiting to happen
-User u = repo.find(id);
-return u.getEmail();
+Map<Dept, List<Employee>> byDept = employees.stream()
+    .collect(Collectors.groupingBy(Employee::getDept));
 
-// ✅ Make "maybe absent" explicit
-return repo.findById(id)
-    .map(User::getEmail)
-    .orElse("no-email");
+long active = employees.stream()
+    .filter(Employee::isActive)
+    .count();

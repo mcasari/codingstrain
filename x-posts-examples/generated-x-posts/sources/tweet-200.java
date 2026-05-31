@@ -1,6 +1,8 @@
-WebClient client = WebClient.create("https://api.example.com");
-
-Mono<User> user = client.get()
-    .uri("/users/{id}", id)
-    .retrieve()
-    .bodyToMono(User.class);
+// 🚀 Spring Boot: You can enable a smooth shutdown with "server.shutdown=graceful" in your configuration.
+//
+// ✅  It helps you avoid these situations:
+//
+// 🔴 Active HTTP requests failing abruptly
+// 🔴 Database rolling back unexpectedly
+// 🔴 Threads interrupted before finishing
+// #SpringBoot

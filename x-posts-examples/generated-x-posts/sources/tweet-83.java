@@ -1,3 +1,1 @@
-// 💡 Java tip:  Clean up unused imports and variables for better readability.
-//
-// #Java #CleanCode
+// Java Tip 💡: Avoid deeply nested if-else statements. Use guard clauses instead. #Java #CleanCode

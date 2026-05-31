@@ -1,7 +1,3 @@
-@Bean
-@Profile("dev")
-DataSource devDataSource() { return new H2DataSource(); }
-
-@Bean
-@Profile("prod")
-DataSource prodDataSource() { return new PgDataSource(); }
+// Ignore unknown JSON fields instead of failing
+@JsonIgnoreProperties(ignoreUnknown = true)
+public record UserDto(String name, String email) {}

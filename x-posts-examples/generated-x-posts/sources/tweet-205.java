@@ -1,4 +1,4 @@
-// 🚀  Spring Boot: Use spring-boot-starter-mail for sending emails.
+// 💡 Spring Boot: To better handle circular dependencies, use constructor injection instead of field injection.
 //
-// ✅ It wraps all the necessary configuration and dependencies, making the process of sending emails simple and clear.
-// #SpringBoot
+// ✅ Forces all required dependencies to be provided at creation time, allowing early detection.
+// #SpringBoot #JavaDev

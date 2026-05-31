@@ -1,6 +1,2 @@
-List<String> names = users.stream()
-    .filter(User::isActive)
-    .map(User::getName)
-    .sorted()
-    .toList();
-// Declarative: say WHAT you want, not HOW to loop
+// 💡 Java tip: Starting from Java 12 you can use String.transform(Function) to apply lambdas directly to strings.
+// #Java #JavaDev

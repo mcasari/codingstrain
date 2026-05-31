@@ -1,2 +1,2 @@
-// 🚀Spring Boot: With org.hibernate.SQL=DEBUG, you can get a deeper insight into Hibernate queries from the logs.
-// #SpringBoot #Hibernate
+List<String> lines = Files.readAllLines(Path.of("data.txt"));
+Files.writeString(Path.of("out.txt"), "hello");

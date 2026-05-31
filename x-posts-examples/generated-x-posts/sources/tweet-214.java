@@ -1,2 +1,6 @@
-// 🚀 Spring Boot: You can use @Retryable to cope with unstable external services.
-// #SpringBoot #SoftwareDevelopment
+WebClient client = WebClient.create("https://api.example.com");
+
+Mono<User> user = client.get()
+    .uri("/users/{id}", id)
+    .retrieve()
+    .bodyToMono(User.class);

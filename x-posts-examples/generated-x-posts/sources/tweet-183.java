@@ -1,2 +1,10 @@
-List<String> lines = Files.readAllLines(Path.of("data.txt"));
-Files.writeString(Path.of("out.txt"), "hello");
+// @RestController = @Controller + @ResponseBody
+@RestController
+@RequestMapping("/api")
+public class UserController {
+
+    @GetMapping("/users")
+    public List<User> all() {
+        return service.findAll();   // serialized to JSON
+    }
+}

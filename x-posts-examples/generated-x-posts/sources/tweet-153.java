@@ -1,5 +1,6 @@
-private static final Logger log =
-    LoggerFactory.getLogger(OrderService.class);
+Map<Dept, List<Employee>> byDept = employees.stream()
+    .collect(Collectors.groupingBy(Employee::getDept));
 
-log.info("Created order {} for {}", orderId, customer);
-// Lazy formatting, log levels, no System.out
+long active = employees.stream()
+    .filter(Employee::isActive)
+    .count();

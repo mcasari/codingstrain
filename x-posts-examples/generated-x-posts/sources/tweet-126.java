@@ -1,1 +1,5 @@
-// Java Tip : To populate Map values, like lists, you can use computeIfAbsent(). #Java #Collections
+// Immutable, null-hostile, concise
+List<String> roles = List.of("ADMIN", "USER");
+Map<String, Integer> limits = Map.of("free", 10, "pro", 100);
+
+// roles.add("X") -> UnsupportedOperationException

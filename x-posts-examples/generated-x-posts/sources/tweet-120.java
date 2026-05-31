@@ -1,1 +1,1 @@
-// 💡 Learn design patterns to write reusable, maintainable code. #Java #DesignPatterns
+// Java tip:💡: Use thread pools (`Executors`) instead of manually managing threads. #Java #Concurrency

@@ -1,6 +1,2 @@
-WebClient client = WebClient.create("https://api.example.com");
-
-Mono<User> user = client.get()
-    .uri("/users/{id}", id)
-    .retrieve()
-    .bodyToMono(User.class);
+// 🚀 Spring Boot:  To execute SQL scripts before or after a test method, you can use the @Sql annotation.
+// #SpringBoot #JavaDev

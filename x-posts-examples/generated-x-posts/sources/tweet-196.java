@@ -1,5 +1,5 @@
-private static final Logger log =
-    LoggerFactory.getLogger(OrderService.class);
-
-log.info("Created order {} for {}", orderId, customer);
-// Lazy formatting, log levels, no System.out
+@Cacheable("users")
+public User findById(Long id) {
+    return repo.findById(id).orElseThrow();
+}
+// Enable with @EnableCaching

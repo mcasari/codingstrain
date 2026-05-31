@@ -1,4 +1,4 @@
-// 🚀 Spring Boot: Use ResponseEntity<T> to get fine-grained control over HTTP responses.
+// 🚀 Spring Boot: With @DataJpaTest you can test JPA repositories in isolation.
 //
-// You can explicitly specify Status, Headers and Body
-// #SpringBoot
+// @DataJpaTest only loads only the JPA layer and not the entire application context, using an in-memory database (H2), and rolls back transactions after each test.
+// #SpringBoot #Java

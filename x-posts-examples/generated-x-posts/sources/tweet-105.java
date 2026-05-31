@@ -1,1 +1,3 @@
-// Java Tip 💡: Use `Deque` over `Stack`—it’s more modern and flexible. #Java #Collections
+users.sort(
+    Comparator.comparing(User::getLastName)
+              .thenComparing(User::getFirstName));

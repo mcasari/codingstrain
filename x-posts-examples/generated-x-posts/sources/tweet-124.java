@@ -1,1 +1,1 @@
-// Java tip:💡: Avoid synchronized blocks when higher-level abstractions exist. #Java #Concurrency
+// Java Tip : To populate Map values, like lists, you can use computeIfAbsent(). #Java #Collections

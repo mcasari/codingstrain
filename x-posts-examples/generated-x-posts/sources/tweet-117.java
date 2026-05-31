@@ -1,2 +1,8 @@
-List<String> lines = Files.readAllLines(Path.of("data.txt"));
-Files.writeString(Path.of("out.txt"), "hello");
+public record SignupRequest(
+        @NotBlank String name,
+        @Email String email) {}
+
+@PostMapping("/signup")
+public void signup(@Valid @RequestBody SignupRequest req) {
+    service.register(req);
+}

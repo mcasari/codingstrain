@@ -1,9 +1,2 @@
-// 🚀 Spring Boot: An efficient way of handling large CSV files is by using Spring Batch features.
-//
-// Spring Batch is configurable with options like:
-//
-// ✅ Chunking
-// ✅ Parallelism
-// ✅ Retry
-//
-// #SpringBoot #SoftwareDevelopment
+// 🚀Spring Boot: Use @EntityGraph to control fetch strategies and prevent N+1 queries.
+// #SpringBoot #SoftwareEngineering

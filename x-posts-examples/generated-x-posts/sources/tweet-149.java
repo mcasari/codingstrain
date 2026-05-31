@@ -1,3 +1,3 @@
-// 💡Java tip: Starting from Java 15 you can use String.formatted(...) for string formatting instead of String.format(...).
+// 💡 Java tip: Starting from Java 11, you can use String.strip() instead of trim(), since it handles Unicode whitespaces correctly.
 //
-// #Java
+// #Java #JavaTips

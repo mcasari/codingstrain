@@ -1,4 +1,4 @@
-// 🚀 Spring Boot: You have the option of using streaming (Stream<T>) for queries with large datasets.
+// 🚀 Spring Boot: You can handle CORS globally with a WebMvcConfigurer
 //
-// ✅Results are fetched in chunks, with only a small subset in memory at any time
-// #SpringBoot #JavaDev
+// ✅CORS is the mechanism that allows a web application on one domain (origin) to access resources from a different domain.
+// #SpringBoot #SoftwareDevelopment

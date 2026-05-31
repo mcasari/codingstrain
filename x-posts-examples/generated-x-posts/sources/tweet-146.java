@@ -1,5 +1,2 @@
-@Cacheable("users")
-public User findById(Long id) {
-    return repo.findById(id).orElseThrow();
-}
-// Enable with @EnableCaching
+// 💡 Java tip: Avoid boxing overhead by using primitive streams.
+// #Java

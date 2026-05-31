@@ -19,7 +19,7 @@
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 139 — java-tips", "description": "Spring Boot / Java snippet from codingstrain (java-tips)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="960"
+             data-height="640"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -141,53 +141,7 @@ body {
   font-size: 16px;
 }
 </pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;java-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// 💡SOLID principles: The Liskov Substitution Principle (LSP) states that objects of a superclass should be replaceable with objects of a subclass.&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// ✅ Subclasses should not behave differently than the base class.&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// ❌ Example that breaks LSP:&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// class Vehicle {&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//     public void startEngine() {&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//         ...&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//     }&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// }&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// class Bicycle extends Vehicle {&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// @Override&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//     public void startEngine() {&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//         throw new UnsupportedOperationException(&amp;quot;Bicycles don&amp;#x27;t have engines!&amp;quot;);&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//     }&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// }&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// If you write a test for the Vehicle class, you would expect every subclass could start the engine. But as we&amp;#x27;ve seen, Bicycle can&amp;#x27;t, it has no engine and throws an Exception.&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// This violates LSP. To fix it, we need to change the design so that only appropriate classes have the startEngine() behavior.&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// ✅ We can for example define two separate interfaces:&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// interface Vehicle {...}&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// interface Motorized {&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//     void startEngine();&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// }&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// class Car implements Vehicle, Motorized {&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//     //Vehicle methods implementations&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//      //Motorized implementation&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//     public void startEngine() {&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//          ...&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//     }&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// }&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// class Bicycle implements Vehicle {&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//     // No engine, it implements only Vehicle&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// }&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// ✅ An alternative could be creating a default Vehicle implementation, and extending it while implementing the Motorized interface only for vehicles that have engines.&lt;/span&gt;
+          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;java-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// 💡SOLID principles: Dependency Inversion Principle (DIP) states that high-level modules should not depend on low-level modules; instead, both should depend on abstractions.&lt;/span&gt;
 &lt;span class=&quot;com&quot;&gt;//&lt;/span&gt;
 &lt;span class=&quot;com&quot;&gt;// #SOLID #SoftwareDesign&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>

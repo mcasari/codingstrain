@@ -1,1 +1,8 @@
-// Java Tip 💡: Understand the difference between `==` and `.equals()` for object comparison. #Java #Basics
+// ❌ A NullPointerException waiting to happen
+User u = repo.find(id);
+return u.getEmail();
+
+// ✅ Make "maybe absent" explicit
+return repo.findById(id)
+    .map(User::getEmail)
+    .orElse("no-email");

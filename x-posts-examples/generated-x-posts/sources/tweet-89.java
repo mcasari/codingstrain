@@ -1,1 +1,1 @@
-// Java tip💡: Catch exceptions at the right level, not too early or too late. #Java #ErrorHandling
+// Java Tip 💡: Learn and follow Java naming conventions for classes, variables, and methods. #Java #CleanCode

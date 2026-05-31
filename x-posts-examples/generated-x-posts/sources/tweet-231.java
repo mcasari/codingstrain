@@ -1,9 +1,2 @@
-// 🚀 Spring Boot:  Better not expose JPA entities directly, use DTOs at boundaries instead.
-//
-// ✅This allows to:
-//
-// 🟢 Make API independent on the persistence layer
-// 🟢 Prevent lazy loading problems
-// 🟢 Improve security
-//
-// #SpringBoot #SoftwareEngineer
+// 🚀 Spring Boot: @AutoConfigureMockMvc allows you to test controllers without starting the server. It tells Spring Boot to automatically configure a MockMvc instance in the test context.
+// #SpringBoot #Java

@@ -1,2 +1,6 @@
-// 🚀 Spring Boot: @AutoConfigureMockMvc allows you to test controllers without starting the server. It tells Spring Boot to automatically configure a MockMvc instance in the test context.
-// #SpringBoot #Java
+// 🚀 Spring Boot: Better keep the default spring.main.allow-bean-definition-overriding=false configuration.
+//
+// ✅This way Spring fails to start if two beans share the same name.
+//
+// ✅Useful because bean overriding can hide configuration bugs
+// #SpringBoot #JavaDev

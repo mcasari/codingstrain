@@ -1,5 +1,5 @@
-private static final Logger log =
-    LoggerFactory.getLogger(OrderService.class);
-
-log.info("Created order {} for {}", orderId, customer);
-// Lazy formatting, log levels, no System.out
+// Spring Boot: Use spring.mvc.publish-request-params=true only in dev. It's dangerous in production.
+//
+// 🔴In production, logging request details can expose sensitive information.
+//
+// #SpringBoot #JavaDev

@@ -1,1 +1,2 @@
-// 💡 Cache expensive operations when possible. Use `ConcurrentMap` if needed. #Java #Performance
+List<String> lines = Files.readAllLines(Path.of("data.txt"));
+Files.writeString(Path.of("out.txt"), "hello");

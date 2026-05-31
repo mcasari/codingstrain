@@ -1,7 +1,2 @@
-# application.yaml
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health, info, metrics
-# -> GET /actuator/health
+// 🚀 Spring Boot: Use @TestConfiguration to use test-specific beans that must not be loaded in production.
+// #SpringBoot #JavaDev

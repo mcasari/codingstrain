@@ -1,11 +1,2 @@
-// 💡 Spring Boot tip: Spring Boot prints a banner in the console when your app starts. You can customize it for branding or just fun.
-//
-// ✅ Add a file banner.txt  in src/main/resources and put whatever content you want.
-//
-// ✅ You can also use placeholders like ${spring-boot.version} or ${java.version} to inject values inside it.
-//
-// ✅ If you want, you can disable the banner with the following configuration property:
-//
-// spring.main.banner-mode=off
-//
-// #Java #SpringBoot
+// 🚀Spring Boot DevTools is a tool to ease developer's work a bit. It watches code and configuration for changes, then automatically reloads or restarts your app.
+// #SpringBoot #SoftwareDevelopment

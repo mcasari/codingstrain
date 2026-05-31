@@ -1,4 +1,4 @@
-// 💡 Pin the Spring Boot version in the spring-boot-dependencies BOM to ensure consistent dependency management.
+// 🚀  Spring Boot: Use spring-boot-starter-mail for sending emails.
 //
-// ✅  The spring-boot-dependencies BOM allows you to omit versions of libraries that Spring Boot integrates with in your pom.xml.
+// ✅ It wraps all the necessary configuration and dependencies, making the process of sending emails simple and clear.
 // #SpringBoot

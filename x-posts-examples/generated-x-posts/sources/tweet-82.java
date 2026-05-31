@@ -1,1 +1,1 @@
-// Java Tip 💡: Enforce encapsulation using access modifiers wisely. #Java #OOP
+// Java Tip 💡: Use `try-catch` blocks sparingly—don't use them for flow control. #Java #BestPractices

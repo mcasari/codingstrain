@@ -1,8 +1,22 @@
-// ❌ A NullPointerException waiting to happen
-User u = repo.find(id);
-return u.getEmail();
+// ❌ Nested null checks — verbose, easy to forget a level
+User user = userRepository.findByEmail(email);
+if (user != null) {
+    Address address = user.getAddress();
+    if (address != null) {
+        return address.getCity();
+    }
+}
+return "unknown";
 
-// ✅ Make "maybe absent" explicit
-return repo.findById(id)
-    .map(User::getEmail)
-    .orElse("no-email");
+// ✅ Optional — chain safely when each step may be absent
+return userRepository.findByEmail(email)
+    .map(User::getAddress)
+    .map(Address::getCity)
+    .orElse("unknown");
+
+// ✅ Or one explicit guard when Optional is not available
+User user = userRepository.findByEmail(email);
+if (user == null || user.getAddress() == null) {
+    return "unknown";
+}
+return user.getAddress().getCity();

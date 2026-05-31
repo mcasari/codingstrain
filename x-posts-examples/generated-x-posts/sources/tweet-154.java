@@ -1,6 +1,1 @@
-List<String> names = users.stream()
-    .filter(User::isActive)
-    .map(User::getName)
-    .sorted()
-    .toList();
-// Declarative: say WHAT you want, not HOW to loop
+// Java tip: From Java 9 you can use Objects.checkIndex() to replace manual if checks for validating index bounds. It is a small feature that helps making the code cleaner.  #Java #JavaTip

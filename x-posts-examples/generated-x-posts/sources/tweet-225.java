@@ -1,2 +1,5 @@
-// 🚀Spring Boot: To exclude any fields whose value is null in Jackson serialization you can use @JsonInclude(Include.NON_NULL) .
-// #SpringBoot #JavaDev
+// 🚀 Spring Boot: Keep controllers thin, put logic in services.
+//
+// ✅ Controllers main job is just to handle HTTP concerns
+//
+// #SpringBoot #SoftwareEngineering

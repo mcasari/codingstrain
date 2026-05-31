@@ -1,2 +1,1 @@
-// Java Tip 💡: Understand the difference between checked and unchecked exceptions.
-// #Java #ErrorHandling // Checked
+// Java Tip 💡: Refactor legacy code gradually. Use tests to ensure stability. #Java #LegacyCode

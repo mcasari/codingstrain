@@ -1,5 +1,9 @@
-@Transactional
-public void transfer(Long from, Long to, BigDecimal amount) {
-    accounts.debit(from, amount);
-    accounts.credit(to, amount);   // both commit, or both roll back
-}
+// 🚀 Spring Boot: An efficient way of handling large CSV files is by using Spring Batch features.
+//
+// Spring Batch is configurable with options like:
+//
+// ✅ Chunking
+// ✅ Parallelism
+// ✅ Retry
+//
+// #SpringBoot #SoftwareDevelopment

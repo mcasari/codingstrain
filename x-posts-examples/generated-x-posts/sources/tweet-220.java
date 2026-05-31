@@ -1,3 +1,5 @@
-// 🚀 Spring Boot: To make your services return a paginated response, instead of a giant list, you can use Page<T> and Pageable.
+// 🚀 Spring Boot: To make Jackson create your objects from JSON in an explicit, and predictable way, you can use @JsonCreator.
+//
+// 🟢 This way, each parameter is explicitly bound
+//
 // #SpringBoot #JavaDev
-// 🧵A link to an example to follow:
