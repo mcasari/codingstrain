@@ -601,7 +601,8 @@
     "body": "Java Tip #14💡: Enable compiler warnings and treat them as errors. They help prevent bugs early. #Java #BestPractices",
     "tags": "#Java #BestPractices",
     "codepen_style": "carbon",
-    "codepen_large": true
+    "codepen_large": true,
+    "code": "// ⚠️ Compiles fine — warnings (if enabled) flag the real problems:\nList list = new ArrayList();          // [rawtypes] raw type\nlist.add(\"hello\");\nInteger n = (Integer) list.get(0);    // [unchecked] unsafe cast → ClassCastException at runtime\n\n// ✅ Fix the code — generics remove the cast, so the bug can't happen\nList<String> safe = new ArrayList<>();\nsafe.add(\"hello\");\nString s = safe.get(0);               // type-safe, no cast needed\n\n// --- Make warnings fail the build so the ⚠️ block never ships ---\n\n// Maven (pom.xml)\n// <plugin>\n//   <artifactId>maven-compiler-plugin</artifactId>\n//   <configuration>\n//     <compilerArgs>\n//       <arg>-Xlint:all</arg>\n//       <arg>-Werror</arg>\n//     </compilerArgs>\n//   </configuration>\n// </plugin>\n\n// javac:  javac -Xlint:all -Werror *.java"
   },
   {
     "id": 68,
