@@ -2,6 +2,4 @@
 
 ✅ Java tip: Starting from java 9 you can use Stream.takeWhile() for easy slicing of lists by streams.  #Java #JavaTips
 
-✅ Runnable sample: java-tips
-
-✅ Architecture diagram + Carbon CodePen below
+#Java #JavaTips

@@ -4,6 +4,4 @@
 
 ✅ Uses @GetMapping in the snippet
 
-✅ Runnable sample: spring-boot-paged-rest-example
-
 #SpringBoot #JavaDev

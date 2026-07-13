@@ -4,6 +4,4 @@
 
 ✅ Each permitted subtype must be final, sealed, or non-sealed
 
-✅ non-sealed is the escape hatch — inheritance opens again below that branch
-
 #Java #Java17

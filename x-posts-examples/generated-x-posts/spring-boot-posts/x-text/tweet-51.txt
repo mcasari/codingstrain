@@ -4,6 +4,4 @@
 
 ✅ @CircuitBreaker stops calling a failing service after a threshold
 
-✅ fallbackMethod returns a safe default while the circuit is OPEN
-
 #SpringCloud #Microservices #SpringBoot #Resilience4j

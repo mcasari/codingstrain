@@ -18,7 +18,7 @@
     .asset-label { font-size: 0.85rem; color: #536471; margin: 0.75rem 0 0.35rem; }
     .asset-img { display: block; max-width: 100%; border-radius: 8px; margin-bottom: 0.5rem; border: 1px solid #eff3f4; }
     .codepen-wrap { margin: 0.5rem 0 1rem; border-radius: 8px; overflow: hidden; border: 1px solid #eff3f4; }
-    .codepen-wrap--large { max-width: 100%; min-height: 640px; }
+    .codepen-wrap--large { max-width: 100%; min-height: 800px; }
     .codepen-links { font-size: 0.8rem; margin: 0.35rem 0 0; padding: 0 0.5rem 0.5rem; }
     .codepen-links a { color: #1d9bf0; }
     .pagination { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.75rem; background: #fff; border: 1px solid #eff3f4; border-radius: 12px; padding: 0.75rem 1rem; margin-bottom: 1.5rem; font-size: 0.9rem; }
@@ -53,6 +53,8 @@
     }
     .copy-x-btn:hover { background: #1a8cd8; }
     .copy-status { font-size: 0.85rem; color: #536471; }
+    .x-char-count { font-size: 0.8rem; color: #536471; font-weight: 600; }
+    .x-char-count--over { color: #dc2626; }
 
     .preview { color: #536471; font-size: 0.9rem; margin: 0 0 0.75rem; }
   </style>
@@ -66,6 +68,7 @@
     <article>
       <h2>Tweet #1</h2>
       <p class="preview">🚀Spring Boot: Your first REST API in 30 seconds with H2.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(194/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-1" readonly rows="10">🚀Spring Boot: Your first REST API in 30 seconds with H2.
 
 ✅ Your first REST API in 30 seconds with H2
@@ -85,13 +88,12 @@
     <article>
       <h2>Tweet #2</h2>
       <p class="preview">🚀Spring Boot: Constructor injection beats field injection.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(178/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-2" readonly rows="10">🚀Spring Boot: Constructor injection beats field injection.
 
 ✅ Constructor injection beats field injection
 
 ✅ Uses @RestController in the snippet
-
-✅ Runnable sample: spring-boot-paged-rest-example
 
 #SpringBoot #SoftwareEngineering</textarea>
       <p class="copy-row">
@@ -104,13 +106,12 @@
     <article>
       <h2>Tweet #3</h2>
       <p class="preview">🚀Spring Boot: Pagination without boilerplate — use Pageable.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(166/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-3" readonly rows="10">🚀Spring Boot: Pagination without boilerplate — use Pageable.
 
 ✅ Pagination without boilerplate — use Pageable
 
 ✅ Uses @GetMapping in the snippet
-
-✅ Runnable sample: spring-boot-paged-rest-example
 
 #SpringBoot #JavaDev</textarea>
       <p class="copy-row">
@@ -123,13 +124,12 @@
     <article>
       <h2>Tweet #4</h2>
       <p class="preview">🚀Spring Boot: @PathVariable vs @RequestParam — know the difference.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(177/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-4" readonly rows="10">🚀Spring Boot: @PathVariable vs @RequestParam — know the difference.
 
 ✅ @PathVariable vs @RequestParam — know the difference
 
 ✅ Uses @GetMapping in the snippet
-
-✅ Runnable sample: spring-boot-minimal-rest-h2
 
 #SpringBoot #Java</textarea>
       <p class="copy-row">
@@ -142,13 +142,8 @@
     <article>
       <h2>Tweet #5</h2>
       <p class="preview">🚀Spring Boot: With @RestControllerAdvice you can handle specific types of exceptions globally instea</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(166/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-5" readonly rows="10">🚀Spring Boot: With @RestControllerAdvice you can handle specific types of exceptions globally instead of using try/catch everywhere.
-
-✅ With @RestControllerAdvice you can handle specific types of exceptions globally instead of using try/catch everywhere
-
-✅ Uses @ExceptionHandler in the snippet
-
-✅ Uses @GetMapping in the snippet
 
 #SpringBoot #SoftwareEngineering</textarea>
       <p class="copy-row">
@@ -161,13 +156,10 @@
     <article>
       <h2>Tweet #6</h2>
       <p class="preview">🚀Spring Boot: Stop returning stack traces to clients — return a stable JSON structure.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(195/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-6" readonly rows="10">🚀Spring Boot: Stop returning stack traces to clients — return a stable JSON structure.
 
 ✅ Stop returning stack traces to clients — return a stable JSON structure
-
-✅ Runnable sample: springboot-error-handling-demo
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot #SoftwareEngineering</textarea>
       <p class="copy-row">
@@ -180,13 +172,10 @@
     <article>
       <h2>Tweet #7</h2>
       <p class="preview">🚀Spring Boot: Always map exceptions to HTTP status + a safe JSON body.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(151/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-7" readonly rows="10">🚀Spring Boot: Always map exceptions to HTTP status + a safe JSON body.
 
 ✅ Always map exceptions to HTTP status + a safe JSON body
-
-✅ Runnable sample: springboot-error-handling-demo
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot #JavaDev</textarea>
       <p class="copy-row">
@@ -199,13 +188,10 @@
     <article>
       <h2>Tweet #8</h2>
       <p class="preview">🚀Spring Boot: Production error JSON checklist.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(94/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-8" readonly rows="10">🚀Spring Boot: Production error JSON checklist.
 
 ✅ Production error JSON checklist
-
-✅ Runnable sample: springboot-error-handling-demo
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot</textarea>
       <p class="copy-row">
@@ -218,13 +204,10 @@
     <article>
       <h2>Tweet #9</h2>
       <p class="preview">🚀Spring Boot: Fail fast at startup with @Validated + @ConfigurationProperties.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(179/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-9" readonly rows="10">🚀Spring Boot: Fail fast at startup with @Validated + @ConfigurationProperties.
 
 ✅ Fail fast at startup with @Validated + @ConfigurationProperties
-
-✅ Runnable sample: spring-boot-validated-config
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot #SoftwareEngineering</textarea>
       <p class="copy-row">
@@ -237,13 +220,10 @@
     <article>
       <h2>Tweet #10</h2>
       <p class="preview">🚀Spring Boot: Use @Valid on nested configuration objects.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(116/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-10" readonly rows="10">🚀Spring Boot: Use @Valid on nested configuration objects.
 
 ✅ Use @Valid on nested configuration objects
-
-✅ Runnable sample: spring-boot-validated-config
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot</textarea>
       <p class="copy-row">
@@ -256,13 +236,10 @@
     <article>
       <h2>Tweet #11</h2>
       <p class="preview">🚀Spring Boot: Validate lists in application.yml with Bean Validation.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(149/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-11" readonly rows="10">🚀Spring Boot: Validate lists in application.yml with Bean Validation.
 
 ✅ Validate lists in application.yml with Bean Validation
-
-✅ Runnable sample: spring-boot-validated-config
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot #JavaDev</textarea>
       <p class="copy-row">
@@ -275,13 +252,10 @@
     <article>
       <h2>Tweet #12</h2>
       <p class="preview">🚀Spring Boot: Bad YAML fails at startup — better than discovering misconfig in prod.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(170/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-12" readonly rows="10">🚀Spring Boot: Bad YAML fails at startup — better than discovering misconfig in prod.
 
 ✅ Bad YAML fails at startup — better than discovering misconfig in prod
-
-✅ Runnable sample: spring-boot-validated-config
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot</textarea>
       <p class="copy-row">
@@ -294,13 +268,10 @@
     <article>
       <h2>Tweet #13</h2>
       <p class="preview">🚀Spring Boot: JpaRepository is your entire DAO for CRUD.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(120/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-13" readonly rows="10">🚀Spring Boot: JpaRepository is your entire DAO for CRUD.
 
 ✅ JpaRepository is your entire DAO for CRUD
-
-✅ Runnable sample: sql-annotation-demo
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot #Java</textarea>
       <p class="copy-row">
@@ -313,13 +284,12 @@
     <article>
       <h2>Tweet #14</h2>
       <p class="preview">🚀Spring Boot: @Sql or @SqlGroup allows you to preload test data for reproducible tests.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(235/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-14" readonly rows="10">🚀Spring Boot: @Sql or @SqlGroup allows you to preload test data for reproducible tests.
 
 ✅ @Sql or @SqlGroup allows you to preload test data for reproducible tests
 
 ✅ Uses @SpringBootTest in the snippet
-
-✅ Runnable sample: sql-annotation-demo
 
 #SpringBoot #IntegrationTesting</textarea>
       <p class="copy-row">
@@ -332,13 +302,10 @@
     <article>
       <h2>Tweet #15</h2>
       <p class="preview">🚀Spring Boot: Processing 1M rows with findAll() will OOM you — use a Stream.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(159/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-15" readonly rows="10">🚀Spring Boot: Processing 1M rows with findAll() will OOM you — use a Stream.
 
 ✅ Processing 1M rows with findAll() will OOM you — use a Stream
-
-✅ Runnable sample: spring-streaming-demo
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot #JPA</textarea>
       <p class="copy-row">
@@ -351,13 +318,10 @@
     <article>
       <h2>Tweet #16</h2>
       <p class="preview">🚀Spring Boot: Call EntityManager.clear() every N rows when streaming.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(161/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-16" readonly rows="10">🚀Spring Boot: Call EntityManager.clear() every N rows when streaming.
 
 ✅ Call EntityManager.clear() every N rows when streaming
-
-✅ Runnable sample: spring-streaming-demo
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot #SoftwareEngineering</textarea>
       <p class="copy-row">
@@ -370,13 +334,10 @@
     <article>
       <h2>Tweet #17</h2>
       <p class="preview">🚀Spring Boot: Always wrap JPA streams in try-with-resources.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(127/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-17" readonly rows="10">🚀Spring Boot: Always wrap JPA streams in try-with-resources.
 
 ✅ Always wrap JPA streams in try-with-resources
-
-✅ Runnable sample: spring-streaming-demo
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot #JPA</textarea>
       <p class="copy-row">
@@ -389,13 +350,10 @@
     <article>
       <h2>Tweet #18</h2>
       <p class="preview">🚀Spring Boot: Use @Transactional(readOnly = true) on read-only batch jobs.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(159/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-18" readonly rows="10">🚀Spring Boot: Use @Transactional(readOnly = true) on read-only batch jobs.
 
 ✅ Use @Transactional(readOnly = true) on read-only batch jobs
-
-✅ Runnable sample: spring-streaming-demo
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot #JavaDev</textarea>
       <p class="copy-row">
@@ -408,13 +366,10 @@
     <article>
       <h2>Tweet #19</h2>
       <p class="preview">🚀Spring Boot: Spring Boot integrates easily with Kafka for event-driven architectures.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(183/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-19" readonly rows="10">🚀Spring Boot: Spring Boot integrates easily with Kafka for event-driven architectures.
 
 ✅ Spring Boot integrates easily with Kafka for event-driven architectures
-
-✅ Runnable sample: spring-kafka-demo
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot #JavaDev</textarea>
       <p class="copy-row">
@@ -427,13 +382,10 @@
     <article>
       <h2>Tweet #20</h2>
       <p class="preview">🚀Spring Boot: Kafka consumers are simple with @KafkaListener.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(131/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-20" readonly rows="10">🚀Spring Boot: Kafka consumers are simple with @KafkaListener.
 
 ✅ Kafka consumers are simple with @KafkaListener
-
-✅ Runnable sample: spring-kafka-demo
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot #Kafka</textarea>
       <p class="copy-row">
@@ -446,13 +398,10 @@
     <article>
       <h2>Tweet #21</h2>
       <p class="preview">🚀Spring Boot: Know when to use auto-offset-reset: earliest vs latest.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(147/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-21" readonly rows="10">🚀Spring Boot: Know when to use auto-offset-reset: earliest vs latest.
 
 ✅ Know when to use auto-offset-reset: earliest vs latest
-
-✅ Runnable sample: spring-kafka-demo
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot #Kafka</textarea>
       <p class="copy-row">
@@ -465,13 +414,12 @@
     <article>
       <h2>Tweet #22</h2>
       <p class="preview">🚀Spring Boot: Decouple services: save to DB, then publish an application event.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(213/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-22" readonly rows="10">🚀Spring Boot: Decouple services: save to DB, then publish an application event.
 
 ✅ Decouple services: save to DB, then publish an application event
 
 ✅ Uses @Transactional in the snippet
-
-✅ Runnable sample: spring-transactional-event-demo
 
 #SpringBoot #Microservices</textarea>
       <p class="copy-row">
@@ -484,13 +432,10 @@
     <article>
       <h2>Tweet #23</h2>
       <p class="preview">🚀Spring Boot: Don&#x27;t send the email before commit — use AFTER_COMMIT.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(159/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-23" readonly rows="10">🚀Spring Boot: Don't send the email before commit — use AFTER_COMMIT.
 
 ✅ Don't send the email before commit — use AFTER_COMMIT
-
-✅ Runnable sample: spring-transactional-event-demo
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot #SoftwareEngineering</textarea>
       <p class="copy-row">
@@ -503,13 +448,10 @@
     <article>
       <h2>Tweet #24</h2>
       <p class="preview">🚀Spring Boot: Use @Async only for small offloading tasks, and with a provided executor.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(197/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-24" readonly rows="10">🚀Spring Boot: Use @Async only for small offloading tasks, and with a provided executor.
 
 ✅ Use @Async only for small offloading tasks, and with a provided executor
-
-✅ Runnable sample: async-demo
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot #SoftwareDevelopment</textarea>
       <p class="copy-row">
@@ -522,13 +464,10 @@
     <article>
       <h2>Tweet #25</h2>
       <p class="preview">🚀Spring Boot: Don&#x27;t use the default executor in production.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(120/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-25" readonly rows="10">🚀Spring Boot: Don't use the default executor in production.
 
 ✅ Don't use the default executor in production
-
-✅ Runnable sample: async-demo
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot</textarea>
       <p class="copy-row">
@@ -541,13 +480,10 @@
     <article>
       <h2>Tweet #26</h2>
       <p class="preview">🚀Spring Boot: Fire async tasks at startup with CommandLineRunner.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(141/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-26" readonly rows="10">🚀Spring Boot: Fire async tasks at startup with CommandLineRunner.
 
 ✅ Fire async tasks at startup with CommandLineRunner
-
-✅ Runnable sample: async-demo
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot #JavaDev</textarea>
       <p class="copy-row">
@@ -560,13 +496,10 @@
     <article>
       <h2>Tweet #27</h2>
       <p class="preview">🚀Spring Boot: @Async methods must be called from another Spring bean — not the same class.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(182/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-27" readonly rows="10">🚀Spring Boot: @Async methods must be called from another Spring bean — not the same class.
 
 ✅ @Async methods must be called from another Spring bean — not the same class
-
-✅ Runnable sample: async-demo
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot</textarea>
       <p class="copy-row">
@@ -579,13 +512,10 @@
     <article>
       <h2>Tweet #28</h2>
       <p class="preview">🚀Spring Boot: Boost performance with @EnableCaching and @Cacheable.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(157/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-28" readonly rows="10">🚀Spring Boot: Boost performance with @EnableCaching and @Cacheable.
 
 ✅ Boost performance with @EnableCaching and @Cacheable
-
-✅ Runnable sample: springboot-redis-cache-demo
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot #SoftwareEngineering</textarea>
       <p class="copy-row">
@@ -598,13 +528,10 @@
     <article>
       <h2>Tweet #29</h2>
       <p class="preview">🚀Spring Boot: Configure Redis cache TTL in one bean.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(113/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-29" readonly rows="10">🚀Spring Boot: Configure Redis cache TTL in one bean.
 
 ✅ Configure Redis cache TTL in one bean
-
-✅ Runnable sample: springboot-redis-cache-demo
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot #Redis</textarea>
       <p class="copy-row">
@@ -617,13 +544,10 @@
     <article>
       <h2>Tweet #30</h2>
       <p class="preview">🚀Spring Boot: Plug in Redis (or another provider) without changing business logic.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(166/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-30" readonly rows="10">🚀Spring Boot: Plug in Redis (or another provider) without changing business logic.
 
 ✅ Plug in Redis (or another provider) without changing business logic
-
-✅ Runnable sample: springboot-redis-cache-demo
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot</textarea>
       <p class="copy-row">
@@ -636,13 +560,10 @@
     <article>
       <h2>Tweet #31</h2>
       <p class="preview">🚀Spring Boot: Configure global CORS once — no @CrossOrigin on every controller.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(165/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-31" readonly rows="10">🚀Spring Boot: Configure global CORS once — no @CrossOrigin on every controller.
 
 ✅ Configure global CORS once — no @CrossOrigin on every controller
-
-✅ Runnable sample: cors-demo
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot #Web</textarea>
       <p class="copy-row">
@@ -655,13 +576,10 @@
     <article>
       <h2>Tweet #32</h2>
       <p class="preview">🚀Spring Boot: CORS isn&#x27;t a bug — it&#x27;s the browser. Configure it once globally.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(158/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-32" readonly rows="10">🚀Spring Boot: CORS isn't a bug — it's the browser. Configure it once globally.
 
 ✅ CORS isn't a bug — it's the browser. Configure it once globally
-
-✅ Runnable sample: cors-demo
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot</textarea>
       <p class="copy-row">
@@ -674,13 +592,10 @@
     <article>
       <h2>Tweet #33</h2>
       <p class="preview">🚀Spring Boot: Debug HTTP issues with CommonsRequestLoggingFilter.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(141/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-33" readonly rows="10">🚀Spring Boot: Debug HTTP issues with CommonsRequestLoggingFilter.
 
 ✅ Debug HTTP issues with CommonsRequestLoggingFilter
-
-✅ Runnable sample: spring-request-logging-demo
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot #JavaDev</textarea>
       <p class="copy-row">
@@ -693,13 +608,10 @@
     <article>
       <h2>Tweet #34</h2>
       <p class="preview">🚀Spring Boot: Spring Batch: read CSV, process, write in chunks.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(141/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-34" readonly rows="10">🚀Spring Boot: Spring Batch: read CSV, process, write in chunks.
 
 ✅ Spring Batch: read CSV, process, write in chunks
-
-✅ Runnable sample: spring-batch-csv-sample
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot #SpringBatch</textarea>
       <p class="copy-row">
@@ -712,13 +624,10 @@
     <article>
       <h2>Tweet #35</h2>
       <p class="preview">🚀Spring Boot: FlatFileItemReaderBuilder + linesToSkip(1) skips the CSV header.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(158/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-35" readonly rows="10">🚀Spring Boot: FlatFileItemReaderBuilder + linesToSkip(1) skips the CSV header.
 
 ✅ FlatFileItemReaderBuilder + linesToSkip(1) skips the CSV header
-
-✅ Runnable sample: spring-batch-csv-sample
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot</textarea>
       <p class="copy-row">
@@ -731,13 +640,10 @@
     <article>
       <h2>Tweet #36</h2>
       <p class="preview">🚀Spring Boot: ItemProcessor transforms each row before writing.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(128/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-36" readonly rows="10">🚀Spring Boot: ItemProcessor transforms each row before writing.
 
 ✅ ItemProcessor transforms each row before writing
-
-✅ Runnable sample: spring-batch-csv-sample
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot</textarea>
       <p class="copy-row">
@@ -750,13 +656,10 @@
     <article>
       <h2>Tweet #37</h2>
       <p class="preview">🚀Spring Boot: Parse CSV with Apache Commons CSV and try-with-resources.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(150/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-37" readonly rows="10">🚀Spring Boot: Parse CSV with Apache Commons CSV and try-with-resources.
 
 ✅ Parse CSV with Apache Commons CSV and try-with-resources
-
-✅ Runnable sample: spring-csv-sample
-
-✅ Architecture diagram + Carbon CodePen below
 
 #Java #SpringBoot</textarea>
       <p class="copy-row">
@@ -769,13 +672,10 @@
     <article>
       <h2>Tweet #38</h2>
       <p class="preview">🚀Spring Boot: @MockBean stubs can leak between tests unless you reset them.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(161/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-38" readonly rows="10">🚀Spring Boot: @MockBean stubs can leak between tests unless you reset them.
 
 ✅ @MockBean stubs can leak between tests unless you reset them
-
-✅ Runnable sample: spring-mock-reset-example
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot #Testing</textarea>
       <p class="copy-row">
@@ -788,13 +688,10 @@
     <article>
       <h2>Tweet #39</h2>
       <p class="preview">🚀Spring Boot: @SpringBootTest loads the full context — use when you need integration truth.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(193/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-39" readonly rows="10">🚀Spring Boot: @SpringBootTest loads the full context — use when you need integration truth.
 
 ✅ @SpringBootTest loads the full context — use when you need integration truth
-
-✅ Runnable sample: spring-mock-reset-example
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot #Testing</textarea>
       <p class="copy-row">
@@ -807,13 +704,10 @@
     <article>
       <h2>Tweet #40</h2>
       <p class="preview">🚀Spring Boot: @Sql on tests = reproducible DB state every run.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(146/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-40" readonly rows="10">🚀Spring Boot: @Sql on tests = reproducible DB state every run.
 
 ✅ @Sql on tests = reproducible DB state every run
-
-✅ Runnable sample: sql-annotation-demo
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot #IntegrationTesting</textarea>
       <p class="copy-row">
@@ -826,13 +720,10 @@
     <article>
       <h2>Tweet #48</h2>
       <p class="preview">🚀Spring Boot: A full REST API on an H2 in-memory database — no Docker, nothing to install.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(231/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-48" readonly rows="10">🚀Spring Boot: A full REST API on an H2 in-memory database — no Docker, nothing to install.
 
 ✅ H2 lives inside the app's memory: the database is created on startup and thrown away on shutdown — ideal for demos and tests
-
-✅ Extend JpaRepository and you get full CRUD (list, fetch, create, update, delete) without writing SQL
-
-✅ Just run the app — the schema and sample rows load automatically, and you can browse them at /h2-console
 
 #SpringBoot</textarea>
       <p class="copy-row">
@@ -845,13 +736,10 @@
     <article>
       <h2>Tweet #49</h2>
       <p class="preview">🚀Spring Cloud: Centralize config with Spring Cloud Config before you copy application.properties eve</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(233/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-49" readonly rows="10">🚀Spring Cloud: Centralize config with Spring Cloud Config before you copy application.properties everywhere.
 
 ✅ Centralize config with Spring Cloud Config before you copy application.properties everywhere
-
-✅ Runnable sample: spring-cloud-config-native-server
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringCloud #Microservices</textarea>
       <p class="copy-row">
@@ -864,13 +752,12 @@
     <article>
       <h2>Tweet #50</h2>
       <p class="preview">🚀Spring Cloud: Eureka service discovery — call services by name, not IP.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(238/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-50" readonly rows="10">🚀Spring Cloud: Eureka service discovery — call services by name, not IP.
 
 ✅ Each service registers with Eureka on startup (spring.application.name)
 
 ✅ Eureka tracks healthy instances via heartbeats
-
-✅ Clients call http://author-service/... — LoadBalancer resolves the name to a live instance
 
 #SpringCloud #Microservices #SpringBoot</textarea>
       <p class="copy-row">
@@ -883,13 +770,12 @@
     <article>
       <h2>Tweet #51</h2>
       <p class="preview">🚀Spring Cloud: OpenFeign + Circuit Breaker — resilience isn&#x27;t an afterthought.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(276/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-51" readonly rows="10">🚀Spring Cloud: OpenFeign + Circuit Breaker — resilience isn't an afterthought.
 
 ✅ @FeignClient calls remote services by name (via Eureka + LoadBalancer)
 
 ✅ @CircuitBreaker stops calling a failing service after a threshold
-
-✅ fallbackMethod returns a safe default while the circuit is OPEN
 
 #SpringCloud #Microservices #SpringBoot #Resilience4j</textarea>
       <p class="copy-row">
@@ -902,13 +788,10 @@
     <article>
       <h2>Tweet #52</h2>
       <p class="preview">🚀Spring Cloud: Contract testing with Pact — make sure two services still agree on their API.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(239/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-52" readonly rows="10">🚀Spring Cloud: Contract testing with Pact — make sure two services still agree on their API.
 
 ✅ The consumer writes down the response it expects and tests against a mock — the real provider doesn't need to be running
-
-✅ The provider replays that same contract against the real app and fails if it no longer matches
-
-✅ Each side is verified separately, so a breaking change shows up long before deployment
 
 #SpringCloud #Testing</textarea>
       <p class="copy-row">
@@ -921,13 +804,12 @@
     <article>
       <h2>Tweet #53</h2>
       <p class="preview">🚀Spring Cloud: Load testing with Gatling — check a service survives real traffic.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(257/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-53" readonly rows="10">🚀Spring Cloud: Load testing with Gatling — check a service survives real traffic.
 
 ✅ Describe a scenario (e.g. POST /library/book) and ramp virtual users up over time
 
 ✅ Feed randomized data with Faker so every request looks realistic
-
-✅ Assert SLAs on the whole run — fail it if it gets too slow (≤10s) or drops below &gt;90% success
 
 #SpringCloud #Testing</textarea>
       <p class="copy-row">
@@ -940,13 +822,16 @@
     <article>
       <h2>Tweet #183</h2>
       <p class="preview">🚀Spring Boot: Spring Boot: To write cleaner REST controllers, use</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(229/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-183" readonly rows="10">🚀Spring Boot: Spring Boot: To write cleaner REST controllers, use
 
 ✅ Spring Boot: To write cleaner REST controllers, use
 
 ✅ @RestController instead of  @Controller + @ResponseBody
 
-✅ #SpringBoot #CleanCode</textarea>
+✅ #SpringBoot #CleanCode
+
+#SpringBoot #CleanCode</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-183">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -957,6 +842,7 @@
     <article>
       <h2>Tweet #184</h2>
       <p class="preview">💡 Sample repo to learn Spring Boot: github.com/spring-projects/spring-boot-samples</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(255/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-184" readonly rows="10">💡 Sample repo to learn Spring Boot: github.com/spring-projects/spring-boot-samples
 
 ✅ 65+ runnable mini-apps
@@ -976,13 +862,16 @@
     <article>
       <h2>Tweet #185</h2>
       <p class="preview">💡Spring Boot tip: Use</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(146/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-185" readonly rows="10">💡Spring Boot tip: Use
 
 ✅ @Profile
 
 ✅ to group and load beans/configurations in specific environments
 
-✅ #SpringBoot #JavaDev</textarea>
+✅ #SpringBoot #JavaDev
+
+#SpringBoot #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-185">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -993,13 +882,12 @@
     <article>
       <h2>Tweet #186</h2>
       <p class="preview">🚀 Spring Boot tip: With Spring Boot and Spring Security you can secure endpoints easily.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(160/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-186" readonly rows="10">🚀 Spring Boot tip: With Spring Boot and Spring Security you can secure endpoints easily.
 
 ✅ #SpringBoot #SpringSecurity #Java
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#SpringBoot #SpringSecurity #Java</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-186">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1010,13 +898,12 @@
     <article>
       <h2>Tweet #187</h2>
       <p class="preview">💡 Spring Boot Tip: If you want DTOs to ignore extra JSON fields from clients without breaking your A</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(245/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-187" readonly rows="10">💡 Spring Boot Tip: If you want DTOs to ignore extra JSON fields from clients without breaking your API use @JsonIgnoreProperties(ignoreUnknown = true).
 
 ✅ #SpringBoot #CodingTips #SoftwareEngineering
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#SpringBoot #CodingTips #SoftwareEngineering</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-187">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1027,13 +914,10 @@
     <article>
       <h2>Tweet #188</h2>
       <p class="preview">💡 Spring Boot tip: Spring Boot prints a banner in the console when your app starts. You can customiz</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(232/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-188" readonly rows="10">💡 Spring Boot tip: Spring Boot prints a banner in the console when your app starts. You can customize it for branding or just fun.
 
 ✅ Add a file banner.txt  in src/main/resources and put whatever content you want.
-
-✅ You can also use placeholders like ${spring-boot.version} or ${java.version} to inject values inside it.
-
-✅ If you want, you can disable the banner with the following configuration property:
 
 #Java #SpringBoot</textarea>
       <p class="copy-row">
@@ -1046,13 +930,12 @@
     <article>
       <h2>Tweet #189</h2>
       <p class="preview">💡 Spring Boot tip: You can run jobs at fixed intervals without setting up Quartz or external schedul</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(144/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-189" readonly rows="10">💡 Spring Boot tip: You can run jobs at fixed intervals without setting up Quartz or external schedulers.
 
 ✅ #Java #SpringBoot
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#Java #SpringBoot</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-189">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1063,13 +946,12 @@
     <article>
       <h2>Tweet #190</h2>
       <p class="preview">🚀Spring Boot DevTools is a tool to ease developer&#x27;s work a bit. It watches code and configuration fo</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(229/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-190" readonly rows="10">🚀Spring Boot DevTools is a tool to ease developer's work a bit. It watches code and configuration for changes, then automatically reloads or restarts your app.
 
 ✅ #SpringBoot #SoftwareDevelopment
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#SpringBoot #SoftwareDevelopment</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-190">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1080,13 +962,12 @@
     <article>
       <h2>Tweet #191</h2>
       <p class="preview">🚀 Spring Boot tip: In development, you can package and run an application from the source code with </p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(279/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-191" readonly rows="10">🚀 Spring Boot tip: In development, you can package and run an application from the source code with just one command:
 
 ✅ When you’re in development, you can skip packaging and just run directly:
 
 ✅ If you want, you can combine packaging and run in one command:
-
-✅ ./mvnw spring-boot:run
 
 #Java #SpringBoot</textarea>
       <p class="copy-row">
@@ -1099,13 +980,12 @@
     <article>
       <h2>Tweet #192</h2>
       <p class="preview">🚀Spring Boot: Use TaskScheduler to implement lightweight dynamic tasks (consider Quartz for more com</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(189/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-192" readonly rows="10">🚀Spring Boot: Use TaskScheduler to implement lightweight dynamic tasks (consider Quartz for more complex requirements).
 
 ✅ #SpringBoot #SoftwareDevelopment
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#SpringBoot #SoftwareDevelopment</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-192">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1116,13 +996,12 @@
     <article>
       <h2>Tweet #193</h2>
       <p class="preview">💡 Spring Boot tip: Use CommandLineRunner for executing startup logic.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(109/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-193" readonly rows="10">💡 Spring Boot tip: Use CommandLineRunner for executing startup logic.
 
 ✅ #SpringBoot #Java
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#SpringBoot #Java</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-193">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1133,13 +1012,10 @@
     <article>
       <h2>Tweet #194</h2>
       <p class="preview">💡 Spring Boot tip: Use spring-boot-starter-logging (Logback) for logging, it is already included as </p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(257/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-194" readonly rows="10">💡 Spring Boot tip: Use spring-boot-starter-logging (Logback) for logging, it is already included as default.
 
 ✅ spring-boot-starter-logging is already included in most starters (spring-boot-starter-web, spring-boot-starter-data-jpa, etc.)
-
-✅ You can customize log levels by editing application.yml:
-
-✅ To customize format and rotation, create a logback-spring.xml in src/main/resources.
 
 #SpringBoot #Java</textarea>
       <p class="copy-row">
@@ -1152,13 +1028,12 @@
     <article>
       <h2>Tweet #195</h2>
       <p class="preview">💡Spring Boot tip: Use H2 if you need an in-memory   database for dev/testing.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(117/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-195" readonly rows="10">💡Spring Boot tip: Use H2 if you need an in-memory   database for dev/testing.
 
 ✅ #SpringBoot #Java
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#SpringBoot #Java</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-195">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1169,6 +1044,7 @@
     <article>
       <h2>Tweet #196</h2>
       <p class="preview">🚀Spring Boot tip: Boost performance in Spring Boot with @EnableCaching and</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(254/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-196" readonly rows="10">🚀Spring Boot tip: Boost performance in Spring Boot with @EnableCaching and
 
 ✅ Avoids repeated DB/API calls
@@ -1188,6 +1064,7 @@
     <article>
       <h2>Tweet #197</h2>
       <p class="preview">💡 Spring Boot tip: use</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(176/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-197" readonly rows="10">💡 Spring Boot tip: use
 
 ✅  You coordinate business logic in the service layer, and a service method:
@@ -1207,6 +1084,7 @@
     <article>
       <h2>Tweet #198</h2>
       <p class="preview">💡 Spring Boot tip: Use @SpringBootTest(webEnvironment = RANDOM_PORT) for integration tests when test</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(266/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-198" readonly rows="10">💡 Spring Boot tip: Use @SpringBootTest(webEnvironment = RANDOM_PORT) for integration tests when testing controllers.
 
 ✅ Starts a real embedded server
@@ -1226,6 +1104,7 @@
     <article>
       <h2>Tweet #199</h2>
       <p class="preview">🚀 Spring Boot: springdoc-openapi automatically generates OpenAPI 3.0 (Swagger) documentation from yo</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(237/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-199" readonly rows="10">🚀 Spring Boot: springdoc-openapi automatically generates OpenAPI 3.0 (Swagger) documentation from your Spring Boot REST controllers.
 
 ✅ An interactive Swagger UI
@@ -1245,6 +1124,7 @@
     <article>
       <h2>Tweet #200</h2>
       <p class="preview">🚀 Spring Boot: You can enable a smooth shutdown with &quot;server.shutdown=graceful&quot; in your configuratio</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(239/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-200" readonly rows="10">🚀 Spring Boot: You can enable a smooth shutdown with "server.shutdown=graceful" in your configuration.
 
 ✅  It helps you avoid these situations:
@@ -1264,13 +1144,14 @@
     <article>
       <h2>Tweet #201</h2>
       <p class="preview">💡 Pin the Spring Boot version in the spring-boot-dependencies BOM to ensure consistent dependency ma</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(265/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-201" readonly rows="10">💡 Pin the Spring Boot version in the spring-boot-dependencies BOM to ensure consistent dependency management.
 
 ✅  The spring-boot-dependencies BOM allows you to omit versions of libraries that Spring Boot integrates with in your pom.xml.
 
 ✅ #SpringBoot
 
-✅ Runnable sample: spring-boot-tips</textarea>
+#SpringBoot</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-201">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1281,13 +1162,14 @@
     <article>
       <h2>Tweet #202</h2>
       <p class="preview">🚀 Spring Boot: Use ResponseEntity&lt;T&gt; to get fine-grained control over HTTP responses.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(168/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-202" readonly rows="10">🚀 Spring Boot: Use ResponseEntity&lt;T&gt; to get fine-grained control over HTTP responses.
 
 ✅ You can explicitly specify Status, Headers and Body
 
 ✅ #SpringBoot
 
-✅ Runnable sample: spring-boot-tips</textarea>
+#SpringBoot</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-202">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1298,13 +1180,14 @@
     <article>
       <h2>Tweet #203</h2>
       <p class="preview">🚀  Spring Boot: Use spring-boot-starter-mail for sending emails.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(209/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-203" readonly rows="10">🚀  Spring Boot: Use spring-boot-starter-mail for sending emails.
 
 ✅ It wraps all the necessary configuration and dependencies, making the process of sending emails simple and clear.
 
 ✅ #SpringBoot
 
-✅ Runnable sample: spring-boot-tips</textarea>
+#SpringBoot</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-203">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1315,13 +1198,12 @@
     <article>
       <h2>Tweet #204</h2>
       <p class="preview">🚀 Spring Boot: With @DataJpaTest you can test JPA repositories in isolation.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(116/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-204" readonly rows="10">🚀 Spring Boot: With @DataJpaTest you can test JPA repositories in isolation.
 
 ✅ #SpringBoot #Java
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#SpringBoot #Java</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-204">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1332,13 +1214,14 @@
     <article>
       <h2>Tweet #205</h2>
       <p class="preview">💡 Spring Boot: To better handle circular dependencies, use constructor injection instead of field in</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(249/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-205" readonly rows="10">💡 Spring Boot: To better handle circular dependencies, use constructor injection instead of field injection.
 
 ✅ Forces all required dependencies to be provided at creation time, allowing early detection.
 
 ✅ #SpringBoot #JavaDev
 
-✅ Runnable sample: spring-boot-tips</textarea>
+#SpringBoot #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-205">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1349,13 +1232,14 @@
     <article>
       <h2>Tweet #206</h2>
       <p class="preview">🚀 Spring Boot: Use @SpringBootApplication(exclude = …) to disable specific auto-configuration classe</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(250/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-206" readonly rows="10">🚀 Spring Boot: Use @SpringBootApplication(exclude = …) to disable specific auto-configuration classes.
 
 ✅ One possible reason could be that you have a custom configuration that conflicts with the default.
 
 ✅ #SpringBoot #JavaDev
 
-✅ Runnable sample: spring-boot-tips</textarea>
+#SpringBoot #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-206">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1366,13 +1250,14 @@
     <article>
       <h2>Tweet #207</h2>
       <p class="preview">🚀 Spring Boot: If you need to inject grouped configuration properties into classes, you can use @Con</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(232/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-207" readonly rows="10">🚀 Spring Boot: If you need to inject grouped configuration properties into classes, you can use @ConfigurationProperties instead of @Value
 
 ✅ #SpringBoot #JavaDev
 
 ✅ Uses @ConfigurationProperties in the snippet
 
-✅ Runnable sample: spring-boot-tips</textarea>
+#SpringBoot #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-207">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1383,13 +1268,12 @@
     <article>
       <h2>Tweet #208</h2>
       <p class="preview">🚀 Spring Boot: In development phase, use spring.main.lazy-initialization=true to speed up the startu</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(167/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-208" readonly rows="10">🚀 Spring Boot: In development phase, use spring.main.lazy-initialization=true to speed up the startup of the application.
 
 ✅ #SpringBoot #JavaDev
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#SpringBoot #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-208">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1400,13 +1284,14 @@
     <article>
       <h2>Tweet #209</h2>
       <p class="preview">🚀 Spring Boot: You can validate your input DTO objects with @Valid + @NotBlank, @Email, etc.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(186/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-209" readonly rows="10">🚀 Spring Boot: You can validate your input DTO objects with @Valid + @NotBlank, @Email, etc.
 
 ✅ #Java #SoftwareDevelopment
 
 ✅ Uses @PostMapping in the snippet
 
-✅ Runnable sample: spring-boot-tips</textarea>
+#Java #SoftwareDevelopment</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-209">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1417,13 +1302,14 @@
     <article>
       <h2>Tweet #210</h2>
       <p class="preview">🚀 Spring Boot: Spring Data JPA has a built-in support for pagination with Pageable.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(203/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-210" readonly rows="10">🚀 Spring Boot: Spring Data JPA has a built-in support for pagination with Pageable.
 
 ✅You should use pagination in your repositories instead of fetching all.
 
 ✅ #SpringBoot #JavaDev
 
-✅ Runnable sample: spring-boot-tips</textarea>
+#SpringBoot #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-210">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1434,13 +1320,12 @@
     <article>
       <h2>Tweet #211</h2>
       <p class="preview">💡Spring Boot tip: If you need to implement integrations tests for Spring MVC controllers, and mock e</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(231/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-211" readonly rows="10">💡Spring Boot tip: If you need to implement integrations tests for Spring MVC controllers, and mock everything else, use @WebMvcTest to load only MVC-related beans.
 
 ✅ #SpringBoot #IntegrationTesting
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#SpringBoot #IntegrationTesting</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-211">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1451,13 +1336,12 @@
     <article>
       <h2>Tweet #212</h2>
       <p class="preview">🚀 Spring Boot: You can use @Retryable to cope with unstable external services.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(148/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-212" readonly rows="10">🚀 Spring Boot: You can use @Retryable to cope with unstable external services.
 
 ✅ #SpringBoot #SoftwareDevelopment
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#SpringBoot #SoftwareDevelopment</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-212">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1468,13 +1352,12 @@
     <article>
       <h2>Tweet #213</h2>
       <p class="preview">🚀 Spring Boot: With @ConditionalOnMissingBean, you can define a default bean that can be possibly ov</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(217/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-213" readonly rows="10">🚀 Spring Boot: With @ConditionalOnMissingBean, you can define a default bean that can be possibly overridden by a user using a standard definition.
 
 ✅ #SpringBoot #SoftwareDevelopment
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#SpringBoot #SoftwareDevelopment</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-213">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1485,6 +1368,7 @@
     <article>
       <h2>Tweet #214</h2>
       <p class="preview">🚀Spring Boot: You have the choice of using WebClient over RestTemplate in new apps.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(231/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-214" readonly rows="10">🚀Spring Boot: You have the choice of using WebClient over RestTemplate in new apps.
 
 ✅ It’s reactive and non-blocking
@@ -1504,13 +1388,14 @@
     <article>
       <h2>Tweet #215</h2>
       <p class="preview">🚀 SpringBoot: Add global OpenAPI metadata with @OpenAPIDefinition.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(211/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-215" readonly rows="10">🚀 SpringBoot: Add global OpenAPI metadata with @OpenAPIDefinition.
 
 ✅ It should be put on your main Spring Boot application class, or a dedicated configuration class
 
 ✅ #SpringBoot #JavaDev
 
-✅ Runnable sample: spring-boot-tips</textarea>
+#SpringBoot #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-215">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1521,13 +1406,12 @@
     <article>
       <h2>Tweet #216</h2>
       <p class="preview">💡 SpringBoot: Define @ComponentScan boundaries carefully to avoid to avoid scanning entire packages </p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(159/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-216" readonly rows="10">💡 SpringBoot: Define @ComponentScan boundaries carefully to avoid to avoid scanning entire packages accidentally.
 
 ✅ #SpringBoot #JavaDev
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#SpringBoot #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-216">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1538,6 +1422,7 @@
     <article>
       <h2>Tweet #217</h2>
       <p class="preview">🚀 Spring Boot: You can cache expensive API calls using</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(185/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-217" readonly rows="10">🚀 Spring Boot: You can cache expensive API calls using
 
 ✅First request with a specific key: real API call
@@ -1557,13 +1442,12 @@
     <article>
       <h2>Tweet #218</h2>
       <p class="preview">🚀 Spring Boot: To make your services return a paginated response, instead of a giant list, you can u</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(170/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-218" readonly rows="10">🚀 Spring Boot: To make your services return a paginated response, instead of a giant list, you can use Page&lt;T&gt; and Pageable.
 
 ✅ #SpringBoot #JavaDev
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#SpringBoot #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-218">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1574,13 +1458,14 @@
     <article>
       <h2>Tweet #219</h2>
       <p class="preview">🚀 Spring Boot: If your code uses RestTemplate, you can implement tests by mocking external calls wit</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(231/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-219" readonly rows="10">🚀 Spring Boot: If your code uses RestTemplate, you can implement tests by mocking external calls with MockRestServiceServer.
 
 ✅ MockRestServiceServer works by intercepting HTTP requests
 
 ✅ #SpringBoot #JavaDev
 
-✅ Runnable sample: spring-boot-tips</textarea>
+#SpringBoot #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-219">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1591,13 +1476,14 @@
     <article>
       <h2>Tweet #220</h2>
       <p class="preview">🚀 Spring Boot: To make Jackson create your objects from JSON in an explicit, and predictable way, yo</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(217/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-220" readonly rows="10">🚀 Spring Boot: To make Jackson create your objects from JSON in an explicit, and predictable way, you can use @JsonCreator.
 
 ✅ This way, each parameter is explicitly bound
 
 ✅ #SpringBoot #JavaDev
 
-✅ Runnable sample: spring-boot-tips</textarea>
+#SpringBoot #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-220">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1608,13 +1494,12 @@
     <article>
       <h2>Tweet #221</h2>
       <p class="preview">🚀 Spring Boot:  To execute SQL scripts before or after a test method, you can use the @Sql annotatio</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(148/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-221" readonly rows="10">🚀 Spring Boot:  To execute SQL scripts before or after a test method, you can use the @Sql annotation.
 
 ✅ #SpringBoot #JavaDev
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#SpringBoot #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-221">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1625,13 +1510,12 @@
     <article>
       <h2>Tweet #222</h2>
       <p class="preview">🚀 Spring Boot: If your application uses RestTemplate for REST calls, you can centralize timeouts wit</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(169/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-222" readonly rows="10">🚀 Spring Boot: If your application uses RestTemplate for REST calls, you can centralize timeouts with RestTemplateBuilder .
 
 ✅ #SpringBoot #JavaDev
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#SpringBoot #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-222">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1642,13 +1526,12 @@
     <article>
       <h2>Tweet #223</h2>
       <p class="preview">🚀Spring Boot: To exclude any fields whose value is null in Jackson serialization you can use @JsonIn</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(171/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-223" readonly rows="10">🚀Spring Boot: To exclude any fields whose value is null in Jackson serialization you can use @JsonInclude(Include.NON_NULL) .
 
 ✅ #SpringBoot #JavaDev
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#SpringBoot #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-223">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1659,13 +1542,14 @@
     <article>
       <h2>Tweet #224</h2>
       <p class="preview">🚀 Spring Boot: Better avoid wildcard exclusions for transitive dependencies in POMs, because they ca</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(252/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-224" readonly rows="10">🚀 Spring Boot: Better avoid wildcard exclusions for transitive dependencies in POMs, because they can hide problems.
 
 ✅ ❌ Wildcard exclusions just remove the symptom and mask the underlying version mismatch
 
 ✅ #SpringBoot #JavaDev
 
-✅ Runnable sample: spring-boot-tips</textarea>
+#SpringBoot #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-224">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1676,13 +1560,14 @@
     <article>
       <h2>Tweet #225</h2>
       <p class="preview">🚀 Spring Boot: Keep controllers thin, put logic in services.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(186/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-225" readonly rows="10">🚀 Spring Boot: Keep controllers thin, put logic in services.
 
 ✅ Controllers main job is just to handle HTTP concerns
 
 ✅ #SpringBoot #SoftwareEngineering
 
-✅ Runnable sample: spring-boot-tips</textarea>
+#SpringBoot #SoftwareEngineering</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-225">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1693,13 +1578,12 @@
     <article>
       <h2>Tweet #226</h2>
       <p class="preview">🚀 Spring Boot: Avoid FetchType.EAGER unless you really need it.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(133/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-226" readonly rows="10">🚀 Spring Boot: Avoid FetchType.EAGER unless you really need it.
 
 ✅ #Springboot #SoftwareDevelopment
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#Springboot #SoftwareDevelopment</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-226">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1710,6 +1594,7 @@
     <article>
       <h2>Tweet #227</h2>
       <p class="preview">🚀 Spring Boot: You can implement optimistic locking using the @Version annotation.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(171/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-227" readonly rows="10">🚀 Spring Boot: You can implement optimistic locking using the @Version annotation.
 
 ✅ Ideal when:
@@ -1729,13 +1614,12 @@
     <article>
       <h2>Tweet #228</h2>
       <p class="preview">🚀 Spring Boot: Prefer static utility classes over Spring beans only if they don&#x27;t hold state, they h</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(225/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-228" readonly rows="10">🚀 Spring Boot: Prefer static utility classes over Spring beans only if they don't hold state, they have no dependencies and they don't need mocking or AOP.
 
 ✅ #SpringBoot #SoftwareDevelopment
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#SpringBoot #SoftwareDevelopment</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-228">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1746,6 +1630,7 @@
     <article>
       <h2>Tweet #229</h2>
       <p class="preview">🚀 Spring Boot:  Better not expose JPA entities directly, use DTOs at boundaries instead.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(219/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-229" readonly rows="10">🚀 Spring Boot:  Better not expose JPA entities directly, use DTOs at boundaries instead.
 
 ✅This allows to:
@@ -1765,13 +1650,16 @@
     <article>
       <h2>Tweet #230</h2>
       <p class="preview">🚀 You can use async logging in Spring Boot by configuring logback (logback-spring.xml).</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(258/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-230" readonly rows="10">🚀 You can use async logging in Spring Boot by configuring logback (logback-spring.xml).
 
 ✅ Log messages are sent into a queue,  and are elaborated by a separate background thread.
 
 ✅ This reduces I/O bottlenecks.
 
-✅ #SpringBoot #JavaDev</textarea>
+✅ #SpringBoot #JavaDev
+
+#SpringBoot #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-230">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1782,13 +1670,12 @@
     <article>
       <h2>Tweet #231</h2>
       <p class="preview">🚀 Spring Boot: @AutoConfigureMockMvc allows you to test controllers without starting the server. It </p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(224/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-231" readonly rows="10">🚀 Spring Boot: @AutoConfigureMockMvc allows you to test controllers without starting the server. It tells Spring Boot to automatically configure a MockMvc instance in the test context.
 
 ✅ #SpringBoot #Java
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#SpringBoot #Java</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-231">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1799,13 +1686,12 @@
     <article>
       <h2>Tweet #232</h2>
       <p class="preview">🚀Spring Boot: Spring Boot: Use spring.mvc.publish-request-params=true only in dev. It&#x27;s dangerous in</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(235/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-232" readonly rows="10">🚀Spring Boot: Spring Boot: Use spring.mvc.publish-request-params=true only in dev. It's dangerous in production.
 
 ✅ Spring Boot: Use spring.mvc.publish-request-params=true only in dev. It's dangerous in production
 
-✅ 🔴In production, logging request details can expose sensitive information
-
-✅ #SpringBoot #JavaDev</textarea>
+#SpringBoot #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-232">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1816,13 +1702,16 @@
     <article>
       <h2>Tweet #233</h2>
       <p class="preview">🚀 Spring Boot: Better keep the default spring.main.allow-bean-definition-overriding=false configurat</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(278/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-233" readonly rows="10">🚀 Spring Boot: Better keep the default spring.main.allow-bean-definition-overriding=false configuration.
 
 ✅This way Spring fails to start if two beans share the same name.
 
 ✅Useful because bean overriding can hide configuration bugs
 
-✅ #SpringBoot #JavaDev</textarea>
+✅ #SpringBoot #JavaDev
+
+#SpringBoot #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-233">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1833,13 +1722,12 @@
     <article>
       <h2>Tweet #234</h2>
       <p class="preview">🚀 Spring Boot: Better use global filters/interceptors only for true cross-cutting concerns, and avoi</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(214/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-234" readonly rows="10">🚀 Spring Boot: Better use global filters/interceptors only for true cross-cutting concerns, and avoid business logic. They are executed for every incoming HTTP request.
 
 ✅ #SpringBoot #JavaDev
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#SpringBoot #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-234">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1850,13 +1738,12 @@
     <article>
       <h2>Tweet #235</h2>
       <p class="preview">🚀Spring Boot: Spring Boot: Avoid importing the full spring-boot-starter-web if you only need Spring </p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(249/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-235" readonly rows="10">🚀Spring Boot: Spring Boot: Avoid importing the full spring-boot-starter-web if you only need Spring MVC, because the full starter brings in extra components like an embedded server that you may not need.
 
 ✅ #SpringBoot #JavaDev
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#SpringBoot #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-235">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1867,6 +1754,7 @@
     <article>
       <h2>Tweet #236</h2>
       <p class="preview">🚀 Spring Boot: You can use the &quot;spring.jpa.properties.hibernate.jdbc.batch_size&quot; property to make Hi</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(219/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-236" readonly rows="10">🚀 Spring Boot: You can use the "spring.jpa.properties.hibernate.jdbc.batch_size" property to make Hibernate handle batch inserts.
 
 ✅ ewer network calls
@@ -1886,6 +1774,7 @@
     <article>
       <h2>Tweet #237</h2>
       <p class="preview">🚀 Spring Boot: You can enable /actuator/beans to debug missing beans.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(131/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-237" readonly rows="10">🚀 Spring Boot: You can enable /actuator/beans to debug missing beans.
 
 ✅ Bean name
@@ -1905,13 +1794,12 @@
     <article>
       <h2>Tweet #238</h2>
       <p class="preview">🚀 Spring Boot: A webhook is when another system  sends a POST request to your app when something hap</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(244/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-238" readonly rows="10">🚀 Spring Boot: A webhook is when another system  sends a POST request to your app when something happens. In Spring Boot you implement it simply exposing an endpoint that receives that POST request.
 
 ✅ #SpringBoot #JavaDev
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#SpringBoot #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-238">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1922,13 +1810,12 @@
     <article>
       <h2>Tweet #239</h2>
       <p class="preview">🚀 Spring Boot: Use @TestConfiguration to use test-specific beans that must not be loaded in producti</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(149/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-239" readonly rows="10">🚀 Spring Boot: Use @TestConfiguration to use test-specific beans that must not be loaded in production.
 
 ✅ #SpringBoot #JavaDev
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#SpringBoot #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-239">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1939,13 +1826,12 @@
     <article>
       <h2>Tweet #240</h2>
       <p class="preview">🚀 Spring Boot testing: @MockBean by default resets the mocks between tests, to keep them independent</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(218/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-240" readonly rows="10">🚀 Spring Boot testing: @MockBean by default resets the mocks between tests, to keep them independent. You can disable this behaviour with @MockBean(reset = MockReset.NONE).
 
 ✅ #SpringBoot #JavaDev
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#SpringBoot #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-240">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1956,13 +1842,12 @@
     <article>
       <h2>Tweet #241</h2>
       <p class="preview">🚀 Spring Boot testing: Using spring.main.log-startup-info=false, you can skip the verbose startup su</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(152/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-241" readonly rows="10">🚀 Spring Boot testing: Using spring.main.log-startup-info=false, you can skip the verbose startup summary.
 
 ✅ #SpringBoot #JavaDev
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#SpringBoot #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-241">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1973,13 +1858,14 @@
     <article>
       <h2>Tweet #242</h2>
       <p class="preview">🚀 Spring Boot: You can validate config classes with the @Validated annotation.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(199/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-242" readonly rows="10">🚀 Spring Boot: You can validate config classes with the @Validated annotation.
 
 ✅ It makes your app fail fast at startup if the configuration is invalid.
 
 ✅ #SpringBoot #JavaDev
 
-✅ Runnable sample: spring-boot-tips</textarea>
+#SpringBoot #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-242">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1990,13 +1876,12 @@
     <article>
       <h2>Tweet #243</h2>
       <p class="preview">🚀Spring Boot: Spring Boot: Better avoid logging inside tight loops, since you could affect the appli</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(185/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-243" readonly rows="10">🚀Spring Boot: Spring Boot: Better avoid logging inside tight loops, since you could affect the application performance and flood log files.
 
 ✅ #SpringBoot #JavaDev
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#SpringBoot #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-243">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -2007,13 +1892,12 @@
     <article>
       <h2>Tweet #244</h2>
       <p class="preview">🚀 Spring Boot: Better use SpringBootTest.WebEnvironment.RANDOM_PORT  instead of hardcoding ports in </p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(171/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-244" readonly rows="10">🚀 Spring Boot: Better use SpringBootTest.WebEnvironment.RANDOM_PORT  instead of hardcoding ports in tests to avoid conflicts.
 
 ✅ #SpringBoot #JavaDev
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#SpringBoot #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-244">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -2024,13 +1908,12 @@
     <article>
       <h2>Tweet #245</h2>
       <p class="preview">🚀Spring Boot by default does not include stacktrace in the response of REST service calls. Only for </p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(276/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-245" readonly rows="10">🚀Spring Boot by default does not include stacktrace in the response of REST service calls. Only for fast debugging purposes (don't do it in production), you can enable it with the configuration property include-stacktrace: always.
 
 ✅ #SpringBoot #JavaDev
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#SpringBoot #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-245">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -2041,13 +1924,14 @@
     <article>
       <h2>Tweet #246</h2>
       <p class="preview">🚀 Spring Boot: You have the option of using streaming (Stream&lt;T&gt;) for queries with large datasets.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(224/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-246" readonly rows="10">🚀 Spring Boot: You have the option of using streaming (Stream&lt;T&gt;) for queries with large datasets.
 
 ✅Results are fetched in chunks, with only a small subset in memory at any time
 
 ✅ #SpringBoot #JavaDev
 
-✅ Runnable sample: spring-boot-tips</textarea>
+#SpringBoot #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-246">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -2058,13 +1942,14 @@
     <article>
       <h2>Tweet #247</h2>
       <p class="preview">🚀 Spring Boot: @TransactionalEventListener can be used to implement post-commit actions.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(172/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-247" readonly rows="10">🚀 Spring Boot: @TransactionalEventListener can be used to implement post-commit actions.
 
 ✅ #SpringBoot #JavaDev
 
 ✅ Uses @Transactional in the snippet
 
-✅ Runnable sample: spring-boot-tips</textarea>
+#SpringBoot #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-247">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -2075,13 +1960,14 @@
     <article>
       <h2>Tweet #248</h2>
       <p class="preview">🚀 Spring Boot: You can handle CORS globally with a WebMvcConfigurer</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(259/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-248" readonly rows="10">🚀 Spring Boot: You can handle CORS globally with a WebMvcConfigurer
 
 ✅CORS is the mechanism that allows a web application on one domain (origin) to access resources from a different domain.
 
 ✅ #SpringBoot #SoftwareDevelopment
 
-✅ Runnable sample: spring-boot-tips</textarea>
+#SpringBoot #SoftwareDevelopment</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-248">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -2092,6 +1978,7 @@
     <article>
       <h2>Tweet #249</h2>
       <p class="preview">🚀 Spring Boot: An efficient way of handling large CSV files is by using Spring Batch features.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(164/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-249" readonly rows="10">🚀 Spring Boot: An efficient way of handling large CSV files is by using Spring Batch features.
 
 ✅ Chunking
@@ -2111,13 +1998,12 @@
     <article>
       <h2>Tweet #250</h2>
       <p class="preview">🚀 Spring Boot: It&#x27;s important to validate the input of your APIS, even of the internal ones.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(162/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-250" readonly rows="10">🚀 Spring Boot: It's important to validate the input of your APIS, even of the internal ones.
 
 ✅ #SpringBoot #SoftwareDevelopment
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#SpringBoot #SoftwareDevelopment</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-250">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -2128,13 +2014,12 @@
     <article>
       <h2>Tweet #251</h2>
       <p class="preview">🚀Spring Boot: Use @EntityGraph to control fetch strategies and prevent N+1 queries.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(153/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-251" readonly rows="10">🚀Spring Boot: Use @EntityGraph to control fetch strategies and prevent N+1 queries.
 
 ✅ #SpringBoot #SoftwareEngineering
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#SpringBoot #SoftwareEngineering</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-251">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -2145,13 +2030,14 @@
     <article>
       <h2>Tweet #252</h2>
       <p class="preview">🚀Spring Boot: You can keep full traceability while handling exceptions in a centralized way, and ret</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(243/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-252" readonly rows="10">🚀Spring Boot: You can keep full traceability while handling exceptions in a centralized way, and returning safe API responses with @RestControllerAdvice
 
 ✅ #SpringBoot #JavaDev
 
 ✅ Uses @RestControllerAdvice in the snippet
 
-✅ Uses @ExceptionHandler in the snippet</textarea>
+#SpringBoot #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-252">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -2162,13 +2048,12 @@
     <article>
       <h2>Tweet #253</h2>
       <p class="preview">🚀Spring Boot: Adding request tracing is very important for debugging APIs</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(119/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-253" readonly rows="10">🚀Spring Boot: Adding request tracing is very important for debugging APIs
 
 ✅ #SpringBoot #JavaDev
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#SpringBoot #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-253">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -2179,6 +2064,7 @@
     <article>
       <h2>Tweet #254</h2>
       <p class="preview">🚀@Sql or @SqlGroup allows you to preload test data to perform reproducible tests.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(174/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-254" readonly rows="10">🚀@Sql or @SqlGroup allows you to preload test data to perform reproducible tests.
 
 ✅Insert test data
@@ -2198,13 +2084,12 @@
     <article>
       <h2>Tweet #255</h2>
       <p class="preview">🚀Spring Boot: With org.hibernate.SQL=DEBUG, you can get a deeper insight into Hibernate queries from</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(160/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-255" readonly rows="10">🚀Spring Boot: With org.hibernate.SQL=DEBUG, you can get a deeper insight into Hibernate queries from the logs.
 
 ✅ #SpringBoot #Hibernate
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#SpringBoot #Hibernate</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-255">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -2215,13 +2100,12 @@
     <article>
       <h2>Tweet #256</h2>
       <p class="preview">🚀 Spring Boot: Better externalize scheduled tasks fixedRateString&#x27;s value.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(114/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-256" readonly rows="10">🚀 Spring Boot: Better externalize scheduled tasks fixedRateString's value.
 
 ✅ #SpringBoot #Java
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#SpringBoot #Java</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-256">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -2232,13 +2116,10 @@
     <article>
       <h2>Tweet #257</h2>
       <p class="preview">🚀Spring Boot: Using Spring Cloud Config for centralized configuration management is important.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(248/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-257" readonly rows="10">🚀Spring Boot: Using Spring Cloud Config for centralized configuration management is important.
 
 ✅Instead of many services each carrying their own application.yml, you pull it from a single source.
-
-✅First of all, you have to configure the config server.
-
-✅You will have a config server app annotated with @EnableConfigServer and a Git repo holding all your .yml files.
 
 #SpringCloud #Microservices #MicroservicesSecurity</textarea>
       <p class="copy-row">
@@ -2251,13 +2132,14 @@
     <article>
       <h2>Tweet #258</h2>
       <p class="preview">🚀Spring Boot integrates easily with Kafka to implement event-driven architectures.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(202/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-258" readonly rows="10">🚀Spring Boot integrates easily with Kafka to implement event-driven architectures.
 
 ✅ #SpringBoot #JavaDev
 
 ✅ The final step is implementing consumer and producers as Java objects:
 
-✅ Runnable sample: spring-boot-tips</textarea>
+#SpringBoot #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-258">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -2268,13 +2150,14 @@
     <article>
       <h2>Tweet #259</h2>
       <p class="preview">🚀 Spring Boot: @ConditionalOnClass is a Spring Boot annotation used in auto-configuration.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(253/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-259" readonly rows="10">🚀 Spring Boot: @ConditionalOnClass is a Spring Boot annotation used in auto-configuration.
 
 ✅It conditionally enables a bean or configuration only if a specified class is present on the classpath
 
 ✅ #SpringBoot #Microservices
 
-✅ Runnable sample: spring-boot-tips</textarea>
+#SpringBoot #Microservices</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-259">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -2285,13 +2168,12 @@
     <article>
       <h2>Tweet #260</h2>
       <p class="preview">🚀Spring Boot: spring.main.lazy-initialization=true doesn&#x27;t just delay bean creation, it skips @PostC</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(243/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-260" readonly rows="10">🚀Spring Boot: spring.main.lazy-initialization=true doesn't just delay bean creation, it skips @PostConstruct entirely until first use. Be careful and watch for side effects.
 
 ✅ #SpringBoot #SoftwareDevelopment
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#SpringBoot #SoftwareDevelopment</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-260">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>

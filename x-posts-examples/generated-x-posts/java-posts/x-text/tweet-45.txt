@@ -2,8 +2,4 @@
 
 ✅ Know the difference between shallow and deep clone
 
-✅ Runnable sample: java-miscellaneous-tips
-
-✅ Architecture diagram + Carbon CodePen below
-
 #Java #SoftwareEngineering

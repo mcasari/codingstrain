@@ -4,4 +4,4 @@
 
 ✅ Uses @Transactional in the snippet
 
-✅ Runnable sample: spring-boot-tips
+#SpringBoot #JavaDev

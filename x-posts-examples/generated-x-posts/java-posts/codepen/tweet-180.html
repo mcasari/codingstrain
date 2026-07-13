@@ -19,7 +19,7 @@
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 180 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
-             data-height="640"
+             data-height="812"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -86,8 +86,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -113,8 +113,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -141,13 +141,19 @@ body {
   font-size: 16px;
 }
 </pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;java-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// 💡Java: If you need to write OS-native newlines, you can use System.lineSeparator().&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// ✅ #Java #JavaDev&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// ✅ Runnable sample: `java-tips`&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// ✅ Architecture diagram + Carbon CodePen below&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;java-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;typ&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;nl&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;lineSeparator&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;com&quot;&gt;// ❌ Hardcoded \n — fine on Linux, awkward on Windows&lt;/span&gt;
+&lt;span class=&quot;typ&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;bad&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;Date,Amount&amp;quot;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;2026-01-01,42&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;com&quot;&gt;// ✅ OS-native newlines&lt;/span&gt;
+&lt;span class=&quot;typ&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;good&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;nl&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;Date,Amount&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;2026-01-01,42&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;2026-01-02,17&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;typ&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;good&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// Windows → \r\n between lines · Linux/macOS → \n&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-180.html" target="_blank" rel="noopener">Open pen preview</a>

@@ -4,6 +4,4 @@
 
 ✅ Uses @Transactional in the snippet
 
-✅ Runnable sample: spring-transactional-event-demo
-
 #SpringBoot #Microservices

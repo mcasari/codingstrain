@@ -4,6 +4,4 @@
 
 ✅ Feed randomized data with Faker so every request looks realistic
 
-✅ Assert SLAs on the whole run — fail it if it gets too slow (≤10s) or drops below >90% success
-
 #SpringCloud #Testing

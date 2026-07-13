@@ -2,8 +2,4 @@
 
 ✅ spring-boot-starter-logging is already included in most starters (spring-boot-starter-web, spring-boot-starter-data-jpa, etc.)
 
-✅ You can customize log levels by editing application.yml:
-
-✅ To customize format and rotation, create a logback-spring.xml in src/main/resources.
-
 #SpringBoot #Java

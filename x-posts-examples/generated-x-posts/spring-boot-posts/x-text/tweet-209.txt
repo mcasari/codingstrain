@@ -4,4 +4,4 @@
 
 ✅ Uses @PostMapping in the snippet
 
-✅ Runnable sample: spring-boot-tips
+#Java #SoftwareDevelopment

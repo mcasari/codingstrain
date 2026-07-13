@@ -4,6 +4,4 @@
 
 ✅ 1) You don't expose internal state, improving security
 
-✅ 2) You can change the implementation without breaking other parts
-
 #Java #JavaDev

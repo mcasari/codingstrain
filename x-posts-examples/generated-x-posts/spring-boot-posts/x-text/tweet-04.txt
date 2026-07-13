@@ -4,6 +4,4 @@
 
 ✅ Uses @GetMapping in the snippet
 
-✅ Runnable sample: spring-boot-minimal-rest-h2
-
 #SpringBoot #Java

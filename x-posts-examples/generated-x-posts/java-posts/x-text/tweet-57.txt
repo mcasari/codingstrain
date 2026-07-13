@@ -4,6 +4,4 @@
 
 ✅ ParameterResolver injects test dependencies — no base-class inheritance needed
 
-✅ Extensions compose: stack several with @ExtendWith and they just work together
-
 #Java #JUnit5 #Testing

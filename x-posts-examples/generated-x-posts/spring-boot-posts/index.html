@@ -18,7 +18,7 @@
     .asset-label { font-size: 0.85rem; color: #536471; margin: 0.75rem 0 0.35rem; }
     .asset-img { display: block; max-width: 100%; border-radius: 8px; margin-bottom: 0.5rem; border: 1px solid #eff3f4; }
     .codepen-wrap { margin: 0.5rem 0 1rem; border-radius: 8px; overflow: hidden; border: 1px solid #eff3f4; }
-    .codepen-wrap--large { max-width: 100%; min-height: 640px; }
+    .codepen-wrap--large { max-width: 100%; min-height: 800px; }
     .codepen-links { font-size: 0.8rem; margin: 0.35rem 0 0; padding: 0 0.5rem 0.5rem; }
     .codepen-links a { color: #1d9bf0; }
     .pagination { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.75rem; background: #fff; border: 1px solid #eff3f4; border-radius: 12px; padding: 0.75rem 1rem; margin-bottom: 1.5rem; font-size: 0.9rem; }
@@ -53,6 +53,8 @@
     }
     .copy-x-btn:hover { background: #1a8cd8; }
     .copy-status { font-size: 0.85rem; color: #536471; }
+    .x-char-count { font-size: 0.8rem; color: #536471; font-weight: 600; }
+    .x-char-count--over { color: #dc2626; }
 
   </style>
 </head>
@@ -75,7 +77,7 @@
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 1 — spring-boot-minimal-rest-h2", "description": "Spring Boot snippet from codingstrain (spring-boot-minimal-rest-h2)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="668"
+             data-height="856"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -142,8 +144,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -169,8 +171,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -217,7 +219,7 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(194/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-1" readonly rows="10">🚀Spring Boot: Your first REST API in 30 seconds with H2.
 
 ✅ Your first REST API in 30 seconds with H2
@@ -246,7 +248,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 2 — spring-boot-paged-rest-example", "description": "Spring Boot snippet from codingstrain (spring-boot-paged-rest-example)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="640"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -313,8 +315,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -340,8 +342,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -383,14 +385,12 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(178/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-2" readonly rows="10">🚀Spring Boot: Constructor injection beats field injection.
 
 ✅ Constructor injection beats field injection
 
 ✅ Uses @RestController in the snippet
-
-✅ Runnable sample: spring-boot-paged-rest-example
 
 #SpringBoot #SoftwareEngineering</textarea>
       <p class="copy-row">
@@ -412,7 +412,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 3 — spring-boot-paged-rest-example", "description": "Spring Boot snippet from codingstrain (spring-boot-paged-rest-example)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="640"
+             data-height="724"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -479,8 +479,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -506,8 +506,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -551,14 +551,12 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(166/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-3" readonly rows="10">🚀Spring Boot: Pagination without boilerplate — use Pageable.
 
 ✅ Pagination without boilerplate — use Pageable
 
 ✅ Uses @GetMapping in the snippet
-
-✅ Runnable sample: spring-boot-paged-rest-example
 
 #SpringBoot #JavaDev</textarea>
       <p class="copy-row">
@@ -580,7 +578,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 4 — spring-boot-minimal-rest-h2", "description": "Spring Boot snippet from codingstrain (spring-boot-minimal-rest-h2)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="640"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -647,8 +645,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -674,8 +672,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -717,14 +715,12 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(177/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-4" readonly rows="10">🚀Spring Boot: @PathVariable vs @RequestParam — know the difference.
 
 ✅ @PathVariable vs @RequestParam — know the difference
 
 ✅ Uses @GetMapping in the snippet
-
-✅ Runnable sample: spring-boot-minimal-rest-h2
 
 #SpringBoot #Java</textarea>
       <p class="copy-row">
@@ -746,7 +742,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 5 — springboot-error-handling-demo", "description": "Spring Boot snippet from codingstrain (springboot-error-handling-demo)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="668"
+             data-height="856"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -813,8 +809,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -840,8 +836,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -888,14 +884,8 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(166/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-5" readonly rows="10">🚀Spring Boot: With @RestControllerAdvice you can handle specific types of exceptions globally instead of using try/catch everywhere.
-
-✅ With @RestControllerAdvice you can handle specific types of exceptions globally instead of using try/catch everywhere
-
-✅ Uses @ExceptionHandler in the snippet
-
-✅ Uses @GetMapping in the snippet
 
 #SpringBoot #SoftwareEngineering</textarea>
       <p class="copy-row">
@@ -917,7 +907,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 6 — springboot-error-handling-demo", "description": "Spring Boot snippet from codingstrain (springboot-error-handling-demo)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="640"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -984,8 +974,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -1011,8 +1001,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -1052,14 +1042,10 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(195/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-6" readonly rows="10">🚀Spring Boot: Stop returning stack traces to clients — return a stable JSON structure.
 
 ✅ Stop returning stack traces to clients — return a stable JSON structure
-
-✅ Runnable sample: springboot-error-handling-demo
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot #SoftwareEngineering</textarea>
       <p class="copy-row">
@@ -1081,7 +1067,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 7 — springboot-error-handling-demo", "description": "Spring Boot snippet from codingstrain (springboot-error-handling-demo)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="892"
+             data-height="1164"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -1148,8 +1134,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -1175,8 +1161,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -1230,14 +1216,10 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(151/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-7" readonly rows="10">🚀Spring Boot: Always map exceptions to HTTP status + a safe JSON body.
 
 ✅ Always map exceptions to HTTP status + a safe JSON body
-
-✅ Runnable sample: springboot-error-handling-demo
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot #JavaDev</textarea>
       <p class="copy-row">
@@ -1259,7 +1241,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 8 — springboot-error-handling-demo", "description": "Spring Boot snippet from codingstrain (springboot-error-handling-demo)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="640"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -1326,8 +1308,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -1353,8 +1335,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -1393,14 +1375,10 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(94/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-8" readonly rows="10">🚀Spring Boot: Production error JSON checklist.
 
 ✅ Production error JSON checklist
-
-✅ Runnable sample: springboot-error-handling-demo
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot</textarea>
       <p class="copy-row">
@@ -1422,7 +1400,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 9 — spring-boot-validated-config", "description": "Spring Boot snippet from codingstrain (spring-boot-validated-config)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="640"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -1489,8 +1467,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -1516,8 +1494,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -1560,14 +1538,10 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(179/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-9" readonly rows="10">🚀Spring Boot: Fail fast at startup with @Validated + @ConfigurationProperties.
 
 ✅ Fail fast at startup with @Validated + @ConfigurationProperties
-
-✅ Runnable sample: spring-boot-validated-config
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot #SoftwareEngineering</textarea>
       <p class="copy-row">
@@ -1589,7 +1563,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 10 — spring-boot-validated-config", "description": "Spring Boot snippet from codingstrain (spring-boot-validated-config)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="640"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -1656,8 +1630,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -1683,8 +1657,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -1724,14 +1698,10 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(116/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-10" readonly rows="10">🚀Spring Boot: Use @Valid on nested configuration objects.
 
 ✅ Use @Valid on nested configuration objects
-
-✅ Runnable sample: spring-boot-validated-config
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot</textarea>
       <p class="copy-row">
@@ -1753,7 +1723,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 11 — spring-boot-validated-config", "description": "Spring Boot snippet from codingstrain (spring-boot-validated-config)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="640"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -1820,8 +1790,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -1847,8 +1817,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -1883,14 +1853,10 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(149/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-11" readonly rows="10">🚀Spring Boot: Validate lists in application.yml with Bean Validation.
 
 ✅ Validate lists in application.yml with Bean Validation
-
-✅ Runnable sample: spring-boot-validated-config
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot #JavaDev</textarea>
       <p class="copy-row">
@@ -1912,7 +1878,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 12 — spring-boot-validated-config", "description": "Spring Boot snippet from codingstrain (spring-boot-validated-config)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="640"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -1979,8 +1945,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -2006,8 +1972,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -2047,14 +2013,10 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(170/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-12" readonly rows="10">🚀Spring Boot: Bad YAML fails at startup — better than discovering misconfig in prod.
 
 ✅ Bad YAML fails at startup — better than discovering misconfig in prod
-
-✅ Runnable sample: spring-boot-validated-config
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot</textarea>
       <p class="copy-row">
@@ -2076,7 +2038,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 13 — sql-annotation-demo", "description": "Spring Boot snippet from codingstrain (sql-annotation-demo)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="640"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -2143,8 +2105,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -2170,8 +2132,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -2206,14 +2168,10 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(120/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-13" readonly rows="10">🚀Spring Boot: JpaRepository is your entire DAO for CRUD.
 
 ✅ JpaRepository is your entire DAO for CRUD
-
-✅ Runnable sample: sql-annotation-demo
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot #Java</textarea>
       <p class="copy-row">
@@ -2235,7 +2193,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 14 — sql-annotation-demo", "description": "Spring Boot snippet from codingstrain (sql-annotation-demo)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="640"
+             data-height="768"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -2302,8 +2260,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -2329,8 +2287,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -2375,14 +2333,12 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(235/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-14" readonly rows="10">🚀Spring Boot: @Sql or @SqlGroup allows you to preload test data for reproducible tests.
 
 ✅ @Sql or @SqlGroup allows you to preload test data for reproducible tests
 
 ✅ Uses @SpringBootTest in the snippet
-
-✅ Runnable sample: sql-annotation-demo
 
 #SpringBoot #IntegrationTesting</textarea>
       <p class="copy-row">
@@ -2404,7 +2360,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 15 — spring-streaming-demo", "description": "Spring Boot snippet from codingstrain (spring-streaming-demo)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="640"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -2471,8 +2427,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -2498,8 +2454,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -2534,14 +2490,10 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(159/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-15" readonly rows="10">🚀Spring Boot: Processing 1M rows with findAll() will OOM you — use a Stream.
 
 ✅ Processing 1M rows with findAll() will OOM you — use a Stream
-
-✅ Runnable sample: spring-streaming-demo
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot #JPA</textarea>
       <p class="copy-row">
@@ -2563,7 +2515,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 16 — spring-streaming-demo", "description": "Spring Boot snippet from codingstrain (spring-streaming-demo)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="640"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -2630,8 +2582,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -2657,8 +2609,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -2699,14 +2651,10 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(161/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-16" readonly rows="10">🚀Spring Boot: Call EntityManager.clear() every N rows when streaming.
 
 ✅ Call EntityManager.clear() every N rows when streaming
-
-✅ Runnable sample: spring-streaming-demo
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot #SoftwareEngineering</textarea>
       <p class="copy-row">
@@ -2728,7 +2676,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 17 — spring-streaming-demo", "description": "Spring Boot snippet from codingstrain (spring-streaming-demo)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="640"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -2795,8 +2743,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -2822,8 +2770,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -2859,14 +2807,10 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(127/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-17" readonly rows="10">🚀Spring Boot: Always wrap JPA streams in try-with-resources.
 
 ✅ Always wrap JPA streams in try-with-resources
-
-✅ Runnable sample: spring-streaming-demo
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot #JPA</textarea>
       <p class="copy-row">
@@ -2888,7 +2832,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 18 — spring-streaming-demo", "description": "Spring Boot snippet from codingstrain (spring-streaming-demo)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="640"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -2955,8 +2899,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -2982,8 +2926,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -3023,14 +2967,10 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(159/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-18" readonly rows="10">🚀Spring Boot: Use @Transactional(readOnly = true) on read-only batch jobs.
 
 ✅ Use @Transactional(readOnly = true) on read-only batch jobs
-
-✅ Runnable sample: spring-streaming-demo
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot #JavaDev</textarea>
       <p class="copy-row">
@@ -3052,7 +2992,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 19 — spring-kafka-demo", "description": "Spring Boot snippet from codingstrain (spring-kafka-demo)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="640"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -3119,8 +3059,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -3146,8 +3086,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -3189,14 +3129,10 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(183/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-19" readonly rows="10">🚀Spring Boot: Spring Boot integrates easily with Kafka for event-driven architectures.
 
 ✅ Spring Boot integrates easily with Kafka for event-driven architectures
-
-✅ Runnable sample: spring-kafka-demo
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot #JavaDev</textarea>
       <p class="copy-row">
@@ -3218,7 +3154,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 20 — spring-kafka-demo", "description": "Spring Boot snippet from codingstrain (spring-kafka-demo)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="640"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -3285,8 +3221,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -3312,8 +3248,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -3350,14 +3286,10 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(131/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-20" readonly rows="10">🚀Spring Boot: Kafka consumers are simple with @KafkaListener.
 
 ✅ Kafka consumers are simple with @KafkaListener
-
-✅ Runnable sample: spring-kafka-demo
-
-✅ Architecture diagram + Carbon CodePen below
 
 #SpringBoot #Kafka</textarea>
       <p class="copy-row">

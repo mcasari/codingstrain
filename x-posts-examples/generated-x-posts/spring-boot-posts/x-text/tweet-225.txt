@@ -4,4 +4,4 @@
 
 ✅ #SpringBoot #SoftwareEngineering
 
-✅ Runnable sample: spring-boot-tips
+#SpringBoot #SoftwareEngineering

@@ -2,8 +2,4 @@
 
 ✅ Always wrap JPA streams in try-with-resources
 
-✅ Runnable sample: spring-streaming-demo
-
-✅ Architecture diagram + Carbon CodePen below
-
 #SpringBoot #JPA

@@ -243,13 +243,70 @@ def format_twitter_body(tweet: dict) -> str:
     return normalize_tweet_body(tweet)
 
 
-def format_twitter_body_for_x(tweet: dict) -> str:
-    """Plain text for pasting into X — spaced paragraphs, no markdown backticks."""
+X_CHAR_LIMIT = 280
+
+_X_FILLER_BULLETS = (
+    "runnable sample",
+    "architecture diagram",
+    "carbon codepen",
+    "from the codingstrain examples repo",
+)
+
+
+def _parse_x_parts(tweet: dict) -> tuple[str, list[str], str]:
+    """Hook, bullets, and hashtags for the X post (no markdown backticks)."""
     text = format_twitter_body(tweet).replace("`", "")
     tags = tweet.get("tags", "").strip()
+    lines = [ln.strip() for ln in text.split("\n") if ln.strip()]
+
+    hook = lines[0] if lines else ""
+    bullets: list[str] = []
+    for ln in lines[1:]:
+        if ln.startswith("#"):
+            if not tags:
+                tags = ln
+            continue
+        if not ln.startswith("✅"):
+            continue
+        if any(p in ln.lower() for p in _X_FILLER_BULLETS):
+            continue
+        bullets.append(ln)
+
     if tags and tags not in text:
-        text = text.rstrip() + "\n\n" + tags
-    return text
+        pass  # appended later by caller
+    return hook, bullets[:3], tags
+
+
+def _join_x_parts(hook: str, bullets: list[str], tags: str, *, spaced: bool) -> str:
+    chunks = [hook, *bullets]
+    if tags:
+        chunks.append(tags)
+    return "\n\n".join(chunks) if spaced else "\n".join(chunks)
+
+
+def _truncate_to_limit(text: str, limit: int) -> str:
+    if len(text) <= limit:
+        return text
+    if limit <= 1:
+        return text[:limit]
+    return text[: limit - 1].rstrip() + "…"
+
+
+def format_twitter_body_for_x(tweet: dict) -> str:
+    """Plain text for X — spaced when it fits, otherwise compact/truncated to 280 chars."""
+    hook, bullets, tags = _parse_x_parts(tweet)
+
+    for spaced in (True, False):
+        for count in range(len(bullets), -1, -1):
+            candidate = _join_x_parts(hook, bullets[:count], tags, spaced=spaced)
+            if len(candidate) <= X_CHAR_LIMIT:
+                return candidate
+
+    tag_block = f"\n\n{tags}" if tags else ""
+    hook_budget = X_CHAR_LIMIT - len(tag_block)
+    short_hook = _truncate_to_limit(hook, max(hook_budget, 40))
+    candidate = short_hook + tag_block
+    return _truncate_to_limit(candidate, X_CHAR_LIMIT)
 
 
 def image_source(tweet: dict) -> str:
@@ -701,7 +758,7 @@ INDEX_STYLES = """
     .asset-label { font-size: 0.85rem; color: #536471; margin: 0.75rem 0 0.35rem; }
     .asset-img { display: block; max-width: 100%; border-radius: 8px; margin-bottom: 0.5rem; border: 1px solid #eff3f4; }
     .codepen-wrap { margin: 0.5rem 0 1rem; border-radius: 8px; overflow: hidden; border: 1px solid #eff3f4; }
-    .codepen-wrap--large { max-width: 100%; min-height: 640px; }
+    .codepen-wrap--large { max-width: 100%; min-height: 800px; }
     .codepen-links { font-size: 0.8rem; margin: 0.35rem 0 0; padding: 0 0.5rem 0.5rem; }
     .codepen-links a { color: #1d9bf0; }
     .pagination { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.75rem; background: #fff; border: 1px solid #eff3f4; border-radius: 12px; padding: 0.75rem 1rem; margin-bottom: 1.5rem; font-size: 0.9rem; }
@@ -736,6 +793,8 @@ INDEX_STYLES = """
     }
     .copy-x-btn:hover { background: #1a8cd8; }
     .copy-status { font-size: 0.85rem; color: #536471; }
+    .x-char-count { font-size: 0.8rem; color: #536471; font-weight: 600; }
+    .x-char-count--over { color: #dc2626; }
 """
 
 
@@ -772,7 +831,10 @@ def build_article(t: dict) -> str:
     tid = t["id"]
     stem = f"tweet-{tid:02d}"
     text = xml_escape(format_twitter_body(t))
-    x_text = html.escape(format_twitter_body_for_x(t), quote=False)
+    x_plain = format_twitter_body_for_x(t)
+    x_len = len(x_plain)
+    x_text = html.escape(x_plain, quote=False)
+    count_class = "x-char-count" if x_len <= X_CHAR_LIMIT else "x-char-count x-char-count--over"
     copy_id = f"tweet-copy-{tid}"
     pen = build_codepen_embed(t, image_source(t))
     has_png = (PNG_DIR / f"{stem}-diagram.png").is_file()
@@ -793,7 +855,7 @@ def build_article(t: dict) -> str:
       <h2>Tweet #{tid}</h2>
 {diagram_block}      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
 {pen}
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="{count_class}">({x_len}/{X_CHAR_LIMIT})</span></p>
       <textarea class="tweet-copy" id="{copy_id}" readonly rows="10">{x_text}</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="{copy_id}">Copy for X</button>
@@ -905,12 +967,16 @@ def write_x_text_index(tweets: list[dict]) -> Path:
     for t in tweets:
         tid = t["id"]
         stem = f"tweet-{tid:02d}"
-        x_text = html.escape(format_twitter_body_for_x(t), quote=False)
-        preview = html.escape(format_twitter_body_for_x(t).split("\n")[0][:100])
+        x_plain = format_twitter_body_for_x(t)
+        x_len = len(x_plain)
+        x_text = html.escape(x_plain, quote=False)
+        count_class = "x-char-count" if x_len <= X_CHAR_LIMIT else "x-char-count x-char-count--over"
+        preview = html.escape(x_plain.split("\n")[0][:100])
         rows.append(
             f"""    <article>
       <h2>Tweet #{tid}</h2>
       <p class="preview">{preview}</p>
+      <p class="tweet-copy-label">Copy for X <span class="{count_class}">({x_len}/{X_CHAR_LIMIT})</span></p>
       <textarea class="tweet-copy" id="tweet-copy-{tid}" readonly rows="10">{x_text}</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-{tid}">Copy for X</button>

@@ -1,7 +1,9 @@
-💡Java: If you need to write OS-native newlines, you can use System.lineSeparator().
+💡 Use System.lineSeparator() for OS-native newlines.
 
-✅ #Java #JavaDev
+✅ Hardcoded \n looks wrong in Windows Notepad
 
-✅ Runnable sample: java-tips
+✅ Picks the correct line ending for this OS
 
-✅ Architecture diagram + Carbon CodePen below
+✅ Use when building CSV rows, logs, or file text
+
+#Java #JavaDev

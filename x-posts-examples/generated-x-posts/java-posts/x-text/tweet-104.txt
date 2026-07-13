@@ -4,6 +4,4 @@
 
 ✅ Constructor injection makes dependencies explicit and lets you use final fields
 
-✅ Easier to test: pass mocks directly to the constructor, no Spring context needed
-
 #Java #SpringBoot

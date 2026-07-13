@@ -4,6 +4,4 @@
 
 ✅ Empty lists and single-element collections often behave differently than "normal" data
 
-✅ Explicit tests for null, empty, and min/max values document expected behavior
-
 #Java #Testing

@@ -4,4 +4,4 @@
 
 ✅ #Java #ModernJava
 
-✅ Runnable sample: java-tips
+#Java #ModernJava

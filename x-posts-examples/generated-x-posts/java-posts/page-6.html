@@ -18,7 +18,7 @@
     .asset-label { font-size: 0.85rem; color: #536471; margin: 0.75rem 0 0.35rem; }
     .asset-img { display: block; max-width: 100%; border-radius: 8px; margin-bottom: 0.5rem; border: 1px solid #eff3f4; }
     .codepen-wrap { margin: 0.5rem 0 1rem; border-radius: 8px; overflow: hidden; border: 1px solid #eff3f4; }
-    .codepen-wrap--large { max-width: 100%; min-height: 640px; }
+    .codepen-wrap--large { max-width: 100%; min-height: 800px; }
     .codepen-links { font-size: 0.8rem; margin: 0.35rem 0 0; padding: 0 0.5rem 0.5rem; }
     .codepen-links a { color: #1d9bf0; }
     .pagination { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.75rem; background: #fff; border: 1px solid #eff3f4; border-radius: 12px; padding: 0.75rem 1rem; margin-bottom: 1.5rem; font-size: 0.9rem; }
@@ -53,6 +53,8 @@
     }
     .copy-x-btn:hover { background: #1a8cd8; }
     .copy-status { font-size: 0.85rem; color: #536471; }
+    .x-char-count { font-size: 0.8rem; color: #536471; font-weight: 600; }
+    .x-char-count--over { color: #dc2626; }
 
   </style>
 </head>
@@ -73,7 +75,7 @@
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 147 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
-             data-height="640"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -140,8 +142,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -167,8 +169,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -208,14 +210,12 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(135/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-147" readonly rows="10">💡Java tip: Starting from Java 15 you can use String.formatted(...) for string formatting instead of String.format(...).
 
 ✅ #Java
 
-✅ Runnable sample: java-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#Java</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-147">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -233,7 +233,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 148 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
-             data-height="640"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -300,8 +300,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -327,8 +327,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -368,14 +368,12 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(83/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-148" readonly rows="10">💡 Java tip: Use Duration and Instant for precise time calculations.
 
 ✅ #Java
 
-✅ Runnable sample: java-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#Java</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-148">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -393,7 +391,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 149 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
-             data-height="640"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -460,8 +458,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -487,8 +485,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -528,14 +526,12 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(164/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-149" readonly rows="10">💡 Java tip: Starting from Java 11, you can use String.strip() instead of trim(), since it handles Unicode whitespaces correctly.
 
 ✅ #Java #JavaTips
 
-✅ Runnable sample: java-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#Java #JavaTips</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-149">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -553,7 +549,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 150 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
-             data-height="640"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -620,8 +616,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -647,8 +643,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -687,14 +683,12 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(171/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-150" readonly rows="10">💡 Java tip: Use var for local variables only when the type is obvious from the right-hand side or when the generic type is too verbose.
 
 ✅ #Java #JavaTips
 
-✅ Runnable sample: java-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#Java #JavaTips</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-150">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -712,7 +706,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 151 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
-             data-height="640"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -779,8 +773,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -806,8 +800,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -845,14 +839,10 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(240/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-151" readonly rows="10">💡 Java tip: Starting from Java 11, if you need to repeat n times a specific string, you can use the String method repeat(n). Example: String result = "$".repeat(10); System.out.println(result); // $$$$$$$$$$ #Java #JavaTips
 
-✅ Runnable sample: java-tips
-
-✅ Architecture diagram + Carbon CodePen below
-
-✅ From the codingstrain examples repo</textarea>
+#Java #JavaTips</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-151">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -870,7 +860,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 152 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
-             data-height="640"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -937,8 +927,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -964,8 +954,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -1004,14 +994,12 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(255/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-152" readonly rows="10">💡 Java tip: Starting from java 9 you can use Stream.takeWhile() for easy slicing of lists by streams.  #Java #JavaTips
 
 ✅ Java tip: Starting from java 9 you can use Stream.takeWhile() for easy slicing of lists by streams.  #Java #JavaTips
 
-✅ Runnable sample: java-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#Java #JavaTips</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-152">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1029,7 +1017,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 153 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
-             data-height="640"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -1096,8 +1084,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -1123,8 +1111,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -1163,14 +1151,10 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(160/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-153" readonly rows="10">💡 Java tip: You can use Collectors.joining(", ") to turn a stream into a comma-separated string (or another custom separator).  #Java #JavaTips
 
-✅ Runnable sample: java-tips
-
-✅ Architecture diagram + Carbon CodePen below
-
-✅ From the codingstrain examples repo</textarea>
+#Java #JavaTips</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-153">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1188,7 +1172,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 154 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
-             data-height="640"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -1255,8 +1239,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -1282,8 +1266,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -1323,14 +1307,10 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(203/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-154" readonly rows="10">💡 Java tip: From Java 9 you can use Objects.checkIndex() to replace manual if checks for validating index bounds. It is a small feature that helps making the code cleaner.  #Java #JavaTip
 
-✅ Runnable sample: java-tips
-
-✅ Architecture diagram + Carbon CodePen below
-
-✅ From the codingstrain examples repo</textarea>
+#Java #JavaTip</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-154">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1348,7 +1328,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 155 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
-             data-height="640"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -1415,8 +1395,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -1442,8 +1422,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -1481,14 +1461,10 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
-      <textarea class="tweet-copy" id="tweet-copy-155" readonly rows="10">💡 Java tip : Avoid static variables unless they store truly global values. They hinder testing by making it harder to isolate classes due to shared state. It can cause subtle bugs. For example: public class BankAccount { public static double balance; public BankAccount(double initialBalance) { balance = initialBalance; } public void deposit(double amount) { balance += amount; } public void printBalance() { System.out.println("Balance: " + balance); } } BankAccount acc1 = new BankAccount(1000); BankAccount acc2 = new BankAccount(500); acc1.deposit(200); acc2.printBalance(); // Balance: 700 (should be 500) The balance variable is shared globally, and changing it in one object affects the others. #Java #JavaTips
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(280/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-155" readonly rows="10">💡 Java tip : Avoid static variables unless they store truly global values. They hinder testing by making it harder to isolate classes due to shared state. It can cause subtle bugs. For example: public class BankAccount { public static double balance; public Bank…
 
-✅ Runnable sample: java-tips
-
-✅ Architecture diagram + Carbon CodePen below
-
-✅ From the codingstrain examples repo</textarea>
+#Java #JavaTips</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-155">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1506,7 +1482,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 156 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
-             data-height="640"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -1573,8 +1549,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -1600,8 +1576,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -1641,14 +1617,12 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(251/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-156" readonly rows="10">💡 Java tip: Use List.copyOf(list) for a safe, unmodifiable copy, while avoiding accidental changes.  #Java #JavaTips
 
 ✅ Java tip: Use List.copyOf(list) for a safe, unmodifiable copy, while avoiding accidental changes.  #Java #JavaTips
 
-✅ Runnable sample: java-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#Java #JavaTips</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-156">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1666,7 +1640,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 157 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
-             data-height="640"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -1733,8 +1707,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -1760,8 +1734,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -1801,14 +1775,12 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(249/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-157" readonly rows="10">💡 Java tip: Starting from Java 8 you can use List.removeIf(&lt;predicate&gt;) to clean up collections in one line. #JavaTips
 
 ✅ Java tip: Starting from Java 8 you can use List.removeIf(&lt;predicate&gt;) to clean up collections in one line. #JavaTips
 
-✅ Runnable sample: java-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#JavaTips</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-157">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1826,7 +1798,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 158 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
-             data-height="640"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -1893,8 +1865,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -1920,8 +1892,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -1961,14 +1933,14 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(159/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-158" readonly rows="10">💡Java tip: Use ThreadLocal.withInitial(...) to provide each thread its own safe default value.
 
 ✅ The value is created lazily
 
 ✅ #Java #JavaDev
 
-✅ Runnable sample: java-tips</textarea>
+#Java #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-158">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1986,7 +1958,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 159 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
-             data-height="640"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -2053,8 +2025,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -2080,8 +2052,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -2121,14 +2093,12 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(134/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-159" readonly rows="10">💡 Java tip: Starting from Java 8, you can remove nulls easily with list.removeIf(Objects::isNull).
 
 ✅ #Java #JavaTips
 
-✅ Runnable sample: java-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#Java #JavaTips</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-159">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -2146,7 +2116,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 160 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
-             data-height="640"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -2213,8 +2183,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -2240,8 +2210,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -2281,14 +2251,12 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(151/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-160" readonly rows="10">💡 Java tip: Starting from Java 12, you can use String.indent(n)  to format multi-line strings with indentation.
 
 ✅ #Java #ModernJava
 
-✅ Runnable sample: java-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#Java #ModernJava</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-160">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -2306,7 +2274,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 161 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
-             data-height="640"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -2373,8 +2341,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -2400,8 +2368,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -2441,14 +2409,14 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(159/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-161" readonly rows="10">💡 Java tip: Stream.toArray(Type[]::new) is a clean, type-safe way to get arrays from streams.
 
 ✅ Avoids Object[] and casting.
 
 ✅ #Java #JavaDev
 
-✅ Runnable sample: java-tips</textarea>
+#Java #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-161">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -2466,7 +2434,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 162 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
-             data-height="640"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -2533,8 +2501,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -2560,8 +2528,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -2601,14 +2569,12 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(200/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-162" readonly rows="10">💡 Java tip: Starting from Java 8 you can use ChronoUnit.between(start, end) to calculate time intervals in a specific unit (days, hours, minutes) without manual math.
 
 ✅ #Java #JavaDev
 
-✅ Runnable sample: java-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#Java #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-162">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -2626,7 +2592,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 163 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
-             data-height="640"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -2693,8 +2659,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -2720,8 +2686,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -2760,14 +2726,12 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(116/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-163" readonly rows="10">💡Java tip: Use Collectors.groupingBy(...) to group stream results by a classifier.
 
 ✅ #Java #JavaDev
 
-✅ Runnable sample: java-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#Java #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-163">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -2785,7 +2749,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 164 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
-             data-height="640"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -2852,8 +2816,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -2879,8 +2843,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -2919,14 +2883,14 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(238/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-164" readonly rows="10">💡 Java tip: Use Stream.peek() for debugging in pipelines, not for business logic.
 
 ✅ Stream.peek() lets you perform logging or inspection on each element as it flows through a stream without modifying it.
 
 ✅ #Java #JavaDev
 
-✅ Runnable sample: java-tips</textarea>
+#Java #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-164">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -2944,7 +2908,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 165 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
-             data-height="640"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -3011,8 +2975,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -3038,8 +3002,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -3079,14 +3043,10 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(118/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-165" readonly rows="10">💡 Java tip: List.reversed() returns an unmodifiable reversed view of the original list. #Java #JavaDev
 
-✅ Runnable sample: java-tips
-
-✅ Architecture diagram + Carbon CodePen below
-
-✅ From the codingstrain examples repo</textarea>
+#Java #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-165">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -3104,7 +3064,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 166 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
-             data-height="640"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -3171,8 +3131,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -3198,8 +3158,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -3239,14 +3199,12 @@ body {
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(144/280)</span></p>
       <textarea class="tweet-copy" id="tweet-copy-166" readonly rows="10">💡 Java tip: Starting from Java 12 you can use String.transform(Function) to apply lambdas directly to strings.
 
 ✅ #Java #JavaDev
 
-✅ Runnable sample: java-tips
-
-✅ Architecture diagram + Carbon CodePen below</textarea>
+#Java #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-166">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>

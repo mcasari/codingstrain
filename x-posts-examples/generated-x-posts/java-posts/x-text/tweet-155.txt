@@ -1,7 +1,3 @@
-💡 Java tip : Avoid static variables unless they store truly global values. They hinder testing by making it harder to isolate classes due to shared state. It can cause subtle bugs. For example: public class BankAccount { public static double balance; public BankAccount(double initialBalance) { balance = initialBalance; } public void deposit(double amount) { balance += amount; } public void printBalance() { System.out.println("Balance: " + balance); } } BankAccount acc1 = new BankAccount(1000); BankAccount acc2 = new BankAccount(500); acc1.deposit(200); acc2.printBalance(); // Balance: 700 (should be 500) The balance variable is shared globally, and changing it in one object affects the others. #Java #JavaTips
+💡 Java tip : Avoid static variables unless they store truly global values. They hinder testing by making it harder to isolate classes due to shared state. It can cause subtle bugs. For example: public class BankAccount { public static double balance; public Bank…
 
-✅ Runnable sample: java-tips
-
-✅ Architecture diagram + Carbon CodePen below
-
-✅ From the codingstrain examples repo
+#Java #JavaTips

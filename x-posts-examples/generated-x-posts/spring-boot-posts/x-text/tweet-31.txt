@@ -2,8 +2,4 @@
 
 ✅ Configure global CORS once — no @CrossOrigin on every controller
 
-✅ Runnable sample: cors-demo
-
-✅ Architecture diagram + Carbon CodePen below
-
 #SpringBoot #Web

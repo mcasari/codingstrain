@@ -2,8 +2,4 @@
 
 ✅ Chain: supplyAsync → thenApply → thenCompose → thenAccept (fetch user, then orders)
 
-✅ Handle failures with exceptionally — don't let async errors disappear silently
-
-✅ Run independent calls in parallel, merge with thenCombine when both finish
-
 #Java #Concurrency

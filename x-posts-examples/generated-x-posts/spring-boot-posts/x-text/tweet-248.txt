@@ -4,4 +4,4 @@
 
 ✅ #SpringBoot #SoftwareDevelopment
 
-✅ Runnable sample: spring-boot-tips
+#SpringBoot #SoftwareDevelopment

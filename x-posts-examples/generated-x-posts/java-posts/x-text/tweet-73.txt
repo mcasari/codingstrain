@@ -2,8 +2,4 @@
 
 ✅ Optional: findByEmail(email).map(User::getAddress).map(Address::getCity).orElse("unknown")
 
-✅ No Optional in the API? One guard: if (user == null || user.getAddress() == null)
-
-✅ Either beats scattered null checks that hide what may actually be missing
-
 #Java #NullSafety

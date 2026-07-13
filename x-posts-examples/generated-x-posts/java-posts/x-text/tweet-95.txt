@@ -4,4 +4,4 @@
 
 ✅ #Java #ErrorHandling // Checked
 
-✅ Runnable sample: java-tips
+#Java #ErrorHandling

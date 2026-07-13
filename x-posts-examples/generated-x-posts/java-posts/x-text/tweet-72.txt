@@ -2,8 +2,4 @@
 
 ✅ Example usage:
 
-✅ EnumSet<Month> months = EnumSet.range(Month.JANUARY, Month.DECEMBER);
-
-✅ System.out.println(months);
-
 #Java #ProgrammingTips

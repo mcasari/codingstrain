@@ -74,8 +74,8 @@ body {
   margin: 0;
   flex: 1;
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 42px;
   white-space: pre;
   tab-size: 4;
 }
@@ -101,8 +101,8 @@ body {
 }
 .carbon-editor.cols .col pre {
   flex: 1;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 25px;
+  line-height: 42px;
 }
 .carbon-editor.cols .col-divider {
   align-self: stretch;
@@ -355,9 +355,9 @@ def _embed_height(code: str, *, carbon: bool = False, large: bool = False,
                   line_count: int | None = None) -> int:
     lines = line_count if line_count is not None else code.count("\n") + 1
     if carbon:
-        floor = 640 if large else 560
-        cap = 960 if large else 880
-        return min(cap, max(floor, 220 + lines * 32))
+        floor = 720 if large else 640
+        cap = 1200 if large else 1000
+        return min(cap, max(floor, 240 + lines * 44))
     return min(720, max(340, 140 + lines * 22))
 
 
@@ -448,8 +448,8 @@ _LEGACY_CSS = """body {
 }
 .code-snippet code {
   font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 13px;
-  line-height: 1.55;
+  font-size: 25px;
+  line-height: 1.68;
   color: #d6deeb;
   white-space: pre;
 }

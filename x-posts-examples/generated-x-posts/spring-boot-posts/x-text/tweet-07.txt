@@ -2,8 +2,4 @@
 
 ✅ Always map exceptions to HTTP status + a safe JSON body
 
-✅ Runnable sample: springboot-error-handling-demo
-
-✅ Architecture diagram + Carbon CodePen below
-
 #SpringBoot #JavaDev

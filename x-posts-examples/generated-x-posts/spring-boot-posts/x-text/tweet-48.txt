@@ -2,8 +2,4 @@
 
 ✅ H2 lives inside the app's memory: the database is created on startup and thrown away on shutdown — ideal for demos and tests
 
-✅ Extend JpaRepository and you get full CRUD (list, fetch, create, update, delete) without writing SQL
-
-✅ Just run the app — the schema and sample rows load automatically, and you can browse them at /h2-console
-
 #SpringBoot

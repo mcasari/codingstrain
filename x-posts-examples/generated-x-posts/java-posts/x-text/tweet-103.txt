@@ -4,6 +4,4 @@
 
 ✅ Deque supports the same push / pop / peek calls — a drop-in replacement
 
-✅ ArrayDeque is faster and has been the recommended choice since Java 6
-
 #Java #Collections

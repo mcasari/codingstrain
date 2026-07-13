@@ -4,4 +4,4 @@
 
 ✅ #Java #CleanCode
 
-✅ Runnable sample: java-tips
+#Java #CleanCode

@@ -2,8 +2,4 @@
 
 ✅ Fail fast at startup with @Validated + @ConfigurationProperties
 
-✅ Runnable sample: spring-boot-validated-config
-
-✅ Architecture diagram + Carbon CodePen below
-
 #SpringBoot #SoftwareEngineering

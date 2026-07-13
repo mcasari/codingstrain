@@ -2,8 +2,4 @@
 
 ✅ Don't assume . is always the decimal separator
 
-✅ Runnable sample: java-miscellaneous-tips
-
-✅ Architecture diagram + Carbon CodePen below
-
 #Java

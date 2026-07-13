@@ -1,7 +1,3 @@
 💡 Use Pattern and Matcher for complex regex operations. #Java #Regex
 
-✅ Runnable sample: java-tips
-
-✅ Architecture diagram + Carbon CodePen below
-
-✅ From the codingstrain examples repo
+#Java #Regex

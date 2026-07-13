@@ -1282,7 +1282,8 @@
   {
     "id": 180,
     "module": "java-tips",
-    "body": "💡Java: If you need to write OS-native newlines, you can use System.lineSeparator().\n\n✅ #Java #JavaDev\n\n✅ Runnable sample: `java-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "body": "💡 Use `System.lineSeparator()` for OS-native newlines.\n\n✅ Hardcoded `\\n` looks wrong in Windows Notepad\n\n✅ Picks the correct line ending for this OS\n\n✅ Use when building CSV rows, logs, or file text\n\n#Java #JavaDev",
+    "code": "String nl = System.lineSeparator();\n\n// ❌ Hardcoded \\n — fine on Linux, awkward on Windows\nString bad = \"Date,Amount\" + \"\\n\" + \"2026-01-01,42\";\n\n// ✅ OS-native newlines\nString good = String.join(nl,\n    \"Date,Amount\",\n    \"2026-01-01,42\",\n    \"2026-01-02,17\");\n\nSystem.out.print(good);\n// Windows → \\r\\n between lines · Linux/macOS → \\n",
     "tags": "#Java #JavaDev",
     "codepen_style": "carbon",
     "codepen_large": true,

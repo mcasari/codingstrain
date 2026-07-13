@@ -1,9 +1,3 @@
 🚀Spring Boot: With @RestControllerAdvice you can handle specific types of exceptions globally instead of using try/catch everywhere.
 
-✅ With @RestControllerAdvice you can handle specific types of exceptions globally instead of using try/catch everywhere
-
-✅ Uses @ExceptionHandler in the snippet
-
-✅ Uses @GetMapping in the snippet
-
 #SpringBoot #SoftwareEngineering

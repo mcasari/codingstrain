@@ -2,6 +2,4 @@
 
 ✅ #SpringBoot #JavaDev
 
-✅ Runnable sample: java-tips
-
-✅ Architecture diagram + Carbon CodePen below
+#SpringBoot #JavaDev

@@ -4,6 +4,4 @@
 
 ✅ Uses @SpringBootTest in the snippet
 
-✅ Runnable sample: sql-annotation-demo
-
 #SpringBoot #IntegrationTesting

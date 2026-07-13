@@ -4,6 +4,4 @@
 
 ✅ Java tip💡: Use StringBuilder instead of String for concatenating strings in loops
 
-✅ ❌ String is immutable, making it inefficient in loops, especially large ones
-
 #Java #CodeTips

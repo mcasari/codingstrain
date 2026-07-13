@@ -2,8 +2,4 @@
 
 ✅ JpaRepository is your entire DAO for CRUD
 
-✅ Runnable sample: sql-annotation-demo
-
-✅ Architecture diagram + Carbon CodePen below
-
 #SpringBoot #Java

@@ -2,6 +2,4 @@
 
 ✅ Java Tip 💡: Avoid catching generic Exception or Throwable. Be specific. #Java #ErrorHandling
 
-✅ Runnable sample: java-tips
-
-✅ Architecture diagram + Carbon CodePen below
+#Java #ErrorHandling

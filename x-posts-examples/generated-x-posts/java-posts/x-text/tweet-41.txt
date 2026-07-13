@@ -2,8 +2,4 @@
 
 ✅ Use the Builder pattern for objects with many optional fields
 
-✅ Runnable sample: BuilderDemo
-
-✅ Architecture diagram + Carbon CodePen below
-
 #JavaDev #CleanCode

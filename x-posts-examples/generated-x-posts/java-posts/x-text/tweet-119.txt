@@ -2,6 +2,4 @@
 
 ✅ Java Tip 💡: Refactor large switch statements into polymorphic classes. #Java #Refactoring
 
-✅ Runnable sample: java-tips
-
-✅ Architecture diagram + Carbon CodePen below
+#Java #Refactoring

@@ -3,5 +3,3 @@
 ✅ Java tip 💡: With Map objects, instead of manual null checks, you can use Map.getOrDefault()
 
 ✅ Map<String, Integer> map = new HashMap<>();
-
-✅ Integer discount = map.getOrDefault("item1", 0);

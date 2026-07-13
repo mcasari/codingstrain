@@ -4,4 +4,4 @@
 
 ✅ #Java #SoftwareDevelopment
 
-✅ Runnable sample: java-tips
+#Java #SoftwareDevelopment

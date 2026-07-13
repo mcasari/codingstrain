@@ -4,4 +4,4 @@
 
 ✅ The final step is implementing consumer and producers as Java objects:
 
-✅ Runnable sample: spring-boot-tips
+#SpringBoot #JavaDev

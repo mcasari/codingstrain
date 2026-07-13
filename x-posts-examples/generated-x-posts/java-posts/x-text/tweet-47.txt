@@ -2,8 +2,4 @@
 
 ✅ Immutable fields in the Builder reduce bugs in DTOs
 
-✅ Runnable sample: BuilderDemo
-
-✅ Architecture diagram + Carbon CodePen below
-
 #Java #CleanCode

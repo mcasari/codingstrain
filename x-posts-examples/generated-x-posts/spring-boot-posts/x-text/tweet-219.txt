@@ -4,4 +4,4 @@
 
 ✅ #SpringBoot #JavaDev
 
-✅ Runnable sample: spring-boot-tips
+#SpringBoot #JavaDev

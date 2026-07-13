@@ -2,8 +2,4 @@
 
 ✅ Kafka consumers are simple with @KafkaListener
 
-✅ Runnable sample: spring-kafka-demo
-
-✅ Architecture diagram + Carbon CodePen below
-
 #SpringBoot #Kafka

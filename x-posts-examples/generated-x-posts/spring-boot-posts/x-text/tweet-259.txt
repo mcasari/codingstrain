@@ -4,4 +4,4 @@
 
 ✅ #SpringBoot #Microservices
 
-✅ Runnable sample: spring-boot-tips
+#SpringBoot #Microservices

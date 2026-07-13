@@ -1,7 +1,3 @@
 💡Java Patterns: The Builder Pattern allows for flexible, clear construction of complex objects. #Java #DesignPatterns
 
-✅ Runnable sample: java-tips
-
-✅ Architecture diagram + Carbon CodePen below
-
-✅ From the codingstrain examples repo
+#Java #DesignPatterns

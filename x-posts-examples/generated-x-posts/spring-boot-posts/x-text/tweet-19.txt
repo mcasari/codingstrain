@@ -2,8 +2,4 @@
 
 ✅ Spring Boot integrates easily with Kafka for event-driven architectures
 
-✅ Runnable sample: spring-kafka-demo
-
-✅ Architecture diagram + Carbon CodePen below
-
 #SpringBoot #JavaDev

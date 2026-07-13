@@ -2,8 +2,4 @@
 
 ✅ Old switch: forget break and execution falls through to the next case
 
-✅ New case X -> "...": one line per case, returns a value, no break needed
-
-✅ Add a new enum constant without a matching case? Compile error, not a silent bug at runtime
-
 #Java #Java14 #CleanCode

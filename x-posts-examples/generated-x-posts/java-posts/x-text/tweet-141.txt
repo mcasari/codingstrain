@@ -2,6 +2,4 @@
 
 ✅ Fix: merge duplicates by summing values:
 
-✅ Java tip: Collectors.toMap() will throw an error if your keys collide. Always consider a merge function. #Java #Streams
-
-✅ Example:
+#Java #Streams

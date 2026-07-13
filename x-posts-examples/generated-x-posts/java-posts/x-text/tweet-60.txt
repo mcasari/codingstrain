@@ -1,7 +1,3 @@
 💡 Java Tip #4 💡: Threads may cache variables values. Mark the variable with the 'volatile' keyword to ensure that any change is  seen by other threads. This is the most basic synchronization mechanism of Java. #Java #JavaTips #Multithreading
 
-✅ Runnable sample: java-tips
-
-✅ Architecture diagram + Carbon CodePen below
-
-✅ From the codingstrain examples repo
+#Java #JavaTips #Multithreading

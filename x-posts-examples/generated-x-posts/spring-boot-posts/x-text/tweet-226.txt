@@ -2,6 +2,4 @@
 
 ✅ #Springboot #SoftwareDevelopment
 
-✅ Runnable sample: spring-boot-tips
-
-✅ Architecture diagram + Carbon CodePen below
+#Springboot #SoftwareDevelopment

@@ -4,4 +4,4 @@
 
 ✅ #Java #Collections
 
-✅ Runnable sample: java-tips
+#Java #Collections
