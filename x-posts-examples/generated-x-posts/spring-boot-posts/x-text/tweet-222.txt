@@ -1,0 +1,7 @@
+🚀 Spring Boot: If your application uses RestTemplate for REST calls, you can centralize timeouts with RestTemplateBuilder .
+
+✅ #SpringBoot #JavaDev
+
+✅ Runnable sample: spring-boot-tips
+
+✅ Architecture diagram + Carbon CodePen below

@@ -1,0 +1,9 @@
+🚀Spring Boot: ItemProcessor transforms each row before writing.
+
+✅ ItemProcessor transforms each row before writing
+
+✅ Runnable sample: spring-batch-csv-sample
+
+✅ Architecture diagram + Carbon CodePen below
+
+#SpringBoot

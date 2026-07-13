@@ -1,0 +1,7 @@
+💡 Spring Boot Tip: If you want DTOs to ignore extra JSON fields from clients without breaking your API use @JsonIgnoreProperties(ignoreUnknown = true).
+
+✅ #SpringBoot #CodingTips #SoftwareEngineering
+
+✅ Runnable sample: spring-boot-tips
+
+✅ Architecture diagram + Carbon CodePen below

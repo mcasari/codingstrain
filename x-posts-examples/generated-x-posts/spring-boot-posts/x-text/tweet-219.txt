@@ -1,0 +1,7 @@
+🚀 Spring Boot: If your code uses RestTemplate, you can implement tests by mocking external calls with MockRestServiceServer.
+
+✅ MockRestServiceServer works by intercepting HTTP requests
+
+✅ #SpringBoot #JavaDev
+
+✅ Runnable sample: spring-boot-tips

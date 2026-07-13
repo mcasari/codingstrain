@@ -1,0 +1,7 @@
+🚀Java: Use Files.copy() for quick file duplication
+
+✅ #Java #SoftwareDevelopment
+
+✅ Runnable sample: java-tips
+
+✅ Architecture diagram + Carbon CodePen below

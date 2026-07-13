@@ -1,0 +1,7 @@
+💡 Spring Boot tip: Use CommandLineRunner for executing startup logic.
+
+✅ #SpringBoot #Java
+
+✅ Runnable sample: spring-boot-tips
+
+✅ Architecture diagram + Carbon CodePen below

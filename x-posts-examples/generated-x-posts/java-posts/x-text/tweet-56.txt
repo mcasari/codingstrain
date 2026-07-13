@@ -1,0 +1,9 @@
+💡 Share data between threads without volatile on every field.
+
+✅ Thread A writes data, thread B reads a flag — B might see the flag change but still read stale data
+
+✅ volatile forces every read and write to sync — safe, but heavier than you often need
+
+✅ setRelease (publish) + getAcquire (subscribe): writer flips the flag when done; reader then sees all prior writes
+
+#Java #Concurrency #JMM

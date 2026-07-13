@@ -1,0 +1,9 @@
+🚀Spring Boot: Use @Async only for small offloading tasks, and with a provided executor.
+
+✅ Use @Async only for small offloading tasks, and with a provided executor
+
+✅ Runnable sample: async-demo
+
+✅ Architecture diagram + Carbon CodePen below
+
+#SpringBoot #SoftwareDevelopment

@@ -1,0 +1,9 @@
+🚀Spring Boot: Using Spring Cloud Config for centralized configuration management is important.
+
+✅Instead of many services each carrying their own application.yml, you pull it from a single source.
+
+✅First of all, you have to configure the config server.
+
+✅You will have a config server app annotated with @EnableConfigServer and a Git repo holding all your .yml files.
+
+#SpringCloud #Microservices #MicroservicesSecurity

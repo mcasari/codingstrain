@@ -1,0 +1,9 @@
+💡Use EnumSet for enum values in sets. EnumSet, a Set interface implementation, is specialized for enums, offering memory efficiency and speed via bit-vector representation.
+
+✅ Example usage:
+
+✅ EnumSet<Month> months = EnumSet.range(Month.JANUARY, Month.DECEMBER);
+
+✅ System.out.println(months);
+
+#Java #ProgrammingTips

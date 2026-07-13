@@ -1,0 +1,9 @@
+🚀Spring Boot: You have the choice of using WebClient over RestTemplate in new apps.
+
+✅ It’s reactive and non-blocking
+
+✅ Based on event-loop instead of thread-per-request
+
+✅ Especially fitted for microservices
+
+#SpringBoot #JavaDev

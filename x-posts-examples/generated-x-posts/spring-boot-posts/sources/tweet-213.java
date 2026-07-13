@@ -1,0 +1,7 @@
+// 🚀 Spring Boot: With @ConditionalOnMissingBean, you can define a default bean that can be possibly overridden by a user using a standard definition.
+//
+// ✅ #SpringBoot #SoftwareDevelopment
+//
+// ✅ Runnable sample: `spring-boot-tips`
+//
+// ✅ Architecture diagram + Carbon CodePen below

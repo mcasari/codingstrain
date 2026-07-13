@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>codingstrain X Posts</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 960px; margin: 2rem auto; padding: 0 1rem; background: #f7f9f9; }
+    article { background: #fff; border-radius: 16px; padding: 1.25rem; margin-bottom: 2rem; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+    h2 { margin: 0 0 1rem; font-size: 0.9rem; color: #536471; }
+    .tweet-text { white-space: pre-wrap; font-size: 15px; line-height: 1.4; margin: 1rem 0; padding: 1rem; background: #f7f9f9; border-radius: 12px; border: 1px solid #eff3f4; }
+    .links a { color: #1d9bf0; }
+    .banner { background: #1d9bf0; color: #fff; padding: 1.25rem; border-radius: 12px; margin-bottom: 1rem; }
+    .banner p { margin: 0.5rem 0 0; opacity: 0.95; }
+    .banner a { color: #fff; }
+    .drawio-box { background: #e8f4fc; border: 1px solid #1d9bf0; border-radius: 12px; padding: 1rem; margin-bottom: 1rem; }
+    .drawio-box ol { margin: 0.5rem 0 0; padding-left: 1.25rem; }
+    .drawio-box li { margin: 0.35rem 0; }
+    .asset-label { font-size: 0.85rem; color: #536471; margin: 0.75rem 0 0.35rem; }
+    .asset-img { display: block; max-width: 100%; border-radius: 8px; margin-bottom: 0.5rem; border: 1px solid #eff3f4; }
+    .codepen-wrap { margin: 0.5rem 0 1rem; border-radius: 8px; overflow: hidden; border: 1px solid #eff3f4; }
+    .codepen-wrap--large { max-width: 100%; min-height: 640px; }
+    .codepen-links { font-size: 0.8rem; margin: 0.35rem 0 0; padding: 0 0.5rem 0.5rem; }
+    .codepen-links a { color: #1d9bf0; }
+    .pagination { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.75rem; background: #fff; border: 1px solid #eff3f4; border-radius: 12px; padding: 0.75rem 1rem; margin-bottom: 1.5rem; font-size: 0.9rem; }
+    .pagination a { color: #1d9bf0; text-decoration: none; }
+    .pagination a:hover { text-decoration: underline; }
+    .pagination .page-current { font-weight: 700; color: #0f1419; }
+    .pagination .page-meta { color: #536471; margin-left: auto; }
+    .pagination .page-nav { font-weight: 600; }
+    .pagination .page-nav.disabled { color: #aab8c2; pointer-events: none; }
+    .tweet-copy-label { font-size: 0.85rem; color: #536471; margin: 0.75rem 0 0.35rem; }
+    .tweet-copy {
+      width: 100%;
+      box-sizing: border-box;
+      font: 15px/1.5 system-ui, sans-serif;
+      color: #0f1419;
+      background: #fff;
+      border: 1px solid #cfd9de;
+      border-radius: 12px;
+      padding: 0.85rem 1rem;
+      resize: vertical;
+      white-space: pre-wrap;
+    }
+    .copy-row { display: flex; align-items: center; gap: 0.75rem; margin: 0.5rem 0 1rem; }
+    .copy-x-btn {
+      font: 600 0.9rem system-ui, sans-serif;
+      color: #fff;
+      background: #1d9bf0;
+      border: 0;
+      border-radius: 999px;
+      padding: 0.45rem 1rem;
+      cursor: pointer;
+    }
+    .copy-x-btn:hover { background: #1a8cd8; }
+    .copy-status { font-size: 0.85rem; color: #536471; }
+
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <h1>codingstrain X Posts</h1>
+    <p>260 posts split by topic — pick a category to browse.</p>
+  </div>
+  <article>
+    <h2>Categories</h2>
+    <div class="tweet-text"><a href="generated-x-posts/java-posts/index.html">Java posts</a> — 136 tweets
+💡 language tips, modern Java features, collections, concurrency
+<a href="generated-x-posts/java-posts/x-text/index.html">Copy all Java tweets for X</a>
+
+<a href="generated-x-posts/spring-boot-posts/index.html">Spring Boot posts</a> — 124 tweets
+🚀 REST APIs, Spring Data, testing, microservices, Spring Cloud
+<a href="generated-x-posts/spring-boot-posts/x-text/index.html">Copy all Spring Boot tweets for X</a>
+
+Every tweet has a <strong>Copy for X</strong> button and a plain <code>.txt</code> file with paragraph breaks preserved.</div>
+    <p class="links">
+      Master data: <a href="generated-x-posts/tweets.json">tweets.json</a> ·
+      Regenerate: <code>cd generated-x-posts &amp;&amp; python generate_assets.py --skip-png</code>
+    </p>
+  </article>
+</body>
+</html>

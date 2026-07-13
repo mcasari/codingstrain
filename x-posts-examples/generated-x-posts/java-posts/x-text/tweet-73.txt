@@ -1,0 +1,9 @@
+💡 Java Tip #20💡: Deep chains like user → address → city are a classic NPE trap. Nested if (x != null) blocks get verbose fast — and it's easy to miss a level.
+
+✅ Optional: findByEmail(email).map(User::getAddress).map(Address::getCity).orElse("unknown")
+
+✅ No Optional in the API? One guard: if (user == null || user.getAddress() == null)
+
+✅ Either beats scattered null checks that hide what may actually be missing
+
+#Java #NullSafety

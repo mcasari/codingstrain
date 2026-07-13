@@ -1,0 +1,7 @@
+🚀 With Collectors.summarizingInt() you can getcount, sum, min, max, avg in one pass.
+
+✅ #Java #JavaDev
+
+✅ Runnable sample: java-tips
+
+✅ Architecture diagram + Carbon CodePen below

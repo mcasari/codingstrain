@@ -1,0 +1,7 @@
+💡 Java tip 💡: You can use List.of() and Set.of() to create immutable collections.
+
+✅ Java tip 💡: You can use List.of() and Set.of() to create immutable collections
+
+✅ These are a quick ways to create unmodifiable lists and sets without using Collections.unmodifiableList()
+
+✅ #Java #Collections

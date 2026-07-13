@@ -1,0 +1,9 @@
+🚀Spring Boot: Use @Valid on nested configuration objects.
+
+✅ Use @Valid on nested configuration objects
+
+✅ Runnable sample: spring-boot-validated-config
+
+✅ Architecture diagram + Carbon CodePen below
+
+#SpringBoot

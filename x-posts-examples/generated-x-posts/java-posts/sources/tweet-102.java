@@ -1,0 +1,7 @@
+// 💡 Java Tip 💡: Avoid initializing objects you may never use. Lazy-load when appropriate. #Java #Performance
+//
+// ✅ Java Tip 💡: Avoid initializing objects you may never use. Lazy-load when appropriate. #Java #Performance
+//
+// ✅ Runnable sample: `java-tips`
+//
+// ✅ Architecture diagram + Carbon CodePen below

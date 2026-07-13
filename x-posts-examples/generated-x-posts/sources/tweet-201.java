@@ -1,4 +1,0 @@
-// 💡 Pin the Spring Boot version in the spring-boot-dependencies BOM to ensure consistent dependency management.
-//
-// ✅  The spring-boot-dependencies BOM allows you to omit versions of libraries that Spring Boot integrates with in your pom.xml.
-// #SpringBoot

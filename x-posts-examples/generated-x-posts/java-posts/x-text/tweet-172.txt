@@ -1,0 +1,7 @@
+💡Java tip: With pattern matching for the instanceof operator, Java lets you declare a variable directly inside the instanceof check.
+
+✅ #Java #JavaDev
+
+✅ Runnable sample: java-tips
+
+✅ Architecture diagram + Carbon CodePen below

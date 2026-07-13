@@ -1,0 +1,7 @@
+💡 Java Tip 💡: Use Comparator.comparing() for sorting with lambdas. #Java #FunctionalProgramming
+
+✅ Java Tip 💡: Use Comparator.comparing() for sorting with lambdas. #Java #FunctionalProgramming
+
+✅ Runnable sample: java-tips
+
+✅ Architecture diagram + Carbon CodePen below

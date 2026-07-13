@@ -1,0 +1,7 @@
+// 🚀 Spring Boot: Better externalize scheduled tasks fixedRateString's value.
+//
+// ✅ #SpringBoot #Java
+//
+// ✅ Runnable sample: `spring-boot-tips`
+//
+// ✅ Architecture diagram + Carbon CodePen below

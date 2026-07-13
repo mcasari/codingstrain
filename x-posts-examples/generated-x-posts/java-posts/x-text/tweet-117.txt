@@ -1,0 +1,7 @@
+💡 Java Tip 💡: Make use of annotations like @NotNull, @Nullable for better tooling support. #Java #Annotations
+
+✅ Java Tip 💡: Make use of annotations like @NotNull, @Nullable for better tooling support. #Java #Annotations
+
+✅ Uses @PostMapping in the snippet
+
+✅ Runnable sample: java-tips

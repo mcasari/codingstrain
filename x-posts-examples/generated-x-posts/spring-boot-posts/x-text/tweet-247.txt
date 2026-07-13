@@ -1,0 +1,7 @@
+🚀 Spring Boot: @TransactionalEventListener can be used to implement post-commit actions.
+
+✅ #SpringBoot #JavaDev
+
+✅ Uses @Transactional in the snippet
+
+✅ Runnable sample: spring-boot-tips

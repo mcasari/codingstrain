@@ -1,0 +1,9 @@
+🚀Spring Boot: Pagination without boilerplate — use Pageable.
+
+✅ Pagination without boilerplate — use Pageable
+
+✅ Uses @GetMapping in the snippet
+
+✅ Runnable sample: spring-boot-paged-rest-example
+
+#SpringBoot #JavaDev

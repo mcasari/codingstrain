@@ -1,0 +1,7 @@
+💡 Java tip 💡: Don’t reinvent the wheel—use proven Java libraries and frameworks. #Java #Productivity
+
+✅ Java tip 💡: Don’t reinvent the wheel—use proven Java libraries and frameworks. #Java #Productivity
+
+✅ Runnable sample: java-tips
+
+✅ Architecture diagram + Carbon CodePen below

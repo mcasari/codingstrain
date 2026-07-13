@@ -1,0 +1,9 @@
+🚀Spring Cloud: Contract testing with Pact — make sure two services still agree on their API.
+
+✅ The consumer writes down the response it expects and tests against a mock — the real provider doesn't need to be running
+
+✅ The provider replays that same contract against the real app and fails if it no longer matches
+
+✅ Each side is verified separately, so a breaking change shows up long before deployment
+
+#SpringCloud #Testing

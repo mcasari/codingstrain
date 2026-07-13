@@ -1,0 +1,7 @@
+🚀 Spring Boot: You can validate config classes with the @Validated annotation.
+
+✅ It makes your app fail fast at startup if the configuration is invalid.
+
+✅ #SpringBoot #JavaDev
+
+✅ Runnable sample: spring-boot-tips

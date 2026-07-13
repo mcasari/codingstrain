@@ -2,7 +2,7 @@
 
 Runnable sample for the tweet:
 
-> VarHandle provides fence operations weaker than `volatile`: `setOpaque` for single-writer ordering, `setRelease` for publish, `getAcquire` for subscribe.
+> VarHandle lets you share data between threads with lighter ordering than `volatile` — pair `setRelease` (publish) with `getAcquire` (subscribe) so the reader sees all writes made before the flag flips.
 
 ## Run
 
@@ -33,4 +33,4 @@ plain (no `volatile` keyword) — ordering comes entirely from the VarHandle acc
 
 ## Related tweet asset
 
-- `x-posts-examples/generated-x-posts/sources/tweet-56.java`
+- `x-posts-examples/generated-x-posts/java-posts/sources/tweet-56.java`

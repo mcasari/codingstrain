@@ -1,0 +1,9 @@
+🚀Spring Boot: Constructor injection beats field injection.
+
+✅ Constructor injection beats field injection
+
+✅ Uses @RestController in the snippet
+
+✅ Runnable sample: spring-boot-paged-rest-example
+
+#SpringBoot #SoftwareEngineering

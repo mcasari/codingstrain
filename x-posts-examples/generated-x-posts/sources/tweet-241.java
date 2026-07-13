@@ -1,2 +1,0 @@
-// 🚀 Spring Boot testing: Using spring.main.log-startup-info=false, you can skip the verbose startup summary.
-// #SpringBoot #JavaDev

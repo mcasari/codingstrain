@@ -1,0 +1,9 @@
+💡 Java 8+ CompletableFuture: chain async steps without blocking the thread on every I/O call.
+
+✅ Chain: supplyAsync → thenApply → thenCompose → thenAccept (fetch user, then orders)
+
+✅ Handle failures with exceptionally — don't let async errors disappear silently
+
+✅ Run independent calls in parallel, merge with thenCombine when both finish
+
+#Java #Concurrency

@@ -1,0 +1,9 @@
+💡 Spring Boot tip: Use @SpringBootTest(webEnvironment = RANDOM_PORT) for integration tests when testing controllers.
+
+✅ Starts a real embedded server
+
+✅ The server runs on a random port.
+
+✅ You can test controllers via TestRestTemplate or WebTestClient.
+
+#SpringBoot

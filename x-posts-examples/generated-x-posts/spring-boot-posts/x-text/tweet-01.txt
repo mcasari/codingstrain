@@ -1,0 +1,9 @@
+🚀Spring Boot: Your first REST API in 30 seconds with H2.
+
+✅ Your first REST API in 30 seconds with H2
+
+✅ Uses @RestController in the snippet
+
+✅ Uses @GetMapping in the snippet
+
+#SpringBoot #Java

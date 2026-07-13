@@ -1,0 +1,9 @@
+🚀Spring Boot: Production error JSON checklist.
+
+✅ Production error JSON checklist
+
+✅ Runnable sample: springboot-error-handling-demo
+
+✅ Architecture diagram + Carbon CodePen below
+
+#SpringBoot

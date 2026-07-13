@@ -1,0 +1,7 @@
+// 💡 Java tip💡: Avoid using `Thread.sleep()` for timing. Use proper synchronization or schedulers. #Java #Concurrency
+//
+// ✅ Java tip💡: Avoid using `Thread.sleep()` for timing. Use proper synchronization or schedulers. #Java #Concurrency
+//
+// ✅ Runnable sample: `java-tips`
+//
+// ✅ Architecture diagram + Carbon CodePen below

@@ -1,0 +1,9 @@
+🚀Spring Boot tip: Boost performance in Spring Boot with @EnableCaching and
+
+✅ Avoids repeated DB/API calls
+
+✅ Reduces latency
+
+✅ By default, Spring uses an in-memory map, but you  can plug in an external provider for production.
+
+#SpringBoot #Performance

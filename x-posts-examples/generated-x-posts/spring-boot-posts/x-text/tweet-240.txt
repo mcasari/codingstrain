@@ -1,0 +1,7 @@
+🚀 Spring Boot testing: @MockBean by default resets the mocks between tests, to keep them independent. You can disable this behaviour with @MockBean(reset = MockReset.NONE).
+
+✅ #SpringBoot #JavaDev
+
+✅ Runnable sample: spring-boot-tips
+
+✅ Architecture diagram + Carbon CodePen below

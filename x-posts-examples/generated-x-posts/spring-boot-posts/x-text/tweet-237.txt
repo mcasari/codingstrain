@@ -1,0 +1,9 @@
+🚀 Spring Boot: You can enable /actuator/beans to debug missing beans.
+
+✅ Bean name
+
+✅ Bean type
+
+✅ Bean scope
+
+#SpringBoot #JavaDev

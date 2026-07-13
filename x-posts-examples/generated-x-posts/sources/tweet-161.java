@@ -1,4 +1,0 @@
-// 💡 Java tip: Stream.toArray(Type[]::new) is a clean, type-safe way to get arrays from streams.
-//
-// ✅ Avoids Object[] and casting.
-// #Java #JavaDev

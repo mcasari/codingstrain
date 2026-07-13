@@ -1,2 +1,0 @@
-// Spring Boot: Avoid importing the full spring-boot-starter-web if you only need Spring MVC, because the full starter brings in extra components like an embedded server that you may not need.
-// #SpringBoot #JavaDev

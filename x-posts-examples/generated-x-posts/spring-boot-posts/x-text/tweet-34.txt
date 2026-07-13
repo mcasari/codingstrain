@@ -1,0 +1,9 @@
+🚀Spring Boot: Spring Batch: read CSV, process, write in chunks.
+
+✅ Spring Batch: read CSV, process, write in chunks
+
+✅ Runnable sample: spring-batch-csv-sample
+
+✅ Architecture diagram + Carbon CodePen below
+
+#SpringBoot #SpringBatch

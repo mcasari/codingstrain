@@ -1,0 +1,9 @@
+🚀Spring Boot: Call EntityManager.clear() every N rows when streaming.
+
+✅ Call EntityManager.clear() every N rows when streaming
+
+✅ Runnable sample: spring-streaming-demo
+
+✅ Architecture diagram + Carbon CodePen below
+
+#SpringBoot #SoftwareEngineering

@@ -1,1 +1,0 @@
-// Java tip: Starting from Java 8 you can use List.removeIf(<predicate>) to clean up collections in one line. #JavaTips

@@ -1,0 +1,7 @@
+// 💡 SpringBoot: Define @ComponentScan boundaries carefully to avoid to avoid scanning entire packages accidentally.
+//
+// ✅ #SpringBoot #JavaDev
+//
+// ✅ Runnable sample: `spring-boot-tips`
+//
+// ✅ Architecture diagram + Carbon CodePen below

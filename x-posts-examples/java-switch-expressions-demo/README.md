@@ -2,7 +2,7 @@
 
 Runnable sample for the tweet:
 
-> switch expressions (Java 14+) are exhaustive: if you omit a case, the compiler errors unless you add a `default` or cover all enum constants.
+> Java 14+ switch expressions return a value and the compiler checks you handled every enum constant — forget a case and the build fails before production.
 
 ## Run
 
@@ -27,4 +27,4 @@ java -cp target/classes com.codingstrain.switchexpr.SwitchExpressionsDemo
 
 ## Related tweet asset
 
-- `x-posts-examples/generated-x-posts/sources/tweet-55.java`
+- `x-posts-examples/generated-x-posts/java-posts/sources/tweet-55.java`

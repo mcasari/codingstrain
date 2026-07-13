@@ -1,5 +1,0 @@
-// 🚀Spring Boot: Plug in Redis (or another provider) without changing business logic.
-//
-// ✅ Plug in Redis (or another provider) without changing business logic
-// ✅ Runnable sample: `springboot-redis-cache-demo`
-// ✅ Architecture diagram + Carbon CodePen below

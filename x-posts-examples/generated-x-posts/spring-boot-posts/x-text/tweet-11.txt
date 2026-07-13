@@ -1,0 +1,9 @@
+🚀Spring Boot: Validate lists in application.yml with Bean Validation.
+
+✅ Validate lists in application.yml with Bean Validation
+
+✅ Runnable sample: spring-boot-validated-config
+
+✅ Architecture diagram + Carbon CodePen below
+
+#SpringBoot #JavaDev

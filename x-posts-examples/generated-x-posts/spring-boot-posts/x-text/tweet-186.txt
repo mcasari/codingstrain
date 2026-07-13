@@ -1,0 +1,7 @@
+🚀 Spring Boot tip: With Spring Boot and Spring Security you can secure endpoints easily.
+
+✅ #SpringBoot #SpringSecurity #Java
+
+✅ Runnable sample: spring-boot-tips
+
+✅ Architecture diagram + Carbon CodePen below

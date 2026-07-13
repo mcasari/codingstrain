@@ -1,6 +1,0 @@
-// 🚀 Spring Boot: Better keep the default spring.main.allow-bean-definition-overriding=false configuration.
-//
-// ✅This way Spring fails to start if two beans share the same name.
-//
-// ✅Useful because bean overriding can hide configuration bugs
-// #SpringBoot #JavaDev

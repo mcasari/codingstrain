@@ -1,0 +1,1188 @@
+[
+  {
+    "id": 1,
+    "module": "spring-boot-minimal-rest-h2",
+    "body": "🚀Spring Boot: Your first REST API in 30 seconds with H2.\n\n✅ Your first REST API in 30 seconds with H2\n\n✅ Uses `@RestController` in the snippet\n\n✅ Uses `@GetMapping` in the snippet\n\n#SpringBoot #Java",
+    "code": "@RestController\n@RequestMapping(\"/library\")\npublic class BookController {\n\n    @GetMapping(\"/book\")\n    public List<Book> findAll() {\n        return bookService.findAll();\n    }\n\n    @PostMapping(\"/book\")\n    public Book add(@RequestBody Book book) {\n        return bookService.save(book);\n    }\n}",
+    "tags": "#SpringBoot #Java",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 2,
+    "module": "spring-boot-paged-rest-example",
+    "body": "🚀Spring Boot: Constructor injection beats field injection.\n\n✅ Constructor injection beats field injection\n\n✅ Uses `@RestController` in the snippet\n\n✅ Runnable sample: `spring-boot-paged-rest-example`\n\n#SpringBoot #SoftwareEngineering",
+    "code": "@RestController\npublic class UserController {\n\n    private final UserRepository repository;\n\n    public UserController(UserRepository repository) {\n        this.repository = repository;\n    }\n}",
+    "tags": "#SpringBoot #SoftwareEngineering",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 3,
+    "module": "spring-boot-paged-rest-example",
+    "body": "🚀Spring Boot: Pagination without boilerplate — use Pageable.\n\n✅ Pagination without boilerplate — use Pageable\n\n✅ Uses `@GetMapping` in the snippet\n\n✅ Runnable sample: `spring-boot-paged-rest-example`\n\n#SpringBoot #JavaDev",
+    "code": "@GetMapping\npublic PagedResponse<User> getUsers(Pageable pageable) {\n    Page<User> page = repository.findAll(pageable);\n    return new PagedResponse<>(\n        page.getContent(),\n        page.getNumber(),\n        page.getSize(),\n        page.getTotalElements(),\n        page.getTotalPages()\n    );\n}",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 4,
+    "module": "spring-boot-minimal-rest-h2",
+    "body": "🚀Spring Boot: @PathVariable vs @RequestParam — know the difference.\n\n✅ @PathVariable vs @RequestParam — know the difference\n\n✅ Uses `@GetMapping` in the snippet\n\n✅ Runnable sample: `spring-boot-minimal-rest-h2`\n\n#SpringBoot #Java",
+    "code": "@GetMapping(\"/book/{id}\")\npublic Book findById(@PathVariable(\"id\") String id) {\n    return bookService.findById(id);\n}\n\n@GetMapping(\"/book/search\")\npublic List<Book> search(@RequestParam String title) {\n    return bookService.findByTitle(title);\n}",
+    "tags": "#SpringBoot #Java",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 5,
+    "module": "springboot-error-handling-demo",
+    "body": "🚀Spring Boot: With @RestControllerAdvice you can handle specific types of exceptions globally instead of using try/catch everywhere.\n\n✅ With @RestControllerAdvice you can handle specific types of exceptions globally instead of using try/catch everywhere\n\n✅ Uses `@ExceptionHandler` in the snippet\n\n✅ Uses `@GetMapping` in the snippet\n\n#SpringBoot #SoftwareEngineering",
+    "code": "@RestControllerAdvice\npublic class GlobalExceptionHandler {\n\n    @ExceptionHandler(ResourceNotFoundException.class)\n    public ResponseEntity<ErrorResponse> handleNotFound(ResourceNotFoundException ex) {\n        return ResponseEntity.status(HttpStatus.NOT_FOUND)\n            .body(new ErrorResponse(\"NOT_FOUND\", ex.getMessage()));\n    }\n}\n\n@GetMapping(\"/users/{id}\")\npublic User getUser(@PathVariable Long id) {\n    return userService.findById(id);\n}",
+    "tags": "#SpringBoot #SoftwareEngineering",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 6,
+    "module": "springboot-error-handling-demo",
+    "body": "🚀Spring Boot: Stop returning stack traces to clients — return a stable JSON structure.\n\n✅ Stop returning stack traces to clients — return a stable JSON structure\n\n✅ Runnable sample: `springboot-error-handling-demo`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#SpringBoot #SoftwareEngineering",
+    "code": "public class ErrorResponse {\n    private Instant timestamp;\n    private int status;\n    private String error;\n    private String message;\n    private String path;\n}",
+    "tags": "#SpringBoot #SoftwareEngineering",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 7,
+    "module": "springboot-error-handling-demo",
+    "body": "🚀Spring Boot: Always map exceptions to HTTP status + a safe JSON body.\n\n✅ Always map exceptions to HTTP status + a safe JSON body\n\n✅ Runnable sample: `springboot-error-handling-demo`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 8,
+    "module": "springboot-error-handling-demo",
+    "body": "🚀Spring Boot: Production error JSON checklist.\n\n✅ Production error JSON checklist\n\n✅ Runnable sample: `springboot-error-handling-demo`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#SpringBoot",
+    "code": "// ✅ timestamp\n// ✅ status\n// ✅ error (short code)\n// ✅ message (user-safe)\n// ✅ path\n// Never leak SQL or internal hostnames",
+    "tags": "#SpringBoot",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 9,
+    "module": "spring-boot-validated-config",
+    "body": "🚀Spring Boot: Fail fast at startup with @Validated + @ConfigurationProperties.\n\n✅ Fail fast at startup with @Validated + @ConfigurationProperties\n\n✅ Runnable sample: `spring-boot-validated-config`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#SpringBoot #SoftwareEngineering",
+    "code": "@Validated\n@ConfigurationProperties(prefix = \"app\")\npublic class AppProperties {\n\n    @NotBlank\n    private String name;\n\n    @Min(1) @Max(60)\n    private Integer timeout;\n}",
+    "tags": "#SpringBoot #SoftwareEngineering",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 10,
+    "module": "spring-boot-validated-config",
+    "body": "🚀Spring Boot: Use @Valid on nested configuration objects.\n\n✅ Use @Valid on nested configuration objects\n\n✅ Runnable sample: `spring-boot-validated-config`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#SpringBoot",
+    "code": "@Valid\nprivate Security security;\n\npublic static class Security {\n    @NotBlank private String username;\n    @NotBlank private String password;\n}",
+    "tags": "#SpringBoot",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 11,
+    "module": "spring-boot-validated-config",
+    "body": "🚀Spring Boot: Validate lists in application.yml with Bean Validation.\n\n✅ Validate lists in application.yml with Bean Validation\n\n✅ Runnable sample: `spring-boot-validated-config`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#SpringBoot #JavaDev",
+    "code": "@NotEmpty\nprivate List<@NotBlank String> servers;",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 12,
+    "module": "spring-boot-validated-config",
+    "body": "🚀Spring Boot: Bad YAML fails at startup — better than discovering misconfig in prod.\n\n✅ Bad YAML fails at startup — better than discovering misconfig in prod\n\n✅ Runnable sample: `spring-boot-validated-config`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#SpringBoot",
+    "tags": "#SpringBoot",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 13,
+    "module": "sql-annotation-demo",
+    "body": "🚀Spring Boot: JpaRepository is your entire DAO for CRUD.\n\n✅ JpaRepository is your entire DAO for CRUD\n\n✅ Runnable sample: `sql-annotation-demo`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#SpringBoot #Java",
+    "code": "public interface UserRepository extends JpaRepository<User, Long> {\n}",
+    "tags": "#SpringBoot #Java",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 14,
+    "module": "sql-annotation-demo",
+    "body": "🚀Spring Boot: @Sql or @SqlGroup allows you to preload test data for reproducible tests.\n\n✅ @Sql or @SqlGroup allows you to preload test data for reproducible tests\n\n✅ Uses `@SpringBootTest` in the snippet\n\n✅ Runnable sample: `sql-annotation-demo`\n\n#SpringBoot #IntegrationTesting",
+    "code": "@SpringBootTest\n@Sql(\"/test-data.sql\")\nclass UserRepositoryTest {\n\n    @Autowired UserRepository repo;\n\n    @Test\n    void testUserLoadedFromSql() {\n        var user = repo.findById(1L).orElseThrow();\n        assertEquals(\"Alice\", user.getName());\n    }\n}",
+    "tags": "#SpringBoot #IntegrationTesting",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 15,
+    "module": "spring-streaming-demo",
+    "body": "🚀Spring Boot: Processing 1M rows with findAll() will OOM you — use a Stream.\n\n✅ Processing 1M rows with findAll() will OOM you — use a Stream\n\n✅ Runnable sample: `spring-streaming-demo`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#SpringBoot #JPA",
+    "code": "@Query(\"SELECT u FROM User u\")\nStream<User> streamAllUsers();",
+    "tags": "#SpringBoot #JPA",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 16,
+    "module": "spring-streaming-demo",
+    "body": "🚀Spring Boot: Call EntityManager.clear() every N rows when streaming.\n\n✅ Call EntityManager.clear() every N rows when streaming\n\n✅ Runnable sample: `spring-streaming-demo`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#SpringBoot #SoftwareEngineering",
+    "code": "try (Stream<User> stream = repository.streamAllUsers()) {\n    stream.forEach(user -> {\n        process(user);\n        if (counter.incrementAndGet() % 100 == 0) {\n            em.clear();\n        }\n    });\n}",
+    "tags": "#SpringBoot #SoftwareEngineering",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 17,
+    "module": "spring-streaming-demo",
+    "body": "🚀Spring Boot: Always wrap JPA streams in try-with-resources.\n\n✅ Always wrap JPA streams in try-with-resources\n\n✅ Runnable sample: `spring-streaming-demo`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#SpringBoot #JPA",
+    "code": "try (Stream<User> stream = repository.streamAllUsers()) {\n    stream.forEach(this::process);\n}",
+    "tags": "#SpringBoot #JPA",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 18,
+    "module": "spring-streaming-demo",
+    "body": "🚀Spring Boot: Use @Transactional(readOnly = true) on read-only batch jobs.\n\n✅ Use @Transactional(readOnly = true) on read-only batch jobs\n\n✅ Runnable sample: `spring-streaming-demo`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 19,
+    "module": "spring-kafka-demo",
+    "body": "🚀Spring Boot: Spring Boot integrates easily with Kafka for event-driven architectures.\n\n✅ Spring Boot integrates easily with Kafka for event-driven architectures\n\n✅ Runnable sample: `spring-kafka-demo`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#SpringBoot #JavaDev",
+    "code": "@Service\npublic class MessageProducer {\n\n    private final KafkaTemplate<String, String> kafkaTemplate;\n\n    public void send(String message) {\n        kafkaTemplate.send(\"demo-topic\", message);\n    }\n}",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 20,
+    "module": "spring-kafka-demo",
+    "body": "🚀Spring Boot: Kafka consumers are simple with @KafkaListener.\n\n✅ Kafka consumers are simple with @KafkaListener\n\n✅ Runnable sample: `spring-kafka-demo`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#SpringBoot #Kafka",
+    "code": "@KafkaListener(topics = \"demo-topic\", groupId = \"demo-group\")\npublic void listen(String message) {\n    System.out.println(\"Received: \" + message);\n}",
+    "tags": "#SpringBoot #Kafka",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 21,
+    "module": "spring-kafka-demo",
+    "body": "🚀Spring Boot: Know when to use auto-offset-reset: earliest vs latest.\n\n✅ Know when to use auto-offset-reset: earliest vs latest\n\n✅ Runnable sample: `spring-kafka-demo`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#SpringBoot #Kafka",
+    "code": "spring:\n  kafka:\n    consumer:\n      auto-offset-reset: earliest",
+    "tags": "#SpringBoot #Kafka",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 22,
+    "module": "spring-transactional-event-demo",
+    "body": "🚀Spring Boot: Decouple services: save to DB, then publish an application event.\n\n✅ Decouple services: save to DB, then publish an application event\n\n✅ Uses `@Transactional` in the snippet\n\n✅ Runnable sample: `spring-transactional-event-demo`\n\n#SpringBoot #Microservices",
+    "code": "@Transactional\npublic Order createOrder(String product) {\n    Order order = repository.save(new Order(product));\n    publisher.publishEvent(new OrderCreatedEvent(order.getId()));\n    return order;\n}",
+    "tags": "#SpringBoot #Microservices",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 23,
+    "module": "spring-transactional-event-demo",
+    "body": "🚀Spring Boot: Don't send the email before commit — use AFTER_COMMIT.\n\n✅ Don't send the email before commit — use AFTER_COMMIT\n\n✅ Runnable sample: `spring-transactional-event-demo`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#SpringBoot #SoftwareEngineering",
+    "code": "@TransactionalEventListener(phase = TransactionPhase.AFTER_COMMIT)\npublic void handleOrderCreated(OrderCreatedEvent event) {\n    // send confirmation email\n}",
+    "tags": "#SpringBoot #SoftwareEngineering",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 24,
+    "module": "async-demo",
+    "body": "🚀Spring Boot: Use @Async only for small offloading tasks, and with a provided executor.\n\n✅ Use @Async only for small offloading tasks, and with a provided executor\n\n✅ Runnable sample: `async-demo`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#SpringBoot #SoftwareDevelopment",
+    "code": "@EnableAsync\n@SpringBootApplication\npublic class DemoApplication { }\n\n@Async(\"taskExecutor\")\npublic void runTask() { }",
+    "tags": "#SpringBoot #SoftwareDevelopment",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 25,
+    "module": "async-demo",
+    "body": "🚀Spring Boot: Don't use the default executor in production.\n\n✅ Don't use the default executor in production\n\n✅ Runnable sample: `async-demo`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#SpringBoot",
+    "code": "executor.setCorePoolSize(2);\nexecutor.setMaxPoolSize(5);\nexecutor.setQueueCapacity(10);\nexecutor.setThreadNamePrefix(\"Async-\");",
+    "tags": "#SpringBoot",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 26,
+    "module": "async-demo",
+    "body": "🚀Spring Boot: Fire async tasks at startup with CommandLineRunner.\n\n✅ Fire async tasks at startup with CommandLineRunner\n\n✅ Runnable sample: `async-demo`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 27,
+    "module": "async-demo",
+    "body": "🚀Spring Boot: @Async methods must be called from another Spring bean — not the same class.\n\n✅ @Async methods must be called from another Spring bean — not the same class\n\n✅ Runnable sample: `async-demo`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#SpringBoot",
+    "tags": "#SpringBoot",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 28,
+    "module": "springboot-redis-cache-demo",
+    "body": "🚀Spring Boot: Boost performance with @EnableCaching and @Cacheable.\n\n✅ Boost performance with @EnableCaching and @Cacheable\n\n✅ Runnable sample: `springboot-redis-cache-demo`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#SpringBoot #SoftwareEngineering",
+    "code": "@Cacheable(value = \"weather\", key = \"#city\")\npublic String getWeather(String city) {\n    return fetchFromSlowApi(city);\n}",
+    "tags": "#SpringBoot #SoftwareEngineering",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 29,
+    "module": "springboot-redis-cache-demo",
+    "body": "🚀Spring Boot: Configure Redis cache TTL in one bean.\n\n✅ Configure Redis cache TTL in one bean\n\n✅ Runnable sample: `springboot-redis-cache-demo`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#SpringBoot #Redis",
+    "code": "return RedisCacheConfiguration.defaultCacheConfig()\n    .entryTtl(Duration.ofMinutes(5))\n    .disableCachingNullValues();",
+    "tags": "#SpringBoot #Redis",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 30,
+    "module": "springboot-redis-cache-demo",
+    "body": "🚀Spring Boot: Plug in Redis (or another provider) without changing business logic.\n\n✅ Plug in Redis (or another provider) without changing business logic\n\n✅ Runnable sample: `springboot-redis-cache-demo`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#SpringBoot",
+    "tags": "#SpringBoot",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 31,
+    "module": "cors-demo",
+    "body": "🚀Spring Boot: Configure global CORS once — no @CrossOrigin on every controller.\n\n✅ Configure global CORS once — no @CrossOrigin on every controller\n\n✅ Runnable sample: `cors-demo`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#SpringBoot #Web",
+    "code": "registry.addMapping(\"/**\")\n    .allowedOrigins(\"http://localhost:3000\")\n    .allowedMethods(\"GET\", \"POST\", \"PUT\", \"DELETE\", \"OPTIONS\")\n    .allowCredentials(true);",
+    "tags": "#SpringBoot #Web",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 32,
+    "module": "cors-demo",
+    "body": "🚀Spring Boot: CORS isn't a bug — it's the browser. Configure it once globally.\n\n✅ CORS isn't a bug — it's the browser. Configure it once globally\n\n✅ Runnable sample: `cors-demo`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#SpringBoot",
+    "tags": "#SpringBoot",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 33,
+    "module": "spring-request-logging-demo",
+    "body": "🚀Spring Boot: Debug HTTP issues with CommonsRequestLoggingFilter.\n\n✅ Debug HTTP issues with CommonsRequestLoggingFilter\n\n✅ Runnable sample: `spring-request-logging-demo`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#SpringBoot #JavaDev",
+    "code": "filter.setIncludeQueryString(true);\nfilter.setIncludePayload(true);\nfilter.setMaxPayloadLength(10000);",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 34,
+    "module": "spring-batch-csv-sample",
+    "body": "🚀Spring Boot: Spring Batch: read CSV, process, write in chunks.\n\n✅ Spring Batch: read CSV, process, write in chunks\n\n✅ Runnable sample: `spring-batch-csv-sample`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#SpringBoot #SpringBatch",
+    "code": "return new StepBuilder(\"step\", jobRepository)\n    .<Person, Person>chunk(5, transactionManager)\n    .reader(reader())\n    .processor(processor())\n    .writer(writer())\n    .build();",
+    "tags": "#SpringBoot #SpringBatch",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 35,
+    "module": "spring-batch-csv-sample",
+    "body": "🚀Spring Boot: FlatFileItemReaderBuilder + linesToSkip(1) skips the CSV header.\n\n✅ FlatFileItemReaderBuilder + linesToSkip(1) skips the CSV header\n\n✅ Runnable sample: `spring-batch-csv-sample`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#SpringBoot",
+    "tags": "#SpringBoot",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 36,
+    "module": "spring-batch-csv-sample",
+    "body": "🚀Spring Boot: ItemProcessor transforms each row before writing.\n\n✅ ItemProcessor transforms each row before writing\n\n✅ Runnable sample: `spring-batch-csv-sample`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#SpringBoot",
+    "code": "return person -> {\n    person.setName(person.getName().toUpperCase());\n    return person;\n};",
+    "tags": "#SpringBoot",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 37,
+    "module": "spring-csv-sample",
+    "body": "🚀Spring Boot: Parse CSV with Apache Commons CSV and try-with-resources.\n\n✅ Parse CSV with Apache Commons CSV and try-with-resources\n\n✅ Runnable sample: `spring-csv-sample`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#Java #SpringBoot",
+    "code": "try (Reader reader = Files.newBufferedReader(path);\n     CSVParser parser = new CSVParser(reader, CSVFormat.DEFAULT.withHeader())) {\n    for (CSVRecord record : parser) {\n        String name = record.get(\"name\");\n    }\n}",
+    "tags": "#Java #SpringBoot",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 38,
+    "module": "spring-mock-reset-example",
+    "body": "🚀Spring Boot: @MockBean stubs can leak between tests unless you reset them.\n\n✅ @MockBean stubs can leak between tests unless you reset them\n\n✅ Runnable sample: `spring-mock-reset-example`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#SpringBoot #Testing",
+    "code": "@MockBean\nprivate MyService myService;\n\n@Test @Order(1) void testA() {\n    when(myService.getData()).thenReturn(\"A\");\n}",
+    "tags": "#SpringBoot #Testing",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 39,
+    "module": "spring-mock-reset-example",
+    "body": "🚀Spring Boot: @SpringBootTest loads the full context — use when you need integration truth.\n\n✅ @SpringBootTest loads the full context — use when you need integration truth\n\n✅ Runnable sample: `spring-mock-reset-example`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#SpringBoot #Testing",
+    "tags": "#SpringBoot #Testing",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 40,
+    "module": "sql-annotation-demo",
+    "body": "🚀Spring Boot: @Sql on tests = reproducible DB state every run.\n\n✅ @Sql on tests = reproducible DB state every run\n\n✅ Runnable sample: `sql-annotation-demo`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#SpringBoot #IntegrationTesting",
+    "tags": "#SpringBoot #IntegrationTesting",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 48,
+    "module": "spring-boot-minimal-rest-h2",
+    "body": "🚀Spring Boot: A full REST API on an H2 in-memory database — no Docker, nothing to install.\n\n✅ H2 lives inside the app's memory: the database is created on startup and thrown away on shutdown — ideal for demos and tests\n\n✅ Extend JpaRepository and you get full CRUD (list, fetch, create, update, delete) without writing SQL\n\n✅ Just run the app — the schema and sample rows load automatically, and you can browse them at /h2-console\n\n#SpringBoot",
+    "tags": "#SpringBoot",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "// 1) JPA entity mapped to a table in the H2 database\n@Entity\n@Table(name = \"Book\")\npublic class Book {\n    @Id private String id;\n    private String title;\n    private String author;\n    // getters / setters omitted\n}\n\n// 2) Repository — extend JpaRepository for full CRUD, add finders as needed\n@Repository\npublic interface BookRepository extends JpaRepository<Book, String> {\n    List<Book> findByAuthor(String author);\n}\n\n// 3) REST controller exposes the CRUD over HTTP\n@RestController\n@RequestMapping(\"/library\")\npublic class BookController {\n\n    @Autowired\n    private BookService books;\n\n    @GetMapping(\"/book\")\n    public List<Book> findAll() { return books.findAll(); }\n\n    @PostMapping(\"/book\")\n    public Book add(@RequestBody Book book) { return books.save(book); }\n\n    @DeleteMapping(\"/book/{id}\")\n    public void delete(@PathVariable String id) { books.deleteById(id); }\n}\n\n// 4) application.yaml — in-memory H2, nothing to install\n// spring.datasource.url: jdbc:h2:mem:mydb\n// spring.sql.init.mode: always       # auto-runs schema.sql + import.sql\n// spring.h2.console.enabled: true    # browse data at /h2-console",
+    "diagram_type": "rest",
+    "codepen_columns": 2,
+    "codepen_split_decl": 2,
+    "category": "spring-boot"
+  },
+  {
+    "id": 49,
+    "module": "spring-cloud-config-native-server",
+    "body": "🚀Spring Cloud: Centralize config with Spring Cloud Config before you copy application.properties everywhere.\n\n✅ Centralize config with Spring Cloud Config before you copy application.properties everywhere\n\n✅ Runnable sample: `spring-cloud-config-native-server`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#SpringCloud #Microservices",
+    "tags": "#SpringCloud #Microservices",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "// ── 1) Config Server: one place serves every service's config ──\n@SpringBootApplication\n@EnableConfigServer\npublic class ConfigServerApp {\n    public static void main(String[] args) {\n        new SpringApplicationBuilder(ConfigServerApp.class).run(args);\n    }\n}\n\n// ── 2) Server application.yaml (serve files from the classpath) ──\n// spring.profiles.active: native        # local files, no git needed\n// spring.cloud.config.server.native.search-locations: classpath:/config\n// server.port: 8888\n\n// ── 3) /config/client-service.yaml (config for \"client-service\") ──\n// myproperty: value\n\n// ── 4) Client: import config from the server at startup ──\n// spring.application.name: client-service\n// spring.config.import: optional:configserver:http://localhost:8888\n\n@Component\npublic class GreetingClient {\n    @Value(\"${myproperty}\")               // resolved from the Config Server\n    private String myProperty;\n}",
+    "category": "spring-boot"
+  },
+  {
+    "id": 50,
+    "module": "spring-cloud-discovery",
+    "has_diagram": true,
+    "diagram_type": "eureka",
+    "body": "🚀Spring Cloud: Eureka service discovery — call services by name, not IP.\n\n✅ Each service registers with Eureka on startup (spring.application.name)\n\n✅ Eureka tracks healthy instances via heartbeats\n\n✅ Clients call http://author-service/... — LoadBalancer resolves the name to a live instance\n\n#SpringCloud #Microservices #SpringBoot",
+    "code": "// 1) Eureka Server — service registry\n@SpringBootApplication\n@EnableEurekaServer\npublic class DiscoveryServerApp {\n    public static void main(String[] args) {\n        SpringApplication.run(DiscoveryServerApp.class, args);\n    }\n}\n\n// 2) Microservice — registers as \"books-service\"\n// application.yml → spring.application.name: books-service\n\n@FeignClient(name = \"author-service\")\npublic interface AuthorClient {\n    @GetMapping(\"/authors/{id}\")\n    Author getAuthor(@PathVariable String id);\n}",
+    "tags": "#SpringCloud #Microservices #SpringBoot",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 51,
+    "module": "libraryapp-openfeign-discovery-circuitbreaker",
+    "has_diagram": true,
+    "diagram_type": "circuit_breaker",
+    "body": "🚀Spring Cloud: OpenFeign + Circuit Breaker — resilience isn't an afterthought.\n\n✅ @FeignClient calls remote services by name (via Eureka + LoadBalancer)\n\n✅ @CircuitBreaker stops calling a failing service after a threshold\n\n✅ fallbackMethod returns a safe default while the circuit is OPEN\n\n#SpringCloud #Microservices #SpringBoot #Resilience4j",
+    "code": "@FeignClient(name = \"author-service\")\npublic interface AuthorClient {\n\n    @GetMapping(\"/authors/getInstance\")\n    @CircuitBreaker(name = \"CircuitBreakerService\")\n    String getInstance();\n}\n\n@RestController\npublic class BookController {\n\n    @GetMapping(\"/getAuthorServiceInstance\")\n    @CircuitBreaker(name = \"CircuitBreakerApi\",\n                    fallbackMethod = \"getAuthorServiceInstanceFallback\")\n    public String getAuthorServiceInstance() {\n        return bookService.getAuthorServiceInstance();\n    }\n\n    public String getAuthorServiceInstanceFallback(Exception ex) {\n        return \"Fallback content\";\n    }\n}\n\n// application.yml\n// resilience4j.circuitbreaker.instances.CircuitBreakerApi:\n//   failure-rate-threshold: 50\n//   wait-duration-in-open-state: 5s",
+    "tags": "#SpringCloud #Microservices #SpringBoot #Resilience4j",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 52,
+    "module": "spring-cloud-sample-libraryapp",
+    "body": "🚀Spring Cloud: Contract testing with Pact — make sure two services still agree on their API.\n\n✅ The consumer writes down the response it expects and tests against a mock — the real provider doesn't need to be running\n\n✅ The provider replays that same contract against the real app and fails if it no longer matches\n\n✅ Each side is verified separately, so a breaking change shows up long before deployment\n\n#SpringCloud #Testing",
+    "tags": "#SpringCloud #Testing",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "// ── CONSUMER (books-service): declare what you expect from author-service ──\n@ExtendWith(PactConsumerTestExt.class)\nclass AuthorClientContractTest {\n\n    @Pact(consumer = \"books-service\", provider = \"author-service\")\n    V4Pact getAuthor(PactDslWithProvider builder) {\n        return builder.given(\"author Goethe exists\")\n            .uponReceiving(\"GET author by name\")\n                .path(\"/authors/findAuthor\").query(\"name=Goethe\").method(\"GET\")\n            .willRespondWith()\n                .status(200)\n                .body(\"{\\\"name\\\":\\\"Goethe\\\",\\\"biography\\\":\\\"Bio info\\\"}\")\n            .toPact(V4Pact.class);\n    }\n\n    @Test\n    @PactTestFor(pactMethod = \"getAuthor\")        // runs against a mock provider\n    void callsAuthorService(MockServer mock) {\n        String body = new RestTemplate().getForObject(\n            mock.getUrl() + \"/authors/findAuthor?name=Goethe\", String.class);\n        assertEquals(\"{\\\"name\\\":\\\"Goethe\\\",\\\"biography\\\":\\\"Bio info\\\"}\", body);\n    }\n}\n\n// ── PROVIDER (author-service): prove the real service honours the contract ──\n@Provider(\"author-service\")\n@SpringBootTest(webEnvironment = RANDOM_PORT)\n@PactBroker(url = \"http://localhost:9292\")\nclass AuthorProviderPactTest {\n\n    @TestTemplate\n    @ExtendWith(PactVerificationInvocationContextProvider.class)\n    void verifyContracts(PactVerificationContext ctx) {\n        ctx.verifyInteraction();                  // replay contract on the real app\n    }\n}",
+    "codepen_columns": 2,
+    "diagram_type": "pact",
+    "category": "spring-boot"
+  },
+  {
+    "id": 53,
+    "module": "spring-cloud-sample-libraryapp",
+    "body": "🚀Spring Cloud: Load testing with Gatling — check a service survives real traffic.\n\n✅ Describe a scenario (e.g. POST /library/book) and ramp virtual users up over time\n\n✅ Feed randomized data with Faker so every request looks realistic\n\n✅ Assert SLAs on the whole run — fail it if it gets too slow (≤10s) or drops below >90% success\n\n#SpringCloud #Testing",
+    "code": "// Gatling: load-test the books endpoint and assert SLAs\npublic class BookSaveSimulation extends Simulation {\n\n    {\n        setUp(buildScenario()\n            .injectOpen(rampUsersPerSec(1).to(100).during(ofSeconds(300)))\n            .protocols(http.baseUrl(\"http://localhost:8080\")))\n        .assertions(\n            global().responseTime().max().lte(10000),            // <= 10s\n            global().successfulRequests().percent().gt(90.0));   // > 90% OK\n    }\n\n    ScenarioBuilder buildScenario() {\n        return scenario(\"Load POST\")\n            .feed(randomTitles())                  // Faker-generated book titles\n            .exec(http(\"create-book\").post(\"/library/book\")\n                .header(\"Content-Type\", \"application/json\")\n                .body(StringBody(\"{ \\\"title\\\": \\\"${title}\\\" }\")));\n    }\n}",
+    "diagram_type": "gatling",
+    "tags": "#SpringCloud #Testing",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 183,
+    "module": "spring-boot-tips",
+    "body": "🚀Spring Boot: Spring Boot: To write cleaner REST controllers, use\n\n✅ Spring Boot: To write cleaner REST controllers, use\n\n✅ @RestController instead of  @Controller + @ResponseBody\n\n✅ #SpringBoot #CleanCode",
+    "tags": "#SpringBoot #CleanCode",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "// @RestController = @Controller + @ResponseBody\n@RestController\n@RequestMapping(\"/api\")\npublic class UserController {\n\n    @GetMapping(\"/users\")\n    public List<User> all() {\n        return service.findAll();   // serialized to JSON\n    }\n}",
+    "category": "spring-boot"
+  },
+  {
+    "id": 184,
+    "module": "spring-boot-tips",
+    "body": "💡 Sample repo to learn Spring Boot: github.com/spring-projects/spring-boot-samples\n\n✅ 65+ runnable mini-apps\n\n✅ Spring Boot 3.3, WebFlux, Security, Kafka, GraalVM\n\n✅ Official Spring team code",
+    "tags": "#SpringBoot #Java #Kafka #Microservices #GraalVM #DevCommunity",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "@Bean\nSecurityFilterChain security(HttpSecurity http) throws Exception {\n    return http\n        .authorizeHttpRequests(a -> a\n            .requestMatchers(\"/public/**\").permitAll()\n            .anyRequest().authenticated())\n        .httpBasic(Customizer.withDefaults())\n        .build();\n}",
+    "category": "spring-boot"
+  },
+  {
+    "id": 185,
+    "module": "spring-boot-tips",
+    "body": "💡Spring Boot tip: Use\n\n✅ @Profile\n\n✅ to group and load beans/configurations in specific environments\n\n✅ #SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "@Bean\n@Profile(\"dev\")\nDataSource devDataSource() { return new H2DataSource(); }\n\n@Bean\n@Profile(\"prod\")\nDataSource prodDataSource() { return new PgDataSource(); }",
+    "category": "spring-boot"
+  },
+  {
+    "id": 186,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot tip: With Spring Boot and Spring Security you can secure endpoints easily.\n\n✅ #SpringBoot #SpringSecurity #Java\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "tags": "#SpringBoot #SpringSecurity #Java",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "@Bean\nSecurityFilterChain security(HttpSecurity http) throws Exception {\n    return http\n        .authorizeHttpRequests(a -> a\n            .requestMatchers(\"/public/**\").permitAll()\n            .anyRequest().authenticated())\n        .httpBasic(Customizer.withDefaults())\n        .build();\n}",
+    "category": "spring-boot"
+  },
+  {
+    "id": 187,
+    "module": "spring-boot-tips",
+    "body": "💡 Spring Boot Tip: If you want DTOs to ignore extra JSON fields from clients without breaking your API use @JsonIgnoreProperties(ignoreUnknown = true).\n\n✅ #SpringBoot #CodingTips #SoftwareEngineering\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "tags": "#SpringBoot #CodingTips #SoftwareEngineering",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "// Ignore unknown JSON fields instead of failing\n@JsonIgnoreProperties(ignoreUnknown = true)\npublic record UserDto(String name, String email) {}",
+    "category": "spring-boot"
+  },
+  {
+    "id": 188,
+    "module": "spring-boot-tips",
+    "body": "💡 Spring Boot tip: Spring Boot prints a banner in the console when your app starts. You can customize it for branding or just fun.\n\n✅ Add a file banner.txt  in src/main/resources and put whatever content you want.\n\n✅ You can also use placeholders like ${spring-boot.version} or ${java.version} to inject values inside it.\n\n✅ If you want, you can disable the banner with the following configuration property:",
+    "tags": "#Java #SpringBoot",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 189,
+    "module": "spring-boot-tips",
+    "body": "💡 Spring Boot tip: You can run jobs at fixed intervals without setting up Quartz or external schedulers.\n\n✅ #Java #SpringBoot\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "tags": "#Java #SpringBoot",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "@Scheduled(fixedRate = 5000)\npublic void poll() {\n    log.info(\"tick\");\n}\n// Enable with @EnableScheduling on a @Configuration class",
+    "category": "spring-boot"
+  },
+  {
+    "id": 190,
+    "module": "spring-boot-tips",
+    "body": "🚀Spring Boot DevTools is a tool to ease developer's work a bit. It watches code and configuration for changes, then automatically reloads or restarts your app.\n\n✅ #SpringBoot #SoftwareDevelopment\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "tags": "#SpringBoot #SoftwareDevelopment",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 191,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot tip: In development, you can package and run an application from the source code with just one command:\n\n✅ When you’re in development, you can skip packaging and just run directly:\n\n✅ If you want, you can combine packaging and run in one command:\n\n✅ ./mvnw spring-boot:run",
+    "tags": "#Java #SpringBoot",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 192,
+    "module": "spring-boot-tips",
+    "body": "🚀Spring Boot: Use TaskScheduler to implement lightweight dynamic tasks (consider Quartz for more complex requirements).\n\n✅ #SpringBoot #SoftwareDevelopment\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "tags": "#SpringBoot #SoftwareDevelopment",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 193,
+    "module": "spring-boot-tips",
+    "body": "💡 Spring Boot tip: Use CommandLineRunner for executing startup logic.\n\n✅ #SpringBoot #Java\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "tags": "#SpringBoot #Java",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "@Bean\nCommandLineRunner init(UserRepository repo) {\n    return args -> repo.save(new User(\"Mario\"));\n}\n// Runs once, right after the context starts",
+    "category": "spring-boot"
+  },
+  {
+    "id": 194,
+    "module": "spring-boot-tips",
+    "body": "💡 Spring Boot tip: Use spring-boot-starter-logging (Logback) for logging, it is already included as default.\n\n✅ spring-boot-starter-logging is already included in most starters (spring-boot-starter-web, spring-boot-starter-data-jpa, etc.)\n\n✅ You can customize log levels by editing application.yml:\n\n✅ To customize format and rotation, create a logback-spring.xml in src/main/resources.",
+    "tags": "#SpringBoot #Java",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "private static final Logger log =\n    LoggerFactory.getLogger(OrderService.class);\n\nlog.info(\"Created order {} for {}\", orderId, customer);\n// Lazy formatting, log levels, no System.out",
+    "category": "spring-boot"
+  },
+  {
+    "id": 195,
+    "module": "spring-boot-tips",
+    "body": "💡Spring Boot tip: Use H2 if you need an in-memory   database for dev/testing.\n\n✅ #SpringBoot #Java\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "tags": "#SpringBoot #Java",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 196,
+    "module": "spring-boot-tips",
+    "body": "🚀Spring Boot tip: Boost performance in Spring Boot with @EnableCaching and\n\n✅ Avoids repeated DB/API calls\n\n✅ Reduces latency\n\n✅ By default, Spring uses an in-memory map, but you  can plug in an external provider for production.",
+    "tags": "#SpringBoot #Performance",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "@Cacheable(\"users\")\npublic User findById(Long id) {\n    return repo.findById(id).orElseThrow();\n}\n// Enable with @EnableCaching",
+    "category": "spring-boot"
+  },
+  {
+    "id": 197,
+    "module": "spring-boot-tips",
+    "body": "💡 Spring Boot tip: use\n\n✅  You coordinate business logic in the service layer, and a service method:\n\n✅ Calls one or more repositories\n\n✅ Implements business rules",
+    "tags": "#SpringBoot",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "@Transactional\npublic void transfer(Long from, Long to, BigDecimal amount) {\n    accounts.debit(from, amount);\n    accounts.credit(to, amount);   // both commit, or both roll back\n}",
+    "category": "spring-boot"
+  },
+  {
+    "id": 198,
+    "module": "spring-boot-tips",
+    "body": "💡 Spring Boot tip: Use @SpringBootTest(webEnvironment = RANDOM_PORT) for integration tests when testing controllers.\n\n✅ Starts a real embedded server\n\n✅ The server runs on a random port.\n\n✅ You can test controllers via TestRestTemplate or WebTestClient.",
+    "tags": "#SpringBoot",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "WebClient client = WebClient.create(\"https://api.example.com\");\n\nMono<User> user = client.get()\n    .uri(\"/users/{id}\", id)\n    .retrieve()\n    .bodyToMono(User.class);",
+    "category": "spring-boot"
+  },
+  {
+    "id": 199,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: springdoc-openapi automatically generates OpenAPI 3.0 (Swagger) documentation from your Spring Boot REST controllers.\n\n✅ An interactive Swagger UI\n\n✅ Auto-scanned from your code\n\n✅ Export API docs in JSON/YAML",
+    "tags": "#SpringBoot",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 200,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: You can enable a smooth shutdown with \"server.shutdown=graceful\" in your configuration.\n\n✅  It helps you avoid these situations:\n\n✅ 🔴 Active HTTP requests failing abruptly\n\n✅ 🔴 Database rolling back unexpectedly",
+    "tags": "#SpringBoot",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 201,
+    "module": "spring-boot-tips",
+    "body": "💡 Pin the Spring Boot version in the spring-boot-dependencies BOM to ensure consistent dependency management.\n\n✅  The spring-boot-dependencies BOM allows you to omit versions of libraries that Spring Boot integrates with in your pom.xml.\n\n✅ #SpringBoot\n\n✅ Runnable sample: `spring-boot-tips`",
+    "tags": "#SpringBoot",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 202,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: Use ResponseEntity<T> to get fine-grained control over HTTP responses.\n\n✅ You can explicitly specify Status, Headers and Body\n\n✅ #SpringBoot\n\n✅ Runnable sample: `spring-boot-tips`",
+    "tags": "#SpringBoot",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 203,
+    "module": "spring-boot-tips",
+    "body": "🚀  Spring Boot: Use spring-boot-starter-mail for sending emails.\n\n✅ It wraps all the necessary configuration and dependencies, making the process of sending emails simple and clear.\n\n✅ #SpringBoot\n\n✅ Runnable sample: `spring-boot-tips`",
+    "tags": "#SpringBoot",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 204,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: With @DataJpaTest you can test JPA repositories in isolation.\n\n✅ #SpringBoot #Java\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "tags": "#SpringBoot #Java",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 205,
+    "module": "spring-boot-tips",
+    "body": "💡 Spring Boot: To better handle circular dependencies, use constructor injection instead of field injection.\n\n✅ Forces all required dependencies to be provided at creation time, allowing early detection.\n\n✅ #SpringBoot #JavaDev\n\n✅ Runnable sample: `spring-boot-tips`",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 206,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: Use @SpringBootApplication(exclude = …) to disable specific auto-configuration classes.\n\n✅ One possible reason could be that you have a custom configuration that conflicts with the default.\n\n✅ #SpringBoot #JavaDev\n\n✅ Runnable sample: `spring-boot-tips`",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 207,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: If you need to inject grouped configuration properties into classes, you can use @ConfigurationProperties instead of @Value\n\n✅ #SpringBoot #JavaDev\n\n✅ Uses `@ConfigurationProperties` in the snippet\n\n✅ Runnable sample: `spring-boot-tips`",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "@ConfigurationProperties(prefix = \"app\")\npublic record AppProps(String name, int timeout) {}\n\n// Binds app.name / app.timeout from application.yaml",
+    "category": "spring-boot"
+  },
+  {
+    "id": 208,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: In development phase, use spring.main.lazy-initialization=true to speed up the startup of the application.\n\n✅ #SpringBoot #JavaDev\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 209,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: You can validate your input DTO objects with @Valid + @NotBlank, @Email, etc.\n\n✅ #Java #SoftwareDevelopment\n\n✅ Uses `@PostMapping` in the snippet\n\n✅ Runnable sample: `spring-boot-tips`",
+    "tags": "#Java #SoftwareDevelopment",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "public record SignupRequest(\n        @NotBlank String name,\n        @Email String email) {}\n\n@PostMapping(\"/signup\")\npublic void signup(@Valid @RequestBody SignupRequest req) {\n    service.register(req);\n}",
+    "category": "spring-boot"
+  },
+  {
+    "id": 210,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: Spring Data JPA has a built-in support for pagination with Pageable.\n\n✅You should use pagination in your repositories instead of fetching all.\n\n✅ #SpringBoot #JavaDev\n\n✅ Runnable sample: `spring-boot-tips`",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 211,
+    "module": "spring-boot-tips",
+    "body": "💡Spring Boot tip: If you need to implement integrations tests for Spring MVC controllers, and mock everything else, use @WebMvcTest to load only MVC-related beans.\n\n✅ #SpringBoot #IntegrationTesting\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "tags": "#SpringBoot #IntegrationTesting",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 212,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: You can use @Retryable to cope with unstable external services.\n\n✅ #SpringBoot #SoftwareDevelopment\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "tags": "#SpringBoot #SoftwareDevelopment",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 213,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: With @ConditionalOnMissingBean, you can define a default bean that can be possibly overridden by a user using a standard definition.\n\n✅ #SpringBoot #SoftwareDevelopment\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "tags": "#SpringBoot #SoftwareDevelopment",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 214,
+    "module": "spring-boot-tips",
+    "body": "🚀Spring Boot: You have the choice of using WebClient over RestTemplate in new apps.\n\n✅ It’s reactive and non-blocking\n\n✅ Based on event-loop instead of thread-per-request\n\n✅ Especially fitted for microservices",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "WebClient client = WebClient.create(\"https://api.example.com\");\n\nMono<User> user = client.get()\n    .uri(\"/users/{id}\", id)\n    .retrieve()\n    .bodyToMono(User.class);",
+    "category": "spring-boot"
+  },
+  {
+    "id": 215,
+    "module": "spring-boot-tips",
+    "body": "🚀 SpringBoot: Add global OpenAPI metadata with @OpenAPIDefinition.\n\n✅ It should be put on your main Spring Boot application class, or a dedicated configuration class\n\n✅ #SpringBoot #JavaDev\n\n✅ Runnable sample: `spring-boot-tips`",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 216,
+    "module": "spring-boot-tips",
+    "body": "💡 SpringBoot: Define @ComponentScan boundaries carefully to avoid to avoid scanning entire packages accidentally.\n\n✅ #SpringBoot #JavaDev\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 217,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: You can cache expensive API calls using\n\n✅First request with a specific key: real API call\n\n✅Subsequent requests: Redis (milliseconds)\n\n✅ @Cacheable",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "@Cacheable(\"users\")\npublic User findById(Long id) {\n    return repo.findById(id).orElseThrow();\n}\n// Enable with @EnableCaching",
+    "category": "spring-boot"
+  },
+  {
+    "id": 218,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: To make your services return a paginated response, instead of a giant list, you can use Page<T> and Pageable.\n\n✅ #SpringBoot #JavaDev\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 219,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: If your code uses RestTemplate, you can implement tests by mocking external calls with MockRestServiceServer.\n\n✅ MockRestServiceServer works by intercepting HTTP requests\n\n✅ #SpringBoot #JavaDev\n\n✅ Runnable sample: `spring-boot-tips`",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "WebClient client = WebClient.create(\"https://api.example.com\");\n\nMono<User> user = client.get()\n    .uri(\"/users/{id}\", id)\n    .retrieve()\n    .bodyToMono(User.class);",
+    "category": "spring-boot"
+  },
+  {
+    "id": 220,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: To make Jackson create your objects from JSON in an explicit, and predictable way, you can use @JsonCreator.\n\n✅ This way, each parameter is explicitly bound\n\n✅ #SpringBoot #JavaDev\n\n✅ Runnable sample: `spring-boot-tips`",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 221,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot:  To execute SQL scripts before or after a test method, you can use the @Sql annotation.\n\n✅ #SpringBoot #JavaDev\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 222,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: If your application uses RestTemplate for REST calls, you can centralize timeouts with RestTemplateBuilder .\n\n✅ #SpringBoot #JavaDev\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "WebClient client = WebClient.create(\"https://api.example.com\");\n\nMono<User> user = client.get()\n    .uri(\"/users/{id}\", id)\n    .retrieve()\n    .bodyToMono(User.class);",
+    "category": "spring-boot"
+  },
+  {
+    "id": 223,
+    "module": "spring-boot-tips",
+    "body": "🚀Spring Boot: To exclude any fields whose value is null in Jackson serialization you can use @JsonInclude(Include.NON_NULL) .\n\n✅ #SpringBoot #JavaDev\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 224,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: Better avoid wildcard exclusions for transitive dependencies in POMs, because they can hide problems.\n\n✅ ❌ Wildcard exclusions just remove the symptom and mask the underlying version mismatch\n\n✅ #SpringBoot #JavaDev\n\n✅ Runnable sample: `spring-boot-tips`",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 225,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: Keep controllers thin, put logic in services.\n\n✅ Controllers main job is just to handle HTTP concerns\n\n✅ #SpringBoot #SoftwareEngineering\n\n✅ Runnable sample: `spring-boot-tips`",
+    "tags": "#SpringBoot #SoftwareEngineering",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 226,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: Avoid FetchType.EAGER unless you really need it.\n\n✅ #Springboot #SoftwareDevelopment\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "tags": "#Springboot #SoftwareDevelopment",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 227,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: You can implement optimistic locking using the @Version annotation.\n\n✅ Ideal when:\n\n✅ Reads are frequent\n\n✅ Writes are relatively rare",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 228,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: Prefer static utility classes over Spring beans only if they don't hold state, they have no dependencies and they don't need mocking or AOP.\n\n✅ #SpringBoot #SoftwareDevelopment\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "tags": "#SpringBoot #SoftwareDevelopment",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 229,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot:  Better not expose JPA entities directly, use DTOs at boundaries instead.\n\n✅This allows to:\n\n✅ Make API independent on the persistence layer\n\n✅ Prevent lazy loading problems",
+    "tags": "#SpringBoot #SoftwareEngineer",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 230,
+    "module": "spring-boot-tips",
+    "body": "🚀 You can use async logging in Spring Boot by configuring logback (logback-spring.xml).\n\n✅ Log messages are sent into a queue,  and are elaborated by a separate background thread.\n\n✅ This reduces I/O bottlenecks.\n\n✅ #SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "private static final Logger log =\n    LoggerFactory.getLogger(OrderService.class);\n\nlog.info(\"Created order {} for {}\", orderId, customer);\n// Lazy formatting, log levels, no System.out",
+    "category": "spring-boot"
+  },
+  {
+    "id": 231,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: @AutoConfigureMockMvc allows you to test controllers without starting the server. It tells Spring Boot to automatically configure a MockMvc instance in the test context.\n\n✅ #SpringBoot #Java\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "tags": "#SpringBoot #Java",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 232,
+    "module": "spring-boot-tips",
+    "body": "🚀Spring Boot: Spring Boot: Use spring.mvc.publish-request-params=true only in dev. It's dangerous in production.\n\n✅ Spring Boot: Use spring.mvc.publish-request-params=true only in dev. It's dangerous in production\n\n✅ 🔴In production, logging request details can expose sensitive information\n\n✅ #SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 233,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: Better keep the default spring.main.allow-bean-definition-overriding=false configuration.\n\n✅This way Spring fails to start if two beans share the same name.\n\n✅Useful because bean overriding can hide configuration bugs\n\n✅ #SpringBoot #JavaDev",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 234,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: Better use global filters/interceptors only for true cross-cutting concerns, and avoid business logic. They are executed for every incoming HTTP request.\n\n✅ #SpringBoot #JavaDev\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 235,
+    "module": "spring-boot-tips",
+    "body": "🚀Spring Boot: Spring Boot: Avoid importing the full spring-boot-starter-web if you only need Spring MVC, because the full starter brings in extra components like an embedded server that you may not need.\n\n✅ #SpringBoot #JavaDev\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 236,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: You can use the \"spring.jpa.properties.hibernate.jdbc.batch_size\" property to make Hibernate handle batch inserts.\n\n✅ ewer network calls\n\n✅ ess JDBC overhead\n\n✅ aster bulk operations",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 237,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: You can enable /actuator/beans to debug missing beans.\n\n✅ Bean name\n\n✅ Bean type\n\n✅ Bean scope",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "# application.yaml\nmanagement:\n  endpoints:\n    web:\n      exposure:\n        include: health, info, metrics\n# -> GET /actuator/health",
+    "category": "spring-boot"
+  },
+  {
+    "id": 238,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: A webhook is when another system  sends a POST request to your app when something happens. In Spring Boot you implement it simply exposing an endpoint that receives that POST request.\n\n✅ #SpringBoot #JavaDev\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 239,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: Use @TestConfiguration to use test-specific beans that must not be loaded in production.\n\n✅ #SpringBoot #JavaDev\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 240,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot testing: @MockBean by default resets the mocks between tests, to keep them independent. You can disable this behaviour with @MockBean(reset = MockReset.NONE).\n\n✅ #SpringBoot #JavaDev\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 241,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot testing: Using spring.main.log-startup-info=false, you can skip the verbose startup summary.\n\n✅ #SpringBoot #JavaDev\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 242,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: You can validate config classes with the @Validated annotation.\n\n✅ It makes your app fail fast at startup if the configuration is invalid.\n\n✅ #SpringBoot #JavaDev\n\n✅ Runnable sample: `spring-boot-tips`",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "public Order(Customer customer) {\n    // Fail fast at construction with a clear message\n    this.customer = Objects.requireNonNull(customer, \"customer\");\n}",
+    "category": "spring-boot"
+  },
+  {
+    "id": 243,
+    "module": "spring-boot-tips",
+    "body": "🚀Spring Boot: Spring Boot: Better avoid logging inside tight loops, since you could affect the application performance and flood log files.\n\n✅ #SpringBoot #JavaDev\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "List<String> lines = Files.readAllLines(Path.of(\"data.txt\"));\nFiles.writeString(Path.of(\"out.txt\"), \"hello\");",
+    "category": "spring-boot"
+  },
+  {
+    "id": 244,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: Better use SpringBootTest.WebEnvironment.RANDOM_PORT  instead of hardcoding ports in tests to avoid conflicts.\n\n✅ #SpringBoot #JavaDev\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 245,
+    "module": "spring-boot-tips",
+    "body": "🚀Spring Boot by default does not include stacktrace in the response of REST service calls. Only for fast debugging purposes (don't do it in production), you can enable it with the configuration property include-stacktrace: always.\n\n✅ #SpringBoot #JavaDev\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 246,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: You have the option of using streaming (Stream<T>) for queries with large datasets.\n\n✅Results are fetched in chunks, with only a small subset in memory at any time\n\n✅ #SpringBoot #JavaDev\n\n✅ Runnable sample: `spring-boot-tips`",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 247,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: @TransactionalEventListener can be used to implement post-commit actions.\n\n✅ #SpringBoot #JavaDev\n\n✅ Uses `@Transactional` in the snippet\n\n✅ Runnable sample: `spring-boot-tips`",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "@Transactional\npublic void transfer(Long from, Long to, BigDecimal amount) {\n    accounts.debit(from, amount);\n    accounts.credit(to, amount);   // both commit, or both roll back\n}",
+    "category": "spring-boot"
+  },
+  {
+    "id": 248,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: You can handle CORS globally with a WebMvcConfigurer\n\n✅CORS is the mechanism that allows a web application on one domain (origin) to access resources from a different domain.\n\n✅ #SpringBoot #SoftwareDevelopment\n\n✅ Runnable sample: `spring-boot-tips`",
+    "tags": "#SpringBoot #SoftwareDevelopment",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 249,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: An efficient way of handling large CSV files is by using Spring Batch features.\n\n✅ Chunking\n\n✅ Parallelism\n\n✅ Retry",
+    "tags": "#SpringBoot #SoftwareDevelopment",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 250,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: It's important to validate the input of your APIS, even of the internal ones.\n\n✅ #SpringBoot #SoftwareDevelopment\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "tags": "#SpringBoot #SoftwareDevelopment",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 251,
+    "module": "spring-boot-tips",
+    "body": "🚀Spring Boot: Use @EntityGraph to control fetch strategies and prevent N+1 queries.\n\n✅ #SpringBoot #SoftwareEngineering\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "tags": "#SpringBoot #SoftwareEngineering",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 252,
+    "module": "spring-boot-tips",
+    "body": "🚀Spring Boot: You can keep full traceability while handling exceptions in a centralized way, and returning safe API responses with @RestControllerAdvice\n\n✅ #SpringBoot #JavaDev\n\n✅ Uses `@RestControllerAdvice` in the snippet\n\n✅ Uses `@ExceptionHandler` in the snippet",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "@RestControllerAdvice\npublic class ApiExceptionHandler {\n\n    @ExceptionHandler(NotFoundException.class)\n    public ResponseEntity<String> handle(NotFoundException e) {\n        return ResponseEntity.status(404).body(e.getMessage());\n    }\n}\n// Controllers stay clean — no try/catch everywhere",
+    "category": "spring-boot"
+  },
+  {
+    "id": 253,
+    "module": "spring-boot-tips",
+    "body": "🚀Spring Boot: Adding request tracing is very important for debugging APIs\n\n✅ #SpringBoot #JavaDev\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 254,
+    "module": "spring-boot-tips",
+    "body": "🚀@Sql or @SqlGroup allows you to preload test data to perform reproducible tests.\n\n✅Insert test data\n\n✅Clean up tables\n\n✅Reset database state",
+    "tags": "#SpringBoot #IntegrationTesting",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 255,
+    "module": "spring-boot-tips",
+    "body": "🚀Spring Boot: With org.hibernate.SQL=DEBUG, you can get a deeper insight into Hibernate queries from the logs.\n\n✅ #SpringBoot #Hibernate\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "tags": "#SpringBoot #Hibernate",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 256,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: Better externalize scheduled tasks fixedRateString's value.\n\n✅ #SpringBoot #Java\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "tags": "#SpringBoot #Java",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 257,
+    "module": "spring-boot-tips",
+    "body": "🚀Spring Boot: Using Spring Cloud Config for centralized configuration management is important.\n\n✅Instead of many services each carrying their own application.yml, you pull it from a single source.\n\n✅First of all, you have to configure the config server.\n\n✅You will have a config server app annotated with @EnableConfigServer and a Git repo holding all your .yml files.\n\n#SpringCloud #Microservices #MicroservicesSecurity",
+    "tags": "#SpringCloud #Microservices #MicroservicesSecurity",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "code": "List<String> lines = Files.readAllLines(Path.of(\"data.txt\"));\nFiles.writeString(Path.of(\"out.txt\"), \"hello\");",
+    "category": "spring-boot"
+  },
+  {
+    "id": 258,
+    "module": "spring-boot-tips",
+    "body": "🚀Spring Boot integrates easily with Kafka to implement event-driven architectures.\n\n✅ #SpringBoot #JavaDev\n\n✅ The final step is implementing consumer and producers as Java objects:\n\n✅ Runnable sample: `spring-boot-tips`",
+    "tags": "#SpringBoot #JavaDev",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 259,
+    "module": "spring-boot-tips",
+    "body": "🚀 Spring Boot: @ConditionalOnClass is a Spring Boot annotation used in auto-configuration.\n\n✅It conditionally enables a bean or configuration only if a specified class is present on the classpath\n\n✅ #SpringBoot #Microservices\n\n✅ Runnable sample: `spring-boot-tips`",
+    "tags": "#SpringBoot #Microservices",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  },
+  {
+    "id": 260,
+    "module": "spring-boot-tips",
+    "body": "🚀Spring Boot: spring.main.lazy-initialization=true doesn't just delay bean creation, it skips @PostConstruct entirely until first use. Be careful and watch for side effects.\n\n✅ #SpringBoot #SoftwareDevelopment\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "tags": "#SpringBoot #SoftwareDevelopment",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot"
+  }
+]

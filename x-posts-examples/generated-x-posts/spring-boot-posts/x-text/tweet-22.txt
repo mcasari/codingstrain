@@ -1,0 +1,9 @@
+🚀Spring Boot: Decouple services: save to DB, then publish an application event.
+
+✅ Decouple services: save to DB, then publish an application event
+
+✅ Uses @Transactional in the snippet
+
+✅ Runnable sample: spring-transactional-event-demo
+
+#SpringBoot #Microservices

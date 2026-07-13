@@ -385,8 +385,16 @@ def build_codepen_embed(tweet: dict, code: str) -> str:
 
     meta = {
         "title": title,
-        "description": f"Spring Boot / Java snippet from codingstrain ({module})",
-        "tags": ["java", "springboot", "codingstrain"],
+        "description": (
+            f"Spring Boot snippet from codingstrain ({module})"
+            if tweet.get("category") == "spring-boot"
+            else f"Java snippet from codingstrain ({module})"
+        ),
+        "tags": (
+            ["java", "springboot", "codingstrain"]
+            if tweet.get("category") == "spring-boot"
+            else ["java", "codingstrain"]
+        ),
     }
 
     wrap_class = "codepen-wrap codepen-wrap--large" if large else "codepen-wrap"

@@ -1,0 +1,7 @@
+// 💡 Learn design patterns to write reusable, maintainable code. #Java #DesignPatterns
+//
+// ✅ Runnable sample: `java-tips`
+//
+// ✅ Architecture diagram + Carbon CodePen below
+//
+// ✅ From the codingstrain examples repo

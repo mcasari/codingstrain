@@ -1,0 +1,9 @@
+🚀 Spring Boot: You can cache expensive API calls using
+
+✅First request with a specific key: real API call
+
+✅Subsequent requests: Redis (milliseconds)
+
+✅ @Cacheable
+
+#SpringBoot #JavaDev

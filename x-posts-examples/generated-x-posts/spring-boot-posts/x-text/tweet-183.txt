@@ -1,0 +1,7 @@
+🚀Spring Boot: Spring Boot: To write cleaner REST controllers, use
+
+✅ Spring Boot: To write cleaner REST controllers, use
+
+✅ @RestController instead of  @Controller + @ResponseBody
+
+✅ #SpringBoot #CleanCode

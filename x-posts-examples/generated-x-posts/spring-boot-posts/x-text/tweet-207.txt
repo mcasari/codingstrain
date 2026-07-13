@@ -1,0 +1,7 @@
+🚀 Spring Boot: If you need to inject grouped configuration properties into classes, you can use @ConfigurationProperties instead of @Value
+
+✅ #SpringBoot #JavaDev
+
+✅ Uses @ConfigurationProperties in the snippet
+
+✅ Runnable sample: spring-boot-tips

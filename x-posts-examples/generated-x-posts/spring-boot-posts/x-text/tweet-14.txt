@@ -1,0 +1,9 @@
+🚀Spring Boot: @Sql or @SqlGroup allows you to preload test data for reproducible tests.
+
+✅ @Sql or @SqlGroup allows you to preload test data for reproducible tests
+
+✅ Uses @SpringBootTest in the snippet
+
+✅ Runnable sample: sql-annotation-demo
+
+#SpringBoot #IntegrationTesting

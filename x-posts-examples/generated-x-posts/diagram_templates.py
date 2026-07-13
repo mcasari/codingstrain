@@ -53,7 +53,7 @@ def _bullets(tweet: dict, max_n: int = 3) -> list[str]:
 
 def infer_diagram_type(tweet: dict) -> str:
     explicit = tweet.get("diagram_type")
-    if explicit in ("eureka", "circuit_breaker", "sealed_classes", "pact", "gatling", "rest"):
+    if explicit in ("eureka", "circuit_breaker", "sealed_classes", "pact", "gatling", "varhandle", "rest"):
         return explicit
 
     module = tweet.get("module", "").lower()
@@ -95,6 +95,8 @@ def infer_diagram_type(tweet: dict) -> str:
         return "pact"
     if "actuator" in module or "actuator/health" in body:
         return "actuator"
+    if "varhandle" in module or "setrelease" in code or "getacquire" in code:
+        return "varhandle"
     if "codingstrain" in module and tweet["id"] in (48, 55, 56):
         return "repo"
     if "java-17-sealed" in module or ("sealed" in text and "permits" in text):
@@ -245,6 +247,46 @@ def build_gatling_drawio(tweet: dict) -> str:
     return b.build()
 
 
+def build_varhandle_drawio(tweet: dict) -> str:
+    """VarHandle release/acquire: writer publishes data, reader subscribes via the flag."""
+    b = DrawioBuilder(f"Tweet {tweet['id']} · Diagram", w=1160, h=460)
+    M, PW = 40, 1080
+    _header(b, tweet)
+
+    ay = b.section(M, 78, PW, 320, "Publish / subscribe — lighter than volatile on every field")
+
+    writer = b.box(
+        M + 40, ay + 70, 210, 100,
+        "Writer thread&#xa;1 · value = 42&#xa;2 · setRelease(ready)&#xa;&quot;done writing&quot;",
+        _shape(*N["client"]),
+    )
+    shared = b.box(
+        M + 340, ay + 60, 240, 120,
+        "Shared state&#xa;(plain fields, no volatile)&#xa;value&#xa;ready flag",
+        _shape(*N["repo"]),
+    )
+    reader = b.box(
+        M + 670, ay + 70, 230, 100,
+        "Reader thread&#xa;getAcquire(ready)&#xa;spin until ready&#xa;read value → 42 ✓",
+        _shape(*N["service"]),
+    )
+
+    b.edge(writer, shared, "write + publish")
+    b.edge(shared, reader, "subscribe")
+
+    b.box(
+        M + 120, ay + 210, 840, 34,
+        "`volatile` syncs every read/write (heavy) — release/acquire only orders the flag",
+        _text_style(12, C["subtitle"], "center"),
+    )
+    b.box(
+        M + 280, ay + 258, 520, 34,
+        "✓ Once ready is true, the reader is guaranteed to see value == 42",
+        _text_style(12, C["good"], "center", True),
+    )
+    return b.build()
+
+
 def build_tweet_diagram(tweet: dict) -> str:
     kind = infer_diagram_type(tweet)
 
@@ -258,6 +300,8 @@ def build_tweet_diagram(tweet: dict) -> str:
         return build_pact_drawio(tweet)
     if kind == "gatling":
         return build_gatling_drawio(tweet)
+    if kind == "varhandle":
+        return build_varhandle_drawio(tweet)
 
     builders: dict[str, Any] = {
         "rest": lambda: _pipeline(

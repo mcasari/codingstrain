@@ -1,0 +1,9 @@
+💡 Java Tip💡: Starting from Java 14 you can use "record" to create short, immutable, data-carrying objects.
+
+✅ They are shorter than ordinary POJOs
+
+✅ They have built-in equals(), hashCode(), toString()
+
+✅ They are immutable by default
+
+#Java #Records

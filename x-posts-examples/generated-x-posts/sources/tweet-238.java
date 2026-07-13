@@ -1,2 +1,0 @@
-// 🚀 Spring Boot: A webhook is when another system  sends a POST request to your app when something happens. In Spring Boot you implement it simply exposing an endpoint that receives that POST request.
-// #SpringBoot #JavaDev

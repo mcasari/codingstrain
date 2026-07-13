@@ -1,0 +1,9 @@
+💡 LinkedHashMap preserves insertion order.
+
+✅ LinkedHashMap preserves insertion order
+
+✅ Runnable sample: java-miscellaneous-tips
+
+✅ Architecture diagram + Carbon CodePen below
+
+#Java #SoftwareDevelopment

@@ -1,0 +1,7 @@
+// 🚀Spring Boot integrates easily with Kafka to implement event-driven architectures.
+//
+// ✅ #SpringBoot #JavaDev
+//
+// ✅ The final step is implementing consumer and producers as Java objects:
+//
+// ✅ Runnable sample: `spring-boot-tips`

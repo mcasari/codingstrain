@@ -1,0 +1,9 @@
+🚀Spring Boot: Configure Redis cache TTL in one bean.
+
+✅ Configure Redis cache TTL in one bean
+
+✅ Runnable sample: springboot-redis-cache-demo
+
+✅ Architecture diagram + Carbon CodePen below
+
+#SpringBoot #Redis

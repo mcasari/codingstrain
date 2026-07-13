@@ -1,0 +1,7 @@
+💡Java tip: Use Collectors.groupingBy(...) to group stream results by a classifier.
+
+✅ #Java #JavaDev
+
+✅ Runnable sample: java-tips
+
+✅ Architecture diagram + Carbon CodePen below

@@ -1,0 +1,7 @@
+💡 Java Tip #15💡: Use logging frameworks like SLF4J instead of System.out.println. #Java #Logging
+
+✅ Java Tip #15💡: Use logging frameworks like SLF4J instead of System.out.println. #Java #Logging
+
+✅ Runnable sample: java-tips
+
+✅ Architecture diagram + Carbon CodePen below

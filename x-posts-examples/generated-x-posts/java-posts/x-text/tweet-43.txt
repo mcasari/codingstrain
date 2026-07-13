@@ -1,0 +1,9 @@
+💡 Parsing numbers with commas requires locale awareness.
+
+✅ Parsing numbers with commas requires locale awareness
+
+✅ Runnable sample: java-miscellaneous-tips
+
+✅ Architecture diagram + Carbon CodePen below
+
+#Java #JavaDev

@@ -1,0 +1,9 @@
+🚀Spring Boot: Know when to use auto-offset-reset: earliest vs latest.
+
+✅ Know when to use auto-offset-reset: earliest vs latest
+
+✅ Runnable sample: spring-kafka-demo
+
+✅ Architecture diagram + Carbon CodePen below
+
+#SpringBoot #Kafka

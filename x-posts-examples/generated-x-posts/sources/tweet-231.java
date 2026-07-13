@@ -1,2 +1,0 @@
-// 🚀 Spring Boot: @AutoConfigureMockMvc allows you to test controllers without starting the server. It tells Spring Boot to automatically configure a MockMvc instance in the test context.
-// #SpringBoot #Java

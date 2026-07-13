@@ -1,0 +1,9 @@
+💡 Sample repo to learn Spring Boot: github.com/spring-projects/spring-boot-samples
+
+✅ 65+ runnable mini-apps
+
+✅ Spring Boot 3.3, WebFlux, Security, Kafka, GraalVM
+
+✅ Official Spring team code
+
+#SpringBoot #Java #Kafka #Microservices #GraalVM #DevCommunity

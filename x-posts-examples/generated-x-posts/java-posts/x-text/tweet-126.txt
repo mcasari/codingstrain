@@ -1,0 +1,9 @@
+💡 Java tip 💡: Instead of using HashSet for enum types, consider using EnumSet, it's faster and more memory-efficient.
+
+✅Example:
+
+✅ Java tip 💡: Instead of using HashSet for enum types, consider using EnumSet, it's faster and more memory-efficient
+
+✅ EnumSet<Month> months = EnumSet.of(Month.JANUARY, Month.APRIL);
+
+#Java #Collections

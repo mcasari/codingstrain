@@ -1,0 +1,9 @@
+🚀Spring Boot: Stop returning stack traces to clients — return a stable JSON structure.
+
+✅ Stop returning stack traces to clients — return a stable JSON structure
+
+✅ Runnable sample: springboot-error-handling-demo
+
+✅ Architecture diagram + Carbon CodePen below
+
+#SpringBoot #SoftwareEngineering

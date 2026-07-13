@@ -1,0 +1,7 @@
+🚀 You can use async logging in Spring Boot by configuring logback (logback-spring.xml).
+
+✅ Log messages are sent into a queue,  and are elaborated by a separate background thread.
+
+✅ This reduces I/O bottlenecks.
+
+✅ #SpringBoot #JavaDev

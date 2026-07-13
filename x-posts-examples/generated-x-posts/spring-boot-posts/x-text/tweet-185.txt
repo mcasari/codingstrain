@@ -1,0 +1,7 @@
+💡Spring Boot tip: Use
+
+✅ @Profile
+
+✅ to group and load beans/configurations in specific environments
+
+✅ #SpringBoot #JavaDev

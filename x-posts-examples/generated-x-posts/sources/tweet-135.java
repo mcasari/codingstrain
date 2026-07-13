@@ -1,4 +1,0 @@
-// 🚀 Open/Closed Principle (OCP): OCP is a SOLID principle that states classes should be open for extension but closed for modification.
-//
-// ✅Instead of touching existing implementation, you should use Java interfaces and inheritance to add new behavior.
-// #Java #JavaDev

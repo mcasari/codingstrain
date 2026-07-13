@@ -1,0 +1,9 @@
+🚀Spring Cloud: OpenFeign + Circuit Breaker — resilience isn't an afterthought.
+
+✅ @FeignClient calls remote services by name (via Eureka + LoadBalancer)
+
+✅ @CircuitBreaker stops calling a failing service after a threshold
+
+✅ fallbackMethod returns a safe default while the circuit is OPEN
+
+#SpringCloud #Microservices #SpringBoot #Resilience4j

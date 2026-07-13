@@ -1,5 +1,0 @@
-// 💡 Prefer copy constructors or records over Cloneable for new code.
-//
-// ✅ Prefer copy constructors or records over Cloneable for new code
-// ✅ Runnable sample: `java-miscellaneous-tips`
-// ✅ Architecture diagram + Carbon CodePen below

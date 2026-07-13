@@ -1,2 +1,0 @@
-// Java tip 💡: Don’t rely blindly on Garbage Collection; memory leaks are still possible.
-// #Java #SoftwareEngineering

@@ -1,0 +1,7 @@
+// 🚀 Spring Boot: Avoid FetchType.EAGER unless you really need it.
+//
+// ✅ #Springboot #SoftwareDevelopment
+//
+// ✅ Runnable sample: `spring-boot-tips`
+//
+// ✅ Architecture diagram + Carbon CodePen below

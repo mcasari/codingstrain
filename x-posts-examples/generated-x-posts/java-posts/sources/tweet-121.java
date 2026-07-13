@@ -1,0 +1,7 @@
+// 💡 Java Tip 💡: Master the SOLID principles to write cleaner, more maintainable object-oriented code.
+//
+// ✅ Java Tip 💡: Master the SOLID principles to write cleaner, more maintainable object-oriented code
+//
+// ✅ Each letter stands for a key design principle:
+//
+// ✅ S: Single Responsibility – A class should have only one reason to change

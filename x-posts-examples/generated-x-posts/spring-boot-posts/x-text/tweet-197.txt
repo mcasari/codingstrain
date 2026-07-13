@@ -1,0 +1,9 @@
+💡 Spring Boot tip: use
+
+✅  You coordinate business logic in the service layer, and a service method:
+
+✅ Calls one or more repositories
+
+✅ Implements business rules
+
+#SpringBoot

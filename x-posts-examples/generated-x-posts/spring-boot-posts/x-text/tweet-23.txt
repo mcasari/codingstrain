@@ -1,0 +1,9 @@
+🚀Spring Boot: Don't send the email before commit — use AFTER_COMMIT.
+
+✅ Don't send the email before commit — use AFTER_COMMIT
+
+✅ Runnable sample: spring-transactional-event-demo
+
+✅ Architecture diagram + Carbon CodePen below
+
+#SpringBoot #SoftwareEngineering

@@ -1,0 +1,7 @@
+🚀 Java: You can use Stream.limit(n) to set a bound to infinite streams.
+
+✅ #Java #SoftwareDevelopment
+
+✅ Runnable sample: java-tips
+
+✅ Architecture diagram + Carbon CodePen below

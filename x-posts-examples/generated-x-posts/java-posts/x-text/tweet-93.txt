@@ -1,0 +1,7 @@
+💡 Java Tip 💡: Use Optional.ifPresentOrElse() for elegant null handling (Java 9+). #Java #Optional
+
+✅ Java Tip 💡: Use Optional.ifPresentOrElse() for elegant null handling (Java 9+). #Java #Optional
+
+✅ Runnable sample: java-tips
+
+✅ Architecture diagram + Carbon CodePen below

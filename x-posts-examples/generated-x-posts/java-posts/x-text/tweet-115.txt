@@ -1,0 +1,7 @@
+💡 Java Tip 💡: Use Files.walk() to recursively process files in a directory. #Java #IO
+
+✅ Java Tip 💡: Use Files.walk() to recursively process files in a directory. #Java #IO
+
+✅ Runnable sample: java-tips
+
+✅ Architecture diagram + Carbon CodePen below

@@ -1,0 +1,7 @@
+🚀 Java: You can use Optional.orElseThrow() to implement so called fail-fast behavior.
+
+✅ Fail-fast means you can catch bugs closer to their source, making stack traces easier to understand
+
+✅ #Java #SoftwareDevelopment
+
+✅ Runnable sample: java-tips

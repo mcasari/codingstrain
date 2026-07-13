@@ -1,0 +1,7 @@
+💡 Java tip: You can use Collectors.joining(", ") to turn a stream into a comma-separated string (or another custom separator).  #Java #JavaTips
+
+✅ Runnable sample: java-tips
+
+✅ Architecture diagram + Carbon CodePen below
+
+✅ From the codingstrain examples repo

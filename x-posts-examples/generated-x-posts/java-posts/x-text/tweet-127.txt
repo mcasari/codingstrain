@@ -1,0 +1,7 @@
+💡 Java tip💡: If you have a list of elements, you want to remove duplicates, and sort them in natural order or by a custom comparator, you can use TreeSet.
+
+✅ #Java #Collections
+
+✅ Runnable sample: java-tips
+
+✅ Architecture diagram + Carbon CodePen below

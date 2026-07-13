@@ -1,0 +1,7 @@
+💡 Spring Boot tip: You can run jobs at fixed intervals without setting up Quartz or external schedulers.
+
+✅ #Java #SpringBoot
+
+✅ Runnable sample: spring-boot-tips
+
+✅ Architecture diagram + Carbon CodePen below

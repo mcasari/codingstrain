@@ -1,0 +1,7 @@
+🚀 Java: Use Comparator.nullsFirst() or Comparator.nullsLast() for safe sorting.
+
+✅ 🔴 Null values can cause a NullPointerException if your comparator doesn’t explicitly handle them
+
+✅ #Java #JavaDev
+
+✅ Runnable sample: java-tips

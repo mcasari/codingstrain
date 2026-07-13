@@ -1,2 +1,0 @@
-// 🚀Spring Boot: Use @EntityGraph to control fetch strategies and prevent N+1 queries.
-// #SpringBoot #SoftwareEngineering

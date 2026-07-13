@@ -1,0 +1,7 @@
+🚀Spring Boot: Spring Boot: Better avoid logging inside tight loops, since you could affect the application performance and flood log files.
+
+✅ #SpringBoot #JavaDev
+
+✅ Runnable sample: spring-boot-tips
+
+✅ Architecture diagram + Carbon CodePen below

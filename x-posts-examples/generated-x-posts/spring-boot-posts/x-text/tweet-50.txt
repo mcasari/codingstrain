@@ -1,0 +1,9 @@
+🚀Spring Cloud: Eureka service discovery — call services by name, not IP.
+
+✅ Each service registers with Eureka on startup (spring.application.name)
+
+✅ Eureka tracks healthy instances via heartbeats
+
+✅ Clients call http://author-service/... — LoadBalancer resolves the name to a live instance
+
+#SpringCloud #Microservices #SpringBoot

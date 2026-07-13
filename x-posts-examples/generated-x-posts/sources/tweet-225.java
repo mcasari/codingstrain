@@ -1,5 +1,0 @@
-// 🚀 Spring Boot: Keep controllers thin, put logic in services.
-//
-// ✅ Controllers main job is just to handle HTTP concerns
-//
-// #SpringBoot #SoftwareEngineering

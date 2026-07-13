@@ -1,0 +1,7 @@
+🚀 Spring Boot: You can validate your input DTO objects with @Valid + @NotBlank, @Email, etc.
+
+✅ #Java #SoftwareDevelopment
+
+✅ Uses @PostMapping in the snippet
+
+✅ Runnable sample: spring-boot-tips

@@ -1,0 +1,7 @@
+💡Java Tip: Avoid magic numbers. In Java, a Magic Number refers to a hard-coded numeric value used in code without any explanation of what it represents.
+
+✅ Magic numbers reduce readability and make maintenance harder
+
+✅ #Java #CleanCode
+
+✅ Runnable sample: java-tips

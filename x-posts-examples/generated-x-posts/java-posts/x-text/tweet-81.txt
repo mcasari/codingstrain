@@ -1,0 +1,7 @@
+💡 Java tip:  Clean up unused imports and variables for better readability.
+
+✅ #Java #CleanCode
+
+✅ Runnable sample: java-tips
+
+✅ Architecture diagram + Carbon CodePen below

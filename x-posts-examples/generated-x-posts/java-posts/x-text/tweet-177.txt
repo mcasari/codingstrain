@@ -1,0 +1,7 @@
+🚀 Java: A very interesting project by https://github.com/Mirkoddd, named Sift,  replaces the cryptic, string-based approach of the Java Regex engine with a fluent API.
+
+✅ #Java #JavaDev
+
+✅ Runnable sample: java-tips
+
+✅ Architecture diagram + Carbon CodePen below

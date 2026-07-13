@@ -1,0 +1,9 @@
+🚀Spring Boot: Processing 1M rows with findAll() will OOM you — use a Stream.
+
+✅ Processing 1M rows with findAll() will OOM you — use a Stream
+
+✅ Runnable sample: spring-streaming-demo
+
+✅ Architecture diagram + Carbon CodePen below
+
+#SpringBoot #JPA

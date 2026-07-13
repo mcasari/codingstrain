@@ -1,0 +1,9 @@
+💡 Java 17 — sealed types close the inheritance graph with permits.
+
+✅ Only listed subtypes may extend the sealed class/interface
+
+✅ Each permitted subtype must be final, sealed, or non-sealed
+
+✅ non-sealed is the escape hatch — inheritance opens again below that branch
+
+#Java #Java17

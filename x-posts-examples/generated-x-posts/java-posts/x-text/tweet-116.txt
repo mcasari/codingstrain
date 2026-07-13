@@ -1,0 +1,7 @@
+💡 Java Tip 💡:Use Path and Files from NIO.2 for modern file handling. #Java #NIO
+
+✅ Java Tip 💡:Use Path and Files from NIO.2 for modern file handling. #Java #NIO
+
+✅ Runnable sample: java-tips
+
+✅ Architecture diagram + Carbon CodePen below

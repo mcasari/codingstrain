@@ -1,4 +1,0 @@
-// 💡 Spring Boot: To better handle circular dependencies, use constructor injection instead of field injection.
-//
-// ✅ Forces all required dependencies to be provided at creation time, allowing early detection.
-// #SpringBoot #JavaDev

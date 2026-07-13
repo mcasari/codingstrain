@@ -23,12 +23,26 @@ from drawio_builder import (
 )
 
 ROOT = Path(__file__).resolve().parent
+X_POSTS_ROOT = ROOT.parent
+TOOLS_ROOT = ROOT
+MASTER_TWEETS_FILE = TOOLS_ROOT / "tweets.json"
+
+JAVA_ROOT = TOOLS_ROOT / "java-posts"
+SPRING_BOOT_ROOT = TOOLS_ROOT / "spring-boot-posts"
+
 TWEETS_FILE = ROOT / "tweets.json"
 DRAWIO_DIR = ROOT / "drawio"
 CODEPEN_DIR = ROOT / "codepen"
 PNG_DIR = ROOT / "png"
 SOURCES_DIR = ROOT / "sources"
 INDEX_HTML = ROOT / "index.html"
+
+INDEX_BANNER_TITLE = "Spring Boot &amp; Java X Posts"
+INDEX_BANNER_SUBTITLE = (
+    'Every tweet: <a href="https://app.diagrams.net/">diagrams.net</a> architecture diagram + '
+    '<a href="https://codepen.io/">CodePen</a> code pen.'
+)
+INDEX_CROSS_LINKS = ""
 
 # Code now lives in each tweet's "code" field (tweets.json), so image_source is
 # id-independent and survives renumbering. Kept empty intentionally.
@@ -78,6 +92,55 @@ JAVA_KEYWORDS = frozenset({
 
 def xml_escape(text: str) -> str:
     return html.escape(text, quote=True)
+
+
+def tweet_category(tweet: dict) -> str:
+    """Classify a tweet as java or spring-boot from its module name."""
+    module = tweet.get("module", "").lower()
+    if module == "java-tips":
+        return "java"
+    if module.startswith("java-") or module.startswith("java/") or "junit5" in module:
+        return "java"
+    return "spring-boot"
+
+
+CATEGORY_ROOTS = {
+    "java": JAVA_ROOT,
+    "spring-boot": SPRING_BOOT_ROOT,
+}
+
+CATEGORY_LABELS = {
+    "java": "Java X Posts",
+    "spring-boot": "Spring Boot X Posts",
+}
+
+
+def configure_output_root(category: str) -> Path:
+    """Point global output paths at a category folder."""
+    global ROOT, TWEETS_FILE, DRAWIO_DIR, CODEPEN_DIR, PNG_DIR, SOURCES_DIR, INDEX_HTML
+    global INDEX_BANNER_TITLE, INDEX_BANNER_SUBTITLE, INDEX_CROSS_LINKS
+
+    root = CATEGORY_ROOTS[category]
+    ROOT = root
+    TWEETS_FILE = root / "tweets.json"
+    DRAWIO_DIR = root / "drawio"
+    CODEPEN_DIR = root / "codepen"
+    PNG_DIR = root / "png"
+    SOURCES_DIR = root / "sources"
+    INDEX_HTML = root / "index.html"
+
+    other = "spring-boot" if category == "java" else "java"
+    other_label = CATEGORY_LABELS[other]
+    other_href = f"../{CATEGORY_ROOTS[other].name}/index.html"
+    INDEX_BANNER_TITLE = CATEGORY_LABELS[category]
+    INDEX_BANNER_SUBTITLE = (
+        'Every tweet: <a href="https://app.diagrams.net/">diagrams.net</a> diagram + '
+        f'<a href="https://codepen.io/">CodePen</a> pen. '
+        f'<a href="../index.html">All categories</a> · '
+        f'<a href="{other_href}">{other_label}</a>'
+    )
+    INDEX_CROSS_LINKS = ""
+    return root
 
 
 def normalize_tweet_body(tweet: dict) -> str:
@@ -158,9 +221,13 @@ def normalize_tweet_body(tweet: dict) -> str:
         if fallback not in bullets:
             bullets.append(fallback)
 
-    parts = [hook, ""] + bullets[:3]
+    parts = [hook, ""]
+    for bullet in bullets[:3]:
+        parts.extend([bullet, ""])
+    if parts and parts[-1] == "":
+        parts.pop()
     if tags and tags not in raw:
-        parts.append(tags)
+        parts.extend(["", tags])
     return "\n".join(parts)
 
 
@@ -174,6 +241,15 @@ def apply_tweet61_defaults(tweet: dict) -> None:
 def format_twitter_body(tweet: dict) -> str:
     """Format tweet text (tweet #61 layout)."""
     return normalize_tweet_body(tweet)
+
+
+def format_twitter_body_for_x(tweet: dict) -> str:
+    """Plain text for pasting into X — spaced paragraphs, no markdown backticks."""
+    text = format_twitter_body(tweet).replace("`", "")
+    tags = tweet.get("tags", "").strip()
+    if tags and tags not in text:
+        text = text.rstrip() + "\n\n" + tags
+    return text
 
 
 def image_source(tweet: dict) -> str:
@@ -635,6 +711,31 @@ INDEX_STYLES = """
     .pagination .page-meta { color: #536471; margin-left: auto; }
     .pagination .page-nav { font-weight: 600; }
     .pagination .page-nav.disabled { color: #aab8c2; pointer-events: none; }
+    .tweet-copy-label { font-size: 0.85rem; color: #536471; margin: 0.75rem 0 0.35rem; }
+    .tweet-copy {
+      width: 100%;
+      box-sizing: border-box;
+      font: 15px/1.5 system-ui, sans-serif;
+      color: #0f1419;
+      background: #fff;
+      border: 1px solid #cfd9de;
+      border-radius: 12px;
+      padding: 0.85rem 1rem;
+      resize: vertical;
+      white-space: pre-wrap;
+    }
+    .copy-row { display: flex; align-items: center; gap: 0.75rem; margin: 0.5rem 0 1rem; }
+    .copy-x-btn {
+      font: 600 0.9rem system-ui, sans-serif;
+      color: #fff;
+      background: #1d9bf0;
+      border: 0;
+      border-radius: 999px;
+      padding: 0.45rem 1rem;
+      cursor: pointer;
+    }
+    .copy-x-btn:hover { background: #1a8cd8; }
+    .copy-status { font-size: 0.85rem; color: #536471; }
 """
 
 
@@ -642,10 +743,37 @@ def _index_page_href(page: int) -> str:
     return "index.html" if page == 1 else f"page-{page}.html"
 
 
+COPY_FOR_X_SCRIPT = """
+<script>
+document.querySelectorAll('.copy-x-btn').forEach((btn) => {
+  btn.addEventListener('click', async () => {
+    const ta = document.getElementById(btn.dataset.target);
+    const text = ta.value.replace(/\\n/g, '\\r\\n');
+    try {
+      await navigator.clipboard.writeText(text);
+      const status = btn.nextElementSibling;
+      if (status) {
+        status.textContent = 'Copied — paste into X with Ctrl+V';
+        setTimeout(() => { status.textContent = ''; }, 2500);
+      }
+    } catch (err) {
+      ta.focus();
+      ta.select();
+      const status = btn.nextElementSibling;
+      if (status) status.textContent = 'Select the text and copy manually (Ctrl+C)';
+    }
+  });
+});
+</script>
+"""
+
+
 def build_article(t: dict) -> str:
     tid = t["id"]
     stem = f"tweet-{tid:02d}"
     text = xml_escape(format_twitter_body(t))
+    x_text = html.escape(format_twitter_body_for_x(t), quote=False)
+    copy_id = f"tweet-copy-{tid}"
     pen = build_codepen_embed(t, image_source(t))
     has_png = (PNG_DIR / f"{stem}-diagram.png").is_file()
     has_drawio = (DRAWIO_DIR / f"{stem}.drawio").is_file()
@@ -661,14 +789,21 @@ def build_article(t: dict) -> str:
         if has_drawio
         else ""
     )
-    return f"""    <article>
+    return f"""    <article id="tweet-{tid}">
       <h2>Tweet #{tid}</h2>
 {diagram_block}      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
 {pen}
+      <p class="tweet-copy-label">Copy for X</p>
+      <textarea class="tweet-copy" id="{copy_id}" readonly rows="10">{x_text}</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="{copy_id}">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+      </p>
       <div class="tweet-text">{text}</div>
       <p class="links">
 {drawio_link}        <a href="codepen/{stem}.html" target="_blank" rel="noopener">CodePen preview</a> ·
-        <a href="sources/{stem}.java" download>Source .java</a>
+        <a href="sources/{stem}.java" download>Source .java</a> ·
+        <a href="x-text/{stem}.txt" download>X text</a>
       </p>
     </article>"""
 
@@ -714,13 +849,14 @@ def build_index_page(tweets: list[dict], page: int, page_size: int = INDEX_PAGE_
 </head>
 <body>
   <div class="banner">
-    <h1>Spring Boot &amp; Java X Posts</h1>
-    <p>Every tweet: <a href="https://app.diagrams.net/">diagrams.net</a> architecture diagram + <a href="https://codepen.io/">CodePen</a> code pen.</p>
+    <h1>{INDEX_BANNER_TITLE}</h1>
+    <p>{INDEX_BANNER_SUBTITLE}</p>
   </div>
 {nav}
 {articles}
 {nav}
   <script async src="{CODEPEN_SCRIPT}"></script>
+{COPY_FOR_X_SCRIPT}
 </body>
 </html>
 """
@@ -764,6 +900,199 @@ def export_diagram_png(drawio_path: Path, png_path: Path) -> bool:
         return False
 
 
+def write_x_text_index(tweets: list[dict]) -> Path:
+    """Browse page: every tweet with Copy for X + .txt download."""
+    rows: list[str] = []
+    for t in tweets:
+        tid = t["id"]
+        stem = f"tweet-{tid:02d}"
+        x_text = html.escape(format_twitter_body_for_x(t), quote=False)
+        preview = html.escape(format_twitter_body_for_x(t).split("\n")[0][:100])
+        rows.append(
+            f"""    <article>
+      <h2>Tweet #{tid}</h2>
+      <p class="preview">{preview}</p>
+      <textarea class="tweet-copy" id="tweet-copy-{tid}" readonly rows="10">{x_text}</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-{tid}">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="{stem}.txt" download>.txt</a>
+        · <a href="../index.html#tweet-{tid}">Full preview</a>
+      </p>
+    </article>"""
+        )
+    path = ROOT / "x-text" / "index.html"
+    path.write_text(
+        f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>{INDEX_BANNER_TITLE} — Copy for X</title>
+  <style>{INDEX_STYLES}
+    .preview {{ color: #536471; font-size: 0.9rem; margin: 0 0 0.75rem; }}
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <h1>{INDEX_BANNER_TITLE}</h1>
+    <p>{len(tweets)} tweets — spaced for X. Use <strong>Copy for X</strong> or download <code>.txt</code> files.</p>
+    <p><a href="../index.html">← Back to full preview</a></p>
+  </div>
+{chr(10).join(rows)}
+{COPY_FOR_X_SCRIPT}
+</body>
+</html>
+""",
+        encoding="utf-8",
+    )
+    return path
+
+
+def build_landing_index(java_count: int, spring_count: int) -> str:
+    total = java_count + spring_count
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>codingstrain X Posts</title>
+  <style>{INDEX_STYLES}
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <h1>codingstrain X Posts</h1>
+    <p>{total} posts split by topic — pick a category to browse.</p>
+  </div>
+  <article>
+    <h2>Categories</h2>
+    <div class="tweet-text"><a href="java-posts/index.html">Java posts</a> — {java_count} tweets
+💡 language tips, modern Java features, collections, concurrency
+<a href="java-posts/x-text/index.html">Copy all Java tweets for X</a>
+
+<a href="spring-boot-posts/index.html">Spring Boot posts</a> — {spring_count} tweets
+🚀 REST APIs, Spring Data, testing, microservices, Spring Cloud
+<a href="spring-boot-posts/x-text/index.html">Copy all Spring Boot tweets for X</a>
+
+Every tweet has a <strong>Copy for X</strong> button and a plain <code>.txt</code> file with paragraph breaks preserved.</div>
+    <p class="links">
+      Master data: <a href="tweets.json">tweets.json</a> ·
+      Regenerate: <code>python generate_assets.py --skip-png</code>
+    </p>
+  </article>
+</body>
+</html>
+"""
+
+
+def migrate_legacy_png(tweet_id: int) -> None:
+    """Copy diagram PNG from a legacy location if present."""
+    import shutil
+
+    stem = f"tweet-{tweet_id:02d}-diagram.png"
+    target = PNG_DIR / stem
+    if target.is_file():
+        return
+    for legacy_dir in (
+        TOOLS_ROOT / "png",
+        X_POSTS_ROOT / "java-posts" / "png",
+        X_POSTS_ROOT / "spring-boot-posts" / "png",
+    ):
+        legacy = legacy_dir / stem
+        if legacy.is_file():
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(legacy, target)
+            return
+
+
+def generate_category_assets(tweets: list[dict], category: str, skip_png: bool) -> list[Path]:
+    """Generate all assets for one category into its root folder."""
+    configure_output_root(category)
+    for tweet in tweets:
+        tweet["category"] = category
+
+    DRAWIO_DIR.mkdir(parents=True, exist_ok=True)
+    CODEPEN_DIR.mkdir(parents=True, exist_ok=True)
+    PNG_DIR.mkdir(parents=True, exist_ok=True)
+    SOURCES_DIR.mkdir(parents=True, exist_ok=True)
+    x_text_dir = ROOT / "x-text"
+    x_text_dir.mkdir(parents=True, exist_ok=True)
+
+    TWEETS_FILE.write_text(
+        json.dumps(tweets, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+
+    for tweet in tweets:
+        tid = tweet["id"]
+        stem = f"tweet-{tid:02d}"
+        code = image_source(tweet) + "\n"
+        (SOURCES_DIR / f"{stem}.java").write_text(code, encoding="utf-8")
+        (x_text_dir / f"{stem}.txt").write_text(
+            format_twitter_body_for_x(tweet) + "\n", encoding="utf-8"
+        )
+        (CODEPEN_DIR / f"{stem}.html").write_text(
+            build_standalone_pen_page(tweet, code.rstrip()), encoding="utf-8"
+        )
+        drawio_path = DRAWIO_DIR / f"{stem}.drawio"
+        drawio_path.write_text(build_drawio_diagram(tweet), encoding="utf-8")
+        migrate_legacy_png(tid)
+        if not skip_png:
+            export_diagram_png(drawio_path, PNG_DIR / f"{stem}-diagram.png")
+        stale_code_png = PNG_DIR / f"{stem}-code.png"
+        if stale_code_png.exists():
+            stale_code_png.unlink()
+
+    (DRAWIO_DIR / "all-tweets.drawio").write_text(build_combined_drawio(tweets), encoding="utf-8")
+    pages = write_index_pages(tweets)
+    x_index = write_x_text_index(tweets)
+
+    readme = f"""# {CATEGORY_LABELS[category]}
+
+{len(tweets)} posts from the codingstrain tweet archive.
+
+## Browse
+
+Open [`index.html`](index.html) — {INDEX_PAGE_SIZE} tweets per page.
+
+**Copy for X:** [`x-text/index.html`](x-text/index.html) — all {len(tweets)} tweets with copy buttons and `.txt` downloads.
+
+Sibling category: [`../{"spring-boot-posts" if category == "java" else "java-posts"}/index.html`](../{"spring-boot-posts" if category == "java" else "java-posts"}/index.html)
+
+## Files
+
+| Folder | Contents |
+|--------|----------|
+| `codepen/` | Standalone CodePen prefill page per tweet |
+| `png/` | Diagram PNG exports |
+| `drawio/` | diagrams.net architecture diagrams |
+| `sources/` | `.java` snippets |
+| `x-text/` | Plain `.txt` files formatted for pasting into X |
+| `tweets.json` | Tweet metadata for this category |
+
+## Regenerate
+
+From `generated-x-posts/`:
+
+```bash
+python generate_assets.py --skip-png
+```
+"""
+    (ROOT / "README.md").write_text(readme, encoding="utf-8")
+    return pages
+
+
+def cleanup_legacy_combined_assets() -> None:
+    """Remove asset trees from generated-x-posts after the category split."""
+    import shutil
+
+    for name in ("sources", "codepen", "drawio", "png", "svg"):
+        path = TOOLS_ROOT / name
+        if path.is_dir():
+            shutil.rmtree(path)
+    for stale_page in TOOLS_ROOT.glob("page-*.html"):
+        stale_page.unlink()
+
+
 def main() -> None:
     import argparse
 
@@ -775,77 +1104,71 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    tweets = json.loads(TWEETS_FILE.read_text(encoding="utf-8"))
+    tweets = json.loads(MASTER_TWEETS_FILE.read_text(encoding="utf-8"))
     for tweet in tweets:
         apply_tweet61_defaults(tweet)
-    TWEETS_FILE.write_text(
+    MASTER_TWEETS_FILE.write_text(
         json.dumps(tweets, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
     )
 
-    DRAWIO_DIR.mkdir(parents=True, exist_ok=True)
-    CODEPEN_DIR.mkdir(parents=True, exist_ok=True)
-    PNG_DIR.mkdir(parents=True, exist_ok=True)
-    SOURCES_DIR.mkdir(parents=True, exist_ok=True)
-
+    by_category: dict[str, list[dict]] = {"java": [], "spring-boot": []}
     for tweet in tweets:
-        tid = tweet["id"]
-        stem = f"tweet-{tid:02d}"
-        code = image_source(tweet) + "\n"
-        (SOURCES_DIR / f"{stem}.java").write_text(code, encoding="utf-8")
-        (CODEPEN_DIR / f"{stem}.html").write_text(
-            build_standalone_pen_page(tweet, code.rstrip()), encoding="utf-8"
-        )
-        drawio_path = DRAWIO_DIR / f"{stem}.drawio"
-        drawio_path.write_text(build_drawio_diagram(tweet), encoding="utf-8")
-        if not args.skip_png:
-            export_diagram_png(drawio_path, PNG_DIR / f"{stem}-diagram.png")
-        stale_code_png = PNG_DIR / f"{stem}-code.png"
-        if stale_code_png.exists():
-            stale_code_png.unlink()
+        by_category[tweet_category(tweet)].append(tweet)
 
-    (DRAWIO_DIR / "all-tweets.drawio").write_text(build_combined_drawio(tweets), encoding="utf-8")
-    pages = write_index_pages(tweets)
+    all_pages: dict[str, list[Path]] = {}
+    for category in ("java", "spring-boot"):
+        pages = generate_category_assets(by_category[category], category, args.skip_png)
+        all_pages[category] = pages
+        print(f"Generated {len(by_category[category])} {category} tweets")
+        print(f"  root → {CATEGORY_ROOTS[category]}")
+        print(f"  preview → {len(pages)} pages, start at {pages[0]}")
 
-    readme = f"""# Generated X Post Assets
+    landing = build_landing_index(len(by_category["java"]), len(by_category["spring-boot"]))
+    (TOOLS_ROOT / "index.html").write_text(landing, encoding="utf-8")
+    (X_POSTS_ROOT / "index.html").write_text(
+        landing.replace('href="java-posts/', 'href="generated-x-posts/java-posts/')
+        .replace('href="spring-boot-posts/', 'href="generated-x-posts/spring-boot-posts/')
+        .replace('href="tweets.json"', 'href="generated-x-posts/tweets.json"')
+        .replace(
+            "<code>python generate_assets.py --skip-png</code>",
+            "<code>cd generated-x-posts &amp;&amp; python generate_assets.py --skip-png</code>",
+        ),
+        encoding="utf-8",
+    )
 
-{len(tweets)} posts styled like **@mario_casari** tweets from `twitter-2026-05-15`.
+    cleanup_legacy_combined_assets()
 
-## Style
+    tools_readme = f"""# X Post Generator
 
-| Element | Format |
-|---------|--------|
-| Tweet text | `💡` / `🚀` hook + 3 `✅` bullets + hashtags (tweet #61 layout) |
-| Code | [CodePen](https://codepen.io/) Carbon-style pens (syntax highlighting, large embed) |
-| Diagrams | [diagrams.net](https://app.diagrams.net/) `.drawio` (architecture only, all tweets) |
-| Java tips | `💡 Java tip: …` |
+Shared tooling and master `tweets.json` for **{len(tweets)}** codingstrain tweets.
 
-## Files
+## Categories
 
-| Folder | Contents |
-|--------|----------|
-| `codepen/` | Standalone HTML page per tweet with a CodePen Prefill embed |
-| `png/` | Diagram PNG exports (one per tweet) |
-| `drawio/` | diagrams.net architecture diagrams |
-| `sources/` | `.java` snippets — copy into a CodePen pen to edit |
-| `index.html` | Preview page 1 ({INDEX_PAGE_SIZE} tweets per page) |
-| `page-2.html` … | Additional preview pages when there are more than {INDEX_PAGE_SIZE} tweets |
+| Folder | Posts |
+|--------|-------|
+| [`java-posts/`](java-posts/) | {len(by_category["java"])} Java tweets |
+| [`spring-boot-posts/`](spring-boot-posts/) | {len(by_category["spring-boot"])} Spring Boot tweets |
+
+Open [`index.html`](index.html) to pick a category.
 
 ## Regenerate
 
 ```bash
-python3 generate_assets.py --skip-png   # fast: codepen + index + tweets.json
-python3 generate_assets.py              # also exports diagram PNGs (slow)
+python generate_assets.py --skip-png   # fast: codepen + index + per-category tweets.json
+python generate_assets.py              # also exports diagram PNGs (slow)
 ```
 
-Diagram PNGs: `npx draw.io-export`. Code pens load via [CodePen Prefill embeds](https://blog.codepen.io/documentation/prefill-embeds/).
+## Scripts
+
+| File | Role |
+|------|------|
+| `generate_assets.py` | Build both category folders from `tweets.json` |
+| `codepen_builder.py` | CodePen Carbon embeds |
+| `diagram_templates.py` | diagrams.net templates |
+| `drawio_builder.py` | Draw.io XML helpers |
 """
-    (ROOT / "README.md").write_text(readme, encoding="utf-8")
-    print(f"Generated assets for {len(tweets)} tweets")
-    print(f"  codepen/ → {CODEPEN_DIR}")
-    print(f"  diagrams.net → {DRAWIO_DIR}")
-    print(f"  png/ → {PNG_DIR} (diagram exports)")
-    print(f"  preview → {len(pages)} pages ({INDEX_PAGE_SIZE} tweets/page), start at {INDEX_HTML}")
+    (TOOLS_ROOT / "README.md").write_text(tools_readme, encoding="utf-8")
 
 
 if __name__ == "__main__":

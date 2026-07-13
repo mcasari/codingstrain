@@ -1,5 +1,0 @@
-// 💡 Java tip: Records are not limited to data only, you can add custom constructors or methods for validation.
-//
-// ✅ They can have constructors, static methods, and instance methods:
-//
-// #Java #ModernJava

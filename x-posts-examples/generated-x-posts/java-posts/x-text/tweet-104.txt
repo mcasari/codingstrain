@@ -1,0 +1,9 @@
+💡 Prefer constructor injection over field injection in Spring beans.
+
+✅ Field injection hides required dependencies — you can create the object without them
+
+✅ Constructor injection makes dependencies explicit and lets you use final fields
+
+✅ Easier to test: pass mocks directly to the constructor, no Spring context needed
+
+#Java #SpringBoot

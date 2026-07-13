@@ -1,0 +1,7 @@
+// 💡 Measure code coverage but don’t obsess over 100%. #Java #Testing
+//
+// ✅ Runnable sample: `java-tips`
+//
+// ✅ Architecture diagram + Carbon CodePen below
+//
+// ✅ From the codingstrain examples repo

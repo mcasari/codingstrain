@@ -1,0 +1,9 @@
+💡 Prefer delegation over inheritance — an "is-a" relationship ties you to the superclass forever.
+
+✅ A subclass inherits the parent's entire API — a change upstream can break your code
+
+✅ With delegation, you hold a helper object and forward calls — easy to swap or mock
+
+✅ Rule of thumb: inherit only for true "is-a" relationships; otherwise compose
+
+#Java #OOP

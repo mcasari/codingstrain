@@ -1,0 +1,9 @@
+💡 1/3 A very trivial example could be:
+
+✅ String helloThere = "Hello " + "there" + "!";
+
+✅ System.out.println(helloThere);
+
+✅ The above line of code is clear and works as intended
+
+#Java #BestPractices

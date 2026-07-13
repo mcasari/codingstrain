@@ -1,2 +1,0 @@
-// 💡 Java tip: Avoid boxing overhead by using primitive streams.
-// #Java

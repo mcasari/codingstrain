@@ -1,8 +1,0 @@
-// 🚀 Spring Boot: springdoc-openapi automatically generates OpenAPI 3.0 (Swagger) documentation from your Spring Boot REST controllers.
-//
-// You will get:
-//
-// ✅ An interactive Swagger UI
-// ✅ Auto-scanned from your code
-// ✅ Export API docs in JSON/YAML
-// #SpringBoot

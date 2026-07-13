@@ -1,4 +1,0 @@
-// 🚀  Spring Boot: Use spring-boot-starter-mail for sending emails.
-//
-// ✅ It wraps all the necessary configuration and dependencies, making the process of sending emails simple and clear.
-// #SpringBoot

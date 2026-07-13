@@ -1,0 +1,7 @@
+// 🚀 Spring Boot: Better avoid wildcard exclusions for transitive dependencies in POMs, because they can hide problems.
+//
+// ✅ ❌ Wildcard exclusions just remove the symptom and mask the underlying version mismatch
+//
+// ✅ #SpringBoot #JavaDev
+//
+// ✅ Runnable sample: `spring-boot-tips`
