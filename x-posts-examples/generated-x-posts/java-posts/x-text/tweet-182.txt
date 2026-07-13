@@ -1,7 +1,9 @@
-🚀 Java: You can use Stream.limit(n) to set a bound to infinite streams.
+💡 Java Streams: limit(n) turns an infinite stream into a finite one.
 
-✅ #Java #SoftwareDevelopment
+✅ Useful with Stream.iterate() / generate() (they can be infinite)
 
-✅ Runnable sample: java-tips
+✅ limit(5) means “take the first 5 items, then stop”
 
-✅ Architecture diagram + Carbon CodePen below
+✅ Great for sampling data or building the first N values
+
+#Java #Streams

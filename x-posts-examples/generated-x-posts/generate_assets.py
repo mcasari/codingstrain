@@ -799,7 +799,6 @@ def build_article(t: dict) -> str:
         <button type="button" class="copy-x-btn" data-target="{copy_id}">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
       </p>
-      <div class="tweet-text">{text}</div>
       <p class="links">
 {drawio_link}        <a href="codepen/{stem}.html" target="_blank" rel="noopener">CodePen preview</a> ·
         <a href="sources/{stem}.java" download>Source .java</a> ·

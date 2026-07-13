@@ -5,5 +5,3 @@
 // ✅ Runnable sample: `spring-streaming-demo`
 //
 // ✅ Architecture diagram + Carbon CodePen below
-//
-// #SpringBoot #JavaDev

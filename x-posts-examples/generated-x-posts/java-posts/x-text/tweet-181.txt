@@ -1,7 +1,9 @@
-🚀Java: Use Files.copy() for quick file duplication
+💡 Java I/O: Use Files.copy() to duplicate a file in one line.
 
-✅ #Java #SoftwareDevelopment
+✅ Great for backups: data.csv → data.csv.bak
 
-✅ Runnable sample: java-tips
+✅ Use REPLACE_EXISTING if the target might already exist
 
-✅ Architecture diagram + Carbon CodePen below
+✅ Works with Path (so it’s portable across OSes)
+
+#Java #Files

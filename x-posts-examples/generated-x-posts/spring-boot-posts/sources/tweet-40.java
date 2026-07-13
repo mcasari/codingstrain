@@ -5,5 +5,3 @@
 // ✅ Runnable sample: `sql-annotation-demo`
 //
 // ✅ Architecture diagram + Carbon CodePen below
-//
-// #SpringBoot #IntegrationTesting
