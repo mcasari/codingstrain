@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: EnvironmentPostProcessor package moved.
+
+✅ New: org.springframework.boot.EnvironmentPostProcessor
+
+✅ Old package kept temporarily (deprecated)
+
+✅ Update spring.factories / AutoConfiguration.imports
+
+#SpringBoot4 #Config

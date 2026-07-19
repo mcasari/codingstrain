@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: HTTP Service Clients + RestClient under one roof.
+
+✅ Interfaces for declarative calls
+
+✅ RestClient for ad-hoc calls
+
+✅ Shared spring.http.clients timeouts/SSL bundles
+
+#SpringBoot4 #HttpExchange

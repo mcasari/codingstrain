@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: Undertow support is removed.
+
+✅ Servlet 6.1 baseline — Undertow isn’t there yet
+
+✅ Stick with Tomcat or Jetty starters
+
+✅ Don’t deploy Boot 4 to old servlet containers
+
+#SpringBoot4 #Servlet

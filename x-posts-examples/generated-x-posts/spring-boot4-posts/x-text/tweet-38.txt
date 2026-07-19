@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: Prefer JsonMapper beans over ObjectMapper.
+
+✅ Jackson 3 format-specific mappers
+
+✅ Replacing JSON config? Define JsonMapper
+
+✅ XML? Define XmlMapper
+
+#SpringBoot4 #Jackson3

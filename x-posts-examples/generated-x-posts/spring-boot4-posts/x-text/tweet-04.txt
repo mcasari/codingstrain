@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: spring-boot-starter-web → spring-boot-starter-webmvc.
+
+✅ Name matches the stack (MVC vs WebFlux)
+
+✅ Pair with spring-boot-starter-webmvc-test
+
+✅ Update BOM / parent to 4.x first
+
+#SpringBoot4 #WebMVC

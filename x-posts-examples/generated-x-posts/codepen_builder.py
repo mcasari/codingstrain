@@ -387,12 +387,12 @@ def build_codepen_embed(tweet: dict, code: str) -> str:
         "title": title,
         "description": (
             f"Spring Boot snippet from codingstrain ({module})"
-            if tweet.get("category") == "spring-boot"
+            if str(tweet.get("category", "")).startswith("spring-boot")
             else f"Java snippet from codingstrain ({module})"
         ),
         "tags": (
             ["java", "springboot", "codingstrain"]
-            if tweet.get("category") == "spring-boot"
+            if str(tweet.get("category", "")).startswith("spring-boot")
             else ["java", "codingstrain"]
         ),
     }

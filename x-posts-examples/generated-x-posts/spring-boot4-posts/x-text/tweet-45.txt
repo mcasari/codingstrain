@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: Mark development tools in the jar manifest.
+
+✅ Spring-Boot-Jar-Type: development-tool
+
+✅ Keeps those deps out of production uber jars
+
+✅ Useful for internal developer utilities
+
+#SpringBoot4 #Packaging

@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: Exception translation property renamed.
+
+✅ spring.dao.exceptiontranslation.enabled →
+
+✅ spring.persistence.exceptiontranslation.enabled
+
+✅ Use the properties migrator to catch it
+
+#SpringBoot4 #Migration

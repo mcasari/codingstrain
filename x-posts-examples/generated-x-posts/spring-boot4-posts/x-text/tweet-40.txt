@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: Upgrade path tip — go 3.5 → 4.0.
+
+✅ Land on latest 3.5.x first
+
+✅ Kill 3.x deprecations before the jump
+
+✅ Then bump parent/BOM to 4.0.x and fix starters
+
+#SpringBoot4 #Migration

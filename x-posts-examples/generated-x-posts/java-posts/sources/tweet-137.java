@@ -5,5 +5,3 @@
 // ✅ We can for example define two separate interfaces:
 //
 // ✅ An alternative could be creating a default Vehicle implementation, and extending it while implementing the Motorized interface only for vehicles that have engines.
-//
-// #SOLID #SoftwareDesign

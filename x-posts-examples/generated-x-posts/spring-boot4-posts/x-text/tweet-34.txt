@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: Gradle 9 is supported.
+
+✅ Build with Gradle 9 or 8.14+
+
+✅ Keep the Boot Gradle plugin in sync with Boot 4
+
+✅ Good moment to refresh toolchain + JVM args
+
+#SpringBoot4 #Gradle

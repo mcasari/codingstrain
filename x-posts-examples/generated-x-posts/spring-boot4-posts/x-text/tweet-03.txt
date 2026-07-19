@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: The codebase is modular — pick focused starters.
+
+✅ Smaller jars instead of one giant Boot core
+
+✅ Prefer spring-boot-starter-* for each tech
+
+✅ Missing starter = missing auto-config (easy to miss)
+
+#SpringBoot4 #Modular

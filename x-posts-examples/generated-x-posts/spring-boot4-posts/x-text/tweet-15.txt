@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: Multiple TaskDecorator beans are supported.
+
+✅ Boot wraps them in a CompositeTaskDecorator
+
+✅ Order with @Order / Ordered
+
+✅ Great for MDC + security context propagation
+
+#SpringBoot4 #Async

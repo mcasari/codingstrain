@@ -1,7 +1,9 @@
-🚀 Java: You can use Optional.orElseThrow() to implement so called fail-fast behavior.
+💡 Use Optional.orElseThrow() when a missing value is a bug.
 
-✅ Fail-fast means you can catch bugs closer to their source, making stack traces easier to understand
+✅ orElse(null) → NPE later, far from the lookup
 
-✅ #Java #SoftwareDevelopment
+✅ orElseThrow() stops at the source with a clear exception
 
-#Java #SoftwareDevelopment
+✅ Pass a supplier so the message says what was missing
+
+#Java #Optional

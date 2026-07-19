@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: @ConfigurationPropertiesSource for external types.
+
+✅ Metadata for types living in another module
+
+✅ Keep annotation processor on the classpath
+
+✅ IDE completion works across module boundaries
+
+#SpringBoot4 #Config

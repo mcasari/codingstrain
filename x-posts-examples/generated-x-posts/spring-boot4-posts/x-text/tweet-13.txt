@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: Tracing property rename to watch.
+
+✅ management.tracing.enabled is gone
+
+✅ Use management.tracing.export.enabled
+
+✅ @ConditionalOnEnabledTracing → …TracingExport
+
+#SpringBoot4 #Observability

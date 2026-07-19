@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: Support for @ObservationKeyValue.
+
+✅ Attach key/values to Micrometer Observations
+
+✅ Cleaner than manual observation.highCardinalityKeyValue
+
+✅ Works with the OTLP starter export path
+
+#SpringBoot4 #Observability

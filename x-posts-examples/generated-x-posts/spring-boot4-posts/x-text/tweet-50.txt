@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: Built on Spring Framework 7 — foundations matter.
+
+✅ HTTP Service Clients + API versioning land in Boot
+
+✅ JSpecify null-safety across the portfolio
+
+✅ Plan starter renames + Jackson 3 before you upgrade
+
+#SpringBoot4 #SpringFramework7

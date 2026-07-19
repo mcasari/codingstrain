@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: Java 17 minimum, Java 25 supported.
+
+✅ Stay on 17 if you must — migration still works
+
+✅ New apps: prefer a current LTS (21+)
+
+✅ GraalVM native-image needs 25+
+
+#SpringBoot4 #Java

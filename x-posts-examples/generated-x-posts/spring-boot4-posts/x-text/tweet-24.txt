@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: Disable console logging with one property.
+
+✅ logging.console.enabled=false
+
+✅ Useful in containers that only scrape files/OTLP
+
+✅ Keep file or remote appenders as needed
+
+#SpringBoot4 #Logging

@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Spring Boot 4 X Posts — Copy for X</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 960px; margin: 2rem auto; padding: 0 1rem; background: #f7f9f9; }
+    article { background: #fff; border-radius: 16px; padding: 1.25rem; margin-bottom: 2rem; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+    h2 { margin: 0 0 1rem; font-size: 0.9rem; color: #536471; }
+    .tweet-text { white-space: pre-wrap; font-size: 15px; line-height: 1.4; margin: 1rem 0; padding: 1rem; background: #f7f9f9; border-radius: 12px; border: 1px solid #eff3f4; }
+    .links a { color: #1d9bf0; }
+    .banner { background: #1d9bf0; color: #fff; padding: 1.25rem; border-radius: 12px; margin-bottom: 1rem; }
+    .banner p { margin: 0.5rem 0 0; opacity: 0.95; }
+    .banner a { color: #fff; }
+    .drawio-box { background: #e8f4fc; border: 1px solid #1d9bf0; border-radius: 12px; padding: 1rem; margin-bottom: 1rem; }
+    .drawio-box ol { margin: 0.5rem 0 0; padding-left: 1.25rem; }
+    .drawio-box li { margin: 0.35rem 0; }
+    .asset-label { font-size: 0.85rem; color: #536471; margin: 0.75rem 0 0.35rem; }
+    .asset-img { display: block; max-width: 100%; border-radius: 8px; margin-bottom: 0.5rem; border: 1px solid #eff3f4; }
+    .codepen-wrap { margin: 0.5rem 0 1rem; border-radius: 8px; overflow: hidden; border: 1px solid #eff3f4; }
+    .codepen-wrap--large { max-width: 100%; min-height: 800px; }
+    .codepen-links { font-size: 0.8rem; margin: 0.35rem 0 0; padding: 0 0.5rem 0.5rem; }
+    .codepen-links a { color: #1d9bf0; }
+    .pagination { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.75rem; background: #fff; border: 1px solid #eff3f4; border-radius: 12px; padding: 0.75rem 1rem; margin-bottom: 1.5rem; font-size: 0.9rem; }
+    .pagination a { color: #1d9bf0; text-decoration: none; }
+    .pagination a:hover { text-decoration: underline; }
+    .pagination .page-current { font-weight: 700; color: #0f1419; }
+    .pagination .page-meta { color: #536471; margin-left: auto; }
+    .pagination .page-nav { font-weight: 600; }
+    .pagination .page-nav.disabled { color: #aab8c2; pointer-events: none; }
+    .tweet-copy-label { font-size: 0.85rem; color: #536471; margin: 0.75rem 0 0.35rem; }
+    .tweet-copy {
+      width: 100%;
+      box-sizing: border-box;
+      font: 15px/1.5 system-ui, sans-serif;
+      color: #0f1419;
+      background: #fff;
+      border: 1px solid #cfd9de;
+      border-radius: 12px;
+      padding: 0.85rem 1rem;
+      resize: vertical;
+      white-space: pre-wrap;
+    }
+    .copy-row { display: flex; align-items: center; gap: 0.75rem; margin: 0.5rem 0 1rem; }
+    .copy-x-btn {
+      font: 600 0.9rem system-ui, sans-serif;
+      color: #fff;
+      background: #1d9bf0;
+      border: 0;
+      border-radius: 999px;
+      padding: 0.45rem 1rem;
+      cursor: pointer;
+    }
+    .copy-x-btn:hover { background: #1a8cd8; }
+    .copy-status { font-size: 0.85rem; color: #536471; }
+    .x-char-count { font-size: 0.8rem; color: #536471; font-weight: 600; }
+    .x-char-count--over { color: #dc2626; }
+
+    .preview { color: #536471; font-size: 0.9rem; margin: 0 0 0.75rem; }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <h1>Spring Boot 4 X Posts</h1>
+    <p>50 tweets — spaced for X. Use <strong>Copy for X</strong> or download <code>.txt</code> files.</p>
+    <p><a href="../index.html">← Back to full preview</a></p>
+  </div>
+    <article>
+      <h2>Tweet #1</h2>
+      <p class="preview">🚀 Spring Boot 4: HTTP clients via @HttpExchange interfaces.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(240/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-1" readonly rows="10">🚀 Spring Boot 4: HTTP clients via @HttpExchange interfaces.
+
+✅ Annotate an interface — Boot builds the client
+
+✅ @GetExchange / @PostExchange beat RestTemplate glue
+
+✅ Tune timeouts/SSL with spring.http.clients.*
+
+#SpringBoot4 #HttpExchange</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-1">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-01.txt" download>.txt</a>
+        · <a href="../index.html#tweet-1">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #2</h2>
+      <p class="preview">🚀 Spring Boot 4: Native API versioning for MVC and WebFlux.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(219/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-2" readonly rows="10">🚀 Spring Boot 4: Native API versioning for MVC and WebFlux.
+
+✅ Configure with spring.mvc.apiversion.*
+
+✅ Version by header, path, or media type
+
+✅ Plug in ApiVersionResolver for custom rules
+
+#SpringBoot4 #ApiVersioning</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-2">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-02.txt" download>.txt</a>
+        · <a href="../index.html#tweet-2">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #3</h2>
+      <p class="preview">🚀 Spring Boot 4: The codebase is modular — pick focused starters.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(237/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-3" readonly rows="10">🚀 Spring Boot 4: The codebase is modular — pick focused starters.
+
+✅ Smaller jars instead of one giant Boot core
+
+✅ Prefer spring-boot-starter-* for each tech
+
+✅ Missing starter = missing auto-config (easy to miss)
+
+#SpringBoot4 #Modular</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-3">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-03.txt" download>.txt</a>
+        · <a href="../index.html#tweet-3">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #4</h2>
+      <p class="preview">🚀 Spring Boot 4: spring-boot-starter-web → spring-boot-starter-webmvc.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(216/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-4" readonly rows="10">🚀 Spring Boot 4: spring-boot-starter-web → spring-boot-starter-webmvc.
+
+✅ Name matches the stack (MVC vs WebFlux)
+
+✅ Pair with spring-boot-starter-webmvc-test
+
+✅ Update BOM / parent to 4.x first
+
+#SpringBoot4 #WebMVC</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-4">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-04.txt" download>.txt</a>
+        · <a href="../index.html#tweet-4">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #5</h2>
+      <p class="preview">🚀 Spring Boot 4: Jackson 3 is the default JSON library.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(227/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-5" readonly rows="10">🚀 Spring Boot 4: Jackson 3 is the default JSON library.
+
+✅ Packages move: com.fasterxml → tools.jackson
+
+✅ Prefer JsonMapper over a plain ObjectMapper bean
+
+✅ Temporary escape hatch: spring-boot-jackson2
+
+#SpringBoot4 #Jackson3</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-5">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-05.txt" download>.txt</a>
+        · <a href="../index.html#tweet-5">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #6</h2>
+      <p class="preview">🚀 Spring Boot 4: @MockBean is gone — use @MockitoBean.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(214/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-6" readonly rows="10">🚀 Spring Boot 4: @MockBean is gone — use @MockitoBean.
+
+✅ Field mocks: @MockitoBean / @MockitoSpyBean
+
+✅ Not for @Configuration classes anymore
+
+✅ Prefer @Import test configs for shared mocks
+
+#SpringBoot4 #Testing</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-6">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-06.txt" download>.txt</a>
+        · <a href="../index.html#tweet-6">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #7</h2>
+      <p class="preview">🚀 Spring Boot 4: Prefer RestTestClient over TestRestTemplate.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(214/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-7" readonly rows="10">🚀 Spring Boot 4: Prefer RestTestClient over TestRestTemplate.
+
+✅ Fluent API aligned with RestClient
+
+✅ Works with MockMvc or a real port
+
+✅ Add @AutoConfigureRestTestClient when needed
+
+#SpringBoot4 #RestTestClient</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-7">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-07.txt" download>.txt</a>
+        · <a href="../index.html#tweet-7">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #8</h2>
+      <p class="preview">🚀 Spring Boot 4: New spring-boot-starter-opentelemetry.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(218/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-8" readonly rows="10">🚀 Spring Boot 4: New spring-boot-starter-opentelemetry.
+
+✅ OTLP metrics + traces in one starter
+
+✅ Auto-configures the OpenTelemetry SDK
+
+✅ Drop Jaeger/Zipkin-only setup for OTLP collectors
+
+#SpringBoot4 #OpenTelemetry</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-8">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-08.txt" download>.txt</a>
+        · <a href="../index.html#tweet-8">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #9</h2>
+      <p class="preview">🚀 Spring Boot 4: Portfolio-wide JSpecify null-safety.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(203/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-9" readonly rows="10">🚀 Spring Boot 4: Portfolio-wide JSpecify null-safety.
+
+✅ Clearer @Nullable / @NonNull contracts
+
+✅ Better static analysis in IDEs
+
+✅ Treat nullability warnings as real API signals
+
+#SpringBoot4 #JSpecify</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-9">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-09.txt" download>.txt</a>
+        · <a href="../index.html#tweet-9">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #10</h2>
+      <p class="preview">🚀 Spring Boot 4: Java 17 minimum, Java 25 supported.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(196/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-10" readonly rows="10">🚀 Spring Boot 4: Java 17 minimum, Java 25 supported.
+
+✅ Stay on 17 if you must — migration still works
+
+✅ New apps: prefer a current LTS (21+)
+
+✅ GraalVM native-image needs 25+
+
+#SpringBoot4 #Java</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-10">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-10.txt" download>.txt</a>
+        · <a href="../index.html#tweet-10">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #11</h2>
+      <p class="preview">🚀 Spring Boot 4: Undertow support is removed.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(207/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-11" readonly rows="10">🚀 Spring Boot 4: Undertow support is removed.
+
+✅ Servlet 6.1 baseline — Undertow isn’t there yet
+
+✅ Stick with Tomcat or Jetty starters
+
+✅ Don’t deploy Boot 4 to old servlet containers
+
+#SpringBoot4 #Servlet</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-11">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-11.txt" download>.txt</a>
+        · <a href="../index.html#tweet-11">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #12</h2>
+      <p class="preview">🚀 Spring Boot 4: Add spring-boot-properties-migrator while upgrading.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(226/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-12" readonly rows="10">🚀 Spring Boot 4: Add spring-boot-properties-migrator while upgrading.
+
+✅ Prints renamed/removed property diagnostics
+
+✅ Temporarily remaps old keys at runtime
+
+✅ Remove it once application.yml is clean
+
+#SpringBoot4 #Migration</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-12">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-12.txt" download>.txt</a>
+        · <a href="../index.html#tweet-12">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #13</h2>
+      <p class="preview">🚀 Spring Boot 4: Tracing property rename to watch.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(207/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-13" readonly rows="10">🚀 Spring Boot 4: Tracing property rename to watch.
+
+✅ management.tracing.enabled is gone
+
+✅ Use management.tracing.export.enabled
+
+✅ @ConditionalOnEnabledTracing → …TracingExport
+
+#SpringBoot4 #Observability</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-13">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-13.txt" download>.txt</a>
+        · <a href="../index.html#tweet-13">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #14</h2>
+      <p class="preview">🚀 Spring Boot 4: New JmsClient alongside JmsTemplate.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(194/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-14" readonly rows="10">🚀 Spring Boot 4: New JmsClient alongside JmsTemplate.
+
+✅ Fluent, modern JMS API auto-configured
+
+✅ JmsTemplate still works unchanged
+
+✅ Prefer JmsClient for new messaging code
+
+#SpringBoot4 #JMS</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-14">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-14.txt" download>.txt</a>
+        · <a href="../index.html#tweet-14">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #15</h2>
+      <p class="preview">🚀 Spring Boot 4: Multiple TaskDecorator beans are supported.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(207/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-15" readonly rows="10">🚀 Spring Boot 4: Multiple TaskDecorator beans are supported.
+
+✅ Boot wraps them in a CompositeTaskDecorator
+
+✅ Order with @Order / Ordered
+
+✅ Great for MDC + security context propagation
+
+#SpringBoot4 #Async</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-15">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-15.txt" download>.txt</a>
+        · <a href="../index.html#tweet-15">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #16</h2>
+      <p class="preview">🚀 Spring Boot 4: @ConfigurationPropertiesSource for external types.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(231/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-16" readonly rows="10">🚀 Spring Boot 4: @ConfigurationPropertiesSource for external types.
+
+✅ Metadata for types living in another module
+
+✅ Keep annotation processor on the classpath
+
+✅ IDE completion works across module boundaries
+
+#SpringBoot4 #Config</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-16">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-16.txt" download>.txt</a>
+        · <a href="../index.html#tweet-16">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #17</h2>
+      <p class="preview">🚀 Spring Boot 4: MongoDB health no longer needs Spring Data.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(220/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-17" readonly rows="10">🚀 Spring Boot 4: MongoDB health no longer needs Spring Data.
+
+✅ Indicators live in spring-boot-mongodb
+
+✅ Works with the MongoDB driver alone
+
+✅ Use spring-boot-starter-mongodb when you need health
+
+#SpringBoot4 #MongoDB</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-17">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-17.txt" download>.txt</a>
+        · <a href="../index.html#tweet-17">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #18</h2>
+      <p class="preview">🚀 Spring Boot 4: Redis static master/replica (Lettuce).</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(177/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-18" readonly rows="10">🚀 Spring Boot 4: Redis static master/replica (Lettuce).
+
+✅ Set spring.data.redis.masterreplica.nodes
+
+✅ Reads can go to replicas
+
+✅ Lettuce-only — not Jedis
+
+#SpringBoot4 #Redis</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-18">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-18.txt" download>.txt</a>
+        · <a href="../index.html#tweet-18">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #19</h2>
+      <p class="preview">🚀 Spring Boot 4: Redis observability uses the Observation API.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(209/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-19" readonly rows="10">🚀 Spring Boot 4: Redis observability uses the Observation API.
+
+✅ Metrics and spans from Redis commands
+
+✅ Replaces older latency-recorder-only setup
+
+✅ Pair with the OpenTelemetry starter
+
+#SpringBoot4 #Redis</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-19">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-19.txt" download>.txt</a>
+        · <a href="../index.html#tweet-19">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #20</h2>
+      <p class="preview">🚀 Spring Boot 4: Kotlin Serialization gets a first-class starter.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(234/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-20" readonly rows="10">🚀 Spring Boot 4: Kotlin Serialization gets a first-class starter.
+
+✅ spring-boot-starter-kotlinx-serialization-json
+
+✅ Contributes a Json bean + HTTP converter
+
+✅ Configure via spring.kotlinx.serialization.json.*
+
+#SpringBoot4 #Kotlin</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-20">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-20.txt" download>.txt</a>
+        · <a href="../index.html#tweet-20">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #21</h2>
+      <p class="preview">🚀 Spring Boot 4: Dedicated RestClient starter.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(213/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-21" readonly rows="10">🚀 Spring Boot 4: Dedicated RestClient starter.
+
+✅ spring-boot-starter-restclient for imperative HTTP
+
+✅ WebClient → spring-boot-starter-webclient
+
+✅ Unified spring.http.clients.* settings
+
+#SpringBoot4 #RestClient</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-21">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-21.txt" download>.txt</a>
+        · <a href="../index.html#tweet-21">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #22</h2>
+      <p class="preview">🚀 Spring Boot 4: Flyway/Liquibase now need their starters.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(209/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-22" readonly rows="10">🚀 Spring Boot 4: Flyway/Liquibase now need their starters.
+
+✅ Third-party jar alone is not enough
+
+✅ Use spring-boot-starter-flyway / liquibase
+
+✅ Matching *-test starters for test slices
+
+#SpringBoot4 #Flyway</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-22">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-22.txt" download>.txt</a>
+        · <a href="../index.html#tweet-22">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #23</h2>
+      <p class="preview">🚀 Spring Boot 4: Test starters follow spring-boot-starter-*-test.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(228/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-23" readonly rows="10">🚀 Spring Boot 4: Test starters follow spring-boot-starter-*-test.
+
+✅ Each tech has a matching test starter
+
+✅ They pull spring-boot-starter-test transitively
+
+✅ Example: Security tests need …-security-test
+
+#SpringBoot4 #Testing</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-23">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-23.txt" download>.txt</a>
+        · <a href="../index.html#tweet-23">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #24</h2>
+      <p class="preview">🚀 Spring Boot 4: Disable console logging with one property.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(210/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-24" readonly rows="10">🚀 Spring Boot 4: Disable console logging with one property.
+
+✅ logging.console.enabled=false
+
+✅ Useful in containers that only scrape files/OTLP
+
+✅ Keep file or remote appenders as needed
+
+#SpringBoot4 #Logging</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-24">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-24.txt" download>.txt</a>
+        · <a href="../index.html#tweet-24">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #25</h2>
+      <p class="preview">🚀 Spring Boot 4: JDK HttpClient uses virtual threads when enabled.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(221/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-25" readonly rows="10">🚀 Spring Boot 4: JDK HttpClient uses virtual threads when enabled.
+
+✅ Set spring.threads.virtual.enabled=true
+
+✅ Auto-configured HTTP clients opt in
+
+✅ Great for high-concurrency blocking I/O
+
+#SpringBoot4 #VirtualThreads</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-25">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-25.txt" download>.txt</a>
+        · <a href="../index.html#tweet-25">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #26</h2>
+      <p class="preview">🚀 Spring Boot 4: Built on Jakarta EE 11 + Servlet 6.1.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(214/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-26" readonly rows="10">🚀 Spring Boot 4: Built on Jakarta EE 11 + Servlet 6.1.
+
+✅ JPA 3.2, Validation 3.1, Servlet 6.1
+
+✅ Hibernate ORM 7.x on the classpath
+
+✅ Verify container / server Servlet level before deploy
+
+#SpringBoot4 #JakartaEE</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-26">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-26.txt" download>.txt</a>
+        · <a href="../index.html#tweet-26">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #27</h2>
+      <p class="preview">🚀 Spring Boot 4: Elasticsearch API key authentication.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(220/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-27" readonly rows="10">🚀 Spring Boot 4: Elasticsearch API key authentication.
+
+✅ New spring.elasticsearch.api-key property
+
+✅ Cleaner than embedding basic auth in the URI
+
+✅ Rotate keys without changing client code
+
+#SpringBoot4 #Elasticsearch</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-27">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-27.txt" download>.txt</a>
+        · <a href="../index.html#tweet-27">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #28</h2>
+      <p class="preview">🚀 Spring Boot 4: SSL health shows expiringChains.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(227/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-28" readonly rows="10">🚀 Spring Boot 4: SSL health shows expiringChains.
+
+✅ No more WILL_EXPIRE_SOON status value
+
+✅ Expiring certs stay VALID + listed in details
+
+✅ Tune management.health.ssl.certificate-validity-warning-threshold
+
+#SpringBoot4 #SSL</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-28">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-28.txt" download>.txt</a>
+        · <a href="../index.html#tweet-28">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #29</h2>
+      <p class="preview">🚀 Spring Boot 4: DevTools live reload is off by default.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(223/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-29" readonly rows="10">🚀 Spring Boot 4: DevTools live reload is off by default.
+
+✅ Restarts still work; browser live reload is opt-in
+
+✅ Enable only when you need it locally
+
+✅ Avoid surprise websocket ports in shared envs
+
+#SpringBoot4 #DevTools</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-29">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-29.txt" download>.txt</a>
+        · <a href="../index.html#tweet-29">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #30</h2>
+      <p class="preview">🚀 Spring Boot 4: EnvironmentPostProcessor package moved.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(236/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-30" readonly rows="10">🚀 Spring Boot 4: EnvironmentPostProcessor package moved.
+
+✅ New: org.springframework.boot.EnvironmentPostProcessor
+
+✅ Old package kept temporarily (deprecated)
+
+✅ Update spring.factories / AutoConfiguration.imports
+
+#SpringBoot4 #Config</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-30">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-30.txt" download>.txt</a>
+        · <a href="../index.html#tweet-30">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #31</h2>
+      <p class="preview">🚀 Spring Boot 4: Exception translation property renamed.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(220/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-31" readonly rows="10">🚀 Spring Boot 4: Exception translation property renamed.
+
+✅ spring.dao.exceptiontranslation.enabled →
+
+✅ spring.persistence.exceptiontranslation.enabled
+
+✅ Use the properties migrator to catch it
+
+#SpringBoot4 #Migration</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-31">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-31.txt" download>.txt</a>
+        · <a href="../index.html#tweet-31">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #32</h2>
+      <p class="preview">🚀 Spring Boot 4: @MeterTag SpEL on @Timed / @Counted.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(203/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-32" readonly rows="10">🚀 Spring Boot 4: @MeterTag SpEL on @Timed / @Counted.
+
+✅ Tag metric series from method args
+
+✅ Auto-config wires a SpEL ValueExpressionResolver
+
+✅ Keep cardinality under control
+
+#SpringBoot4 #Micrometer</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-32">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-32.txt" download>.txt</a>
+        · <a href="../index.html#tweet-32">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #33</h2>
+      <p class="preview">🚀 Spring Boot 4: Support for @ObservationKeyValue.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(229/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-33" readonly rows="10">🚀 Spring Boot 4: Support for @ObservationKeyValue.
+
+✅ Attach key/values to Micrometer Observations
+
+✅ Cleaner than manual observation.highCardinalityKeyValue
+
+✅ Works with the OTLP starter export path
+
+#SpringBoot4 #Observability</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-33">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-33.txt" download>.txt</a>
+        · <a href="../index.html#tweet-33">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #34</h2>
+      <p class="preview">🚀 Spring Boot 4: Gradle 9 is supported.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(191/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-34" readonly rows="10">🚀 Spring Boot 4: Gradle 9 is supported.
+
+✅ Build with Gradle 9 or 8.14+
+
+✅ Keep the Boot Gradle plugin in sync with Boot 4
+
+✅ Good moment to refresh toolchain + JVM args
+
+#SpringBoot4 #Gradle</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-34">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-34.txt" download>.txt</a>
+        · <a href="../index.html#tweet-34">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #35</h2>
+      <p class="preview">🚀 Spring Boot 4: AWS ECS is a recognized CloudPlatform.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(210/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-35" readonly rows="10">🚀 Spring Boot 4: AWS ECS is a recognized CloudPlatform.
+
+✅ Detects Elastic Container Service runtime
+
+✅ Aligns cloud property / actuator behavior
+
+✅ Same idea as k8s / Cloud Foundry detection
+
+#SpringBoot4 #AWS</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-35">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-35.txt" download>.txt</a>
+        · <a href="../index.html#tweet-35">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #36</h2>
+      <p class="preview">🚀 Spring Boot 4: Control MongoDB BigDecimal storage.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(201/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-36" readonly rows="10">🚀 Spring Boot 4: Control MongoDB BigDecimal storage.
+
+✅ spring.data.mongodb.representation.big-decimal
+
+✅ Avoid silent precision surprises
+
+✅ Pick decimal128 vs string explicitly
+
+#SpringBoot4 #MongoDB</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-36">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-36.txt" download>.txt</a>
+        · <a href="../index.html#tweet-36">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #37</h2>
+      <p class="preview">🚀 Spring Boot 4: @ServiceConnection + MongoDB Atlas Local.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(231/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-37" readonly rows="10">🚀 Spring Boot 4: @ServiceConnection + MongoDB Atlas Local.
+
+✅ Testcontainers MongoDBAtlasLocalContainer supported
+
+✅ No hardcoded localhost ports in tests
+
+✅ Boot wires connection details automatically
+
+#SpringBoot4 #Testcontainers</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-37">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-37.txt" download>.txt</a>
+        · <a href="../index.html#tweet-37">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #38</h2>
+      <p class="preview">🚀 Spring Boot 4: Prefer JsonMapper beans over ObjectMapper.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(189/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-38" readonly rows="10">🚀 Spring Boot 4: Prefer JsonMapper beans over ObjectMapper.
+
+✅ Jackson 3 format-specific mappers
+
+✅ Replacing JSON config? Define JsonMapper
+
+✅ XML? Define XmlMapper
+
+#SpringBoot4 #Jackson3</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-38">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-38.txt" download>.txt</a>
+        · <a href="../index.html#tweet-38">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #39</h2>
+      <p class="preview">🚀 Spring Boot 4: Fully executable uber-jar launch scripts are gone.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(230/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-39" readonly rows="10">🚀 Spring Boot 4: Fully executable uber-jar launch scripts are gone.
+
+✅ java -jar app.jar is the supported path
+
+✅ Unix init-script packaging removed
+
+✅ Use buildpacks, systemd, or Gradle application plugin
+
+#SpringBoot4 #Packaging</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-39">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-39.txt" download>.txt</a>
+        · <a href="../index.html#tweet-39">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #40</h2>
+      <p class="preview">🚀 Spring Boot 4: Upgrade path tip — go 3.5 → 4.0.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(195/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-40" readonly rows="10">🚀 Spring Boot 4: Upgrade path tip — go 3.5 → 4.0.
+
+✅ Land on latest 3.5.x first
+
+✅ Kill 3.x deprecations before the jump
+
+✅ Then bump parent/BOM to 4.0.x and fix starters
+
+#SpringBoot4 #Migration</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-40">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-40.txt" download>.txt</a>
+        · <a href="../index.html#tweet-40">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #41</h2>
+      <p class="preview">🚀 Spring Boot 4: HTTP Service Clients + RestClient under one roof.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(212/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-41" readonly rows="10">🚀 Spring Boot 4: HTTP Service Clients + RestClient under one roof.
+
+✅ Interfaces for declarative calls
+
+✅ RestClient for ad-hoc calls
+
+✅ Shared spring.http.clients timeouts/SSL bundles
+
+#SpringBoot4 #HttpExchange</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-41">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-41.txt" download>.txt</a>
+        · <a href="../index.html#tweet-41">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #42</h2>
+      <p class="preview">🚀 Spring Boot 4: API versioning beans for advanced control.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(194/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-42" readonly rows="10">🚀 Spring Boot 4: API versioning beans for advanced control.
+
+✅ Provide ApiVersionResolver
+
+✅ Optional ApiVersionParser
+
+✅ ApiVersionDeprecationHandler for sunsetting
+
+#SpringBoot4 #ApiVersioning</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-42">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-42.txt" download>.txt</a>
+        · <a href="../index.html#tweet-42">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #43</h2>
+      <p class="preview">🚀 Spring Boot 4: Spring Security 7 comes along for the ride.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(237/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-43" readonly rows="10">🚀 Spring Boot 4: Spring Security 7 comes along for the ride.
+
+✅ Security filter chain DSL stays familiar
+
+✅ Stronger crypto defaults — review customizers
+
+✅ Use spring-boot-starter-security + …-security-test
+
+#SpringBoot4 #SpringSecurity</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-43">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-43.txt" download>.txt</a>
+        · <a href="../index.html#tweet-43">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #44</h2>
+      <p class="preview">🚀 Spring Boot 4: Tomcat static resource cache size is configurable.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(206/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-44" readonly rows="10">🚀 Spring Boot 4: Tomcat static resource cache size is configurable.
+
+✅ server.tomcat.resource.cache-max-size
+
+✅ Tune when serving many static assets
+
+✅ Defaults may surprise large SPAs
+
+#SpringBoot4 #Tomcat</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-44">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-44.txt" download>.txt</a>
+        · <a href="../index.html#tweet-44">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #45</h2>
+      <p class="preview">🚀 Spring Boot 4: Mark development tools in the jar manifest.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(218/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-45" readonly rows="10">🚀 Spring Boot 4: Mark development tools in the jar manifest.
+
+✅ Spring-Boot-Jar-Type: development-tool
+
+✅ Keeps those deps out of production uber jars
+
+✅ Useful for internal developer utilities
+
+#SpringBoot4 #Packaging</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-45">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-45.txt" download>.txt</a>
+        · <a href="../index.html#tweet-45">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #46</h2>
+      <p class="preview">🚀 Spring Boot 4: Milestones publish to Maven Central.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(203/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-46" readonly rows="10">🚀 Spring Boot 4: Milestones publish to Maven Central.
+
+✅ No extra repo.spring.io for 4.x milestones
+
+✅ Easier CI trials of M/RC builds
+
+✅ Still pin versions explicitly in experiments
+
+#SpringBoot4 #Maven</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-46">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-46.txt" download>.txt</a>
+        · <a href="../index.html#tweet-46">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #47</h2>
+      <p class="preview">🚀 Spring Boot 4: Auto-config classes are no longer public API.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(232/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-47" readonly rows="10">🚀 Spring Boot 4: Auto-config classes are no longer public API.
+
+✅ Public members removed from auto-config types
+
+✅ Don’t @Import auto-config classes directly
+
+✅ Use starters + AutoConfiguration.imports only
+
+#SpringBoot4 #AutoConfig</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-47">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-47.txt" download>.txt</a>
+        · <a href="../index.html#tweet-47">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #48</h2>
+      <p class="preview">🚀 Spring Boot 4: Session Hazelcast/MongoDB starters removed.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(224/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-48" readonly rows="10">🚀 Spring Boot 4: Session Hazelcast/MongoDB starters removed.
+
+✅ Ownership moved to Hazelcast / MongoDB teams
+
+✅ Use their Spring Session modules directly
+
+✅ Redis + JDBC session starters remain in Boot
+
+#SpringBoot4 #Session</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-48">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-48.txt" download>.txt</a>
+        · <a href="../index.html#tweet-48">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #49</h2>
+      <p class="preview">🚀 Spring Boot 4: Spock integration removed (Groovy 5).</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(216/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-49" readonly rows="10">🚀 Spring Boot 4: Spock integration removed (Groovy 5).
+
+✅ Spock isn’t ready for Groovy 5 yet
+
+✅ Prefer JUnit 5 + AssertJ for Boot 4 tests
+
+✅ Keep Spock suites on Boot 3.5 until Spock catches up
+
+#SpringBoot4 #Testing</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-49">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-49.txt" download>.txt</a>
+        · <a href="../index.html#tweet-49">Full preview</a>
+      </p>
+    </article>
+    <article>
+      <h2>Tweet #50</h2>
+      <p class="preview">🚀 Spring Boot 4: Built on Spring Framework 7 — foundations matter.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(252/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-50" readonly rows="10">🚀 Spring Boot 4: Built on Spring Framework 7 — foundations matter.
+
+✅ HTTP Service Clients + API versioning land in Boot
+
+✅ JSpecify null-safety across the portfolio
+
+✅ Plan starter renames + Jackson 3 before you upgrade
+
+#SpringBoot4 #SpringFramework7</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-50">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+        · <a href="tweet-50.txt" download>.txt</a>
+        · <a href="../index.html#tweet-50">Full preview</a>
+      </p>
+    </article>
+
+<script>
+document.querySelectorAll('.copy-x-btn').forEach((btn) => {
+  btn.addEventListener('click', async () => {
+    const ta = document.getElementById(btn.dataset.target);
+    const text = ta.value.replace(/\n/g, '\r\n');
+    try {
+      await navigator.clipboard.writeText(text);
+      const status = btn.nextElementSibling;
+      if (status) {
+        status.textContent = 'Copied — paste into X with Ctrl+V';
+        setTimeout(() => { status.textContent = ''; }, 2500);
+      }
+    } catch (err) {
+      ta.focus();
+      ta.select();
+      const status = btn.nextElementSibling;
+      if (status) status.textContent = 'Select the text and copy manually (Ctrl+C)';
+    }
+  });
+});
+</script>
+
+</body>
+</html>

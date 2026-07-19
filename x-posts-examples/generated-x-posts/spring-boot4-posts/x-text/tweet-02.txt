@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: Native API versioning for MVC and WebFlux.
+
+✅ Configure with spring.mvc.apiversion.*
+
+✅ Version by header, path, or media type
+
+✅ Plug in ApiVersionResolver for custom rules
+
+#SpringBoot4 #ApiVersioning

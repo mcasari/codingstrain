@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: Jackson 3 is the default JSON library.
+
+✅ Packages move: com.fasterxml → tools.jackson
+
+✅ Prefer JsonMapper over a plain ObjectMapper bean
+
+✅ Temporary escape hatch: spring-boot-jackson2
+
+#SpringBoot4 #Jackson3

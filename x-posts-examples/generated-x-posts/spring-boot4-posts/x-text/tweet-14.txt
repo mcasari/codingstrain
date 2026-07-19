@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: New JmsClient alongside JmsTemplate.
+
+✅ Fluent, modern JMS API auto-configured
+
+✅ JmsTemplate still works unchanged
+
+✅ Prefer JmsClient for new messaging code
+
+#SpringBoot4 #JMS

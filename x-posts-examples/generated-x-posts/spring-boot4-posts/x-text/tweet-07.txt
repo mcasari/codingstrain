@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: Prefer RestTestClient over TestRestTemplate.
+
+✅ Fluent API aligned with RestClient
+
+✅ Works with MockMvc or a real port
+
+✅ Add @AutoConfigureRestTestClient when needed
+
+#SpringBoot4 #RestTestClient

@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: Add spring-boot-properties-migrator while upgrading.
+
+✅ Prints renamed/removed property diagnostics
+
+✅ Temporarily remaps old keys at runtime
+
+✅ Remove it once application.yml is clean
+
+#SpringBoot4 #Migration

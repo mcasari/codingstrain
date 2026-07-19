@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: Spring Security 7 comes along for the ride.
+
+✅ Security filter chain DSL stays familiar
+
+✅ Stronger crypto defaults — review customizers
+
+✅ Use spring-boot-starter-security + …-security-test
+
+#SpringBoot4 #SpringSecurity

@@ -1,8 +1,15 @@
-// ❌ A NullPointerException waiting to happen
-User u = repo.find(id);
-return u.getEmail();
+Optional<User> found = repo.findById(id);
 
-// ✅ Make "maybe absent" explicit
+// ❌ Null or empty Optional handled too late
+User user = found.orElse(null);
+return user.getEmail();   // NPE here, far from the lookup
+
+// ✅ Fail fast — exception where the value was expected
+User user = found.orElseThrow(
+    () -> new UserNotFoundException(id));
+return user.getEmail();
+
+// Same idea in one chain
 return repo.findById(id)
     .map(User::getEmail)
-    .orElse("no-email");
+    .orElseThrow(() -> new UserNotFoundException(id));

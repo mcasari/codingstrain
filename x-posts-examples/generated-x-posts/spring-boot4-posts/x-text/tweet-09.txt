@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: Portfolio-wide JSpecify null-safety.
+
+✅ Clearer @Nullable / @NonNull contracts
+
+✅ Better static analysis in IDEs
+
+✅ Treat nullability warnings as real API signals
+
+#SpringBoot4 #JSpecify

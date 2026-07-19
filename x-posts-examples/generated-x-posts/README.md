@@ -1,6 +1,6 @@
 # X Post Generator
 
-Shared tooling and master `tweets.json` for **260** codingstrain tweets.
+Shared tooling and master `tweets.json` for **310** codingstrain tweets.
 
 ## Categories
 
@@ -8,6 +8,7 @@ Shared tooling and master `tweets.json` for **260** codingstrain tweets.
 |--------|-------|
 | [`java-posts/`](java-posts/) | 136 Java tweets |
 | [`spring-boot-posts/`](spring-boot-posts/) | 124 Spring Boot tweets |
+| [`spring-boot4-posts/`](spring-boot4-posts/) | 50 Spring Boot 4 tweets |
 
 Open [`index.html`](index.html) to pick a category.
 
@@ -22,7 +23,7 @@ python generate_assets.py              # also exports diagram PNGs (slow)
 
 | File | Role |
 |------|------|
-| `generate_assets.py` | Build both category folders from `tweets.json` |
+| `generate_assets.py` | Build all category folders from `tweets.json` |
 | `codepen_builder.py` | CodePen Carbon embeds |
 | `diagram_templates.py` | diagrams.net templates |
 | `drawio_builder.py` | Draw.io XML helpers |

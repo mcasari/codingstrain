@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: @MeterTag SpEL on @Timed / @Counted.
+
+✅ Tag metric series from method args
+
+✅ Auto-config wires a SpEL ValueExpressionResolver
+
+✅ Keep cardinality under control
+
+#SpringBoot4 #Micrometer

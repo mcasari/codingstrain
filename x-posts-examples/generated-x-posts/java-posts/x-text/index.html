@@ -2219,15 +2219,17 @@
     </article>
     <article>
       <h2>Tweet #179</h2>
-      <p class="preview">🚀 Java: You can use Optional.orElseThrow() to implement so called fail-fast behavior.</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(246/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-179" readonly rows="10">🚀 Java: You can use Optional.orElseThrow() to implement so called fail-fast behavior.
+      <p class="preview">💡 Use Optional.orElseThrow() when a missing value is a bug.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(241/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-179" readonly rows="10">💡 Use Optional.orElseThrow() when a missing value is a bug.
 
-✅ Fail-fast means you can catch bugs closer to their source, making stack traces easier to understand
+✅ orElse(null) → NPE later, far from the lookup
 
-✅ #Java #SoftwareDevelopment
+✅ orElseThrow() stops at the source with a clear exception
 
-#Java #SoftwareDevelopment</textarea>
+✅ Pass a supplier so the message says what was missing
+
+#Java #Optional</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-179">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>

@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: Milestones publish to Maven Central.
+
+✅ No extra repo.spring.io for 4.x milestones
+
+✅ Easier CI trials of M/RC builds
+
+✅ Still pin versions explicitly in experiments
+
+#SpringBoot4 #Maven

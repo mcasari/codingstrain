@@ -5,5 +5,3 @@
 // ✅ If one is null, returns false
 //
 // ✅ If neither is null, calls a.equals(b)
-//
-// #Java #JavaDev

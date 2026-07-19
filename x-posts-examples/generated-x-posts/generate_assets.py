@@ -29,6 +29,7 @@ MASTER_TWEETS_FILE = TOOLS_ROOT / "tweets.json"
 
 JAVA_ROOT = TOOLS_ROOT / "java-posts"
 SPRING_BOOT_ROOT = TOOLS_ROOT / "spring-boot-posts"
+SPRING_BOOT4_ROOT = TOOLS_ROOT / "spring-boot4-posts"
 
 TWEETS_FILE = ROOT / "tweets.json"
 DRAWIO_DIR = ROOT / "drawio"
@@ -94,9 +95,14 @@ def xml_escape(text: str) -> str:
     return html.escape(text, quote=True)
 
 
+CATEGORY_ORDER = ("java", "spring-boot", "spring-boot4")
+
+
 def tweet_category(tweet: dict) -> str:
-    """Classify a tweet as java or spring-boot from its module name."""
+    """Classify a tweet as java, spring-boot, or spring-boot4 from its module name."""
     module = tweet.get("module", "").lower()
+    if module in {"spring-boot4-tips", "spring-boot-4-tips"} or module.startswith("spring-boot4"):
+        return "spring-boot4"
     if module == "java-tips":
         return "java"
     if module.startswith("java-") or module.startswith("java/") or "junit5" in module:
@@ -107,11 +113,13 @@ def tweet_category(tweet: dict) -> str:
 CATEGORY_ROOTS = {
     "java": JAVA_ROOT,
     "spring-boot": SPRING_BOOT_ROOT,
+    "spring-boot4": SPRING_BOOT4_ROOT,
 }
 
 CATEGORY_LABELS = {
     "java": "Java X Posts",
     "spring-boot": "Spring Boot X Posts",
+    "spring-boot4": "Spring Boot 4 X Posts",
 }
 
 
@@ -129,15 +137,17 @@ def configure_output_root(category: str) -> Path:
     SOURCES_DIR = root / "sources"
     INDEX_HTML = root / "index.html"
 
-    other = "spring-boot" if category == "java" else "java"
-    other_label = CATEGORY_LABELS[other]
-    other_href = f"../{CATEGORY_ROOTS[other].name}/index.html"
+    sibling_links = " · ".join(
+        f'<a href="../{CATEGORY_ROOTS[other].name}/index.html">{CATEGORY_LABELS[other]}</a>'
+        for other in CATEGORY_ORDER
+        if other != category
+    )
     INDEX_BANNER_TITLE = CATEGORY_LABELS[category]
     INDEX_BANNER_SUBTITLE = (
         'Every tweet: <a href="https://app.diagrams.net/">diagrams.net</a> diagram + '
         f'<a href="https://codepen.io/">CodePen</a> pen. '
         f'<a href="../index.html">All categories</a> · '
-        f'<a href="{other_href}">{other_label}</a>'
+        f"{sibling_links}"
     )
     INDEX_CROSS_LINKS = ""
     return root
@@ -322,7 +332,7 @@ def image_source(tweet: dict) -> str:
 
     if "error" in module and "handling" in module:
         return EXPANDED_SNIPPETS["exception_handler"]
-    if tweet["id"] == 6:
+    if tweet["id"] == 6 and "error" in module:
         return EXPANDED_SNIPPETS["error_response"]
 
     return "\n".join(f"// {line}" if line.strip() else "//" for line in body.split("\n"))
@@ -1013,8 +1023,8 @@ def write_x_text_index(tweets: list[dict]) -> Path:
     return path
 
 
-def build_landing_index(java_count: int, spring_count: int) -> str:
-    total = java_count + spring_count
+def build_landing_index(java_count: int, spring_count: int, spring4_count: int) -> str:
+    total = java_count + spring_count + spring4_count
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1037,6 +1047,10 @@ def build_landing_index(java_count: int, spring_count: int) -> str:
 <a href="spring-boot-posts/index.html">Spring Boot posts</a> — {spring_count} tweets
 🚀 REST APIs, Spring Data, testing, microservices, Spring Cloud
 <a href="spring-boot-posts/x-text/index.html">Copy all Spring Boot tweets for X</a>
+
+<a href="spring-boot4-posts/index.html">Spring Boot 4 posts</a> — {spring4_count} tweets
+🚀 Boot 4 / Framework 7: HttpExchange, API versioning, Jackson 3, modular starters
+<a href="spring-boot4-posts/x-text/index.html">Copy all Spring Boot 4 tweets for X</a>
 
 Every tweet has a <strong>Copy for X</strong> button and a plain <code>.txt</code> file with paragraph breaks preserved.</div>
     <p class="links">
@@ -1061,12 +1075,37 @@ def migrate_legacy_png(tweet_id: int) -> None:
         TOOLS_ROOT / "png",
         X_POSTS_ROOT / "java-posts" / "png",
         X_POSTS_ROOT / "spring-boot-posts" / "png",
+        X_POSTS_ROOT / "spring-boot4-posts" / "png",
+        SPRING_BOOT_ROOT / "png",
+        SPRING_BOOT4_ROOT / "png",
     ):
         legacy = legacy_dir / stem
         if legacy.is_file():
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(legacy, target)
             return
+
+
+def prune_stale_tweet_assets(tweets: list[dict]) -> None:
+    """Remove per-tweet files whose ids are no longer in this category."""
+    keep = {int(t["id"]) for t in tweets}
+    patterns = (
+        (SOURCES_DIR, "tweet-*.java"),
+        (CODEPEN_DIR, "tweet-*.html"),
+        (DRAWIO_DIR, "tweet-*.drawio"),
+        (PNG_DIR, "tweet-*-diagram.png"),
+        (PNG_DIR, "tweet-*-code.png"),
+        (ROOT / "x-text", "tweet-*.txt"),
+    )
+    for folder, pattern in patterns:
+        if not folder.is_dir():
+            continue
+        for path in folder.glob(pattern):
+            match = re.search(r"tweet-(\d+)", path.name)
+            if not match:
+                continue
+            if int(match.group(1)) not in keep:
+                path.unlink()
 
 
 def generate_category_assets(tweets: list[dict], category: str, skip_png: bool) -> list[Path]:
@@ -1107,10 +1146,16 @@ def generate_category_assets(tweets: list[dict], category: str, skip_png: bool) 
         if stale_code_png.exists():
             stale_code_png.unlink()
 
+    prune_stale_tweet_assets(tweets)
     (DRAWIO_DIR / "all-tweets.drawio").write_text(build_combined_drawio(tweets), encoding="utf-8")
     pages = write_index_pages(tweets)
     x_index = write_x_text_index(tweets)
 
+    siblings = " · ".join(
+        f"[`../{CATEGORY_ROOTS[other].name}/index.html`](../{CATEGORY_ROOTS[other].name}/index.html)"
+        for other in CATEGORY_ORDER
+        if other != category
+    )
     readme = f"""# {CATEGORY_LABELS[category]}
 
 {len(tweets)} posts from the codingstrain tweet archive.
@@ -1121,7 +1166,7 @@ Open [`index.html`](index.html) — {INDEX_PAGE_SIZE} tweets per page.
 
 **Copy for X:** [`x-text/index.html`](x-text/index.html) — all {len(tweets)} tweets with copy buttons and `.txt` downloads.
 
-Sibling category: [`../{"spring-boot-posts" if category == "java" else "java-posts"}/index.html`](../{"spring-boot-posts" if category == "java" else "java-posts"}/index.html)
+Sibling categories: {siblings}
 
 ## Files
 
@@ -1177,23 +1222,28 @@ def main() -> None:
         encoding="utf-8",
     )
 
-    by_category: dict[str, list[dict]] = {"java": [], "spring-boot": []}
+    by_category: dict[str, list[dict]] = {name: [] for name in CATEGORY_ORDER}
     for tweet in tweets:
         by_category[tweet_category(tweet)].append(tweet)
 
     all_pages: dict[str, list[Path]] = {}
-    for category in ("java", "spring-boot"):
+    for category in CATEGORY_ORDER:
         pages = generate_category_assets(by_category[category], category, args.skip_png)
         all_pages[category] = pages
         print(f"Generated {len(by_category[category])} {category} tweets")
         print(f"  root → {CATEGORY_ROOTS[category]}")
         print(f"  preview → {len(pages)} pages, start at {pages[0]}")
 
-    landing = build_landing_index(len(by_category["java"]), len(by_category["spring-boot"]))
+    landing = build_landing_index(
+        len(by_category["java"]),
+        len(by_category["spring-boot"]),
+        len(by_category["spring-boot4"]),
+    )
     (TOOLS_ROOT / "index.html").write_text(landing, encoding="utf-8")
     (X_POSTS_ROOT / "index.html").write_text(
         landing.replace('href="java-posts/', 'href="generated-x-posts/java-posts/')
         .replace('href="spring-boot-posts/', 'href="generated-x-posts/spring-boot-posts/')
+        .replace('href="spring-boot4-posts/', 'href="generated-x-posts/spring-boot4-posts/')
         .replace('href="tweets.json"', 'href="generated-x-posts/tweets.json"')
         .replace(
             "<code>python generate_assets.py --skip-png</code>",
@@ -1214,6 +1264,7 @@ Shared tooling and master `tweets.json` for **{len(tweets)}** codingstrain tweet
 |--------|-------|
 | [`java-posts/`](java-posts/) | {len(by_category["java"])} Java tweets |
 | [`spring-boot-posts/`](spring-boot-posts/) | {len(by_category["spring-boot"])} Spring Boot tweets |
+| [`spring-boot4-posts/`](spring-boot4-posts/) | {len(by_category["spring-boot4"])} Spring Boot 4 tweets |
 
 Open [`index.html`](index.html) to pick a category.
 
@@ -1228,7 +1279,7 @@ python generate_assets.py              # also exports diagram PNGs (slow)
 
 | File | Role |
 |------|------|
-| `generate_assets.py` | Build both category folders from `tweets.json` |
+| `generate_assets.py` | Build all category folders from `tweets.json` |
 | `codepen_builder.py` | CodePen Carbon embeds |
 | `diagram_templates.py` | diagrams.net templates |
 | `drawio_builder.py` | Draw.io XML helpers |

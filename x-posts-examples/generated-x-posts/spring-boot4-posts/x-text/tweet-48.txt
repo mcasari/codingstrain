@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: Session Hazelcast/MongoDB starters removed.
+
+✅ Ownership moved to Hazelcast / MongoDB teams
+
+✅ Use their Spring Session modules directly
+
+✅ Redis + JDBC session starters remain in Boot
+
+#SpringBoot4 #Session

@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: MongoDB health no longer needs Spring Data.
+
+✅ Indicators live in spring-boot-mongodb
+
+✅ Works with the MongoDB driver alone
+
+✅ Use spring-boot-starter-mongodb when you need health
+
+#SpringBoot4 #MongoDB

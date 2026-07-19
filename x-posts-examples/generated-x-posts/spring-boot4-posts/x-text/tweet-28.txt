@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: SSL health shows expiringChains.
+
+✅ No more WILL_EXPIRE_SOON status value
+
+✅ Expiring certs stay VALID + listed in details
+
+✅ Tune management.health.ssl.certificate-validity-warning-threshold
+
+#SpringBoot4 #SSL

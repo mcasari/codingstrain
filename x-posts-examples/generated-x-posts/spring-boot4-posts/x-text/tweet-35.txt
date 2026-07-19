@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: AWS ECS is a recognized CloudPlatform.
+
+✅ Detects Elastic Container Service runtime
+
+✅ Aligns cloud property / actuator behavior
+
+✅ Same idea as k8s / Cloud Foundry detection
+
+#SpringBoot4 #AWS

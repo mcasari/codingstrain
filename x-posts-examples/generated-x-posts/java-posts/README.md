@@ -8,7 +8,7 @@ Open [`index.html`](index.html) — 20 tweets per page.
 
 **Copy for X:** [`x-text/index.html`](x-text/index.html) — all 136 tweets with copy buttons and `.txt` downloads.
 
-Sibling category: [`../spring-boot-posts/index.html`](../spring-boot-posts/index.html)
+Sibling categories: [`../spring-boot-posts/index.html`](../spring-boot-posts/index.html) · [`../spring-boot4-posts/index.html`](../spring-boot4-posts/index.html)
 
 ## Files
 

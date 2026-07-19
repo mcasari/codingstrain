@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: Redis observability uses the Observation API.
+
+✅ Metrics and spans from Redis commands
+
+✅ Replaces older latency-recorder-only setup
+
+✅ Pair with the OpenTelemetry starter
+
+#SpringBoot4 #Redis

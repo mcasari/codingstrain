@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: JDK HttpClient uses virtual threads when enabled.
+
+✅ Set spring.threads.virtual.enabled=true
+
+✅ Auto-configured HTTP clients opt in
+
+✅ Great for high-concurrency blocking I/O
+
+#SpringBoot4 #VirtualThreads

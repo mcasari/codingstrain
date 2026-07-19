@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: Fully executable uber-jar launch scripts are gone.
+
+✅ java -jar app.jar is the supported path
+
+✅ Unix init-script packaging removed
+
+✅ Use buildpacks, systemd, or Gradle application plugin
+
+#SpringBoot4 #Packaging

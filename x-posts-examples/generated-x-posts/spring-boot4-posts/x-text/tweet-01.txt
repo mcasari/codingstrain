@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: HTTP clients via @HttpExchange interfaces.
+
+✅ Annotate an interface — Boot builds the client
+
+✅ @GetExchange / @PostExchange beat RestTemplate glue
+
+✅ Tune timeouts/SSL with spring.http.clients.*
+
+#SpringBoot4 #HttpExchange

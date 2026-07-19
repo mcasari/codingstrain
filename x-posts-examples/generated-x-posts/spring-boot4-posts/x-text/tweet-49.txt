@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: Spock integration removed (Groovy 5).
+
+✅ Spock isn’t ready for Groovy 5 yet
+
+✅ Prefer JUnit 5 + AssertJ for Boot 4 tests
+
+✅ Keep Spock suites on Boot 3.5 until Spock catches up
+
+#SpringBoot4 #Testing

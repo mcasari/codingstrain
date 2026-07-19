@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: Test starters follow spring-boot-starter-*-test.
+
+✅ Each tech has a matching test starter
+
+✅ They pull spring-boot-starter-test transitively
+
+✅ Example: Security tests need …-security-test
+
+#SpringBoot4 #Testing

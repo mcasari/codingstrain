@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: @ServiceConnection + MongoDB Atlas Local.
+
+✅ Testcontainers MongoDBAtlasLocalContainer supported
+
+✅ No hardcoded localhost ports in tests
+
+✅ Boot wires connection details automatically
+
+#SpringBoot4 #Testcontainers

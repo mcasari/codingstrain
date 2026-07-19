@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: Dedicated RestClient starter.
+
+✅ spring-boot-starter-restclient for imperative HTTP
+
+✅ WebClient → spring-boot-starter-webclient
+
+✅ Unified spring.http.clients.* settings
+
+#SpringBoot4 #RestClient

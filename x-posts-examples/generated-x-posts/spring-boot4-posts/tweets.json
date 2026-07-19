@@ -1,0 +1,503 @@
+[
+  {
+    "id": 1,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: HTTP clients via `@HttpExchange` interfaces.\n\n✅ Annotate an interface — Boot builds the client\n\n✅ `@GetExchange` / `@PostExchange` beat RestTemplate glue\n\n✅ Tune timeouts/SSL with `spring.http.clients.*`\n\n#SpringBoot4 #HttpExchange",
+    "code": "@HttpExchange(url = \"https://api.example.com\")\npublic interface UserClient {\n\n    @GetExchange(\"/users/{id}\")\n    User findById(@PathVariable Long id);\n\n    @PostExchange(\"/users\")\n    User create(@RequestBody User user);\n}\n\n// Inject and call like any Spring bean\n@Service\npublic class UserService {\n    private final UserClient users;\n\n    public UserService(UserClient users) {\n        this.users = users;\n    }\n\n    public User get(Long id) {\n        return users.findById(id);\n    }\n}",
+    "tags": "#SpringBoot4 #HttpExchange",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "codepen_columns": 2,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 2,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: Native API versioning for MVC and WebFlux.\n\n✅ Configure with `spring.mvc.apiversion.*`\n\n✅ Version by header, path, or media type\n\n✅ Plug in `ApiVersionResolver` for custom rules\n\n#SpringBoot4 #ApiVersioning",
+    "code": "# application.yml\nspring:\n  mvc:\n    apiversion:\n      required: true\n      default: \"1.0\"\n      use:\n        header: X-API-Version\n\n@RestController\n@RequestMapping(\"/orders\")\npublic class OrderController {\n\n    @GetMapping(version = \"1.0\")\n    public OrderV1 getV1(@PathVariable Long id) {\n        return orderService.findV1(id);\n    }\n\n    @GetMapping(version = \"2.0\")\n    public OrderV2 getV2(@PathVariable Long id) {\n        return orderService.findV2(id);\n    }\n}",
+    "tags": "#SpringBoot4 #ApiVersioning",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 3,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: The codebase is modular — pick focused starters.\n\n✅ Smaller jars instead of one giant Boot core\n\n✅ Prefer `spring-boot-starter-*` for each tech\n\n✅ Missing starter = missing auto-config (easy to miss)\n\n#SpringBoot4 #Modular",
+    "code": "// ❌ Boot 3 habit: only the library, hope auto-config appears\n// <dependency>org.flywaydb:flyway-core</dependency>\n\n// ✅ Boot 4: use the dedicated starter\n// <dependency>\n//   org.springframework.boot:spring-boot-starter-flyway\n// </dependency>\n\n// Same idea for Liquibase, MongoDB, RestClient, WebMVC…\n// spring-boot-starter-liquibase\n// spring-boot-starter-mongodb\n// spring-boot-starter-restclient\n// spring-boot-starter-webmvc",
+    "tags": "#SpringBoot4 #Modular",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 4,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: `spring-boot-starter-web` → `spring-boot-starter-webmvc`.\n\n✅ Name matches the stack (MVC vs WebFlux)\n\n✅ Pair with `spring-boot-starter-webmvc-test`\n\n✅ Update BOM / parent to 4.x first\n\n#SpringBoot4 #WebMVC",
+    "code": "<!-- ❌ Spring Boot 3 -->\n<dependency>\n  <groupId>org.springframework.boot</groupId>\n  <artifactId>spring-boot-starter-web</artifactId>\n</dependency>\n\n<!-- ✅ Spring Boot 4 -->\n<dependency>\n  <groupId>org.springframework.boot</groupId>\n  <artifactId>spring-boot-starter-webmvc</artifactId>\n</dependency>\n\n<!-- tests -->\n<dependency>\n  <groupId>org.springframework.boot</groupId>\n  <artifactId>spring-boot-starter-webmvc-test</artifactId>\n  <scope>test</scope>\n</dependency>",
+    "tags": "#SpringBoot4 #WebMVC",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 5,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: Jackson 3 is the default JSON library.\n\n✅ Packages move: `com.fasterxml` → `tools.jackson`\n\n✅ Prefer `JsonMapper` over a plain `ObjectMapper` bean\n\n✅ Temporary escape hatch: `spring-boot-jackson2`\n\n#SpringBoot4 #Jackson3",
+    "code": "// ✅ Boot 4 auto-configures JsonMapper (Jackson 3)\n@Bean\nJsonMapperBuilderCustomizer pretty() {\n    return builder -> builder.enable(SerializationFeature.INDENT_OUTPUT);\n}\n\n// Need Jackson 2 defaults while migrating?\n# application.yml\nspring:\n  jackson:\n    use-jackson2-defaults: true\n\n// Last resort (deprecated): add spring-boot-jackson2\n// Prefer migrating annotations/imports to tools.jackson.*",
+    "tags": "#SpringBoot4 #Jackson3",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 6,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: `@MockBean` is gone — use `@MockitoBean`.\n\n✅ Field mocks: `@MockitoBean` / `@MockitoSpyBean`\n\n✅ Not for `@Configuration` classes anymore\n\n✅ Prefer `@Import` test configs for shared mocks\n\n#SpringBoot4 #Testing",
+    "code": "@SpringBootTest\nclass OrderServiceTest {\n\n    // ❌ Removed in Boot 4\n    // @MockBean OrderRepository repo;\n\n    // ✅ Spring Framework 7 / Boot 4\n    @MockitoBean\n    OrderRepository repo;\n\n    @Autowired\n    OrderService service;\n\n    @Test\n    void findsOrder() {\n        when(repo.findById(1L)).thenReturn(Optional.of(new Order(1L)));\n        assertThat(service.get(1L).id()).isEqualTo(1L);\n    }\n}",
+    "tags": "#SpringBoot4 #Testing",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 7,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: Prefer `RestTestClient` over `TestRestTemplate`.\n\n✅ Fluent API aligned with `RestClient`\n\n✅ Works with MockMvc or a real port\n\n✅ Add `@AutoConfigureRestTestClient` when needed\n\n#SpringBoot4 #RestTestClient",
+    "code": "@SpringBootTest(webEnvironment = RANDOM_PORT)\n@AutoConfigureRestTestClient\nclass UserApiIT {\n\n    @Autowired\n    RestTestClient client;\n\n    @Test\n    void getUser() {\n        client.get()\n            .uri(\"/users/{id}\", 1)\n            .exchange()\n            .expectStatus().isOk()\n            .expectBody()\n            .jsonPath(\"$.email\").isEqualTo(\"a@example.com\");\n    }\n}",
+    "tags": "#SpringBoot4 #RestTestClient",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 8,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: New `spring-boot-starter-opentelemetry`.\n\n✅ OTLP metrics + traces in one starter\n\n✅ Auto-configures the OpenTelemetry SDK\n\n✅ Drop Jaeger/Zipkin-only setup for OTLP collectors\n\n#SpringBoot4 #OpenTelemetry",
+    "code": "<!-- pom.xml -->\n<dependency>\n  <groupId>org.springframework.boot</groupId>\n  <artifactId>spring-boot-starter-opentelemetry</artifactId>\n</dependency>\n\n# application.yml\nmanagement:\n  otlp:\n    tracing:\n      endpoint: http://localhost:4318/v1/traces\n    metrics:\n      export:\n        url: http://localhost:4318/v1/metrics\n  tracing:\n    sampling:\n      probability: 1.0",
+    "tags": "#SpringBoot4 #OpenTelemetry",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 9,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: Portfolio-wide JSpecify null-safety.\n\n✅ Clearer `@Nullable` / `@NonNull` contracts\n\n✅ Better static analysis in IDEs\n\n✅ Treat nullability warnings as real API signals\n\n#SpringBoot4 #JSpecify",
+    "code": "import org.jspecify.annotations.Nullable;\nimport org.jspecify.annotations.NonNull;\n\npublic interface UserRepository {\n\n    @NonNull\n    Optional<User> findById(@NonNull Long id);\n\n    // Explicit: may return null if cache miss + DB down\n    @Nullable\n    User findCached(@NonNull Long id);\n}\n\n// Call sites: IDE / NullAway can flag unsafe unwraps\nUser user = repo.findById(id).orElseThrow();\nString email = Objects.requireNonNull(user.email());",
+    "tags": "#SpringBoot4 #JSpecify",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 10,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: Java 17 minimum, Java 25 supported.\n\n✅ Stay on 17 if you must — migration still works\n\n✅ New apps: prefer a current LTS (21+)\n\n✅ GraalVM native-image needs 25+\n\n#SpringBoot4 #Java",
+    "code": "<!-- pom.xml -->\n<properties>\n  <java.version>21</java.version>\n  <spring-boot.version>4.0.7</spring-boot.version>\n</properties>\n\n<parent>\n  <groupId>org.springframework.boot</groupId>\n  <artifactId>spring-boot-starter-parent</artifactId>\n  <version>4.0.7</version>\n</parent>\n\n// Runtime check\nSystem.out.println(Runtime.version()); // 17 … 25 OK",
+    "tags": "#SpringBoot4 #Java",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 11,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: Undertow support is removed.\n\n✅ Servlet 6.1 baseline — Undertow isn’t there yet\n\n✅ Stick with Tomcat or Jetty starters\n\n✅ Don’t deploy Boot 4 to old servlet containers\n\n#SpringBoot4 #Servlet",
+    "code": "// ❌ No longer available\n// spring-boot-starter-undertow\n\n// ✅ Embedded servers in Boot 4\n// spring-boot-starter-tomcat   (default with webmvc)\n// spring-boot-starter-jetty\n// spring-boot-starter-reactor-netty  (WebFlux)\n\n// Exclude Tomcat and bring Jetty:\n// <dependency>\n//   spring-boot-starter-webmvc\n//   (exclude spring-boot-starter-tomcat)\n// </dependency>\n// <dependency>spring-boot-starter-jetty</dependency>",
+    "tags": "#SpringBoot4 #Servlet",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 12,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: Add `spring-boot-properties-migrator` while upgrading.\n\n✅ Prints renamed/removed property diagnostics\n\n✅ Temporarily remaps old keys at runtime\n\n✅ Remove it once `application.yml` is clean\n\n#SpringBoot4 #Migration",
+    "code": "<!-- temporary — runtime scope -->\n<dependency>\n  <groupId>org.springframework.boot</groupId>\n  <artifactId>spring-boot-properties-migrator</artifactId>\n  <scope>runtime</scope>\n</dependency>\n\n// Startup log will flag things like:\n// management.tracing.enabled → management.tracing.export.enabled\n// spring.dao.exceptiontranslation.enabled\n//   → spring.persistence.exceptiontranslation.enabled\n\n// When quiet: delete the dependency.",
+    "tags": "#SpringBoot4 #Migration",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 13,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: Tracing property rename to watch.\n\n✅ `management.tracing.enabled` is gone\n\n✅ Use `management.tracing.export.enabled`\n\n✅ `@ConditionalOnEnabledTracing` → `…TracingExport`\n\n#SpringBoot4 #Observability",
+    "code": "# ❌ Boot 3\nmanagement:\n  tracing:\n    enabled: true\n\n# ✅ Boot 4\nmanagement:\n  tracing:\n    export:\n      enabled: true\n    sampling:\n      probability: 0.1\n\n// Custom auto-config:\n// @ConditionalOnEnabledTracingExport\n@Configuration(proxyBeanMethods = false)\nclass MyTracingConfig { }",
+    "tags": "#SpringBoot4 #Observability",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 14,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: New `JmsClient` alongside `JmsTemplate`.\n\n✅ Fluent, modern JMS API auto-configured\n\n✅ `JmsTemplate` still works unchanged\n\n✅ Prefer `JmsClient` for new messaging code\n\n#SpringBoot4 #JMS",
+    "code": "@Service\npublic class ShippingNotifier {\n\n    private final JmsClient jms;\n\n    public ShippingNotifier(JmsClient jms) {\n        this.jms = jms;\n    }\n\n    public void shipped(Order order) {\n        jms.destination(\"shipping.events\")\n           .send(order);\n    }\n\n    public Order receive() {\n        return jms.destination(\"shipping.events\")\n                  .receive(Order.class);\n    }\n}",
+    "tags": "#SpringBoot4 #JMS",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 15,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: Multiple `TaskDecorator` beans are supported.\n\n✅ Boot wraps them in a `CompositeTaskDecorator`\n\n✅ Order with `@Order` / `Ordered`\n\n✅ Great for MDC + security context propagation\n\n#SpringBoot4 #Async",
+    "code": "@Component\n@Order(1)\nclass MdcTaskDecorator implements TaskDecorator {\n    @Override\n    public Runnable decorate(Runnable runnable) {\n        Map<String, String> context = MDC.getCopyOfContextMap();\n        return () -> {\n            if (context != null) MDC.setContextMap(context);\n            try { runnable.run(); }\n            finally { MDC.clear(); }\n        };\n    }\n}\n\n@Component\n@Order(2)\nclass SecurityTaskDecorator implements TaskDecorator {\n    @Override\n    public Runnable decorate(Runnable runnable) {\n        var auth = SecurityContextHolder.getContext();\n        return () -> {\n            SecurityContextHolder.setContext(auth);\n            try { runnable.run(); }\n            finally { SecurityContextHolder.clearContext(); }\n        };\n    }\n}",
+    "tags": "#SpringBoot4 #Async",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 16,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: `@ConfigurationPropertiesSource` for external types.\n\n✅ Metadata for types living in another module\n\n✅ Keep annotation processor on the classpath\n\n✅ IDE completion works across module boundaries\n\n#SpringBoot4 #Config",
+    "code": "// In a shared library module:\n@ConfigurationPropertiesSource\npublic record RetrySettings(int maxAttempts, Duration backoff) {}\n\n// In the app module:\n@ConfigurationProperties(prefix = \"app.http\")\npublic record HttpClientProperties(\n    String baseUrl,\n    RetrySettings retry  // sourced from the other module\n) {}\n\n# application.yml\napp:\n  http:\n    base-url: https://api.example.com\n    retry:\n      max-attempts: 3\n      backoff: 200ms",
+    "tags": "#SpringBoot4 #Config",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 17,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: MongoDB health no longer needs Spring Data.\n\n✅ Indicators live in `spring-boot-mongodb`\n\n✅ Works with the MongoDB driver alone\n\n✅ Use `spring-boot-starter-mongodb` when you need health\n\n#SpringBoot4 #MongoDB",
+    "code": "<!-- Driver-only service still gets /actuator/health -->\n<dependency>\n  <groupId>org.springframework.boot</groupId>\n  <artifactId>spring-boot-starter-mongodb</artifactId>\n</dependency>\n<dependency>\n  <groupId>org.springframework.boot</groupId>\n  <artifactId>spring-boot-starter-actuator</artifactId>\n</dependency>\n\n# application.yml\nspring:\n  mongodb:\n    uri: mongodb://localhost:27017/orders\n\nmanagement:\n  endpoint:\n    health:\n      show-details: always",
+    "tags": "#SpringBoot4 #MongoDB",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 18,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: Redis static master/replica (Lettuce).\n\n✅ Set `spring.data.redis.masterreplica.nodes`\n\n✅ Reads can go to replicas\n\n✅ Lettuce-only — not Jedis\n\n#SpringBoot4 #Redis",
+    "code": "# application.yml\nspring:\n  data:\n    redis:\n      masterreplica:\n        nodes:\n          - redis://master:6379\n          - redis://replica-1:6379\n          - redis://replica-2:6379\n\n// Use RedisTemplate / StringRedisTemplate as usual\n@Bean\nStringRedisTemplate redis(RedisConnectionFactory factory) {\n    return new StringRedisTemplate(factory);\n}",
+    "tags": "#SpringBoot4 #Redis",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 19,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: Redis observability uses the Observation API.\n\n✅ Metrics and spans from Redis commands\n\n✅ Replaces older latency-recorder-only setup\n\n✅ Pair with the OpenTelemetry starter\n\n#SpringBoot4 #Redis",
+    "code": "<dependency>\n  <groupId>org.springframework.boot</groupId>\n  <artifactId>spring-boot-starter-data-redis</artifactId>\n</dependency>\n<dependency>\n  <groupId>org.springframework.boot</groupId>\n  <artifactId>spring-boot-starter-opentelemetry</artifactId>\n</dependency>\n\n# Traces will include Redis command spans automatically\nmanagement:\n  tracing:\n    sampling:\n      probability: 1.0",
+    "tags": "#SpringBoot4 #Redis",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 20,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: Kotlin Serialization gets a first-class starter.\n\n✅ `spring-boot-starter-kotlinx-serialization-json`\n\n✅ Contributes a `Json` bean + HTTP converter\n\n✅ Configure via `spring.kotlinx.serialization.json.*`\n\n#SpringBoot4 #Kotlin",
+    "code": "// build.gradle.kts\ndependencies {\n  implementation(\"org.springframework.boot:spring-boot-starter-kotlinx-serialization-json\")\n}\n\n@Serializable\ndata class Book(val id: Long, val title: String)\n\n# application.yml\nspring:\n  kotlinx:\n    serialization:\n      json:\n        pretty-print: true\n        ignore-unknown-keys: true\n\n// Json HTTP message converter is registered ahead of fallbacks",
+    "tags": "#SpringBoot4 #Kotlin",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 21,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: Dedicated RestClient starter.\n\n✅ `spring-boot-starter-restclient` for imperative HTTP\n\n✅ WebClient → `spring-boot-starter-webclient`\n\n✅ Unified `spring.http.clients.*` settings\n\n#SpringBoot4 #RestClient",
+    "code": "<dependency>\n  <groupId>org.springframework.boot</groupId>\n  <artifactId>spring-boot-starter-restclient</artifactId>\n</dependency>\n\n@Bean\nRestClient catalogClient(RestClient.Builder builder) {\n    return builder\n        .baseUrl(\"https://catalog.internal\")\n        .build();\n}\n\n# application.yml\nspring:\n  http:\n    clients:\n      connect-timeout: 2s\n      read-timeout: 5s",
+    "tags": "#SpringBoot4 #RestClient",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 22,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: Flyway/Liquibase now need their starters.\n\n✅ Third-party jar alone is not enough\n\n✅ Use `spring-boot-starter-flyway` / `liquibase`\n\n✅ Matching `*-test` starters for test slices\n\n#SpringBoot4 #Flyway",
+    "code": "<!-- ❌ Boot 3 style -->\n<dependency>\n  <groupId>org.flywaydb</groupId>\n  <artifactId>flyway-core</artifactId>\n</dependency>\n\n<!-- ✅ Boot 4 -->\n<dependency>\n  <groupId>org.springframework.boot</groupId>\n  <artifactId>spring-boot-starter-flyway</artifactId>\n</dependency>\n\n# application.yml\nspring:\n  flyway:\n    locations: classpath:db/migration",
+    "tags": "#SpringBoot4 #Flyway",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 23,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: Test starters follow `spring-boot-starter-*-test`.\n\n✅ Each tech has a matching test starter\n\n✅ They pull `spring-boot-starter-test` transitively\n\n✅ Example: Security tests need `…-security-test`\n\n#SpringBoot4 #Testing",
+    "code": "<!-- ❌ Incomplete in Boot 4 -->\n<dependency>\n  <groupId>org.springframework.security</groupId>\n  <artifactId>spring-security-test</artifactId>\n  <scope>test</scope>\n</dependency>\n\n<!-- ✅ Boot 4 -->\n<dependency>\n  <groupId>org.springframework.boot</groupId>\n  <artifactId>spring-boot-starter-security-test</artifactId>\n  <scope>test</scope>\n</dependency>\n\n@SpringBootTest\n@WithMockUser(roles = \"ADMIN\")\nclass AdminApiTest { }",
+    "tags": "#SpringBoot4 #Testing",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 24,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: Disable console logging with one property.\n\n✅ `logging.console.enabled=false`\n\n✅ Useful in containers that only scrape files/OTLP\n\n✅ Keep file or remote appenders as needed\n\n#SpringBoot4 #Logging",
+    "code": "# application-prod.yml\nlogging:\n  console:\n    enabled: false\n  file:\n    name: /var/log/app/application.log\n  level:\n    root: INFO\n    com.example: DEBUG\n\n# Local profile keeps console on (default true)",
+    "tags": "#SpringBoot4 #Logging",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 25,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: JDK `HttpClient` uses virtual threads when enabled.\n\n✅ Set `spring.threads.virtual.enabled=true`\n\n✅ Auto-configured HTTP clients opt in\n\n✅ Great for high-concurrency blocking I/O\n\n#SpringBoot4 #VirtualThreads",
+    "code": "# application.yml\nspring:\n  threads:\n    virtual:\n      enabled: true\n\n@Bean\nRestClient api(RestClient.Builder builder) {\n    // Boot wires JDK HttpClient with virtual threads\n    return builder.baseUrl(\"https://api.example.com\").build();\n}\n\n@GetMapping(\"/proxy/{id}\")\nUser proxy(@PathVariable Long id) {\n    return api.get().uri(\"/users/{id}\", id)\n              .retrieve().body(User.class);\n}",
+    "tags": "#SpringBoot4 #VirtualThreads",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 26,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: Built on Jakarta EE 11 + Servlet 6.1.\n\n✅ JPA 3.2, Validation 3.1, Servlet 6.1\n\n✅ Hibernate ORM 7.x on the classpath\n\n✅ Verify container / server Servlet level before deploy\n\n#SpringBoot4 #JakartaEE",
+    "code": "// jakarta.* imports stay — but versions moved up\nimport jakarta.persistence.Entity;\nimport jakarta.persistence.Id;\nimport jakarta.validation.constraints.NotBlank;\nimport jakarta.servlet.http.HttpServletRequest;\n\n@Entity\npublic class Product {\n    @Id Long id;\n    @NotBlank String name;\n}\n\n// Boot parent manages:\n// jakarta.servlet-api 6.1, jakarta.persistence 3.2,\n// hibernate 7.x, validation 3.1",
+    "tags": "#SpringBoot4 #JakartaEE",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 27,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: Elasticsearch API key authentication.\n\n✅ New `spring.elasticsearch.api-key` property\n\n✅ Cleaner than embedding basic auth in the URI\n\n✅ Rotate keys without changing client code\n\n#SpringBoot4 #Elasticsearch",
+    "code": "# application.yml\nspring:\n  elasticsearch:\n    uris: https://search.example.com:9200\n    api-key: ${ELASTIC_API_KEY}\n\n// Inject ElasticsearchClient / RestClient as usual\n@Service\npublic class ProductSearch {\n    private final ElasticsearchClient client;\n\n    public ProductSearch(ElasticsearchClient client) {\n        this.client = client;\n    }\n}",
+    "tags": "#SpringBoot4 #Elasticsearch",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 28,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: SSL health shows `expiringChains`.\n\n✅ No more `WILL_EXPIRE_SOON` status value\n\n✅ Expiring certs stay `VALID` + listed in details\n\n✅ Tune `management.health.ssl.certificate-validity-warning-threshold`\n\n#SpringBoot4 #SSL",
+    "code": "# application.yml\nmanagement:\n  health:\n    ssl:\n      certificate-validity-warning-threshold: 14d\n  endpoint:\n    health:\n      show-details: always\n\n// Health JSON shape (simplified):\n// {\n//   \"status\": \"UP\",\n//   \"components\": {\n//     \"ssl\": {\n//       \"status\": \"UP\",\n//       \"details\": { \"expiringChains\": [ … ] }\n//     }\n//   }\n// }",
+    "tags": "#SpringBoot4 #SSL",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 29,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: DevTools live reload is off by default.\n\n✅ Restarts still work; browser live reload is opt-in\n\n✅ Enable only when you need it locally\n\n✅ Avoid surprise websocket ports in shared envs\n\n#SpringBoot4 #DevTools",
+    "code": "<!-- optional local dependency -->\n<dependency>\n  <groupId>org.springframework.boot</groupId>\n  <artifactId>spring-boot-devtools</artifactId>\n  <optional>true</optional>\n</dependency>\n\n# application-local.yml\nspring:\n  devtools:\n    livereload:\n      enabled: true\n    restart:\n      enabled: true",
+    "tags": "#SpringBoot4 #DevTools",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 30,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: `EnvironmentPostProcessor` package moved.\n\n✅ New: `org.springframework.boot.EnvironmentPostProcessor`\n\n✅ Old package kept temporarily (deprecated)\n\n✅ Update `spring.factories` / `AutoConfiguration.imports`\n\n#SpringBoot4 #Config",
+    "code": "// ✅ Boot 4\npackage com.example.env;\n\nimport org.springframework.boot.EnvironmentPostProcessor;\nimport org.springframework.core.env.ConfigurableEnvironment;\n\npublic class RegionEnvironmentPostProcessor\n        implements EnvironmentPostProcessor {\n\n    @Override\n    public void postProcessEnvironment(\n            ConfigurableEnvironment env,\n            SpringApplication application) {\n        // add defaults before context refresh\n    }\n}\n\n# META-INF/spring.factories\norg.springframework.boot.EnvironmentPostProcessor=\\\ncom.example.env.RegionEnvironmentPostProcessor",
+    "tags": "#SpringBoot4 #Config",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 31,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: Exception translation property renamed.\n\n✅ `spring.dao.exceptiontranslation.enabled` →\n\n✅ `spring.persistence.exceptiontranslation.enabled`\n\n✅ Use the properties migrator to catch it\n\n#SpringBoot4 #Migration",
+    "code": "# ❌ Boot 3\nspring:\n  dao:\n    exceptiontranslation:\n      enabled: true\n\n# ✅ Boot 4\nspring:\n  persistence:\n    exceptiontranslation:\n      enabled: true\n\n// Still translates DataAccessException → @Repository proxies",
+    "tags": "#SpringBoot4 #Migration",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 32,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: `@MeterTag` SpEL on `@Timed` / `@Counted`.\n\n✅ Tag metric series from method args\n\n✅ Auto-config wires a SpEL `ValueExpressionResolver`\n\n✅ Keep cardinality under control\n\n#SpringBoot4 #Micrometer",
+    "code": "@Service\npublic class PaymentService {\n\n    @Timed(value = \"payments.process\",\n           extraTags = { \"region\", \"eu\" })\n    @MeterTag(key = \"method\", value = \"#payment.method()\")\n    public Receipt charge(Payment payment) {\n        return gateway.charge(payment);\n    }\n}\n\n// Resulting timer tags include method=CARD|WIRE|…\n// Avoid tagging raw user IDs (high cardinality)",
+    "tags": "#SpringBoot4 #Micrometer",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 33,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: Support for `@ObservationKeyValue`.\n\n✅ Attach key/values to Micrometer Observations\n\n✅ Cleaner than manual `observation.highCardinalityKeyValue`\n\n✅ Works with the OTLP starter export path\n\n#SpringBoot4 #Observability",
+    "code": "@Service\npublic class CheckoutService {\n\n    @Observed(name = \"checkout\")\n    @ObservationKeyValue(key = \"cart.size\",\n                         value = \"#{#cart.lines().size()}\")\n    public Order checkout(Cart cart) {\n        return orderRepo.save(Order.from(cart));\n    }\n}\n\n// Spans/metrics include cart.size=n for the observation",
+    "tags": "#SpringBoot4 #Observability",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 34,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: Gradle 9 is supported.\n\n✅ Build with Gradle 9 or 8.14+\n\n✅ Keep the Boot Gradle plugin in sync with Boot 4\n\n✅ Good moment to refresh toolchain + JVM args\n\n#SpringBoot4 #Gradle",
+    "code": "// settings.gradle.kts\nplugins {\n  id(\"org.gradle.toolchains.foojay-resolver-convention\") version \"0.9.0\"\n}\n\n// build.gradle.kts\nplugins {\n  java\n  id(\"org.springframework.boot\") version \"4.0.7\"\n  id(\"io.spring.dependency-management\") version \"1.1.7\"\n}\n\njava {\n  toolchain {\n    languageVersion.set(JavaLanguageVersion.of(21))\n  }\n}",
+    "tags": "#SpringBoot4 #Gradle",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 35,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: AWS ECS is a recognized `CloudPlatform`.\n\n✅ Detects Elastic Container Service runtime\n\n✅ Aligns cloud property / actuator behavior\n\n✅ Same idea as k8s / Cloud Foundry detection\n\n#SpringBoot4 #AWS",
+    "code": "@Autowired\nCloudPlatform platform;\n\n@GetMapping(\"/runtime\")\nMap<String, Object> runtime() {\n    return Map.of(\n        \"platform\", platform,\n        \"isEcs\", platform == CloudPlatform.ECS,\n        \"isK8s\", platform == CloudPlatform.KUBERNETES\n    );\n}\n\n// Useful for conditional beans:\n@ConditionalOnCloudPlatform(CloudPlatform.ECS)\n@Configuration\nclass EcsTuningConfig { }",
+    "tags": "#SpringBoot4 #AWS",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 36,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: Control MongoDB `BigDecimal` storage.\n\n✅ `spring.data.mongodb.representation.big-decimal`\n\n✅ Avoid silent precision surprises\n\n✅ Pick decimal128 vs string explicitly\n\n#SpringBoot4 #MongoDB",
+    "code": "# application.yml\nspring:\n  data:\n    mongodb:\n      representation:\n        big-decimal: decimal128\n\n@Document\npublic class Invoice {\n    @Id String id;\n    BigDecimal total; // stored as Decimal128\n}\n\n// Alternatives depend on Boot’s enum values —\n// set explicitly so prod/stage match.",
+    "tags": "#SpringBoot4 #MongoDB",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 37,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: `@ServiceConnection` + MongoDB Atlas Local.\n\n✅ Testcontainers `MongoDBAtlasLocalContainer` supported\n\n✅ No hardcoded localhost ports in tests\n\n✅ Boot wires connection details automatically\n\n#SpringBoot4 #Testcontainers",
+    "code": "@SpringBootTest\n@Testcontainers\nclass OrderRepositoryIT {\n\n    @Container\n    @ServiceConnection\n    static MongoDBAtlasLocalContainer mongo =\n        new MongoDBAtlasLocalContainer(\"mongodb/mongodb-atlas-local:8.0.4\");\n\n    @Autowired\n    OrderRepository orders;\n\n    @Test\n    void saves() {\n        orders.save(new Order(\"A-1\"));\n        assertThat(orders.findById(\"A-1\")).isPresent();\n    }\n}",
+    "tags": "#SpringBoot4 #Testcontainers",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 38,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: Prefer `JsonMapper` beans over `ObjectMapper`.\n\n✅ Jackson 3 format-specific mappers\n\n✅ Replacing JSON config? Define `JsonMapper`\n\n✅ XML? Define `XmlMapper`\n\n#SpringBoot4 #Jackson3",
+    "code": "// ❌ Boot 3 habit — may not replace Boot 4 JSON mapper\n@Bean\nObjectMapper objectMapper() {\n    return new ObjectMapper().findAndRegisterModules();\n}\n\n// ✅ Boot 4\n@Bean\nJsonMapper jsonMapper(JsonMapper.Builder builder) {\n    return builder\n        .enable(SerializationFeature.INDENT_OUTPUT)\n        .build();\n}\n\n@Bean\nJsonMapperBuilderCustomizer dates() {\n    return b -> b.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);\n}",
+    "tags": "#SpringBoot4 #Jackson3",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 39,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: Fully executable uber-jar launch scripts are gone.\n\n✅ `java -jar app.jar` is the supported path\n\n✅ Unix init-script packaging removed\n\n✅ Use buildpacks, systemd, or Gradle application plugin\n\n#SpringBoot4 #Packaging",
+    "code": "// ❌ Boot 3 Gradle\n// tasks.named<BootJar>(\"bootJar\") {\n//   launchScript()\n// }\n\n// ✅ Boot 4 — still create a fat jar, run with java\ntasks.named<BootJar>(\"bootJar\") {\n  archiveFileName.set(\"orders-service.jar\")\n}\n\n// Deploy:\n// java -jar orders-service.jar\n// or: ./gradlew bootBuildImage && docker run …",
+    "tags": "#SpringBoot4 #Packaging",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 40,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: Upgrade path tip — go 3.5 → 4.0.\n\n✅ Land on latest 3.5.x first\n\n✅ Kill 3.x deprecations before the jump\n\n✅ Then bump parent/BOM to 4.0.x and fix starters\n\n#SpringBoot4 #Migration",
+    "code": "<!-- Step 1: latest 3.5.x, fix deprecations -->\n<parent>\n  <groupId>org.springframework.boot</groupId>\n  <artifactId>spring-boot-starter-parent</artifactId>\n  <version>3.5.16</version>\n</parent>\n\n<!-- Step 2: Boot 4 -->\n<parent>\n  <groupId>org.springframework.boot</groupId>\n  <artifactId>spring-boot-starter-parent</artifactId>\n  <version>4.0.7</version>\n</parent>\n\n<!-- Step 3: properties-migrator (temporary) + starter renames -->",
+    "tags": "#SpringBoot4 #Migration",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 41,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: HTTP Service Clients + `RestClient` under one roof.\n\n✅ Interfaces for declarative calls\n\n✅ `RestClient` for ad-hoc calls\n\n✅ Shared `spring.http.clients` timeouts/SSL bundles\n\n#SpringBoot4 #HttpExchange",
+    "code": "@HttpExchange(\"https://billing.internal\")\npublic interface BillingClient {\n    @GetExchange(\"/invoices/{id}\")\n    Invoice get(@PathVariable String id);\n}\n\n@Service\npublic class BillingFacade {\n    private final BillingClient declarative;\n    private final RestClient adhoc;\n\n    public BillingFacade(BillingClient declarative, RestClient.Builder b) {\n        this.declarative = declarative;\n        this.adhoc = b.baseUrl(\"https://billing.internal\").build();\n    }\n}",
+    "tags": "#SpringBoot4 #HttpExchange",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 42,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: API versioning beans for advanced control.\n\n✅ Provide `ApiVersionResolver`\n\n✅ Optional `ApiVersionParser`\n\n✅ `ApiVersionDeprecationHandler` for sunsetting\n\n#SpringBoot4 #ApiVersioning",
+    "code": "@Bean\nApiVersionResolver headerVersion() {\n    return request -> request.getHeader(\"X-API-Version\");\n}\n\n@Bean\nApiVersionDeprecationHandler deprecations() {\n    return (version, response) -> {\n        if (\"1.0\".equals(version.toString())) {\n            response.setHeader(\"Deprecation\", \"true\");\n            response.setHeader(\"Sunset\", \"Sat, 01 Aug 2026 00:00:00 GMT\");\n        }\n    };\n}",
+    "tags": "#SpringBoot4 #ApiVersioning",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 43,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: Spring Security 7 comes along for the ride.\n\n✅ Security filter chain DSL stays familiar\n\n✅ Stronger crypto defaults — review customizers\n\n✅ Use `spring-boot-starter-security` + `…-security-test`\n\n#SpringBoot4 #SpringSecurity",
+    "code": "@Configuration\n@EnableWebSecurity\npublic class SecurityConfig {\n\n    @Bean\n    SecurityFilterChain api(HttpSecurity http) throws Exception {\n        return http\n            .csrf(csrf -> csrf.disable())\n            .authorizeHttpRequests(auth -> auth\n                .requestMatchers(\"/actuator/health\").permitAll()\n                .anyRequest().authenticated())\n            .oauth2ResourceServer(oauth -> oauth.jwt(Customizer.withDefaults()))\n            .build();\n    }\n}",
+    "tags": "#SpringBoot4 #SpringSecurity",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 44,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: Tomcat static resource cache size is configurable.\n\n✅ `server.tomcat.resource.cache-max-size`\n\n✅ Tune when serving many static assets\n\n✅ Defaults may surprise large SPAs\n\n#SpringBoot4 #Tomcat",
+    "code": "# application.yml\nserver:\n  tomcat:\n    resource:\n      cache-max-size: 10MB\n  compression:\n    enabled: true\n    mime-types: text/html,text/xml,text/plain,application/json\n\nspring:\n  web:\n    resources:\n      chain:\n        cache: true",
+    "tags": "#SpringBoot4 #Tomcat",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 45,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: Mark development tools in the jar manifest.\n\n✅ `Spring-Boot-Jar-Type: development-tool`\n\n✅ Keeps those deps out of production uber jars\n\n✅ Useful for internal developer utilities\n\n#SpringBoot4 #Packaging",
+    "code": "// build.gradle.kts\ntasks.named<BootJar>(\"bootJar\") {\n  manifest {\n    attributes(\n      \"Spring-Boot-Jar-Type\" to \"development-tool\"\n    )\n  }\n}\n\n// Or MANIFEST.MF:\n// Spring-Boot-Jar-Type: development-tool\n\n// Boot’s packaging excludes these from nested app jars",
+    "tags": "#SpringBoot4 #Packaging",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 46,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: Milestones publish to Maven Central.\n\n✅ No extra `repo.spring.io` for 4.x milestones\n\n✅ Easier CI trials of M/RC builds\n\n✅ Still pin versions explicitly in experiments\n\n#SpringBoot4 #Maven",
+    "code": "<!-- try a milestone without custom repositories -->\n<parent>\n  <groupId>org.springframework.boot</groupId>\n  <artifactId>spring-boot-starter-parent</artifactId>\n  <version>4.1.0-M2</version>\n</parent>\n\n// Gradle: mavenCentral() is enough for Boot 4 milestones\nrepositories {\n  mavenCentral()\n}",
+    "tags": "#SpringBoot4 #Maven",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 47,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: Auto-config classes are no longer public API.\n\n✅ Public members removed from auto-config types\n\n✅ Don’t `@Import` auto-config classes directly\n\n✅ Use starters + `AutoConfiguration.imports` only\n\n#SpringBoot4 #AutoConfig",
+    "code": "// ❌ Fragile — relied on public auto-config types\n// @Import(RedisAutoConfiguration.class)\n\n// ✅ Depend on the starter; let Boot load auto-config\n// spring-boot-starter-data-redis\n\n// Custom auto-config for your library:\n// META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports\ncom.example.acme.AcmeAutoConfiguration\n\n@AutoConfiguration\n@ConditionalOnClass(AcmeClient.class)\npublic class AcmeAutoConfiguration {\n    @Bean\n    AcmeClient acmeClient(AcmeProperties props) {\n        return new AcmeClient(props.baseUrl());\n    }\n}",
+    "tags": "#SpringBoot4 #AutoConfig",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 48,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: Session Hazelcast/MongoDB starters removed.\n\n✅ Ownership moved to Hazelcast / MongoDB teams\n\n✅ Use their Spring Session modules directly\n\n✅ Redis + JDBC session starters remain in Boot\n\n#SpringBoot4 #Session",
+    "code": "// ✅ Still first-class in Boot 4\n// spring-boot-starter-session-data-redis\n// spring-boot-starter-session-jdbc\n\n# application.yml — Redis sessions\nspring:\n  session:\n    store-type: redis\n  data:\n    redis:\n      host: localhost\n\n// For Hazelcast/MongoDB sessions: add the vendor-supported\n// Spring Session module and follow their Boot 4 docs.",
+    "tags": "#SpringBoot4 #Session",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 49,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: Spock integration removed (Groovy 5).\n\n✅ Spock isn’t ready for Groovy 5 yet\n\n✅ Prefer JUnit 5 + AssertJ for Boot 4 tests\n\n✅ Keep Spock suites on Boot 3.5 until Spock catches up\n\n#SpringBoot4 #Testing",
+    "code": "// ✅ Boot 4 default test stack\n@SpringBootTest\nclass PricingServiceTest {\n\n    @Autowired PricingService pricing;\n\n    @Test\n    void discounts() {\n        assertThat(pricing.discount(100, \"VIP\"))\n            .isEqualByComparingTo(\"90.00\");\n    }\n}\n\n// spring-boot-starter-webmvc-test (pulls JUnit 5, AssertJ, Mockito)",
+    "tags": "#SpringBoot4 #Testing",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  },
+  {
+    "id": 50,
+    "module": "spring-boot4-tips",
+    "body": "🚀 Spring Boot 4: Built on Spring Framework 7 — foundations matter.\n\n✅ HTTP Service Clients + API versioning land in Boot\n\n✅ JSpecify null-safety across the portfolio\n\n✅ Plan starter renames + Jackson 3 before you upgrade\n\n#SpringBoot4 #SpringFramework7",
+    "code": "// Mental model for Boot 4 upgrades:\n// 1) Java 17+ (21/25 recommended)\n// 2) spring-boot-starter-web → webmvc\n// 3) Jackson 3 (JsonMapper) / tools.jackson.*\n// 4) @MockBean → @MockitoBean\n// 5) Add tech starters (flyway, restclient, otel, …)\n// 6) Run with spring-boot-properties-migrator\n// 7) Replace TestRestTemplate with RestTestClient\n\n@SpringBootApplication\npublic class Application {\n    public static void main(String[] args) {\n        SpringApplication.run(Application.class, args);\n    }\n}",
+    "tags": "#SpringBoot4 #SpringFramework7",
+    "codepen_style": "carbon",
+    "codepen_large": true,
+    "category": "spring-boot4"
+  }
+]

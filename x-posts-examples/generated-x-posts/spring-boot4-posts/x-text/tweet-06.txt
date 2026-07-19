@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: @MockBean is gone — use @MockitoBean.
+
+✅ Field mocks: @MockitoBean / @MockitoSpyBean
+
+✅ Not for @Configuration classes anymore
+
+✅ Prefer @Import test configs for shared mocks
+
+#SpringBoot4 #Testing

@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: Tomcat static resource cache size is configurable.
+
+✅ server.tomcat.resource.cache-max-size
+
+✅ Tune when serving many static assets
+
+✅ Defaults may surprise large SPAs
+
+#SpringBoot4 #Tomcat

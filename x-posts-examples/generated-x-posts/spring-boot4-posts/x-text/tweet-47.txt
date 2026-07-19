@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: Auto-config classes are no longer public API.
+
+✅ Public members removed from auto-config types
+
+✅ Don’t @Import auto-config classes directly
+
+✅ Use starters + AutoConfiguration.imports only
+
+#SpringBoot4 #AutoConfig

@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: Redis static master/replica (Lettuce).
+
+✅ Set spring.data.redis.masterreplica.nodes
+
+✅ Reads can go to replicas
+
+✅ Lettuce-only — not Jedis
+
+#SpringBoot4 #Redis

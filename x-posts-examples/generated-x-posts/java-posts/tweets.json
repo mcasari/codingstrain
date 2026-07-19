@@ -2,7 +2,7 @@
   {
     "id": 41,
     "module": "java-examples/BuilderDemo",
-    "body": "💡 Use the Builder pattern for objects with many optional fields.\n\n✅ Use the Builder pattern for objects with many optional fields\n\n✅ Runnable sample: `BuilderDemo`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "body": "💡 Use the Builder pattern for objects with many optional fields.\n\n✅ Use the Builder pattern for objects with many optional fields\n\n✅ Runnable sample: `BuilderDemo`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#JavaDev #CleanCode",
     "code": "User user = new User.Builder(\"Mary\", 30)\n    .email(\"mary@example.com\")\n    .address(\"Italy\")\n    .build();",
     "tags": "#JavaDev #CleanCode",
     "codepen_style": "carbon",
@@ -12,7 +12,7 @@
   {
     "id": 42,
     "module": "java-miscellaneous-tips",
-    "body": "💡 LinkedHashMap preserves insertion order.\n\n✅ LinkedHashMap preserves insertion order\n\n✅ Runnable sample: `java-miscellaneous-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "body": "💡 LinkedHashMap preserves insertion order.\n\n✅ LinkedHashMap preserves insertion order\n\n✅ Runnable sample: `java-miscellaneous-tips`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#Java #SoftwareDevelopment",
     "code": "LinkedHashMap<Integer, String> map = new LinkedHashMap<>();\nmap.put(1, \"First\");\nmap.put(2, \"Second\");",
     "tags": "#Java #SoftwareDevelopment",
     "codepen_style": "carbon",
@@ -22,7 +22,7 @@
   {
     "id": 43,
     "module": "java-miscellaneous-tips",
-    "body": "💡 Parsing numbers with commas requires locale awareness.\n\n✅ Parsing numbers with commas requires locale awareness\n\n✅ Runnable sample: `java-miscellaneous-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "body": "💡 Parsing numbers with commas requires locale awareness.\n\n✅ Parsing numbers with commas requires locale awareness\n\n✅ Runnable sample: `java-miscellaneous-tips`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#Java #JavaDev",
     "code": "NumberFormat format = NumberFormat.getInstance(Locale.ITALY);\nNumber number = format.parse(\"123.111,234\");",
     "tags": "#Java #JavaDev",
     "codepen_style": "carbon",
@@ -32,7 +32,7 @@
   {
     "id": 44,
     "module": "java-miscellaneous-tips",
-    "body": "💡 Don't assume . is always the decimal separator.\n\n✅ Don't assume . is always the decimal separator\n\n✅ Runnable sample: `java-miscellaneous-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "body": "💡 Don't assume . is always the decimal separator.\n\n✅ Don't assume . is always the decimal separator\n\n✅ Runnable sample: `java-miscellaneous-tips`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#Java",
     "code": "DecimalFormatSymbols symbols = new DecimalFormatSymbols(Locale.ITALY);\nDecimalFormat df = new DecimalFormat(\"#,###.##\", symbols);",
     "tags": "#Java",
     "codepen_style": "carbon",
@@ -42,7 +42,7 @@
   {
     "id": 45,
     "module": "java-miscellaneous-tips",
-    "body": "💡 Know the difference between shallow and deep clone.\n\n✅ Know the difference between shallow and deep clone\n\n✅ Runnable sample: `java-miscellaneous-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "body": "💡 Know the difference between shallow and deep clone.\n\n✅ Know the difference between shallow and deep clone\n\n✅ Runnable sample: `java-miscellaneous-tips`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#Java #SoftwareEngineering",
     "code": "Main deepClone = (Main) super.clone();\ndeepClone.setDependency((Dependency) this.dependency.clone());",
     "tags": "#Java #SoftwareEngineering",
     "codepen_style": "carbon",
@@ -52,7 +52,7 @@
   {
     "id": 46,
     "module": "java-miscellaneous-tips",
-    "body": "💡 Prefer copy constructors or records over Cloneable for new code.\n\n✅ Prefer copy constructors or records over Cloneable for new code\n\n✅ Runnable sample: `java-miscellaneous-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "body": "💡 Prefer copy constructors or records over Cloneable for new code.\n\n✅ Prefer copy constructors or records over Cloneable for new code\n\n✅ Runnable sample: `java-miscellaneous-tips`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#JavaDev",
     "tags": "#JavaDev",
     "codepen_style": "carbon",
     "codepen_large": true,
@@ -61,7 +61,7 @@
   {
     "id": 47,
     "module": "java-examples/BuilderDemo",
-    "body": "💡 Immutable fields in the Builder reduce bugs in DTOs.\n\n✅ Immutable fields in the Builder reduce bugs in DTOs\n\n✅ Runnable sample: `BuilderDemo`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "body": "💡 Immutable fields in the Builder reduce bugs in DTOs.\n\n✅ Immutable fields in the Builder reduce bugs in DTOs\n\n✅ Runnable sample: `BuilderDemo`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#Java #CleanCode",
     "code": "private final String name;\nprivate final int age;",
     "tags": "#Java #CleanCode",
     "codepen_style": "carbon",
@@ -74,7 +74,7 @@
     "diagram_type": "sealed_classes",
     "codepen_style": "carbon",
     "codepen_large": true,
-    "body": "💡 Java 17 — sealed types close the inheritance graph with `permits`.\n\n✅ Only listed subtypes may extend the sealed class/interface\n\n✅ Each permitted subtype must be `final`, `sealed`, or `non-sealed`\n\n✅ `non-sealed` is the escape hatch — inheritance opens again below that branch",
+    "body": "💡 Java 17 — sealed types close the inheritance graph with `permits`.\n\n✅ Only listed subtypes may extend the sealed class/interface\n\n✅ Each permitted subtype must be `final`, `sealed`, or `non-sealed`\n\n✅ `non-sealed` is the escape hatch — inheritance opens again below that branch\n\n#Java #Java17",
     "code": "// java-17-sealed-classes — closed hierarchy\n\npublic abstract sealed class Shape permits Circle, Rectangle, FancyRectangle {\n    public abstract double area();\n}\n\npublic final class Circle extends Shape { /* leaf — no further subclasses */ }\n\npublic sealed class Rectangle extends Shape permits Square, Oblong { }\n\npublic final class Square extends Rectangle { }\n\npublic non-sealed class FancyRectangle extends Shape { }\n// RoundedRectangle extends FancyRectangle — not in Shape.permits (open branch)",
     "tags": "#Java #Java17",
     "category": "java"
@@ -82,7 +82,7 @@
   {
     "id": 55,
     "module": "java-switch-expressions-demo",
-    "body": "💡 Java 14+ switch expressions — `switch` returns a value, and the compiler makes sure you didn't forget a case.\n\n✅ Old switch: forget `break` and execution falls through to the next case\n\n✅ New `case X -> \"...\"`: one line per case, returns a value, no `break` needed\n\n✅ Add a new enum constant without a matching case? Compile error, not a silent bug at runtime",
+    "body": "💡 Java 14+ switch expressions — `switch` returns a value, and the compiler makes sure you didn't forget a case.\n\n✅ Old switch: forget `break` and execution falls through to the next case\n\n✅ New `case X -> \"...\"`: one line per case, returns a value, no `break` needed\n\n✅ Add a new enum constant without a matching case? Compile error, not a silent bug at runtime\n\n#Java #Java14 #CleanCode",
     "code": "enum Status { NEW, RUNNING, DONE }\n\nStatus status = Status.RUNNING;\n\n// ❌ Old switch — easy to forget break\nString label;\nswitch (status) {\n    case NEW:     label = \"queued\";       break;\n    case RUNNING: label = \"in progress\"; break;\n    case DONE:    label = \"finished\";     break;\n}\n\n// ✅ Switch expression — returns a value, no break needed\nString label = switch (status) {\n    case NEW     -> \"queued\";\n    case RUNNING -> \"in progress\";\n    case DONE    -> \"finished\";\n};\n\n// What happens if you add a FAILED status and skip it in the example above?\n// Won't compile until you handle FAILED (or add default)",
     "tags": "#Java #Java14 #CleanCode",
     "codepen_style": "carbon",
@@ -93,7 +93,7 @@
     "id": 56,
     "module": "java-varhandle-fences-demo",
     "diagram_type": "varhandle",
-    "body": "💡 Share data between threads without `volatile` on every field.\n\n✅ Thread A writes data, thread B reads a flag — B might see the flag change but still read stale data\n\n✅ `volatile` forces every read and write to sync — safe, but heavier than you often need\n\n✅ `setRelease` (publish) + `getAcquire` (subscribe): writer flips the flag when done; reader then sees all prior writes\n\n#Java #Concurrency #JMM",
+    "body": "💡 Share data between threads without `volatile` on every field.\n\n✅ Thread A writes data, thread B reads a flag — B might see the flag change but still read stale data\n\n✅ `volatile` forces every read and write to sync — safe, but heavier than you often need\n\n✅ `setRelease` (publish) + `getAcquire` (subscribe): writer flips the flag when done; reader then sees all prior writes",
     "code": "import java.lang.invoke.MethodHandles;\nimport java.lang.invoke.VarHandle;\n\nclass SharedState {\n    boolean ready;   // plain field — no volatile needed\n    int value;\n}\n\nstatic final VarHandle READY;\nstatic {\n    try {\n        READY = MethodHandles.lookup()\n            .findVarHandle(SharedState.class, \"ready\", boolean.class);\n    } catch (ReflectiveOperationException e) {\n        throw new ExceptionInInitializerError(e);\n    }\n}\n\nSharedState state = new SharedState();\n\n// Writer thread\nstate.value = 42;\nREADY.setRelease(state, true);       // publish: \"I'm done writing\"\n\n// Reader thread\nwhile (!(boolean) READY.getAcquire(state)) {\n    Thread.onSpinWait();             // subscribe: wait for publish\n}\nSystem.out.println(state.value);   // guaranteed 42 — no stale read",
     "tags": "#Java #Concurrency #JMM",
     "codepen_style": "carbon",
@@ -103,7 +103,7 @@
   {
     "id": 57,
     "module": "junit5-extension-api-demo",
-    "body": "💡 JUnit 5's Extension API replaces JUnit 4's `@RunWith` Runner and `@Rule`.\n\n✅ One model: implement lifecycle hooks like `BeforeEachCallback` instead of an exclusive Runner\n\n✅ `ParameterResolver` injects test dependencies — no base-class inheritance needed\n\n✅ Extensions compose: stack several with `@ExtendWith` and they just work together\n\n#Java #JUnit5 #Testing",
+    "body": "💡 JUnit 5's Extension API replaces JUnit 4's `@RunWith` Runner and `@Rule`.\n\n✅ One model: implement lifecycle hooks like `BeforeEachCallback` instead of an exclusive Runner\n\n✅ `ParameterResolver` injects test dependencies — no base-class inheritance needed\n\n✅ Extensions compose: stack several with `@ExtendWith` and they just work together",
     "code": "package com.codingstrain.junit5;\n\nimport org.junit.jupiter.api.Test;\nimport org.junit.jupiter.api.extension.BeforeEachCallback;\nimport org.junit.jupiter.api.extension.ExtendWith;\nimport org.junit.jupiter.api.extension.ExtensionContext;\nimport org.junit.jupiter.api.extension.ParameterContext;\nimport org.junit.jupiter.api.extension.ParameterResolver;\n\n/**\n * JUnit 5 Extension API: one composable model that replaces JUnit 4's\n * {@code @RunWith} Runner (single, exclusive) and {@code @Rule} (inheritance-based).\n */\nclass TimingExtension implements BeforeEachCallback, ParameterResolver {\n\n    private static final ExtensionContext.Namespace NS =\n        ExtensionContext.Namespace.create(TimingExtension.class);\n\n    @Override\n    public void beforeEach(ExtensionContext context) {\n        context.getStore(NS).put(\"start\", System.nanoTime());\n    }\n\n    @Override\n    public boolean supportsParameter(ParameterContext pc, ExtensionContext ec) {\n        return pc.getParameter().getType() == Stopwatch.class;\n    }\n\n    @Override\n    public Object resolveParameter(ParameterContext pc, ExtensionContext ec) {\n        long start = ec.getStore(NS).get(\"start\", long.class);\n        return new Stopwatch(start);\n    }\n}\n\n// No inheritance, no Runner: just declare the extensions you want.\n@ExtendWith(TimingExtension.class)\nclass OrderServiceTest {\n\n    @Test\n    void placesOrder(Stopwatch stopwatch) {   // injected by ParameterResolver\n        // ... exercise the system under test ...\n        System.out.println(\"elapsed = \" + stopwatch.elapsedMillis() + \"ms\");\n    }\n}",
     "tags": "#Java #JUnit5 #Testing",
     "codepen_style": "carbon",
@@ -114,7 +114,7 @@
   {
     "id": 58,
     "module": "java-tips",
-    "body": "💡 Java tip💡: Use StringBuilder instead of String for concatenating strings in loops.\n\n✅ StringBuilder is mutable and optimized for repeated string appends.\n\n✅ Java tip💡: Use StringBuilder instead of String for concatenating strings in loops\n\n✅ ❌ String is immutable, making it inefficient in loops, especially large ones\n\n#Java #CodeTips",
+    "body": "💡 Java tip💡: Use StringBuilder instead of String for concatenating strings in loops.\n\n✅ StringBuilder is mutable and optimized for repeated string appends.\n\n✅ Java tip💡: Use StringBuilder instead of String for concatenating strings in loops\n\n✅ ❌ String is immutable, making it inefficient in loops, especially large ones",
     "tags": "#Java #CodeTips",
     "codepen_style": "carbon",
     "codepen_large": true,
@@ -195,7 +195,7 @@
   {
     "id": 66,
     "module": "java-tips",
-    "body": "💡 Java Tip💡: Starting from Java 14 you can use \"record\" to create short, immutable, data-carrying objects.\n\n✅ They are shorter than ordinary POJOs\n\n✅ They have built-in equals(), hashCode(), toString()\n\n✅ They are immutable by default\n\n#Java #Records",
+    "body": "💡 Java Tip💡: Starting from Java 14 you can use \"record\" to create short, immutable, data-carrying objects.\n\n✅ They are shorter than ordinary POJOs\n\n✅ They have built-in equals(), hashCode(), toString()\n\n✅ They are immutable by default",
     "tags": "#Java #Records",
     "codepen_style": "carbon",
     "codepen_large": true,
@@ -255,7 +255,7 @@
   {
     "id": 72,
     "module": "java-tips",
-    "body": "💡Use EnumSet for enum values in sets. EnumSet, a Set interface implementation, is specialized for enums, offering memory efficiency and speed via bit-vector representation.\n\n✅ Example usage:\n\n✅ EnumSet<Month> months = EnumSet.range(Month.JANUARY, Month.DECEMBER);\n\n✅ System.out.println(months);\n\n#Java #ProgrammingTips",
+    "body": "💡Use EnumSet for enum values in sets. EnumSet, a Set interface implementation, is specialized for enums, offering memory efficiency and speed via bit-vector representation.\n\n✅ Example usage:\n\n✅ EnumSet<Month> months = EnumSet.range(Month.JANUARY, Month.DECEMBER);\n\n✅ System.out.println(months);",
     "tags": "#Java #ProgrammingTips",
     "codepen_style": "carbon",
     "codepen_large": true,
@@ -266,7 +266,7 @@
   {
     "id": 73,
     "module": "java-tips",
-    "body": "💡 Java Tip #20💡: Deep chains like user → address → city are a classic NPE trap. Nested if (x != null) blocks get verbose fast — and it's easy to miss a level.\n\n✅ Optional: findByEmail(email).map(User::getAddress).map(Address::getCity).orElse(\"unknown\")\n\n✅ No Optional in the API? One guard: if (user == null || user.getAddress() == null)\n\n✅ Either beats scattered null checks that hide what may actually be missing\n\n#Java #NullSafety",
+    "body": "💡 Java Tip #20💡: Deep chains like user → address → city are a classic NPE trap. Nested if (x != null) blocks get verbose fast — and it's easy to miss a level.\n\n✅ Optional: findByEmail(email).map(User::getAddress).map(Address::getCity).orElse(\"unknown\")\n\n✅ No Optional in the API? One guard: if (user == null || user.getAddress() == null)\n\n✅ Either beats scattered null checks that hide what may actually be missing",
     "tags": "#Java #NullSafety",
     "codepen_style": "carbon",
     "codepen_large": true,
@@ -318,7 +318,7 @@
   {
     "id": 78,
     "module": "java-tips",
-    "body": "💡 Java 8+ CompletableFuture: chain async steps without blocking the thread on every I/O call.\n\n✅ Chain: supplyAsync → thenApply → thenCompose → thenAccept (fetch user, then orders)\n\n✅ Handle failures with exceptionally — don't let async errors disappear silently\n\n✅ Run independent calls in parallel, merge with thenCombine when both finish\n\n#Java #Concurrency",
+    "body": "💡 Java 8+ CompletableFuture: chain async steps without blocking the thread on every I/O call.\n\n✅ Chain: supplyAsync → thenApply → thenCompose → thenAccept (fetch user, then orders)\n\n✅ Handle failures with exceptionally — don't let async errors disappear silently\n\n✅ Run independent calls in parallel, merge with thenCombine when both finish",
     "tags": "#Java #Concurrency",
     "codepen_style": "carbon",
     "codepen_large": true,
@@ -388,7 +388,7 @@
   {
     "id": 85,
     "module": "java-tips",
-    "body": "💡 Java Tip 💡: When possible, avoid returning mutable internal collections from methods, so that:\n\n✅ Java Tip 💡: When possible, avoid returning mutable internal collections from methods, so that:\n\n✅ 1) You don't expose internal state, improving security\n\n✅ 2) You can change the implementation without breaking other parts\n\n#Java #JavaDev",
+    "body": "💡 Java Tip 💡: When possible, avoid returning mutable internal collections from methods, so that:\n\n✅ Java Tip 💡: When possible, avoid returning mutable internal collections from methods, so that:\n\n✅ 1) You don't expose internal state, improving security\n\n✅ 2) You can change the implementation without breaking other parts",
     "tags": "#Java #JavaDev",
     "codepen_style": "carbon",
     "codepen_large": true,
@@ -490,7 +490,7 @@
   {
     "id": 96,
     "module": "java-tips",
-    "body": "💡 Java Tip 💡: Use helper classes to implement reusable logic, but avoid all-knowing God classes.\n\n✅ Java Tip 💡: Use helper classes to implement reusable logic, but avoid all-knowing God classes\n\n✅ #Java #CodeOrganization\n\n✅ #Java #CleanCode",
+    "body": "💡 Java Tip 💡: Use helper classes to implement reusable logic, but avoid all-knowing God classes.\n\n✅ Java Tip 💡: Use helper classes to implement reusable logic, but avoid all-knowing God classes\n\n✅ #Java #CodeOrganization\n\n✅ #Java #CleanCode\n\n#Java #CodeOrganization #CleanCode",
     "tags": "#Java #CodeOrganization #CleanCode",
     "codepen_style": "carbon",
     "codepen_large": true,
@@ -555,7 +555,7 @@
   {
     "id": 103,
     "module": "java-tips",
-    "body": "💡 Use `Deque` instead of `Stack` for LIFO (last-in, first-out) lists.\n\n✅ `Stack` is a legacy class — it extends `Vector` and synchronizes every operation\n\n✅ `Deque` supports the same `push` / `pop` / `peek` calls — a drop-in replacement\n\n✅ `ArrayDeque` is faster and has been the recommended choice since Java 6",
+    "body": "💡 Use `Deque` instead of `Stack` for LIFO (last-in, first-out) lists.\n\n✅ `Stack` is a legacy class — it extends `Vector` and synchronizes every operation\n\n✅ `Deque` supports the same `push` / `pop` / `peek` calls — a drop-in replacement\n\n✅ `ArrayDeque` is faster and has been the recommended choice since Java 6\n\n#Java #Collections",
     "code": "import java.util.ArrayDeque;\nimport java.util.Deque;\nimport java.util.Stack;\n\n// ❌ Legacy Stack — extends Vector, synchronized on every call\nStack<String> undo = new Stack<>();\nundo.push(\"typed 'hello'\");\nundo.push(\"added space\");\nundo.pop();   // removes \"added space\"\n\n// ✅ Deque as a stack — same API, modern and faster\nDeque<String> undo = new ArrayDeque<>();\nundo.push(\"typed 'hello'\");\nundo.push(\"added space\");\nundo.pop();   // removes \"added space\" — same LIFO behavior",
     "tags": "#Java #Collections",
     "codepen_style": "carbon",
@@ -565,7 +565,7 @@
   {
     "id": 104,
     "module": "java-tips",
-    "body": "💡 Prefer constructor injection over field injection in Spring beans.\n\n✅ Field injection hides required dependencies — you can create the object without them\n\n✅ Constructor injection makes dependencies explicit and lets you use `final` fields\n\n✅ Easier to test: pass mocks directly to the constructor, no Spring context needed\n\n#Java #SpringBoot",
+    "body": "💡 Prefer constructor injection over field injection in Spring beans.\n\n✅ Field injection hides required dependencies — you can create the object without them\n\n✅ Constructor injection makes dependencies explicit and lets you use `final` fields\n\n✅ Easier to test: pass mocks directly to the constructor, no Spring context needed",
     "code": "// ❌ Field injection — dependency hidden, hard to test without Spring\n@RestController\nclass OrderController {\n\n    @Autowired\n    private OrderService orders;\n\n    @GetMapping(\"/orders\")\n    List<Order> list() { return orders.findAll(); }\n}\n\n// ✅ Constructor injection — explicit, final, easy to unit-test\n@RestController\nclass OrderController {\n\n    private final OrderService orders;\n\n    OrderController(OrderService orders) {\n        this.orders = orders;\n    }\n\n    @GetMapping(\"/orders\")\n    List<Order> list() { return orders.findAll(); }\n}",
     "tags": "#Java #SpringBoot",
     "codepen_style": "carbon",
@@ -594,7 +594,7 @@
   {
     "id": 107,
     "module": "java-tips",
-    "body": "💡 Test edge cases — nulls, empty collections, and boundary values are where bugs hide.\n\n✅ Happy-path tests alone won't catch `NullPointerException` on missing input\n\n✅ Empty lists and single-element collections often behave differently than \"normal\" data\n\n✅ Explicit tests for null, empty, and min/max values document expected behavior",
+    "body": "💡 Test edge cases — nulls, empty collections, and boundary values are where bugs hide.\n\n✅ Happy-path tests alone won't catch `NullPointerException` on missing input\n\n✅ Empty lists and single-element collections often behave differently than \"normal\" data\n\n✅ Explicit tests for null, empty, and min/max values document expected behavior\n\n#Java #Testing",
     "code": "import org.junit.jupiter.api.Test;\nimport static org.junit.jupiter.api.Assertions.*;\n\nimport java.util.List;\n\nstatic double average(List<Integer> values) {\n    if (values == null || values.isEmpty())\n        throw new IllegalArgumentException(\"no values\");\n    return values.stream().mapToInt(i -> i).average().orElseThrow();\n}\n\n// ❌ Happy path only — misses null and empty-list bugs\n@Test\nvoid average_typicalList() {\n    assertEquals(2.0, average(List.of(1, 2, 3)));\n}\n\n// ✅ Edge cases — null, empty, and single element\n@Test void average_null_throws() {\n    assertThrows(IllegalArgumentException.class, () -> average(null));\n}\n@Test void average_empty_throws() {\n    assertThrows(IllegalArgumentException.class, () -> average(List.of()));\n}\n@Test void average_oneValue() {\n    assertEquals(42.0, average(List.of(42)));\n}",
     "tags": "#Java #Testing",
     "codepen_style": "carbon",
@@ -604,7 +604,7 @@
   {
     "id": 108,
     "module": "java-tips",
-    "body": "💡 Prefer delegation over inheritance — an \"is-a\" relationship ties you to the superclass forever.\n\n✅ A subclass inherits the parent's entire API — a change upstream can break your code\n\n✅ With delegation, you hold a helper object and forward calls — easy to swap or mock\n\n✅ Rule of thumb: inherit only for true \"is-a\" relationships; otherwise compose",
+    "body": "💡 Prefer delegation over inheritance — an \"is-a\" relationship ties you to the superclass forever.\n\n✅ A subclass inherits the parent's entire API — a change upstream can break your code\n\n✅ With delegation, you hold a helper object and forward calls — easy to swap or mock\n\n✅ Rule of thumb: inherit only for true \"is-a\" relationships; otherwise compose\n\n#Java #OOP",
     "code": "import java.util.ArrayList;\nimport java.util.List;\n\n// ❌ Inheritance — you get ArrayList's full API (add, remove, sort, …)\nclass LoggingList extends ArrayList<String> {\n    @Override\n    public boolean add(String item) {\n        System.out.println(\"add: \" + item);\n        return super.add(item);   // coupled to ArrayList\n    }\n}\n\n// ✅ Delegation — expose only what your class needs\nclass LoggingList {\n    private final List<String> items = new ArrayList<>();\n\n    public boolean add(String item) {\n        System.out.println(\"add: \" + item);\n        return items.add(item);   // swap List impl anytime\n    }\n\n    public List<String> snapshot() {\n        return List.copyOf(items);\n    }\n}",
     "tags": "#Java #OOP",
     "codepen_style": "carbon",
@@ -632,7 +632,7 @@
   {
     "id": 111,
     "module": "java-tips",
-    "body": "💡 1/3 A very trivial example could be:\n\n✅ String helloThere = \"Hello \" + \"there\" + \"!\";\n\n✅ System.out.println(helloThere);\n\n✅ The above line of code is clear and works as intended\n\n#Java #BestPractices",
+    "body": "💡 1/3 A very trivial example could be:\n\n✅ String helloThere = \"Hello \" + \"there\" + \"!\";\n\n✅ System.out.println(helloThere);\n\n✅ The above line of code is clear and works as intended",
     "tags": "#Java #BestPractices",
     "codepen_style": "carbon",
     "codepen_large": true,
@@ -727,7 +727,7 @@
   {
     "id": 121,
     "module": "java-tips",
-    "body": "💡 Java Tip 💡: Master the SOLID principles to write cleaner, more maintainable object-oriented code.\n\n✅ Java Tip 💡: Master the SOLID principles to write cleaner, more maintainable object-oriented code\n\n✅ Each letter stands for a key design principle:\n\n✅ S: Single Responsibility – A class should have only one reason to change\n\n#Java #CleanCode #OOP #SoftwareDesign",
+    "body": "💡 Java Tip 💡: Master the SOLID principles to write cleaner, more maintainable object-oriented code.\n\n✅ Java Tip 💡: Master the SOLID principles to write cleaner, more maintainable object-oriented code\n\n✅ Each letter stands for a key design principle:\n\n✅ S: Single Responsibility – A class should have only one reason to change",
     "tags": "#Java #CleanCode #OOP #SoftwareDesign",
     "codepen_style": "carbon",
     "codepen_large": true,
@@ -772,7 +772,7 @@
   {
     "id": 126,
     "module": "java-tips",
-    "body": "💡 Java tip 💡: Instead of using HashSet for enum types, consider using EnumSet, it's faster and more memory-efficient.\n\n✅Example:\n\n✅ Java tip 💡: Instead of using HashSet for enum types, consider using EnumSet, it's faster and more memory-efficient\n\n✅ EnumSet<Month> months = EnumSet.of(Month.JANUARY, Month.APRIL);\n\n#Java #Collections",
+    "body": "💡 Java tip 💡: Instead of using HashSet for enum types, consider using EnumSet, it's faster and more memory-efficient.\n\n✅Example:\n\n✅ Java tip 💡: Instead of using HashSet for enum types, consider using EnumSet, it's faster and more memory-efficient\n\n✅ EnumSet<Month> months = EnumSet.of(Month.JANUARY, Month.APRIL);",
     "tags": "#Java #Collections",
     "codepen_style": "carbon",
     "codepen_large": true,
@@ -820,7 +820,7 @@
   {
     "id": 131,
     "module": "java-tips",
-    "body": "💡 Java tip 💡: Try to avoid sharing data across threads.\n\n✅Use immutable objects\n\n✅Or make threads communicate through messages, without directly modifying shared state.\n\n✅ Java tip 💡: Try to avoid sharing data across threads\n\n#Java #Concurrency",
+    "body": "💡 Java tip 💡: Try to avoid sharing data across threads.\n\n✅Use immutable objects\n\n✅Or make threads communicate through messages, without directly modifying shared state.\n\n✅ Java tip 💡: Try to avoid sharing data across threads",
     "tags": "#Java #Concurrency",
     "codepen_style": "carbon",
     "codepen_large": true,
@@ -838,7 +838,7 @@
   {
     "id": 133,
     "module": "java-tips",
-    "body": "💡Java tip: Starting from Java 8,  for parallel processing of collections you can use parallelStream().\n\n✅ Uses multiple threads\n\n✅ Good for CPU-intensive processing\n\n✅ ⚠️ Sharing mutable state is not safe\n\n#Java #JavaDev",
+    "body": "💡Java tip: Starting from Java 8,  for parallel processing of collections you can use parallelStream().\n\n✅ Uses multiple threads\n\n✅ Good for CPU-intensive processing\n\n✅ ⚠️ Sharing mutable state is not safe",
     "tags": "#Java #JavaDev",
     "codepen_style": "carbon",
     "codepen_large": true,
@@ -866,7 +866,7 @@
   {
     "id": 136,
     "module": "java-tips",
-    "body": "💡Java tip: Use HashMap as Map implementation when you need greatest general-purpose performance.\n\n✅ #Java   #DataStructures\n\n✅ Runnable sample: `java-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "body": "💡Java tip: Use HashMap as Map implementation when you need greatest general-purpose performance.\n\n✅ #Java   #DataStructures\n\n✅ Runnable sample: `java-tips`\n\n✅ Architecture diagram + Carbon CodePen below\n\n#Java #DataStructures",
     "tags": "#Java #DataStructures",
     "codepen_style": "carbon",
     "codepen_large": true,
@@ -875,7 +875,7 @@
   {
     "id": 137,
     "module": "java-tips",
-    "body": "💡SOLID principles: The Liskov Substitution Principle (LSP) states that objects of a superclass should be replaceable with objects of a subclass.\n\n✅ Subclasses should not behave differently than the base class.\n\n✅ We can for example define two separate interfaces:\n\n✅ An alternative could be creating a default Vehicle implementation, and extending it while implementing the Motorized interface only for vehicles that have engines.\n\n#SOLID #SoftwareDesign",
+    "body": "💡SOLID principles: The Liskov Substitution Principle (LSP) states that objects of a superclass should be replaceable with objects of a subclass.\n\n✅ Subclasses should not behave differently than the base class.\n\n✅ We can for example define two separate interfaces:\n\n✅ An alternative could be creating a default Vehicle implementation, and extending it while implementing the Motorized interface only for vehicles that have engines.",
     "tags": "#SOLID #SoftwareDesign",
     "codepen_style": "carbon",
     "codepen_large": true,
@@ -1243,7 +1243,7 @@
   {
     "id": 176,
     "module": "java-tips",
-    "body": "💡 Java: Objects.equals(a, b) is a choice for null-safe comparisons.\n\n✅ If both are null, returns true\n\n✅ If one is null, returns false\n\n✅ If neither is null, calls a.equals(b)\n\n#Java #JavaDev",
+    "body": "💡 Java: Objects.equals(a, b) is a choice for null-safe comparisons.\n\n✅ If both are null, returns true\n\n✅ If one is null, returns false\n\n✅ If neither is null, calls a.equals(b)",
     "tags": "#Java #JavaDev",
     "codepen_style": "carbon",
     "codepen_large": true,
@@ -1272,17 +1272,17 @@
   {
     "id": 179,
     "module": "java-tips",
-    "body": "🚀 Java: You can use Optional.orElseThrow() to implement so called fail-fast behavior.\n\n✅ Fail-fast means you can catch bugs closer to their source, making stack traces easier to understand\n\n✅ #Java #SoftwareDevelopment\n\n✅ Runnable sample: `java-tips`",
-    "tags": "#Java #SoftwareDevelopment",
+    "body": "💡 Use `Optional.orElseThrow()` when a missing value is a bug.\n\n✅ `orElse(null)` → NPE later, far from the lookup\n\n✅ `orElseThrow()` stops at the source with a clear exception\n\n✅ Pass a supplier so the message says what was missing",
+    "code": "Optional<User> found = repo.findById(id);\n\n// ❌ Null or empty Optional handled too late\nUser user = found.orElse(null);\nreturn user.getEmail();   // NPE here, far from the lookup\n\n// ✅ Fail fast — exception where the value was expected\nUser user = found.orElseThrow(\n    () -> new UserNotFoundException(id));\nreturn user.getEmail();\n\n// Same idea in one chain\nreturn repo.findById(id)\n    .map(User::getEmail)\n    .orElseThrow(() -> new UserNotFoundException(id));",
+    "tags": "#Java #Optional",
     "codepen_style": "carbon",
     "codepen_large": true,
-    "code": "// ❌ A NullPointerException waiting to happen\nUser u = repo.find(id);\nreturn u.getEmail();\n\n// ✅ Make \"maybe absent\" explicit\nreturn repo.findById(id)\n    .map(User::getEmail)\n    .orElse(\"no-email\");",
     "category": "java"
   },
   {
     "id": 180,
     "module": "java-tips",
-    "body": "💡 Use `System.lineSeparator()` for OS-native newlines.\n\n✅ Hardcoded `\\n` looks wrong in Windows Notepad\n\n✅ Picks the correct line ending for this OS\n\n✅ Use when building CSV rows, logs, or file text\n\n#Java #JavaDev",
+    "body": "💡 Use `System.lineSeparator()` for OS-native newlines.\n\n✅ Hardcoded `\\n` looks wrong in Windows Notepad\n\n✅ Picks the correct line ending for this OS\n\n✅ Use when building CSV rows, logs, or file text",
     "code": "String nl = System.lineSeparator();\n\n// ❌ Hardcoded \\n — fine on Linux, awkward on Windows\nString bad = \"Date,Amount\" + \"\\n\" + \"2026-01-01,42\";\n\n// ✅ OS-native newlines\nString good = String.join(nl,\n    \"Date,Amount\",\n    \"2026-01-01,42\",\n    \"2026-01-02,17\");\n\nSystem.out.print(good);\n// Windows → \\r\\n between lines · Linux/macOS → \\n",
     "tags": "#Java #JavaDev",
     "codepen_style": "carbon",
@@ -1292,7 +1292,7 @@
   {
     "id": 181,
     "module": "java-tips",
-    "body": "💡 Java I/O: Use `Files.copy()` to duplicate a file in one line.\n\n✅ Great for backups: `data.csv` → `data.csv.bak`\n\n✅ Use `REPLACE_EXISTING` if the target might already exist\n\n✅ Works with `Path` (so it’s portable across OSes)\n\n#Java #Files",
+    "body": "💡 Java I/O: Use `Files.copy()` to duplicate a file in one line.\n\n✅ Great for backups: `data.csv` → `data.csv.bak`\n\n✅ Use `REPLACE_EXISTING` if the target might already exist\n\n✅ Works with `Path` (so it’s portable across OSes)",
     "tags": "#Java #Files",
     "codepen_style": "carbon",
     "codepen_large": true,
@@ -1302,7 +1302,7 @@
   {
     "id": 182,
     "module": "java-tips",
-    "body": "💡 Java Streams: `limit(n)` turns an infinite stream into a finite one.\n\n✅ Useful with `Stream.iterate()` / `generate()` (they can be infinite)\n\n✅ `limit(5)` means “take the first 5 items, then stop”\n\n✅ Great for sampling data or building the first N values\n\n#Java #Streams",
+    "body": "💡 Java Streams: `limit(n)` turns an infinite stream into a finite one.\n\n✅ Useful with `Stream.iterate()` / `generate()` (they can be infinite)\n\n✅ `limit(5)` means “take the first 5 items, then stop”\n\n✅ Great for sampling data or building the first N values",
     "tags": "#Java #Streams",
     "codepen_style": "carbon",
     "codepen_large": true,

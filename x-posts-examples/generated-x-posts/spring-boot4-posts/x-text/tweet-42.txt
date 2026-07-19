@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: API versioning beans for advanced control.
+
+✅ Provide ApiVersionResolver
+
+✅ Optional ApiVersionParser
+
+✅ ApiVersionDeprecationHandler for sunsetting
+
+#SpringBoot4 #ApiVersioning

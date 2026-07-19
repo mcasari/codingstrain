@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: Control MongoDB BigDecimal storage.
+
+✅ spring.data.mongodb.representation.big-decimal
+
+✅ Avoid silent precision surprises
+
+✅ Pick decimal128 vs string explicitly
+
+#SpringBoot4 #MongoDB

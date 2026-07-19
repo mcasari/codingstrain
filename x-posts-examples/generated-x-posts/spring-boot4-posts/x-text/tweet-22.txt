@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: Flyway/Liquibase now need their starters.
+
+✅ Third-party jar alone is not enough
+
+✅ Use spring-boot-starter-flyway / liquibase
+
+✅ Matching *-test starters for test slices
+
+#SpringBoot4 #Flyway

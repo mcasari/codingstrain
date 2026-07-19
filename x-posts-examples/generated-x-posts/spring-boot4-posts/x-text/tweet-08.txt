@@ -1,0 +1,9 @@
+🚀 Spring Boot 4: New spring-boot-starter-opentelemetry.
+
+✅ OTLP metrics + traces in one starter
+
+✅ Auto-configures the OpenTelemetry SDK
+
+✅ Drop Jaeger/Zipkin-only setup for OTLP collectors
+
+#SpringBoot4 #OpenTelemetry
