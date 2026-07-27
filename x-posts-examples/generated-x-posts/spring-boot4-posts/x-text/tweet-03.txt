@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: The codebase is modular — pick focused starters.
+💡 Spring Boot 4: Use focused starters — the library jar alone is not enough.
 
-✅ Smaller jars instead of one giant Boot core
+✅ Boot 4 ships smaller, technology-specific modules
 
-✅ Prefer spring-boot-starter-* for each tech
+✅ Prefer spring-boot-starter-* for auto-config
 
-✅ Missing starter = missing auto-config (easy to miss)
+✅ Flyway/Liquibase/Mongo need their starters now
 
 #SpringBoot4 #Modular

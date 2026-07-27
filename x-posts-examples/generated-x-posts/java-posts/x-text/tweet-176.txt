@@ -1,9 +1,9 @@
-💡 Java: Objects.equals(a, b) is a choice for null-safe comparisons.
+💡 Prefer Objects.equals(a, b) for null-safe equality checks.
 
-✅ If both are null, returns true
+✅ a.equals(b) NPEs when a is null
 
-✅ If one is null, returns false
+✅ Objects.equals handles null on either side
 
-✅ If neither is null, calls a.equals(b)
+✅ Both null → true; one null → false; else a.equals(b)
 
-#Java #JavaDev
+#Java #Objects

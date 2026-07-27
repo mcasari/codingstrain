@@ -1,5 +1,5 @@
-🚀 Java: A very interesting project by https://github.com/Mirkoddd, named Sift,  replaces the cryptic, string-based approach of the Java Regex engine with a fluent API.
+💡Java: If you have to read small files, you can use Files.readAllLines(), it's more direct and simple.
 
-✅ #Java #JavaDev
+✅ #SpringBoot #JavaDev
 
-#Java #JavaDev
+#SpringBoot #JavaDev

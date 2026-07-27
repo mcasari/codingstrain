@@ -1,7 +1,9 @@
-🚀 Java: Use Comparator.nullsFirst() or Comparator.nullsLast() for safe sorting.
+💡 Use Comparator.nullsFirst() / nullsLast() when sort keys can be null.
 
-✅ 🔴 Null values can cause a NullPointerException if your comparator doesn’t explicitly handle them
+✅ comparing(User::getName) NPEs if getName() is null
 
-✅ #Java #JavaDev
+✅ Wrap with nullsFirst / nullsLast to define null order
 
-#Java #JavaDev
+✅ Chain with thenComparing for multi-field sorts
+
+#Java #Comparator

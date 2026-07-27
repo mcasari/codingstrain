@@ -62,7 +62,7 @@
 <body>
   <div class="banner">
     <h1>Java X Posts</h1>
-    <p>136 tweets — spaced for X. Use <strong>Copy for X</strong> or download <code>.txt</code> files.</p>
+    <p>135 tweets — spaced for X. Use <strong>Copy for X</strong> or download <code>.txt</code> files.</p>
     <p><a href="../index.html">← Back to full preview</a></p>
   </div>
     <article>
@@ -2149,15 +2149,17 @@
     </article>
     <article>
       <h2>Tweet #175</h2>
-      <p class="preview">🚀 Java: Use Comparator.nullsFirst() or Comparator.nullsLast() for safe sorting.</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(213/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-175" readonly rows="10">🚀 Java: Use Comparator.nullsFirst() or Comparator.nullsLast() for safe sorting.
+      <p class="preview">💡 Use Comparator.nullsFirst() / nullsLast() when sort keys can be null.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(251/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-175" readonly rows="10">💡 Use Comparator.nullsFirst() / nullsLast() when sort keys can be null.
 
-✅ 🔴 Null values can cause a NullPointerException if your comparator doesn’t explicitly handle them
+✅ comparing(User::getName) NPEs if getName() is null
 
-✅ #Java #JavaDev
+✅ Wrap with nullsFirst / nullsLast to define null order
 
-#Java #JavaDev</textarea>
+✅ Chain with thenComparing for multi-field sorts
+
+#Java #Comparator</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-175">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -2167,17 +2169,17 @@
     </article>
     <article>
       <h2>Tweet #176</h2>
-      <p class="preview">💡 Java: Objects.equals(a, b) is a choice for null-safe comparisons.</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(191/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-176" readonly rows="10">💡 Java: Objects.equals(a, b) is a choice for null-safe comparisons.
+      <p class="preview">💡 Prefer Objects.equals(a, b) for null-safe equality checks.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(213/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-176" readonly rows="10">💡 Prefer Objects.equals(a, b) for null-safe equality checks.
 
-✅ If both are null, returns true
+✅ a.equals(b) NPEs when a is null
 
-✅ If one is null, returns false
+✅ Objects.equals handles null on either side
 
-✅ If neither is null, calls a.equals(b)
+✅ Both null → true; one null → false; else a.equals(b)
 
-#Java #JavaDev</textarea>
+#Java #Objects</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-176">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -2187,13 +2189,13 @@
     </article>
     <article>
       <h2>Tweet #177</h2>
-      <p class="preview">🚀 Java: A very interesting project by https://github.com/Mirkoddd, named Sift,  replaces the cryptic</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(201/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-177" readonly rows="10">🚀 Java: A very interesting project by https://github.com/Mirkoddd, named Sift,  replaces the cryptic, string-based approach of the Java Regex engine with a fluent API.
+      <p class="preview">💡Java: If you have to read small files, you can use Files.readAllLines(), it&#x27;s more direct and simpl</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(148/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-177" readonly rows="10">💡Java: If you have to read small files, you can use Files.readAllLines(), it's more direct and simple.
 
-✅ #Java #JavaDev
+✅ #SpringBoot #JavaDev
 
-#Java #JavaDev</textarea>
+#SpringBoot #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-177">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -2203,25 +2205,9 @@
     </article>
     <article>
       <h2>Tweet #178</h2>
-      <p class="preview">💡Java: If you have to read small files, you can use Files.readAllLines(), it&#x27;s more direct and simpl</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(148/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-178" readonly rows="10">💡Java: If you have to read small files, you can use Files.readAllLines(), it's more direct and simple.
-
-✅ #SpringBoot #JavaDev
-
-#SpringBoot #JavaDev</textarea>
-      <p class="copy-row">
-        <button type="button" class="copy-x-btn" data-target="tweet-copy-178">Copy for X</button>
-        <span class="copy-status" aria-live="polite"></span>
-        · <a href="tweet-178.txt" download>.txt</a>
-        · <a href="../index.html#tweet-178">Full preview</a>
-      </p>
-    </article>
-    <article>
-      <h2>Tweet #179</h2>
       <p class="preview">💡 Use Optional.orElseThrow() when a missing value is a bug.</p>
       <p class="tweet-copy-label">Copy for X <span class="x-char-count">(241/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-179" readonly rows="10">💡 Use Optional.orElseThrow() when a missing value is a bug.
+      <textarea class="tweet-copy" id="tweet-copy-178" readonly rows="10">💡 Use Optional.orElseThrow() when a missing value is a bug.
 
 ✅ orElse(null) → NPE later, far from the lookup
 
@@ -2231,17 +2217,17 @@
 
 #Java #Optional</textarea>
       <p class="copy-row">
-        <button type="button" class="copy-x-btn" data-target="tweet-copy-179">Copy for X</button>
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-178">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
-        · <a href="tweet-179.txt" download>.txt</a>
-        · <a href="../index.html#tweet-179">Full preview</a>
+        · <a href="tweet-178.txt" download>.txt</a>
+        · <a href="../index.html#tweet-178">Full preview</a>
       </p>
     </article>
     <article>
-      <h2>Tweet #180</h2>
+      <h2>Tweet #179</h2>
       <p class="preview">💡 Use System.lineSeparator() for OS-native newlines.</p>
       <p class="tweet-copy-label">Copy for X <span class="x-char-count">(210/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-180" readonly rows="10">💡 Use System.lineSeparator() for OS-native newlines.
+      <textarea class="tweet-copy" id="tweet-copy-179" readonly rows="10">💡 Use System.lineSeparator() for OS-native newlines.
 
 ✅ Hardcoded \n looks wrong in Windows Notepad
 
@@ -2251,17 +2237,17 @@
 
 #Java #JavaDev</textarea>
       <p class="copy-row">
-        <button type="button" class="copy-x-btn" data-target="tweet-copy-180">Copy for X</button>
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-179">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
-        · <a href="tweet-180.txt" download>.txt</a>
-        · <a href="../index.html#tweet-180">Full preview</a>
+        · <a href="tweet-179.txt" download>.txt</a>
+        · <a href="../index.html#tweet-179">Full preview</a>
       </p>
     </article>
     <article>
-      <h2>Tweet #181</h2>
+      <h2>Tweet #180</h2>
       <p class="preview">💡 Java I/O: Use Files.copy() to duplicate a file in one line.</p>
       <p class="tweet-copy-label">Copy for X <span class="x-char-count">(229/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-181" readonly rows="10">💡 Java I/O: Use Files.copy() to duplicate a file in one line.
+      <textarea class="tweet-copy" id="tweet-copy-180" readonly rows="10">💡 Java I/O: Use Files.copy() to duplicate a file in one line.
 
 ✅ Great for backups: data.csv → data.csv.bak
 
@@ -2271,17 +2257,17 @@
 
 #Java #Files</textarea>
       <p class="copy-row">
-        <button type="button" class="copy-x-btn" data-target="tweet-copy-181">Copy for X</button>
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-180">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
-        · <a href="tweet-181.txt" download>.txt</a>
-        · <a href="../index.html#tweet-181">Full preview</a>
+        · <a href="tweet-180.txt" download>.txt</a>
+        · <a href="../index.html#tweet-180">Full preview</a>
       </p>
     </article>
     <article>
-      <h2>Tweet #182</h2>
+      <h2>Tweet #181</h2>
       <p class="preview">💡 Java Streams: limit(n) turns an infinite stream into a finite one.</p>
       <p class="tweet-copy-label">Copy for X <span class="x-char-count">(264/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-182" readonly rows="10">💡 Java Streams: limit(n) turns an infinite stream into a finite one.
+      <textarea class="tweet-copy" id="tweet-copy-181" readonly rows="10">💡 Java Streams: limit(n) turns an infinite stream into a finite one.
 
 ✅ Useful with Stream.iterate() / generate() (they can be infinite)
 
@@ -2291,10 +2277,10 @@
 
 #Java #Streams</textarea>
       <p class="copy-row">
-        <button type="button" class="copy-x-btn" data-target="tweet-copy-182">Copy for X</button>
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-181">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
-        · <a href="tweet-182.txt" download>.txt</a>
-        · <a href="../index.html#tweet-182">Full preview</a>
+        · <a href="tweet-181.txt" download>.txt</a>
+        · <a href="../index.html#tweet-181">Full preview</a>
       </p>
     </article>
 

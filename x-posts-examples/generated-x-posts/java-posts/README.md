@@ -1,12 +1,12 @@
 # Java X Posts
 
-136 posts from the codingstrain tweet archive.
+135 posts from the codingstrain tweet archive.
 
 ## Browse
 
 Open [`index.html`](index.html) — 20 tweets per page.
 
-**Copy for X:** [`x-text/index.html`](x-text/index.html) — all 136 tweets with copy buttons and `.txt` downloads.
+**Copy for X:** [`x-text/index.html`](x-text/index.html) — all 135 tweets with copy buttons and `.txt` downloads.
 
 Sibling categories: [`../spring-boot-posts/index.html`](../spring-boot-posts/index.html) · [`../spring-boot4-posts/index.html`](../spring-boot4-posts/index.html)
 

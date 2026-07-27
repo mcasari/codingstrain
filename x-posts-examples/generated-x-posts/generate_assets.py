@@ -958,16 +958,22 @@ def write_index_pages(tweets: list[dict], page_size: int = INDEX_PAGE_SIZE) -> l
 
 def export_diagram_png(drawio_path: Path, png_path: Path) -> bool:
     png_path.parent.mkdir(parents=True, exist_ok=True)
+    import shutil
+
+    npx = shutil.which("npx") or shutil.which("npx.cmd")
+    if not npx:
+        return False
     try:
         subprocess.run(
-            ["npx", "--yes", "draw.io-export", str(drawio_path), "-o", str(png_path)],
+            [npx, "--yes", "draw.io-export", str(drawio_path), "-o", str(png_path)],
             check=True,
             capture_output=True,
             timeout=120,
             cwd=ROOT,
+            shell=False,
         )
         return png_path.is_file()
-    except (subprocess.CalledProcessError, subprocess.TimeoutExpired, FileNotFoundError):
+    except (subprocess.CalledProcessError, subprocess.TimeoutExpired, FileNotFoundError, OSError):
         return False
 
 
@@ -1064,26 +1070,18 @@ Every tweet has a <strong>Copy for X</strong> button and a plain <code>.txt</cod
 
 
 def migrate_legacy_png(tweet_id: int) -> None:
-    """Copy diagram PNG from a legacy location if present."""
+    """Copy diagram PNG from the old combined png/ folder only (never other categories)."""
     import shutil
 
     stem = f"tweet-{tweet_id:02d}-diagram.png"
     target = PNG_DIR / stem
     if target.is_file():
         return
-    for legacy_dir in (
-        TOOLS_ROOT / "png",
-        X_POSTS_ROOT / "java-posts" / "png",
-        X_POSTS_ROOT / "spring-boot-posts" / "png",
-        X_POSTS_ROOT / "spring-boot4-posts" / "png",
-        SPRING_BOOT_ROOT / "png",
-        SPRING_BOOT4_ROOT / "png",
-    ):
-        legacy = legacy_dir / stem
-        if legacy.is_file():
-            target.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copy2(legacy, target)
-            return
+    # Do NOT copy from sibling category folders — IDs overlap (e.g. Boot 4 #2 ≠ classic #2).
+    legacy = TOOLS_ROOT / "png" / stem
+    if legacy.is_file():
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(legacy, target)
 
 
 def prune_stale_tweet_assets(tweets: list[dict]) -> None:

@@ -1,70 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <mxfile host="app.diagrams.net" agent="codingstrain" version="22.1.8" type="device">
-  <diagram id="0168a1b6-9e48-4fe9-ac41-a9d833d98097" name="Tweet 1 · Diagram">
-    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
+  <diagram id="ca68b95a-b9a0-4fc9-bbe4-41f2ff6e0962" name="Tweet 1 · Diagram">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="440" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
         <mxCell id="2" value="Tweet #1 · Spring Boot 4: HTTP clients via `@HttpExchange` interfaces." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-boot4-tips · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="300" as="geometry"/></mxCell>
-        <mxCell id="5" value="Concept flow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
-        <mxCell id="6" value="Problem / context" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#3B82F6;strokeColor=#1D4ED8;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="120" y="190" width="200" height="70" as="geometry"/></mxCell>
-        <mxCell id="7" value="Annotate an interface — Boot builds the client" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="360" y="190" width="240" height="70" as="geometry"/></mxCell>
-        <mxCell id="8" value="→" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="6" target="7"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
-        <mxCell id="9" value="`@GetExchange` / `@PostExchange` beat RestTemplate glue" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="620" y="190" width="240" height="70" as="geometry"/></mxCell>
-        <mxCell id="10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="7" target="9"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
-        <mxCell id="11" value="Tune timeouts/SSL with `spring.http.clients.*`" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="880" y="190" width="240" height="70" as="geometry"/></mxCell>
-        <mxCell id="12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="9" target="11"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
-        <mxCell id="13" value="✓ See CodePen for implementation" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#16A34A;" vertex="1" parent="1"><mxGeometry x="840" y="310" width="240" height="56" as="geometry"/></mxCell>
-        <mxCell id="14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="11" target="13"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="5" value="HTTP Service Client — interface in, HTTP out" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
+        <mxCell id="6" value="Your app&amp;#xa;UserService" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="80" y="200" width="230" height="90" as="geometry"/></mxCell>
+        <mxCell id="7" value="@HttpExchange interface&amp;#xa;Boot builds the proxy" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#6366F1;strokeColor=#4F46E5;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="400" y="200" width="260" height="90" as="geometry"/></mxCell>
+        <mxCell id="8" value="External API&amp;#xa;GET/POST /users" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#3B82F6;strokeColor=#1D4ED8;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="760" y="200" width="240" height="90" as="geometry"/></mxCell>
+        <mxCell id="9" value="inject &amp;amp; call" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="6" target="7"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="10" value="HTTP" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="7" target="8"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="11" value="✓ No RestTemplate glue — Spring implements the interface" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#16A34A;" vertex="1" parent="1"><mxGeometry x="160" y="340" width="840" height="40" as="geometry"/></mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="d9e3c305-46ab-4442-952c-4fe939f58206" name="Tweet 2 · Diagram">
-    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
+  <diagram id="d14b6cda-673d-4efb-859c-7203852c4665" name="Tweet 2 · Diagram">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="460" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
         <mxCell id="2" value="Tweet #2 · Spring Boot 4: Native API versioning for MVC and WebFlux." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-boot4-tips · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
-        <mxCell id="5" value="REST API layers" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
-        <mxCell id="6" value="HTTP Client" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#3B82F6;strokeColor=#1D4ED8;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="72" y="200" width="184" height="78" as="geometry"/></mxCell>
-        <mxCell id="7" value="@RestController" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#10B981;strokeColor=#059669;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="280" y="200" width="184" height="78" as="geometry"/></mxCell>
-        <mxCell id="8" value="Service" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="488" y="200" width="184" height="78" as="geometry"/></mxCell>
-        <mxCell id="9" value="Repository" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#F59E0B;strokeColor=#D97706;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="696" y="200" width="184" height="78" as="geometry"/></mxCell>
-        <mxCell id="10" value="H2 / DB" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#EF4444;strokeColor=#DC2626;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="904" y="200" width="184" height="78" as="geometry"/></mxCell>
-        <mxCell id="11" value="GET/POST" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="6" target="7"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
-        <mxCell id="12" value="business logic" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="7" target="8"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
-        <mxCell id="13" value="JPA" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="8" target="9"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
-        <mxCell id="14" value="SQL" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="9" target="10"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
-        <mxCell id="15" value="✓ Constructor injection · layered design" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#16A34A;" vertex="1" parent="1"><mxGeometry x="80" y="330" width="500" height="34" as="geometry"/></mxCell>
+        <mxCell id="5" value="API versioning — same path, different contract" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
+        <mxCell id="6" value="HTTP Client&amp;#xa;X-API-Version: 1.0|2.0" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#3B82F6;strokeColor=#1D4ED8;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="80" y="200" width="220" height="100" as="geometry"/></mxCell>
+        <mxCell id="7" value="Spring MVC&amp;#xa;ApiVersionResolver&amp;#xa;picks handler" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#6366F1;strokeColor=#4F46E5;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="380" y="200" width="240" height="100" as="geometry"/></mxCell>
+        <mxCell id="8" value="@GetMapping(version=&quot;1.0&quot;)&amp;#xa;→ OrderV1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#10B981;strokeColor=#059669;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="720" y="170" width="220" height="70" as="geometry"/></mxCell>
+        <mxCell id="9" value="@GetMapping(version=&quot;2.0&quot;)&amp;#xa;→ OrderV2" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="720" y="270" width="220" height="70" as="geometry"/></mxCell>
+        <mxCell id="10" value="GET /orders/{id}" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="6" target="7"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="11" value="v1.0" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="7" target="8"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="12" value="v2.0" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="7" target="9"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="13" value="✓ Built into Boot 4 — no custom version filter required" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#16A34A;" vertex="1" parent="1"><mxGeometry x="160" y="370" width="840" height="40" as="geometry"/></mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="d5637ad9-620b-42ed-b99a-fbd3f047f987" name="Tweet 3 · Diagram">
+  <diagram id="b999f174-34c2-4302-83f3-aaf5f2bc6c8e" name="Tweet 3 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #3 · Spring Boot 4: The codebase is modular — pick focused star…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #3 · Spring Boot 4: Use focused starters — the library jar alon…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-boot4-tips · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="300" as="geometry"/></mxCell>
         <mxCell id="5" value="Concept flow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
         <mxCell id="6" value="Problem / context" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#3B82F6;strokeColor=#1D4ED8;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="120" y="190" width="200" height="70" as="geometry"/></mxCell>
-        <mxCell id="7" value="Smaller jars instead of one giant Boot core" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="360" y="190" width="240" height="70" as="geometry"/></mxCell>
+        <mxCell id="7" value="💡 Spring Boot 4: Use focused starters — the library jar alone is not e" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="360" y="190" width="240" height="70" as="geometry"/></mxCell>
         <mxCell id="8" value="→" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="6" target="7"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
-        <mxCell id="9" value="Prefer `spring-boot-starter-*` for each tech" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="620" y="190" width="240" height="70" as="geometry"/></mxCell>
+        <mxCell id="9" value="Boot 4 ships smaller, technology-specific modules" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="620" y="190" width="240" height="70" as="geometry"/></mxCell>
         <mxCell id="10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="7" target="9"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
-        <mxCell id="11" value="Missing starter = missing auto-config (easy to miss)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="880" y="190" width="240" height="70" as="geometry"/></mxCell>
+        <mxCell id="11" value="Prefer `spring-boot-starter-*` for auto-config" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="880" y="190" width="240" height="70" as="geometry"/></mxCell>
         <mxCell id="12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="9" target="11"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
         <mxCell id="13" value="✓ See CodePen for implementation" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#16A34A;" vertex="1" parent="1"><mxGeometry x="840" y="310" width="240" height="56" as="geometry"/></mxCell>
         <mxCell id="14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="11" target="13"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="ba805f7c-be98-41dd-a18c-513c1eb7aa30" name="Tweet 4 · Diagram">
+  <diagram id="5a7e6985-2c59-4e03-9259-1d3593cbb342" name="Tweet 4 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -85,7 +80,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="f516a45b-0ef6-474e-8cfe-2da30293c535" name="Tweet 5 · Diagram">
+  <diagram id="65d217c4-6922-4747-ae17-57bb152ddc58" name="Tweet 5 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -102,7 +97,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="940cfafb-9058-4080-84b0-0b1ffa07610c" name="Tweet 6 · Diagram">
+  <diagram id="f7805e21-d9b4-4caa-874f-9fdeca557e2f" name="Tweet 6 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -121,7 +116,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="67cdac96-d540-452e-9a87-fdb11986c532" name="Tweet 7 · Diagram">
+  <diagram id="b81f89f9-abf2-4e0f-8797-a8f876cc3013" name="Tweet 7 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -140,7 +135,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="c0fcde9e-5cf3-4dc0-8600-1f58642d0fdc" name="Tweet 8 · Diagram">
+  <diagram id="140afdad-deed-42c0-81b8-b617e4746d1f" name="Tweet 8 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -161,7 +156,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="2a70eba1-11c1-41e7-9036-a993173c5029" name="Tweet 9 · Diagram">
+  <diagram id="84b3bd38-fb97-4715-b5d7-b3a549b32d7b" name="Tweet 9 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -182,7 +177,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="c6cac9b5-4524-4daa-9c77-2daee41eed9f" name="Tweet 10 · Diagram">
+  <diagram id="59e337aa-eeab-4020-86ad-fa2a9144264c" name="Tweet 10 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -203,7 +198,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="e1460a48-5384-42c1-b59d-edb41348aa49" name="Tweet 11 · Diagram">
+  <diagram id="8ed7690f-a9b0-4455-9b85-d4509790cad7" name="Tweet 11 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -224,7 +219,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="2d99e436-1527-44e3-9c2b-011e85a207e0" name="Tweet 12 · Diagram">
+  <diagram id="298ed6d3-a66d-4af8-b282-0f9e0f3013ea" name="Tweet 12 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -245,7 +240,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="eca8637a-2da9-40c4-8049-14c1a3527f7b" name="Tweet 13 · Diagram">
+  <diagram id="5afb8859-98cf-41b6-8085-230ff5d04d33" name="Tweet 13 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -266,7 +261,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="8ae238e9-eeaf-4933-a4bd-411af2fd06e7" name="Tweet 14 · Diagram">
+  <diagram id="3fbaff36-80a5-4a97-9947-94af50f7773d" name="Tweet 14 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -287,7 +282,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="47615890-aed3-4d55-9306-910da0602864" name="Tweet 15 · Diagram">
+  <diagram id="9eabd571-2a25-4ea1-a638-c88bb74f654d" name="Tweet 15 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -308,7 +303,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="a82c592c-ae95-422b-8018-3d43472123a7" name="Tweet 16 · Diagram">
+  <diagram id="1b144eb2-4326-40d2-9b4f-a4d26d894a84" name="Tweet 16 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -328,7 +323,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="7548eb2c-9a10-4849-bdd7-caf0c06f70b5" name="Tweet 17 · Diagram">
+  <diagram id="1cc6b10a-658a-4281-b479-531f45c51cc8" name="Tweet 17 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -349,7 +344,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="4d53f460-c775-4ab9-898b-cac32eacab84" name="Tweet 18 · Diagram">
+  <diagram id="8686451f-3850-418e-bba1-b0a2e0607fd4" name="Tweet 18 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -368,7 +363,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="e714ba19-d698-49e9-a91e-1619165a58ad" name="Tweet 19 · Diagram">
+  <diagram id="7ad4dc8f-12e4-4c87-b3ab-4ea8bc0290d1" name="Tweet 19 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -387,7 +382,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="ffd40c62-b5bf-42ac-ab5f-88f7e886dce7" name="Tweet 20 · Diagram">
+  <diagram id="058a733f-4928-4091-91cc-cef741fd93c6" name="Tweet 20 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -408,7 +403,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="f8b33355-866a-4a6c-9cd1-6a571e7a9bfd" name="Tweet 21 · Diagram">
+  <diagram id="97e5c319-2747-446e-90b7-89b3c8d4c08d" name="Tweet 21 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -425,7 +420,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="e1ac5399-7a32-457d-9e7f-0829da80730c" name="Tweet 22 · Diagram">
+  <diagram id="e6fd0706-b393-4e5b-b58e-86aad94fc420" name="Tweet 22 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -446,7 +441,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="c8014dda-8514-4894-a3d3-cfbd69b4ec61" name="Tweet 23 · Diagram">
+  <diagram id="ceb91976-9c62-4e6a-946b-f3439a13889c" name="Tweet 23 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -465,7 +460,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="7fb9ca56-9c9c-40f1-8b23-7f35b8ac5c29" name="Tweet 24 · Diagram">
+  <diagram id="7be90a85-3a92-476e-9786-5ff4385d34ab" name="Tweet 24 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -486,24 +481,28 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="18a22061-75b8-4471-ac40-a0d3748d2811" name="Tweet 25 · Diagram">
-    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
+  <diagram id="d4de683b-7fb1-4ca1-bd73-142b5689a475" name="Tweet 25 · Diagram">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
         <mxCell id="2" value="Tweet #25 · Spring Boot 4: JDK `HttpClient` uses virtual threads when …" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-boot4-tips · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
-        <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
-        <mxCell id="5" value="Java pattern" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
-        <mxCell id="6" value="Caller code" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#3B82F6;strokeColor=#1D4ED8;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="133" y="200" width="200" height="78" as="geometry"/></mxCell>
-        <mxCell id="7" value="Builder / API" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="479" y="200" width="200" height="78" as="geometry"/></mxCell>
-        <mxCell id="8" value="Immutable object" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#F59E0B;strokeColor=#D97706;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="825" y="200" width="200" height="78" as="geometry"/></mxCell>
-        <mxCell id="9" value="fluent API" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="6" target="7"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
-        <mxCell id="10" value=".build()" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="7" target="8"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="300" as="geometry"/></mxCell>
+        <mxCell id="5" value="Concept flow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
+        <mxCell id="6" value="Problem / context" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#3B82F6;strokeColor=#1D4ED8;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="120" y="190" width="200" height="70" as="geometry"/></mxCell>
+        <mxCell id="7" value="Set `spring.threads.virtual.enabled=true`" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="360" y="190" width="240" height="70" as="geometry"/></mxCell>
+        <mxCell id="8" value="→" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="6" target="7"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="9" value="Auto-configured HTTP clients opt in" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="620" y="190" width="240" height="70" as="geometry"/></mxCell>
+        <mxCell id="10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="7" target="9"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="11" value="Great for high-concurrency blocking I/O" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="880" y="190" width="240" height="70" as="geometry"/></mxCell>
+        <mxCell id="12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="9" target="11"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="13" value="✓ See CodePen for implementation" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#16A34A;" vertex="1" parent="1"><mxGeometry x="840" y="310" width="240" height="56" as="geometry"/></mxCell>
+        <mxCell id="14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="11" target="13"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="6a35e98e-2645-4473-9e76-dfc9e8424305" name="Tweet 26 · Diagram">
+  <diagram id="ddbf1b49-6223-47a4-a4da-2799a433e03f" name="Tweet 26 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -524,7 +523,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="4d6c3270-97ff-4121-b7a5-ddf1d509e51d" name="Tweet 27 · Diagram">
+  <diagram id="3aa3497d-fdee-4b3e-94ba-84c1090fd171" name="Tweet 27 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -545,7 +544,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="4ab0d6bb-4d43-4fa3-8002-e37bdb538e79" name="Tweet 28 · Diagram">
+  <diagram id="55aa4e37-465a-4725-bc32-341d2b5bb0a0" name="Tweet 28 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -566,7 +565,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="c541440b-635c-425a-bb9f-fe9297e42312" name="Tweet 29 · Diagram">
+  <diagram id="92d6b939-3f92-4b9c-bbed-21cd68fcfc89" name="Tweet 29 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -587,7 +586,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="a1c65548-080f-4495-a1ae-72530140dd40" name="Tweet 30 · Diagram">
+  <diagram id="616bd61f-7767-4df6-bd0f-313c4b6dcbab" name="Tweet 30 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -608,7 +607,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="9ab891f4-6ee1-41dd-a7e9-df2f40705da9" name="Tweet 31 · Diagram">
+  <diagram id="81f1fe95-8571-47f9-bc2d-e4a8620b847f" name="Tweet 31 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -629,7 +628,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="b582fe49-b3f2-4e7d-94b4-22c4200997b8" name="Tweet 32 · Diagram">
+  <diagram id="6fbb13e9-41d9-4cd6-a5e1-d2b318f14c8b" name="Tweet 32 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -650,7 +649,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="8e519e10-28d5-4a9a-8137-8e32fc7e8dad" name="Tweet 33 · Diagram">
+  <diagram id="20e013cb-edc8-4f1f-8d94-a018ea22e2c9" name="Tweet 33 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -671,7 +670,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="810827a9-d81d-441c-b3b6-4432f4e58cb5" name="Tweet 34 · Diagram">
+  <diagram id="905dfa95-7ec6-434e-99ff-8f65e8a470c4" name="Tweet 34 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -692,29 +691,28 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="ef9c892a-51bd-4fc8-8de4-fdf9b2bd28a5" name="Tweet 35 · Diagram">
-    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
+  <diagram id="ad314fa4-64e2-475f-9402-00924178b541" name="Tweet 35 · Diagram">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
         <mxCell id="2" value="Tweet #35 · Spring Boot 4: AWS ECS is a recognized `CloudPlatform`." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-boot4-tips · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
-        <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
-        <mxCell id="5" value="REST API layers" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
-        <mxCell id="6" value="HTTP Client" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#3B82F6;strokeColor=#1D4ED8;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="72" y="200" width="184" height="78" as="geometry"/></mxCell>
-        <mxCell id="7" value="@RestController" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#10B981;strokeColor=#059669;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="280" y="200" width="184" height="78" as="geometry"/></mxCell>
-        <mxCell id="8" value="Service" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="488" y="200" width="184" height="78" as="geometry"/></mxCell>
-        <mxCell id="9" value="Repository" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#F59E0B;strokeColor=#D97706;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="696" y="200" width="184" height="78" as="geometry"/></mxCell>
-        <mxCell id="10" value="H2 / DB" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#EF4444;strokeColor=#DC2626;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="904" y="200" width="184" height="78" as="geometry"/></mxCell>
-        <mxCell id="11" value="GET/POST" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="6" target="7"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
-        <mxCell id="12" value="business logic" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="7" target="8"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
-        <mxCell id="13" value="JPA" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="8" target="9"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
-        <mxCell id="14" value="SQL" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="9" target="10"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
-        <mxCell id="15" value="✓ Constructor injection · layered design" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#16A34A;" vertex="1" parent="1"><mxGeometry x="80" y="330" width="500" height="34" as="geometry"/></mxCell>
+        <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="300" as="geometry"/></mxCell>
+        <mxCell id="5" value="Concept flow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
+        <mxCell id="6" value="Problem / context" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#3B82F6;strokeColor=#1D4ED8;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="120" y="190" width="200" height="70" as="geometry"/></mxCell>
+        <mxCell id="7" value="Detects Elastic Container Service runtime" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="360" y="190" width="240" height="70" as="geometry"/></mxCell>
+        <mxCell id="8" value="→" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="6" target="7"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="9" value="Aligns cloud property / actuator behavior" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="620" y="190" width="240" height="70" as="geometry"/></mxCell>
+        <mxCell id="10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="7" target="9"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="11" value="Same idea as k8s / Cloud Foundry detection" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="880" y="190" width="240" height="70" as="geometry"/></mxCell>
+        <mxCell id="12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="9" target="11"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="13" value="✓ See CodePen for implementation" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#16A34A;" vertex="1" parent="1"><mxGeometry x="840" y="310" width="240" height="56" as="geometry"/></mxCell>
+        <mxCell id="14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="11" target="13"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="ec5c1633-32fe-490a-89e7-fbfa1dfda778" name="Tweet 36 · Diagram">
+  <diagram id="de531c46-43b9-454a-969e-bb79951f37a9" name="Tweet 36 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -735,7 +733,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="d7b7fa4b-2abb-41c7-ae82-fecce855fc7c" name="Tweet 37 · Diagram">
+  <diagram id="6ee06d16-b65a-4f3a-8be7-0bf0edbf10f6" name="Tweet 37 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -754,7 +752,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="30d40393-3924-4d51-8772-2d194fc5260d" name="Tweet 38 · Diagram">
+  <diagram id="591ca3e9-8b4b-451e-a85e-e4f8281a9cf6" name="Tweet 38 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -771,7 +769,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="3c320aff-4903-4db6-8a61-c98cb59ad768" name="Tweet 39 · Diagram">
+  <diagram id="81964012-5be9-434b-95ea-e8f9cb051487" name="Tweet 39 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -792,7 +790,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="b3ed264e-19bf-40e9-b6f5-3ffc8d83265a" name="Tweet 40 · Diagram">
+  <diagram id="2040afbd-5938-487a-b4ac-e1ab70bd37e0" name="Tweet 40 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -813,45 +811,45 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="0be3afdb-1fd4-44b5-af4f-a51723313378" name="Tweet 41 · Diagram">
-    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
+  <diagram id="7ce54bf3-de42-488f-b7bf-b022d3e00689" name="Tweet 41 · Diagram">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="440" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
         <mxCell id="2" value="Tweet #41 · Spring Boot 4: HTTP Service Clients + `RestClient` under o…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-boot4-tips · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
-        <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
-        <mxCell id="5" value="Java pattern" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
-        <mxCell id="6" value="Caller code" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#3B82F6;strokeColor=#1D4ED8;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="133" y="200" width="200" height="78" as="geometry"/></mxCell>
-        <mxCell id="7" value="Builder / API" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="479" y="200" width="200" height="78" as="geometry"/></mxCell>
-        <mxCell id="8" value="Immutable object" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#F59E0B;strokeColor=#D97706;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="825" y="200" width="200" height="78" as="geometry"/></mxCell>
-        <mxCell id="9" value="fluent API" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="6" target="7"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
-        <mxCell id="10" value=".build()" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="7" target="8"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="300" as="geometry"/></mxCell>
+        <mxCell id="5" value="HTTP Service Client — interface in, HTTP out" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
+        <mxCell id="6" value="Your app&amp;#xa;UserService" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="80" y="200" width="230" height="90" as="geometry"/></mxCell>
+        <mxCell id="7" value="@HttpExchange interface&amp;#xa;Boot builds the proxy" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#6366F1;strokeColor=#4F46E5;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="400" y="200" width="260" height="90" as="geometry"/></mxCell>
+        <mxCell id="8" value="External API&amp;#xa;GET/POST /users" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#3B82F6;strokeColor=#1D4ED8;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="760" y="200" width="240" height="90" as="geometry"/></mxCell>
+        <mxCell id="9" value="inject &amp;amp; call" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="6" target="7"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="10" value="HTTP" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="7" target="8"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="11" value="✓ No RestTemplate glue — Spring implements the interface" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#16A34A;" vertex="1" parent="1"><mxGeometry x="160" y="340" width="840" height="40" as="geometry"/></mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="f3e2d9be-3b5a-428b-8d22-276a63e95162" name="Tweet 42 · Diagram">
-    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
+  <diagram id="3affc498-6ec4-45f7-a89b-8dc1e4f90d35" name="Tweet 42 · Diagram">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="460" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
         <mxCell id="2" value="Tweet #42 · Spring Boot 4: API versioning beans for advanced control." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-boot4-tips · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
-        <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="300" as="geometry"/></mxCell>
-        <mxCell id="5" value="Concept flow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
-        <mxCell id="6" value="Problem / context" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#3B82F6;strokeColor=#1D4ED8;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="120" y="190" width="200" height="70" as="geometry"/></mxCell>
-        <mxCell id="7" value="Provide `ApiVersionResolver`" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="360" y="190" width="240" height="70" as="geometry"/></mxCell>
-        <mxCell id="8" value="→" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="6" target="7"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
-        <mxCell id="9" value="Optional `ApiVersionParser`" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="620" y="190" width="240" height="70" as="geometry"/></mxCell>
-        <mxCell id="10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="7" target="9"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
-        <mxCell id="11" value="`ApiVersionDeprecationHandler` for sunsetting" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="880" y="190" width="240" height="70" as="geometry"/></mxCell>
-        <mxCell id="12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="9" target="11"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
-        <mxCell id="13" value="✓ See CodePen for implementation" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#16A34A;" vertex="1" parent="1"><mxGeometry x="840" y="310" width="240" height="56" as="geometry"/></mxCell>
-        <mxCell id="14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="11" target="13"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
+        <mxCell id="5" value="API versioning — same path, different contract" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
+        <mxCell id="6" value="HTTP Client&amp;#xa;X-API-Version: 1.0|2.0" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#3B82F6;strokeColor=#1D4ED8;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="80" y="200" width="220" height="100" as="geometry"/></mxCell>
+        <mxCell id="7" value="Spring MVC&amp;#xa;ApiVersionResolver&amp;#xa;picks handler" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#6366F1;strokeColor=#4F46E5;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="380" y="200" width="240" height="100" as="geometry"/></mxCell>
+        <mxCell id="8" value="@GetMapping(version=&quot;1.0&quot;)&amp;#xa;→ OrderV1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#10B981;strokeColor=#059669;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="720" y="170" width="220" height="70" as="geometry"/></mxCell>
+        <mxCell id="9" value="@GetMapping(version=&quot;2.0&quot;)&amp;#xa;→ OrderV2" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="720" y="270" width="220" height="70" as="geometry"/></mxCell>
+        <mxCell id="10" value="GET /orders/{id}" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="6" target="7"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="11" value="v1.0" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="7" target="8"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="12" value="v2.0" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="7" target="9"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="13" value="✓ Built into Boot 4 — no custom version filter required" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#16A34A;" vertex="1" parent="1"><mxGeometry x="160" y="370" width="840" height="40" as="geometry"/></mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="7dd36563-1c75-480e-aaaf-38a42ac80753" name="Tweet 43 · Diagram">
+  <diagram id="00d4ab0b-bed3-4b6b-958a-f0146ce76211" name="Tweet 43 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -872,7 +870,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="6670ca84-1480-4f45-aadd-5ae78a386436" name="Tweet 44 · Diagram">
+  <diagram id="5357e21c-f78a-47ba-bd8d-ebd3827aef71" name="Tweet 44 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -893,7 +891,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="fa21e454-6b69-4bd9-9baa-7372ef423090" name="Tweet 45 · Diagram">
+  <diagram id="af02e617-8dc2-4530-b650-54da9a9523d8" name="Tweet 45 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -914,7 +912,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="5d3f5cf3-d9ca-482a-8737-588427af958c" name="Tweet 46 · Diagram">
+  <diagram id="51219397-04ac-4c06-8c9a-022644b6ba04" name="Tweet 46 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -935,7 +933,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="587e5bdf-e542-4fc4-99cd-bc941adf42f6" name="Tweet 47 · Diagram">
+  <diagram id="59d69a1f-6cc3-4949-b706-bf537d6f5437" name="Tweet 47 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -954,7 +952,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="65db715c-94cd-4f31-9f13-9b8edc4d15fb" name="Tweet 48 · Diagram">
+  <diagram id="41193bba-0627-4fb5-9fa6-d3be82eae555" name="Tweet 48 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -973,7 +971,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="d10e01c2-e40b-4e00-90ba-ab1d70346e76" name="Tweet 49 · Diagram">
+  <diagram id="de950cf9-f45c-45e1-ae7d-3d4026cf31c4" name="Tweet 49 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -992,22 +990,23 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="a868ae59-2cff-486f-9041-ed4dee50bdd4" name="Tweet 50 · Diagram">
-    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
+  <diagram id="208ad5bf-bf7b-44f3-a7a1-21767f8b5f71" name="Tweet 50 · Diagram">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="460" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
         <mxCell id="2" value="Tweet #50 · Spring Boot 4: Built on Spring Framework 7 — foundations m…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-boot4-tips · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
         <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
-        <mxCell id="5" value="Spring Boot testing" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
-        <mxCell id="6" value="@SpringBootTest" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#EC4899;strokeColor=#DB2777;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="90" y="200" width="200" height="78" as="geometry"/></mxCell>
-        <mxCell id="7" value="@MockBean / @Sql" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#F59E0B;strokeColor=#D97706;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="350" y="200" width="200" height="78" as="geometry"/></mxCell>
-        <mxCell id="8" value="Component under test" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="610" y="200" width="200" height="78" as="geometry"/></mxCell>
-        <mxCell id="9" value="Assertions" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#3B82F6;strokeColor=#1D4ED8;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="870" y="200" width="200" height="78" as="geometry"/></mxCell>
-        <mxCell id="10" value="context" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="6" target="7"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
-        <mxCell id="11" value="stub data" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="7" target="8"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
-        <mxCell id="12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="8" target="9"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="5" value="API versioning — same path, different contract" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
+        <mxCell id="6" value="HTTP Client&amp;#xa;X-API-Version: 1.0|2.0" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#3B82F6;strokeColor=#1D4ED8;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="80" y="200" width="220" height="100" as="geometry"/></mxCell>
+        <mxCell id="7" value="Spring MVC&amp;#xa;ApiVersionResolver&amp;#xa;picks handler" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#6366F1;strokeColor=#4F46E5;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="380" y="200" width="240" height="100" as="geometry"/></mxCell>
+        <mxCell id="8" value="@GetMapping(version=&quot;1.0&quot;)&amp;#xa;→ OrderV1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#10B981;strokeColor=#059669;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="720" y="170" width="220" height="70" as="geometry"/></mxCell>
+        <mxCell id="9" value="@GetMapping(version=&quot;2.0&quot;)&amp;#xa;→ OrderV2" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="720" y="270" width="220" height="70" as="geometry"/></mxCell>
+        <mxCell id="10" value="GET /orders/{id}" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="6" target="7"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="11" value="v1.0" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="7" target="8"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="12" value="v2.0" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="7" target="9"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="13" value="✓ Built into Boot 4 — no custom version filter required" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#16A34A;" vertex="1" parent="1"><mxGeometry x="160" y="370" width="840" height="40" as="geometry"/></mxCell>
       </root>
     </mxGraphModel>
   </diagram>

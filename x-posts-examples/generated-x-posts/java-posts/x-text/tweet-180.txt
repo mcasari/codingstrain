@@ -1,9 +1,9 @@
-💡 Use System.lineSeparator() for OS-native newlines.
+💡 Java I/O: Use Files.copy() to duplicate a file in one line.
 
-✅ Hardcoded \n looks wrong in Windows Notepad
+✅ Great for backups: data.csv → data.csv.bak
 
-✅ Picks the correct line ending for this OS
+✅ Use REPLACE_EXISTING if the target might already exist
 
-✅ Use when building CSV rows, logs, or file text
+✅ Works with Path (so it’s portable across OSes)
 
-#Java #JavaDev
+#Java #Files

@@ -1,13 +1,14 @@
-String nl = System.lineSeparator();
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
 
-// ❌ Hardcoded \n — fine on Linux, awkward on Windows
-String bad = "Date,Amount" + "\n" + "2026-01-01,42";
+Path src = Path.of("data.csv");
+Path backup = Path.of("data.csv.bak");
 
-// ✅ OS-native newlines
-String good = String.join(nl,
-    "Date,Amount",
-    "2026-01-01,42",
-    "2026-01-02,17");
-
-System.out.print(good);
-// Windows → \r\n between lines · Linux/macOS → \n
+try {
+    Files.copy(src, backup, StandardCopyOption.REPLACE_EXISTING);
+    System.out.println("Copied to " + backup);
+} catch (IOException e) {
+    throw new RuntimeException(e);
+}

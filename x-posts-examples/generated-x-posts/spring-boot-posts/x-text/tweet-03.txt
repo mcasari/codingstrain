@@ -1,7 +1,9 @@
-🚀Spring Boot: Pagination without boilerplate — use Pageable.
+💡 Spring Boot: Pass Pageable for pagination — no manual page math.
 
-✅ Pagination without boilerplate — use Pageable
+✅ page + size come from the query string
 
-✅ Uses @GetMapping in the snippet
+✅ repository.findAll(pageable) returns a Page
 
-#SpringBoot #JavaDev
+✅ Expose content, number, size, and totalPages
+
+#SpringBoot #Pagination

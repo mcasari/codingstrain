@@ -1,9 +1,0 @@
-💡 Java Streams: limit(n) turns an infinite stream into a finite one.
-
-✅ Useful with Stream.iterate() / generate() (they can be infinite)
-
-✅ limit(5) means “take the first 5 items, then stop”
-
-✅ Great for sampling data or building the first N values
-
-#Java #Streams

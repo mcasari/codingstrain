@@ -1,5 +1,9 @@
-💡Java: If you have to read small files, you can use Files.readAllLines(), it's more direct and simple.
+💡 Use Optional.orElseThrow() when a missing value is a bug.
 
-✅ #SpringBoot #JavaDev
+✅ orElse(null) → NPE later, far from the lookup
 
-#SpringBoot #JavaDev
+✅ orElseThrow() stops at the source with a clear exception
+
+✅ Pass a supplier so the message says what was missing
+
+#Java #Optional

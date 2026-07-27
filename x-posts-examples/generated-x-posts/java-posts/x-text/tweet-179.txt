@@ -1,9 +1,9 @@
-💡 Use Optional.orElseThrow() when a missing value is a bug.
+💡 Use System.lineSeparator() for OS-native newlines.
 
-✅ orElse(null) → NPE later, far from the lookup
+✅ Hardcoded \n looks wrong in Windows Notepad
 
-✅ orElseThrow() stops at the source with a clear exception
+✅ Picks the correct line ending for this OS
 
-✅ Pass a supplier so the message says what was missing
+✅ Use when building CSV rows, logs, or file text
 
-#Java #Optional
+#Java #JavaDev

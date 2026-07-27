@@ -53,13 +53,27 @@ def _bullets(tweet: dict, max_n: int = 3) -> list[str]:
 
 def infer_diagram_type(tweet: dict) -> str:
     explicit = tweet.get("diagram_type")
-    if explicit in ("eureka", "circuit_breaker", "sealed_classes", "pact", "gatling", "varhandle", "rest"):
+    if explicit in (
+        "eureka", "circuit_breaker", "sealed_classes", "pact", "gatling",
+        "varhandle", "rest", "api_versioning", "http_exchange",
+    ):
         return explicit
 
     module = tweet.get("module", "").lower()
     body = tweet.get("body", "").lower()
     code = tweet.get("code", "").lower()
     text = f"{module} {body} {code}"
+    boot4 = "spring-boot4" in module or tweet.get("category") == "spring-boot4"
+
+    # Spring Boot 4 topics — check before generic RestController/GetMapping → "rest"
+    if boot4 or "spring boot 4" in body:
+        if "apiversion" in text or "api version" in body or "version =" in code:
+            return "api_versioning"
+        if "httpexchange" in text or "getexchange" in text or "postexchange" in text:
+            return "http_exchange"
+        # Avoid classic "REST layers + constructor injection" diagram for Boot 4 posts
+        if "restcontroller" in code or "getmapping" in code:
+            return "concept"
 
     if "circuit" in text or "feign" in text or "resilience" in text:
         return "circuit_breaker"
@@ -287,6 +301,76 @@ def build_varhandle_drawio(tweet: dict) -> str:
     return b.build()
 
 
+def build_api_versioning_drawio(tweet: dict) -> str:
+    """Client sends a version header; Boot routes to v1 or v2 handler."""
+    b = DrawioBuilder(f"Tweet {tweet['id']} · Diagram", w=1160, h=460)
+    M, PW = 40, 1080
+    _header(b, tweet)
+    ay = b.section(M, 78, PW, 320, "API versioning — same path, different contract")
+
+    client = b.box(
+        M + 40, ay + 70, 220, 100,
+        "HTTP Client&#xa;X-API-Version: 1.0|2.0",
+        _shape(*N["client"]),
+    )
+    router = b.box(
+        M + 340, ay + 70, 240, 100,
+        "Spring MVC&#xa;ApiVersionResolver&#xa;picks handler",
+        _shape(*N["config"]),
+    )
+    v1 = b.box(
+        M + 680, ay + 40, 220, 70,
+        "@GetMapping(version=\"1.0\")&#xa;→ OrderV1",
+        _shape(*N["controller"]),
+    )
+    v2 = b.box(
+        M + 680, ay + 140, 220, 70,
+        "@GetMapping(version=\"2.0\")&#xa;→ OrderV2",
+        _shape(*N["service"]),
+    )
+    b.edge(client, router, "GET /orders/{id}")
+    b.edge(router, v1, "v1.0")
+    b.edge(router, v2, "v2.0")
+    b.box(
+        M + 120, ay + 240, 840, 40,
+        "✓ Built into Boot 4 — no custom version filter required",
+        _text_style(12, C["good"], "center", True),
+    )
+    return b.build()
+
+
+def build_http_exchange_drawio(tweet: dict) -> str:
+    """Declarative HTTP client interface calling an external service."""
+    b = DrawioBuilder(f"Tweet {tweet['id']} · Diagram", w=1160, h=440)
+    M, PW = 40, 1080
+    _header(b, tweet)
+    ay = b.section(M, 78, PW, 300, "HTTP Service Client — interface in, HTTP out")
+
+    app = b.box(
+        M + 40, ay + 70, 230, 90,
+        "Your app&#xa;UserService",
+        _shape(*N["service"]),
+    )
+    iface = b.box(
+        M + 360, ay + 70, 260, 90,
+        "@HttpExchange interface&#xa;Boot builds the proxy",
+        _shape(*N["config"]),
+    )
+    remote = b.box(
+        M + 720, ay + 70, 240, 90,
+        "External API&#xa;GET/POST /users",
+        _shape(*N["client"]),
+    )
+    b.edge(app, iface, "inject &amp; call")
+    b.edge(iface, remote, "HTTP")
+    b.box(
+        M + 120, ay + 210, 840, 40,
+        "✓ No RestTemplate glue — Spring implements the interface",
+        _text_style(12, C["good"], "center", True),
+    )
+    return b.build()
+
+
 def build_tweet_diagram(tweet: dict) -> str:
     kind = infer_diagram_type(tweet)
 
@@ -302,6 +386,10 @@ def build_tweet_diagram(tweet: dict) -> str:
         return build_gatling_drawio(tweet)
     if kind == "varhandle":
         return build_varhandle_drawio(tweet)
+    if kind == "api_versioning":
+        return build_api_versioning_drawio(tweet)
+    if kind == "http_exchange":
+        return build_http_exchange_drawio(tweet)
 
     builders: dict[str, Any] = {
         "rest": lambda: _pipeline(
