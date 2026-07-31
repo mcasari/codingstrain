@@ -19,7 +19,7 @@
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 44 — spring-boot4-tips", "description": "Spring Boot snippet from codingstrain (spring-boot4-tips)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="744"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -141,20 +141,19 @@ body {
   font-size: 16px;
 }
 </pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot4-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;pun&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;application&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;yml&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;tomcat&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;resource&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;      &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;cache&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;num&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;MB&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;compression&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;enabled&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;true&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;mime&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;types&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;xml&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;plain&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;application&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;json&lt;/span&gt;
+          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot4-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// build.gradle.kts&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;tasks&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;named&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;BootJar&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;bootJar&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;manifest&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;attributes&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;      &lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;Spring-Boot-Jar-Type&amp;quot;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;development-tool&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;
 
-&lt;span class=&quot;txt&quot;&gt;spring&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;web&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;resources&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;      &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;chain&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;cache&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;true&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+&lt;span class=&quot;com&quot;&gt;// Or MANIFEST.MF:&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// Spring-Boot-Jar-Type: development-tool&lt;/span&gt;
+
+&lt;span class=&quot;com&quot;&gt;// Boot’s packaging excludes these from nested app jars&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-44.html" target="_blank" rel="noopener">Open pen preview</a>

@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: API versioning beans for advanced control.
+🚀 Spring Boot 4: Spring Security 7 comes along for the ride.
 
-✅ Provide ApiVersionResolver
+✅ Security filter chain DSL stays familiar
 
-✅ Optional ApiVersionParser
+✅ Stronger crypto defaults — review customizers
 
-✅ ApiVersionDeprecationHandler for sunsetting
+✅ Use spring-boot-starter-security + …-security-test
 
-#SpringBoot4 #ApiVersioning
+#SpringBoot4 #SpringSecurity

@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: AWS ECS is a recognized CloudPlatform.
+🚀 Spring Boot 4: Control MongoDB BigDecimal storage.
 
-✅ Detects Elastic Container Service runtime
+✅ spring.data.mongodb.representation.big-decimal
 
-✅ Aligns cloud property / actuator behavior
+✅ Avoid silent precision surprises
 
-✅ Same idea as k8s / Cloud Foundry detection
+✅ Pick decimal128 vs string explicitly
 
-#SpringBoot4 #AWS
+#SpringBoot4 #MongoDB

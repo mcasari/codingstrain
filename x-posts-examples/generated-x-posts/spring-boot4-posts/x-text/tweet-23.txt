@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: Test starters follow spring-boot-starter-*-test.
+🚀 Spring Boot 4: Disable console logging with one property.
 
-✅ Each tech has a matching test starter
+✅ logging.console.enabled=false
 
-✅ They pull spring-boot-starter-test transitively
+✅ Useful in containers that only scrape files/OTLP
 
-✅ Example: Security tests need …-security-test
+✅ Keep file or remote appenders as needed
 
-#SpringBoot4 #Testing
+#SpringBoot4 #Logging

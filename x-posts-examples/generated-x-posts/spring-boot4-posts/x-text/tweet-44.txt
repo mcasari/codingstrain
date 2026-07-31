@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: Tomcat static resource cache size is configurable.
+🚀 Spring Boot 4: Mark development tools in the jar manifest.
 
-✅ server.tomcat.resource.cache-max-size
+✅ Spring-Boot-Jar-Type: development-tool
 
-✅ Tune when serving many static assets
+✅ Keeps those deps out of production uber jars
 
-✅ Defaults may surprise large SPAs
+✅ Useful for internal developer utilities
 
-#SpringBoot4 #Tomcat
+#SpringBoot4 #Packaging

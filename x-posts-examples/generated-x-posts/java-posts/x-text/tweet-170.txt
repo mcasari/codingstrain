@@ -1,3 +1,9 @@
-🚀 Use ReentrantReadWriteLock Java concurrence utility if you have to deal with frequent reads and fewer writes. #Java #JavaDev
+💡 Prefer ReentrantReadWriteLock when reads are frequent and writes are rare.
 
-#Java #JavaDev
+✅ Many readers can hold the read lock together
+
+✅ Writers need the write lock alone
+
+✅ Better throughput than one exclusive lock for read-heavy work
+
+#Java #Concurrency

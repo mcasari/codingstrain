@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: Upgrade path tip — go 3.5 → 4.0.
+🚀 Spring Boot 4: HTTP Service Clients + RestClient under one roof.
 
-✅ Land on latest 3.5.x first
+✅ Interfaces for declarative calls
 
-✅ Kill 3.x deprecations before the jump
+✅ RestClient for ad-hoc calls
 
-✅ Then bump parent/BOM to 4.0.x and fix starters
+✅ Shared spring.http.clients timeouts/SSL bundles
 
-#SpringBoot4 #Migration
+#SpringBoot4 #HttpExchange

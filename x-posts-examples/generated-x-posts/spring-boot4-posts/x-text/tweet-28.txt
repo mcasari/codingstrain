@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: SSL health shows expiringChains.
+🚀 Spring Boot 4: DevTools live reload is off by default.
 
-✅ No more WILL_EXPIRE_SOON status value
+✅ Restarts still work; browser live reload is opt-in
 
-✅ Expiring certs stay VALID + listed in details
+✅ Enable only when you need it locally
 
-✅ Tune management.health.ssl.certificate-validity-warning-threshold
+✅ Avoid surprise websocket ports in shared envs
 
-#SpringBoot4 #SSL
+#SpringBoot4 #DevTools

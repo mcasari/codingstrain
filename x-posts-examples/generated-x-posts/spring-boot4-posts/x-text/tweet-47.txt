@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: Auto-config classes are no longer public API.
+🚀 Spring Boot 4: Session Hazelcast/MongoDB starters removed.
 
-✅ Public members removed from auto-config types
+✅ Ownership moved to Hazelcast / MongoDB teams
 
-✅ Don’t @Import auto-config classes directly
+✅ Use their Spring Session modules directly
 
-✅ Use starters + AutoConfiguration.imports only
+✅ Redis + JDBC session starters remain in Boot
 
-#SpringBoot4 #AutoConfig
+#SpringBoot4 #Session

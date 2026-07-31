@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: EnvironmentPostProcessor package moved.
+🚀 Spring Boot 4: Exception translation property renamed.
 
-✅ New: org.springframework.boot.EnvironmentPostProcessor
+✅ spring.dao.exceptiontranslation.enabled →
 
-✅ Old package kept temporarily (deprecated)
+✅ spring.persistence.exceptiontranslation.enabled
 
-✅ Update spring.factories / AutoConfiguration.imports
+✅ Use the properties migrator to catch it
 
-#SpringBoot4 #Config
+#SpringBoot4 #Migration

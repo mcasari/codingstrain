@@ -1,14 +1,14 @@
-// ✅ Still first-class in Boot 4
-// spring-boot-starter-session-data-redis
-// spring-boot-starter-session-jdbc
+// ✅ Boot 4 default test stack
+@SpringBootTest
+class PricingServiceTest {
 
-# application.yml — Redis sessions
-spring:
-  session:
-    store-type: redis
-  data:
-    redis:
-      host: localhost
+    @Autowired PricingService pricing;
 
-// For Hazelcast/MongoDB sessions: add the vendor-supported
-// Spring Session module and follow their Boot 4 docs.
+    @Test
+    void discounts() {
+        assertThat(pricing.discount(100, "VIP"))
+            .isEqualByComparingTo("90.00");
+    }
+}
+
+// spring-boot-starter-webmvc-test (pulls JUnit 5, AssertJ, Mockito)

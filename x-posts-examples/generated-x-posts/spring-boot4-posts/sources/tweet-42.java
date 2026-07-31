@@ -1,14 +1,15 @@
-@Bean
-ApiVersionResolver headerVersion() {
-    return request -> request.getHeader("X-API-Version");
-}
+@Configuration
+@EnableWebSecurity
+public class SecurityConfig {
 
-@Bean
-ApiVersionDeprecationHandler deprecations() {
-    return (version, response) -> {
-        if ("1.0".equals(version.toString())) {
-            response.setHeader("Deprecation", "true");
-            response.setHeader("Sunset", "Sat, 01 Aug 2026 00:00:00 GMT");
-        }
-    };
+    @Bean
+    SecurityFilterChain api(HttpSecurity http) throws Exception {
+        return http
+            .csrf(csrf -> csrf.disable())
+            .authorizeHttpRequests(auth -> auth
+                .requestMatchers("/actuator/health").permitAll()
+                .anyRequest().authenticated())
+            .oauth2ResourceServer(oauth -> oauth.jwt(Customizer.withDefaults()))
+            .build();
+    }
 }

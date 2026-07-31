@@ -1,15 +1,19 @@
 # application.yml
-spring:
-  elasticsearch:
-    uris: https://search.example.com:9200
-    api-key: ${ELASTIC_API_KEY}
+management:
+  health:
+    ssl:
+      certificate-validity-warning-threshold: 14d
+  endpoint:
+    health:
+      show-details: always
 
-// Inject ElasticsearchClient / RestClient as usual
-@Service
-public class ProductSearch {
-    private final ElasticsearchClient client;
-
-    public ProductSearch(ElasticsearchClient client) {
-        this.client = client;
-    }
-}
+// Health JSON shape (simplified):
+// {
+//   "status": "UP",
+//   "components": {
+//     "ssl": {
+//       "status": "UP",
+//       "details": { "expiringChains": [ … ] }
+//     }
+//   }
+// }

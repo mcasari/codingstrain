@@ -1,13 +1,14 @@
-<!-- temporary — runtime scope -->
-<dependency>
-  <groupId>org.springframework.boot</groupId>
-  <artifactId>spring-boot-properties-migrator</artifactId>
-  <scope>runtime</scope>
-</dependency>
+# ❌ Boot 3 — this key no longer exists
+management:
+  tracing:
+    enabled: true
+# annotation was: @ConditionalOnEnabledTracing
 
-// Startup log will flag things like:
-// management.tracing.enabled → management.tracing.export.enabled
-// spring.dao.exceptiontranslation.enabled
-//   → spring.persistence.exceptiontranslation.enabled
-
-// When quiet: delete the dependency.
+# ✅ Boot 4 — enable exporting traces
+management:
+  tracing:
+    export:
+      enabled: true
+    sampling:
+      probability: 0.1
+# annotation is now: @ConditionalOnEnabledTracingExport

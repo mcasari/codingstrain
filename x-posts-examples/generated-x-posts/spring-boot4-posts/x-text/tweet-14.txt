@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: New JmsClient alongside JmsTemplate.
+🚀 Spring Boot 4: Multiple TaskDecorator beans are supported.
 
-✅ Fluent, modern JMS API auto-configured
+✅ Boot wraps them in a CompositeTaskDecorator
 
-✅ JmsTemplate still works unchanged
+✅ Order with @Order / Ordered
 
-✅ Prefer JmsClient for new messaging code
+✅ Great for MDC + security context propagation
 
-#SpringBoot4 #JMS
+#SpringBoot4 #Async

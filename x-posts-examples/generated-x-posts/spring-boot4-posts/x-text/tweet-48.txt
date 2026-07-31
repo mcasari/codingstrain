@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: Session Hazelcast/MongoDB starters removed.
+🚀 Spring Boot 4: Spock integration removed (Groovy 5).
 
-✅ Ownership moved to Hazelcast / MongoDB teams
+✅ Spock isn’t ready for Groovy 5 yet
 
-✅ Use their Spring Session modules directly
+✅ Prefer JUnit 5 + AssertJ for Boot 4 tests
 
-✅ Redis + JDBC session starters remain in Boot
+✅ Keep Spock suites on Boot 3.5 until Spock catches up
 
-#SpringBoot4 #Session
+#SpringBoot4 #Testing

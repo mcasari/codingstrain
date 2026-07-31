@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: Support for @ObservationKeyValue.
+🚀 Spring Boot 4: Gradle 9 is supported.
 
-✅ Attach key/values to Micrometer Observations
+✅ Build with Gradle 9 or 8.14+
 
-✅ Cleaner than manual observation.highCardinalityKeyValue
+✅ Keep the Boot Gradle plugin in sync with Boot 4
 
-✅ Works with the OTLP starter export path
+✅ Good moment to refresh toolchain + JVM args
 
-#SpringBoot4 #Observability
+#SpringBoot4 #Gradle

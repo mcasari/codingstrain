@@ -1,18 +1,14 @@
-// ❌ Fragile — relied on public auto-config types
-// @Import(RedisAutoConfiguration.class)
+// ✅ Still first-class in Boot 4
+// spring-boot-starter-session-data-redis
+// spring-boot-starter-session-jdbc
 
-// ✅ Depend on the starter; let Boot load auto-config
-// spring-boot-starter-data-redis
+# application.yml — Redis sessions
+spring:
+  session:
+    store-type: redis
+  data:
+    redis:
+      host: localhost
 
-// Custom auto-config for your library:
-// META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports
-com.example.acme.AcmeAutoConfiguration
-
-@AutoConfiguration
-@ConditionalOnClass(AcmeClient.class)
-public class AcmeAutoConfiguration {
-    @Bean
-    AcmeClient acmeClient(AcmeProperties props) {
-        return new AcmeClient(props.baseUrl());
-    }
-}
+// For Hazelcast/MongoDB sessions: add the vendor-supported
+// Spring Session module and follow their Boot 4 docs.

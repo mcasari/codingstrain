@@ -1,18 +1,13 @@
-// ❌ Boot 3 habit — may not replace Boot 4 JSON mapper
-@Bean
-ObjectMapper objectMapper() {
-    return new ObjectMapper().findAndRegisterModules();
+// ❌ Boot 3 Gradle
+// tasks.named<BootJar>("bootJar") {
+//   launchScript()
+// }
+
+// ✅ Boot 4 — still create a fat jar, run with java
+tasks.named<BootJar>("bootJar") {
+  archiveFileName.set("orders-service.jar")
 }
 
-// ✅ Boot 4
-@Bean
-JsonMapper jsonMapper(JsonMapper.Builder builder) {
-    return builder
-        .enable(SerializationFeature.INDENT_OUTPUT)
-        .build();
-}
-
-@Bean
-JsonMapperBuilderCustomizer dates() {
-    return b -> b.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
-}
+// Deploy:
+// java -jar orders-service.jar
+// or: ./gradlew bootBuildImage && docker run …

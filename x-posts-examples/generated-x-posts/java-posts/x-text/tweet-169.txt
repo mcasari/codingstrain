@@ -1,5 +1,9 @@
-🚀 With Collectors.summarizingInt() you can getcount, sum, min, max, avg in one pass.
+💡 Use Collectors.summarizingInt() for count, sum, min, max, and avg in one pass.
 
-✅ #Java #JavaDev
+✅ Avoids multiple streams over the same data
 
-#Java #JavaDev
+✅ Returns an IntSummaryStatistics object
+
+✅ Same idea: summarizingLong / summarizingDouble
+
+#Java #Streams

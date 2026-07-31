@@ -1,15 +1,16 @@
-<!-- Step 1: latest 3.5.x, fix deprecations -->
-<parent>
-  <groupId>org.springframework.boot</groupId>
-  <artifactId>spring-boot-starter-parent</artifactId>
-  <version>3.5.16</version>
-</parent>
+@HttpExchange("https://billing.internal")
+public interface BillingClient {
+    @GetExchange("/invoices/{id}")
+    Invoice get(@PathVariable String id);
+}
 
-<!-- Step 2: Boot 4 -->
-<parent>
-  <groupId>org.springframework.boot</groupId>
-  <artifactId>spring-boot-starter-parent</artifactId>
-  <version>4.0.7</version>
-</parent>
+@Service
+public class BillingFacade {
+    private final BillingClient declarative;
+    private final RestClient adhoc;
 
-<!-- Step 3: properties-migrator (temporary) + starter renames -->
+    public BillingFacade(BillingClient declarative, RestClient.Builder b) {
+        this.declarative = declarative;
+        this.adhoc = b.baseUrl("https://billing.internal").build();
+    }
+}

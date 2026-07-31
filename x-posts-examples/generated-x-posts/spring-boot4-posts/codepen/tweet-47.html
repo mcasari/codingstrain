@@ -19,7 +19,7 @@
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 47 — spring-boot4-tips", "description": "Spring Boot snippet from codingstrain (spring-boot4-tips)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="888"
+             data-height="744"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -141,24 +141,20 @@ body {
   font-size: 16px;
 }
 </pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot4-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// ❌ Fragile — relied on public auto-config types&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// @Import(RedisAutoConfiguration.class)&lt;/span&gt;
+          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot4-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// ✅ Still first-class in Boot 4&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// spring-boot-starter-session-data-redis&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// spring-boot-starter-session-jdbc&lt;/span&gt;
 
-&lt;span class=&quot;com&quot;&gt;// ✅ Depend on the starter; let Boot load auto-config&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// spring-boot-starter-data-redis&lt;/span&gt;
+&lt;span class=&quot;pun&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;application&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;yml&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;—&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Redis&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;sessions&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;spring&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;redis&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;redis&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;      &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;host&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;localhost&lt;/span&gt;
 
-&lt;span class=&quot;com&quot;&gt;// Custom auto-config for your library:&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;example&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;acme&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;AcmeAutoConfiguration&lt;/span&gt;
-
-&lt;span class=&quot;ann&quot;&gt;@AutoConfiguration&lt;/span&gt;
-&lt;span class=&quot;ann&quot;&gt;@ConditionalOnClass&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;AcmeClient&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;kw&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;AcmeAutoConfiguration&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;ann&quot;&gt;@Bean&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;AcmeClient&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;acmeClient&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;AcmeProperties&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;AcmeClient&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;baseUrl&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+&lt;span class=&quot;com&quot;&gt;// For Hazelcast/MongoDB sessions: add the vendor-supported&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// Spring Session module and follow their Boot 4 docs.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-47.html" target="_blank" rel="noopener">Open pen preview</a>

@@ -1,15 +1,18 @@
-# application.yml
-spring:
-  data:
-    mongodb:
-      representation:
-        big-decimal: decimal128
+@SpringBootTest
+@Testcontainers
+class OrderRepositoryIT {
 
-@Document
-public class Invoice {
-    @Id String id;
-    BigDecimal total; // stored as Decimal128
+    @Container
+    @ServiceConnection
+    static MongoDBAtlasLocalContainer mongo =
+        new MongoDBAtlasLocalContainer("mongodb/mongodb-atlas-local:8.0.4");
+
+    @Autowired
+    OrderRepository orders;
+
+    @Test
+    void saves() {
+        orders.save(new Order("A-1"));
+        assertThat(orders.findById("A-1")).isPresent();
+    }
 }
-
-// Alternatives depend on Boot’s enum values —
-// set explicitly so prod/stage match.

@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: Kotlin Serialization gets a first-class starter.
+🚀 Spring Boot 4: Dedicated RestClient starter.
 
-✅ spring-boot-starter-kotlinx-serialization-json
+✅ spring-boot-starter-restclient for imperative HTTP
 
-✅ Contributes a Json bean + HTTP converter
+✅ WebClient → spring-boot-starter-webclient
 
-✅ Configure via spring.kotlinx.serialization.json.*
+✅ Unified spring.http.clients.* settings
 
-#SpringBoot4 #Kotlin
+#SpringBoot4 #RestClient

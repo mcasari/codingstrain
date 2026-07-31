@@ -1,18 +1,18 @@
-@SpringBootTest
-@Testcontainers
-class OrderRepositoryIT {
+// ❌ Boot 3 habit — may not replace Boot 4 JSON mapper
+@Bean
+ObjectMapper objectMapper() {
+    return new ObjectMapper().findAndRegisterModules();
+}
 
-    @Container
-    @ServiceConnection
-    static MongoDBAtlasLocalContainer mongo =
-        new MongoDBAtlasLocalContainer("mongodb/mongodb-atlas-local:8.0.4");
+// ✅ Boot 4
+@Bean
+JsonMapper jsonMapper(JsonMapper.Builder builder) {
+    return builder
+        .enable(SerializationFeature.INDENT_OUTPUT)
+        .build();
+}
 
-    @Autowired
-    OrderRepository orders;
-
-    @Test
-    void saves() {
-        orders.save(new Order("A-1"));
-        assertThat(orders.findById("A-1")).isPresent();
-    }
+@Bean
+JsonMapperBuilderCustomizer dates() {
+    return b -> b.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
 }

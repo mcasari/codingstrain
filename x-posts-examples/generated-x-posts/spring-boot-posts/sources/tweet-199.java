@@ -5,3 +5,5 @@
 // ✅ Auto-scanned from your code
 //
 // ✅ Export API docs in JSON/YAML
+//
+// #SpringBoot

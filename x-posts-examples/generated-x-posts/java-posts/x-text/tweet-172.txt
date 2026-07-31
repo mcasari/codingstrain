@@ -1,5 +1,9 @@
-💡Java tip: With pattern matching for the instanceof operator, Java lets you declare a variable directly inside the instanceof check.
+💡 Pattern matching for instanceof: declare the variable in the check.
 
-✅ #Java #JavaDev
+✅ Old style: instanceof then a separate cast
 
-#Java #JavaDev
+✅ New style: if (obj instanceof Dog d) — d is ready
+
+✅ The binding is only in scope when the check is true
+
+#Java #PatternMatching

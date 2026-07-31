@@ -1,14 +1,13 @@
-# application.yml
-server:
-  tomcat:
-    resource:
-      cache-max-size: 10MB
-  compression:
-    enabled: true
-    mime-types: text/html,text/xml,text/plain,application/json
+// build.gradle.kts
+tasks.named<BootJar>("bootJar") {
+  manifest {
+    attributes(
+      "Spring-Boot-Jar-Type" to "development-tool"
+    )
+  }
+}
 
-spring:
-  web:
-    resources:
-      chain:
-        cache: true
+// Or MANIFEST.MF:
+// Spring-Boot-Jar-Type: development-tool
+
+// Boot’s packaging excludes these from nested app jars

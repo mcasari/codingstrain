@@ -1,17 +1,16 @@
-// settings.gradle.kts
-plugins {
-  id("org.gradle.toolchains.foojay-resolver-convention") version "0.9.0"
+@Autowired
+CloudPlatform platform;
+
+@GetMapping("/runtime")
+Map<String, Object> runtime() {
+    return Map.of(
+        "platform", platform,
+        "isEcs", platform == CloudPlatform.ECS,
+        "isK8s", platform == CloudPlatform.KUBERNETES
+    );
 }
 
-// build.gradle.kts
-plugins {
-  java
-  id("org.springframework.boot") version "4.0.7"
-  id("io.spring.dependency-management") version "1.1.7"
-}
-
-java {
-  toolchain {
-    languageVersion.set(JavaLanguageVersion.of(21))
-  }
-}
+// Useful for conditional beans:
+@ConditionalOnCloudPlatform(CloudPlatform.ECS)
+@Configuration
+class EcsTuningConfig { }

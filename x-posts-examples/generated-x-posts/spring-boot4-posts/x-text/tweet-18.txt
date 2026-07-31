@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: Redis static master/replica (Lettuce).
+🚀 Spring Boot 4: Redis observability uses the Observation API.
 
-✅ Set spring.data.redis.masterreplica.nodes
+✅ Metrics and spans from Redis commands
 
-✅ Reads can go to replicas
+✅ Replaces older latency-recorder-only setup
 
-✅ Lettuce-only — not Jedis
+✅ Pair with the OpenTelemetry starter
 
 #SpringBoot4 #Redis

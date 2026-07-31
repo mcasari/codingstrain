@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: Control MongoDB BigDecimal storage.
+🚀 Spring Boot 4: @ServiceConnection + MongoDB Atlas Local.
 
-✅ spring.data.mongodb.representation.big-decimal
+✅ Testcontainers MongoDBAtlasLocalContainer supported
 
-✅ Avoid silent precision surprises
+✅ No hardcoded localhost ports in tests
 
-✅ Pick decimal128 vs string explicitly
+✅ Boot wires connection details automatically
 
-#SpringBoot4 #MongoDB
+#SpringBoot4 #Testcontainers

@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: Flyway/Liquibase now need their starters.
+🚀 Spring Boot 4: Test starters follow spring-boot-starter-*-test.
 
-✅ Third-party jar alone is not enough
+✅ Each tech has a matching test starter
 
-✅ Use spring-boot-starter-flyway / liquibase
+✅ They pull spring-boot-starter-test transitively
 
-✅ Matching *-test starters for test slices
+✅ Example: Security tests need …-security-test
 
-#SpringBoot4 #Flyway
+#SpringBoot4 #Testing

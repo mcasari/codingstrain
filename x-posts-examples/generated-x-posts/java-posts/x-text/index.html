@@ -2053,13 +2053,17 @@
     </article>
     <article>
       <h2>Tweet #169</h2>
-      <p class="preview">🚀 With Collectors.summarizingInt() you can getcount, sum, min, max, avg in one pass.</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(118/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-169" readonly rows="10">🚀 With Collectors.summarizingInt() you can getcount, sum, min, max, avg in one pass.
+      <p class="preview">💡 Use Collectors.summarizingInt() for count, sum, min, max, and avg in one pass.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(234/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-169" readonly rows="10">💡 Use Collectors.summarizingInt() for count, sum, min, max, and avg in one pass.
 
-✅ #Java #JavaDev
+✅ Avoids multiple streams over the same data
 
-#Java #JavaDev</textarea>
+✅ Returns an IntSummaryStatistics object
+
+✅ Same idea: summarizingLong / summarizingDouble
+
+#Java #Streams</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-169">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -2069,11 +2073,17 @@
     </article>
     <article>
       <h2>Tweet #170</h2>
-      <p class="preview">🚀 Use ReentrantReadWriteLock Java concurrence utility if you have to deal with frequent reads and fe</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(142/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-170" readonly rows="10">🚀 Use ReentrantReadWriteLock Java concurrence utility if you have to deal with frequent reads and fewer writes. #Java #JavaDev
+      <p class="preview">💡 Prefer ReentrantReadWriteLock when reads are frequent and writes are rare.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(246/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-170" readonly rows="10">💡 Prefer ReentrantReadWriteLock when reads are frequent and writes are rare.
 
-#Java #JavaDev</textarea>
+✅ Many readers can hold the read lock together
+
+✅ Writers need the write lock alone
+
+✅ Better throughput than one exclusive lock for read-heavy work
+
+#Java #Concurrency</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-170">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -2083,15 +2093,17 @@
     </article>
     <article>
       <h2>Tweet #171</h2>
-      <p class="preview">🚀  Use Files.isSameFile(path1, path2) to check if two paths refer to the same file. It resolves syml</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(231/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-171" readonly rows="10">🚀  Use Files.isSameFile(path1, path2) to check if two paths refer to the same file. It resolves symlinks too.
+      <p class="preview">💡 Use Files.isSameFile(a, b) to check if two paths are the same file.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(221/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-171" readonly rows="10">💡 Use Files.isSameFile(a, b) to check if two paths are the same file.
 
-✅ It checks whether two Path objects refer to the same actual file in the file system.
+✅ Path.equals only compares path text
 
-✅ #Java #JavaDev
+✅ isSameFile checks the real file (follows symlinks)
 
-#Java #JavaDev</textarea>
+✅ Catches ./file vs file and link vs target
+
+#Java #Files</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-171">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -2101,13 +2113,17 @@
     </article>
     <article>
       <h2>Tweet #172</h2>
-      <p class="preview">💡Java tip: With pattern matching for the instanceof operator, Java lets you declare a variable direc</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(166/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-172" readonly rows="10">💡Java tip: With pattern matching for the instanceof operator, Java lets you declare a variable directly inside the instanceof check.
+      <p class="preview">💡 Pattern matching for instanceof: declare the variable in the check.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(247/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-172" readonly rows="10">💡 Pattern matching for instanceof: declare the variable in the check.
 
-✅ #Java #JavaDev
+✅ Old style: instanceof then a separate cast
 
-#Java #JavaDev</textarea>
+✅ New style: if (obj instanceof Dog d) — d is ready
+
+✅ The binding is only in scope when the check is true
+
+#Java #PatternMatching</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-172">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>

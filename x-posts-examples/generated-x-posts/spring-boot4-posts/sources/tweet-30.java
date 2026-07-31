@@ -1,20 +1,13 @@
-// ✅ Boot 4
-package com.example.env;
+# ❌ Boot 3
+spring:
+  dao:
+    exceptiontranslation:
+      enabled: true
 
-import org.springframework.boot.EnvironmentPostProcessor;
-import org.springframework.core.env.ConfigurableEnvironment;
+# ✅ Boot 4
+spring:
+  persistence:
+    exceptiontranslation:
+      enabled: true
 
-public class RegionEnvironmentPostProcessor
-        implements EnvironmentPostProcessor {
-
-    @Override
-    public void postProcessEnvironment(
-            ConfigurableEnvironment env,
-            SpringApplication application) {
-        // add defaults before context refresh
-    }
-}
-
-# META-INF/spring.factories
-org.springframework.boot.EnvironmentPostProcessor=\
-com.example.env.RegionEnvironmentPostProcessor
+// Still translates DataAccessException → @Repository proxies

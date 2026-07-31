@@ -1,13 +1,13 @@
-# ❌ Boot 3
-spring:
-  dao:
-    exceptiontranslation:
-      enabled: true
+@Service
+public class PaymentService {
 
-# ✅ Boot 4
-spring:
-  persistence:
-    exceptiontranslation:
-      enabled: true
+    @Timed(value = "payments.process",
+           extraTags = { "region", "eu" })
+    @MeterTag(key = "method", value = "#payment.method()")
+    public Receipt charge(Payment payment) {
+        return gateway.charge(payment);
+    }
+}
 
-// Still translates DataAccessException → @Repository proxies
+// Resulting timer tags include method=CARD|WIRE|…
+// Avoid tagging raw user IDs (high cardinality)

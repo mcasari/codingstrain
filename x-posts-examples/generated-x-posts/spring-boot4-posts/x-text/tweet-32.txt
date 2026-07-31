@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: @MeterTag SpEL on @Timed / @Counted.
+🚀 Spring Boot 4: Support for @ObservationKeyValue.
 
-✅ Tag metric series from method args
+✅ Attach key/values to Micrometer Observations
 
-✅ Auto-config wires a SpEL ValueExpressionResolver
+✅ Cleaner than manual observation.highCardinalityKeyValue
 
-✅ Keep cardinality under control
+✅ Works with the OTLP starter export path
 
-#SpringBoot4 #Micrometer
+#SpringBoot4 #Observability

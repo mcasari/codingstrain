@@ -1,14 +1,20 @@
-<!-- optional local dependency -->
-<dependency>
-  <groupId>org.springframework.boot</groupId>
-  <artifactId>spring-boot-devtools</artifactId>
-  <optional>true</optional>
-</dependency>
+// ✅ Boot 4
+package com.example.env;
 
-# application-local.yml
-spring:
-  devtools:
-    livereload:
-      enabled: true
-    restart:
-      enabled: true
+import org.springframework.boot.EnvironmentPostProcessor;
+import org.springframework.core.env.ConfigurableEnvironment;
+
+public class RegionEnvironmentPostProcessor
+        implements EnvironmentPostProcessor {
+
+    @Override
+    public void postProcessEnvironment(
+            ConfigurableEnvironment env,
+            SpringApplication application) {
+        // add defaults before context refresh
+    }
+}
+
+# META-INF/spring.factories
+org.springframework.boot.EnvironmentPostProcessor=\
+com.example.env.RegionEnvironmentPostProcessor

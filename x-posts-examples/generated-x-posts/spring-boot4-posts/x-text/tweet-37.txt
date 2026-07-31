@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: @ServiceConnection + MongoDB Atlas Local.
+🚀 Spring Boot 4: Prefer JsonMapper beans over ObjectMapper.
 
-✅ Testcontainers MongoDBAtlasLocalContainer supported
+✅ Jackson 3 format-specific mappers
 
-✅ No hardcoded localhost ports in tests
+✅ Replacing JSON config? Define JsonMapper
 
-✅ Boot wires connection details automatically
+✅ XML? Define XmlMapper
 
-#SpringBoot4 #Testcontainers
+#SpringBoot4 #Jackson3

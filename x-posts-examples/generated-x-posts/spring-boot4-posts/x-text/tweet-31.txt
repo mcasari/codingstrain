@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: Exception translation property renamed.
+🚀 Spring Boot 4: @MeterTag SpEL on @Timed / @Counted.
 
-✅ spring.dao.exceptiontranslation.enabled →
+✅ Tag metric series from method args
 
-✅ spring.persistence.exceptiontranslation.enabled
+✅ Auto-config wires a SpEL ValueExpressionResolver
 
-✅ Use the properties migrator to catch it
+✅ Keep cardinality under control
 
-#SpringBoot4 #Migration
+#SpringBoot4 #Micrometer

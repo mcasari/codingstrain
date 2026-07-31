@@ -1,15 +1,14 @@
-@Configuration
-@EnableWebSecurity
-public class SecurityConfig {
+# application.yml
+server:
+  tomcat:
+    resource:
+      cache-max-size: 10MB
+  compression:
+    enabled: true
+    mime-types: text/html,text/xml,text/plain,application/json
 
-    @Bean
-    SecurityFilterChain api(HttpSecurity http) throws Exception {
-        return http
-            .csrf(csrf -> csrf.disable())
-            .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/actuator/health").permitAll()
-                .anyRequest().authenticated())
-            .oauth2ResourceServer(oauth -> oauth.jwt(Customizer.withDefaults()))
-            .build();
-    }
-}
+spring:
+  web:
+    resources:
+      chain:
+        cache: true

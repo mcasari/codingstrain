@@ -1,11 +1,18 @@
-<!-- try a milestone without custom repositories -->
-<parent>
-  <groupId>org.springframework.boot</groupId>
-  <artifactId>spring-boot-starter-parent</artifactId>
-  <version>4.1.0-M2</version>
-</parent>
+// ❌ Fragile — relied on public auto-config types
+// @Import(RedisAutoConfiguration.class)
 
-// Gradle: mavenCentral() is enough for Boot 4 milestones
-repositories {
-  mavenCentral()
+// ✅ Depend on the starter; let Boot load auto-config
+// spring-boot-starter-data-redis
+
+// Custom auto-config for your library:
+// META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports
+com.example.acme.AcmeAutoConfiguration
+
+@AutoConfiguration
+@ConditionalOnClass(AcmeClient.class)
+public class AcmeAutoConfiguration {
+    @Bean
+    AcmeClient acmeClient(AcmeProperties props) {
+        return new AcmeClient(props.baseUrl());
+    }
 }

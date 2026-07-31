@@ -1,16 +1,15 @@
-@Autowired
-CloudPlatform platform;
+# application.yml
+spring:
+  data:
+    mongodb:
+      representation:
+        big-decimal: decimal128
 
-@GetMapping("/runtime")
-Map<String, Object> runtime() {
-    return Map.of(
-        "platform", platform,
-        "isEcs", platform == CloudPlatform.ECS,
-        "isK8s", platform == CloudPlatform.KUBERNETES
-    );
+@Document
+public class Invoice {
+    @Id String id;
+    BigDecimal total; // stored as Decimal128
 }
 
-// Useful for conditional beans:
-@ConditionalOnCloudPlatform(CloudPlatform.ECS)
-@Configuration
-class EcsTuningConfig { }
+// Alternatives depend on Boot’s enum values —
+// set explicitly so prod/stage match.

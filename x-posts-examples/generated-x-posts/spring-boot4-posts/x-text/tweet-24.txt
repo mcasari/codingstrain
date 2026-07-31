@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: Disable console logging with one property.
+🚀 Spring Boot 4: JDK HttpClient uses virtual threads when enabled.
 
-✅ logging.console.enabled=false
+✅ Set spring.threads.virtual.enabled=true
 
-✅ Useful in containers that only scrape files/OTLP
+✅ Auto-configured HTTP clients opt in
 
-✅ Keep file or remote appenders as needed
+✅ Great for high-concurrency blocking I/O
 
-#SpringBoot4 #Logging
+#SpringBoot4 #VirtualThreads

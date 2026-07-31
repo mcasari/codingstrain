@@ -1,19 +1,14 @@
-# application.yml
-management:
-  health:
-    ssl:
-      certificate-validity-warning-threshold: 14d
-  endpoint:
-    health:
-      show-details: always
+<!-- optional local dependency -->
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-devtools</artifactId>
+  <optional>true</optional>
+</dependency>
 
-// Health JSON shape (simplified):
-// {
-//   "status": "UP",
-//   "components": {
-//     "ssl": {
-//       "status": "UP",
-//       "details": { "expiringChains": [ … ] }
-//     }
-//   }
-// }
+# application-local.yml
+spring:
+  devtools:
+    livereload:
+      enabled: true
+    restart:
+      enabled: true

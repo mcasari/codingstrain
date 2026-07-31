@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: DevTools live reload is off by default.
+🚀 Spring Boot 4: EnvironmentPostProcessor package moved.
 
-✅ Restarts still work; browser live reload is opt-in
+✅ New: org.springframework.boot.EnvironmentPostProcessor
 
-✅ Enable only when you need it locally
+✅ Old package kept temporarily (deprecated)
 
-✅ Avoid surprise websocket ports in shared envs
+✅ Update spring.factories / AutoConfiguration.imports
 
-#SpringBoot4 #DevTools
+#SpringBoot4 #Config

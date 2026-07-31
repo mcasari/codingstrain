@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: Multiple TaskDecorator beans are supported.
+🚀 Spring Boot 4: @ConfigurationPropertiesSource for external types.
 
-✅ Boot wraps them in a CompositeTaskDecorator
+✅ Metadata for types living in another module
 
-✅ Order with @Order / Ordered
+✅ Keep annotation processor on the classpath
 
-✅ Great for MDC + security context propagation
+✅ IDE completion works across module boundaries
 
-#SpringBoot4 #Async
+#SpringBoot4 #Config

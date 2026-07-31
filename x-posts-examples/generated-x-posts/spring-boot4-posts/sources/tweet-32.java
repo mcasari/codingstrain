@@ -1,13 +1,12 @@
 @Service
-public class PaymentService {
+public class CheckoutService {
 
-    @Timed(value = "payments.process",
-           extraTags = { "region", "eu" })
-    @MeterTag(key = "method", value = "#payment.method()")
-    public Receipt charge(Payment payment) {
-        return gateway.charge(payment);
+    @Observed(name = "checkout")
+    @ObservationKeyValue(key = "cart.size",
+                         value = "#{#cart.lines().size()}")
+    public Order checkout(Cart cart) {
+        return orderRepo.save(Order.from(cart));
     }
 }
 
-// Resulting timer tags include method=CARD|WIRE|…
-// Avoid tagging raw user IDs (high cardinality)
+// Spans/metrics include cart.size=n for the observation

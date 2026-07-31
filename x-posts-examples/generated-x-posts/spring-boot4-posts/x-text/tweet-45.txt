@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: Mark development tools in the jar manifest.
+🚀 Spring Boot 4: Milestones publish to Maven Central.
 
-✅ Spring-Boot-Jar-Type: development-tool
+✅ No extra repo.spring.io for 4.x milestones
 
-✅ Keeps those deps out of production uber jars
+✅ Easier CI trials of M/RC builds
 
-✅ Useful for internal developer utilities
+✅ Still pin versions explicitly in experiments
 
-#SpringBoot4 #Packaging
+#SpringBoot4 #Maven

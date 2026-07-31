@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: Gradle 9 is supported.
+🚀 Spring Boot 4: AWS ECS is a recognized CloudPlatform.
 
-✅ Build with Gradle 9 or 8.14+
+✅ Detects Elastic Container Service runtime
 
-✅ Keep the Boot Gradle plugin in sync with Boot 4
+✅ Aligns cloud property / actuator behavior
 
-✅ Good moment to refresh toolchain + JVM args
+✅ Same idea as k8s / Cloud Foundry detection
 
-#SpringBoot4 #Gradle
+#SpringBoot4 #AWS

@@ -1,14 +1,17 @@
-<dependency>
-  <groupId>org.springframework.boot</groupId>
-  <artifactId>spring-boot-starter-data-redis</artifactId>
-</dependency>
-<dependency>
-  <groupId>org.springframework.boot</groupId>
-  <artifactId>spring-boot-starter-opentelemetry</artifactId>
-</dependency>
+// build.gradle.kts
+dependencies {
+  implementation("org.springframework.boot:spring-boot-starter-kotlinx-serialization-json")
+}
 
-# Traces will include Redis command spans automatically
-management:
-  tracing:
-    sampling:
-      probability: 1.0
+@Serializable
+data class Book(val id: Long, val title: String)
+
+# application.yml
+spring:
+  kotlinx:
+    serialization:
+      json:
+        pretty-print: true
+        ignore-unknown-keys: true
+
+// Json HTTP message converter is registered ahead of fallbacks

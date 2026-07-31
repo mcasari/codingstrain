@@ -1,14 +1,17 @@
-// ❌ No longer available
-// spring-boot-starter-undertow
+// STEP 1 — add migrator (temporary)
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-properties-migrator</artifactId>
+  <scope>runtime</scope>
+</dependency>
 
-// ✅ Embedded servers in Boot 4
-// spring-boot-starter-tomcat   (default with webmvc)
-// spring-boot-starter-jetty
-// spring-boot-starter-reactor-netty  (WebFlux)
+// It warns: old key → new key
+// spring.dao.exceptiontranslation.enabled
+//   → spring.persistence.exceptiontranslation.enabled
 
-// Exclude Tomcat and bring Jetty:
-// <dependency>
-//   spring-boot-starter-webmvc
-//   (exclude spring-boot-starter-tomcat)
-// </dependency>
-// <dependency>spring-boot-starter-jetty</dependency>
+// STEP 2 — fix application.yml, then remove migrator
+# ❌ old
+spring.dao.exceptiontranslation.enabled: true
+
+# ✅ new
+spring.persistence.exceptiontranslation.enabled: true

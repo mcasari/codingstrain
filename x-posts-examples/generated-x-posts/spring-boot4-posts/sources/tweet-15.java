@@ -1,27 +1,18 @@
-@Component
-@Order(1)
-class MdcTaskDecorator implements TaskDecorator {
-    @Override
-    public Runnable decorate(Runnable runnable) {
-        Map<String, String> context = MDC.getCopyOfContextMap();
-        return () -> {
-            if (context != null) MDC.setContextMap(context);
-            try { runnable.run(); }
-            finally { MDC.clear(); }
-        };
-    }
-}
+// In a shared library module:
+@ConfigurationPropertiesSource
+public record RetrySettings(int maxAttempts, Duration backoff) {}
 
-@Component
-@Order(2)
-class SecurityTaskDecorator implements TaskDecorator {
-    @Override
-    public Runnable decorate(Runnable runnable) {
-        var auth = SecurityContextHolder.getContext();
-        return () -> {
-            SecurityContextHolder.setContext(auth);
-            try { runnable.run(); }
-            finally { SecurityContextHolder.clearContext(); }
-        };
-    }
-}
+// In the app module:
+@ConfigurationProperties(prefix = "app.http")
+public record HttpClientProperties(
+    String baseUrl,
+    RetrySettings retry  // sourced from the other module
+) {}
+
+# application.yml
+app:
+  http:
+    base-url: https://api.example.com
+    retry:
+      max-attempts: 3
+      backoff: 200ms

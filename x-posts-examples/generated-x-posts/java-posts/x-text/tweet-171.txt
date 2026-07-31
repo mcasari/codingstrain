@@ -1,7 +1,9 @@
-🚀  Use Files.isSameFile(path1, path2) to check if two paths refer to the same file. It resolves symlinks too.
+💡 Use Files.isSameFile(a, b) to check if two paths are the same file.
 
-✅ It checks whether two Path objects refer to the same actual file in the file system.
+✅ Path.equals only compares path text
 
-✅ #Java #JavaDev
+✅ isSameFile checks the real file (follows symlinks)
 
-#Java #JavaDev
+✅ Catches ./file vs file and link vs target
+
+#Java #Files

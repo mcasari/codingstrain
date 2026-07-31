@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: Dedicated RestClient starter.
+🚀 Spring Boot 4: Flyway/Liquibase now need their starters.
 
-✅ spring-boot-starter-restclient for imperative HTTP
+✅ Third-party jar alone is not enough
 
-✅ WebClient → spring-boot-starter-webclient
+✅ Use spring-boot-starter-flyway / liquibase
 
-✅ Unified spring.http.clients.* settings
+✅ Matching *-test starters for test slices
 
-#SpringBoot4 #RestClient
+#SpringBoot4 #Flyway

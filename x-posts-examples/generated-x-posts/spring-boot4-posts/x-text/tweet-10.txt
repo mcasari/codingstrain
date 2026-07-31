@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: Java 17 minimum, Java 25 supported.
+💡 Spring Boot 4: Undertow is gone — use Tomcat or Jetty.
 
-✅ Stay on 17 if you must — migration still works
+✅ Servlet 6.1 baseline — Undertow isn’t compatible
 
-✅ New apps: prefer a current LTS (21+)
+✅ Swap starter-undertow for Tomcat (default) or Jetty
 
-✅ GraalVM native-image needs 25+
+✅ Don’t deploy Boot 4 to older servlet containers
 
-#SpringBoot4 #Java
+#SpringBoot4 #Servlet

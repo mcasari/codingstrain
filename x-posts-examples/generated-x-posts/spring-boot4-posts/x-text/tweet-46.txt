@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: Milestones publish to Maven Central.
+🚀 Spring Boot 4: Auto-config classes are no longer public API.
 
-✅ No extra repo.spring.io for 4.x milestones
+✅ Public members removed from auto-config types
 
-✅ Easier CI trials of M/RC builds
+✅ Don’t @Import auto-config classes directly
 
-✅ Still pin versions explicitly in experiments
+✅ Use starters + AutoConfiguration.imports only
 
-#SpringBoot4 #Maven
+#SpringBoot4 #AutoConfig

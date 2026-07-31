@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: Redis observability uses the Observation API.
+🚀 Spring Boot 4: Kotlin Serialization gets a first-class starter.
 
-✅ Metrics and spans from Redis commands
+✅ spring-boot-starter-kotlinx-serialization-json
 
-✅ Replaces older latency-recorder-only setup
+✅ Contributes a Json bean + HTTP converter
 
-✅ Pair with the OpenTelemetry starter
+✅ Configure via spring.kotlinx.serialization.json.*
 
-#SpringBoot4 #Redis
+#SpringBoot4 #Kotlin

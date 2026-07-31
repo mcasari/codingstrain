@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: MongoDB health no longer needs Spring Data.
+🚀 Spring Boot 4: Redis static master/replica (Lettuce).
 
-✅ Indicators live in spring-boot-mongodb
+✅ Set spring.data.redis.masterreplica.nodes
 
-✅ Works with the MongoDB driver alone
+✅ Reads can go to replicas
 
-✅ Use spring-boot-starter-mongodb when you need health
+✅ Lettuce-only — not Jedis
 
-#SpringBoot4 #MongoDB
+#SpringBoot4 #Redis

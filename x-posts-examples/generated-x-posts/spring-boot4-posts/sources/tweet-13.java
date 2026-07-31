@@ -1,17 +1,19 @@
-# ❌ Boot 3
-management:
-  tracing:
-    enabled: true
+@Service
+public class ShippingNotifier {
 
-# ✅ Boot 4
-management:
-  tracing:
-    export:
-      enabled: true
-    sampling:
-      probability: 0.1
+    private final JmsClient jms;
 
-// Custom auto-config:
-// @ConditionalOnEnabledTracingExport
-@Configuration(proxyBeanMethods = false)
-class MyTracingConfig { }
+    public ShippingNotifier(JmsClient jms) {
+        this.jms = jms;
+    }
+
+    public void shipped(Order order) {
+        jms.destination("shipping.events")
+           .send(order);
+    }
+
+    public Order receive() {
+        return jms.destination("shipping.events")
+                  .receive(Order.class);
+    }
+}

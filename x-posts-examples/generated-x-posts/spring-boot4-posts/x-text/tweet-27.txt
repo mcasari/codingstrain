@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: Elasticsearch API key authentication.
+🚀 Spring Boot 4: SSL health shows expiringChains.
 
-✅ New spring.elasticsearch.api-key property
+✅ No more WILL_EXPIRE_SOON status value
 
-✅ Cleaner than embedding basic auth in the URI
+✅ Expiring certs stay VALID + listed in details
 
-✅ Rotate keys without changing client code
+✅ Tune management.health.ssl.certificate-validity-warning-threshold
 
-#SpringBoot4 #Elasticsearch
+#SpringBoot4 #SSL

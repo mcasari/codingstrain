@@ -1,17 +1,11 @@
-<!-- ❌ Incomplete in Boot 4 -->
-<dependency>
-  <groupId>org.springframework.security</groupId>
-  <artifactId>spring-security-test</artifactId>
-  <scope>test</scope>
-</dependency>
+# application-prod.yml
+logging:
+  console:
+    enabled: false
+  file:
+    name: /var/log/app/application.log
+  level:
+    root: INFO
+    com.example: DEBUG
 
-<!-- ✅ Boot 4 -->
-<dependency>
-  <groupId>org.springframework.boot</groupId>
-  <artifactId>spring-boot-starter-security-test</artifactId>
-  <scope>test</scope>
-</dependency>
-
-@SpringBootTest
-@WithMockUser(roles = "ADMIN")
-class AdminApiTest { }
+# Local profile keeps console on (default true)

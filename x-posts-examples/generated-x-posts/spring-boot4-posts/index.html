@@ -67,7 +67,7 @@
     <a class="page-nav disabled" href="#">← Prev</a>
     <span class="page-current">1</span> · <a href="page-2.html">2</a> · <a href="page-3.html">3</a>
     <a class="page-nav" href="page-2.html">Next →</a>
-    <span class="page-meta">Tweets #1–#20 of 50 · page 1/3</span>
+    <span class="page-meta">Tweets #1–#20 of 49 · page 1/3</span>
   </nav>
     <article id="tweet-1">
       <h2>Tweet #1</h2>
@@ -1129,7 +1129,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 7 — spring-boot4-tips", "description": "Spring Boot snippet from codingstrain (spring-boot4-tips)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="852"
+             data-height="816"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -1251,12 +1251,23 @@ body {
   font-size: 16px;
 }
 </pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot4-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;ann&quot;&gt;@SpringBootTest&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;webEnvironment&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;RANDOM_PORT&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
+          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot4-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor cols&quot;&gt;&lt;div class=&quot;col&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// ❌ Boot 3 style — TestRestTemplate is less fluent&lt;/span&gt;
+&lt;span class=&quot;ann&quot;&gt;@SpringBootTest&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;webEnvironment&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;RANDOM_PORT&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kw&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;UserApiIT&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;ann&quot;&gt;@Autowired&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;TestRestTemplate&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;ann&quot;&gt;@Test&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;getUser&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;ResponseEntity&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;            &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;getForEntity&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;/users/1&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;getStatusCode&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;isEqualTo&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;HttpStatus&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;OK&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;getBody&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;isEqualTo&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;a@example.com&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&quot;col-divider&quot;&gt;&lt;/span&gt;&lt;div class=&quot;col&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// ✅ Boot 4 — RestTestClient (aligned with RestClient)&lt;/span&gt;
+&lt;span class=&quot;ann&quot;&gt;@SpringBootTest&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;webEnvironment&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;RANDOM_PORT&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;ann&quot;&gt;@AutoConfigureRestTestClient&lt;/span&gt;
 &lt;span class=&quot;kw&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;UserApiIT&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
-
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;ann&quot;&gt;@Autowired&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;RestTestClient&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;ann&quot;&gt;@Autowired&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;RestTestClient&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;ann&quot;&gt;@Test&lt;/span&gt;
 &lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;getUser&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
@@ -1267,21 +1278,21 @@ body {
 &lt;span class=&quot;txt&quot;&gt;            &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;expectBody&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;txt&quot;&gt;            &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;jsonPath&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;$.email&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;isEqualTo&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;a@example.com&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-07.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(214/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-7" readonly rows="10">🚀 Spring Boot 4: Prefer RestTestClient over TestRestTemplate.
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(215/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-7" readonly rows="10">💡 Spring Boot 4: Prefer RestTestClient over TestRestTemplate.
 
-✅ Fluent API aligned with RestClient
+✅ Fluent API — same style as RestClient
 
-✅ Works with MockMvc or a real port
+✅ Works with MockMvc or a real server port
 
-✅ Add @AutoConfigureRestTestClient when needed
+✅ Assert status and JSON in one chain
 
 #SpringBoot4 #RestTestClient</textarea>
       <p class="copy-row">
@@ -1650,7 +1661,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 10 — spring-boot4-tips", "description": "Spring Boot snippet from codingstrain (spring-boot4-tips)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="744"
+             data-height="780"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -1772,36 +1783,46 @@ body {
   font-size: 16px;
 }
 </pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot4-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;pom&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;xml&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;properties&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;num&quot;&gt;21&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;spring&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;num&quot;&gt;4.0.7&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;spring&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;properties&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;parent&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
+          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot4-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor cols&quot;&gt;&lt;div class=&quot;col&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;❌&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Boot&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;num&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;—&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Undertow&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;starter&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;is&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;removed&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Boot&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;num&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;dependency&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;groupId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;springframework&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;groupId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;artifactId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;spring&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;starter&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;parent&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;artifactId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;num&quot;&gt;4.0.7&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;parent&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;com&quot;&gt;// Runtime check&lt;/span&gt;
-&lt;span class=&quot;typ&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Runtime&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;com&quot;&gt;// 17 … 25 OK&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;artifactId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;spring&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;starter&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;web&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;artifactId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;exclusions&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;exclusion&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;      &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;groupId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;springframework&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;groupId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;      &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;artifactId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;spring&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;starter&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;tomcat&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;artifactId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;exclusion&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;exclusions&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;dependency&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;dependency&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;groupId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;springframework&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;groupId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;artifactId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;spring&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;starter&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;undertow&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;artifactId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;dependency&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&quot;col-divider&quot;&gt;&lt;/span&gt;&lt;div class=&quot;col&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;✅&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Boot&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;num&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;—&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;Tomcat&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;or&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Jetty&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;dependency&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;groupId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;springframework&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;groupId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;artifactId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;spring&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;starter&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;webmvc&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;artifactId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;dependency&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;optional&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;exclude&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Tomcat&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Jetty&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;dependency&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;groupId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;springframework&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;groupId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;artifactId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;spring&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;starter&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;jetty&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;artifactId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;dependency&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-10.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(196/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-10" readonly rows="10">🚀 Spring Boot 4: Java 17 minimum, Java 25 supported.
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(237/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-10" readonly rows="10">💡 Spring Boot 4: Undertow is gone — use Tomcat or Jetty.
 
-✅ Stay on 17 if you must — migration still works
+✅ Servlet 6.1 baseline — Undertow isn’t compatible
 
-✅ New apps: prefer a current LTS (21+)
+✅ Swap starter-undertow for Tomcat (default) or Jetty
 
-✅ GraalVM native-image needs 25+
+✅ Don’t deploy Boot 4 to older servlet containers
 
-#SpringBoot4 #Java</textarea>
+#SpringBoot4 #Servlet</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-10">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1821,7 +1842,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 11 — spring-boot4-tips", "description": "Spring Boot snippet from codingstrain (spring-boot4-tips)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="744"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -1943,36 +1964,37 @@ body {
   font-size: 16px;
 }
 </pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot4-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// ❌ No longer available&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// spring-boot-starter-undertow&lt;/span&gt;
+          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot4-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor cols&quot;&gt;&lt;div class=&quot;col&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// STEP 1 — add migrator (temporary)&lt;/span&gt;
+&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;dependency&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;groupId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;springframework&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;groupId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;artifactId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;spring&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;properties&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;migrator&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;artifactId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;scope&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;runtime&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;scope&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;dependency&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&quot;col-divider&quot;&gt;&lt;/span&gt;&lt;div class=&quot;col&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// It warns: old key → new key&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// spring.dao.exceptiontranslation.enabled&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;//   → spring.persistence.exceptiontranslation.enabled&lt;/span&gt;
 
-&lt;span class=&quot;com&quot;&gt;// ✅ Embedded servers in Boot 4&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// spring-boot-starter-tomcat   (default with webmvc)&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// spring-boot-starter-jetty&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// spring-boot-starter-reactor-netty  (WebFlux)&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// STEP 2 — fix application.yml, then remove migrator&lt;/span&gt;
+&lt;span class=&quot;pun&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;❌&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;old&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;spring&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;dao&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;exceptiontranslation&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;enabled&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;true&lt;/span&gt;
 
-&lt;span class=&quot;com&quot;&gt;// Exclude Tomcat and bring Jetty:&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// &amp;lt;dependency&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//   spring-boot-starter-webmvc&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//   (exclude spring-boot-starter-tomcat)&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// &amp;lt;/dependency&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// &amp;lt;dependency&amp;gt;spring-boot-starter-jetty&amp;lt;/dependency&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+&lt;span class=&quot;pun&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;✅&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;new&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;spring&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;persistence&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;exceptiontranslation&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;enabled&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;true&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-11.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(207/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-11" readonly rows="10">🚀 Spring Boot 4: Undertow support is removed.
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(259/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-11" readonly rows="10">💡 Spring Boot 4: Config keys move — use properties-migrator as a temporary guide.
 
-✅ Servlet 6.1 baseline — Undertow isn’t there yet
+✅ Add it → startup logs tell you which keys renamed
 
-✅ Stick with Tomcat or Jetty starters
+✅ Old keys still work while you fix application.yml
 
-✅ Don’t deploy Boot 4 to old servlet containers
+✅ Update the keys, then delete the dependency
 
-#SpringBoot4 #Servlet</textarea>
+#SpringBoot4 #Migration</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-11">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -2114,35 +2136,34 @@ body {
   font-size: 16px;
 }
 </pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot4-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;temporary&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;—&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;runtime&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;scope&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;dependency&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;groupId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;springframework&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;groupId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;artifactId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;spring&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;properties&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;migrator&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;artifactId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;scope&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;runtime&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;scope&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;dependency&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;com&quot;&gt;// Startup log will flag things like:&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// management.tracing.enabled → management.tracing.export.enabled&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// spring.dao.exceptiontranslation.enabled&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;//   → spring.persistence.exceptiontranslation.enabled&lt;/span&gt;
-
-&lt;span class=&quot;com&quot;&gt;// When quiet: delete the dependency.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot4-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor cols&quot;&gt;&lt;div class=&quot;col&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;pun&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;❌&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Boot&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;num&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;—&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;no&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;longer&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;exists&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;management&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;tracing&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;enabled&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;pun&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;annotation&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;was&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;ann&quot;&gt;@ConditionalOnEnabledTracing&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&quot;col-divider&quot;&gt;&lt;/span&gt;&lt;div class=&quot;col&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;pun&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;✅&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Boot&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;num&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;—&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;enable&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;exporting&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;traces&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;management&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;tracing&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;export&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;      &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;enabled&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;sampling&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;      &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;probability&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;num&quot;&gt;0.1&lt;/span&gt;
+&lt;span class=&quot;pun&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;annotation&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;is&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;ann&quot;&gt;@ConditionalOnEnabledTracingExport&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-12.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(226/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-12" readonly rows="10">🚀 Spring Boot 4: Add spring-boot-properties-migrator while upgrading.
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(242/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-12" readonly rows="10">💡 Spring Boot 4: The “turn tracing on” property moved.
 
-✅ Prints renamed/removed property diagnostics
+✅ Old key management.tracing.enabled is gone
 
-✅ Temporarily remaps old keys at runtime
+✅ Use management.tracing.export.enabled instead
 
-✅ Remove it once application.yml is clean
+✅ Custom config: @ConditionalOnEnabledTracing → …TracingExport
 
-#SpringBoot4 #Migration</textarea>
+#SpringBoot4 #Observability</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-12">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -2162,180 +2183,6 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 13 — spring-boot4-tips", "description": "Spring Boot snippet from codingstrain (spring-boot4-tips)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="852"
-             data-theme-id="dark"
-             data-default-tab="html,result"
-             data-editable="true">
-          <pre data-lang="css">html, body {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  min-height: 100vh;
-  box-sizing: border-box;
-}
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: stretch;
-  padding: 0.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-.carbon {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-height: calc(100vh - 1rem);
-  max-width: none;
-  border-radius: 10px;
-  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-}
-.carbon-titlebar {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  height: 36px;
-  padding: 0 16px;
-  background: #252836;
-  flex-shrink: 0;
-}
-.carbon-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-.carbon-dot.red { background: #ff5f56; }
-.carbon-dot.yellow { background: #ffbd2e; }
-.carbon-dot.green { background: #27c93f; }
-.carbon-module {
-  margin-left: auto;
-  font: 13px/1 system-ui, sans-serif;
-  color: #8b949e;
-  letter-spacing: 0.02em;
-}
-.carbon-editor {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  background: #011627;
-  padding: 1.5rem 2rem 1.75rem;
-  overflow: auto;
-}
-.carbon-editor pre {
-  margin: 0;
-  flex: 1;
-  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 20px;
-  line-height: 34px;
-  white-space: pre;
-  tab-size: 4;
-}
-.carbon-editor .kw { color: #c792ea; }
-.carbon-editor .ann { color: #ffb86c; }
-.carbon-editor .str { color: #c3e88d; }
-.carbon-editor .typ { color: #ffcb6b; }
-.carbon-editor .met { color: #82aaff; }
-.carbon-editor .com { color: #5c6370; }
-.carbon-editor .num { color: #f78c6c; }
-.carbon-editor .pun { color: #89ddff; }
-.carbon-editor .txt { color: #d6deeb; }
-.carbon-editor.cols {
-  flex-direction: row;
-  gap: 1.75rem;
-  align-items: stretch;
-}
-.carbon-editor.cols .col {
-  flex: 1 1 0;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-}
-.carbon-editor.cols .col pre {
-  flex: 1;
-  font-size: 20px;
-  line-height: 34px;
-}
-.carbon-editor.cols .col-divider {
-  align-self: stretch;
-  position: relative;
-  width: 1px;
-  background: #1d3b53;
-  flex: 0 0 auto;
-}
-.carbon-editor.cols .col-divider::after {
-  content: "\2192";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: #011627;
-  border: 1px solid #1d3b53;
-  color: #82aaff;
-  font-size: 16px;
-}
-</pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot4-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;pun&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;❌&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Boot&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;num&quot;&gt;3&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;management&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;tracing&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;enabled&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;true&lt;/span&gt;
-
-&lt;span class=&quot;pun&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;✅&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Boot&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;num&quot;&gt;4&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;management&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;tracing&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;export&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;      &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;enabled&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;true&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;sampling&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;      &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;probability&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;num&quot;&gt;0.1&lt;/span&gt;
-
-&lt;span class=&quot;com&quot;&gt;// Custom auto-config:&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// @ConditionalOnEnabledTracingExport&lt;/span&gt;
-&lt;span class=&quot;ann&quot;&gt;@Configuration&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;proxyBeanMethods&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;kw&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;MyTracingConfig&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
-        </div>
-        <p class="codepen-links">
-          <a href="codepen/tweet-13.html" target="_blank" rel="noopener">Open pen preview</a>
-          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
-        </p>
-      </div>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(207/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-13" readonly rows="10">🚀 Spring Boot 4: Tracing property rename to watch.
-
-✅ management.tracing.enabled is gone
-
-✅ Use management.tracing.export.enabled
-
-✅ @ConditionalOnEnabledTracing → …TracingExport
-
-#SpringBoot4 #Observability</textarea>
-      <p class="copy-row">
-        <button type="button" class="copy-x-btn" data-target="tweet-copy-13">Copy for X</button>
-        <span class="copy-status" aria-live="polite"></span>
-      </p>
-      <p class="links">
-        <a href="drawio/tweet-13.drawio" download>.drawio diagram</a> ·
-        <a href="codepen/tweet-13.html" target="_blank" rel="noopener">CodePen preview</a> ·
-        <a href="sources/tweet-13.java" download>Source .java</a> ·
-        <a href="x-text/tweet-13.txt" download>X text</a>
-      </p>
-    </article>
-    <article id="tweet-14">
-      <h2>Tweet #14</h2>
-      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
-      <img src="png/tweet-14-diagram.png" alt="Diagram 14" width="720" class="asset-img"/>
-      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
-      <div class="codepen-wrap codepen-wrap--large">
-        <div class="codepen"
-             data-prefill='{"title": "Tweet 14 — spring-boot4-tips", "description": "Spring Boot snippet from codingstrain (spring-boot4-tips)", "tags": ["java", "springboot", "codingstrain"]}'
              data-height="924"
              data-theme-id="dark"
              data-default-tab="html,result"
@@ -2479,12 +2326,12 @@ body {
 &lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
-          <a href="codepen/tweet-14.html" target="_blank" rel="noopener">Open pen preview</a>
+          <a href="codepen/tweet-13.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
       <p class="tweet-copy-label">Copy for X <span class="x-char-count">(194/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-14" readonly rows="10">🚀 Spring Boot 4: New JmsClient alongside JmsTemplate.
+      <textarea class="tweet-copy" id="tweet-copy-13" readonly rows="10">🚀 Spring Boot 4: New JmsClient alongside JmsTemplate.
 
 ✅ Fluent, modern JMS API auto-configured
 
@@ -2494,24 +2341,24 @@ body {
 
 #SpringBoot4 #JMS</textarea>
       <p class="copy-row">
-        <button type="button" class="copy-x-btn" data-target="tweet-copy-14">Copy for X</button>
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-13">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
       </p>
       <p class="links">
-        <a href="drawio/tweet-14.drawio" download>.drawio diagram</a> ·
-        <a href="codepen/tweet-14.html" target="_blank" rel="noopener">CodePen preview</a> ·
-        <a href="sources/tweet-14.java" download>Source .java</a> ·
-        <a href="x-text/tweet-14.txt" download>X text</a>
+        <a href="drawio/tweet-13.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-13.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-13.java" download>Source .java</a> ·
+        <a href="x-text/tweet-13.txt" download>X text</a>
       </p>
     </article>
-    <article id="tweet-15">
-      <h2>Tweet #15</h2>
+    <article id="tweet-14">
+      <h2>Tweet #14</h2>
       <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
-      <img src="png/tweet-15-diagram.png" alt="Diagram 15" width="720" class="asset-img"/>
+      <img src="png/tweet-14-diagram.png" alt="Diagram 14" width="720" class="asset-img"/>
       <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
-             data-prefill='{"title": "Tweet 15 — spring-boot4-tips", "description": "Spring Boot snippet from codingstrain (spring-boot4-tips)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-prefill='{"title": "Tweet 14 — spring-boot4-tips", "description": "Spring Boot snippet from codingstrain (spring-boot4-tips)", "tags": ["java", "springboot", "codingstrain"]}'
              data-height="1200"
              data-theme-id="dark"
              data-default-tab="html,result"
@@ -2663,12 +2510,12 @@ body {
 &lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
-          <a href="codepen/tweet-15.html" target="_blank" rel="noopener">Open pen preview</a>
+          <a href="codepen/tweet-14.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
       <p class="tweet-copy-label">Copy for X <span class="x-char-count">(207/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-15" readonly rows="10">🚀 Spring Boot 4: Multiple TaskDecorator beans are supported.
+      <textarea class="tweet-copy" id="tweet-copy-14" readonly rows="10">🚀 Spring Boot 4: Multiple TaskDecorator beans are supported.
 
 ✅ Boot wraps them in a CompositeTaskDecorator
 
@@ -2678,24 +2525,24 @@ body {
 
 #SpringBoot4 #Async</textarea>
       <p class="copy-row">
-        <button type="button" class="copy-x-btn" data-target="tweet-copy-15">Copy for X</button>
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-14">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
       </p>
       <p class="links">
-        <a href="drawio/tweet-15.drawio" download>.drawio diagram</a> ·
-        <a href="codepen/tweet-15.html" target="_blank" rel="noopener">CodePen preview</a> ·
-        <a href="sources/tweet-15.java" download>Source .java</a> ·
-        <a href="x-text/tweet-15.txt" download>X text</a>
+        <a href="drawio/tweet-14.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-14.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-14.java" download>Source .java</a> ·
+        <a href="x-text/tweet-14.txt" download>X text</a>
       </p>
     </article>
-    <article id="tweet-16">
-      <h2>Tweet #16</h2>
+    <article id="tweet-15">
+      <h2>Tweet #15</h2>
       <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
-      <img src="png/tweet-16-diagram.png" alt="Diagram 16" width="720" class="asset-img"/>
+      <img src="png/tweet-15-diagram.png" alt="Diagram 15" width="720" class="asset-img"/>
       <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
-             data-prefill='{"title": "Tweet 16 — spring-boot4-tips", "description": "Spring Boot snippet from codingstrain (spring-boot4-tips)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-prefill='{"title": "Tweet 15 — spring-boot4-tips", "description": "Spring Boot snippet from codingstrain (spring-boot4-tips)", "tags": ["java", "springboot", "codingstrain"]}'
              data-height="888"
              data-theme-id="dark"
              data-default-tab="html,result"
@@ -2838,12 +2685,12 @@ body {
 &lt;span class=&quot;txt&quot;&gt;      &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;backoff&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;num&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;ms&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
-          <a href="codepen/tweet-16.html" target="_blank" rel="noopener">Open pen preview</a>
+          <a href="codepen/tweet-15.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
       <p class="tweet-copy-label">Copy for X <span class="x-char-count">(231/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-16" readonly rows="10">🚀 Spring Boot 4: @ConfigurationPropertiesSource for external types.
+      <textarea class="tweet-copy" id="tweet-copy-15" readonly rows="10">🚀 Spring Boot 4: @ConfigurationPropertiesSource for external types.
 
 ✅ Metadata for types living in another module
 
@@ -2853,24 +2700,24 @@ body {
 
 #SpringBoot4 #Config</textarea>
       <p class="copy-row">
-        <button type="button" class="copy-x-btn" data-target="tweet-copy-16">Copy for X</button>
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-15">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
       </p>
       <p class="links">
-        <a href="drawio/tweet-16.drawio" download>.drawio diagram</a> ·
-        <a href="codepen/tweet-16.html" target="_blank" rel="noopener">CodePen preview</a> ·
-        <a href="sources/tweet-16.java" download>Source .java</a> ·
-        <a href="x-text/tweet-16.txt" download>X text</a>
+        <a href="drawio/tweet-15.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-15.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-15.java" download>Source .java</a> ·
+        <a href="x-text/tweet-15.txt" download>X text</a>
       </p>
     </article>
-    <article id="tweet-17">
-      <h2>Tweet #17</h2>
+    <article id="tweet-16">
+      <h2>Tweet #16</h2>
       <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
-      <img src="png/tweet-17-diagram.png" alt="Diagram 17" width="720" class="asset-img"/>
+      <img src="png/tweet-16-diagram.png" alt="Diagram 16" width="720" class="asset-img"/>
       <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
-             data-prefill='{"title": "Tweet 17 — spring-boot4-tips", "description": "Spring Boot snippet from codingstrain (spring-boot4-tips)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-prefill='{"title": "Tweet 16 — spring-boot4-tips", "description": "Spring Boot snippet from codingstrain (spring-boot4-tips)", "tags": ["java", "springboot", "codingstrain"]}'
              data-height="924"
              data-theme-id="dark"
              data-default-tab="html,result"
@@ -3014,12 +2861,12 @@ body {
 &lt;span class=&quot;txt&quot;&gt;      &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;details&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;always&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
-          <a href="codepen/tweet-17.html" target="_blank" rel="noopener">Open pen preview</a>
+          <a href="codepen/tweet-16.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
       <p class="tweet-copy-label">Copy for X <span class="x-char-count">(220/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-17" readonly rows="10">🚀 Spring Boot 4: MongoDB health no longer needs Spring Data.
+      <textarea class="tweet-copy" id="tweet-copy-16" readonly rows="10">🚀 Spring Boot 4: MongoDB health no longer needs Spring Data.
 
 ✅ Indicators live in spring-boot-mongodb
 
@@ -3029,24 +2876,24 @@ body {
 
 #SpringBoot4 #MongoDB</textarea>
       <p class="copy-row">
-        <button type="button" class="copy-x-btn" data-target="tweet-copy-17">Copy for X</button>
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-16">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
       </p>
       <p class="links">
-        <a href="drawio/tweet-17.drawio" download>.drawio diagram</a> ·
-        <a href="codepen/tweet-17.html" target="_blank" rel="noopener">CodePen preview</a> ·
-        <a href="sources/tweet-17.java" download>Source .java</a> ·
-        <a href="x-text/tweet-17.txt" download>X text</a>
+        <a href="drawio/tweet-16.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-16.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-16.java" download>Source .java</a> ·
+        <a href="x-text/tweet-16.txt" download>X text</a>
       </p>
     </article>
-    <article id="tweet-18">
-      <h2>Tweet #18</h2>
+    <article id="tweet-17">
+      <h2>Tweet #17</h2>
       <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
-      <img src="png/tweet-18-diagram.png" alt="Diagram 18" width="720" class="asset-img"/>
+      <img src="png/tweet-17-diagram.png" alt="Diagram 17" width="720" class="asset-img"/>
       <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
-             data-prefill='{"title": "Tweet 18 — spring-boot4-tips", "description": "Spring Boot snippet from codingstrain (spring-boot4-tips)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-prefill='{"title": "Tweet 17 — spring-boot4-tips", "description": "Spring Boot snippet from codingstrain (spring-boot4-tips)", "tags": ["java", "springboot", "codingstrain"]}'
              data-height="780"
              data-theme-id="dark"
              data-default-tab="html,result"
@@ -3186,12 +3033,12 @@ body {
 &lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
-          <a href="codepen/tweet-18.html" target="_blank" rel="noopener">Open pen preview</a>
+          <a href="codepen/tweet-17.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
       <p class="tweet-copy-label">Copy for X <span class="x-char-count">(177/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-18" readonly rows="10">🚀 Spring Boot 4: Redis static master/replica (Lettuce).
+      <textarea class="tweet-copy" id="tweet-copy-17" readonly rows="10">🚀 Spring Boot 4: Redis static master/replica (Lettuce).
 
 ✅ Set spring.data.redis.masterreplica.nodes
 
@@ -3201,24 +3048,24 @@ body {
 
 #SpringBoot4 #Redis</textarea>
       <p class="copy-row">
-        <button type="button" class="copy-x-btn" data-target="tweet-copy-18">Copy for X</button>
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-17">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
       </p>
       <p class="links">
-        <a href="drawio/tweet-18.drawio" download>.drawio diagram</a> ·
-        <a href="codepen/tweet-18.html" target="_blank" rel="noopener">CodePen preview</a> ·
-        <a href="sources/tweet-18.java" download>Source .java</a> ·
-        <a href="x-text/tweet-18.txt" download>X text</a>
+        <a href="drawio/tweet-17.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-17.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-17.java" download>Source .java</a> ·
+        <a href="x-text/tweet-17.txt" download>X text</a>
       </p>
     </article>
-    <article id="tweet-19">
-      <h2>Tweet #19</h2>
+    <article id="tweet-18">
+      <h2>Tweet #18</h2>
       <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
-      <img src="png/tweet-19-diagram.png" alt="Diagram 19" width="720" class="asset-img"/>
+      <img src="png/tweet-18-diagram.png" alt="Diagram 18" width="720" class="asset-img"/>
       <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
-             data-prefill='{"title": "Tweet 19 — spring-boot4-tips", "description": "Spring Boot snippet from codingstrain (spring-boot4-tips)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-prefill='{"title": "Tweet 18 — spring-boot4-tips", "description": "Spring Boot snippet from codingstrain (spring-boot4-tips)", "tags": ["java", "springboot", "codingstrain"]}'
              data-height="744"
              data-theme-id="dark"
              data-default-tab="html,result"
@@ -3357,12 +3204,12 @@ body {
 &lt;span class=&quot;txt&quot;&gt;      &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;probability&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;num&quot;&gt;1.0&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
-          <a href="codepen/tweet-19.html" target="_blank" rel="noopener">Open pen preview</a>
+          <a href="codepen/tweet-18.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
       <p class="tweet-copy-label">Copy for X <span class="x-char-count">(209/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-19" readonly rows="10">🚀 Spring Boot 4: Redis observability uses the Observation API.
+      <textarea class="tweet-copy" id="tweet-copy-18" readonly rows="10">🚀 Spring Boot 4: Redis observability uses the Observation API.
 
 ✅ Metrics and spans from Redis commands
 
@@ -3372,24 +3219,24 @@ body {
 
 #SpringBoot4 #Redis</textarea>
       <p class="copy-row">
-        <button type="button" class="copy-x-btn" data-target="tweet-copy-19">Copy for X</button>
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-18">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
       </p>
       <p class="links">
-        <a href="drawio/tweet-19.drawio" download>.drawio diagram</a> ·
-        <a href="codepen/tweet-19.html" target="_blank" rel="noopener">CodePen preview</a> ·
-        <a href="sources/tweet-19.java" download>Source .java</a> ·
-        <a href="x-text/tweet-19.txt" download>X text</a>
+        <a href="drawio/tweet-18.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-18.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-18.java" download>Source .java</a> ·
+        <a href="x-text/tweet-18.txt" download>X text</a>
       </p>
     </article>
-    <article id="tweet-20">
-      <h2>Tweet #20</h2>
+    <article id="tweet-19">
+      <h2>Tweet #19</h2>
       <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
-      <img src="png/tweet-20-diagram.png" alt="Diagram 20" width="720" class="asset-img"/>
+      <img src="png/tweet-19-diagram.png" alt="Diagram 19" width="720" class="asset-img"/>
       <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
-             data-prefill='{"title": "Tweet 20 — spring-boot4-tips", "description": "Spring Boot snippet from codingstrain (spring-boot4-tips)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-prefill='{"title": "Tweet 19 — spring-boot4-tips", "description": "Spring Boot snippet from codingstrain (spring-boot4-tips)", "tags": ["java", "springboot", "codingstrain"]}'
              data-height="852"
              data-theme-id="dark"
              data-default-tab="html,result"
@@ -3531,12 +3378,12 @@ body {
 &lt;span class=&quot;com&quot;&gt;// Json HTTP message converter is registered ahead of fallbacks&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
-          <a href="codepen/tweet-20.html" target="_blank" rel="noopener">Open pen preview</a>
+          <a href="codepen/tweet-19.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
       <p class="tweet-copy-label">Copy for X <span class="x-char-count">(234/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-20" readonly rows="10">🚀 Spring Boot 4: Kotlin Serialization gets a first-class starter.
+      <textarea class="tweet-copy" id="tweet-copy-19" readonly rows="10">🚀 Spring Boot 4: Kotlin Serialization gets a first-class starter.
 
 ✅ spring-boot-starter-kotlinx-serialization-json
 
@@ -3545,6 +3392,181 @@ body {
 ✅ Configure via spring.kotlinx.serialization.json.*
 
 #SpringBoot4 #Kotlin</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-19">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+      </p>
+      <p class="links">
+        <a href="drawio/tweet-19.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-19.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-19.java" download>Source .java</a> ·
+        <a href="x-text/tweet-19.txt" download>X text</a>
+      </p>
+    </article>
+    <article id="tweet-20">
+      <h2>Tweet #20</h2>
+      <p class="asset-label">Architecture — <a href="https://app.diagrams.net/" target="_blank" rel="noopener">diagrams.net</a></p>
+      <img src="png/tweet-20-diagram.png" alt="Diagram 20" width="720" class="asset-img"/>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap codepen-wrap--large">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 20 — spring-boot4-tips", "description": "Spring Boot snippet from codingstrain (spring-boot4-tips)", "tags": ["java", "springboot", "codingstrain"]}'
+             data-height="888"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: stretch;
+  padding: 0.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+.carbon {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: calc(100vh - 1rem);
+  max-width: none;
+  border-radius: 10px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.carbon-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 36px;
+  padding: 0 16px;
+  background: #252836;
+  flex-shrink: 0;
+}
+.carbon-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.carbon-dot.red { background: #ff5f56; }
+.carbon-dot.yellow { background: #ffbd2e; }
+.carbon-dot.green { background: #27c93f; }
+.carbon-module {
+  margin-left: auto;
+  font: 13px/1 system-ui, sans-serif;
+  color: #8b949e;
+  letter-spacing: 0.02em;
+}
+.carbon-editor {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background: #011627;
+  padding: 1.5rem 2rem 1.75rem;
+  overflow: auto;
+}
+.carbon-editor pre {
+  margin: 0;
+  flex: 1;
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 20px;
+  line-height: 34px;
+  white-space: pre;
+  tab-size: 4;
+}
+.carbon-editor .kw { color: #c792ea; }
+.carbon-editor .ann { color: #ffb86c; }
+.carbon-editor .str { color: #c3e88d; }
+.carbon-editor .typ { color: #ffcb6b; }
+.carbon-editor .met { color: #82aaff; }
+.carbon-editor .com { color: #5c6370; }
+.carbon-editor .num { color: #f78c6c; }
+.carbon-editor .pun { color: #89ddff; }
+.carbon-editor .txt { color: #d6deeb; }
+.carbon-editor.cols {
+  flex-direction: row;
+  gap: 1.75rem;
+  align-items: stretch;
+}
+.carbon-editor.cols .col {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.carbon-editor.cols .col pre {
+  flex: 1;
+  font-size: 20px;
+  line-height: 34px;
+}
+.carbon-editor.cols .col-divider {
+  align-self: stretch;
+  position: relative;
+  width: 1px;
+  background: #1d3b53;
+  flex: 0 0 auto;
+}
+.carbon-editor.cols .col-divider::after {
+  content: "\2192";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #011627;
+  border: 1px solid #1d3b53;
+  color: #82aaff;
+  font-size: 16px;
+}
+</pre>
+          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot4-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;dependency&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;groupId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;springframework&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;groupId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;artifactId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;spring&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;starter&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;restclient&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;artifactId&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;dependency&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;ann&quot;&gt;@Bean&lt;/span&gt;
+&lt;span class=&quot;typ&quot;&gt;RestClient&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;catalogClient&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;RestClient&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Builder&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;builder&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;builder&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;baseUrl&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;https://catalog.internal&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;pun&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;application&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;yml&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;spring&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;clients&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;      &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;timeout&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;num&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;s&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;      &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;timeout&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;num&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;s&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-20.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(213/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-20" readonly rows="10">🚀 Spring Boot 4: Dedicated RestClient starter.
+
+✅ spring-boot-starter-restclient for imperative HTTP
+
+✅ WebClient → spring-boot-starter-webclient
+
+✅ Unified spring.http.clients.* settings
+
+#SpringBoot4 #RestClient</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-20">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -3560,7 +3582,7 @@ body {
     <a class="page-nav disabled" href="#">← Prev</a>
     <span class="page-current">1</span> · <a href="page-2.html">2</a> · <a href="page-3.html">3</a>
     <a class="page-nav" href="page-2.html">Next →</a>
-    <span class="page-meta">Tweets #1–#20 of 50 · page 1/3</span>
+    <span class="page-meta">Tweets #1–#20 of 49 · page 1/3</span>
   </nav>
   <script async src="https://public.codepenassets.com/embed/index.js"></script>
 

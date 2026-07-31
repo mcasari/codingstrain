@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: Built on Jakarta EE 11 + Servlet 6.1.
+🚀 Spring Boot 4: Elasticsearch API key authentication.
 
-✅ JPA 3.2, Validation 3.1, Servlet 6.1
+✅ New spring.elasticsearch.api-key property
 
-✅ Hibernate ORM 7.x on the classpath
+✅ Cleaner than embedding basic auth in the URI
 
-✅ Verify container / server Servlet level before deploy
+✅ Rotate keys without changing client code
 
-#SpringBoot4 #JakartaEE
+#SpringBoot4 #Elasticsearch

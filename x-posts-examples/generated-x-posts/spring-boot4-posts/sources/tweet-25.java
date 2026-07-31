@@ -1,17 +1,15 @@
-# application.yml
-spring:
-  threads:
-    virtual:
-      enabled: true
+// jakarta.* imports stay — but versions moved up
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.servlet.http.HttpServletRequest;
 
-@Bean
-RestClient api(RestClient.Builder builder) {
-    // Boot wires JDK HttpClient with virtual threads
-    return builder.baseUrl("https://api.example.com").build();
+@Entity
+public class Product {
+    @Id Long id;
+    @NotBlank String name;
 }
 
-@GetMapping("/proxy/{id}")
-User proxy(@PathVariable Long id) {
-    return api.get().uri("/users/{id}", id)
-              .retrieve().body(User.class);
-}
+// Boot parent manages:
+// jakarta.servlet-api 6.1, jakarta.persistence 3.2,
+// hibernate 7.x, validation 3.1

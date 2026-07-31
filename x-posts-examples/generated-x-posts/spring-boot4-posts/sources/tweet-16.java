@@ -1,18 +1,19 @@
-// In a shared library module:
-@ConfigurationPropertiesSource
-public record RetrySettings(int maxAttempts, Duration backoff) {}
-
-// In the app module:
-@ConfigurationProperties(prefix = "app.http")
-public record HttpClientProperties(
-    String baseUrl,
-    RetrySettings retry  // sourced from the other module
-) {}
+<!-- Driver-only service still gets /actuator/health -->
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-mongodb</artifactId>
+</dependency>
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-actuator</artifactId>
+</dependency>
 
 # application.yml
-app:
-  http:
-    base-url: https://api.example.com
-    retry:
-      max-attempts: 3
-      backoff: 200ms
+spring:
+  mongodb:
+    uri: mongodb://localhost:27017/orders
+
+management:
+  endpoint:
+    health:
+      show-details: always

@@ -1,18 +1,16 @@
+<!-- ❌ Boot 3 style -->
 <dependency>
-  <groupId>org.springframework.boot</groupId>
-  <artifactId>spring-boot-starter-restclient</artifactId>
+  <groupId>org.flywaydb</groupId>
+  <artifactId>flyway-core</artifactId>
 </dependency>
 
-@Bean
-RestClient catalogClient(RestClient.Builder builder) {
-    return builder
-        .baseUrl("https://catalog.internal")
-        .build();
-}
+<!-- ✅ Boot 4 -->
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-flyway</artifactId>
+</dependency>
 
 # application.yml
 spring:
-  http:
-    clients:
-      connect-timeout: 2s
-      read-timeout: 5s
+  flyway:
+    locations: classpath:db/migration

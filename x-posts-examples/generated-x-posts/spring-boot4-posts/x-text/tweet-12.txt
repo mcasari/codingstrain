@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: Add spring-boot-properties-migrator while upgrading.
+💡 Spring Boot 4: The “turn tracing on” property moved.
 
-✅ Prints renamed/removed property diagnostics
+✅ Old key management.tracing.enabled is gone
 
-✅ Temporarily remaps old keys at runtime
+✅ Use management.tracing.export.enabled instead
 
-✅ Remove it once application.yml is clean
+✅ Custom config: @ConditionalOnEnabledTracing → …TracingExport
 
-#SpringBoot4 #Migration
+#SpringBoot4 #Observability

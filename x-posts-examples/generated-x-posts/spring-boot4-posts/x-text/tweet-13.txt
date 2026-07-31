@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: Tracing property rename to watch.
+🚀 Spring Boot 4: New JmsClient alongside JmsTemplate.
 
-✅ management.tracing.enabled is gone
+✅ Fluent, modern JMS API auto-configured
 
-✅ Use management.tracing.export.enabled
+✅ JmsTemplate still works unchanged
 
-✅ @ConditionalOnEnabledTracing → …TracingExport
+✅ Prefer JmsClient for new messaging code
 
-#SpringBoot4 #Observability
+#SpringBoot4 #JMS

@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: Undertow support is removed.
+💡 Spring Boot 4: Config keys move — use properties-migrator as a temporary guide.
 
-✅ Servlet 6.1 baseline — Undertow isn’t there yet
+✅ Add it → startup logs tell you which keys renamed
 
-✅ Stick with Tomcat or Jetty starters
+✅ Old keys still work while you fix application.yml
 
-✅ Don’t deploy Boot 4 to old servlet containers
+✅ Update the keys, then delete the dependency
 
-#SpringBoot4 #Servlet
+#SpringBoot4 #Migration

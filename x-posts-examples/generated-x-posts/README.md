@@ -1,6 +1,6 @@
 # X Post Generator
 
-Shared tooling and master `tweets.json` for **309** codingstrain tweets.
+Shared tooling and master `tweets.json` for **308** codingstrain tweets.
 
 ## Categories
 
@@ -8,7 +8,7 @@ Shared tooling and master `tweets.json` for **309** codingstrain tweets.
 |--------|-------|
 | [`java-posts/`](java-posts/) | 135 Java tweets |
 | [`spring-boot-posts/`](spring-boot-posts/) | 124 Spring Boot tweets |
-| [`spring-boot4-posts/`](spring-boot4-posts/) | 50 Spring Boot 4 tweets |
+| [`spring-boot4-posts/`](spring-boot4-posts/) | 49 Spring Boot 4 tweets |
 
 Open [`index.html`](index.html) to pick a category.
 

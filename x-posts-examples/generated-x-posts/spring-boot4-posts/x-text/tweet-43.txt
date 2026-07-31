@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: Spring Security 7 comes along for the ride.
+🚀 Spring Boot 4: Tomcat static resource cache size is configurable.
 
-✅ Security filter chain DSL stays familiar
+✅ server.tomcat.resource.cache-max-size
 
-✅ Stronger crypto defaults — review customizers
+✅ Tune when serving many static assets
 
-✅ Use spring-boot-starter-security + …-security-test
+✅ Defaults may surprise large SPAs
 
-#SpringBoot4 #SpringSecurity
+#SpringBoot4 #Tomcat

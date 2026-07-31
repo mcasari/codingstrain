@@ -1,15 +1,15 @@
-// jakarta.* imports stay — but versions moved up
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.servlet.http.HttpServletRequest;
+# application.yml
+spring:
+  elasticsearch:
+    uris: https://search.example.com:9200
+    api-key: ${ELASTIC_API_KEY}
 
-@Entity
-public class Product {
-    @Id Long id;
-    @NotBlank String name;
+// Inject ElasticsearchClient / RestClient as usual
+@Service
+public class ProductSearch {
+    private final ElasticsearchClient client;
+
+    public ProductSearch(ElasticsearchClient client) {
+        this.client = client;
+    }
 }
-
-// Boot parent manages:
-// jakarta.servlet-api 6.1, jakarta.persistence 3.2,
-// hibernate 7.x, validation 3.1

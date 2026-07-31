@@ -1,15 +1,14 @@
-# application.yml
-spring:
-  data:
-    redis:
-      masterreplica:
-        nodes:
-          - redis://master:6379
-          - redis://replica-1:6379
-          - redis://replica-2:6379
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-data-redis</artifactId>
+</dependency>
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-opentelemetry</artifactId>
+</dependency>
 
-// Use RedisTemplate / StringRedisTemplate as usual
-@Bean
-StringRedisTemplate redis(RedisConnectionFactory factory) {
-    return new StringRedisTemplate(factory);
-}
+# Traces will include Redis command spans automatically
+management:
+  tracing:
+    sampling:
+      probability: 1.0
