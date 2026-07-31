@@ -5,5 +5,3 @@
 // ✅ 🔴 Active HTTP requests failing abruptly
 //
 // ✅ 🔴 Database rolling back unexpectedly
-//
-// #SpringBoot

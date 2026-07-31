@@ -5,5 +5,3 @@
 // ✅ ess JDBC overhead
 //
 // ✅ aster bulk operations
-//
-// #SpringBoot #JavaDev

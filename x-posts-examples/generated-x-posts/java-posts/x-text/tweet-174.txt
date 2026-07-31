@@ -1,5 +1,9 @@
-💡 Java: Do not apply logic in Stream.peek(), use it only for debugging purposes.
+💡 Use Stream.peek() only for debugging — not for real logic.
 
-✅ #Java #JavaDev
+✅ peek runs as a side effect; easy to miss or drop
 
-#Java #JavaDev
+✅ Intermediate ops may be skipped if the pipeline short-circuits
+
+✅ Prefer map / forEach for intentional work
+
+#Java #Streams

@@ -5,5 +5,3 @@
 // ✅ Make API independent on the persistence layer
 //
 // ✅ Prevent lazy loading problems
-//
-// #SpringBoot #SoftwareEngineer
