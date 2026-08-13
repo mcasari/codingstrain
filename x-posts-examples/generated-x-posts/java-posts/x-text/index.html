@@ -99,11 +99,15 @@
     </article>
     <article>
       <h2>Tweet #43</h2>
-      <p class="preview">💡 Parsing numbers with commas requires locale awareness.</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(129/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-43" readonly rows="10">💡 Parsing numbers with commas requires locale awareness.
+      <p class="preview">💡 Java: Parsing 1.234,56 needs a Locale — not Double.parseDouble.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(214/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-43" readonly rows="10">💡 Java: Parsing 1.234,56 needs a Locale — not Double.parseDouble.
 
-✅ Parsing numbers with commas requires locale awareness
+✅ Comma/dot meaning depends on the country
+
+✅ Use NumberFormat.getInstance(locale)
+
+✅ Wrong locale → wrong number or ParseException
 
 #Java #JavaDev</textarea>
       <p class="copy-row">

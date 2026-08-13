@@ -22,8 +22,8 @@
   {
     "id": 43,
     "module": "java-miscellaneous-tips",
-    "body": "💡 Parsing numbers with commas requires locale awareness.\n\n✅ Parsing numbers with commas requires locale awareness\n\n✅ Runnable sample: `java-miscellaneous-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
-    "code": "NumberFormat format = NumberFormat.getInstance(Locale.ITALY);\nNumber number = format.parse(\"123.111,234\");",
+    "body": "💡 Java: Parsing `1.234,56` needs a `Locale` — not `Double.parseDouble`.\n\n✅ Comma/dot meaning depends on the country\n\n✅ Use `NumberFormat.getInstance(locale)`\n\n✅ Wrong locale → wrong number or `ParseException`",
+    "code": "// ❌ Assumes US/UK style — fails or misreads European input\ndouble bad = Double.parseDouble(\"1.234,56\"); // NumberFormatException\n\n// ✅ Locale-aware parsing (Italy: . thousands, , decimal)\nNumberFormat it = NumberFormat.getInstance(Locale.ITALY);\nNumber value = it.parse(\"1.234,56\"); // 1234.56\n\ndouble n = value.doubleValue();\n",
     "tags": "#Java #JavaDev",
     "codepen_style": "carbon",
     "codepen_large": true,

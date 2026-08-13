@@ -1,5 +1,9 @@
-💡 Parsing numbers with commas requires locale awareness.
+💡 Java: Parsing 1.234,56 needs a Locale — not Double.parseDouble.
 
-✅ Parsing numbers with commas requires locale awareness
+✅ Comma/dot meaning depends on the country
+
+✅ Use NumberFormat.getInstance(locale)
+
+✅ Wrong locale → wrong number or ParseException
 
 #Java #JavaDev

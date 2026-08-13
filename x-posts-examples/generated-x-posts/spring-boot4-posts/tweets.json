@@ -142,11 +142,12 @@
   {
     "id": 14,
     "module": "spring-boot4-tips",
-    "body": "🚀 Spring Boot 4: Multiple `TaskDecorator` beans are supported.\n\n✅ Boot wraps them in a `CompositeTaskDecorator`\n\n✅ Order with `@Order` / `Ordered`\n\n✅ Great for MDC + security context propagation",
+    "body": "💡 Spring Boot 4: Stack multiple `TaskDecorator`s for async work.\n\n✅ Each one can copy context to the worker thread\n\n✅ Boot combines them — order with `@Order`\n\n✅ Typical pair: MDC (logs) + security (user)\n\n#SpringBoot4 #Async",
     "code": "@Component\n@Order(1)\nclass MdcTaskDecorator implements TaskDecorator {\n    @Override\n    public Runnable decorate(Runnable runnable) {\n        Map<String, String> context = MDC.getCopyOfContextMap();\n        return () -> {\n            if (context != null) MDC.setContextMap(context);\n            try { runnable.run(); }\n            finally { MDC.clear(); }\n        };\n    }\n}\n\n@Component\n@Order(2)\nclass SecurityTaskDecorator implements TaskDecorator {\n    @Override\n    public Runnable decorate(Runnable runnable) {\n        var auth = SecurityContextHolder.getContext();\n        return () -> {\n            SecurityContextHolder.setContext(auth);\n            try { runnable.run(); }\n            finally { SecurityContextHolder.clearContext(); }\n        };\n    }\n}",
     "tags": "#SpringBoot4 #Async",
     "codepen_style": "carbon",
     "codepen_large": true,
+    "codepen_columns": 2,
     "category": "spring-boot4"
   },
   {
