@@ -380,17 +380,17 @@
   {
     "id": 44,
     "module": "java-miscellaneous-tips",
-    "body": "💡 Don't assume . is always the decimal separator.\n\n✅ Don't assume . is always the decimal separator\n\n✅ Runnable sample: `java-miscellaneous-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
-    "code": "DecimalFormatSymbols symbols = new DecimalFormatSymbols(Locale.ITALY);\nDecimalFormat df = new DecimalFormat(\"#,###.##\", symbols);",
-    "tags": "#Java",
+    "body": "💡 Java: Don’t assume `.` is the decimal separator when formatting.\n\n✅ Patterns like `#,###.##` still use locale symbols\n\n✅ Set symbols with `DecimalFormatSymbols(locale)`\n\n✅ Italy prints `1.234,56` — US prints `1,234.56`",
+    "code": "double n = 1234.56;\n\n// ❌ Default JVM locale — may not match your users\nDecimalFormat usStyle = new DecimalFormat(\"#,###.##\");\n// often: \"1,234.56\"\n\n// ✅ Explicit symbols for the target locale\nDecimalFormatSymbols it = new DecimalFormatSymbols(Locale.ITALY);\nDecimalFormat italian = new DecimalFormat(\"#,###.##\", it);\nString text = italian.format(n); // \"1.234,56\"\n",
+    "tags": "#Java #JavaDev",
     "codepen_style": "carbon",
     "codepen_large": true
   },
   {
     "id": 45,
     "module": "java-miscellaneous-tips",
-    "body": "💡 Know the difference between shallow and deep clone.\n\n✅ Know the difference between shallow and deep clone\n\n✅ Runnable sample: `java-miscellaneous-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
-    "code": "Main deepClone = (Main) super.clone();\ndeepClone.setDependency((Dependency) this.dependency.clone());",
+    "body": "💡 Java: Shallow clone copies the shell — nested objects stay shared.\n\n✅ `super.clone()` alone = shallow copy\n\n✅ Deep clone also clones nested fields\n\n✅ Shared refs → changing one copy changes the other\n\n#Java #SoftwareEngineering",
+    "code": "// ❌ Shallow — dependency is still the same instance\nMain shallow = (Main) super.clone();\n// shallow.dependency == this.dependency  → true\n\n// ✅ Deep — clone the nested object too\nMain deep = (Main) super.clone();\ndeep.setDependency((Dependency) this.dependency.clone());\n// deep.dependency == this.dependency  → false\n",
     "tags": "#Java #SoftwareEngineering",
     "codepen_style": "carbon",
     "codepen_large": true

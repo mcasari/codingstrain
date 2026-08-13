@@ -1,5 +1,9 @@
-💡 Don't assume . is always the decimal separator.
+💡 Java: Don’t assume . is the decimal separator when formatting.
 
-✅ Don't assume . is always the decimal separator
+✅ Patterns like #,###.## still use locale symbols
 
-#Java
+✅ Set symbols with DecimalFormatSymbols(locale)
+
+✅ Italy prints 1.234,56 — US prints 1,234.56
+
+#Java #JavaDev

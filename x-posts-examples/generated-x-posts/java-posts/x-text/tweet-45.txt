@@ -1,5 +1,9 @@
-💡 Know the difference between shallow and deep clone.
+💡 Java: Shallow clone copies the shell — nested objects stay shared.
 
-✅ Know the difference between shallow and deep clone
+✅ super.clone() alone = shallow copy
+
+✅ Deep clone also clones nested fields
+
+✅ Shared refs → changing one copy changes the other
 
 #Java #SoftwareEngineering

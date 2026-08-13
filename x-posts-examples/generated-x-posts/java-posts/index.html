@@ -677,20 +677,32 @@ body {
   font-size: 16px;
 }
 </pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;java-miscellaneous-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;typ&quot;&gt;DecimalFormatSymbols&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;symbols&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;DecimalFormatSymbols&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Locale&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;ITALY&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;typ&quot;&gt;DecimalFormat&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;DecimalFormat&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;#,###.##&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;symbols&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;java-miscellaneous-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;kw&quot;&gt;double&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;num&quot;&gt;1234.56&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;com&quot;&gt;// ❌ Default JVM locale — may not match your users&lt;/span&gt;
+&lt;span class=&quot;typ&quot;&gt;DecimalFormat&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;usStyle&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;DecimalFormat&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;#,###.##&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// often: &amp;quot;1,234.56&amp;quot;&lt;/span&gt;
+
+&lt;span class=&quot;com&quot;&gt;// ✅ Explicit symbols for the target locale&lt;/span&gt;
+&lt;span class=&quot;typ&quot;&gt;DecimalFormatSymbols&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;DecimalFormatSymbols&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Locale&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;ITALY&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;typ&quot;&gt;DecimalFormat&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;italian&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;DecimalFormat&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;#,###.##&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;typ&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;italian&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;com&quot;&gt;// &amp;quot;1.234,56&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-44.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(106/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-44" readonly rows="10">💡 Don't assume . is always the decimal separator.
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(226/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-44" readonly rows="10">💡 Java: Don’t assume . is the decimal separator when formatting.
 
-✅ Don't assume . is always the decimal separator
+✅ Patterns like #,###.## still use locale symbols
 
-#Java</textarea>
+✅ Set symbols with DecimalFormatSymbols(locale)
+
+✅ Italy prints 1.234,56 — US prints 1,234.56
+
+#Java #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-44">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -832,18 +844,28 @@ body {
   font-size: 16px;
 }
 </pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;java-miscellaneous-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;typ&quot;&gt;Main&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;deepClone&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Main&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;clone&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;deepClone&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;setDependency&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Dependency&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;dependency&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;clone&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;java-miscellaneous-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// ❌ Shallow — dependency is still the same instance&lt;/span&gt;
+&lt;span class=&quot;typ&quot;&gt;Main&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;shallow&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Main&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;clone&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// shallow.dependency == this.dependency  → true&lt;/span&gt;
+
+&lt;span class=&quot;com&quot;&gt;// ✅ Deep — clone the nested object too&lt;/span&gt;
+&lt;span class=&quot;typ&quot;&gt;Main&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;deep&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Main&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;clone&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;deep&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;setDependency&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Dependency&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;dependency&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;clone&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// deep.dependency == this.dependency  → false&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-45.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(135/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-45" readonly rows="10">💡 Know the difference between shallow and deep clone.
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(227/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-45" readonly rows="10">💡 Java: Shallow clone copies the shell — nested objects stay shared.
 
-✅ Know the difference between shallow and deep clone
+✅ super.clone() alone = shallow copy
+
+✅ Deep clone also clones nested fields
+
+✅ Shared refs → changing one copy changes the other
 
 #Java #SoftwareEngineering</textarea>
       <p class="copy-row">

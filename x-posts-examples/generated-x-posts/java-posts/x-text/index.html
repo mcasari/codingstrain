@@ -119,13 +119,17 @@
     </article>
     <article>
       <h2>Tweet #44</h2>
-      <p class="preview">💡 Don&#x27;t assume . is always the decimal separator.</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(106/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-44" readonly rows="10">💡 Don't assume . is always the decimal separator.
+      <p class="preview">💡 Java: Don’t assume . is the decimal separator when formatting.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(226/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-44" readonly rows="10">💡 Java: Don’t assume . is the decimal separator when formatting.
 
-✅ Don't assume . is always the decimal separator
+✅ Patterns like #,###.## still use locale symbols
 
-#Java</textarea>
+✅ Set symbols with DecimalFormatSymbols(locale)
+
+✅ Italy prints 1.234,56 — US prints 1,234.56
+
+#Java #JavaDev</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-44">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -135,11 +139,15 @@
     </article>
     <article>
       <h2>Tweet #45</h2>
-      <p class="preview">💡 Know the difference between shallow and deep clone.</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(135/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-45" readonly rows="10">💡 Know the difference between shallow and deep clone.
+      <p class="preview">💡 Java: Shallow clone copies the shell — nested objects stay shared.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(227/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-45" readonly rows="10">💡 Java: Shallow clone copies the shell — nested objects stay shared.
 
-✅ Know the difference between shallow and deep clone
+✅ super.clone() alone = shallow copy
+
+✅ Deep clone also clones nested fields
+
+✅ Shared refs → changing one copy changes the other
 
 #Java #SoftwareEngineering</textarea>
       <p class="copy-row">
