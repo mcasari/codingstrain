@@ -1,5 +1,9 @@
-💡 Java Tip 💡: Use Optional.ifPresentOrElse() for elegant null handling (Java 9+). #Java #Optional
+💡 Java: Use Optional.ifPresentOrElse() instead of if (x != null).
 
-✅ Java Tip 💡: Use Optional.ifPresentOrElse() for elegant null handling (Java 9+). #Java #Optional
+✅ One call handles present and empty cases
+
+✅ Avoids isPresent() + get() boilerplate
+
+✅ Good when both branches run side effects
 
 #Java #Optional

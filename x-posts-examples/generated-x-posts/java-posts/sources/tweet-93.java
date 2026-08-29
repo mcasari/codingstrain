@@ -1,7 +1,16 @@
-// 💡 Java Tip 💡: Avoid exposing internal object state. Use DTOs when needed. #Java #Encapsulation
-//
-// ✅ Java Tip 💡: Avoid exposing internal object state. Use DTOs when needed. #Java #Encapsulation
-//
-// ✅ Runnable sample: `java-tips`
-//
-// ✅ Architecture diagram + Carbon CodePen below
+// ❌ Live reference — caller mutates your state
+class BadTeam {
+    private final List<String> members = new ArrayList<>();
+    public List<String> getMembers() { return members; }
+}
+new BadTeam().getMembers().clear();
+
+// ✅ Snapshot from getter
+class GoodTeam {
+    private final List<String> members = new ArrayList<>();
+    public List<String> getMembers() { return List.copyOf(members); }
+}
+
+// ✅ DTO at the API boundary
+record TeamDto(String name, List<String> members) {}
+TeamDto dto = new TeamDto(team.getName(), team.getMembers());

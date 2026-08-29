@@ -1,5 +1,9 @@
-💡 Java Tip 💡: Avoid exposing internal object state. Use DTOs when needed. #Java #Encapsulation
+💡 Java: Don’t leak mutable internals — return DTOs or copies.
 
-✅ Java Tip 💡: Avoid exposing internal object state. Use DTOs when needed. #Java #Encapsulation
+✅ Getters that return live collections are risky
+
+✅ Callers can change your state without you knowing
+
+✅ Prefer DTOs, List.copyOf(), or unmodifiable views
 
 #Java #Encapsulation

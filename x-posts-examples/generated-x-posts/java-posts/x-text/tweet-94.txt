@@ -1,7 +1,9 @@
-💡 Java Tip 💡: Understand the difference between checked and unchecked exceptions.
+💡 Java: Checked vs unchecked — who must handle the exception?
 
-✅ Java Tip 💡: Understand the difference between checked and unchecked exceptions
+✅ Checked (IOException): compiler forces try/catch or throws
 
-✅ #Java #ErrorHandling // Checked
+✅ Unchecked (RuntimeException): no compile-time handler required
+
+✅ Use checked for recoverable external failures only
 
 #Java #ErrorHandling

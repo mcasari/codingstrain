@@ -819,11 +819,15 @@
     </article>
     <article>
       <h2>Tweet #92</h2>
-      <p class="preview">💡 Java Tip 💡: Use Optional.ifPresentOrElse() for elegant null handling (Java 9+). #Java #Optional</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(213/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-92" readonly rows="10">💡 Java Tip 💡: Use Optional.ifPresentOrElse() for elegant null handling (Java 9+). #Java #Optional
+      <p class="preview">💡 Java: Use Optional.ifPresentOrElse() instead of if (x != null).</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(212/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-92" readonly rows="10">💡 Java: Use Optional.ifPresentOrElse() instead of if (x != null).
 
-✅ Java Tip 💡: Use Optional.ifPresentOrElse() for elegant null handling (Java 9+). #Java #Optional
+✅ One call handles present and empty cases
+
+✅ Avoids isPresent() + get() boilerplate
+
+✅ Good when both branches run side effects
 
 #Java #Optional</textarea>
       <p class="copy-row">
@@ -835,11 +839,15 @@
     </article>
     <article>
       <h2>Tweet #93</h2>
-      <p class="preview">💡 Java Tip 💡: Avoid exposing internal object state. Use DTOs when needed. #Java #Encapsulation</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(212/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-93" readonly rows="10">💡 Java Tip 💡: Avoid exposing internal object state. Use DTOs when needed. #Java #Encapsulation
+      <p class="preview">💡 Java: Don’t leak mutable internals — return DTOs or copies.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(239/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-93" readonly rows="10">💡 Java: Don’t leak mutable internals — return DTOs or copies.
 
-✅ Java Tip 💡: Avoid exposing internal object state. Use DTOs when needed. #Java #Encapsulation
+✅ Getters that return live collections are risky
+
+✅ Callers can change your state without you knowing
+
+✅ Prefer DTOs, List.copyOf(), or unmodifiable views
 
 #Java #Encapsulation</textarea>
       <p class="copy-row">
@@ -851,13 +859,15 @@
     </article>
     <article>
       <h2>Tweet #94</h2>
-      <p class="preview">💡 Java Tip 💡: Understand the difference between checked and unchecked exceptions.</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(220/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-94" readonly rows="10">💡 Java Tip 💡: Understand the difference between checked and unchecked exceptions.
+      <p class="preview">💡 Java: Checked vs unchecked — who must handle the exception?</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(265/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-94" readonly rows="10">💡 Java: Checked vs unchecked — who must handle the exception?
 
-✅ Java Tip 💡: Understand the difference between checked and unchecked exceptions
+✅ Checked (IOException): compiler forces try/catch or throws
 
-✅ #Java #ErrorHandling // Checked
+✅ Unchecked (RuntimeException): no compile-time handler required
+
+✅ Use checked for recoverable external failures only
 
 #Java #ErrorHandling</textarea>
       <p class="copy-row">
@@ -869,17 +879,17 @@
     </article>
     <article>
       <h2>Tweet #95</h2>
-      <p class="preview">💡 Java Tip 💡: Use helper classes to implement reusable logic, but avoid all-knowing God classes.</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(276/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-95" readonly rows="10">💡 Java Tip 💡: Use helper classes to implement reusable logic, but avoid all-knowing God classes.
+      <p class="preview">💡 Java: Extract helpers — don’t build a God class that knows everything.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(240/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-95" readonly rows="10">💡 Java: Extract helpers — don’t build a God class that knows everything.
 
-✅ Java Tip 💡: Use helper classes to implement reusable logic, but avoid all-knowing God classes
+✅ One class doing validation + DB + email is hard to test
 
-✅ #Java #CodeOrganization
+✅ Small helpers each own one concern
 
-✅ #Java #CleanCode
+✅ Orchestrator composes them, not reimplements them
 
-#Java #CodeOrganization #CleanCode</textarea>
+#Java #CleanCode</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-95">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -889,11 +899,15 @@
     </article>
     <article>
       <h2>Tweet #96</h2>
-      <p class="preview">💡 Java Tip 💡: Refactor legacy code gradually. Use tests to ensure stability. #Java #LegacyCode</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(209/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-96" readonly rows="10">💡 Java Tip 💡: Refactor legacy code gradually. Use tests to ensure stability. #Java #LegacyCode
+      <p class="preview">💡 Java: Refactor legacy code in small steps — tests are your safety net.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(225/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-96" readonly rows="10">💡 Java: Refactor legacy code in small steps — tests are your safety net.
 
-✅ Java Tip 💡: Refactor legacy code gradually. Use tests to ensure stability. #Java #LegacyCode
+✅ Add a test that captures current behavior first
+
+✅ Change one thing, run tests, repeat
+
+✅ Avoid big-bang rewrites without coverage
 
 #Java #LegacyCode</textarea>
       <p class="copy-row">

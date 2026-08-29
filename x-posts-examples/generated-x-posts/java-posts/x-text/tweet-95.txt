@@ -1,9 +1,9 @@
-💡 Java Tip 💡: Use helper classes to implement reusable logic, but avoid all-knowing God classes.
+💡 Java: Extract helpers — don’t build a God class that knows everything.
 
-✅ Java Tip 💡: Use helper classes to implement reusable logic, but avoid all-knowing God classes
+✅ One class doing validation + DB + email is hard to test
 
-✅ #Java #CodeOrganization
+✅ Small helpers each own one concern
 
-✅ #Java #CleanCode
+✅ Orchestrator composes them, not reimplements them
 
-#Java #CodeOrganization #CleanCode
+#Java #CleanCode

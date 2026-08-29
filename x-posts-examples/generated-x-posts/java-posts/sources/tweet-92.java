@@ -1,8 +1,13 @@
-// ❌ A NullPointerException waiting to happen
-User u = repo.find(id);
-return u.getEmail();
+// ❌ isPresent() + get() — noisy branches
+Optional<User> opt = repo.findById(id);
+if (opt.isPresent()) {
+    sendWelcome(opt.get().getEmail());
+} else {
+    log.warn("User {} not found", id);
+}
 
-// ✅ Make "maybe absent" explicit
-return repo.findById(id)
-    .map(User::getEmail)
-    .orElse("no-email");
+// ✅ ifPresentOrElse — both branches in one call
+repo.findById(id).ifPresentOrElse(
+    u -> sendWelcome(u.getEmail()),
+    () -> log.warn("User {} not found", id)
+);

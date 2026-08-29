@@ -1,5 +1,9 @@
-💡 Java Tip 💡: Refactor legacy code gradually. Use tests to ensure stability. #Java #LegacyCode
+💡 Java: Refactor legacy code in small steps — tests are your safety net.
 
-✅ Java Tip 💡: Refactor legacy code gradually. Use tests to ensure stability. #Java #LegacyCode
+✅ Add a test that captures current behavior first
+
+✅ Change one thing, run tests, repeat
+
+✅ Avoid big-bang rewrites without coverage
 
 #Java #LegacyCode

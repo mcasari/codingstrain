@@ -826,16 +826,17 @@
   {
     "id": 92,
     "module": "java-tips",
-    "body": "💡 Java Tip 💡: Use `Optional.ifPresentOrElse()` for elegant null handling (Java 9+). #Java #Optional\n\n✅ Java Tip 💡: Use `Optional.ifPresentOrElse()` for elegant null handling (Java 9+). #Java #Optional\n\n✅ Runnable sample: `java-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "body": "💡 Java: Use `Optional.ifPresentOrElse()` instead of `if (x != null)`.\n\n✅ One call handles present and empty cases\n\n✅ Avoids `isPresent()` + `get()` boilerplate\n\n✅ Good when both branches run side effects",
+    "code": "// ❌ isPresent() + get() — noisy branches\nOptional<User> opt = repo.findById(id);\nif (opt.isPresent()) {\n    sendWelcome(opt.get().getEmail());\n} else {\n    log.warn(\"User {} not found\", id);\n}\n\n// ✅ ifPresentOrElse — both branches in one call\nrepo.findById(id).ifPresentOrElse(\n    u -> sendWelcome(u.getEmail()),\n    () -> log.warn(\"User {} not found\", id)\n);\n",
     "tags": "#Java #Optional",
     "codepen_style": "carbon",
-    "codepen_large": true,
-    "code": "// ❌ A NullPointerException waiting to happen\nUser u = repo.find(id);\nreturn u.getEmail();\n\n// ✅ Make \"maybe absent\" explicit\nreturn repo.findById(id)\n    .map(User::getEmail)\n    .orElse(\"no-email\");"
+    "codepen_large": true
   },
   {
     "id": 93,
     "module": "java-tips",
-    "body": "💡 Java Tip 💡: Avoid exposing internal object state. Use DTOs when needed. #Java #Encapsulation\n\n✅ Java Tip 💡: Avoid exposing internal object state. Use DTOs when needed. #Java #Encapsulation\n\n✅ Runnable sample: `java-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "body": "💡 Java: Don’t leak mutable internals — return DTOs or copies.\n\n✅ Getters that return live collections are risky\n\n✅ Callers can change your state without you knowing\n\n✅ Prefer DTOs, `List.copyOf()`, or unmodifiable views\n\n#Java #Encapsulation",
+    "code": "// ❌ Live reference — caller mutates your state\nclass BadTeam {\n    private final List<String> members = new ArrayList<>();\n    public List<String> getMembers() { return members; }\n}\nnew BadTeam().getMembers().clear();\n\n// ✅ Snapshot from getter\nclass GoodTeam {\n    private final List<String> members = new ArrayList<>();\n    public List<String> getMembers() { return List.copyOf(members); }\n}\n\n// ✅ DTO at the API boundary\nrecord TeamDto(String name, List<String> members) {}\nTeamDto dto = new TeamDto(team.getName(), team.getMembers());\n",
     "tags": "#Java #Encapsulation",
     "codepen_style": "carbon",
     "codepen_large": true
@@ -843,7 +844,8 @@
   {
     "id": 94,
     "module": "java-tips",
-    "body": "💡 Java Tip 💡: Understand the difference between checked and unchecked exceptions.\n\n✅ Java Tip 💡: Understand the difference between checked and unchecked exceptions\n\n✅ #Java #ErrorHandling // Checked\n\n✅ Runnable sample: `java-tips`",
+    "body": "💡 Java: Checked vs unchecked — who must handle the exception?\n\n✅ Checked (`IOException`): compiler forces try/catch or `throws`\n\n✅ Unchecked (`RuntimeException`): no compile-time handler required\n\n✅ Use checked for recoverable external failures only",
+    "code": "// ✅ Checked — external I/O failure; caller must handle\nvoid loadConfig() throws IOException {\n    Files.readString(Path.of(\"app.properties\"));\n}\n\ntry {\n    loadConfig();\n} catch (IOException e) {\n    throw new UncheckedIOException(e);\n}\n\n// ✅ Unchecked — programming/validation error\nvoid setDiscount(int percent) {\n    if (percent < 0 || percent > 100) {\n        throw new IllegalArgumentException(\"percent out of range\");\n    }\n}\n// no throws clause needed at call sites\n",
     "tags": "#Java #ErrorHandling",
     "codepen_style": "carbon",
     "codepen_large": true
@@ -851,15 +853,18 @@
   {
     "id": 95,
     "module": "java-tips",
-    "body": "💡 Java Tip 💡: Use helper classes to implement reusable logic, but avoid all-knowing God classes.\n\n✅ Java Tip 💡: Use helper classes to implement reusable logic, but avoid all-knowing God classes\n\n✅ #Java #CodeOrganization\n\n✅ #Java #CleanCode",
-    "tags": "#Java #CodeOrganization #CleanCode",
+    "body": "💡 Java: Extract helpers — don’t build a God class that knows everything.\n\n✅ One class doing validation + DB + email is hard to test\n\n✅ Small helpers each own one concern\n\n✅ Orchestrator composes them, not reimplements them\n\n#Java #CleanCode",
+    "code": "// ❌ God class — validation, persistence, email in one place\nclass OrderService {\n    void placeOrder(Order order) {\n        if (order.total() <= 0) throw new IllegalArgumentException();\n        jdbc.update(\"insert into orders ...\", order.id());\n        mailer.send(order.email(), \"Order confirmed\");\n    }\n}\n\n// ✅ Focused helpers + thin orchestrator\nclass OrderValidator {\n    void validate(Order order) { /* one job */ }\n}\nclass OrderRepository {\n    void save(Order order) { /* one job */ }\n}\nclass OrderNotifier {\n    void sendConfirmation(Order order) { /* one job */ }\n}\n\nclass OrderService {\n    private final OrderValidator validator;\n    private final OrderRepository repository;\n    private final OrderNotifier notifier;\n\n    void placeOrder(Order order) {\n        validator.validate(order);\n        repository.save(order);\n        notifier.sendConfirmation(order);\n    }\n}\n",
+    "tags": "#Java #CleanCode",
     "codepen_style": "carbon",
-    "codepen_large": true
+    "codepen_large": true,
+    "codepen_columns": 2
   },
   {
     "id": 96,
     "module": "java-tips",
-    "body": "💡 Java Tip 💡: Refactor legacy code gradually. Use tests to ensure stability. #Java #LegacyCode\n\n✅ Java Tip 💡: Refactor legacy code gradually. Use tests to ensure stability. #Java #LegacyCode\n\n✅ Runnable sample: `java-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "body": "💡 Java: Refactor legacy code in small steps — tests are your safety net.\n\n✅ Add a test that captures current behavior first\n\n✅ Change one thing, run tests, repeat\n\n✅ Avoid big-bang rewrites without coverage\n\n#Java #LegacyCode",
+    "code": "// ❌ Big-bang rewrite — no safety net\n// delete LegacyPricing, drop in NewPricing, deploy and hope\n\n// ✅ Step 1 — lock existing behavior\n@Test\nvoid vipDiscount_staysTheSame() {\n    assertEquals(90.0, pricing.total(100.0, \"VIP\"));\n}\n\n// ✅ Step 2 — tiny extract; tests still green\nclass LegacyPricing {\n    double total(double amount, String tier) {\n        return amount * rateFor(tier);\n    }\n\n    private double rateFor(String tier) {\n        return \"VIP\".equals(tier) ? 0.9 : 1.0;\n    }\n}\n",
     "tags": "#Java #LegacyCode",
     "codepen_style": "carbon",
     "codepen_large": true
