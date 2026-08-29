@@ -1,9 +1,7 @@
-// 💡 Java tip 💡: Try to avoid sharing data across threads.
+// 💡 Java Tip 💡: Override hashCode() when overriding equals() to ensure collections like HashMap work correctly.
 //
-// ✅Use immutable objects
+// ✅ Java Tip 💡: Override hashCode() when overriding equals() to ensure collections like HashMap work correctly
 //
-// ✅Or make threads communicate through messages, without directly modifying shared state.
+// ✅ HashMap is based on an hash table data structure, and uses hashCode() to determine the bucket index
 //
-// ✅ Java tip 💡: Try to avoid sharing data across threads
-//
-// #Java #Concurrency
+// ✅ #Java #Collections

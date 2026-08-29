@@ -1,7 +1,6 @@
-// 💡 Java tip: Starting from Java 11, you can use String.strip() instead of trim(), since it handles Unicode whitespaces correctly.
-//
-// ✅ #Java #JavaTips
-//
-// ✅ Runnable sample: `java-tips`
-//
-// ✅ Architecture diagram + Carbon CodePen below
+// Type is still static — just inferred by the compiler
+var users = new ArrayList<User>();
+var entry = Map.entry("k", 1);
+for (var u : users) {
+    System.out.println(u.getName());
+}

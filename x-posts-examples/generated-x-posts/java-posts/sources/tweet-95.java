@@ -1,7 +1,7 @@
-// 💡 Java Tip 💡: Understand the difference between checked and unchecked exceptions.
+// 💡 Java Tip 💡: Use helper classes to implement reusable logic, but avoid all-knowing God classes.
 //
-// ✅ Java Tip 💡: Understand the difference between checked and unchecked exceptions
+// ✅ Java Tip 💡: Use helper classes to implement reusable logic, but avoid all-knowing God classes
 //
-// ✅ #Java #ErrorHandling // Checked
+// ✅ #Java #CodeOrganization
 //
-// ✅ Runnable sample: `java-tips`
+// ✅ #Java #CleanCode

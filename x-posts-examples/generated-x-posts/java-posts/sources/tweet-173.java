@@ -1,24 +1,23 @@
-import java.time.Instant;
-import java.time.temporal.ChronoUnit;
+List<String> names = List.of("ada", "grace", "linus");
 
-Instant a = Instant.parse("2026-07-27T10:15:30.123Z");
-Instant b = Instant.parse("2026-07-27T18:45:00.999Z");
+// ❌ Business logic in peek — fragile and surprising
+List<String> bad = names.stream()
+    .peek(n -> audit.log("seen " + n))   // side effect
+    .peek(n -> n = n.toUpperCase())      // does nothing useful (n is local)
+    .map(String::toUpperCase)
+    .toList();
 
-// ❌ Full precision — different times, equals is false
-a.equals(b);  // false (expected)
+// findAny() may process only one element — later peeks never run
+names.stream()
+    .peek(n -> counter.increment())
+    .findAny();
 
-// Same calendar day in UTC? nanos/hours still spoil a naive check
-Instant morning = Instant.parse("2026-07-27T08:00:00.001Z");
-Instant evening = Instant.parse("2026-07-27T20:00:00.999Z");
-morning.equals(evening);  // false
+// ✅ peek for debug only; real work in map / forEach
+List<String> good = names.stream()
+    .peek(n -> System.out.println("debug: " + n))  // temporary
+    .map(String::toUpperCase)
+    .toList();
 
-// ✅ Truncate to the unit you care about, then compare
-morning.truncatedTo(ChronoUnit.DAYS)
-    .equals(evening.truncatedTo(ChronoUnit.DAYS));  // true
-
-// Same hour?
-a.truncatedTo(ChronoUnit.HOURS)
-    .equals(Instant.parse("2026-07-27T10:59:59Z")
-        .truncatedTo(ChronoUnit.HOURS));  // true
-
-// Also: MINUTES, SECONDS, …
+names.stream()
+    .map(String::toUpperCase)
+    .forEach(audit::log);  // intentional side effect at the end

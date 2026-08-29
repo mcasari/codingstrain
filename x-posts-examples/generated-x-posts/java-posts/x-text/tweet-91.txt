@@ -1,5 +1,9 @@
-💡 Java Tip 💡: Understand the difference between == and .equals() for object comparison. #Java #Basics
+💡 Java: Override hashCode() whenever you override equals().
 
-✅ Java Tip 💡: Understand the difference between == and .equals() for object comparison. #Java #Basics
+✅ Equal objects must share the same hash code
 
-#Java #Basics
+✅ Without it, HashSet/HashMap miss matches
+
+✅ Use Objects.hash(...) — fields must match equals()
+
+#Java #OOP

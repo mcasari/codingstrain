@@ -1,14 +1,14 @@
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.StandardCopyOption;
+import java.util.List;
+import java.util.stream.Stream;
 
-Path src = Path.of("data.csv");
-Path backup = Path.of("data.csv.bak");
+// Stream.iterate(...) is infinite unless you stop it
+List<Integer> firstFive = Stream.iterate(0, n -> n + 1)
+    .limit(5)
+    .toList();
 
-try {
-    Files.copy(src, backup, StandardCopyOption.REPLACE_EXISTING);
-    System.out.println("Copied to " + backup);
-} catch (IOException e) {
-    throw new RuntimeException(e);
-}
+System.out.println(firstFive); // [0, 1, 2, 3, 4]
+
+// Same idea with generate(): sample 3 random UUIDs
+List<String> samples = Stream.generate(() -> java.util.UUID.randomUUID().toString())
+    .limit(3)
+    .toList();

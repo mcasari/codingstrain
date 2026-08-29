@@ -1,3 +1,5 @@
-💡 Learn design patterns to write reusable, maintainable code. #Java #DesignPatterns
+💡 Java Tip 💡: Refactor large switch statements into polymorphic classes. #Java #Refactoring
 
-#Java #DesignPatterns
+✅ Java Tip 💡: Refactor large switch statements into polymorphic classes. #Java #Refactoring
+
+#Java #Refactoring

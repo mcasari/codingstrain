@@ -1,7 +1,7 @@
-// 🚀 Open/Closed Principle (OCP): OCP is a SOLID principle that states classes should be open for extension but closed for modification.
+// 💡Java tip: Use HashMap as Map implementation when you need greatest general-purpose performance.
 //
-// ✅Instead of touching existing implementation, you should use Java interfaces and inheritance to add new behavior.
-//
-// ✅ #Java #JavaDev
+// ✅ #Java   #DataStructures
 //
 // ✅ Runnable sample: `java-tips`
+//
+// ✅ Architecture diagram + Carbon CodePen below

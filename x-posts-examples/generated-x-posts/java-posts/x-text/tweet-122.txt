@@ -1,5 +1,5 @@
-💡 Java tip:💡: Avoid synchronized blocks when higher-level abstractions exist. #Java #Concurrency
+💡 Java tip 💡: With Map objects, instead of manual null checks, you can use Map.getOrDefault().
 
-✅ Java tip:💡: Avoid synchronized blocks when higher-level abstractions exist. #Java #Concurrency
+✅ Java tip 💡: With Map objects, instead of manual null checks, you can use Map.getOrDefault()
 
-#Java #Concurrency
+✅ Map<String, Integer> map = new HashMap<>();

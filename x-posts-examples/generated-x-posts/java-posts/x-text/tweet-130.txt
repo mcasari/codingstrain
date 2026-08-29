@@ -1,3 +1,9 @@
-💡 Java tip 💡: Return Collections.emptyList(), List.of() or Set.of() instead of null collections to avoid null checks in calling code. #JavaBestPractice
+💡 Java tip 💡: Try to avoid sharing data across threads.
 
-#JavaBestPractice
+✅Use immutable objects
+
+✅Or make threads communicate through messages, without directly modifying shared state.
+
+✅ Java tip 💡: Try to avoid sharing data across threads
+
+#Java #Concurrency

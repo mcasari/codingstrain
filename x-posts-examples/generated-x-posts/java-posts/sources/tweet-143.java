@@ -1,7 +1,5 @@
-// 💡 Java tip: Records are not limited to data only, you can add custom constructors or methods for validation.
-//
-// ✅ They can have constructors, static methods, and instance methods:
-//
-// ✅ #Java #ModernJava
-//
-// ✅ Runnable sample: `java-tips`
+@Cacheable("users")
+public User findById(Long id) {
+    return repo.findById(id).orElseThrow();
+}
+// Enable with @EnableCaching

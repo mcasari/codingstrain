@@ -1,5 +1,5 @@
-💡SOLID principles: Dependency Inversion Principle (DIP) states that high-level modules should not depend on low-level modules; instead, both should depend on abstractions.
+💡Java tip: Starting from Java 14 you can use switch expressions for shorter and cleaner multi-branch logic:
 
-✅ #SOLID #SoftwareDesign
+✅ #Java #ModernJava
 
-#SOLID #SoftwareDesign
+#Java #ModernJava

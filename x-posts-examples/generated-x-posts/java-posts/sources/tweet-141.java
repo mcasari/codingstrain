@@ -1,6 +1,7 @@
-Map<Dept, List<Employee>> byDept = employees.stream()
-    .collect(Collectors.groupingBy(Employee::getDept));
-
-long active = employees.stream()
-    .filter(Employee::isActive)
-    .count();
+// 💡 Java tip: Use parallelStream() with care. It's ideal for CPU-intensive tasks, not I/O operations.
+//
+// ✅ #Java #JavaStreams
+//
+// ✅ Runnable sample: `java-tips`
+//
+// ✅ Architecture diagram + Carbon CodePen below

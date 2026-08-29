@@ -1,5 +1,5 @@
-💡 Java Tip 💡: Use Files.walk() to recursively process files in a directory. #Java #IO
+💡 Java Tip 💡:Use Path and Files from NIO.2 for modern file handling. #Java #NIO
 
-✅ Java Tip 💡: Use Files.walk() to recursively process files in a directory. #Java #IO
+✅ Java Tip 💡:Use Path and Files from NIO.2 for modern file handling. #Java #NIO
 
-#Java #IO
+#Java #NIO

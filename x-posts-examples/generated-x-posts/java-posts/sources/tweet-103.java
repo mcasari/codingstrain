@@ -1,15 +1,24 @@
-import java.util.ArrayDeque;
-import java.util.Deque;
-import java.util.Stack;
+// ❌ Field injection — dependency hidden, hard to test without Spring
+@RestController
+class OrderController {
 
-// ❌ Legacy Stack — extends Vector, synchronized on every call
-Stack<String> undo = new Stack<>();
-undo.push("typed 'hello'");
-undo.push("added space");
-undo.pop();   // removes "added space"
+    @Autowired
+    private OrderService orders;
 
-// ✅ Deque as a stack — same API, modern and faster
-Deque<String> undo = new ArrayDeque<>();
-undo.push("typed 'hello'");
-undo.push("added space");
-undo.pop();   // removes "added space" — same LIFO behavior
+    @GetMapping("/orders")
+    List<Order> list() { return orders.findAll(); }
+}
+
+// ✅ Constructor injection — explicit, final, easy to unit-test
+@RestController
+class OrderController {
+
+    private final OrderService orders;
+
+    OrderController(OrderService orders) {
+        this.orders = orders;
+    }
+
+    @GetMapping("/orders")
+    List<Order> list() { return orders.findAll(); }
+}

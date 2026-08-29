@@ -1,7 +1,9 @@
-// 💡 Java tip:💡: Use thread pools (`Executors`) instead of manually managing threads. #Java #Concurrency
+// 💡 Java Tip 💡: Master the SOLID principles to write cleaner, more maintainable object-oriented code.
 //
-// ✅ Java tip:💡: Use thread pools (`Executors`) instead of manually managing threads. #Java #Concurrency
+// ✅ Java Tip 💡: Master the SOLID principles to write cleaner, more maintainable object-oriented code
 //
-// ✅ Runnable sample: `java-tips`
+// ✅ Each letter stands for a key design principle:
 //
-// ✅ Architecture diagram + Carbon CodePen below
+// ✅ S: Single Responsibility – A class should have only one reason to change
+//
+// #Java #CleanCode #OOP #SoftwareDesign

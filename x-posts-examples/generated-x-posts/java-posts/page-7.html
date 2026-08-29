@@ -67,7 +67,7 @@
     <a class="page-nav" href="page-6.html">← Prev</a>
     <a href="index.html">1</a> · <a href="page-2.html">2</a> · <a href="page-3.html">3</a> · <a href="page-4.html">4</a> · <a href="page-5.html">5</a> · <a href="page-6.html">6</a> · <span class="page-current">7</span>
     <a class="page-nav disabled" href="#">Next →</a>
-    <span class="page-meta">Tweets #167–#181 of 135 · page 7/7</span>
+    <span class="page-meta">Tweets #167–#180 of 134 · page 7/7</span>
   </nav>
     <article id="tweet-167">
       <h2>Tweet #167</h2>
@@ -197,24 +197,18 @@ body {
   font-size: 16px;
 }
 </pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;java-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// ❌ A NullPointerException waiting to happen&lt;/span&gt;
-&lt;span class=&quot;typ&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;repo&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kw&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;getEmail&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;com&quot;&gt;// ✅ Make &amp;quot;maybe absent&amp;quot; explicit&lt;/span&gt;
-&lt;span class=&quot;kw&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;repo&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;findById&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;getEmail&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;orElse&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;no-email&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;java-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;typ&quot;&gt;CompletableFuture&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;supplyAsync&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;fetchUser&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;thenApply&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;getName&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;thenAccept&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-167.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(246/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-167" readonly rows="10">💡 Java tip: Use Optional.filter(...) to add inline conditions to an Optional object.
-
-✅ It lets you apply a condition directly and it returns the original Optional if the predicate passes, an empty one otherwise.
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(142/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-167" readonly rows="10">🚀 Java: With CompletableFuture.allOf(...) you can wait on multiple async tasks without manual join handling.
 
 ✅ #Java #JavaDev
 
@@ -236,161 +230,6 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 168 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
-             data-height="720"
-             data-theme-id="dark"
-             data-default-tab="html,result"
-             data-editable="true">
-          <pre data-lang="css">html, body {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  min-height: 100vh;
-  box-sizing: border-box;
-}
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: stretch;
-  padding: 0.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-.carbon {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-height: calc(100vh - 1rem);
-  max-width: none;
-  border-radius: 10px;
-  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-}
-.carbon-titlebar {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  height: 36px;
-  padding: 0 16px;
-  background: #252836;
-  flex-shrink: 0;
-}
-.carbon-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-.carbon-dot.red { background: #ff5f56; }
-.carbon-dot.yellow { background: #ffbd2e; }
-.carbon-dot.green { background: #27c93f; }
-.carbon-module {
-  margin-left: auto;
-  font: 13px/1 system-ui, sans-serif;
-  color: #8b949e;
-  letter-spacing: 0.02em;
-}
-.carbon-editor {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  background: #011627;
-  padding: 1.5rem 2rem 1.75rem;
-  overflow: auto;
-}
-.carbon-editor pre {
-  margin: 0;
-  flex: 1;
-  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 20px;
-  line-height: 34px;
-  white-space: pre;
-  tab-size: 4;
-}
-.carbon-editor .kw { color: #c792ea; }
-.carbon-editor .ann { color: #ffb86c; }
-.carbon-editor .str { color: #c3e88d; }
-.carbon-editor .typ { color: #ffcb6b; }
-.carbon-editor .met { color: #82aaff; }
-.carbon-editor .com { color: #5c6370; }
-.carbon-editor .num { color: #f78c6c; }
-.carbon-editor .pun { color: #89ddff; }
-.carbon-editor .txt { color: #d6deeb; }
-.carbon-editor.cols {
-  flex-direction: row;
-  gap: 1.75rem;
-  align-items: stretch;
-}
-.carbon-editor.cols .col {
-  flex: 1 1 0;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-}
-.carbon-editor.cols .col pre {
-  flex: 1;
-  font-size: 20px;
-  line-height: 34px;
-}
-.carbon-editor.cols .col-divider {
-  align-self: stretch;
-  position: relative;
-  width: 1px;
-  background: #1d3b53;
-  flex: 0 0 auto;
-}
-.carbon-editor.cols .col-divider::after {
-  content: "\2192";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: #011627;
-  border: 1px solid #1d3b53;
-  color: #82aaff;
-  font-size: 16px;
-}
-</pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;java-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;typ&quot;&gt;CompletableFuture&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;supplyAsync&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;fetchUser&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;thenApply&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;getName&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;thenAccept&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
-        </div>
-        <p class="codepen-links">
-          <a href="codepen/tweet-168.html" target="_blank" rel="noopener">Open pen preview</a>
-          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
-        </p>
-      </div>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(142/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-168" readonly rows="10">🚀 Java: With CompletableFuture.allOf(...) you can wait on multiple async tasks without manual join handling.
-
-✅ #Java #JavaDev
-
-#Java #JavaDev</textarea>
-      <p class="copy-row">
-        <button type="button" class="copy-x-btn" data-target="tweet-copy-168">Copy for X</button>
-        <span class="copy-status" aria-live="polite"></span>
-      </p>
-      <p class="links">
-        <a href="drawio/tweet-168.drawio" download>.drawio diagram</a> ·
-        <a href="codepen/tweet-168.html" target="_blank" rel="noopener">CodePen preview</a> ·
-        <a href="sources/tweet-168.java" download>Source .java</a> ·
-        <a href="x-text/tweet-168.txt" download>X text</a>
-      </p>
-    </article>
-    <article id="tweet-169">
-      <h2>Tweet #169</h2>
-      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
-      <div class="codepen-wrap codepen-wrap--large">
-        <div class="codepen"
-             data-prefill='{"title": "Tweet 169 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
              data-height="888"
              data-theme-id="dark"
              data-default-tab="html,result"
@@ -533,12 +372,12 @@ body {
 &lt;span class=&quot;txt&quot;&gt;stats&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;getAverage&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;com&quot;&gt;// 83.0&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
-          <a href="codepen/tweet-169.html" target="_blank" rel="noopener">Open pen preview</a>
+          <a href="codepen/tweet-168.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
       <p class="tweet-copy-label">Copy for X <span class="x-char-count">(234/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-169" readonly rows="10">💡 Use Collectors.summarizingInt() for count, sum, min, max, and avg in one pass.
+      <textarea class="tweet-copy" id="tweet-copy-168" readonly rows="10">💡 Use Collectors.summarizingInt() for count, sum, min, max, and avg in one pass.
 
 ✅ Avoids multiple streams over the same data
 
@@ -548,22 +387,22 @@ body {
 
 #Java #Streams</textarea>
       <p class="copy-row">
-        <button type="button" class="copy-x-btn" data-target="tweet-copy-169">Copy for X</button>
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-168">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
       </p>
       <p class="links">
-        <a href="drawio/tweet-169.drawio" download>.drawio diagram</a> ·
-        <a href="codepen/tweet-169.html" target="_blank" rel="noopener">CodePen preview</a> ·
-        <a href="sources/tweet-169.java" download>Source .java</a> ·
-        <a href="x-text/tweet-169.txt" download>X text</a>
+        <a href="drawio/tweet-168.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-168.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-168.java" download>Source .java</a> ·
+        <a href="x-text/tweet-168.txt" download>X text</a>
       </p>
     </article>
-    <article id="tweet-170">
-      <h2>Tweet #170</h2>
+    <article id="tweet-169">
+      <h2>Tweet #169</h2>
       <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
-             data-prefill='{"title": "Tweet 170 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
+             data-prefill='{"title": "Tweet 169 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
              data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
@@ -707,12 +546,12 @@ body {
 &lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
-          <a href="codepen/tweet-170.html" target="_blank" rel="noopener">Open pen preview</a>
+          <a href="codepen/tweet-169.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
       <p class="tweet-copy-label">Copy for X <span class="x-char-count">(246/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-170" readonly rows="10">💡 Prefer ReentrantReadWriteLock when reads are frequent and writes are rare.
+      <textarea class="tweet-copy" id="tweet-copy-169" readonly rows="10">💡 Prefer ReentrantReadWriteLock when reads are frequent and writes are rare.
 
 ✅ Many readers can hold the read lock together
 
@@ -722,22 +561,22 @@ body {
 
 #Java #Concurrency</textarea>
       <p class="copy-row">
-        <button type="button" class="copy-x-btn" data-target="tweet-copy-170">Copy for X</button>
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-169">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
       </p>
       <p class="links">
-        <a href="drawio/tweet-170.drawio" download>.drawio diagram</a> ·
-        <a href="codepen/tweet-170.html" target="_blank" rel="noopener">CodePen preview</a> ·
-        <a href="sources/tweet-170.java" download>Source .java</a> ·
-        <a href="x-text/tweet-170.txt" download>X text</a>
+        <a href="drawio/tweet-169.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-169.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-169.java" download>Source .java</a> ·
+        <a href="x-text/tweet-169.txt" download>X text</a>
       </p>
     </article>
-    <article id="tweet-171">
-      <h2>Tweet #171</h2>
+    <article id="tweet-170">
+      <h2>Tweet #170</h2>
       <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
-             data-prefill='{"title": "Tweet 171 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
+             data-prefill='{"title": "Tweet 170 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
              data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
@@ -879,12 +718,12 @@ body {
 &lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
-          <a href="codepen/tweet-171.html" target="_blank" rel="noopener">Open pen preview</a>
+          <a href="codepen/tweet-170.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
       <p class="tweet-copy-label">Copy for X <span class="x-char-count">(221/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-171" readonly rows="10">💡 Use Files.isSameFile(a, b) to check if two paths are the same file.
+      <textarea class="tweet-copy" id="tweet-copy-170" readonly rows="10">💡 Use Files.isSameFile(a, b) to check if two paths are the same file.
 
 ✅ Path.equals only compares path text
 
@@ -894,22 +733,22 @@ body {
 
 #Java #Files</textarea>
       <p class="copy-row">
-        <button type="button" class="copy-x-btn" data-target="tweet-copy-171">Copy for X</button>
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-170">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
       </p>
       <p class="links">
-        <a href="drawio/tweet-171.drawio" download>.drawio diagram</a> ·
-        <a href="codepen/tweet-171.html" target="_blank" rel="noopener">CodePen preview</a> ·
-        <a href="sources/tweet-171.java" download>Source .java</a> ·
-        <a href="x-text/tweet-171.txt" download>X text</a>
+        <a href="drawio/tweet-170.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-170.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-170.java" download>Source .java</a> ·
+        <a href="x-text/tweet-170.txt" download>X text</a>
       </p>
     </article>
-    <article id="tweet-172">
-      <h2>Tweet #172</h2>
+    <article id="tweet-171">
+      <h2>Tweet #171</h2>
       <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
-             data-prefill='{"title": "Tweet 172 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
+             data-prefill='{"title": "Tweet 171 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
              data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
@@ -1047,12 +886,12 @@ body {
 &lt;span class=&quot;com&quot;&gt;// d / c are NOT in scope outside their true branch&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
-          <a href="codepen/tweet-172.html" target="_blank" rel="noopener">Open pen preview</a>
+          <a href="codepen/tweet-171.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
       <p class="tweet-copy-label">Copy for X <span class="x-char-count">(247/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-172" readonly rows="10">💡 Pattern matching for instanceof: declare the variable in the check.
+      <textarea class="tweet-copy" id="tweet-copy-171" readonly rows="10">💡 Pattern matching for instanceof: declare the variable in the check.
 
 ✅ Old style: instanceof then a separate cast
 
@@ -1062,22 +901,22 @@ body {
 
 #Java #PatternMatching</textarea>
       <p class="copy-row">
-        <button type="button" class="copy-x-btn" data-target="tweet-copy-172">Copy for X</button>
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-171">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
       </p>
       <p class="links">
-        <a href="drawio/tweet-172.drawio" download>.drawio diagram</a> ·
-        <a href="codepen/tweet-172.html" target="_blank" rel="noopener">CodePen preview</a> ·
-        <a href="sources/tweet-172.java" download>Source .java</a> ·
-        <a href="x-text/tweet-172.txt" download>X text</a>
+        <a href="drawio/tweet-171.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-171.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-171.java" download>Source .java</a> ·
+        <a href="x-text/tweet-171.txt" download>X text</a>
       </p>
     </article>
-    <article id="tweet-173">
-      <h2>Tweet #173</h2>
+    <article id="tweet-172">
+      <h2>Tweet #172</h2>
       <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
-             data-prefill='{"title": "Tweet 173 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
+             data-prefill='{"title": "Tweet 172 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
              data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
@@ -1224,12 +1063,12 @@ body {
 &lt;span class=&quot;com&quot;&gt;// Also: MINUTES, SECONDS, …&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
-          <a href="codepen/tweet-173.html" target="_blank" rel="noopener">Open pen preview</a>
+          <a href="codepen/tweet-172.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
       <p class="tweet-copy-label">Copy for X <span class="x-char-count">(229/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-173" readonly rows="10">💡 Use Instant.truncatedTo(...) to compare times at day/hour/minute precision.
+      <textarea class="tweet-copy" id="tweet-copy-172" readonly rows="10">💡 Use Instant.truncatedTo(...) to compare times at day/hour/minute precision.
 
 ✅ Raw Instant.equals fails when nanos differ
 
@@ -1239,22 +1078,22 @@ body {
 
 #Java #Time</textarea>
       <p class="copy-row">
-        <button type="button" class="copy-x-btn" data-target="tweet-copy-173">Copy for X</button>
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-172">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
       </p>
       <p class="links">
-        <a href="drawio/tweet-173.drawio" download>.drawio diagram</a> ·
-        <a href="codepen/tweet-173.html" target="_blank" rel="noopener">CodePen preview</a> ·
-        <a href="sources/tweet-173.java" download>Source .java</a> ·
-        <a href="x-text/tweet-173.txt" download>X text</a>
+        <a href="drawio/tweet-172.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-172.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-172.java" download>Source .java</a> ·
+        <a href="x-text/tweet-172.txt" download>X text</a>
       </p>
     </article>
-    <article id="tweet-174">
-      <h2>Tweet #174</h2>
+    <article id="tweet-173">
+      <h2>Tweet #173</h2>
       <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
-             data-prefill='{"title": "Tweet 174 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
+             data-prefill='{"title": "Tweet 173 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
              data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
@@ -1400,12 +1239,12 @@ body {
 &lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;audit&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;com&quot;&gt;// intentional side effect at the end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
-          <a href="codepen/tweet-174.html" target="_blank" rel="noopener">Open pen preview</a>
+          <a href="codepen/tweet-173.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
       <p class="tweet-copy-label">Copy for X <span class="x-char-count">(239/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-174" readonly rows="10">💡 Use Stream.peek() only for debugging — not for real logic.
+      <textarea class="tweet-copy" id="tweet-copy-173" readonly rows="10">💡 Use Stream.peek() only for debugging — not for real logic.
 
 ✅ peek runs as a side effect; easy to miss or drop
 
@@ -1415,22 +1254,22 @@ body {
 
 #Java #Streams</textarea>
       <p class="copy-row">
-        <button type="button" class="copy-x-btn" data-target="tweet-copy-174">Copy for X</button>
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-173">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
       </p>
       <p class="links">
-        <a href="drawio/tweet-174.drawio" download>.drawio diagram</a> ·
-        <a href="codepen/tweet-174.html" target="_blank" rel="noopener">CodePen preview</a> ·
-        <a href="sources/tweet-174.java" download>Source .java</a> ·
-        <a href="x-text/tweet-174.txt" download>X text</a>
+        <a href="drawio/tweet-173.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-173.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-173.java" download>Source .java</a> ·
+        <a href="x-text/tweet-173.txt" download>X text</a>
       </p>
     </article>
-    <article id="tweet-175">
-      <h2>Tweet #175</h2>
+    <article id="tweet-174">
+      <h2>Tweet #174</h2>
       <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
-             data-prefill='{"title": "Tweet 175 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
+             data-prefill='{"title": "Tweet 174 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
              data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
@@ -1573,12 +1412,12 @@ body {
 &lt;span class=&quot;com&quot;&gt;// nullsLast(...) — put missing values at the end instead&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
-          <a href="codepen/tweet-175.html" target="_blank" rel="noopener">Open pen preview</a>
+          <a href="codepen/tweet-174.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
       <p class="tweet-copy-label">Copy for X <span class="x-char-count">(251/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-175" readonly rows="10">💡 Use Comparator.nullsFirst() / nullsLast() when sort keys can be null.
+      <textarea class="tweet-copy" id="tweet-copy-174" readonly rows="10">💡 Use Comparator.nullsFirst() / nullsLast() when sort keys can be null.
 
 ✅ comparing(User::getName) NPEs if getName() is null
 
@@ -1588,22 +1427,22 @@ body {
 
 #Java #Comparator</textarea>
       <p class="copy-row">
-        <button type="button" class="copy-x-btn" data-target="tweet-copy-175">Copy for X</button>
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-174">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
       </p>
       <p class="links">
-        <a href="drawio/tweet-175.drawio" download>.drawio diagram</a> ·
-        <a href="codepen/tweet-175.html" target="_blank" rel="noopener">CodePen preview</a> ·
-        <a href="sources/tweet-175.java" download>Source .java</a> ·
-        <a href="x-text/tweet-175.txt" download>X text</a>
+        <a href="drawio/tweet-174.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-174.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-174.java" download>Source .java</a> ·
+        <a href="x-text/tweet-174.txt" download>X text</a>
       </p>
     </article>
-    <article id="tweet-176">
-      <h2>Tweet #176</h2>
+    <article id="tweet-175">
+      <h2>Tweet #175</h2>
       <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
-             data-prefill='{"title": "Tweet 176 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
+             data-prefill='{"title": "Tweet 175 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
              data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
@@ -1752,12 +1591,12 @@ body {
 &lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
-          <a href="codepen/tweet-176.html" target="_blank" rel="noopener">Open pen preview</a>
+          <a href="codepen/tweet-175.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
       <p class="tweet-copy-label">Copy for X <span class="x-char-count">(213/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-176" readonly rows="10">💡 Prefer Objects.equals(a, b) for null-safe equality checks.
+      <textarea class="tweet-copy" id="tweet-copy-175" readonly rows="10">💡 Prefer Objects.equals(a, b) for null-safe equality checks.
 
 ✅ a.equals(b) NPEs when a is null
 
@@ -1767,22 +1606,22 @@ body {
 
 #Java #Objects</textarea>
       <p class="copy-row">
-        <button type="button" class="copy-x-btn" data-target="tweet-copy-176">Copy for X</button>
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-175">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
       </p>
       <p class="links">
-        <a href="drawio/tweet-176.drawio" download>.drawio diagram</a> ·
-        <a href="codepen/tweet-176.html" target="_blank" rel="noopener">CodePen preview</a> ·
-        <a href="sources/tweet-176.java" download>Source .java</a> ·
-        <a href="x-text/tweet-176.txt" download>X text</a>
+        <a href="drawio/tweet-175.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-175.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-175.java" download>Source .java</a> ·
+        <a href="x-text/tweet-175.txt" download>X text</a>
       </p>
     </article>
-    <article id="tweet-177">
-      <h2>Tweet #177</h2>
+    <article id="tweet-176">
+      <h2>Tweet #176</h2>
       <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
-             data-prefill='{"title": "Tweet 177 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
+             data-prefill='{"title": "Tweet 176 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
              data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
@@ -1909,33 +1748,33 @@ body {
 &lt;span class=&quot;typ&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;writeString&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;out.txt&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;hello&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
-          <a href="codepen/tweet-177.html" target="_blank" rel="noopener">Open pen preview</a>
+          <a href="codepen/tweet-176.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
       <p class="tweet-copy-label">Copy for X <span class="x-char-count">(148/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-177" readonly rows="10">💡Java: If you have to read small files, you can use Files.readAllLines(), it's more direct and simple.
+      <textarea class="tweet-copy" id="tweet-copy-176" readonly rows="10">💡Java: If you have to read small files, you can use Files.readAllLines(), it's more direct and simple.
 
 ✅ #SpringBoot #JavaDev
 
 #SpringBoot #JavaDev</textarea>
       <p class="copy-row">
-        <button type="button" class="copy-x-btn" data-target="tweet-copy-177">Copy for X</button>
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-176">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
       </p>
       <p class="links">
-        <a href="drawio/tweet-177.drawio" download>.drawio diagram</a> ·
-        <a href="codepen/tweet-177.html" target="_blank" rel="noopener">CodePen preview</a> ·
-        <a href="sources/tweet-177.java" download>Source .java</a> ·
-        <a href="x-text/tweet-177.txt" download>X text</a>
+        <a href="drawio/tweet-176.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-176.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-176.java" download>Source .java</a> ·
+        <a href="x-text/tweet-176.txt" download>X text</a>
       </p>
     </article>
-    <article id="tweet-178">
-      <h2>Tweet #178</h2>
+    <article id="tweet-177">
+      <h2>Tweet #177</h2>
       <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
-             data-prefill='{"title": "Tweet 178 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
+             data-prefill='{"title": "Tweet 177 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
              data-height="780"
              data-theme-id="dark"
              data-default-tab="html,result"
@@ -2075,12 +1914,12 @@ body {
 &lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;orElseThrow&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;UserNotFoundException&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
-          <a href="codepen/tweet-178.html" target="_blank" rel="noopener">Open pen preview</a>
+          <a href="codepen/tweet-177.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
       <p class="tweet-copy-label">Copy for X <span class="x-char-count">(241/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-178" readonly rows="10">💡 Use Optional.orElseThrow() when a missing value is a bug.
+      <textarea class="tweet-copy" id="tweet-copy-177" readonly rows="10">💡 Use Optional.orElseThrow() when a missing value is a bug.
 
 ✅ orElse(null) → NPE later, far from the lookup
 
@@ -2090,22 +1929,22 @@ body {
 
 #Java #Optional</textarea>
       <p class="copy-row">
-        <button type="button" class="copy-x-btn" data-target="tweet-copy-178">Copy for X</button>
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-177">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
       </p>
       <p class="links">
-        <a href="drawio/tweet-178.drawio" download>.drawio diagram</a> ·
-        <a href="codepen/tweet-178.html" target="_blank" rel="noopener">CodePen preview</a> ·
-        <a href="sources/tweet-178.java" download>Source .java</a> ·
-        <a href="x-text/tweet-178.txt" download>X text</a>
+        <a href="drawio/tweet-177.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-177.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-177.java" download>Source .java</a> ·
+        <a href="x-text/tweet-177.txt" download>X text</a>
       </p>
     </article>
-    <article id="tweet-179">
-      <h2>Tweet #179</h2>
+    <article id="tweet-178">
+      <h2>Tweet #178</h2>
       <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
-             data-prefill='{"title": "Tweet 179 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
+             data-prefill='{"title": "Tweet 178 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
              data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
@@ -2243,12 +2082,12 @@ body {
 &lt;span class=&quot;com&quot;&gt;// Windows → \r\n between lines · Linux/macOS → \n&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
-          <a href="codepen/tweet-179.html" target="_blank" rel="noopener">Open pen preview</a>
+          <a href="codepen/tweet-178.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
       <p class="tweet-copy-label">Copy for X <span class="x-char-count">(210/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-179" readonly rows="10">💡 Use System.lineSeparator() for OS-native newlines.
+      <textarea class="tweet-copy" id="tweet-copy-178" readonly rows="10">💡 Use System.lineSeparator() for OS-native newlines.
 
 ✅ Hardcoded \n looks wrong in Windows Notepad
 
@@ -2257,6 +2096,175 @@ body {
 ✅ Use when building CSV rows, logs, or file text
 
 #Java #JavaDev</textarea>
+      <p class="copy-row">
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-178">Copy for X</button>
+        <span class="copy-status" aria-live="polite"></span>
+      </p>
+      <p class="links">
+        <a href="drawio/tweet-178.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-178.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-178.java" download>Source .java</a> ·
+        <a href="x-text/tweet-178.txt" download>X text</a>
+      </p>
+    </article>
+    <article id="tweet-179">
+      <h2>Tweet #179</h2>
+      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+      <div class="codepen-wrap codepen-wrap--large">
+        <div class="codepen"
+             data-prefill='{"title": "Tweet 179 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
+             data-height="744"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true">
+          <pre data-lang="css">html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: stretch;
+  padding: 0.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+.carbon {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: calc(100vh - 1rem);
+  max-width: none;
+  border-radius: 10px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.carbon-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 36px;
+  padding: 0 16px;
+  background: #252836;
+  flex-shrink: 0;
+}
+.carbon-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.carbon-dot.red { background: #ff5f56; }
+.carbon-dot.yellow { background: #ffbd2e; }
+.carbon-dot.green { background: #27c93f; }
+.carbon-module {
+  margin-left: auto;
+  font: 13px/1 system-ui, sans-serif;
+  color: #8b949e;
+  letter-spacing: 0.02em;
+}
+.carbon-editor {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background: #011627;
+  padding: 1.5rem 2rem 1.75rem;
+  overflow: auto;
+}
+.carbon-editor pre {
+  margin: 0;
+  flex: 1;
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 20px;
+  line-height: 34px;
+  white-space: pre;
+  tab-size: 4;
+}
+.carbon-editor .kw { color: #c792ea; }
+.carbon-editor .ann { color: #ffb86c; }
+.carbon-editor .str { color: #c3e88d; }
+.carbon-editor .typ { color: #ffcb6b; }
+.carbon-editor .met { color: #82aaff; }
+.carbon-editor .com { color: #5c6370; }
+.carbon-editor .num { color: #f78c6c; }
+.carbon-editor .pun { color: #89ddff; }
+.carbon-editor .txt { color: #d6deeb; }
+.carbon-editor.cols {
+  flex-direction: row;
+  gap: 1.75rem;
+  align-items: stretch;
+}
+.carbon-editor.cols .col {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.carbon-editor.cols .col pre {
+  flex: 1;
+  font-size: 20px;
+  line-height: 34px;
+}
+.carbon-editor.cols .col-divider {
+  align-self: stretch;
+  position: relative;
+  width: 1px;
+  background: #1d3b53;
+  flex: 0 0 auto;
+}
+.carbon-editor.cols .col-divider::after {
+  content: "\2192";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #011627;
+  border: 1px solid #1d3b53;
+  color: #82aaff;
+  font-size: 16px;
+}
+</pre>
+          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;java-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;kw&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;io&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;IOException&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kw&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;nio&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kw&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;nio&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kw&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;nio&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;StandardCopyOption&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;typ&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;data.csv&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;typ&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;backup&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;data.csv.bak&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kw&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;copy&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;backup&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;StandardCopyOption&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;REPLACE_EXISTING&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;Copied to &amp;quot;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;backup&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;IOException&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;throw&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;RuntimeException&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+        </div>
+        <p class="codepen-links">
+          <a href="codepen/tweet-179.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>
+      </div>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(229/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-179" readonly rows="10">💡 Java I/O: Use Files.copy() to duplicate a file in one line.
+
+✅ Great for backups: data.csv → data.csv.bak
+
+✅ Use REPLACE_EXISTING if the target might already exist
+
+✅ Works with Path (so it’s portable across OSes)
+
+#Java #Files</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-179">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -2396,175 +2404,6 @@ body {
   font-size: 16px;
 }
 </pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;java-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;kw&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;io&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;IOException&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kw&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;nio&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kw&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;nio&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kw&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;nio&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;StandardCopyOption&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;typ&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;data.csv&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;typ&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;backup&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;data.csv.bak&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kw&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;copy&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;backup&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;StandardCopyOption&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;REPLACE_EXISTING&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;Copied to &amp;quot;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;backup&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;IOException&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;throw&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;RuntimeException&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
-        </div>
-        <p class="codepen-links">
-          <a href="codepen/tweet-180.html" target="_blank" rel="noopener">Open pen preview</a>
-          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
-        </p>
-      </div>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(229/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-180" readonly rows="10">💡 Java I/O: Use Files.copy() to duplicate a file in one line.
-
-✅ Great for backups: data.csv → data.csv.bak
-
-✅ Use REPLACE_EXISTING if the target might already exist
-
-✅ Works with Path (so it’s portable across OSes)
-
-#Java #Files</textarea>
-      <p class="copy-row">
-        <button type="button" class="copy-x-btn" data-target="tweet-copy-180">Copy for X</button>
-        <span class="copy-status" aria-live="polite"></span>
-      </p>
-      <p class="links">
-        <a href="drawio/tweet-180.drawio" download>.drawio diagram</a> ·
-        <a href="codepen/tweet-180.html" target="_blank" rel="noopener">CodePen preview</a> ·
-        <a href="sources/tweet-180.java" download>Source .java</a> ·
-        <a href="x-text/tweet-180.txt" download>X text</a>
-      </p>
-    </article>
-    <article id="tweet-181">
-      <h2>Tweet #181</h2>
-      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
-      <div class="codepen-wrap codepen-wrap--large">
-        <div class="codepen"
-             data-prefill='{"title": "Tweet 181 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
-             data-height="744"
-             data-theme-id="dark"
-             data-default-tab="html,result"
-             data-editable="true">
-          <pre data-lang="css">html, body {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  min-height: 100vh;
-  box-sizing: border-box;
-}
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: stretch;
-  padding: 0.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-.carbon {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-height: calc(100vh - 1rem);
-  max-width: none;
-  border-radius: 10px;
-  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-}
-.carbon-titlebar {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  height: 36px;
-  padding: 0 16px;
-  background: #252836;
-  flex-shrink: 0;
-}
-.carbon-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-.carbon-dot.red { background: #ff5f56; }
-.carbon-dot.yellow { background: #ffbd2e; }
-.carbon-dot.green { background: #27c93f; }
-.carbon-module {
-  margin-left: auto;
-  font: 13px/1 system-ui, sans-serif;
-  color: #8b949e;
-  letter-spacing: 0.02em;
-}
-.carbon-editor {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  background: #011627;
-  padding: 1.5rem 2rem 1.75rem;
-  overflow: auto;
-}
-.carbon-editor pre {
-  margin: 0;
-  flex: 1;
-  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 20px;
-  line-height: 34px;
-  white-space: pre;
-  tab-size: 4;
-}
-.carbon-editor .kw { color: #c792ea; }
-.carbon-editor .ann { color: #ffb86c; }
-.carbon-editor .str { color: #c3e88d; }
-.carbon-editor .typ { color: #ffcb6b; }
-.carbon-editor .met { color: #82aaff; }
-.carbon-editor .com { color: #5c6370; }
-.carbon-editor .num { color: #f78c6c; }
-.carbon-editor .pun { color: #89ddff; }
-.carbon-editor .txt { color: #d6deeb; }
-.carbon-editor.cols {
-  flex-direction: row;
-  gap: 1.75rem;
-  align-items: stretch;
-}
-.carbon-editor.cols .col {
-  flex: 1 1 0;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-}
-.carbon-editor.cols .col pre {
-  flex: 1;
-  font-size: 20px;
-  line-height: 34px;
-}
-.carbon-editor.cols .col-divider {
-  align-self: stretch;
-  position: relative;
-  width: 1px;
-  background: #1d3b53;
-  flex: 0 0 auto;
-}
-.carbon-editor.cols .col-divider::after {
-  content: "\2192";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: #011627;
-  border: 1px solid #1d3b53;
-  color: #82aaff;
-  font-size: 16px;
-}
-</pre>
           <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;java-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;kw&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;util&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;kw&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;util&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;stream&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Stream&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
 
@@ -2581,12 +2420,12 @@ body {
 &lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;toList&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
-          <a href="codepen/tweet-181.html" target="_blank" rel="noopener">Open pen preview</a>
+          <a href="codepen/tweet-180.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
       <p class="tweet-copy-label">Copy for X <span class="x-char-count">(264/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-181" readonly rows="10">💡 Java Streams: limit(n) turns an infinite stream into a finite one.
+      <textarea class="tweet-copy" id="tweet-copy-180" readonly rows="10">💡 Java Streams: limit(n) turns an infinite stream into a finite one.
 
 ✅ Useful with Stream.iterate() / generate() (they can be infinite)
 
@@ -2596,21 +2435,21 @@ body {
 
 #Java #Streams</textarea>
       <p class="copy-row">
-        <button type="button" class="copy-x-btn" data-target="tweet-copy-181">Copy for X</button>
+        <button type="button" class="copy-x-btn" data-target="tweet-copy-180">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
       </p>
       <p class="links">
-        <a href="drawio/tweet-181.drawio" download>.drawio diagram</a> ·
-        <a href="codepen/tweet-181.html" target="_blank" rel="noopener">CodePen preview</a> ·
-        <a href="sources/tweet-181.java" download>Source .java</a> ·
-        <a href="x-text/tweet-181.txt" download>X text</a>
+        <a href="drawio/tweet-180.drawio" download>.drawio diagram</a> ·
+        <a href="codepen/tweet-180.html" target="_blank" rel="noopener">CodePen preview</a> ·
+        <a href="sources/tweet-180.java" download>Source .java</a> ·
+        <a href="x-text/tweet-180.txt" download>X text</a>
       </p>
     </article>
   <nav class="pagination" aria-label="Tweet pages">
     <a class="page-nav" href="page-6.html">← Prev</a>
     <a href="index.html">1</a> · <a href="page-2.html">2</a> · <a href="page-3.html">3</a> · <a href="page-4.html">4</a> · <a href="page-5.html">5</a> · <a href="page-6.html">6</a> · <span class="page-current">7</span>
     <a class="page-nav disabled" href="#">Next →</a>
-    <span class="page-meta">Tweets #167–#181 of 135 · page 7/7</span>
+    <span class="page-meta">Tweets #167–#180 of 134 · page 7/7</span>
   </nav>
   <script async src="https://public.codepenassets.com/embed/index.js"></script>
 

@@ -1,6 +1,6 @@
-// 💡 Java tip 💡: Format your code consistently. Use tools like Checkstyle or Spotless. #Java #CleanCode
+// 💡 Java Tip 💡: Avoid initializing objects you may never use. Lazy-load when appropriate. #Java #Performance
 //
-// ✅ Java tip 💡: Format your code consistently. Use tools like Checkstyle or Spotless. #Java #CleanCode
+// ✅ Java Tip 💡: Avoid initializing objects you may never use. Lazy-load when appropriate. #Java #Performance
 //
 // ✅ Runnable sample: `java-tips`
 //

@@ -1,6 +1,7 @@
-Map<Dept, List<Employee>> byDept = employees.stream()
-    .collect(Collectors.groupingBy(Employee::getDept));
-
-long active = employees.stream()
-    .filter(Employee::isActive)
-    .count();
+// 💡 Java tip: From Java 9 you can use Objects.checkIndex() to replace manual if checks for validating index bounds. It is a small feature that helps making the code cleaner.  #Java #JavaTip
+//
+// ✅ Runnable sample: `java-tips`
+//
+// ✅ Architecture diagram + Carbon CodePen below
+//
+// ✅ From the codingstrain examples repo

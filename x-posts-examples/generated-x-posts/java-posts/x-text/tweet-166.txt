@@ -1,4 +1,6 @@
-💡 Java tip: Starting from Java 12 you can use String.transform(Function) to apply lambdas directly to strings.
+💡 Java tip: Use Optional.filter(...) to add inline conditions to an Optional object.
+
+✅ It lets you apply a condition directly and it returns the original Optional if the predicate passes, an empty one otherwise.
 
 ✅ #Java #JavaDev
 

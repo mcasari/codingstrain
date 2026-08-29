@@ -1,9 +1,5 @@
-💡 1/3 A very trivial example could be:
+💡 Java Tip 💡: Use enums for state machines—it improves readability. #Java #StatePattern
 
-✅ String helloThere = "Hello " + "there" + "!";
+✅ Java Tip 💡: Use enums for state machines—it improves readability. #Java #StatePattern
 
-✅ System.out.println(helloThere);
-
-✅ The above line of code is clear and works as intended
-
-#Java #BestPractices
+#Java #StatePattern

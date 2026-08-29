@@ -1,7 +1,8 @@
-// 💡 Java Tip 💡: Always override `hashCode()` when you override `equals()`. #Java #OOP
-//
-// ✅ Java Tip 💡: Always override `hashCode()` when you override `equals()`. #Java #OOP
-//
-// ✅ Runnable sample: `java-tips`
-//
-// ✅ Architecture diagram + Carbon CodePen below
+// ❌ A NullPointerException waiting to happen
+User u = repo.find(id);
+return u.getEmail();
+
+// ✅ Make "maybe absent" explicit
+return repo.findById(id)
+    .map(User::getEmail)
+    .orElse("no-email");

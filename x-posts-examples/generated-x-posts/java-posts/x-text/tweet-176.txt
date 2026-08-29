@@ -1,9 +1,5 @@
-💡 Prefer Objects.equals(a, b) for null-safe equality checks.
+💡Java: If you have to read small files, you can use Files.readAllLines(), it's more direct and simple.
 
-✅ a.equals(b) NPEs when a is null
+✅ #SpringBoot #JavaDev
 
-✅ Objects.equals handles null on either side
-
-✅ Both null → true; one null → false; else a.equals(b)
-
-#Java #Objects
+#SpringBoot #JavaDev

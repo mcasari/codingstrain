@@ -1,7 +1,8 @@
-// 💡 Java tip: Starting from Java 12 you can use String.transform(Function) to apply lambdas directly to strings.
-//
-// ✅ #Java #JavaDev
-//
-// ✅ Runnable sample: `java-tips`
-//
-// ✅ Architecture diagram + Carbon CodePen below
+// ❌ A NullPointerException waiting to happen
+User u = repo.find(id);
+return u.getEmail();
+
+// ✅ Make "maybe absent" explicit
+return repo.findById(id)
+    .map(User::getEmail)
+    .orElse("no-email");

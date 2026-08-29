@@ -1,6 +1,6 @@
-Map<Dept, List<Employee>> byDept = employees.stream()
-    .collect(Collectors.groupingBy(Employee::getDept));
-
-long active = employees.stream()
-    .filter(Employee::isActive)
-    .count();
+List<String> names = users.stream()
+    .filter(User::isActive)
+    .map(User::getName)
+    .sorted()
+    .toList();
+// Declarative: say WHAT you want, not HOW to loop

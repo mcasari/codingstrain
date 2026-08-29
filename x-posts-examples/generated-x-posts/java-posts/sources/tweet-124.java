@@ -1,7 +1,7 @@
-// 💡 Java Tip : To populate Map values, like lists, you can use computeIfAbsent(). #Java #Collections
+// 💡 Java tip 💡:
 //
-// ✅ Java Tip : To populate Map values, like lists, you can use computeIfAbsent(). #Java #Collections
+// ✅ Java tip 💡:
 //
-// ✅ Runnable sample: `java-tips`
+// ✅ If you want to count the occurrences of an element in a list, you can use Collections.frequency(...)
 //
-// ✅ Architecture diagram + Carbon CodePen below
+// ✅ #Java #Collections

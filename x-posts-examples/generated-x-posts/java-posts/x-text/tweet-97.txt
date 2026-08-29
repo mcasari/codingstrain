@@ -1,5 +1,5 @@
-💡 Java Tip 💡: Refactor legacy code gradually. Use tests to ensure stability. #Java #LegacyCode
+💡 Java tip💡: Use 'volatile' to declare simple flags shared across threads. #Java #Multithreading
 
-✅ Java Tip 💡: Refactor legacy code gradually. Use tests to ensure stability. #Java #LegacyCode
+✅ Java tip💡: Use 'volatile' to declare simple flags shared across threads. #Java #Multithreading
 
-#Java #LegacyCode
+#Java #Multithreading

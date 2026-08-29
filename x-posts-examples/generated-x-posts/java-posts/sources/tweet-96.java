@@ -1,7 +1,7 @@
-// 💡 Java Tip 💡: Use helper classes to implement reusable logic, but avoid all-knowing God classes.
+// 💡 Java Tip 💡: Refactor legacy code gradually. Use tests to ensure stability. #Java #LegacyCode
 //
-// ✅ Java Tip 💡: Use helper classes to implement reusable logic, but avoid all-knowing God classes
+// ✅ Java Tip 💡: Refactor legacy code gradually. Use tests to ensure stability. #Java #LegacyCode
 //
-// ✅ #Java #CodeOrganization
+// ✅ Runnable sample: `java-tips`
 //
-// ✅ #Java #CleanCode
+// ✅ Architecture diagram + Carbon CodePen below

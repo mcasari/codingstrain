@@ -1,6 +1,6 @@
-// 💡 Java tip: Starting from Java 8, you can remove nulls easily with list.removeIf(Objects::isNull).
+// 💡 Java tip: Starting from Java 12, you can use String.indent(n)  to format multi-line strings with indentation.
 //
-// ✅ #Java #JavaTips
+// ✅ #Java #ModernJava
 //
 // ✅ Runnable sample: `java-tips`
 //

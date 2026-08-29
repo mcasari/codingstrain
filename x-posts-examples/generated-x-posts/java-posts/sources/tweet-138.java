@@ -1,7 +1,7 @@
-// 💡 SOLID Principles: Interface Segregation Principle (ISP) states that clients shouldn’t depend on methods they don’t use.
+// 💡SOLID principles: Dependency Inversion Principle (DIP) states that high-level modules should not depend on low-level modules; instead, both should depend on abstractions.
 //
-// ✅ So called "fat"interfaces (large, general-purpose interfaces) should be broken down into smaller, more specific ones. Classes shouldn't be forced to implement methods that are irrelevant to them.
-//
-// ✅ #Java #JavaDev
+// ✅ #SOLID #SoftwareDesign
 //
 // ✅ Runnable sample: `java-tips`
+//
+// ✅ Architecture diagram + Carbon CodePen below

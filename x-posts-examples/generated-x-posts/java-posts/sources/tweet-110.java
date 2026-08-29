@@ -1,7 +1,12 @@
-// 💡 Java tip 💡: Don’t rely blindly on Garbage Collection; memory leaks are still possible.
-//
-// ✅ Java tip 💡: Don’t rely blindly on Garbage Collection; memory leaks are still possible
-//
-// ✅ #Java #SoftwareEngineering
-//
-// ✅ Runnable sample: `java-tips`
+// ❌ A new String object on every iteration
+String csv = "";
+for (String item : items) {
+    csv += item + ",";
+}
+
+// ✅ One mutable buffer — no garbage
+StringBuilder sb = new StringBuilder();
+for (String item : items) {
+    sb.append(item).append(',');
+}
+String csv = sb.toString();

@@ -1,5 +1,5 @@
-💡 Java tip: Use List.copyOf(list) for a safe, unmodifiable copy, while avoiding accidental changes.  #Java #JavaTips
+💡 Java tip: Starting from Java 8 you can use List.removeIf(<predicate>) to clean up collections in one line. #JavaTips
 
-✅ Java tip: Use List.copyOf(list) for a safe, unmodifiable copy, while avoiding accidental changes.  #Java #JavaTips
+✅ Java tip: Starting from Java 8 you can use List.removeIf(<predicate>) to clean up collections in one line. #JavaTips
 
-#Java #JavaTips
+#JavaTips

@@ -1,7 +1,5 @@
-// 💡 Java tip : Starting from Java 19 you can explore a feature called "virtual threads". Virtual threads are lightweight threads managed by the JVM rather than the OS. #Java #Concurrency
-//
-// ✅ Runnable sample: `java-tips`
-//
-// ✅ Architecture diagram + Carbon CodePen below
-//
-// ✅ From the codingstrain examples repo
+// Immutable, null-hostile, concise
+List<String> roles = List.of("ADMIN", "USER");
+Map<String, Integer> limits = Map.of("free", 10, "pro", 100);
+
+// roles.add("X") -> UnsupportedOperationException

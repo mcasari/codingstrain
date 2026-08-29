@@ -1,21 +1,19 @@
-// ❌ One exclusive lock — readers block each other
-synchronized String getSlow(String key) {
-    return cache.get(key);
-}
-synchronized void putSlow(String key, String value) {
-    cache.put(key, value);
-}
+import java.nio.file.Files;
+import java.nio.file.Path;
 
-// ✅ ReadWriteLock — many readers, exclusive writer
-private final ReentrantReadWriteLock rw =
-    new ReentrantReadWriteLock();
-String get(String key) {
-    rw.readLock().lock();
-    try { return cache.get(key); }
-    finally { rw.readLock().unlock(); }
-}
-void put(String key, String value) {
-    rw.writeLock().lock();
-    try { cache.put(key, value); }
-    finally { rw.writeLock().unlock(); }
+Path a = Path.of("data.txt");
+Path b = Path.of("./data.txt");
+Path link = Path.of("data-link.txt");  // symlink to data.txt
+
+// ❌ Path.equals — string/name identity, not the file on disk
+a.equals(b);       // often false
+a.equals(link);    // false (different path text)
+
+// ✅ Same actual file? Resolves relative paths + symlinks
+Files.isSameFile(a, b);     // true (if both exist)
+Files.isSameFile(a, link);  // true (link points at data.txt)
+
+// Handy when cleaning duplicates or comparing user-supplied paths
+if (Files.isSameFile(userPath, configPath)) {
+    // treat as one file
 }

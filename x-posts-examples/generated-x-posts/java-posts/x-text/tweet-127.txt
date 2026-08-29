@@ -1,4 +1,6 @@
-💡 Java tip💡: If you have a list of elements, you want to remove duplicates, and sort them in natural order or by a custom comparator, you can use TreeSet.
+💡 Java Tip 💡: You can use LinkedHashMap to easily implement an LRU (Least Recently Used) Cache.
+
+✅ Java Tip 💡: You can use LinkedHashMap to easily implement an LRU (Least Recently Used) Cache
 
 ✅ #Java #Collections
 

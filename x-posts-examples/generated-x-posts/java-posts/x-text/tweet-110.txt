@@ -1,7 +1,9 @@
-💡 Java tip 💡: Don’t rely blindly on Garbage Collection; memory leaks are still possible.
+💡 1/3 A very trivial example could be:
 
-✅ Java tip 💡: Don’t rely blindly on Garbage Collection; memory leaks are still possible
+✅ String helloThere = "Hello " + "there" + "!";
 
-✅ #Java #SoftwareEngineering
+✅ System.out.println(helloThere);
 
-#Java #SoftwareEngineering
+✅ The above line of code is clear and works as intended
+
+#Java #BestPractices

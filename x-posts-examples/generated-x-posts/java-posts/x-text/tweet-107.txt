@@ -1,7 +1,5 @@
-💡 Test edge cases — nulls, empty collections, and boundary values are where bugs hide.
+💡 Prefer delegation over inheritance — an "is-a" relationship ties you to the superclass forever.
 
-✅ Happy-path tests alone won't catch NullPointerException on missing input
+✅ A subclass inherits the parent's entire API — a change upstream can break your code
 
-✅ Empty lists and single-element collections often behave differently than "normal" data
-
-#Java #Testing
+#Java #OOP

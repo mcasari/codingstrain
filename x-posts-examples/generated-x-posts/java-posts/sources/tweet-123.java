@@ -1,4 +1,7 @@
-public Order(Customer customer) {
-    // Fail fast at construction with a clear message
-    this.customer = Objects.requireNonNull(customer, "customer");
-}
+// 💡 Java Tip : To populate Map values, like lists, you can use computeIfAbsent(). #Java #Collections
+//
+// ✅ Java Tip : To populate Map values, like lists, you can use computeIfAbsent(). #Java #Collections
+//
+// ✅ Runnable sample: `java-tips`
+//
+// ✅ Architecture diagram + Carbon CodePen below

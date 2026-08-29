@@ -1,5 +1,5 @@
-💡 Java Tip 💡: Master the SOLID principles to write cleaner, more maintainable object-oriented code.
+💡 Java tip:💡: Avoid synchronized blocks when higher-level abstractions exist. #Java #Concurrency
 
-✅ Java Tip 💡: Master the SOLID principles to write cleaner, more maintainable object-oriented code
+✅ Java tip:💡: Avoid synchronized blocks when higher-level abstractions exist. #Java #Concurrency
 
-#Java #CleanCode #OOP #SoftwareDesign
+#Java #Concurrency

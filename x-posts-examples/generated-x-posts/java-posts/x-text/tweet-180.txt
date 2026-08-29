@@ -1,9 +1,9 @@
-💡 Java I/O: Use Files.copy() to duplicate a file in one line.
+💡 Java Streams: limit(n) turns an infinite stream into a finite one.
 
-✅ Great for backups: data.csv → data.csv.bak
+✅ Useful with Stream.iterate() / generate() (they can be infinite)
 
-✅ Use REPLACE_EXISTING if the target might already exist
+✅ limit(5) means “take the first 5 items, then stop”
 
-✅ Works with Path (so it’s portable across OSes)
+✅ Great for sampling data or building the first N values
 
-#Java #Files
+#Java #Streams

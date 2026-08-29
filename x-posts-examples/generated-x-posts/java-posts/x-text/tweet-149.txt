@@ -1,4 +1,4 @@
-💡 Java tip: Starting from Java 11, you can use String.strip() instead of trim(), since it handles Unicode whitespaces correctly.
+💡 Java tip: Use var for local variables only when the type is obvious from the right-hand side or when the generic type is too verbose.
 
 ✅ #Java #JavaTips
 

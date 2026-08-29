@@ -1,7 +1,5 @@
-💡 Prefer constructor injection over field injection in Spring beans.
+💡 Java Tip 💡: Use Comparator.comparing() for sorting with lambdas. #Java #FunctionalProgramming
 
-✅ Field injection hides required dependencies — you can create the object without them
+✅ Java Tip 💡: Use Comparator.comparing() for sorting with lambdas. #Java #FunctionalProgramming
 
-✅ Constructor injection makes dependencies explicit and lets you use final fields
-
-#Java #SpringBoot
+#Java #FunctionalProgramming

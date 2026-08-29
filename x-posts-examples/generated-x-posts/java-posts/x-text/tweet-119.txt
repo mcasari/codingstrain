@@ -1,5 +1,5 @@
-💡 Java Tip 💡: Refactor large switch statements into polymorphic classes. #Java #Refactoring
+💡 Java tip:💡: Use thread pools (Executors) instead of manually managing threads. #Java #Concurrency
 
-✅ Java Tip 💡: Refactor large switch statements into polymorphic classes. #Java #Refactoring
+✅ Java tip:💡: Use thread pools (Executors) instead of manually managing threads. #Java #Concurrency
 
-#Java #Refactoring
+#Java #Concurrency

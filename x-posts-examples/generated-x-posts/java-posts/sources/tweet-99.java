@@ -1,7 +1,5 @@
-// 💡 Java tip 💡: Don’t reinvent the wheel—use proven Java libraries and frameworks. #Java #Productivity
-//
-// ✅ Java tip 💡: Don’t reinvent the wheel—use proven Java libraries and frameworks. #Java #Productivity
-//
-// ✅ Runnable sample: `java-tips`
-//
-// ✅ Architecture diagram + Carbon CodePen below
+// Compile once and reuse — not on every call
+private static final Pattern EMAIL =
+    Pattern.compile("^[^@\\s]+@[^@\\s]+$");
+
+boolean ok = EMAIL.matcher(input).matches();

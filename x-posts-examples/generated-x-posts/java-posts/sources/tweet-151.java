@@ -1,5 +1,6 @@
-private static final Logger log =
-    LoggerFactory.getLogger(OrderService.class);
-
-log.info("Created order {} for {}", orderId, customer);
-// Lazy formatting, log levels, no System.out
+List<String> names = users.stream()
+    .filter(User::isActive)
+    .map(User::getName)
+    .sorted()
+    .toList();
+// Declarative: say WHAT you want, not HOW to loop

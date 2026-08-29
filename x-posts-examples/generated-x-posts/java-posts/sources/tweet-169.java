@@ -1,18 +1,21 @@
-List<Integer> scores = List.of(90, 75, 88, 92, 70);
+// ❌ One exclusive lock — readers block each other
+synchronized String getSlow(String key) {
+    return cache.get(key);
+}
+synchronized void putSlow(String key, String value) {
+    cache.put(key, value);
+}
 
-// ❌ Several passes — count, sum, min, max, average separately
-long count = scores.stream().count();
-int sum = scores.stream().mapToInt(i -> i).sum();
-int min = scores.stream().mapToInt(i -> i).min().orElseThrow();
-int max = scores.stream().mapToInt(i -> i).max().orElseThrow();
-double avg = scores.stream().mapToInt(i -> i).average().orElseThrow();
-
-// ✅ One pass — all stats together
-IntSummaryStatistics stats = scores.stream()
-    .collect(Collectors.summarizingInt(i -> i));
-
-stats.getCount();    // 5
-stats.getSum();      // 415
-stats.getMin();      // 70
-stats.getMax();      // 92
-stats.getAverage();  // 83.0
+// ✅ ReadWriteLock — many readers, exclusive writer
+private final ReentrantReadWriteLock rw =
+    new ReentrantReadWriteLock();
+String get(String key) {
+    rw.readLock().lock();
+    try { return cache.get(key); }
+    finally { rw.readLock().unlock(); }
+}
+void put(String key, String value) {
+    rw.writeLock().lock();
+    try { cache.put(key, value); }
+    finally { rw.writeLock().unlock(); }
+}

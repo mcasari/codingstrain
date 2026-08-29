@@ -1,2 +1,7 @@
-List<String> lines = Files.readAllLines(Path.of("data.txt"));
-Files.writeString(Path.of("out.txt"), "hello");
+// 💡 Java tip: Avoid boxing overhead by using primitive streams.
+//
+// ✅ #Java
+//
+// ✅ Runnable sample: `java-tips`
+//
+// ✅ Architecture diagram + Carbon CodePen below

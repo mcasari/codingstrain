@@ -1,8 +1,7 @@
-// ❌ A NullPointerException waiting to happen
-User u = repo.find(id);
-return u.getEmail();
-
-// ✅ Make "maybe absent" explicit
-return repo.findById(id)
-    .map(User::getEmail)
-    .orElse("no-email");
+// 💡 Java Tip 💡: Avoid exposing internal object state. Use DTOs when needed. #Java #Encapsulation
+//
+// ✅ Java Tip 💡: Avoid exposing internal object state. Use DTOs when needed. #Java #Encapsulation
+//
+// ✅ Runnable sample: `java-tips`
+//
+// ✅ Architecture diagram + Carbon CodePen below

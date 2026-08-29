@@ -1,7 +1,9 @@
-// 💡 Java Tip 💡: Override hashCode() when overriding equals() to ensure collections like HashMap work correctly.
+// 💡Java tip: Starting from Java 8,  for parallel processing of collections you can use parallelStream().
 //
-// ✅ Java Tip 💡: Override hashCode() when overriding equals() to ensure collections like HashMap work correctly
+// ✅ Uses multiple threads
 //
-// ✅ HashMap is based on an hash table data structure, and uses hashCode() to determine the bucket index
+// ✅ Good for CPU-intensive processing
 //
-// ✅ #Java #Collections
+// ✅ ⚠️ Sharing mutable state is not safe
+//
+// #Java #JavaDev

@@ -1,4 +1,4 @@
-// 💡 Cache expensive operations when possible. Use `ConcurrentMap` if needed. #Java #Performance
+// 💡 Explore virtual threads (Java 19+) for lightweight concurrency. #Java #ProjectLoom
 //
 // ✅ Runnable sample: `java-tips`
 //

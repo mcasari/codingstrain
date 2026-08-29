@@ -1,7 +1,3 @@
-💡 Java tip: Use Stream.peek() for debugging in pipelines, not for business logic.
-
-✅ Stream.peek() lets you perform logging or inspection on each element as it flows through a stream without modifying it.
-
-✅ #Java #JavaDev
+💡 Java tip: List.reversed() returns an unmodifiable reversed view of the original list. #Java #JavaDev
 
 #Java #JavaDev

@@ -1,5 +1,9 @@
-// Immutable, null-hostile, concise
-List<String> roles = List.of("ADMIN", "USER");
-Map<String, Integer> limits = Map.of("free", 10, "pro", 100);
-
-// roles.add("X") -> UnsupportedOperationException
+// 💡 Java tip 💡: Try to avoid sharing data across threads.
+//
+// ✅Use immutable objects
+//
+// ✅Or make threads communicate through messages, without directly modifying shared state.
+//
+// ✅ Java tip 💡: Try to avoid sharing data across threads
+//
+// #Java #Concurrency

@@ -1,8 +1,7 @@
-public record SignupRequest(
-        @NotBlank String name,
-        @Email String email) {}
-
-@PostMapping("/signup")
-public void signup(@Valid @RequestBody SignupRequest req) {
-    service.register(req);
-}
+// 💡 Learn design patterns to write reusable, maintainable code. #Java #DesignPatterns
+//
+// ✅ Runnable sample: `java-tips`
+//
+// ✅ Architecture diagram + Carbon CodePen below
+//
+// ✅ From the codingstrain examples repo

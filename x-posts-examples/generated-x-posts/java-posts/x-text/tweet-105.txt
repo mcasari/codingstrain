@@ -1,5 +1,3 @@
-💡 Java Tip 💡: Use Comparator.comparing() for sorting with lambdas. #Java #FunctionalProgramming
+💡 Measure code coverage but don’t obsess over 100%. #Java #Testing
 
-✅ Java Tip 💡: Use Comparator.comparing() for sorting with lambdas. #Java #FunctionalProgramming
-
-#Java #FunctionalProgramming
+#Java #Testing

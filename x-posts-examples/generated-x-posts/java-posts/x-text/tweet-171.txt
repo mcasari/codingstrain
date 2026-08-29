@@ -1,9 +1,9 @@
-💡 Use Files.isSameFile(a, b) to check if two paths are the same file.
+💡 Pattern matching for instanceof: declare the variable in the check.
 
-✅ Path.equals only compares path text
+✅ Old style: instanceof then a separate cast
 
-✅ isSameFile checks the real file (follows symlinks)
+✅ New style: if (obj instanceof Dog d) — d is ready
 
-✅ Catches ./file vs file and link vs target
+✅ The binding is only in scope when the check is true
 
-#Java #Files
+#Java #PatternMatching

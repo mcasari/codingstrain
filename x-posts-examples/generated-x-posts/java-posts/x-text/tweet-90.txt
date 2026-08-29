@@ -1,5 +1,9 @@
-💡 Java tip💡: Avoid using Thread.sleep() for timing. Use proper synchronization or schedulers. #Java #Concurrency
+💡 Java: Don’t use Thread.sleep() to wait for work — use sync or a scheduler.
 
-✅ Java tip💡: Avoid using Thread.sleep() for timing. Use proper synchronization or schedulers. #Java #Concurrency
+✅ Sleep is a guess — you wake too early or too late
+
+✅ Use wait()/notify() or CountDownLatch for coordination
+
+✅ For repeating tasks, use ScheduledExecutorService
 
 #Java #Concurrency

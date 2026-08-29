@@ -1,3 +1,5 @@
-💡 Java tip : Avoid static variables unless they store truly global values. They hinder testing by making it harder to isolate classes due to shared state. It can cause subtle bugs. For example: public class BankAccount { public static double balance; public Bank…
+💡 Java tip: Use List.copyOf(list) for a safe, unmodifiable copy, while avoiding accidental changes.  #Java #JavaTips
+
+✅ Java tip: Use List.copyOf(list) for a safe, unmodifiable copy, while avoiding accidental changes.  #Java #JavaTips
 
 #Java #JavaTips

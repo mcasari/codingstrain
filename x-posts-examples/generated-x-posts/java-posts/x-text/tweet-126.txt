@@ -1,7 +1,5 @@
-💡 Java tip 💡: Instead of using HashSet for enum types, consider using EnumSet, it's faster and more memory-efficient.
+💡 Java tip💡: If you have a list of elements, you want to remove duplicates, and sort them in natural order or by a custom comparator, you can use TreeSet.
 
-✅Example:
-
-✅ Java tip 💡: Instead of using HashSet for enum types, consider using EnumSet, it's faster and more memory-efficient
+✅ #Java #Collections
 
 #Java #Collections

@@ -1,7 +1,7 @@
-// 💡 Java tip: Starting from Java 8 you can use List.removeIf(<predicate>) to clean up collections in one line. #JavaTips
+// 💡Java tip: Use ThreadLocal.withInitial(...) to provide each thread its own safe default value.
 //
-// ✅ Java tip: Starting from Java 8 you can use List.removeIf(<predicate>) to clean up collections in one line. #JavaTips
+// ✅ The value is created lazily
+//
+// ✅ #Java #JavaDev
 //
 // ✅ Runnable sample: `java-tips`
-//
-// ✅ Architecture diagram + Carbon CodePen below

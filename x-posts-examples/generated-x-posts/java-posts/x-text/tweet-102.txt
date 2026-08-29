@@ -1,5 +1,7 @@
-💡 Java Tip 💡: Avoid initializing objects you may never use. Lazy-load when appropriate. #Java #Performance
+💡 Use Deque instead of Stack for LIFO (last-in, first-out) lists.
 
-✅ Java Tip 💡: Avoid initializing objects you may never use. Lazy-load when appropriate. #Java #Performance
+✅ Stack is a legacy class — it extends Vector and synchronizes every operation
 
-#Java #Performance
+✅ Deque supports the same push / pop / peek calls — a drop-in replacement
+
+#Java #Collections

@@ -1,23 +1,20 @@
-List<String> names = List.of("ada", "grace", "linus");
+List<User> users = List.of(
+    new User(null, "Ada"),
+    new User("Lovelace", "Ada"),
+    new User(null, "Grace")
+);
 
-// ❌ Business logic in peek — fragile and surprising
-List<String> bad = names.stream()
-    .peek(n -> audit.log("seen " + n))   // side effect
-    .peek(n -> n = n.toUpperCase())      // does nothing useful (n is local)
-    .map(String::toUpperCase)
-    .toList();
+// ❌ NPE — comparing() calls keyExtractor then key.compareTo
+users.sort(Comparator.comparing(User::getLastName));
 
-// findAny() may process only one element — later peeks never run
-names.stream()
-    .peek(n -> counter.increment())
-    .findAny();
+// ✅ Nulls first, then by last name, then first name
+users.sort(
+    Comparator.comparing(
+        User::getLastName,
+        Comparator.nullsFirst(String::compareTo))
+    .thenComparing(
+        User::getFirstName,
+        Comparator.nullsLast(String::compareTo))
+);
 
-// ✅ peek for debug only; real work in map / forEach
-List<String> good = names.stream()
-    .peek(n -> System.out.println("debug: " + n))  // temporary
-    .map(String::toUpperCase)
-    .toList();
-
-names.stream()
-    .map(String::toUpperCase)
-    .forEach(audit::log);  // intentional side effect at the end
+// nullsLast(...) — put missing values at the end instead

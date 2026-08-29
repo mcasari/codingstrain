@@ -1,8 +1,4 @@
-// ❌ A NullPointerException waiting to happen
-User u = repo.find(id);
-return u.getEmail();
-
-// ✅ Make "maybe absent" explicit
-return repo.findById(id)
-    .map(User::getEmail)
-    .orElse("no-email");
+CompletableFuture
+    .supplyAsync(() -> fetchUser(id))
+    .thenApply(User::getName)
+    .thenAccept(System.out::println);

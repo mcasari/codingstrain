@@ -1,7 +1,12 @@
-// 💡 Java Tip 💡: Refactor legacy code gradually. Use tests to ensure stability. #Java #LegacyCode
-//
-// ✅ Java Tip 💡: Refactor legacy code gradually. Use tests to ensure stability. #Java #LegacyCode
-//
-// ✅ Runnable sample: `java-tips`
-//
-// ✅ Architecture diagram + Carbon CodePen below
+public class Worker {
+    // Without volatile a thread may read a stale, cached value
+    private volatile boolean running = true;
+
+    public void stop() { running = false; }
+
+    public void run() {
+        while (running) {
+            // sees stop() called from another thread
+        }
+    }
+}

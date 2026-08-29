@@ -1,7 +1,6 @@
-// 💡 Learn design patterns to write reusable, maintainable code. #Java #DesignPatterns
-//
-// ✅ Runnable sample: `java-tips`
-//
-// ✅ Architecture diagram + Carbon CodePen below
-//
-// ✅ From the codingstrain examples repo
+// Arrow form: no fall-through, returns a value
+String label = switch (status) {
+    case ACTIVE  -> "running";
+    case PAUSED  -> "on hold";
+    case STOPPED -> "done";
+};

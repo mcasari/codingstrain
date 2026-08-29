@@ -1,4 +1,4 @@
-💡 Java tip: Use Files.readString() and Files.writeString() for straightforward file I/O.
+💡 Java tip: Avoid boxing overhead by using primitive streams.
 
 ✅ #Java
 

@@ -1,15 +1,13 @@
-Optional<User> found = repo.findById(id);
+String nl = System.lineSeparator();
 
-// ❌ Null or empty Optional handled too late
-User user = found.orElse(null);
-return user.getEmail();   // NPE here, far from the lookup
+// ❌ Hardcoded \n — fine on Linux, awkward on Windows
+String bad = "Date,Amount" + "\n" + "2026-01-01,42";
 
-// ✅ Fail fast — exception where the value was expected
-User user = found.orElseThrow(
-    () -> new UserNotFoundException(id));
-return user.getEmail();
+// ✅ OS-native newlines
+String good = String.join(nl,
+    "Date,Amount",
+    "2026-01-01,42",
+    "2026-01-02,17");
 
-// Same idea in one chain
-return repo.findById(id)
-    .map(User::getEmail)
-    .orElseThrow(() -> new UserNotFoundException(id));
+System.out.print(good);
+// Windows → \r\n between lines · Linux/macOS → \n

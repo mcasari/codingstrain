@@ -1,7 +1,6 @@
-// 💡SOLID principles: Dependency Inversion Principle (DIP) states that high-level modules should not depend on low-level modules; instead, both should depend on abstractions.
-//
-// ✅ #SOLID #SoftwareDesign
-//
-// ✅ Runnable sample: `java-tips`
-//
-// ✅ Architecture diagram + Carbon CodePen below
+// Arrow form: no fall-through, returns a value
+String label = switch (status) {
+    case ACTIVE  -> "running";
+    case PAUSED  -> "on hold";
+    case STOPPED -> "done";
+};

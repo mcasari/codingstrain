@@ -1,5 +1,5 @@
-💡Java tip: Starting from Java 14 you can use switch expressions for shorter and cleaner multi-branch logic:
+💡 Java tip: Collectors.toMap() will throw an error if your keys collide. Always consider a merge function. #Java #Streams
 
-✅ #Java #ModernJava
+✅ Fix: merge duplicates by summing values:
 
-#Java #ModernJava
+#Java #Streams

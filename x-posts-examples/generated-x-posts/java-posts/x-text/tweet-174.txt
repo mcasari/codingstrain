@@ -1,9 +1,9 @@
-💡 Use Stream.peek() only for debugging — not for real logic.
+💡 Use Comparator.nullsFirst() / nullsLast() when sort keys can be null.
 
-✅ peek runs as a side effect; easy to miss or drop
+✅ comparing(User::getName) NPEs if getName() is null
 
-✅ Intermediate ops may be skipped if the pipeline short-circuits
+✅ Wrap with nullsFirst / nullsLast to define null order
 
-✅ Prefer map / forEach for intentional work
+✅ Chain with thenComparing for multi-field sorts
 
-#Java #Streams
+#Java #Comparator

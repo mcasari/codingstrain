@@ -1,12 +1,7 @@
-public class Worker {
-    // Without volatile a thread may read a stale, cached value
-    private volatile boolean running = true;
-
-    public void stop() { running = false; }
-
-    public void run() {
-        while (running) {
-            // sees stop() called from another thread
-        }
-    }
-}
+// 💡 Java tip 💡: Don’t reinvent the wheel—use proven Java libraries and frameworks. #Java #Productivity
+//
+// ✅ Java tip 💡: Don’t reinvent the wheel—use proven Java libraries and frameworks. #Java #Productivity
+//
+// ✅ Runnable sample: `java-tips`
+//
+// ✅ Architecture diagram + Carbon CodePen below

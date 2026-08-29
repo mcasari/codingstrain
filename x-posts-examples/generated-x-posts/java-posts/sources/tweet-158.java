@@ -1,7 +1,7 @@
-// 💡Java tip: Use ThreadLocal.withInitial(...) to provide each thread its own safe default value.
+// 💡 Java tip: Starting from Java 8, you can remove nulls easily with list.removeIf(Objects::isNull).
 //
-// ✅ The value is created lazily
-//
-// ✅ #Java #JavaDev
+// ✅ #Java #JavaTips
 //
 // ✅ Runnable sample: `java-tips`
+//
+// ✅ Architecture diagram + Carbon CodePen below

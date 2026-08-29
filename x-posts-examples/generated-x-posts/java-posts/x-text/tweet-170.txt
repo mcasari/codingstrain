@@ -1,9 +1,9 @@
-💡 Prefer ReentrantReadWriteLock when reads are frequent and writes are rare.
+💡 Use Files.isSameFile(a, b) to check if two paths are the same file.
 
-✅ Many readers can hold the read lock together
+✅ Path.equals only compares path text
 
-✅ Writers need the write lock alone
+✅ isSameFile checks the real file (follows symlinks)
 
-✅ Better throughput than one exclusive lock for read-heavy work
+✅ Catches ./file vs file and link vs target
 
-#Java #Concurrency
+#Java #Files

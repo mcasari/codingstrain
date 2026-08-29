@@ -1,5 +1,3 @@
-💡SOLID principles: The Liskov Substitution Principle (LSP) states that objects of a superclass should be replaceable with objects of a subclass.
+💡 SOLID Principles: Interface Segregation Principle (ISP) states that clients shouldn’t depend on methods they don’t use.
 
-✅ Subclasses should not behave differently than the base class.
-
-#SOLID #SoftwareDesign
+#Java #JavaDev

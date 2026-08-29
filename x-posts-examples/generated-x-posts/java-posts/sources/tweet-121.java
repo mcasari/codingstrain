@@ -1,9 +1,7 @@
-// 💡 Java Tip 💡: Master the SOLID principles to write cleaner, more maintainable object-oriented code.
+// 💡 Java tip:💡: Avoid synchronized blocks when higher-level abstractions exist. #Java #Concurrency
 //
-// ✅ Java Tip 💡: Master the SOLID principles to write cleaner, more maintainable object-oriented code
+// ✅ Java tip:💡: Avoid synchronized blocks when higher-level abstractions exist. #Java #Concurrency
 //
-// ✅ Each letter stands for a key design principle:
+// ✅ Runnable sample: `java-tips`
 //
-// ✅ S: Single Responsibility – A class should have only one reason to change
-//
-// #Java #CleanCode #OOP #SoftwareDesign
+// ✅ Architecture diagram + Carbon CodePen below

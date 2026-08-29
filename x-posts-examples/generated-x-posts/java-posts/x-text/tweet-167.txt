@@ -1,6 +1,4 @@
-💡 Java tip: Use Optional.filter(...) to add inline conditions to an Optional object.
-
-✅ It lets you apply a condition directly and it returns the original Optional if the predicate passes, an empty one otherwise.
+🚀 Java: With CompletableFuture.allOf(...) you can wait on multiple async tasks without manual join handling.
 
 ✅ #Java #JavaDev
 

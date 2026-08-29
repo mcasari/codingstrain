@@ -1,7 +1,5 @@
-// 💡 Java tip: From Java 9 you can use Objects.checkIndex() to replace manual if checks for validating index bounds. It is a small feature that helps making the code cleaner.  #Java #JavaTip
-//
-// ✅ Runnable sample: `java-tips`
-//
-// ✅ Architecture diagram + Carbon CodePen below
-//
-// ✅ From the codingstrain examples repo
+private static final Logger log =
+    LoggerFactory.getLogger(OrderService.class);
+
+log.info("Created order {} for {}", orderId, customer);
+// Lazy formatting, log levels, no System.out

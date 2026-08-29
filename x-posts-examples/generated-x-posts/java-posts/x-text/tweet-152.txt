@@ -1,5 +1,3 @@
-💡 Java tip: Starting from java 9 you can use Stream.takeWhile() for easy slicing of lists by streams.  #Java #JavaTips
-
-✅ Java tip: Starting from java 9 you can use Stream.takeWhile() for easy slicing of lists by streams.  #Java #JavaTips
+💡 Java tip: You can use Collectors.joining(", ") to turn a stream into a comma-separated string (or another custom separator).  #Java #JavaTips
 
 #Java #JavaTips

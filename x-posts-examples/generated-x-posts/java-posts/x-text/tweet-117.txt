@@ -1,7 +1,3 @@
-💡 Java Tip 💡: Make use of annotations like @NotNull, @Nullable for better tooling support. #Java #Annotations
+💡 Learn design patterns to write reusable, maintainable code. #Java #DesignPatterns
 
-✅ Java Tip 💡: Make use of annotations like @NotNull, @Nullable for better tooling support. #Java #Annotations
-
-✅ Uses @PostMapping in the snippet
-
-#Java #Annotations
+#Java #DesignPatterns

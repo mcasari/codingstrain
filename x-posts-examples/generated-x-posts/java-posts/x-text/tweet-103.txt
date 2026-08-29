@@ -1,7 +1,7 @@
-💡 Use Deque instead of Stack for LIFO (last-in, first-out) lists.
+💡 Prefer constructor injection over field injection in Spring beans.
 
-✅ Stack is a legacy class — it extends Vector and synchronizes every operation
+✅ Field injection hides required dependencies — you can create the object without them
 
-✅ Deque supports the same push / pop / peek calls — a drop-in replacement
+✅ Constructor injection makes dependencies explicit and lets you use final fields
 
-#Java #Collections
+#Java #SpringBoot

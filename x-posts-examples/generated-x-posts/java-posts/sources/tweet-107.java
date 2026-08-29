@@ -1,27 +1,25 @@
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
-
+import java.util.ArrayList;
 import java.util.List;
 
-static double average(List<Integer> values) {
-    if (values == null || values.isEmpty())
-        throw new IllegalArgumentException("no values");
-    return values.stream().mapToInt(i -> i).average().orElseThrow();
+// ❌ Inheritance — you get ArrayList's full API (add, remove, sort, …)
+class LoggingList extends ArrayList<String> {
+    @Override
+    public boolean add(String item) {
+        System.out.println("add: " + item);
+        return super.add(item);   // coupled to ArrayList
+    }
 }
 
-// ❌ Happy path only — misses null and empty-list bugs
-@Test
-void average_typicalList() {
-    assertEquals(2.0, average(List.of(1, 2, 3)));
-}
+// ✅ Delegation — expose only what your class needs
+class LoggingList {
+    private final List<String> items = new ArrayList<>();
 
-// ✅ Edge cases — null, empty, and single element
-@Test void average_null_throws() {
-    assertThrows(IllegalArgumentException.class, () -> average(null));
-}
-@Test void average_empty_throws() {
-    assertThrows(IllegalArgumentException.class, () -> average(List.of()));
-}
-@Test void average_oneValue() {
-    assertEquals(42.0, average(List.of(42)));
+    public boolean add(String item) {
+        System.out.println("add: " + item);
+        return items.add(item);   // swap List impl anytime
+    }
+
+    public List<String> snapshot() {
+        return List.copyOf(items);
+    }
 }

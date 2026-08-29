@@ -1,6 +1,6 @@
-// 💡 Java tip: Use Duration and Instant for precise time calculations.
+// 💡 Java tip: Starting from Java 11, you can use String.strip() instead of trim(), since it handles Unicode whitespaces correctly.
 //
-// ✅ #Java
+// ✅ #Java #JavaTips
 //
 // ✅ Runnable sample: `java-tips`
 //

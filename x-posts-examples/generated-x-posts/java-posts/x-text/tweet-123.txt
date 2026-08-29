@@ -1,5 +1,5 @@
-💡 Java tip 💡: With Map objects, instead of manual null checks, you can use Map.getOrDefault().
+💡 Java Tip : To populate Map values, like lists, you can use computeIfAbsent(). #Java #Collections
 
-✅ Java tip 💡: With Map objects, instead of manual null checks, you can use Map.getOrDefault()
+✅ Java Tip : To populate Map values, like lists, you can use computeIfAbsent(). #Java #Collections
 
-✅ Map<String, Integer> map = new HashMap<>();
+#Java #Collections

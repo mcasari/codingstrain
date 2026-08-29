@@ -1,3 +1,3 @@
-💡 Java tip: You can use Collectors.joining(", ") to turn a stream into a comma-separated string (or another custom separator).  #Java #JavaTips
+💡 Java tip: From Java 9 you can use Objects.checkIndex() to replace manual if checks for validating index bounds. It is a small feature that helps making the code cleaner.  #Java #JavaTip
 
-#Java #JavaTips
+#Java #JavaTip

@@ -1,5 +1,2 @@
-@Cacheable("users")
-public User findById(Long id) {
-    return repo.findById(id).orElseThrow();
-}
-// Enable with @EnableCaching
+List<String> lines = Files.readAllLines(Path.of("data.txt"));
+Files.writeString(Path.of("out.txt"), "hello");

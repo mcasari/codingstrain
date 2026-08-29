@@ -1,5 +1,3 @@
-💡 Java tip: Use var for local variables only when the type is obvious from the right-hand side or when the generic type is too verbose.
-
-✅ #Java #JavaTips
+💡 Java tip: Starting from Java 11, if you need to repeat n times a specific string, you can use the String method repeat(n). Example: String result = "$".repeat(10); System.out.println(result); // $$$$$$$$$$ #Java #JavaTips
 
 #Java #JavaTips

@@ -1,5 +1,7 @@
-💡 Java Tip 💡:Use Path and Files from NIO.2 for modern file handling. #Java #NIO
+💡 Java Tip 💡: Make use of annotations like @NotNull, @Nullable for better tooling support. #Java #Annotations
 
-✅ Java Tip 💡:Use Path and Files from NIO.2 for modern file handling. #Java #NIO
+✅ Java Tip 💡: Make use of annotations like @NotNull, @Nullable for better tooling support. #Java #Annotations
 
-#Java #NIO
+✅ Uses @PostMapping in the snippet
+
+#Java #Annotations

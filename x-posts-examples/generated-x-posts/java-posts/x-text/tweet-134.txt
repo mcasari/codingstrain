@@ -1,5 +1,5 @@
-💡 Java tip: Use Objects.requireNonNullElse(value, defaultValue) to avoid null checks.
+🚀 Open/Closed Principle (OCP): OCP is a SOLID principle that states classes should be open for extension but closed for modification.
 
-✅ #Java #CodeTips #NullSafety
+✅Instead of touching existing implementation, you should use Java interfaces and inheritance to add new behavior.
 
-#Java #CodeTips #NullSafety
+#Java #JavaDev

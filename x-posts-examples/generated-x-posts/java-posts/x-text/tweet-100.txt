@@ -1,3 +1,5 @@
-💡 Use Pattern and Matcher for complex regex operations. #Java #Regex
+💡 Java tip 💡: Format your code consistently. Use tools like Checkstyle or Spotless. #Java #CleanCode
 
-#Java #Regex
+✅ Java tip 💡: Format your code consistently. Use tools like Checkstyle or Spotless. #Java #CleanCode
+
+#Java #CleanCode

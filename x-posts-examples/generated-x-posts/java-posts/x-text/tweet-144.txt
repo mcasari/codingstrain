@@ -1,7 +1,5 @@
-💡Java tip: Use WeakHashMap for caching when the unreferenced keys should be garbage-collected.
+💡 Java tip: Use Files.readString() and Files.writeString() for straightforward file I/O.
 
 ✅ #Java
-
-✅ Uses @Cacheable in the snippet
 
 #Java

@@ -1,7 +1,7 @@
-// 💡 Java tip: Use parallelStream() with care. It's ideal for CPU-intensive tasks, not I/O operations.
+// 💡 Java tip: Records are not limited to data only, you can add custom constructors or methods for validation.
 //
-// ✅ #Java #JavaStreams
+// ✅ They can have constructors, static methods, and instance methods:
+//
+// ✅ #Java #ModernJava
 //
 // ✅ Runnable sample: `java-tips`
-//
-// ✅ Architecture diagram + Carbon CodePen below

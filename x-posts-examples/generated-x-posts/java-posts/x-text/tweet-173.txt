@@ -1,9 +1,9 @@
-💡 Use Instant.truncatedTo(...) to compare times at day/hour/minute precision.
+💡 Use Stream.peek() only for debugging — not for real logic.
 
-✅ Raw Instant.equals fails when nanos differ
+✅ peek runs as a side effect; easy to miss or drop
 
-✅ truncateTo(ChronoUnit.DAYS) ignores finer fields
+✅ Intermediate ops may be skipped if the pipeline short-circuits
 
-✅ Great for same-day / same-hour checks
+✅ Prefer map / forEach for intentional work
 
-#Java #Time
+#Java #Streams

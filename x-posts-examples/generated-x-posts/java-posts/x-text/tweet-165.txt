@@ -1,3 +1,5 @@
-💡 Java tip: List.reversed() returns an unmodifiable reversed view of the original list. #Java #JavaDev
+💡 Java tip: Starting from Java 12 you can use String.transform(Function) to apply lambdas directly to strings.
+
+✅ #Java #JavaDev
 
 #Java #JavaDev

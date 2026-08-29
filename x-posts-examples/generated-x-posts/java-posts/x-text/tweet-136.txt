@@ -1,5 +1,5 @@
-💡Java tip: Use HashMap as Map implementation when you need greatest general-purpose performance.
+💡SOLID principles: The Liskov Substitution Principle (LSP) states that objects of a superclass should be replaceable with objects of a subclass.
 
-✅ #Java   #DataStructures
+✅ Subclasses should not behave differently than the base class.
 
-#Java #DataStructures
+#SOLID #SoftwareDesign

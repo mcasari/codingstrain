@@ -1,5 +1,5 @@
-💡 Java Tip 💡: Always override hashCode() when you override equals(). #Java #OOP
+💡 Java Tip 💡: Use Optional.ifPresentOrElse() for elegant null handling (Java 9+). #Java #Optional
 
-✅ Java Tip 💡: Always override hashCode() when you override equals(). #Java #OOP
+✅ Java Tip 💡: Use Optional.ifPresentOrElse() for elegant null handling (Java 9+). #Java #Optional
 
-#Java #OOP
+#Java #Optional

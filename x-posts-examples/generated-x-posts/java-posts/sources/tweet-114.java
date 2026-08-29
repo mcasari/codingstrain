@@ -1,7 +1,2 @@
-// 💡 Explore virtual threads (Java 19+) for lightweight concurrency. #Java #ProjectLoom
-//
-// ✅ Runnable sample: `java-tips`
-//
-// ✅ Architecture diagram + Carbon CodePen below
-//
-// ✅ From the codingstrain examples repo
+List<String> lines = Files.readAllLines(Path.of("data.txt"));
+Files.writeString(Path.of("out.txt"), "hello");

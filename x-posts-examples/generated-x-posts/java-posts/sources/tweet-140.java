@@ -1,6 +1,6 @@
-// Arrow form: no fall-through, returns a value
-String label = switch (status) {
-    case ACTIVE  -> "running";
-    case PAUSED  -> "on hold";
-    case STOPPED -> "done";
-};
+Map<Dept, List<Employee>> byDept = employees.stream()
+    .collect(Collectors.groupingBy(Employee::getDept));
+
+long active = employees.stream()
+    .filter(Employee::isActive)
+    .count();
