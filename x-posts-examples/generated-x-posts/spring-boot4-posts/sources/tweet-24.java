@@ -1,17 +1,28 @@
-# application.yml
+# application.yml — enable virtual threads
 spring:
   threads:
     virtual:
       enabled: true
 
-@Bean
-RestClient api(RestClient.Builder builder) {
-    // Boot wires JDK HttpClient with virtual threads
-    return builder.baseUrl("https://api.example.com").build();
+@Configuration
+class OutboundApiConfig {
+    @Bean
+    RestClient api(RestClient.Builder builder) {
+        return builder.baseUrl("https://api.example.com").build();
+    }
 }
 
-@GetMapping("/proxy/{id}")
-User proxy(@PathVariable Long id) {
-    return api.get().uri("/users/{id}", id)
-              .retrieve().body(User.class);
+@RestController
+class UserController {
+    private final RestClient api;
+    UserController(RestClient api) { this.api = api; }
+
+    @GetMapping("/users/{id}")
+    User user(@PathVariable Long id) {
+        return api.get()
+                  .uri("/users/{id}", id)
+                  .retrieve()
+                  .body(User.class);
+    }
 }
+// JDK HttpClient blocks on virtual threads — cheap concurrent I/O

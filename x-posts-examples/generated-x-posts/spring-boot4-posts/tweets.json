@@ -243,11 +243,13 @@
   {
     "id": 24,
     "module": "spring-boot4-tips",
-    "body": "🚀 Spring Boot 4: JDK `HttpClient` uses virtual threads when enabled.\n\n✅ Set `spring.threads.virtual.enabled=true`\n\n✅ Auto-configured HTTP clients opt in\n\n✅ Great for high-concurrency blocking I/O",
-    "code": "# application.yml\nspring:\n  threads:\n    virtual:\n      enabled: true\n\n@Bean\nRestClient api(RestClient.Builder builder) {\n    // Boot wires JDK HttpClient with virtual threads\n    return builder.baseUrl(\"https://api.example.com\").build();\n}\n\n@GetMapping(\"/proxy/{id}\")\nUser proxy(@PathVariable Long id) {\n    return api.get().uri(\"/users/{id}\", id)\n              .retrieve().body(User.class);\n}",
+    "body": "💡 Spring Boot 4: Turn on virtual threads — JDK `HttpClient` uses them too.\n\n✅ Set `spring.threads.virtual.enabled=true`\n\n✅ `RestClient` blocks on lightweight virtual threads\n\n✅ More concurrent outbound calls, fewer platform threads",
+    "code": "# application.yml — enable virtual threads\nspring:\n  threads:\n    virtual:\n      enabled: true\n\n@Configuration\nclass OutboundApiConfig {\n    @Bean\n    RestClient api(RestClient.Builder builder) {\n        return builder.baseUrl(\"https://api.example.com\").build();\n    }\n}\n\n@RestController\nclass UserController {\n    private final RestClient api;\n    UserController(RestClient api) { this.api = api; }\n\n    @GetMapping(\"/users/{id}\")\n    User user(@PathVariable Long id) {\n        return api.get()\n                  .uri(\"/users/{id}\", id)\n                  .retrieve()\n                  .body(User.class);\n    }\n}\n// JDK HttpClient blocks on virtual threads — cheap concurrent I/O\n",
     "tags": "#SpringBoot4 #VirtualThreads",
     "codepen_style": "carbon",
     "codepen_large": true,
+    "codepen_columns": 2,
+    "codepen_split_decl": 0,
     "category": "spring-boot4"
   },
   {
