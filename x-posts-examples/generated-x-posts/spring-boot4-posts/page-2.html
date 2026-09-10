@@ -775,7 +775,7 @@ body {
       <div class="codepen-wrap codepen-wrap--large">
         <div class="codepen"
              data-prefill='{"title": "Tweet 25 — spring-boot4-tips", "description": "Spring Boot snippet from codingstrain (spring-boot4-tips)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="780"
+             data-height="720"
              data-theme-id="dark"
              data-default-tab="html,result"
              data-editable="true">
@@ -897,35 +897,36 @@ body {
   font-size: 16px;
 }
 </pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot4-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// jakarta.* imports stay — but versions moved up&lt;/span&gt;
+          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot4-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor cols&quot;&gt;&lt;div class=&quot;col&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// ❌ Boot 3 platform — too old for Boot 4&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// - Servlet 6.0&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// - JPA 3.1 / Validation 3.0&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// - Hibernate 6.x&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// - Tomcat 10 containers&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// Deploying Boot 4 here fails the Servlet baseline&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&quot;col-divider&quot;&gt;&lt;/span&gt;&lt;div class=&quot;col&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// ✅ Boot 4 — Jakarta EE 11 (jakarta.* names stay)&lt;/span&gt;
 &lt;span class=&quot;kw&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;jakarta&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;persistence&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Entity&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;kw&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;jakarta&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;persistence&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Id&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;kw&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;jakarta&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;validation&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;constraints&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;NotBlank&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kw&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;jakarta&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;servlet&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;HttpServletRequest&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-
 &lt;span class=&quot;ann&quot;&gt;@Entity&lt;/span&gt;
 &lt;span class=&quot;kw&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Product&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
 &lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;ann&quot;&gt;@Id&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Long&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;ann&quot;&gt;@NotBlank&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;com&quot;&gt;// Boot parent manages:&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// jakarta.servlet-api 6.1, jakarta.persistence 3.2,&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// hibernate 7.x, validation 3.1&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+&lt;span class=&quot;com&quot;&gt;// BOM: Servlet 6.1 · JPA 3.2 · Validation 3.1 · Hibernate 7.x&lt;/span&gt;
+&lt;span class=&quot;com&quot;&gt;// Servers: Tomcat 11 / Jetty 12.1&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-25.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(214/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-25" readonly rows="10">🚀 Spring Boot 4: Built on Jakarta EE 11 + Servlet 6.1.
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(247/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-25" readonly rows="10">💡 Spring Boot 4: Platform baseline is Jakarta EE 11 + Servlet 6.1.
 
-✅ JPA 3.2, Validation 3.1, Servlet 6.1
+✅ Same jakarta.* packages — versions moved up
 
-✅ Hibernate ORM 7.x on the classpath
+✅ JPA 3.2, Validation 3.1, Hibernate ORM 7.x
 
-✅ Verify container / server Servlet level before deploy
+✅ Deploy only on Servlet 6.1 servers (Tomcat 11 / Jetty 12.1)
 
 #SpringBoot4 #JakartaEE</textarea>
       <p class="copy-row">

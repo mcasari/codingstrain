@@ -2471,11 +2471,12 @@
   {
     "id": 25,
     "module": "spring-boot4-tips",
-    "body": "🚀 Spring Boot 4: Built on Jakarta EE 11 + Servlet 6.1.\n\n✅ JPA 3.2, Validation 3.1, Servlet 6.1\n\n✅ Hibernate ORM 7.x on the classpath\n\n✅ Verify container / server Servlet level before deploy",
-    "code": "// jakarta.* imports stay — but versions moved up\nimport jakarta.persistence.Entity;\nimport jakarta.persistence.Id;\nimport jakarta.validation.constraints.NotBlank;\nimport jakarta.servlet.http.HttpServletRequest;\n\n@Entity\npublic class Product {\n    @Id Long id;\n    @NotBlank String name;\n}\n\n// Boot parent manages:\n// jakarta.servlet-api 6.1, jakarta.persistence 3.2,\n// hibernate 7.x, validation 3.1",
+    "body": "💡 Spring Boot 4: Platform baseline is Jakarta EE 11 + Servlet 6.1.\n\n✅ Same `jakarta.*` packages — versions moved up\n\n✅ JPA 3.2, Validation 3.1, Hibernate ORM 7.x\n\n✅ Deploy only on Servlet 6.1 servers (Tomcat 11 / Jetty 12.1)",
+    "code": "// ❌ Boot 3 platform — too old for Boot 4\n// - Servlet 6.0\n// - JPA 3.1 / Validation 3.0\n// - Hibernate 6.x\n// - Tomcat 10 containers\n// Deploying Boot 4 here fails the Servlet baseline\n\n// ✅ Boot 4 — Jakarta EE 11 (jakarta.* names stay)\nimport jakarta.persistence.Entity;\nimport jakarta.persistence.Id;\nimport jakarta.validation.constraints.NotBlank;\n@Entity\npublic class Product {\n    @Id Long id;\n    @NotBlank String name;\n}\n// BOM: Servlet 6.1 · JPA 3.2 · Validation 3.1 · Hibernate 7.x\n// Servers: Tomcat 11 / Jetty 12.1\n",
     "tags": "#SpringBoot4 #JakartaEE",
     "codepen_style": "carbon",
-    "codepen_large": true
+    "codepen_large": true,
+    "codepen_columns": 2
   },
   {
     "id": 26,

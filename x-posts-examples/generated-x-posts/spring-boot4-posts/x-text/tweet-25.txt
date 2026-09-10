@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: Built on Jakarta EE 11 + Servlet 6.1.
+💡 Spring Boot 4: Platform baseline is Jakarta EE 11 + Servlet 6.1.
 
-✅ JPA 3.2, Validation 3.1, Servlet 6.1
+✅ Same jakarta.* packages — versions moved up
 
-✅ Hibernate ORM 7.x on the classpath
+✅ JPA 3.2, Validation 3.1, Hibernate ORM 7.x
 
-✅ Verify container / server Servlet level before deploy
+✅ Deploy only on Servlet 6.1 servers (Tomcat 11 / Jetty 12.1)
 
 #SpringBoot4 #JakartaEE
