@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: Elasticsearch API key authentication.
+💡 Spring Boot 4: Prefer Elasticsearch API keys over URI basic auth.
 
 ✅ New spring.elasticsearch.api-key property
 
-✅ Cleaner than embedding basic auth in the URI
+✅ Keep secrets out of the connection URI
 
-✅ Rotate keys without changing client code
+✅ Rotate keys via env/config — no client code change
 
 #SpringBoot4 #Elasticsearch

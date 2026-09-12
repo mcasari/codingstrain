@@ -1,15 +1,19 @@
-# application.yml
+# ❌ URI basic auth — secrets in the connection string
+spring:
+  elasticsearch:
+    uris: https://user:pass@search.example.com:9200
+# Hard to rotate without rewriting the URI
+
+# ✅ Boot 4 — spring.elasticsearch.api-key
 spring:
   elasticsearch:
     uris: https://search.example.com:9200
     api-key: ${ELASTIC_API_KEY}
-
-// Inject ElasticsearchClient / RestClient as usual
+// Client wiring unchanged
 @Service
-public class ProductSearch {
+class ProductSearch {
     private final ElasticsearchClient client;
-
-    public ProductSearch(ElasticsearchClient client) {
+    ProductSearch(ElasticsearchClient client) {
         this.client = client;
     }
 }

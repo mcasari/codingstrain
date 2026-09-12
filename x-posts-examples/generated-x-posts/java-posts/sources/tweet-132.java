@@ -5,5 +5,3 @@
 // ✅ Good for CPU-intensive processing
 //
 // ✅ ⚠️ Sharing mutable state is not safe
-//
-// #Java #JavaDev
