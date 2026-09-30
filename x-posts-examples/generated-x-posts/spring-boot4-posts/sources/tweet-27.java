@@ -1,4 +1,7 @@
-# application.yml
+# ❌ Boot 3 — expiring certs used a special status
+# ssl.status could be WILL_EXPIRE_SOON (confusing for probes)
+
+# ✅ Boot 4 — stay UP, list chains that expire soon
 management:
   health:
     ssl:
@@ -7,13 +10,10 @@ management:
     health:
       show-details: always
 
-// Health JSON shape (simplified):
-// {
-//   "status": "UP",
-//   "components": {
-//     "ssl": {
-//       "status": "UP",
-//       "details": { "expiringChains": [ … ] }
-//     }
-//   }
-// }
+# /actuator/health (ssl component)
+# {
+#   "status": "UP",
+#   "details": {
+#     "expiringChains": [ "server-cert…" ]
+#   }
+# }

@@ -22,7 +22,7 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0.5rem;
-            min-height: 924px;
+            min-height: 720px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             border-radius: 12px;
             display: flex;
@@ -30,7 +30,7 @@
           }
           .carbon-local-27 .carbon {
             flex: 1;
-            min-height: 908px;
+            min-height: 704px;
             max-width: none;
           }
           .carbon {
@@ -138,25 +138,23 @@
 
         </style>
         <div class="carbon-local-27">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-boot4-tips</span></div><div class="carbon-editor"><pre><code><span class="pun">#</span><span class="txt"> </span><span class="txt">application</span><span class="pun">.</span><span class="txt">yml</span>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-boot4-tips</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="pun">#</span><span class="txt"> </span><span class="pun">❌</span><span class="txt"> </span><span class="typ">Boot</span><span class="txt"> </span><span class="num">3</span><span class="txt"> </span><span class="pun">—</span><span class="txt"> </span><span class="txt">expiring</span><span class="txt"> </span><span class="txt">certs</span><span class="txt"> </span><span class="txt">used</span><span class="txt"> </span><span class="txt">a</span><span class="txt"> </span><span class="txt">special</span><span class="txt"> </span><span class="txt">status</span>
+<span class="pun">#</span><span class="txt"> </span><span class="txt">ssl</span><span class="pun">.</span><span class="txt">status</span><span class="txt"> </span><span class="txt">could</span><span class="txt"> </span><span class="txt">be</span><span class="txt"> </span><span class="met">WILL_EXPIRE_SOON</span><span class="txt"> </span><span class="pun">(</span><span class="txt">confusing</span><span class="txt"> </span><span class="kw">for</span><span class="txt"> </span><span class="txt">probes</span><span class="pun">)</span>
+
+<span class="pun">#</span><span class="txt"> </span><span class="pun">✅</span><span class="txt"> </span><span class="typ">Boot</span><span class="txt"> </span><span class="num">4</span><span class="txt"> </span><span class="pun">—</span><span class="txt"> </span><span class="txt">stay</span><span class="txt"> </span><span class="typ">UP</span><span class="pun">,</span><span class="txt"> </span><span class="txt">list</span><span class="txt"> </span><span class="txt">chains</span><span class="txt"> </span><span class="txt">that</span><span class="txt"> </span><span class="txt">expire</span><span class="txt"> </span><span class="txt">soon</span>
 <span class="txt">management</span><span class="pun">:</span>
 <span class="txt">  </span><span class="txt">health</span><span class="pun">:</span>
 <span class="txt">    </span><span class="txt">ssl</span><span class="pun">:</span>
 <span class="txt">      </span><span class="txt">certificate</span><span class="pun">-</span><span class="txt">validity</span><span class="pun">-</span><span class="txt">warning</span><span class="pun">-</span><span class="txt">threshold</span><span class="pun">:</span><span class="txt"> </span><span class="num">14</span><span class="txt">d</span>
 <span class="txt">  </span><span class="txt">endpoint</span><span class="pun">:</span>
 <span class="txt">    </span><span class="txt">health</span><span class="pun">:</span>
-<span class="txt">      </span><span class="txt">show</span><span class="pun">-</span><span class="txt">details</span><span class="pun">:</span><span class="txt"> </span><span class="txt">always</span>
-
-<span class="com">// Health JSON shape (simplified):</span>
-<span class="com">// {</span>
-<span class="com">//   &quot;status&quot;: &quot;UP&quot;,</span>
-<span class="com">//   &quot;components&quot;: {</span>
-<span class="com">//     &quot;ssl&quot;: {</span>
-<span class="com">//       &quot;status&quot;: &quot;UP&quot;,</span>
-<span class="com">//       &quot;details&quot;: { &quot;expiringChains&quot;: [ … ] }</span>
-<span class="com">//     }</span>
-<span class="com">//   }</span>
-<span class="com">// }</span></code></pre></div></div>
+<span class="txt">      </span><span class="txt">show</span><span class="pun">-</span><span class="txt">details</span><span class="pun">:</span><span class="txt"> </span><span class="txt">always</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="pun">#</span><span class="txt"> </span><span class="pun">/</span><span class="txt">actuator</span><span class="pun">/</span><span class="met">health</span><span class="txt"> </span><span class="pun">(</span><span class="txt">ssl</span><span class="txt"> </span><span class="txt">component</span><span class="pun">)</span>
+<span class="pun">#</span><span class="txt"> </span><span class="pun">{</span>
+<span class="pun">#</span><span class="txt">   </span><span class="str">&quot;status&quot;</span><span class="pun">:</span><span class="txt"> </span><span class="str">&quot;UP&quot;</span><span class="pun">,</span>
+<span class="pun">#</span><span class="txt">   </span><span class="str">&quot;details&quot;</span><span class="pun">:</span><span class="txt"> </span><span class="pun">{</span>
+<span class="pun">#</span><span class="txt">     </span><span class="str">&quot;expiringChains&quot;</span><span class="pun">:</span><span class="txt"> </span><span class="pun">[</span><span class="txt"> </span><span class="str">&quot;server-cert…&quot;</span><span class="txt"> </span><span class="pun">]</span>
+<span class="pun">#</span><span class="txt">   </span><span class="pun">}</span>
+<span class="pun">#</span><span class="txt"> </span><span class="pun">}</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-27.html" target="_blank" rel="noopener">Open pen preview</a>
