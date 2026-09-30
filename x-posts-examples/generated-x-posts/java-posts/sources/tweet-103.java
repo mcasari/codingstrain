@@ -1,7 +1,6 @@
-// ❌ Field injection — dependency hidden, hard to test without Spring
+// ❌ Field injection — hidden deps, hard to unit-test
 @RestController
-class OrderController {
-
+class FieldInjectedOrders {
     @Autowired
     private OrderService orders;
 
@@ -9,13 +8,12 @@ class OrderController {
     List<Order> list() { return orders.findAll(); }
 }
 
-// ✅ Constructor injection — explicit, final, easy to unit-test
+// ✅ Constructor injection — explicit, final, testable
 @RestController
-class OrderController {
-
+class ConstructorInjectedOrders {
     private final OrderService orders;
 
-    OrderController(OrderService orders) {
+    ConstructorInjectedOrders(OrderService orders) {
         this.orders = orders;
     }
 

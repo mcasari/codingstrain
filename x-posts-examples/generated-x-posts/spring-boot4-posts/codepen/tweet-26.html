@@ -3,42 +3,37 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Tweet 26 — CodePen</title>
+  <title>Tweet 26 — Code preview</title>
   <style>
     html, body { margin: 0; height: 100%; }
     body { font-family: system-ui, sans-serif; background: #f7f9f9; display: flex; flex-direction: column; }
     h1 { font-size: 1rem; color: #536471; margin: 0.5rem 1rem; flex-shrink: 0; }
     .codepen-wrap { flex: 1; display: flex; flex-direction: column; max-width: none; width: 100%; min-height: 0; }
-    .codepen-wrap .codepen { flex: 1; min-height: calc(100vh - 3rem); }
+    .codepen-wrap .carbon-local-26, .codepen-wrap .codepen { flex: 1; min-height: calc(100vh - 3rem); }
     .codepen-links { margin: 0.35rem 1rem 0.5rem; flex-shrink: 0; }
 
   </style>
 </head>
 <body>
-  <h1>Tweet #26 — <a href="https://codepen.io/">CodePen</a> prefill</h1>
+  <h1>Tweet #26 — code preview (local Carbon)</h1>
       <div class="codepen-wrap codepen-wrap--large">
-        <div class="codepen"
-             data-prefill='{"title": "Tweet 26 — spring-boot4-tips", "description": "Spring Boot snippet from codingstrain (spring-boot4-tips)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="720"
-             data-theme-id="dark"
-             data-default-tab="html,result"
-             data-editable="true">
-          <pre data-lang="css">html, body {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  min-height: 100vh;
-  box-sizing: border-box;
-}
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: stretch;
-  padding: 0.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-.carbon {
+        <style>
+          .carbon-local-26 {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0.5rem;
+            min-height: 720px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+          }
+          .carbon-local-26 .carbon {
+            flex: 1;
+            min-height: 704px;
+            max-width: none;
+          }
+          .carbon {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -140,30 +135,31 @@ body {
   color: #82aaff;
   font-size: 16px;
 }
-</pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot4-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor cols&quot;&gt;&lt;div class=&quot;col&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;pun&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;❌&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;URI&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;basic&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;—&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;secrets&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;the&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;connection&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;string&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;spring&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;elasticsearch&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;uris&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;com&quot;&gt;//user:pass@search.example.com:9200&lt;/span&gt;
-&lt;span class=&quot;pun&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Hard&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;rotate&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;without&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;rewriting&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;the&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;URI&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&quot;col-divider&quot;&gt;&lt;/span&gt;&lt;div class=&quot;col&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;pun&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;✅&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Boot&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;num&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;—&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;spring&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;elasticsearch&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;api&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;key&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;spring&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;elasticsearch&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;uris&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;com&quot;&gt;//search.example.com:9200&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;api&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;ELASTIC_API_KEY&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// Client wiring unchanged&lt;/span&gt;
-&lt;span class=&quot;ann&quot;&gt;@Service&lt;/span&gt;
-&lt;span class=&quot;kw&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;ProductSearch&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;private&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;final&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;ElasticsearchClient&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;ProductSearch&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;ElasticsearchClient&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+
+        </style>
+        <div class="carbon-local-26">
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-boot4-tips</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="pun">#</span><span class="txt"> </span><span class="pun">❌</span><span class="txt"> </span><span class="typ">URI</span><span class="txt"> </span><span class="txt">basic</span><span class="txt"> </span><span class="txt">auth</span><span class="txt"> </span><span class="pun">—</span><span class="txt"> </span><span class="txt">secrets</span><span class="txt"> </span><span class="txt">in</span><span class="txt"> </span><span class="txt">the</span><span class="txt"> </span><span class="txt">connection</span><span class="txt"> </span><span class="txt">string</span>
+<span class="txt">spring</span><span class="pun">:</span>
+<span class="txt">  </span><span class="txt">elasticsearch</span><span class="pun">:</span>
+<span class="txt">    </span><span class="txt">uris</span><span class="pun">:</span><span class="txt"> </span><span class="txt">https</span><span class="pun">:</span><span class="com">//user:pass@search.example.com:9200</span>
+<span class="pun">#</span><span class="txt"> </span><span class="typ">Hard</span><span class="txt"> </span><span class="txt">to</span><span class="txt"> </span><span class="txt">rotate</span><span class="txt"> </span><span class="txt">without</span><span class="txt"> </span><span class="txt">rewriting</span><span class="txt"> </span><span class="txt">the</span><span class="txt"> </span><span class="typ">URI</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="pun">#</span><span class="txt"> </span><span class="pun">✅</span><span class="txt"> </span><span class="typ">Boot</span><span class="txt"> </span><span class="num">4</span><span class="txt"> </span><span class="pun">—</span><span class="txt"> </span><span class="txt">spring</span><span class="pun">.</span><span class="txt">elasticsearch</span><span class="pun">.</span><span class="txt">api</span><span class="pun">-</span><span class="txt">key</span>
+<span class="txt">spring</span><span class="pun">:</span>
+<span class="txt">  </span><span class="txt">elasticsearch</span><span class="pun">:</span>
+<span class="txt">    </span><span class="txt">uris</span><span class="pun">:</span><span class="txt"> </span><span class="txt">https</span><span class="pun">:</span><span class="com">//search.example.com:9200</span>
+<span class="txt">    </span><span class="txt">api</span><span class="pun">-</span><span class="txt">key</span><span class="pun">:</span><span class="txt"> </span><span class="pun">$</span><span class="pun">{</span><span class="typ">ELASTIC_API_KEY</span><span class="pun">}</span>
+<span class="com">// Client wiring unchanged</span>
+<span class="ann">@Service</span>
+<span class="kw">class</span><span class="txt"> </span><span class="typ">ProductSearch</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="kw">private</span><span class="txt"> </span><span class="kw">final</span><span class="txt"> </span><span class="typ">ElasticsearchClient</span><span class="txt"> </span><span class="txt">client</span><span class="pun">;</span>
+<span class="txt">    </span><span class="met">ProductSearch</span><span class="pun">(</span><span class="typ">ElasticsearchClient</span><span class="txt"> </span><span class="txt">client</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="kw">this</span><span class="pun">.</span><span class="txt">client</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="txt">client</span><span class="pun">;</span>
+<span class="txt">    </span><span class="pun">}</span>
+<span class="pun">}</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-26.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-  <script async src="https://public.codepenassets.com/embed/index.js"></script>
 </body>
 </html>

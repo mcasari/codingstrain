@@ -3,42 +3,37 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Tweet 179 — CodePen</title>
+  <title>Tweet 179 — Code preview</title>
   <style>
     html, body { margin: 0; height: 100%; }
     body { font-family: system-ui, sans-serif; background: #f7f9f9; display: flex; flex-direction: column; }
     h1 { font-size: 1rem; color: #536471; margin: 0.5rem 1rem; flex-shrink: 0; }
     .codepen-wrap { flex: 1; display: flex; flex-direction: column; max-width: none; width: 100%; min-height: 0; }
-    .codepen-wrap .codepen { flex: 1; min-height: calc(100vh - 3rem); }
+    .codepen-wrap .carbon-local-179, .codepen-wrap .codepen { flex: 1; min-height: calc(100vh - 3rem); }
     .codepen-links { margin: 0.35rem 1rem 0.5rem; flex-shrink: 0; }
 
   </style>
 </head>
 <body>
-  <h1>Tweet #179 — <a href="https://codepen.io/">CodePen</a> prefill</h1>
+  <h1>Tweet #179 — code preview (local Carbon)</h1>
       <div class="codepen-wrap codepen-wrap--large">
-        <div class="codepen"
-             data-prefill='{"title": "Tweet 179 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
-             data-height="744"
-             data-theme-id="dark"
-             data-default-tab="html,result"
-             data-editable="true">
-          <pre data-lang="css">html, body {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  min-height: 100vh;
-  box-sizing: border-box;
-}
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: stretch;
-  padding: 0.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-.carbon {
+        <style>
+          .carbon-local-179 {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0.5rem;
+            min-height: 744px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+          }
+          .carbon-local-179 .carbon {
+            flex: 1;
+            min-height: 728px;
+            max-width: none;
+          }
+          .carbon {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -140,27 +135,28 @@ body {
   color: #82aaff;
   font-size: 16px;
 }
-</pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;java-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;kw&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;io&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;IOException&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kw&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;nio&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kw&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;nio&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kw&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;nio&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;StandardCopyOption&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
 
-&lt;span class=&quot;typ&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;data.csv&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;typ&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;backup&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;data.csv.bak&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+        </style>
+        <div class="carbon-local-179">
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor"><pre><code><span class="kw">import</span><span class="txt"> </span><span class="txt">java</span><span class="pun">.</span><span class="txt">io</span><span class="pun">.</span><span class="typ">IOException</span><span class="pun">;</span>
+<span class="kw">import</span><span class="txt"> </span><span class="txt">java</span><span class="pun">.</span><span class="txt">nio</span><span class="pun">.</span><span class="txt">file</span><span class="pun">.</span><span class="typ">Files</span><span class="pun">;</span>
+<span class="kw">import</span><span class="txt"> </span><span class="txt">java</span><span class="pun">.</span><span class="txt">nio</span><span class="pun">.</span><span class="txt">file</span><span class="pun">.</span><span class="typ">Path</span><span class="pun">;</span>
+<span class="kw">import</span><span class="txt"> </span><span class="txt">java</span><span class="pun">.</span><span class="txt">nio</span><span class="pun">.</span><span class="txt">file</span><span class="pun">.</span><span class="typ">StandardCopyOption</span><span class="pun">;</span>
 
-&lt;span class=&quot;kw&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;copy&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;backup&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;StandardCopyOption&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;REPLACE_EXISTING&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;Copied to &amp;quot;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;backup&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;IOException&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;throw&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;RuntimeException&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+<span class="typ">Path</span><span class="txt"> </span><span class="txt">src</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="typ">Path</span><span class="pun">.</span><span class="met">of</span><span class="pun">(</span><span class="str">&quot;data.csv&quot;</span><span class="pun">)</span><span class="pun">;</span>
+<span class="typ">Path</span><span class="txt"> </span><span class="txt">backup</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="typ">Path</span><span class="pun">.</span><span class="met">of</span><span class="pun">(</span><span class="str">&quot;data.csv.bak&quot;</span><span class="pun">)</span><span class="pun">;</span>
+
+<span class="kw">try</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="typ">Files</span><span class="pun">.</span><span class="met">copy</span><span class="pun">(</span><span class="txt">src</span><span class="pun">,</span><span class="txt"> </span><span class="txt">backup</span><span class="pun">,</span><span class="txt"> </span><span class="typ">StandardCopyOption</span><span class="pun">.</span><span class="typ">REPLACE_EXISTING</span><span class="pun">)</span><span class="pun">;</span>
+<span class="txt">    </span><span class="typ">System</span><span class="pun">.</span><span class="txt">out</span><span class="pun">.</span><span class="met">println</span><span class="pun">(</span><span class="str">&quot;Copied to &quot;</span><span class="txt"> </span><span class="pun">+</span><span class="txt"> </span><span class="txt">backup</span><span class="pun">)</span><span class="pun">;</span>
+<span class="pun">}</span><span class="txt"> </span><span class="kw">catch</span><span class="txt"> </span><span class="pun">(</span><span class="typ">IOException</span><span class="txt"> </span><span class="txt">e</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="kw">throw</span><span class="txt"> </span><span class="kw">new</span><span class="txt"> </span><span class="met">RuntimeException</span><span class="pun">(</span><span class="txt">e</span><span class="pun">)</span><span class="pun">;</span>
+<span class="pun">}</span></code></pre></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-179.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-  <script async src="https://public.codepenassets.com/embed/index.js"></script>
 </body>
 </html>

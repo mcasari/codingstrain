@@ -3,42 +3,37 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Tweet 47 — CodePen</title>
+  <title>Tweet 47 — Code preview</title>
   <style>
     html, body { margin: 0; height: 100%; }
     body { font-family: system-ui, sans-serif; background: #f7f9f9; display: flex; flex-direction: column; }
     h1 { font-size: 1rem; color: #536471; margin: 0.5rem 1rem; flex-shrink: 0; }
     .codepen-wrap { flex: 1; display: flex; flex-direction: column; max-width: none; width: 100%; min-height: 0; }
-    .codepen-wrap .codepen { flex: 1; min-height: calc(100vh - 3rem); }
+    .codepen-wrap .carbon-local-47, .codepen-wrap .codepen { flex: 1; min-height: calc(100vh - 3rem); }
     .codepen-links { margin: 0.35rem 1rem 0.5rem; flex-shrink: 0; }
 
   </style>
 </head>
 <body>
-  <h1>Tweet #47 — <a href="https://codepen.io/">CodePen</a> prefill</h1>
+  <h1>Tweet #47 — code preview (local Carbon)</h1>
       <div class="codepen-wrap codepen-wrap--large">
-        <div class="codepen"
-             data-prefill='{"title": "Tweet 47 — spring-boot4-tips", "description": "Spring Boot snippet from codingstrain (spring-boot4-tips)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="744"
-             data-theme-id="dark"
-             data-default-tab="html,result"
-             data-editable="true">
-          <pre data-lang="css">html, body {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  min-height: 100vh;
-  box-sizing: border-box;
-}
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: stretch;
-  padding: 0.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-.carbon {
+        <style>
+          .carbon-local-47 {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0.5rem;
+            min-height: 744px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+          }
+          .carbon-local-47 .carbon {
+            flex: 1;
+            min-height: 728px;
+            max-width: none;
+          }
+          .carbon {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -140,27 +135,28 @@ body {
   color: #82aaff;
   font-size: 16px;
 }
-</pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot4-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// ✅ Still first-class in Boot 4&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// spring-boot-starter-session-data-redis&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// spring-boot-starter-session-jdbc&lt;/span&gt;
 
-&lt;span class=&quot;pun&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;application&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;yml&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;—&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Redis&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;sessions&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;spring&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;redis&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;redis&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;      &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;host&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;localhost&lt;/span&gt;
+        </style>
+        <div class="carbon-local-47">
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-boot4-tips</span></div><div class="carbon-editor"><pre><code><span class="com">// ✅ Still first-class in Boot 4</span>
+<span class="com">// spring-boot-starter-session-data-redis</span>
+<span class="com">// spring-boot-starter-session-jdbc</span>
 
-&lt;span class=&quot;com&quot;&gt;// For Hazelcast/MongoDB sessions: add the vendor-supported&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// Spring Session module and follow their Boot 4 docs.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+<span class="pun">#</span><span class="txt"> </span><span class="txt">application</span><span class="pun">.</span><span class="txt">yml</span><span class="txt"> </span><span class="pun">—</span><span class="txt"> </span><span class="typ">Redis</span><span class="txt"> </span><span class="txt">sessions</span>
+<span class="txt">spring</span><span class="pun">:</span>
+<span class="txt">  </span><span class="txt">session</span><span class="pun">:</span>
+<span class="txt">    </span><span class="txt">store</span><span class="pun">-</span><span class="txt">type</span><span class="pun">:</span><span class="txt"> </span><span class="txt">redis</span>
+<span class="txt">  </span><span class="txt">data</span><span class="pun">:</span>
+<span class="txt">    </span><span class="txt">redis</span><span class="pun">:</span>
+<span class="txt">      </span><span class="txt">host</span><span class="pun">:</span><span class="txt"> </span><span class="txt">localhost</span>
+
+<span class="com">// For Hazelcast/MongoDB sessions: add the vendor-supported</span>
+<span class="com">// Spring Session module and follow their Boot 4 docs.</span></code></pre></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-47.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-  <script async src="https://public.codepenassets.com/embed/index.js"></script>
 </body>
 </html>

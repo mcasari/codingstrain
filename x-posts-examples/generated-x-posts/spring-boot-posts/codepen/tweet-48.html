@@ -3,42 +3,37 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Tweet 48 — CodePen</title>
+  <title>Tweet 48 — Code preview</title>
   <style>
     html, body { margin: 0; height: 100%; }
     body { font-family: system-ui, sans-serif; background: #f7f9f9; display: flex; flex-direction: column; }
     h1 { font-size: 1rem; color: #536471; margin: 0.5rem 1rem; flex-shrink: 0; }
     .codepen-wrap { flex: 1; display: flex; flex-direction: column; max-width: none; width: 100%; min-height: 0; }
-    .codepen-wrap .codepen { flex: 1; min-height: calc(100vh - 3rem); }
+    .codepen-wrap .carbon-local-48, .codepen-wrap .codepen { flex: 1; min-height: calc(100vh - 3rem); }
     .codepen-links { margin: 0.35rem 1rem 0.5rem; flex-shrink: 0; }
 
   </style>
 </head>
 <body>
-  <h1>Tweet #48 — <a href="https://codepen.io/">CodePen</a> prefill</h1>
+  <h1>Tweet #48 — code preview (local Carbon)</h1>
       <div class="codepen-wrap codepen-wrap--large">
-        <div class="codepen"
-             data-prefill='{"title": "Tweet 48 — spring-boot-minimal-rest-h2", "description": "Spring Boot snippet from codingstrain (spring-boot-minimal-rest-h2)", "tags": ["java", "springboot", "codingstrain"]}'
-             data-height="1032"
-             data-theme-id="dark"
-             data-default-tab="html,result"
-             data-editable="true">
-          <pre data-lang="css">html, body {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  min-height: 100vh;
-  box-sizing: border-box;
-}
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: stretch;
-  padding: 0.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-.carbon {
+        <style>
+          .carbon-local-48 {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0.5rem;
+            min-height: 1032px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+          }
+          .carbon-local-48 .carbon {
+            flex: 1;
+            min-height: 1016px;
+            max-width: none;
+          }
+          .carbon {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -140,49 +135,50 @@ body {
   color: #82aaff;
   font-size: 16px;
 }
-</pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;spring-boot-minimal-rest-h2&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor cols&quot;&gt;&lt;div class=&quot;col&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// 1) JPA entity mapped to a table in the H2 database&lt;/span&gt;
-&lt;span class=&quot;ann&quot;&gt;@Entity&lt;/span&gt;
-&lt;span class=&quot;ann&quot;&gt;@Table&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;Book&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;kw&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;ann&quot;&gt;@Id&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;private&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;private&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;private&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;com&quot;&gt;// getters / setters omitted&lt;/span&gt;
-&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;
 
-&lt;span class=&quot;com&quot;&gt;// 2) Repository — extend JpaRepository for full CRUD, add finders as needed&lt;/span&gt;
-&lt;span class=&quot;ann&quot;&gt;@Repository&lt;/span&gt;
-&lt;span class=&quot;kw&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;interface&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;BookRepository&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;extends&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;JpaRepository&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;findByAuthor&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&quot;col-divider&quot;&gt;&lt;/span&gt;&lt;div class=&quot;col&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// 3) REST controller exposes the CRUD over HTTP&lt;/span&gt;
-&lt;span class=&quot;ann&quot;&gt;@RestController&lt;/span&gt;
-&lt;span class=&quot;ann&quot;&gt;@RequestMapping&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;/library&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;kw&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;BookController&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;
+        </style>
+        <div class="carbon-local-48">
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-boot-minimal-rest-h2</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="com">// 1) JPA entity mapped to a table in the H2 database</span>
+<span class="ann">@Entity</span>
+<span class="ann">@Table</span><span class="pun">(</span><span class="txt">name</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="str">&quot;Book&quot;</span><span class="pun">)</span>
+<span class="kw">public</span><span class="txt"> </span><span class="kw">class</span><span class="txt"> </span><span class="typ">Book</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="ann">@Id</span><span class="txt"> </span><span class="kw">private</span><span class="txt"> </span><span class="typ">String</span><span class="txt"> </span><span class="txt">id</span><span class="pun">;</span>
+<span class="txt">    </span><span class="kw">private</span><span class="txt"> </span><span class="typ">String</span><span class="txt"> </span><span class="txt">title</span><span class="pun">;</span>
+<span class="txt">    </span><span class="kw">private</span><span class="txt"> </span><span class="typ">String</span><span class="txt"> </span><span class="txt">author</span><span class="pun">;</span>
+<span class="txt">    </span><span class="com">// getters / setters omitted</span>
+<span class="pun">}</span>
 
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;ann&quot;&gt;@Autowired&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;private&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;BookService&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;books&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+<span class="com">// 2) Repository — extend JpaRepository for full CRUD, add finders as needed</span>
+<span class="ann">@Repository</span>
+<span class="kw">public</span><span class="txt"> </span><span class="kw">interface</span><span class="txt"> </span><span class="typ">BookRepository</span><span class="txt"> </span><span class="kw">extends</span><span class="txt"> </span><span class="typ">JpaRepository</span><span class="pun">&lt;</span><span class="typ">Book</span><span class="pun">,</span><span class="txt"> </span><span class="typ">String</span><span class="pun">&gt;</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="typ">List</span><span class="pun">&lt;</span><span class="typ">Book</span><span class="pun">&gt;</span><span class="txt"> </span><span class="met">findByAuthor</span><span class="pun">(</span><span class="typ">String</span><span class="txt"> </span><span class="txt">author</span><span class="pun">)</span><span class="pun">;</span>
+<span class="pun">}</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="com">// 3) REST controller exposes the CRUD over HTTP</span>
+<span class="ann">@RestController</span>
+<span class="ann">@RequestMapping</span><span class="pun">(</span><span class="str">&quot;/library&quot;</span><span class="pun">)</span>
+<span class="kw">public</span><span class="txt"> </span><span class="kw">class</span><span class="txt"> </span><span class="typ">BookController</span><span class="txt"> </span><span class="pun">{</span>
 
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;ann&quot;&gt;@GetMapping&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;/book&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;findAll&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;books&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;findAll&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;
+<span class="txt">    </span><span class="ann">@Autowired</span>
+<span class="txt">    </span><span class="kw">private</span><span class="txt"> </span><span class="typ">BookService</span><span class="txt"> </span><span class="txt">books</span><span class="pun">;</span>
 
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;ann&quot;&gt;@PostMapping&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;/book&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ann&quot;&gt;@RequestBody&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;books&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;
+<span class="txt">    </span><span class="ann">@GetMapping</span><span class="pun">(</span><span class="str">&quot;/book&quot;</span><span class="pun">)</span>
+<span class="txt">    </span><span class="kw">public</span><span class="txt"> </span><span class="typ">List</span><span class="pun">&lt;</span><span class="typ">Book</span><span class="pun">&gt;</span><span class="txt"> </span><span class="met">findAll</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span><span class="txt"> </span><span class="kw">return</span><span class="txt"> </span><span class="txt">books</span><span class="pun">.</span><span class="met">findAll</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span><span class="txt"> </span><span class="pun">}</span>
 
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;ann&quot;&gt;@DeleteMapping&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;/book/{id}&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;met&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ann&quot;&gt;@PathVariable&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;books&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;deleteById&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;
+<span class="txt">    </span><span class="ann">@PostMapping</span><span class="pun">(</span><span class="str">&quot;/book&quot;</span><span class="pun">)</span>
+<span class="txt">    </span><span class="kw">public</span><span class="txt"> </span><span class="typ">Book</span><span class="txt"> </span><span class="met">add</span><span class="pun">(</span><span class="ann">@RequestBody</span><span class="txt"> </span><span class="typ">Book</span><span class="txt"> </span><span class="txt">book</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span><span class="txt"> </span><span class="kw">return</span><span class="txt"> </span><span class="txt">books</span><span class="pun">.</span><span class="met">save</span><span class="pun">(</span><span class="txt">book</span><span class="pun">)</span><span class="pun">;</span><span class="txt"> </span><span class="pun">}</span>
 
-&lt;span class=&quot;com&quot;&gt;// 4) application.yaml — in-memory H2, nothing to install&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// spring.datasource.url: jdbc:h2:mem:mydb&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// spring.sql.init.mode: always       # auto-runs schema.sql + import.sql&lt;/span&gt;
-&lt;span class=&quot;com&quot;&gt;// spring.h2.console.enabled: true    # browse data at /h2-console&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+<span class="txt">    </span><span class="ann">@DeleteMapping</span><span class="pun">(</span><span class="str">&quot;/book/{id}&quot;</span><span class="pun">)</span>
+<span class="txt">    </span><span class="kw">public</span><span class="txt"> </span><span class="kw">void</span><span class="txt"> </span><span class="met">delete</span><span class="pun">(</span><span class="ann">@PathVariable</span><span class="txt"> </span><span class="typ">String</span><span class="txt"> </span><span class="txt">id</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span><span class="txt"> </span><span class="txt">books</span><span class="pun">.</span><span class="met">deleteById</span><span class="pun">(</span><span class="txt">id</span><span class="pun">)</span><span class="pun">;</span><span class="txt"> </span><span class="pun">}</span>
+<span class="pun">}</span>
+
+<span class="com">// 4) application.yaml — in-memory H2, nothing to install</span>
+<span class="com">// spring.datasource.url: jdbc:h2:mem:mydb</span>
+<span class="com">// spring.sql.init.mode: always       # auto-runs schema.sql + import.sql</span>
+<span class="com">// spring.h2.console.enabled: true    # browse data at /h2-console</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-48.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-  <script async src="https://public.codepenassets.com/embed/index.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-# application.yml — enable virtual threads
+# application.yml — turn virtual threads on
 spring:
   threads:
     virtual:
@@ -25,4 +25,4 @@ class UserController {
                   .body(User.class);
     }
 }
-// JDK HttpClient blocks on virtual threads — cheap concurrent I/O
+// Same blocking RestClient — waits use virtual threads

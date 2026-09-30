@@ -1,7 +1,9 @@
-💡 Use Deque instead of Stack for LIFO (last-in, first-out) lists.
+💡 Java: Prefer Deque over Stack for last-in, first-out (LIFO).
 
-✅ Stack is a legacy class — it extends Vector and synchronizes every operation
+✅ Stack is legacy — extends Vector, syncs every call
 
-✅ Deque supports the same push / pop / peek calls — a drop-in replacement
+✅ Deque has the same push / pop / peek API
+
+✅ Use ArrayDeque — faster, recommended since Java 6
 
 #Java #Collections

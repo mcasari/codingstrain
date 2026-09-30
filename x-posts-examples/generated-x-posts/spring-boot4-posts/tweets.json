@@ -243,8 +243,8 @@
   {
     "id": 24,
     "module": "spring-boot4-tips",
-    "body": "💡 Spring Boot 4: Turn on virtual threads — JDK `HttpClient` uses them too.\n\n✅ Set `spring.threads.virtual.enabled=true`\n\n✅ `RestClient` blocks on lightweight virtual threads\n\n✅ More concurrent outbound calls, fewer platform threads\n\n#SpringBoot4 #VirtualThreads",
-    "code": "# application.yml — enable virtual threads\nspring:\n  threads:\n    virtual:\n      enabled: true\n\n@Configuration\nclass OutboundApiConfig {\n    @Bean\n    RestClient api(RestClient.Builder builder) {\n        return builder.baseUrl(\"https://api.example.com\").build();\n    }\n}\n\n@RestController\nclass UserController {\n    private final RestClient api;\n    UserController(RestClient api) { this.api = api; }\n\n    @GetMapping(\"/users/{id}\")\n    User user(@PathVariable Long id) {\n        return api.get()\n                  .uri(\"/users/{id}\", id)\n                  .retrieve()\n                  .body(User.class);\n    }\n}\n// JDK HttpClient blocks on virtual threads — cheap concurrent I/O\n",
+    "body": "💡 Spring Boot 4: Turn on virtual threads — waiting on HTTP gets cheaper.\n\n✅ Flip spring.threads.virtual.enabled=true\n\n✅ Keep your normal RestClient code\n\n✅ More API calls waiting at once, fewer heavy OS threads\n\n#SpringBoot4 #VirtualThreads",
+    "code": "# application.yml — turn virtual threads on\nspring:\n  threads:\n    virtual:\n      enabled: true\n\n@Configuration\nclass OutboundApiConfig {\n    @Bean\n    RestClient api(RestClient.Builder builder) {\n        return builder.baseUrl(\"https://api.example.com\").build();\n    }\n}\n\n@RestController\nclass UserController {\n    private final RestClient api;\n    UserController(RestClient api) { this.api = api; }\n\n    @GetMapping(\"/users/{id}\")\n    User user(@PathVariable Long id) {\n        return api.get()\n                  .uri(\"/users/{id}\", id)\n                  .retrieve()\n                  .body(User.class);\n    }\n}\n// Same blocking RestClient — waits use virtual threads\n",
     "tags": "#SpringBoot4 #VirtualThreads",
     "codepen_style": "carbon",
     "codepen_large": true,

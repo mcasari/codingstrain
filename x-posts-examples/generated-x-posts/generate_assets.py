@@ -863,7 +863,7 @@ def build_article(t: dict) -> str:
     )
     return f"""    <article id="tweet-{tid}">
       <h2>Tweet #{tid}</h2>
-{diagram_block}      <p class="asset-label">Code — <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a> pen</p>
+{diagram_block}      <p class="asset-label">Code preview</p>
 {pen}
       <p class="tweet-copy-label">Copy for X <span class="{count_class}">({x_len}/{X_CHAR_LIMIT})</span></p>
       <textarea class="tweet-copy" id="{copy_id}" readonly rows="10">{x_text}</textarea>

@@ -1,15 +1,11 @@
-import java.util.ArrayDeque;
-import java.util.Deque;
-import java.util.Stack;
-
-// ❌ Legacy Stack — extends Vector, synchronized on every call
+// ❌ Legacy Stack — extends Vector, synchronized every call
 Stack<String> undo = new Stack<>();
-undo.push("typed 'hello'");
+undo.push("typed hello");
 undo.push("added space");
-undo.pop();   // removes "added space"
+String last = undo.pop(); // "added space" (LIFO)
 
 // ✅ Deque as a stack — same API, modern and faster
-Deque<String> undo = new ArrayDeque<>();
-undo.push("typed 'hello'");
-undo.push("added space");
-undo.pop();   // removes "added space" — same LIFO behavior
+Deque<String> undo2 = new ArrayDeque<>();
+undo2.push("typed hello");
+undo2.push("added space");
+String last2 = undo2.pop(); // "added space" — same LIFO

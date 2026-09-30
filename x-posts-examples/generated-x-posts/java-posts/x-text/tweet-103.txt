@@ -1,7 +1,9 @@
-💡 Prefer constructor injection over field injection in Spring beans.
+💡 Java/Spring: Prefer constructor injection over @Autowired fields.
 
-✅ Field injection hides required dependencies — you can create the object without them
+✅ Field injection hides required dependencies
 
-✅ Constructor injection makes dependencies explicit and lets you use final fields
+✅ Constructor makes deps explicit — use final fields
+
+✅ Easier tests: pass mocks in, no Spring context needed
 
 #Java #SpringBoot

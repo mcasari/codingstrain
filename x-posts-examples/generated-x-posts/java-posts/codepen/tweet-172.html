@@ -3,42 +3,37 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Tweet 172 — CodePen</title>
+  <title>Tweet 172 — Code preview</title>
   <style>
     html, body { margin: 0; height: 100%; }
     body { font-family: system-ui, sans-serif; background: #f7f9f9; display: flex; flex-direction: column; }
     h1 { font-size: 1rem; color: #536471; margin: 0.5rem 1rem; flex-shrink: 0; }
     .codepen-wrap { flex: 1; display: flex; flex-direction: column; max-width: none; width: 100%; min-height: 0; }
-    .codepen-wrap .codepen { flex: 1; min-height: calc(100vh - 3rem); }
+    .codepen-wrap .carbon-local-172, .codepen-wrap .codepen { flex: 1; min-height: calc(100vh - 3rem); }
     .codepen-links { margin: 0.35rem 1rem 0.5rem; flex-shrink: 0; }
 
   </style>
 </head>
 <body>
-  <h1>Tweet #172 — <a href="https://codepen.io/">CodePen</a> prefill</h1>
+  <h1>Tweet #172 — code preview (local Carbon)</h1>
       <div class="codepen-wrap codepen-wrap--large">
-        <div class="codepen"
-             data-prefill='{"title": "Tweet 172 — java-tips", "description": "Java snippet from codingstrain (java-tips)", "tags": ["java", "codingstrain"]}'
-             data-height="720"
-             data-theme-id="dark"
-             data-default-tab="html,result"
-             data-editable="true">
-          <pre data-lang="css">html, body {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  min-height: 100vh;
-  box-sizing: border-box;
-}
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: stretch;
-  padding: 0.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-.carbon {
+        <style>
+          .carbon-local-172 {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0.5rem;
+            min-height: 720px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+          }
+          .carbon-local-172 .carbon {
+            flex: 1;
+            min-height: 704px;
+            max-width: none;
+          }
+          .carbon {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -140,35 +135,36 @@ body {
   color: #82aaff;
   font-size: 16px;
 }
-</pre>
-          <pre data-lang="html">&lt;div class=&quot;carbon&quot;&gt;&lt;div class=&quot;carbon-titlebar&quot;&gt;&lt;span class=&quot;carbon-dot red&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot yellow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-dot green&quot;&gt;&lt;/span&gt;&lt;span class=&quot;carbon-module&quot;&gt;java-tips&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;carbon-editor cols&quot;&gt;&lt;div class=&quot;col&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;kw&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Instant&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kw&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;temporal&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;ChronoUnit&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
 
-&lt;span class=&quot;typ&quot;&gt;Instant&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Instant&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;2026-07-27T10:15:30.123Z&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;typ&quot;&gt;Instant&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Instant&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;2026-07-27T18:45:00.999Z&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
+        </style>
+        <div class="carbon-local-172">
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="kw">import</span><span class="txt"> </span><span class="txt">java</span><span class="pun">.</span><span class="txt">time</span><span class="pun">.</span><span class="typ">Instant</span><span class="pun">;</span>
+<span class="kw">import</span><span class="txt"> </span><span class="txt">java</span><span class="pun">.</span><span class="txt">time</span><span class="pun">.</span><span class="txt">temporal</span><span class="pun">.</span><span class="typ">ChronoUnit</span><span class="pun">;</span>
 
-&lt;span class=&quot;com&quot;&gt;// ❌ Full precision — different times, equals is false&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;com&quot;&gt;// false (expected)&lt;/span&gt;
+<span class="typ">Instant</span><span class="txt"> </span><span class="txt">a</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="typ">Instant</span><span class="pun">.</span><span class="met">parse</span><span class="pun">(</span><span class="str">&quot;2026-07-27T10:15:30.123Z&quot;</span><span class="pun">)</span><span class="pun">;</span>
+<span class="typ">Instant</span><span class="txt"> </span><span class="txt">b</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="typ">Instant</span><span class="pun">.</span><span class="met">parse</span><span class="pun">(</span><span class="str">&quot;2026-07-27T18:45:00.999Z&quot;</span><span class="pun">)</span><span class="pun">;</span>
 
-&lt;span class=&quot;com&quot;&gt;// Same calendar day in UTC? nanos/hours still spoil a naive check&lt;/span&gt;
-&lt;span class=&quot;typ&quot;&gt;Instant&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;morning&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Instant&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;2026-07-27T08:00:00.001Z&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;typ&quot;&gt;Instant&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;evening&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt; &lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Instant&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;2026-07-27T20:00:00.999Z&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;morning&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;evening&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;com&quot;&gt;// false&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;span class=&quot;col-divider&quot;&gt;&lt;/span&gt;&lt;div class=&quot;col&quot;&gt;&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;com&quot;&gt;// ✅ Truncate to the unit you care about, then compare&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;morning&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;truncatedTo&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;ChronoUnit&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;DAYS&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;evening&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;truncatedTo&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;ChronoUnit&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;DAYS&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;com&quot;&gt;// true&lt;/span&gt;
+<span class="com">// ❌ Full precision — different times, equals is false</span>
+<span class="txt">a</span><span class="pun">.</span><span class="met">equals</span><span class="pun">(</span><span class="txt">b</span><span class="pun">)</span><span class="pun">;</span><span class="txt">  </span><span class="com">// false (expected)</span>
 
-&lt;span class=&quot;com&quot;&gt;// Same hour?&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;truncatedTo&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;ChronoUnit&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;HOURS&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;Instant&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&amp;quot;2026-07-27T10:59:59Z&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;txt&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;met&quot;&gt;truncatedTo&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;ChronoUnit&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;HOURS&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;txt&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;com&quot;&gt;// true&lt;/span&gt;
+<span class="com">// Same calendar day in UTC? nanos/hours still spoil a naive check</span>
+<span class="typ">Instant</span><span class="txt"> </span><span class="txt">morning</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="typ">Instant</span><span class="pun">.</span><span class="met">parse</span><span class="pun">(</span><span class="str">&quot;2026-07-27T08:00:00.001Z&quot;</span><span class="pun">)</span><span class="pun">;</span>
+<span class="typ">Instant</span><span class="txt"> </span><span class="txt">evening</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="typ">Instant</span><span class="pun">.</span><span class="met">parse</span><span class="pun">(</span><span class="str">&quot;2026-07-27T20:00:00.999Z&quot;</span><span class="pun">)</span><span class="pun">;</span>
+<span class="txt">morning</span><span class="pun">.</span><span class="met">equals</span><span class="pun">(</span><span class="txt">evening</span><span class="pun">)</span><span class="pun">;</span><span class="txt">  </span><span class="com">// false</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="com">// ✅ Truncate to the unit you care about, then compare</span>
+<span class="txt">morning</span><span class="pun">.</span><span class="met">truncatedTo</span><span class="pun">(</span><span class="typ">ChronoUnit</span><span class="pun">.</span><span class="typ">DAYS</span><span class="pun">)</span>
+<span class="txt">    </span><span class="pun">.</span><span class="met">equals</span><span class="pun">(</span><span class="txt">evening</span><span class="pun">.</span><span class="met">truncatedTo</span><span class="pun">(</span><span class="typ">ChronoUnit</span><span class="pun">.</span><span class="typ">DAYS</span><span class="pun">)</span><span class="pun">)</span><span class="pun">;</span><span class="txt">  </span><span class="com">// true</span>
 
-&lt;span class=&quot;com&quot;&gt;// Also: MINUTES, SECONDS, …&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+<span class="com">// Same hour?</span>
+<span class="txt">a</span><span class="pun">.</span><span class="met">truncatedTo</span><span class="pun">(</span><span class="typ">ChronoUnit</span><span class="pun">.</span><span class="typ">HOURS</span><span class="pun">)</span>
+<span class="txt">    </span><span class="pun">.</span><span class="met">equals</span><span class="pun">(</span><span class="typ">Instant</span><span class="pun">.</span><span class="met">parse</span><span class="pun">(</span><span class="str">&quot;2026-07-27T10:59:59Z&quot;</span><span class="pun">)</span>
+<span class="txt">        </span><span class="pun">.</span><span class="met">truncatedTo</span><span class="pun">(</span><span class="typ">ChronoUnit</span><span class="pun">.</span><span class="typ">HOURS</span><span class="pun">)</span><span class="pun">)</span><span class="pun">;</span><span class="txt">  </span><span class="com">// true</span>
+
+<span class="com">// Also: MINUTES, SECONDS, …</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-172.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-  <script async src="https://public.codepenassets.com/embed/index.js"></script>
 </body>
 </html>

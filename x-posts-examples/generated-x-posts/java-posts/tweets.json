@@ -536,49 +536,55 @@
   {
     "id": 100,
     "module": "java-tips",
-    "body": "💡 Java tip 💡: Format your code consistently. Use tools like Checkstyle or Spotless. #Java #CleanCode\n\n✅ Java tip 💡: Format your code consistently. Use tools like Checkstyle or Spotless. #Java #CleanCode\n\n✅ Runnable sample: `java-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "body": "💡 Java: Format code the same way every time — don’t argue in PRs.\n\n✅ Pick one style and stick to it (Google, Airbnb, team rules)\n\n✅ Automate with Spotless or Checkstyle in the build\n\n✅ Format on save / CI so style never depends on who typed it",
     "tags": "#Java #CleanCode",
     "codepen_style": "carbon",
     "codepen_large": true,
+    "code": "// ❌ Manual style — every PR looks different\npublic class OrderService{\npublic void place( Order o ){\nif(o.total()>0){ repo.save(o); }\n}\n}\n\n// ✅ Same rules everywhere (Spotless / formatter)\npublic class OrderService {\n    public void place(Order o) {\n        if (o.total() > 0) {\n            repo.save(o);\n        }\n    }\n}\n\n// build.gradle — Spotless example\nspotless {\n    java {\n        googleJavaFormat()\n    }\n}\n",
     "category": "java"
   },
   {
     "id": 101,
     "module": "java-tips",
-    "body": "💡 Java Tip 💡: Avoid initializing objects you may never use. Lazy-load when appropriate. #Java #Performance\n\n✅ Java Tip 💡: Avoid initializing objects you may never use. Lazy-load when appropriate. #Java #Performance\n\n✅ Runnable sample: `java-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "body": "💡 Java: Don’t build expensive objects until you actually need them.\n\n✅ Eager fields waste time/memory if the path never runs\n\n✅ Lazy-load on first use (or use Supplier / holder)\n\n✅ Great for caches, clients, and heavy config\n\n#Java #Performance",
     "tags": "#Java #Performance",
     "codepen_style": "carbon",
     "codepen_large": true,
+    "code": "// ❌ Eager — always built, even if never used\nclass EagerReports {\n    private final HeavyAnalyzer analyzer = new HeavyAnalyzer();\n\n    void maybeAnalyze(Report r) {\n        if (r.needsDeepScan()) {\n            analyzer.run(r);\n        }\n    }\n}\n\n// ✅ Lazy — create only on first need\nclass LazyReports {\n    private HeavyAnalyzer analyzer;\n\n    private HeavyAnalyzer analyzer() {\n        if (analyzer == null) {\n            analyzer = new HeavyAnalyzer();\n        }\n        return analyzer;\n    }\n\n    void maybeAnalyze(Report r) {\n        if (r.needsDeepScan()) {\n            analyzer().run(r);\n        }\n    }\n}\n",
+    "codepen_columns": 2,
     "category": "java"
   },
   {
     "id": 102,
     "module": "java-tips",
-    "body": "💡 Use `Deque` instead of `Stack` for LIFO (last-in, first-out) lists.\n\n✅ `Stack` is a legacy class — it extends `Vector` and synchronizes every operation\n\n✅ `Deque` supports the same `push` / `pop` / `peek` calls — a drop-in replacement\n\n✅ `ArrayDeque` is faster and has been the recommended choice since Java 6\n\n#Java #Collections",
-    "code": "import java.util.ArrayDeque;\nimport java.util.Deque;\nimport java.util.Stack;\n\n// ❌ Legacy Stack — extends Vector, synchronized on every call\nStack<String> undo = new Stack<>();\nundo.push(\"typed 'hello'\");\nundo.push(\"added space\");\nundo.pop();   // removes \"added space\"\n\n// ✅ Deque as a stack — same API, modern and faster\nDeque<String> undo = new ArrayDeque<>();\nundo.push(\"typed 'hello'\");\nundo.push(\"added space\");\nundo.pop();   // removes \"added space\" — same LIFO behavior",
+    "body": "💡 Java: Prefer `Deque` over `Stack` for last-in, first-out (LIFO).\n\n✅ `Stack` is legacy — extends `Vector`, syncs every call\n\n✅ `Deque` has the same `push` / `pop` / `peek` API\n\n✅ Use `ArrayDeque` — faster, recommended since Java 6",
+    "code": "// ❌ Legacy Stack — extends Vector, synchronized every call\nStack<String> undo = new Stack<>();\nundo.push(\"typed hello\");\nundo.push(\"added space\");\nString last = undo.pop(); // \"added space\" (LIFO)\n\n// ✅ Deque as a stack — same API, modern and faster\nDeque<String> undo2 = new ArrayDeque<>();\nundo2.push(\"typed hello\");\nundo2.push(\"added space\");\nString last2 = undo2.pop(); // \"added space\" — same LIFO\n",
     "tags": "#Java #Collections",
     "codepen_style": "carbon",
     "codepen_large": true,
+    "codepen_columns": 2,
     "category": "java"
   },
   {
     "id": 103,
     "module": "java-tips",
-    "body": "💡 Prefer constructor injection over field injection in Spring beans.\n\n✅ Field injection hides required dependencies — you can create the object without them\n\n✅ Constructor injection makes dependencies explicit and lets you use `final` fields\n\n✅ Easier to test: pass mocks directly to the constructor, no Spring context needed",
-    "code": "// ❌ Field injection — dependency hidden, hard to test without Spring\n@RestController\nclass OrderController {\n\n    @Autowired\n    private OrderService orders;\n\n    @GetMapping(\"/orders\")\n    List<Order> list() { return orders.findAll(); }\n}\n\n// ✅ Constructor injection — explicit, final, easy to unit-test\n@RestController\nclass OrderController {\n\n    private final OrderService orders;\n\n    OrderController(OrderService orders) {\n        this.orders = orders;\n    }\n\n    @GetMapping(\"/orders\")\n    List<Order> list() { return orders.findAll(); }\n}",
+    "body": "💡 Java/Spring: Prefer constructor injection over `@Autowired` fields.\n\n✅ Field injection hides required dependencies\n\n✅ Constructor makes deps explicit — use `final` fields\n\n✅ Easier tests: pass mocks in, no Spring context needed",
+    "code": "// ❌ Field injection — hidden deps, hard to unit-test\n@RestController\nclass FieldInjectedOrders {\n    @Autowired\n    private OrderService orders;\n\n    @GetMapping(\"/orders\")\n    List<Order> list() { return orders.findAll(); }\n}\n\n// ✅ Constructor injection — explicit, final, testable\n@RestController\nclass ConstructorInjectedOrders {\n    private final OrderService orders;\n\n    ConstructorInjectedOrders(OrderService orders) {\n        this.orders = orders;\n    }\n\n    @GetMapping(\"/orders\")\n    List<Order> list() { return orders.findAll(); }\n}\n",
     "tags": "#Java #SpringBoot",
     "codepen_style": "carbon",
     "codepen_large": true,
+    "codepen_columns": 2,
     "category": "java"
   },
   {
     "id": 104,
     "module": "java-tips",
-    "body": "💡 Java Tip 💡: Use `Comparator.comparing()` for sorting with lambdas. #Java #FunctionalProgramming\n\n✅ Java Tip 💡: Use `Comparator.comparing()` for sorting with lambdas. #Java #FunctionalProgramming\n\n✅ Runnable sample: `java-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "body": "💡 Java: Sort with `Comparator.comparing()` — skip the verbose `compare()` boilerplate.\n\n✅ Sort by a field in one line\n\n✅ Chain `.thenComparing(...)` for tie-breakers\n\n✅ Works with method references like `User::getLastName`\n\n#Java #FunctionalProgramming",
+    "code": "// ❌ Verbose compare — easy to get the order wrong\nusers.sort((a, b) -> {\n    int byLast = a.getLastName().compareTo(b.getLastName());\n    if (byLast != 0) return byLast;\n    return a.getFirstName().compareTo(b.getFirstName());\n});\n\n// ✅ comparing + thenComparing\nusers.sort(\n    Comparator.comparing(User::getLastName)\n              .thenComparing(User::getFirstName)\n);\n",
     "tags": "#Java #FunctionalProgramming",
     "codepen_style": "carbon",
     "codepen_large": true,
-    "code": "users.sort(\n    Comparator.comparing(User::getLastName)\n              .thenComparing(User::getFirstName));",
+    "codepen_columns": 2,
     "category": "java"
   },
   {

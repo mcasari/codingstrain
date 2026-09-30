@@ -1,5 +1,9 @@
-💡 Java Tip 💡: Avoid initializing objects you may never use. Lazy-load when appropriate. #Java #Performance
+💡 Java: Don’t build expensive objects until you actually need them.
 
-✅ Java Tip 💡: Avoid initializing objects you may never use. Lazy-load when appropriate. #Java #Performance
+✅ Eager fields waste time/memory if the path never runs
+
+✅ Lazy-load on first use (or use Supplier / holder)
+
+✅ Great for caches, clients, and heavy config
 
 #Java #Performance

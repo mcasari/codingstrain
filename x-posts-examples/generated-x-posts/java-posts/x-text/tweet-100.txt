@@ -1,5 +1,9 @@
-💡 Java tip 💡: Format your code consistently. Use tools like Checkstyle or Spotless. #Java #CleanCode
+💡 Java: Format code the same way every time — don’t argue in PRs.
 
-✅ Java tip 💡: Format your code consistently. Use tools like Checkstyle or Spotless. #Java #CleanCode
+✅ Pick one style and stick to it (Google, Airbnb, team rules)
+
+✅ Automate with Spotless or Checkstyle in the build
+
+✅ Format on save / CI so style never depends on who typed it
 
 #Java #CleanCode

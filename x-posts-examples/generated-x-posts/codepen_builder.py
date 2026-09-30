@@ -130,6 +130,40 @@ body {
 }
 """
 
+# Carbon rules without html/body (for inline local previews).
+_CARBON_INNER_CSS = CARBON_CSS[CARBON_CSS.index(".carbon {") :]
+
+_LEGACY_CSS = """body {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.code-snippet {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: #011627;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+.code-snippet code {
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 20px;
+  line-height: 1.68;
+  color: #d6deeb;
+  white-space: pre;
+}
+.module-tag {
+  font-family: system-ui, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+"""
+
 JAVA_KEYWORDS = frozenset({
     "abstract", "assert", "boolean", "break", "byte", "case", "catch", "char",
     "class", "const", "continue", "default", "do", "double", "else", "enum",
@@ -367,7 +401,7 @@ def _use_carbon_style(tweet: dict) -> bool:
 
 
 def build_codepen_embed(tweet: dict, code: str) -> str:
-    """HTML fragment: CodePen Prefill embed for a Java snippet."""
+    """HTML fragment: local Carbon preview (no codepen.io), or CodePen Prefill for plain."""
     tid = tweet["id"]
     module = tweet.get("module", "codingstrain")
     title = f"Tweet {tid} — {module}"
@@ -383,6 +417,45 @@ def build_codepen_embed(tweet: dict, code: str) -> str:
     else:
         height = _embed_height(code, carbon=carbon, large=large)
 
+    wrap_class = "codepen-wrap codepen-wrap--large" if large else "codepen-wrap"
+    links = f"""        <p class="codepen-links">
+          <a href="codepen/tweet-{tid:02d}.html" target="_blank" rel="noopener">Open pen preview</a>
+          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
+        </p>"""
+
+    if carbon:
+        html_block = (
+            highlight_java_html_columns(code, module, split_decl)
+            if columns
+            else highlight_java_html(code, module)
+        )
+        # Render Carbon locally — does not need codepen.io (works offline / behind firewalls).
+        inner_min = max(height - 16, 200)
+        return f"""      <div class="{wrap_class}">
+        <style>
+          .carbon-local-{tid} {{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0.5rem;
+            min-height: {height}px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+          }}
+          .carbon-local-{tid} .carbon {{
+            flex: 1;
+            min-height: {inner_min}px;
+            max-width: none;
+          }}
+          {_CARBON_INNER_CSS}
+        </style>
+        <div class="carbon-local-{tid}">
+          {html_block}
+        </div>
+{links}
+      </div>"""
+
     meta = {
         "title": title,
         "description": (
@@ -396,24 +469,12 @@ def build_codepen_embed(tweet: dict, code: str) -> str:
             else ["java", "codingstrain"]
         ),
     }
-
-    wrap_class = "codepen-wrap codepen-wrap--large" if large else "codepen-wrap"
-
-    if carbon:
-        html_block = (
-            highlight_java_html_columns(code, module, split_decl)
-            if columns
-            else highlight_java_html(code, module)
-        )
-        css = CARBON_CSS
-    else:
-        css = _LEGACY_CSS
-        escaped = html.escape(code)
-        html_block = (
-            f'<p class="module-tag">{html.escape(module)}</p>\n'
-            f'<pre class="code-snippet"><code>{escaped}</code></pre>'
-        )
-
+    css = _LEGACY_CSS
+    escaped = html.escape(code)
+    html_block = (
+        f'<p class="module-tag">{html.escape(module)}</p>\n'
+        f'<pre class="code-snippet"><code>{escaped}</code></pre>'
+    )
     return f"""      <div class="{wrap_class}">
         <div class="codepen"
              data-prefill='{_prefill_attr(meta)}'
@@ -424,47 +485,12 @@ def build_codepen_embed(tweet: dict, code: str) -> str:
           <pre data-lang="css">{_pre_block(css)}</pre>
           <pre data-lang="html">{html.escape(html_block)}</pre>
         </div>
-        <p class="codepen-links">
-          <a href="codepen/tweet-{tid:02d}.html" target="_blank" rel="noopener">Open pen preview</a>
-          · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
-        </p>
+{links}
       </div>"""
 
 
-_LEGACY_CSS = """body {
-  margin: 0;
-  padding: 1rem 1.25rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  min-height: 100vh;
-  box-sizing: border-box;
-}
-.code-snippet {
-  margin: 0;
-  padding: 1.25rem 1.5rem;
-  background: #011627;
-  border-radius: 8px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
-  overflow: auto;
-}
-.code-snippet code {
-  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 20px;
-  line-height: 1.68;
-  color: #d6deeb;
-  white-space: pre;
-}
-.module-tag {
-  font-family: system-ui, sans-serif;
-  font-size: 11px;
-  color: #94a3b8;
-  margin: 0 0 0.75rem;
-  letter-spacing: 0.02em;
-}
-"""
-
-
 def build_standalone_pen_page(tweet: dict, code: str) -> str:
-    """Full HTML page with one Prefill embed (works offline except CodePen script)."""
+    """Full HTML page with a local Carbon preview (or CodePen Prefill for plain style)."""
     tid = tweet["id"]
     embed = build_codepen_embed(tweet, code)
     carbon = _use_carbon_style(tweet)
@@ -475,28 +501,32 @@ def build_standalone_pen_page(tweet: dict, code: str) -> str:
     body { font-family: system-ui, sans-serif; background: #f7f9f9; display: flex; flex-direction: column; }
     h1 { font-size: 1rem; color: #536471; margin: 0.5rem 1rem; flex-shrink: 0; }
     .codepen-wrap { flex: 1; display: flex; flex-direction: column; max-width: none; width: 100%; min-height: 0; }
-    .codepen-wrap .codepen { flex: 1; min-height: calc(100vh - 3rem); }
+    .codepen-wrap .carbon-local-{tid}, .codepen-wrap .codepen { flex: 1; min-height: calc(100vh - 3rem); }
     .codepen-links { margin: 0.35rem 1rem 0.5rem; flex-shrink: 0; }
-"""
+""".replace("{tid}", str(tid))
+        script = ""
+        heading = f'Tweet #{tid} — code preview (local Carbon)'
     else:
         page_css = """
     body { font-family: system-ui, sans-serif; margin: 2rem; background: #f7f9f9; }
     h1 { font-size: 1.1rem; color: #536471; }
     .codepen-wrap { max-width: 760px; }
 """
+        script = f'  <script async src="{CODEPEN_SCRIPT}"></script>\n'
+        heading = f'Tweet #{tid} — <a href="https://codepen.io/">CodePen</a> prefill'
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Tweet {tid} — CodePen</title>
+  <title>Tweet {tid} — Code preview</title>
   <style>{page_css}
   </style>
 </head>
 <body>
-  <h1>Tweet #{tid} — <a href="https://codepen.io/">CodePen</a> prefill</h1>
+  <h1>{heading}</h1>
 {embed}
-  <script async src="{CODEPEN_SCRIPT}"></script>
-</body>
+{script}</body>
 </html>
 """

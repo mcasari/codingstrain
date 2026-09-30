@@ -1,5 +1,9 @@
-💡 Java Tip 💡: Use Comparator.comparing() for sorting with lambdas. #Java #FunctionalProgramming
+💡 Java: Sort with Comparator.comparing() — skip the verbose compare() boilerplate.
 
-✅ Java Tip 💡: Use Comparator.comparing() for sorting with lambdas. #Java #FunctionalProgramming
+✅ Sort by a field in one line
+
+✅ Chain .thenComparing(...) for tie-breakers
+
+✅ Works with method references like User::getLastName
 
 #Java #FunctionalProgramming

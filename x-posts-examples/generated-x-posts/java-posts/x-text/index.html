@@ -965,11 +965,15 @@
     </article>
     <article>
       <h2>Tweet #100</h2>
-      <p class="preview">💡 Java tip 💡: Format your code consistently. Use tools like Checkstyle or Spotless. #Java #CleanCode</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(220/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-100" readonly rows="10">💡 Java tip 💡: Format your code consistently. Use tools like Checkstyle or Spotless. #Java #CleanCode
+      <p class="preview">💡 Java: Format code the same way every time — don’t argue in PRs.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(261/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-100" readonly rows="10">💡 Java: Format code the same way every time — don’t argue in PRs.
 
-✅ Java tip 💡: Format your code consistently. Use tools like Checkstyle or Spotless. #Java #CleanCode
+✅ Pick one style and stick to it (Google, Airbnb, team rules)
+
+✅ Automate with Spotless or Checkstyle in the build
+
+✅ Format on save / CI so style never depends on who typed it
 
 #Java #CleanCode</textarea>
       <p class="copy-row">
@@ -981,11 +985,15 @@
     </article>
     <article>
       <h2>Tweet #101</h2>
-      <p class="preview">💡 Java Tip 💡: Avoid initializing objects you may never use. Lazy-load when appropriate. #Java #Perfo</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(234/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-101" readonly rows="10">💡 Java Tip 💡: Avoid initializing objects you may never use. Lazy-load when appropriate. #Java #Performance
+      <p class="preview">💡 Java: Don’t build expensive objects until you actually need them.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(244/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-101" readonly rows="10">💡 Java: Don’t build expensive objects until you actually need them.
 
-✅ Java Tip 💡: Avoid initializing objects you may never use. Lazy-load when appropriate. #Java #Performance
+✅ Eager fields waste time/memory if the path never runs
+
+✅ Lazy-load on first use (or use Supplier / holder)
+
+✅ Great for caches, clients, and heavy config
 
 #Java #Performance</textarea>
       <p class="copy-row">
@@ -997,13 +1005,15 @@
     </article>
     <article>
       <h2>Tweet #102</h2>
-      <p class="preview">💡 Use Deque instead of Stack for LIFO (last-in, first-out) lists.</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(240/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-102" readonly rows="10">💡 Use Deque instead of Stack for LIFO (last-in, first-out) lists.
+      <p class="preview">💡 Java: Prefer Deque over Stack for last-in, first-out (LIFO).</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(233/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-102" readonly rows="10">💡 Java: Prefer Deque over Stack for last-in, first-out (LIFO).
 
-✅ Stack is a legacy class — it extends Vector and synchronizes every operation
+✅ Stack is legacy — extends Vector, syncs every call
 
-✅ Deque supports the same push / pop / peek calls — a drop-in replacement
+✅ Deque has the same push / pop / peek API
+
+✅ Use ArrayDeque — faster, recommended since Java 6
 
 #Java #Collections</textarea>
       <p class="copy-row">
@@ -1015,13 +1025,15 @@
     </article>
     <article>
       <h2>Tweet #103</h2>
-      <p class="preview">💡 Prefer constructor injection over field injection in Spring beans.</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(258/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-103" readonly rows="10">💡 Prefer constructor injection over field injection in Spring beans.
+      <p class="preview">💡 Java/Spring: Prefer constructor injection over @Autowired fields.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(244/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-103" readonly rows="10">💡 Java/Spring: Prefer constructor injection over @Autowired fields.
 
-✅ Field injection hides required dependencies — you can create the object without them
+✅ Field injection hides required dependencies
 
-✅ Constructor injection makes dependencies explicit and lets you use final fields
+✅ Constructor makes deps explicit — use final fields
+
+✅ Easier tests: pass mocks in, no Spring context needed
 
 #Java #SpringBoot</textarea>
       <p class="copy-row">
@@ -1033,11 +1045,15 @@
     </article>
     <article>
       <h2>Tweet #104</h2>
-      <p class="preview">💡 Java Tip 💡: Use Comparator.comparing() for sorting with lambdas. #Java #FunctionalProgramming</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(222/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-104" readonly rows="10">💡 Java Tip 💡: Use Comparator.comparing() for sorting with lambdas. #Java #FunctionalProgramming
+      <p class="preview">💡 Java: Sort with Comparator.comparing() — skip the verbose compare() boilerplate.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(244/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-104" readonly rows="10">💡 Java: Sort with Comparator.comparing() — skip the verbose compare() boilerplate.
 
-✅ Java Tip 💡: Use Comparator.comparing() for sorting with lambdas. #Java #FunctionalProgramming
+✅ Sort by a field in one line
+
+✅ Chain .thenComparing(...) for tie-breakers
+
+✅ Works with method references like User::getLastName
 
 #Java #FunctionalProgramming</textarea>
       <p class="copy-row">
