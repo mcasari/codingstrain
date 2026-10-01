@@ -1,9 +1,9 @@
-🚀 Spring Boot 4: DevTools live reload is off by default.
+💡 Spring Boot 4: DevTools no longer auto-starts the browser LiveReload server.
 
-✅ Restarts still work; browser live reload is opt-in
+✅ Classpath restarts still work as before
 
-✅ Enable only when you need it locally
+✅ LiveReload is opt-in — set spring.devtools.livereload.enabled=true
 
-✅ Avoid surprise websocket ports in shared envs
+✅ No surprise port 35729 when several apps share a machine
 
 #SpringBoot4 #DevTools

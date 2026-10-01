@@ -5,5 +5,3 @@
 // ✅ If you want, you can combine packaging and run in one command:
 //
 // ✅ ./mvnw spring-boot:run
-//
-// #Java #SpringBoot

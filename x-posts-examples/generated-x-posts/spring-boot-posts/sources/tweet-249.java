@@ -5,5 +5,3 @@
 // ✅ Parallelism
 //
 // ✅ Retry
-//
-// #SpringBoot #SoftwareDevelopment

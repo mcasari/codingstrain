@@ -1278,7 +1278,7 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0.5rem;
-            min-height: 744px;
+            min-height: 720px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             border-radius: 12px;
             display: flex;
@@ -1286,7 +1286,7 @@
           }
           .carbon-local-28 .carbon {
             flex: 1;
-            min-height: 728px;
+            min-height: 704px;
             max-width: none;
           }
           .carbon {
@@ -1394,34 +1394,37 @@
 
         </style>
         <div class="carbon-local-28">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-boot4-tips</span></div><div class="carbon-editor"><pre><code><span class="pun">&lt;</span><span class="pun">!</span><span class="pun">-</span><span class="pun">-</span><span class="txt"> </span><span class="txt">optional</span><span class="txt"> </span><span class="txt">local</span><span class="txt"> </span><span class="txt">dependency</span><span class="txt"> </span><span class="pun">-</span><span class="pun">-</span><span class="pun">&gt;</span>
-<span class="pun">&lt;</span><span class="txt">dependency</span><span class="pun">&gt;</span>
-<span class="txt">  </span><span class="pun">&lt;</span><span class="txt">groupId</span><span class="pun">&gt;</span><span class="txt">org</span><span class="pun">.</span><span class="txt">springframework</span><span class="pun">.</span><span class="txt">boot</span><span class="pun">&lt;</span><span class="pun">/</span><span class="txt">groupId</span><span class="pun">&gt;</span>
-<span class="txt">  </span><span class="pun">&lt;</span><span class="txt">artifactId</span><span class="pun">&gt;</span><span class="txt">spring</span><span class="pun">-</span><span class="txt">boot</span><span class="pun">-</span><span class="txt">devtools</span><span class="pun">&lt;</span><span class="pun">/</span><span class="txt">artifactId</span><span class="pun">&gt;</span>
-<span class="txt">  </span><span class="pun">&lt;</span><span class="txt">optional</span><span class="pun">&gt;</span><span class="kw">true</span><span class="pun">&lt;</span><span class="pun">/</span><span class="txt">optional</span><span class="pun">&gt;</span>
-<span class="pun">&lt;</span><span class="pun">/</span><span class="txt">dependency</span><span class="pun">&gt;</span>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-boot4-tips</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="pun">#</span><span class="txt"> </span><span class="pun">❌</span><span class="txt"> </span><span class="typ">Boot</span><span class="txt"> </span><span class="num">3</span><span class="txt"> </span><span class="pun">—</span><span class="txt"> </span><span class="typ">LiveReload</span><span class="txt"> </span><span class="txt">on</span><span class="txt"> </span><span class="txt">by</span><span class="txt"> </span><span class="kw">default</span><span class="txt"> </span><span class="pun">(</span><span class="txt">port</span><span class="txt"> </span><span class="num">35729</span><span class="pun">)</span>
+<span class="pun">#</span><span class="txt"> </span><span class="txt">spring</span><span class="pun">.</span><span class="txt">devtools</span><span class="pun">.</span><span class="txt">livereload</span><span class="pun">.</span><span class="txt">enabled</span><span class="pun">=</span><span class="kw">true</span><span class="txt">  </span><span class="pun">(</span><span class="txt">implicit</span><span class="pun">)</span>
+<span class="pun">#</span><span class="txt"> </span><span class="typ">First</span><span class="txt"> </span><span class="typ">IDE</span><span class="txt"> </span><span class="txt">app</span><span class="txt"> </span><span class="txt">grabbed</span><span class="txt"> </span><span class="txt">the</span><span class="txt"> </span><span class="txt">port</span><span class="pun">;</span><span class="txt"> </span><span class="txt">others</span><span class="txt"> </span><span class="txt">silently</span><span class="txt"> </span><span class="txt">skipped</span><span class="txt"> </span><span class="txt">it</span>
 
+<span class="pun">#</span><span class="txt"> </span><span class="pun">✅</span><span class="txt"> </span><span class="typ">Boot</span><span class="txt"> </span><span class="num">4</span><span class="txt"> </span><span class="pun">—</span><span class="txt"> </span><span class="txt">off</span><span class="txt"> </span><span class="txt">unless</span><span class="txt"> </span><span class="txt">you</span><span class="txt"> </span><span class="txt">ask</span>
 <span class="pun">#</span><span class="txt"> </span><span class="txt">application</span><span class="pun">-</span><span class="txt">local</span><span class="pun">.</span><span class="txt">yml</span>
 <span class="txt">spring</span><span class="pun">:</span>
 <span class="txt">  </span><span class="txt">devtools</span><span class="pun">:</span>
 <span class="txt">    </span><span class="txt">livereload</span><span class="pun">:</span>
-<span class="txt">      </span><span class="txt">enabled</span><span class="pun">:</span><span class="txt"> </span><span class="kw">true</span>
+<span class="txt">      </span><span class="txt">enabled</span><span class="pun">:</span><span class="txt"> </span><span class="kw">true</span><span class="txt">   </span><span class="pun">#</span><span class="txt"> </span><span class="txt">only</span><span class="txt"> </span><span class="kw">if</span><span class="txt"> </span><span class="txt">you</span><span class="txt"> </span><span class="txt">use</span><span class="txt"> </span><span class="txt">a</span><span class="txt"> </span><span class="typ">LiveReload</span><span class="txt"> </span><span class="txt">browser</span><span class="txt"> </span><span class="txt">extension</span>
 <span class="txt">    </span><span class="txt">restart</span><span class="pun">:</span>
-<span class="txt">      </span><span class="txt">enabled</span><span class="pun">:</span><span class="txt"> </span><span class="kw">true</span></code></pre></div></div>
+<span class="txt">      </span><span class="txt">enabled</span><span class="pun">:</span><span class="txt"> </span><span class="kw">true</span><span class="txt">   </span><span class="pun">#</span><span class="txt"> </span><span class="txt">automatic</span><span class="txt"> </span><span class="txt">restart</span><span class="txt"> </span><span class="txt">still</span><span class="txt"> </span><span class="txt">defaults</span><span class="txt"> </span><span class="txt">on</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="pun">&lt;</span><span class="pun">!</span><span class="pun">-</span><span class="pun">-</span><span class="txt"> </span><span class="txt">pom</span><span class="pun">.</span><span class="txt">xml</span><span class="txt"> </span><span class="pun">—</span><span class="txt"> </span><span class="txt">keep</span><span class="txt"> </span><span class="txt">optional</span><span class="txt"> </span><span class="txt">so</span><span class="txt"> </span><span class="txt">it</span><span class="txt"> </span><span class="txt">never</span><span class="txt"> </span><span class="txt">ships</span><span class="txt"> </span><span class="txt">to</span><span class="txt"> </span><span class="txt">prod</span><span class="txt"> </span><span class="pun">-</span><span class="pun">-</span><span class="pun">&gt;</span>
+<span class="pun">&lt;</span><span class="txt">dependency</span><span class="pun">&gt;</span>
+<span class="txt">  </span><span class="pun">&lt;</span><span class="txt">groupId</span><span class="pun">&gt;</span><span class="txt">org</span><span class="pun">.</span><span class="txt">springframework</span><span class="pun">.</span><span class="txt">boot</span><span class="pun">&lt;</span><span class="pun">/</span><span class="txt">groupId</span><span class="pun">&gt;</span>
+<span class="txt">  </span><span class="pun">&lt;</span><span class="txt">artifactId</span><span class="pun">&gt;</span><span class="txt">spring</span><span class="pun">-</span><span class="txt">boot</span><span class="pun">-</span><span class="txt">devtools</span><span class="pun">&lt;</span><span class="pun">/</span><span class="txt">artifactId</span><span class="pun">&gt;</span>
+<span class="txt">  </span><span class="pun">&lt;</span><span class="txt">optional</span><span class="pun">&gt;</span><span class="kw">true</span><span class="pun">&lt;</span><span class="pun">/</span><span class="txt">optional</span><span class="pun">&gt;</span>
+<span class="pun">&lt;</span><span class="pun">/</span><span class="txt">dependency</span><span class="pun">&gt;</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-28.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(223/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-28" readonly rows="10">🚀 Spring Boot 4: DevTools live reload is off by default.
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(275/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-28" readonly rows="10">💡 Spring Boot 4: DevTools no longer auto-starts the browser LiveReload server.
 
-✅ Restarts still work; browser live reload is opt-in
+✅ Classpath restarts still work as before
 
-✅ Enable only when you need it locally
+✅ LiveReload is opt-in — set spring.devtools.livereload.enabled=true
 
-✅ Avoid surprise websocket ports in shared envs
+✅ No surprise port 35729 when several apps share a machine
 
 #SpringBoot4 #DevTools</textarea>
       <p class="copy-row">
