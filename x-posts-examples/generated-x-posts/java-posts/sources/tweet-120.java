@@ -5,3 +5,5 @@
 // ✅ Each letter stands for a key design principle:
 //
 // ✅ S: Single Responsibility – A class should have only one reason to change
+//
+// #Java #CleanCode #OOP #SoftwareDesign

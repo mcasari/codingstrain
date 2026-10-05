@@ -1,7 +1,9 @@
-💡 Test edge cases — nulls, empty collections, and boundary values are where bugs hide.
+💡 Test the edges — null, empty, and boundaries hide bugs.
 
-✅ Happy-path tests alone won't catch NullPointerException on missing input
+✅ Happy-path alone misses null NullPointerExceptions
 
-✅ Empty lists and single-element collections often behave differently than "normal" data
+✅ Empty / one-element lists break differently than normal data
+
+✅ Edge-case tests also document the expected contract
 
 #Java #Testing

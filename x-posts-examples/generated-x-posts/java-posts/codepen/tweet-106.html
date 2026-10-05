@@ -22,7 +22,7 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0.5rem;
-            min-height: 1200px;
+            min-height: 852px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             border-radius: 12px;
             display: flex;
@@ -30,7 +30,7 @@
           }
           .carbon-local-106 .carbon {
             flex: 1;
-            min-height: 1184px;
+            min-height: 836px;
             max-width: none;
           }
           .carbon {
@@ -138,33 +138,38 @@
 
         </style>
         <div class="carbon-local-106">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor"><pre><code><span class="kw">import</span><span class="txt"> </span><span class="txt">org</span><span class="pun">.</span><span class="txt">junit</span><span class="pun">.</span><span class="txt">jupiter</span><span class="pun">.</span><span class="txt">api</span><span class="pun">.</span><span class="typ">Test</span><span class="pun">;</span>
-<span class="kw">import</span><span class="txt"> </span><span class="kw">static</span><span class="txt"> </span><span class="txt">org</span><span class="pun">.</span><span class="txt">junit</span><span class="pun">.</span><span class="txt">jupiter</span><span class="pun">.</span><span class="txt">api</span><span class="pun">.</span><span class="typ">Assertions</span><span class="pun">.</span><span class="pun">*</span><span class="pun">;</span>
-
-<span class="kw">import</span><span class="txt"> </span><span class="txt">java</span><span class="pun">.</span><span class="txt">util</span><span class="pun">.</span><span class="typ">List</span><span class="pun">;</span>
-
-<span class="kw">static</span><span class="txt"> </span><span class="kw">double</span><span class="txt"> </span><span class="met">average</span><span class="pun">(</span><span class="typ">List</span><span class="pun">&lt;</span><span class="typ">Integer</span><span class="pun">&gt;</span><span class="txt"> </span><span class="txt">values</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
-<span class="txt">    </span><span class="kw">if</span><span class="txt"> </span><span class="pun">(</span><span class="txt">values</span><span class="txt"> </span><span class="pun">=</span><span class="pun">=</span><span class="txt"> </span><span class="kw">null</span><span class="txt"> </span><span class="pun">|</span><span class="pun">|</span><span class="txt"> </span><span class="txt">values</span><span class="pun">.</span><span class="met">isEmpty</span><span class="pun">(</span><span class="pun">)</span><span class="pun">)</span>
-<span class="txt">        </span><span class="kw">throw</span><span class="txt"> </span><span class="kw">new</span><span class="txt"> </span><span class="met">IllegalArgumentException</span><span class="pun">(</span><span class="str">&quot;no values&quot;</span><span class="pun">)</span><span class="pun">;</span>
-<span class="txt">    </span><span class="kw">return</span><span class="txt"> </span><span class="txt">values</span><span class="pun">.</span><span class="met">stream</span><span class="pun">(</span><span class="pun">)</span><span class="pun">.</span><span class="met">mapToInt</span><span class="pun">(</span><span class="txt">i</span><span class="txt"> </span><span class="pun">-</span><span class="pun">&gt;</span><span class="txt"> </span><span class="txt">i</span><span class="pun">)</span><span class="pun">.</span><span class="met">average</span><span class="pun">(</span><span class="pun">)</span><span class="pun">.</span><span class="met">orElseThrow</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="kw">class</span><span class="txt"> </span><span class="typ">Averages</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="kw">static</span><span class="txt"> </span><span class="kw">double</span><span class="txt"> </span><span class="met">of</span><span class="pun">(</span><span class="typ">List</span><span class="pun">&lt;</span><span class="typ">Integer</span><span class="pun">&gt;</span><span class="txt"> </span><span class="txt">values</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="kw">if</span><span class="txt"> </span><span class="pun">(</span><span class="txt">values</span><span class="txt"> </span><span class="pun">=</span><span class="pun">=</span><span class="txt"> </span><span class="kw">null</span><span class="txt"> </span><span class="pun">|</span><span class="pun">|</span><span class="txt"> </span><span class="txt">values</span><span class="pun">.</span><span class="met">isEmpty</span><span class="pun">(</span><span class="pun">)</span><span class="pun">)</span>
+<span class="txt">            </span><span class="kw">throw</span><span class="txt"> </span><span class="kw">new</span><span class="txt"> </span><span class="met">IllegalArgumentException</span><span class="pun">(</span><span class="str">&quot;no values&quot;</span><span class="pun">)</span><span class="pun">;</span>
+<span class="txt">        </span><span class="kw">return</span><span class="txt"> </span><span class="txt">values</span><span class="pun">.</span><span class="met">stream</span><span class="pun">(</span><span class="pun">)</span>
+<span class="txt">            </span><span class="pun">.</span><span class="met">mapToInt</span><span class="pun">(</span><span class="txt">i</span><span class="txt"> </span><span class="pun">-</span><span class="pun">&gt;</span><span class="txt"> </span><span class="txt">i</span><span class="pun">)</span>
+<span class="txt">            </span><span class="pun">.</span><span class="met">average</span><span class="pun">(</span><span class="pun">)</span>
+<span class="txt">            </span><span class="pun">.</span><span class="met">orElseThrow</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span>
+<span class="txt">    </span><span class="pun">}</span>
 <span class="pun">}</span>
 
-<span class="com">// ❌ Happy path only — misses null and empty-list bugs</span>
+<span class="com">// ❌ Happy path only — null / empty never run</span>
 <span class="ann">@Test</span>
 <span class="kw">void</span><span class="txt"> </span><span class="met">average_typicalList</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
-<span class="txt">    </span><span class="met">assertEquals</span><span class="pun">(</span><span class="num">2.0</span><span class="pun">,</span><span class="txt"> </span><span class="met">average</span><span class="pun">(</span><span class="typ">List</span><span class="pun">.</span><span class="met">of</span><span class="pun">(</span><span class="num">1</span><span class="pun">,</span><span class="txt"> </span><span class="num">2</span><span class="pun">,</span><span class="txt"> </span><span class="num">3</span><span class="pun">)</span><span class="pun">)</span><span class="pun">)</span><span class="pun">;</span>
+<span class="txt">    </span><span class="met">assertEquals</span><span class="pun">(</span><span class="num">2.0</span><span class="pun">,</span><span class="txt"> </span><span class="typ">Averages</span><span class="pun">.</span><span class="met">of</span><span class="pun">(</span><span class="typ">List</span><span class="pun">.</span><span class="met">of</span><span class="pun">(</span><span class="num">1</span><span class="pun">,</span><span class="txt"> </span><span class="num">2</span><span class="pun">,</span><span class="txt"> </span><span class="num">3</span><span class="pun">)</span><span class="pun">)</span><span class="pun">)</span><span class="pun">;</span>
+<span class="pun">}</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="com">// ✅ Edges — null, empty, single element</span>
+<span class="ann">@Test</span>
+<span class="kw">void</span><span class="txt"> </span><span class="met">average_null_throws</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="met">assertThrows</span><span class="pun">(</span><span class="typ">IllegalArgumentException</span><span class="pun">.</span><span class="kw">class</span><span class="pun">,</span>
+<span class="txt">        </span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">-</span><span class="pun">&gt;</span><span class="txt"> </span><span class="typ">Averages</span><span class="pun">.</span><span class="met">of</span><span class="pun">(</span><span class="kw">null</span><span class="pun">)</span><span class="pun">)</span><span class="pun">;</span>
 <span class="pun">}</span>
 
-<span class="com">// ✅ Edge cases — null, empty, and single element</span>
-<span class="ann">@Test</span><span class="txt"> </span><span class="kw">void</span><span class="txt"> </span><span class="met">average_null_throws</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
-<span class="txt">    </span><span class="met">assertThrows</span><span class="pun">(</span><span class="typ">IllegalArgumentException</span><span class="pun">.</span><span class="kw">class</span><span class="pun">,</span><span class="txt"> </span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">-</span><span class="pun">&gt;</span><span class="txt"> </span><span class="met">average</span><span class="pun">(</span><span class="kw">null</span><span class="pun">)</span><span class="pun">)</span><span class="pun">;</span>
+<span class="ann">@Test</span>
+<span class="kw">void</span><span class="txt"> </span><span class="met">average_empty_throws</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="met">assertThrows</span><span class="pun">(</span><span class="typ">IllegalArgumentException</span><span class="pun">.</span><span class="kw">class</span><span class="pun">,</span>
+<span class="txt">        </span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">-</span><span class="pun">&gt;</span><span class="txt"> </span><span class="typ">Averages</span><span class="pun">.</span><span class="met">of</span><span class="pun">(</span><span class="typ">List</span><span class="pun">.</span><span class="met">of</span><span class="pun">(</span><span class="pun">)</span><span class="pun">)</span><span class="pun">)</span><span class="pun">;</span>
 <span class="pun">}</span>
-<span class="ann">@Test</span><span class="txt"> </span><span class="kw">void</span><span class="txt"> </span><span class="met">average_empty_throws</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
-<span class="txt">    </span><span class="met">assertThrows</span><span class="pun">(</span><span class="typ">IllegalArgumentException</span><span class="pun">.</span><span class="kw">class</span><span class="pun">,</span><span class="txt"> </span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">-</span><span class="pun">&gt;</span><span class="txt"> </span><span class="met">average</span><span class="pun">(</span><span class="typ">List</span><span class="pun">.</span><span class="met">of</span><span class="pun">(</span><span class="pun">)</span><span class="pun">)</span><span class="pun">)</span><span class="pun">;</span>
-<span class="pun">}</span>
-<span class="ann">@Test</span><span class="txt"> </span><span class="kw">void</span><span class="txt"> </span><span class="met">average_oneValue</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
-<span class="txt">    </span><span class="met">assertEquals</span><span class="pun">(</span><span class="num">42.0</span><span class="pun">,</span><span class="txt"> </span><span class="met">average</span><span class="pun">(</span><span class="typ">List</span><span class="pun">.</span><span class="met">of</span><span class="pun">(</span><span class="num">42</span><span class="pun">)</span><span class="pun">)</span><span class="pun">)</span><span class="pun">;</span>
-<span class="pun">}</span></code></pre></div></div>
+
+<span class="ann">@Test</span>
+<span class="kw">void</span><span class="txt"> </span><span class="met">average_oneValue</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="met">assertEquals</span><span class="pun">(</span><span class="num">42.0</span><span class="pun">,</span><span class="txt"> </span><span class="typ">Averages</span><span class="pun">.</span><span class="met">of</span><span class="pun">(</span><span class="typ">List</span><span class="pun">.</span><span class="met">of</span><span class="pun">(</span><span class="num">42</span><span class="pun">)</span><span class="pun">)</span><span class="pun">)</span><span class="pun">;</span>
+<span class="pun">}</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-106.html" target="_blank" rel="noopener">Open pen preview</a>

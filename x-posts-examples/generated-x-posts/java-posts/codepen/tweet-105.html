@@ -138,13 +138,29 @@
 
         </style>
         <div class="carbon-local-105">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor"><pre><code><span class="com">// 💡 Measure code coverage but don’t obsess over 100%. #Java #Testing</span>
-<span class="com">//</span>
-<span class="com">// ✅ Runnable sample: `java-tips`</span>
-<span class="com">//</span>
-<span class="com">// ✅ Architecture diagram + Carbon CodePen below</span>
-<span class="com">//</span>
-<span class="com">// ✅ From the codingstrain examples repo</span></code></pre></div></div>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="kw">class</span><span class="txt"> </span><span class="typ">PriceService</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="kw">double</span><span class="txt"> </span><span class="met">tax</span><span class="pun">(</span><span class="kw">double</span><span class="txt"> </span><span class="txt">net</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="kw">if</span><span class="txt"> </span><span class="pun">(</span><span class="txt">net</span><span class="txt"> </span><span class="pun">&lt;</span><span class="txt"> </span><span class="num">0</span><span class="pun">)</span>
+<span class="txt">            </span><span class="kw">throw</span><span class="txt"> </span><span class="kw">new</span><span class="txt"> </span><span class="met">IllegalArgumentException</span><span class="pun">(</span><span class="str">&quot;net&quot;</span><span class="pun">)</span><span class="pun">;</span>
+<span class="txt">        </span><span class="kw">return</span><span class="txt"> </span><span class="txt">net</span><span class="txt"> </span><span class="pun">*</span><span class="txt"> </span><span class="num">0.19</span><span class="pun">;</span>
+<span class="txt">    </span><span class="pun">}</span>
+<span class="pun">}</span>
+
+<span class="com">// ❌ Covered — but proves almost nothing</span>
+<span class="ann">@Test</span>
+<span class="kw">void</span><span class="txt"> </span><span class="met">tax_runs</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="met">assertNotNull</span><span class="pun">(</span><span class="kw">new</span><span class="txt"> </span><span class="met">PriceService</span><span class="pun">(</span><span class="pun">)</span><span class="pun">.</span><span class="met">tax</span><span class="pun">(</span><span class="num">100</span><span class="pun">)</span><span class="pun">)</span><span class="pun">;</span>
+<span class="pun">}</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="com">// ✅ Assert the outcome and the failure path</span>
+<span class="ann">@Test</span>
+<span class="kw">void</span><span class="txt"> </span><span class="met">tax_appliesRate</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="met">assertEquals</span><span class="pun">(</span><span class="num">19.0</span><span class="pun">,</span><span class="txt"> </span><span class="kw">new</span><span class="txt"> </span><span class="met">PriceService</span><span class="pun">(</span><span class="pun">)</span><span class="pun">.</span><span class="met">tax</span><span class="pun">(</span><span class="num">100</span><span class="pun">)</span><span class="pun">,</span><span class="txt"> </span><span class="num">0.001</span><span class="pun">)</span><span class="pun">;</span>
+<span class="pun">}</span>
+
+<span class="ann">@Test</span>
+<span class="kw">void</span><span class="txt"> </span><span class="met">tax_rejectsNegative</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="met">assertThrows</span><span class="pun">(</span><span class="typ">IllegalArgumentException</span><span class="pun">.</span><span class="kw">class</span><span class="pun">,</span>
+<span class="txt">        </span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">-</span><span class="pun">&gt;</span><span class="txt"> </span><span class="kw">new</span><span class="txt"> </span><span class="met">PriceService</span><span class="pun">(</span><span class="pun">)</span><span class="pun">.</span><span class="met">tax</span><span class="pun">(</span><span class="pun">-</span><span class="num">1</span><span class="pun">)</span><span class="pun">)</span><span class="pun">;</span>
+<span class="pun">}</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-105.html" target="_blank" rel="noopener">Open pen preview</a>

@@ -1,3 +1,9 @@
-💡 Measure code coverage but don’t obsess over 100%. #Java #Testing
+💡 Measure code coverage — but don’t chase 100%.
+
+✅ Coverage shows which lines ran, not that they are correct
+
+✅ Weak asserts can pad the % while real bugs stay untested
+
+✅ Prefer meaningful checks on risky paths over a perfect score
 
 #Java #Testing
