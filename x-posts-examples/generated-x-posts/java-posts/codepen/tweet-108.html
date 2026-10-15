@@ -138,13 +138,17 @@
 
         </style>
         <div class="carbon-local-108">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor"><pre><code><span class="com">// 💡 Java tip💡: Use `String.format()` or `MessageFormat` for readable formatting. #Java #StringTips</span>
-<span class="com">//</span>
-<span class="com">// ✅ Java tip💡: Use `String.format()` or `MessageFormat` for readable formatting. #Java #StringTips</span>
-<span class="com">//</span>
-<span class="com">// ✅ Runnable sample: `java-tips`</span>
-<span class="com">//</span>
-<span class="com">// ✅ Architecture diagram + Carbon CodePen below</span></code></pre></div></div>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="typ">String</span><span class="txt"> </span><span class="txt">name</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="str">&quot;Ada&quot;</span><span class="pun">;</span>
+<span class="kw">int</span><span class="txt"> </span><span class="txt">score</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="num">98</span><span class="pun">;</span>
+
+<span class="com">// ❌ Concatenation — hard to read as it grows</span>
+<span class="typ">String</span><span class="txt"> </span><span class="txt">msg</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="str">&quot;Player &quot;</span><span class="txt"> </span><span class="pun">+</span><span class="txt"> </span><span class="txt">name</span><span class="txt"> </span><span class="pun">+</span><span class="txt"> </span><span class="str">&quot; scored &quot;</span><span class="txt"> </span><span class="pun">+</span><span class="txt"> </span><span class="txt">score</span><span class="txt"> </span><span class="pun">+</span><span class="txt"> </span><span class="str">&quot; points&quot;</span><span class="pun">;</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="com">// ✅ String.format — clear template + arguments</span>
+<span class="typ">String</span><span class="txt"> </span><span class="txt">msg</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="typ">String</span><span class="pun">.</span><span class="met">format</span><span class="pun">(</span>
+<span class="txt">    </span><span class="str">&quot;Player %s scored %d points&quot;</span><span class="pun">,</span><span class="txt"> </span><span class="txt">name</span><span class="pun">,</span><span class="txt"> </span><span class="txt">score</span><span class="pun">)</span><span class="pun">;</span>
+
+<span class="com">// ✅ MessageFormat — locale-friendly patterns</span>
+<span class="typ">String</span><span class="txt"> </span><span class="txt">i18n</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="typ">MessageFormat</span><span class="pun">.</span><span class="met">format</span><span class="pun">(</span>
+<span class="txt">    </span><span class="str">&quot;Player {0} scored {1} points&quot;</span><span class="pun">,</span><span class="txt"> </span><span class="txt">name</span><span class="pun">,</span><span class="txt"> </span><span class="txt">score</span><span class="pun">)</span><span class="pun">;</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-108.html" target="_blank" rel="noopener">Open pen preview</a>

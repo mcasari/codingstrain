@@ -1121,11 +1121,15 @@
     </article>
     <article>
       <h2>Tweet #108</h2>
-      <p class="preview">💡 Java tip💡: Use String.format() or MessageFormat for readable formatting. #Java #StringTips</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(205/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-108" readonly rows="10">💡 Java tip💡: Use String.format() or MessageFormat for readable formatting. #Java #StringTips
+      <p class="preview">💡 Prefer String.format() over messy + concatenation for readable messages.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(267/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-108" readonly rows="10">💡 Prefer String.format() over messy + concatenation for readable messages.
 
-✅ Java tip💡: Use String.format() or MessageFormat for readable formatting. #Java #StringTips
+✅ Placeholders keep the template and values separate
+
+✅ Easy to reorder or add fields without breaking the string
+
+✅ MessageFormat is better when you need locale-aware text
 
 #Java #StringTips</textarea>
       <p class="copy-row">
@@ -1137,15 +1141,17 @@
     </article>
     <article>
       <h2>Tweet #109</h2>
-      <p class="preview">💡 Java tip 💡: Don’t rely blindly on Garbage Collection; memory leaks are still possible.</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(235/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-109" readonly rows="10">💡 Java tip 💡: Don’t rely blindly on Garbage Collection; memory leaks are still possible.
+      <p class="preview">💡 GC frees unused objects — but Java can still leak memory.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(268/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-109" readonly rows="10">💡 GC frees unused objects — but Java can still leak memory.
 
-✅ Java tip 💡: Don’t rely blindly on Garbage Collection; memory leaks are still possible
+✅ Anything still reachable (static lists, caches, listeners) stays alive
 
-✅ #Java #SoftwareEngineering
+✅ A growing collection holds every object forever
 
-#Java #SoftwareEngineering</textarea>
+✅ Clear listeners / bound caches, or use weak refs when appropriate
+
+#Java #Memory</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-109">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1155,17 +1161,17 @@
     </article>
     <article>
       <h2>Tweet #110</h2>
-      <p class="preview">💡 1/3 A very trivial example could be:</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(201/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-110" readonly rows="10">💡 1/3 A very trivial example could be:
+      <p class="preview">💡 Building strings in a loop? Prefer StringBuilder over +=.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(240/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-110" readonly rows="10">💡 Building strings in a loop? Prefer StringBuilder over +=.
 
-✅ String helloThere = "Hello " + "there" + "!";
+✅ String is immutable — each += creates a new object
 
-✅ System.out.println(helloThere);
+✅ StringBuilder appends into one buffer
 
-✅ The above line of code is clear and works as intended
+✅ Simple + outside a loop is fine — the compiler can optimize it
 
-#Java #BestPractices</textarea>
+#Java #Performance</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-110">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1175,13 +1181,17 @@
     </article>
     <article>
       <h2>Tweet #111</h2>
-      <p class="preview">💡 Java Tip 💡: Use enums for state machines—it improves readability. #Java #StatePattern</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(197/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-111" readonly rows="10">💡 Java Tip 💡: Use enums for state machines—it improves readability. #Java #StatePattern
+      <p class="preview">💡 Model a state machine with an enum — not magic strings.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(217/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-111" readonly rows="10">💡 Model a state machine with an enum — not magic strings.
 
-✅ Java Tip 💡: Use enums for state machines—it improves readability. #Java #StatePattern
+✅ Named constants beat typo-prone string statuses
 
-#Java #StatePattern</textarea>
+✅ Put allowed transitions next to each state
+
+✅ The compiler catches invalid states in switch
+
+#Java #Enums</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-111">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>

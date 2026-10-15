@@ -1,9 +1,9 @@
-💡 1/3 A very trivial example could be:
+💡 Building strings in a loop? Prefer StringBuilder over +=.
 
-✅ String helloThere = "Hello " + "there" + "!";
+✅ String is immutable — each += creates a new object
 
-✅ System.out.println(helloThere);
+✅ StringBuilder appends into one buffer
 
-✅ The above line of code is clear and works as intended
+✅ Simple + outside a loop is fine — the compiler can optimize it
 
-#Java #BestPractices
+#Java #Performance

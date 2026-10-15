@@ -367,23 +367,31 @@
 
         </style>
         <div class="carbon-local-108">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor"><pre><code><span class="com">// 💡 Java tip💡: Use `String.format()` or `MessageFormat` for readable formatting. #Java #StringTips</span>
-<span class="com">//</span>
-<span class="com">// ✅ Java tip💡: Use `String.format()` or `MessageFormat` for readable formatting. #Java #StringTips</span>
-<span class="com">//</span>
-<span class="com">// ✅ Runnable sample: `java-tips`</span>
-<span class="com">//</span>
-<span class="com">// ✅ Architecture diagram + Carbon CodePen below</span></code></pre></div></div>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="typ">String</span><span class="txt"> </span><span class="txt">name</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="str">&quot;Ada&quot;</span><span class="pun">;</span>
+<span class="kw">int</span><span class="txt"> </span><span class="txt">score</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="num">98</span><span class="pun">;</span>
+
+<span class="com">// ❌ Concatenation — hard to read as it grows</span>
+<span class="typ">String</span><span class="txt"> </span><span class="txt">msg</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="str">&quot;Player &quot;</span><span class="txt"> </span><span class="pun">+</span><span class="txt"> </span><span class="txt">name</span><span class="txt"> </span><span class="pun">+</span><span class="txt"> </span><span class="str">&quot; scored &quot;</span><span class="txt"> </span><span class="pun">+</span><span class="txt"> </span><span class="txt">score</span><span class="txt"> </span><span class="pun">+</span><span class="txt"> </span><span class="str">&quot; points&quot;</span><span class="pun">;</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="com">// ✅ String.format — clear template + arguments</span>
+<span class="typ">String</span><span class="txt"> </span><span class="txt">msg</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="typ">String</span><span class="pun">.</span><span class="met">format</span><span class="pun">(</span>
+<span class="txt">    </span><span class="str">&quot;Player %s scored %d points&quot;</span><span class="pun">,</span><span class="txt"> </span><span class="txt">name</span><span class="pun">,</span><span class="txt"> </span><span class="txt">score</span><span class="pun">)</span><span class="pun">;</span>
+
+<span class="com">// ✅ MessageFormat — locale-friendly patterns</span>
+<span class="typ">String</span><span class="txt"> </span><span class="txt">i18n</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="typ">MessageFormat</span><span class="pun">.</span><span class="met">format</span><span class="pun">(</span>
+<span class="txt">    </span><span class="str">&quot;Player {0} scored {1} points&quot;</span><span class="pun">,</span><span class="txt"> </span><span class="txt">name</span><span class="pun">,</span><span class="txt"> </span><span class="txt">score</span><span class="pun">)</span><span class="pun">;</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-108.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(205/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-108" readonly rows="10">💡 Java tip💡: Use String.format() or MessageFormat for readable formatting. #Java #StringTips
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(267/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-108" readonly rows="10">💡 Prefer String.format() over messy + concatenation for readable messages.
 
-✅ Java tip💡: Use String.format() or MessageFormat for readable formatting. #Java #StringTips
+✅ Placeholders keep the template and values separate
+
+✅ Easy to reorder or add fields without breaking the string
+
+✅ MessageFormat is better when you need locale-aware text
 
 #Java #StringTips</textarea>
       <p class="copy-row">
@@ -522,27 +530,41 @@
 
         </style>
         <div class="carbon-local-109">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor"><pre><code><span class="com">// 💡 Java tip 💡: Don’t rely blindly on Garbage Collection; memory leaks are still possible.</span>
-<span class="com">//</span>
-<span class="com">// ✅ Java tip 💡: Don’t rely blindly on Garbage Collection; memory leaks are still possible</span>
-<span class="com">//</span>
-<span class="com">// ✅ #Java #SoftwareEngineering</span>
-<span class="com">//</span>
-<span class="com">// ✅ Runnable sample: `java-tips`</span></code></pre></div></div>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="com">// ❌ Static cache grows forever — GC cannot reclaim entries</span>
+<span class="kw">class</span><span class="txt"> </span><span class="typ">SessionCache</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="kw">private</span><span class="txt"> </span><span class="kw">static</span><span class="txt"> </span><span class="kw">final</span><span class="txt"> </span><span class="typ">Map</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">,</span><span class="txt"> </span><span class="kw">byte</span><span class="pun">[</span><span class="pun">]</span><span class="pun">&gt;</span><span class="txt"> </span><span class="typ">DATA</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="kw">new</span><span class="txt"> </span><span class="typ">HashMap</span><span class="pun">&lt;</span><span class="pun">&gt;</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span>
+
+<span class="txt">    </span><span class="kw">static</span><span class="txt"> </span><span class="kw">void</span><span class="txt"> </span><span class="met">put</span><span class="pun">(</span><span class="typ">String</span><span class="txt"> </span><span class="txt">id</span><span class="pun">,</span><span class="txt"> </span><span class="kw">byte</span><span class="pun">[</span><span class="pun">]</span><span class="txt"> </span><span class="txt">payload</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="typ">DATA</span><span class="pun">.</span><span class="met">put</span><span class="pun">(</span><span class="txt">id</span><span class="pun">,</span><span class="txt"> </span><span class="txt">payload</span><span class="pun">)</span><span class="pun">;</span><span class="txt"> </span><span class="com">// never removed</span>
+<span class="txt">    </span><span class="pun">}</span>
+<span class="pun">}</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="com">// ✅ Evict or remove when done — keep the map bounded</span>
+<span class="kw">class</span><span class="txt"> </span><span class="typ">SessionCache</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="kw">private</span><span class="txt"> </span><span class="kw">static</span><span class="txt"> </span><span class="kw">final</span><span class="txt"> </span><span class="typ">Map</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">,</span><span class="txt"> </span><span class="kw">byte</span><span class="pun">[</span><span class="pun">]</span><span class="pun">&gt;</span><span class="txt"> </span><span class="typ">DATA</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="kw">new</span><span class="txt"> </span><span class="typ">HashMap</span><span class="pun">&lt;</span><span class="pun">&gt;</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span>
+
+<span class="txt">    </span><span class="kw">static</span><span class="txt"> </span><span class="kw">void</span><span class="txt"> </span><span class="met">put</span><span class="pun">(</span><span class="typ">String</span><span class="txt"> </span><span class="txt">id</span><span class="pun">,</span><span class="txt"> </span><span class="kw">byte</span><span class="pun">[</span><span class="pun">]</span><span class="txt"> </span><span class="txt">payload</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="typ">DATA</span><span class="pun">.</span><span class="met">put</span><span class="pun">(</span><span class="txt">id</span><span class="pun">,</span><span class="txt"> </span><span class="txt">payload</span><span class="pun">)</span><span class="pun">;</span>
+<span class="txt">    </span><span class="pun">}</span>
+
+<span class="txt">    </span><span class="kw">static</span><span class="txt"> </span><span class="kw">void</span><span class="txt"> </span><span class="met">remove</span><span class="pun">(</span><span class="typ">String</span><span class="txt"> </span><span class="txt">id</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="typ">DATA</span><span class="pun">.</span><span class="met">remove</span><span class="pun">(</span><span class="txt">id</span><span class="pun">)</span><span class="pun">;</span><span class="txt"> </span><span class="com">// reachable → eligible for GC</span>
+<span class="txt">    </span><span class="pun">}</span>
+<span class="pun">}</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-109.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(235/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-109" readonly rows="10">💡 Java tip 💡: Don’t rely blindly on Garbage Collection; memory leaks are still possible.
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(268/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-109" readonly rows="10">💡 GC frees unused objects — but Java can still leak memory.
 
-✅ Java tip 💡: Don’t rely blindly on Garbage Collection; memory leaks are still possible
+✅ Anything still reachable (static lists, caches, listeners) stays alive
 
-✅ #Java #SoftwareEngineering
+✅ A growing collection holds every object forever
 
-#Java #SoftwareEngineering</textarea>
+✅ Clear listeners / bound caches, or use weak refs when appropriate
+
+#Java #Memory</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-109">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -679,34 +701,34 @@
 
         </style>
         <div class="carbon-local-110">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor"><pre><code><span class="com">// ❌ A new String object on every iteration</span>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="typ">List</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;</span><span class="txt"> </span><span class="txt">items</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="typ">List</span><span class="pun">.</span><span class="met">of</span><span class="pun">(</span><span class="str">&quot;a&quot;</span><span class="pun">,</span><span class="txt"> </span><span class="str">&quot;b&quot;</span><span class="pun">,</span><span class="txt"> </span><span class="str">&quot;c&quot;</span><span class="pun">)</span><span class="pun">;</span>
+
+<span class="com">// ❌ New String on every iteration</span>
 <span class="typ">String</span><span class="txt"> </span><span class="txt">csv</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="str">&quot;&quot;</span><span class="pun">;</span>
 <span class="kw">for</span><span class="txt"> </span><span class="pun">(</span><span class="typ">String</span><span class="txt"> </span><span class="txt">item</span><span class="txt"> </span><span class="pun">:</span><span class="txt"> </span><span class="txt">items</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
 <span class="txt">    </span><span class="txt">csv</span><span class="txt"> </span><span class="pun">+</span><span class="pun">=</span><span class="txt"> </span><span class="txt">item</span><span class="txt"> </span><span class="pun">+</span><span class="txt"> </span><span class="str">&quot;,&quot;</span><span class="pun">;</span>
-<span class="pun">}</span>
-
-<span class="com">// ✅ One mutable buffer — no garbage</span>
+<span class="pun">}</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="com">// ✅ One mutable buffer — then toString once</span>
 <span class="typ">StringBuilder</span><span class="txt"> </span><span class="txt">sb</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="kw">new</span><span class="txt"> </span><span class="met">StringBuilder</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span>
 <span class="kw">for</span><span class="txt"> </span><span class="pun">(</span><span class="typ">String</span><span class="txt"> </span><span class="txt">item</span><span class="txt"> </span><span class="pun">:</span><span class="txt"> </span><span class="txt">items</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
 <span class="txt">    </span><span class="txt">sb</span><span class="pun">.</span><span class="met">append</span><span class="pun">(</span><span class="txt">item</span><span class="pun">)</span><span class="pun">.</span><span class="met">append</span><span class="pun">(</span><span class="str">&#x27;,&#x27;</span><span class="pun">)</span><span class="pun">;</span>
 <span class="pun">}</span>
-<span class="typ">String</span><span class="txt"> </span><span class="txt">csv</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="txt">sb</span><span class="pun">.</span><span class="met">toString</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span></code></pre></div></div>
+<span class="typ">String</span><span class="txt"> </span><span class="txt">csv</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="txt">sb</span><span class="pun">.</span><span class="met">toString</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-110.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(201/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-110" readonly rows="10">💡 1/3 A very trivial example could be:
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(240/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-110" readonly rows="10">💡 Building strings in a loop? Prefer StringBuilder over +=.
 
-✅ String helloThere = "Hello " + "there" + "!";
+✅ String is immutable — each += creates a new object
 
-✅ System.out.println(helloThere);
+✅ StringBuilder appends into one buffer
 
-✅ The above line of code is clear and works as intended
+✅ Simple + outside a loop is fine — the compiler can optimize it
 
-#Java #BestPractices</textarea>
+#Java #Performance</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-110">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -727,7 +749,7 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0.5rem;
-            min-height: 720px;
+            min-height: 816px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             border-radius: 12px;
             display: flex;
@@ -735,7 +757,7 @@
           }
           .carbon-local-111 .carbon {
             flex: 1;
-            min-height: 704px;
+            min-height: 800px;
             max-width: none;
           }
           .carbon {
@@ -843,25 +865,42 @@
 
         </style>
         <div class="carbon-local-111">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor"><pre><code><span class="com">// 💡 Java Tip 💡: Use enums for state machines—it improves readability. #Java #StatePattern</span>
-<span class="com">//</span>
-<span class="com">// ✅ Java Tip 💡: Use enums for state machines—it improves readability. #Java #StatePattern</span>
-<span class="com">//</span>
-<span class="com">// ✅ Runnable sample: `java-tips`</span>
-<span class="com">//</span>
-<span class="com">// ✅ Architecture diagram + Carbon CodePen below</span></code></pre></div></div>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="com">// ❌ Magic strings — typos compile, transitions scattered</span>
+<span class="typ">String</span><span class="txt"> </span><span class="txt">status</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="str">&quot;DRAFT&quot;</span><span class="pun">;</span>
+<span class="kw">if</span><span class="txt"> </span><span class="pun">(</span><span class="txt">status</span><span class="pun">.</span><span class="met">equals</span><span class="pun">(</span><span class="str">&quot;DRAFT&quot;</span><span class="pun">)</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="txt">status</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="str">&quot;SENT&quot;</span><span class="pun">;</span><span class="txt"> </span><span class="com">// who else may set &quot;SNT&quot;?</span>
+<span class="pun">}</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="com">// ✅ Enum owns states + transitions</span>
+<span class="kw">enum</span><span class="txt"> </span><span class="typ">OrderStatus</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="typ">DRAFT</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="typ">OrderStatus</span><span class="txt"> </span><span class="met">next</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span><span class="txt"> </span><span class="kw">return</span><span class="txt"> </span><span class="typ">SENT</span><span class="pun">;</span><span class="txt"> </span><span class="pun">}</span>
+<span class="txt">    </span><span class="pun">}</span><span class="pun">,</span>
+<span class="txt">    </span><span class="typ">SENT</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="typ">OrderStatus</span><span class="txt"> </span><span class="met">next</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span><span class="txt"> </span><span class="kw">return</span><span class="txt"> </span><span class="typ">DELIVERED</span><span class="pun">;</span><span class="txt"> </span><span class="pun">}</span>
+<span class="txt">    </span><span class="pun">}</span><span class="pun">,</span>
+<span class="txt">    </span><span class="typ">DELIVERED</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="typ">OrderStatus</span><span class="txt"> </span><span class="met">next</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span><span class="txt"> </span><span class="kw">return</span><span class="txt"> </span><span class="typ">DELIVERED</span><span class="pun">;</span><span class="txt"> </span><span class="pun">}</span>
+<span class="txt">    </span><span class="pun">}</span><span class="pun">;</span>
+
+<span class="txt">    </span><span class="kw">abstract</span><span class="txt"> </span><span class="typ">OrderStatus</span><span class="txt"> </span><span class="met">next</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span>
+<span class="pun">}</span>
+
+<span class="typ">OrderStatus</span><span class="txt"> </span><span class="txt">status</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="typ">OrderStatus</span><span class="pun">.</span><span class="typ">DRAFT</span><span class="pun">.</span><span class="met">next</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span><span class="txt"> </span><span class="com">// SENT</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-111.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(197/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-111" readonly rows="10">💡 Java Tip 💡: Use enums for state machines—it improves readability. #Java #StatePattern
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(217/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-111" readonly rows="10">💡 Model a state machine with an enum — not magic strings.
 
-✅ Java Tip 💡: Use enums for state machines—it improves readability. #Java #StatePattern
+✅ Named constants beat typo-prone string statuses
 
-#Java #StatePattern</textarea>
+✅ Put allowed transitions next to each state
+
+✅ The compiler catches invalid states in switch
+
+#Java #Enums</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-111">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -2230,9 +2269,7 @@
 <span class="com">//</span>
 <span class="com">// ✅ Each letter stands for a key design principle:</span>
 <span class="com">//</span>
-<span class="com">// ✅ S: Single Responsibility – A class should have only one reason to change</span>
-<span class="com">//</span>
-<span class="com">// #Java #CleanCode #OOP #SoftwareDesign</span></code></pre></div></div>
+<span class="com">// ✅ S: Single Responsibility – A class should have only one reason to change</span></code></pre></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-120.html" target="_blank" rel="noopener">Open pen preview</a>

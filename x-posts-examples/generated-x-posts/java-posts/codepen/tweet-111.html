@@ -22,7 +22,7 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0.5rem;
-            min-height: 720px;
+            min-height: 816px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             border-radius: 12px;
             display: flex;
@@ -30,7 +30,7 @@
           }
           .carbon-local-111 .carbon {
             flex: 1;
-            min-height: 704px;
+            min-height: 800px;
             max-width: none;
           }
           .carbon {
@@ -138,13 +138,26 @@
 
         </style>
         <div class="carbon-local-111">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor"><pre><code><span class="com">// 💡 Java Tip 💡: Use enums for state machines—it improves readability. #Java #StatePattern</span>
-<span class="com">//</span>
-<span class="com">// ✅ Java Tip 💡: Use enums for state machines—it improves readability. #Java #StatePattern</span>
-<span class="com">//</span>
-<span class="com">// ✅ Runnable sample: `java-tips`</span>
-<span class="com">//</span>
-<span class="com">// ✅ Architecture diagram + Carbon CodePen below</span></code></pre></div></div>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="com">// ❌ Magic strings — typos compile, transitions scattered</span>
+<span class="typ">String</span><span class="txt"> </span><span class="txt">status</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="str">&quot;DRAFT&quot;</span><span class="pun">;</span>
+<span class="kw">if</span><span class="txt"> </span><span class="pun">(</span><span class="txt">status</span><span class="pun">.</span><span class="met">equals</span><span class="pun">(</span><span class="str">&quot;DRAFT&quot;</span><span class="pun">)</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="txt">status</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="str">&quot;SENT&quot;</span><span class="pun">;</span><span class="txt"> </span><span class="com">// who else may set &quot;SNT&quot;?</span>
+<span class="pun">}</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="com">// ✅ Enum owns states + transitions</span>
+<span class="kw">enum</span><span class="txt"> </span><span class="typ">OrderStatus</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="typ">DRAFT</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="typ">OrderStatus</span><span class="txt"> </span><span class="met">next</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span><span class="txt"> </span><span class="kw">return</span><span class="txt"> </span><span class="typ">SENT</span><span class="pun">;</span><span class="txt"> </span><span class="pun">}</span>
+<span class="txt">    </span><span class="pun">}</span><span class="pun">,</span>
+<span class="txt">    </span><span class="typ">SENT</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="typ">OrderStatus</span><span class="txt"> </span><span class="met">next</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span><span class="txt"> </span><span class="kw">return</span><span class="txt"> </span><span class="typ">DELIVERED</span><span class="pun">;</span><span class="txt"> </span><span class="pun">}</span>
+<span class="txt">    </span><span class="pun">}</span><span class="pun">,</span>
+<span class="txt">    </span><span class="typ">DELIVERED</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="typ">OrderStatus</span><span class="txt"> </span><span class="met">next</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span><span class="txt"> </span><span class="kw">return</span><span class="txt"> </span><span class="typ">DELIVERED</span><span class="pun">;</span><span class="txt"> </span><span class="pun">}</span>
+<span class="txt">    </span><span class="pun">}</span><span class="pun">;</span>
+
+<span class="txt">    </span><span class="kw">abstract</span><span class="txt"> </span><span class="typ">OrderStatus</span><span class="txt"> </span><span class="met">next</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span>
+<span class="pun">}</span>
+
+<span class="typ">OrderStatus</span><span class="txt"> </span><span class="txt">status</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="typ">OrderStatus</span><span class="pun">.</span><span class="typ">DRAFT</span><span class="pun">.</span><span class="met">next</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span><span class="txt"> </span><span class="com">// SENT</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-111.html" target="_blank" rel="noopener">Open pen preview</a>

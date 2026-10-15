@@ -138,18 +138,18 @@
 
         </style>
         <div class="carbon-local-110">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor"><pre><code><span class="com">// ❌ A new String object on every iteration</span>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="typ">List</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;</span><span class="txt"> </span><span class="txt">items</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="typ">List</span><span class="pun">.</span><span class="met">of</span><span class="pun">(</span><span class="str">&quot;a&quot;</span><span class="pun">,</span><span class="txt"> </span><span class="str">&quot;b&quot;</span><span class="pun">,</span><span class="txt"> </span><span class="str">&quot;c&quot;</span><span class="pun">)</span><span class="pun">;</span>
+
+<span class="com">// ❌ New String on every iteration</span>
 <span class="typ">String</span><span class="txt"> </span><span class="txt">csv</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="str">&quot;&quot;</span><span class="pun">;</span>
 <span class="kw">for</span><span class="txt"> </span><span class="pun">(</span><span class="typ">String</span><span class="txt"> </span><span class="txt">item</span><span class="txt"> </span><span class="pun">:</span><span class="txt"> </span><span class="txt">items</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
 <span class="txt">    </span><span class="txt">csv</span><span class="txt"> </span><span class="pun">+</span><span class="pun">=</span><span class="txt"> </span><span class="txt">item</span><span class="txt"> </span><span class="pun">+</span><span class="txt"> </span><span class="str">&quot;,&quot;</span><span class="pun">;</span>
-<span class="pun">}</span>
-
-<span class="com">// ✅ One mutable buffer — no garbage</span>
+<span class="pun">}</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="com">// ✅ One mutable buffer — then toString once</span>
 <span class="typ">StringBuilder</span><span class="txt"> </span><span class="txt">sb</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="kw">new</span><span class="txt"> </span><span class="met">StringBuilder</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span>
 <span class="kw">for</span><span class="txt"> </span><span class="pun">(</span><span class="typ">String</span><span class="txt"> </span><span class="txt">item</span><span class="txt"> </span><span class="pun">:</span><span class="txt"> </span><span class="txt">items</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
 <span class="txt">    </span><span class="txt">sb</span><span class="pun">.</span><span class="met">append</span><span class="pun">(</span><span class="txt">item</span><span class="pun">)</span><span class="pun">.</span><span class="met">append</span><span class="pun">(</span><span class="str">&#x27;,&#x27;</span><span class="pun">)</span><span class="pun">;</span>
 <span class="pun">}</span>
-<span class="typ">String</span><span class="txt"> </span><span class="txt">csv</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="txt">sb</span><span class="pun">.</span><span class="met">toString</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span></code></pre></div></div>
+<span class="typ">String</span><span class="txt"> </span><span class="txt">csv</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="txt">sb</span><span class="pun">.</span><span class="met">toString</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-110.html" target="_blank" rel="noopener">Open pen preview</a>

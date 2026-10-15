@@ -1,5 +1,9 @@
-💡 Java tip💡: Use String.format() or MessageFormat for readable formatting. #Java #StringTips
+💡 Prefer String.format() over messy + concatenation for readable messages.
 
-✅ Java tip💡: Use String.format() or MessageFormat for readable formatting. #Java #StringTips
+✅ Placeholders keep the template and values separate
+
+✅ Easy to reorder or add fields without breaking the string
+
+✅ MessageFormat is better when you need locale-aware text
 
 #Java #StringTips

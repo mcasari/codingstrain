@@ -1,5 +1,9 @@
-💡 Java Tip 💡: Use enums for state machines—it improves readability. #Java #StatePattern
+💡 Model a state machine with an enum — not magic strings.
 
-✅ Java Tip 💡: Use enums for state machines—it improves readability. #Java #StatePattern
+✅ Named constants beat typo-prone string statuses
 
-#Java #StatePattern
+✅ Put allowed transitions next to each state
+
+✅ The compiler catches invalid states in switch
+
+#Java #Enums

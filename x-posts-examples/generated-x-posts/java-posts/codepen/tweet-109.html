@@ -138,13 +138,25 @@
 
         </style>
         <div class="carbon-local-109">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor"><pre><code><span class="com">// 💡 Java tip 💡: Don’t rely blindly on Garbage Collection; memory leaks are still possible.</span>
-<span class="com">//</span>
-<span class="com">// ✅ Java tip 💡: Don’t rely blindly on Garbage Collection; memory leaks are still possible</span>
-<span class="com">//</span>
-<span class="com">// ✅ #Java #SoftwareEngineering</span>
-<span class="com">//</span>
-<span class="com">// ✅ Runnable sample: `java-tips`</span></code></pre></div></div>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="com">// ❌ Static cache grows forever — GC cannot reclaim entries</span>
+<span class="kw">class</span><span class="txt"> </span><span class="typ">SessionCache</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="kw">private</span><span class="txt"> </span><span class="kw">static</span><span class="txt"> </span><span class="kw">final</span><span class="txt"> </span><span class="typ">Map</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">,</span><span class="txt"> </span><span class="kw">byte</span><span class="pun">[</span><span class="pun">]</span><span class="pun">&gt;</span><span class="txt"> </span><span class="typ">DATA</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="kw">new</span><span class="txt"> </span><span class="typ">HashMap</span><span class="pun">&lt;</span><span class="pun">&gt;</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span>
+
+<span class="txt">    </span><span class="kw">static</span><span class="txt"> </span><span class="kw">void</span><span class="txt"> </span><span class="met">put</span><span class="pun">(</span><span class="typ">String</span><span class="txt"> </span><span class="txt">id</span><span class="pun">,</span><span class="txt"> </span><span class="kw">byte</span><span class="pun">[</span><span class="pun">]</span><span class="txt"> </span><span class="txt">payload</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="typ">DATA</span><span class="pun">.</span><span class="met">put</span><span class="pun">(</span><span class="txt">id</span><span class="pun">,</span><span class="txt"> </span><span class="txt">payload</span><span class="pun">)</span><span class="pun">;</span><span class="txt"> </span><span class="com">// never removed</span>
+<span class="txt">    </span><span class="pun">}</span>
+<span class="pun">}</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="com">// ✅ Evict or remove when done — keep the map bounded</span>
+<span class="kw">class</span><span class="txt"> </span><span class="typ">SessionCache</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="kw">private</span><span class="txt"> </span><span class="kw">static</span><span class="txt"> </span><span class="kw">final</span><span class="txt"> </span><span class="typ">Map</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">,</span><span class="txt"> </span><span class="kw">byte</span><span class="pun">[</span><span class="pun">]</span><span class="pun">&gt;</span><span class="txt"> </span><span class="typ">DATA</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="kw">new</span><span class="txt"> </span><span class="typ">HashMap</span><span class="pun">&lt;</span><span class="pun">&gt;</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span>
+
+<span class="txt">    </span><span class="kw">static</span><span class="txt"> </span><span class="kw">void</span><span class="txt"> </span><span class="met">put</span><span class="pun">(</span><span class="typ">String</span><span class="txt"> </span><span class="txt">id</span><span class="pun">,</span><span class="txt"> </span><span class="kw">byte</span><span class="pun">[</span><span class="pun">]</span><span class="txt"> </span><span class="txt">payload</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="typ">DATA</span><span class="pun">.</span><span class="met">put</span><span class="pun">(</span><span class="txt">id</span><span class="pun">,</span><span class="txt"> </span><span class="txt">payload</span><span class="pun">)</span><span class="pun">;</span>
+<span class="txt">    </span><span class="pun">}</span>
+
+<span class="txt">    </span><span class="kw">static</span><span class="txt"> </span><span class="kw">void</span><span class="txt"> </span><span class="met">remove</span><span class="pun">(</span><span class="typ">String</span><span class="txt"> </span><span class="txt">id</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="typ">DATA</span><span class="pun">.</span><span class="met">remove</span><span class="pun">(</span><span class="txt">id</span><span class="pun">)</span><span class="pun">;</span><span class="txt"> </span><span class="com">// reachable → eligible for GC</span>
+<span class="txt">    </span><span class="pun">}</span>
+<span class="pun">}</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-109.html" target="_blank" rel="noopener">Open pen preview</a>
