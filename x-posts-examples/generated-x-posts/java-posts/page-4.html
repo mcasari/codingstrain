@@ -1037,21 +1037,33 @@
 
         </style>
         <div class="carbon-local-112">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor"><pre><code><span class="com">// 💡 Cache expensive operations when possible. Use `ConcurrentMap` if needed. #Java #Performance</span>
-<span class="com">//</span>
-<span class="com">// ✅ Runnable sample: `java-tips`</span>
-<span class="com">//</span>
-<span class="com">// ✅ Architecture diagram + Carbon CodePen below</span>
-<span class="com">//</span>
-<span class="com">// ✅ From the codingstrain examples repo</span></code></pre></div></div>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="com">// ❌ Recalculates on every call — slow for heavy work</span>
+<span class="kw">double</span><span class="txt"> </span><span class="met">score</span><span class="pun">(</span><span class="typ">String</span><span class="txt"> </span><span class="txt">userId</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="kw">return</span><span class="txt"> </span><span class="met">loadAndRank</span><span class="pun">(</span><span class="txt">userId</span><span class="pun">)</span><span class="pun">;</span><span class="txt"> </span><span class="com">// DB + ranking every time</span>
+<span class="pun">}</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="com">// ✅ Thread-safe cache — compute once per key</span>
+<span class="kw">class</span><span class="txt"> </span><span class="typ">ScoreCache</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="kw">private</span><span class="txt"> </span><span class="kw">final</span><span class="txt"> </span><span class="typ">ConcurrentMap</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">,</span><span class="txt"> </span><span class="typ">Double</span><span class="pun">&gt;</span><span class="txt"> </span><span class="txt">cache</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="kw">new</span><span class="txt"> </span><span class="typ">ConcurrentHashMap</span><span class="pun">&lt;</span><span class="pun">&gt;</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span>
+<span class="txt">    </span><span class="kw">double</span><span class="txt"> </span><span class="met">score</span><span class="pun">(</span><span class="typ">String</span><span class="txt"> </span><span class="txt">userId</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="kw">return</span><span class="txt"> </span><span class="txt">cache</span><span class="pun">.</span><span class="met">computeIfAbsent</span><span class="pun">(</span><span class="txt">userId</span><span class="pun">,</span><span class="txt"> </span><span class="kw">this</span><span class="pun">:</span><span class="pun">:</span><span class="txt">loadAndRank</span><span class="pun">)</span><span class="pun">;</span>
+<span class="txt">    </span><span class="pun">}</span>
+<span class="txt">    </span><span class="kw">private</span><span class="txt"> </span><span class="kw">double</span><span class="txt"> </span><span class="met">loadAndRank</span><span class="pun">(</span><span class="typ">String</span><span class="txt"> </span><span class="txt">userId</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="kw">return</span><span class="txt"> </span><span class="com">/* expensive work */</span><span class="txt"> </span><span class="num">0.0</span><span class="pun">;</span>
+<span class="txt">    </span><span class="pun">}</span>
+<span class="pun">}</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-112.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(111/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-112" readonly rows="10">💡 Cache expensive operations when possible. Use ConcurrentMap if needed. #Java #Performance
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(245/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-112" readonly rows="10">💡 Cache expensive work — don’t recompute the same key every time.
+
+✅ Store results in a map keyed by input
+
+✅ Use ConcurrentHashMap when many threads share the cache
+
+✅ computeIfAbsent loads once — later calls reuse the value
 
 #Java #Performance</textarea>
       <p class="copy-row">

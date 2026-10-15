@@ -1201,9 +1201,15 @@
     </article>
     <article>
       <h2>Tweet #112</h2>
-      <p class="preview">💡 Cache expensive operations when possible. Use ConcurrentMap if needed. #Java #Performance</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(111/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-112" readonly rows="10">💡 Cache expensive operations when possible. Use ConcurrentMap if needed. #Java #Performance
+      <p class="preview">💡 Cache expensive work — don’t recompute the same key every time.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(245/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-112" readonly rows="10">💡 Cache expensive work — don’t recompute the same key every time.
+
+✅ Store results in a map keyed by input
+
+✅ Use ConcurrentHashMap when many threads share the cache
+
+✅ computeIfAbsent loads once — later calls reuse the value
 
 #Java #Performance</textarea>
       <p class="copy-row">

@@ -1,3 +1,9 @@
-💡 Cache expensive operations when possible. Use ConcurrentMap if needed. #Java #Performance
+💡 Cache expensive work — don’t recompute the same key every time.
+
+✅ Store results in a map keyed by input
+
+✅ Use ConcurrentHashMap when many threads share the cache
+
+✅ computeIfAbsent loads once — later calls reuse the value
 
 #Java #Performance
