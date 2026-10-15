@@ -676,11 +676,13 @@
   },
   {
     "id": 113,
-    "module": "java-tips",
-    "body": "💡 Explore virtual threads (Java 19+) for lightweight concurrency. #Java #ProjectLoom\n\n✅ Runnable sample: `java-tips`\n\n✅ Architecture diagram + Carbon CodePen below\n\n✅ From the codingstrain examples repo",
-    "tags": "#Java #ProjectLoom",
+    "module": "java-virtual-threads-demo",
+    "body": "💡 Virtual threads (Java 21) make blocking I/O cheap to scale.\n\n✅ Millions of lightweight threads — not one OS thread each\n\n✅ Keep simple blocking code; the JVM unmounts while waiting\n\n✅ Great for many concurrent HTTP/DB calls — not CPU-heavy work",
+    "tags": "#Java #VirtualThreads",
     "codepen_style": "carbon",
     "codepen_large": true,
+    "code": "// ❌ Platform thread pool — limited OS threads for blocking I/O\ntry (var exec = Executors.newFixedThreadPool(200)) {\n    for (String url : urls) {\n        exec.submit(() -> http.get(url)); // each blocks a real thread\n    }\n}\n\n// ✅ Virtual thread per task — scale blocking calls cheaply\ntry (var exec = Executors.newVirtualThreadPerTaskExecutor()) {\n    for (String url : urls) {\n        exec.submit(() -> http.get(url)); // blocks without hogging OS threads\n    }\n}\n",
+    "codepen_columns": 2,
     "category": "java"
   },
   {

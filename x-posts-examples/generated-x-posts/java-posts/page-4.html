@@ -1202,23 +1202,33 @@
 
         </style>
         <div class="carbon-local-113">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor"><pre><code><span class="com">// 💡 Explore virtual threads (Java 19+) for lightweight concurrency. #Java #ProjectLoom</span>
-<span class="com">//</span>
-<span class="com">// ✅ Runnable sample: `java-tips`</span>
-<span class="com">//</span>
-<span class="com">// ✅ Architecture diagram + Carbon CodePen below</span>
-<span class="com">//</span>
-<span class="com">// ✅ From the codingstrain examples repo</span></code></pre></div></div>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-virtual-threads-demo</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="com">// ❌ Platform thread pool — limited OS threads for blocking I/O</span>
+<span class="kw">try</span><span class="txt"> </span><span class="pun">(</span><span class="kw">var</span><span class="txt"> </span><span class="txt">exec</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="typ">Executors</span><span class="pun">.</span><span class="met">newFixedThreadPool</span><span class="pun">(</span><span class="num">200</span><span class="pun">)</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="kw">for</span><span class="txt"> </span><span class="pun">(</span><span class="typ">String</span><span class="txt"> </span><span class="txt">url</span><span class="txt"> </span><span class="pun">:</span><span class="txt"> </span><span class="txt">urls</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="txt">exec</span><span class="pun">.</span><span class="met">submit</span><span class="pun">(</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">-</span><span class="pun">&gt;</span><span class="txt"> </span><span class="txt">http</span><span class="pun">.</span><span class="met">get</span><span class="pun">(</span><span class="txt">url</span><span class="pun">)</span><span class="pun">)</span><span class="pun">;</span><span class="txt"> </span><span class="com">// each blocks a real thread</span>
+<span class="txt">    </span><span class="pun">}</span>
+<span class="pun">}</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="com">// ✅ Virtual thread per task — scale blocking calls cheaply</span>
+<span class="kw">try</span><span class="txt"> </span><span class="pun">(</span><span class="kw">var</span><span class="txt"> </span><span class="txt">exec</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="typ">Executors</span><span class="pun">.</span><span class="met">newVirtualThreadPerTaskExecutor</span><span class="pun">(</span><span class="pun">)</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="kw">for</span><span class="txt"> </span><span class="pun">(</span><span class="typ">String</span><span class="txt"> </span><span class="txt">url</span><span class="txt"> </span><span class="pun">:</span><span class="txt"> </span><span class="txt">urls</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="txt">exec</span><span class="pun">.</span><span class="met">submit</span><span class="pun">(</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">-</span><span class="pun">&gt;</span><span class="txt"> </span><span class="txt">http</span><span class="pun">.</span><span class="met">get</span><span class="pun">(</span><span class="txt">url</span><span class="pun">)</span><span class="pun">)</span><span class="pun">;</span><span class="txt"> </span><span class="com">// blocks without hogging OS threads</span>
+<span class="txt">    </span><span class="pun">}</span>
+<span class="pun">}</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-113.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(104/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-113" readonly rows="10">💡 Explore virtual threads (Java 19+) for lightweight concurrency. #Java #ProjectLoom
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(269/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-113" readonly rows="10">💡 Virtual threads (Java 21) make blocking I/O cheap to scale.
 
-#Java #ProjectLoom</textarea>
+✅ Millions of lightweight threads — not one OS thread each
+
+✅ Keep simple blocking code; the JVM unmounts while waiting
+
+✅ Great for many concurrent HTTP/DB calls — not CPU-heavy work
+
+#Java #VirtualThreads</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-113">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
