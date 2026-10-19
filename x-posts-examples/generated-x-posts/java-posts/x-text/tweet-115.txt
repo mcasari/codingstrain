@@ -1,5 +1,9 @@
-💡 Java Tip 💡:Use Path and Files from NIO.2 for modern file handling. #Java #NIO
+💡 Prefer Path + Files (NIO.2) over legacy File I/O.
 
-✅ Java Tip 💡:Use Path and Files from NIO.2 for modern file handling. #Java #NIO
+✅ Path.of(...) is portable across OSes
+
+✅ One-liners: readString, writeString, readAllLines
+
+✅ Clearer APIs than FileReader / BufferedReader boilerplate
 
 #Java #NIO

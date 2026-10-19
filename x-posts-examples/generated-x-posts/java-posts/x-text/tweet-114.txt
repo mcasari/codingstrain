@@ -1,5 +1,9 @@
-💡 Java Tip 💡: Use Files.walk() to recursively process files in a directory. #Java #IO
+💡 Need every file under a folder? Use Files.walk().
 
-✅ Java Tip 💡: Use Files.walk() to recursively process files in a directory. #Java #IO
+✅ Returns a Stream<Path> of the tree (recursive)
+
+✅ Filter with .endsWith(".java") or any predicate
+
+✅ Always close the stream — try-with-resources frees the walk
 
 #Java #IO

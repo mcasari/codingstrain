@@ -688,21 +688,23 @@
   {
     "id": 114,
     "module": "java-tips",
-    "body": "💡 Java Tip 💡: Use `Files.walk()` to recursively process files in a directory. #Java #IO\n\n✅ Java Tip 💡: Use `Files.walk()` to recursively process files in a directory. #Java #IO\n\n✅ Runnable sample: `java-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "body": "💡 Need every file under a folder? Use `Files.walk()`.\n\n✅ Returns a `Stream<Path>` of the tree (recursive)\n\n✅ Filter with `.endsWith(\".java\")` or any predicate\n\n✅ Always close the stream — `try-with-resources` frees the walk",
     "tags": "#Java #IO",
     "codepen_style": "carbon",
     "codepen_large": true,
-    "code": "List<String> lines = Files.readAllLines(Path.of(\"data.txt\"));\nFiles.writeString(Path.of(\"out.txt\"), \"hello\");",
+    "code": "// ❌ Manual recursion with File — verbose and easy to miss dirs\nvoid findJava(File dir, List<File> out) {\n    File[] kids = dir.listFiles();\n    if (kids == null) return;\n    for (File f : kids) {\n        if (f.isDirectory()) findJava(f, out);\n        else if (f.getName().endsWith(\".java\")) out.add(f);\n    }\n}\n\n// ✅ Files.walk — stream the tree, filter, collect\ntry (Stream<Path> paths = Files.walk(Path.of(\"src\"))) {\n    List<Path> javaFiles = paths\n        .filter(p -> p.toString().endsWith(\".java\"))\n        .toList();\n}\n",
+    "codepen_columns": 2,
     "category": "java"
   },
   {
     "id": 115,
     "module": "java-tips",
-    "body": "💡 Java Tip 💡:Use `Path` and `Files` from NIO.2 for modern file handling. #Java #NIO\n\n✅ Java Tip 💡:Use `Path` and `Files` from NIO.2 for modern file handling. #Java #NIO\n\n✅ Runnable sample: `java-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "body": "💡 Prefer `Path` + `Files` (NIO.2) over legacy `File` I/O.\n\n✅ `Path.of(...)` is portable across OSes\n\n✅ One-liners: `readString`, `writeString`, `readAllLines`\n\n✅ Clearer APIs than `FileReader` / `BufferedReader` boilerplate\n\n#Java #NIO",
     "tags": "#Java #NIO",
     "codepen_style": "carbon",
     "codepen_large": true,
-    "code": "List<String> lines = Files.readAllLines(Path.of(\"data.txt\"));\nFiles.writeString(Path.of(\"out.txt\"), \"hello\");",
+    "code": "// ❌ Legacy File I/O — verbose, easy to leak readers\nFile file = new File(\"data.txt\");\nBufferedReader reader = new BufferedReader(new FileReader(file));\nString line;\nwhile ((line = reader.readLine()) != null) {\n    System.out.println(line);\n}\nreader.close();\n\n// ✅ NIO.2 Path + Files — short and portable\nPath path = Path.of(\"data.txt\");\nString text = Files.readString(path);\nFiles.writeString(Path.of(\"out.txt\"), text);\nList<String> lines = Files.readAllLines(path);\n",
+    "codepen_columns": 2,
     "category": "java"
   },
   {

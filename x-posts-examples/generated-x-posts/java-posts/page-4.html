@@ -1365,18 +1365,34 @@
 
         </style>
         <div class="carbon-local-114">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor"><pre><code><span class="typ">List</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;</span><span class="txt"> </span><span class="txt">lines</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="typ">Files</span><span class="pun">.</span><span class="met">readAllLines</span><span class="pun">(</span><span class="typ">Path</span><span class="pun">.</span><span class="met">of</span><span class="pun">(</span><span class="str">&quot;data.txt&quot;</span><span class="pun">)</span><span class="pun">)</span><span class="pun">;</span>
-<span class="typ">Files</span><span class="pun">.</span><span class="met">writeString</span><span class="pun">(</span><span class="typ">Path</span><span class="pun">.</span><span class="met">of</span><span class="pun">(</span><span class="str">&quot;out.txt&quot;</span><span class="pun">)</span><span class="pun">,</span><span class="txt"> </span><span class="str">&quot;hello&quot;</span><span class="pun">)</span><span class="pun">;</span></code></pre></div></div>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="com">// ❌ Manual recursion with File — verbose and easy to miss dirs</span>
+<span class="kw">void</span><span class="txt"> </span><span class="met">findJava</span><span class="pun">(</span><span class="typ">File</span><span class="txt"> </span><span class="txt">dir</span><span class="pun">,</span><span class="txt"> </span><span class="typ">List</span><span class="pun">&lt;</span><span class="typ">File</span><span class="pun">&gt;</span><span class="txt"> </span><span class="txt">out</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="typ">File</span><span class="pun">[</span><span class="pun">]</span><span class="txt"> </span><span class="txt">kids</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="txt">dir</span><span class="pun">.</span><span class="met">listFiles</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span>
+<span class="txt">    </span><span class="kw">if</span><span class="txt"> </span><span class="pun">(</span><span class="txt">kids</span><span class="txt"> </span><span class="pun">=</span><span class="pun">=</span><span class="txt"> </span><span class="kw">null</span><span class="pun">)</span><span class="txt"> </span><span class="kw">return</span><span class="pun">;</span>
+<span class="txt">    </span><span class="kw">for</span><span class="txt"> </span><span class="pun">(</span><span class="typ">File</span><span class="txt"> </span><span class="txt">f</span><span class="txt"> </span><span class="pun">:</span><span class="txt"> </span><span class="txt">kids</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="kw">if</span><span class="txt"> </span><span class="pun">(</span><span class="txt">f</span><span class="pun">.</span><span class="met">isDirectory</span><span class="pun">(</span><span class="pun">)</span><span class="pun">)</span><span class="txt"> </span><span class="met">findJava</span><span class="pun">(</span><span class="txt">f</span><span class="pun">,</span><span class="txt"> </span><span class="txt">out</span><span class="pun">)</span><span class="pun">;</span>
+<span class="txt">        </span><span class="kw">else</span><span class="txt"> </span><span class="kw">if</span><span class="txt"> </span><span class="pun">(</span><span class="txt">f</span><span class="pun">.</span><span class="met">getName</span><span class="pun">(</span><span class="pun">)</span><span class="pun">.</span><span class="met">endsWith</span><span class="pun">(</span><span class="str">&quot;.java&quot;</span><span class="pun">)</span><span class="pun">)</span><span class="txt"> </span><span class="txt">out</span><span class="pun">.</span><span class="met">add</span><span class="pun">(</span><span class="txt">f</span><span class="pun">)</span><span class="pun">;</span>
+<span class="txt">    </span><span class="pun">}</span>
+<span class="pun">}</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="com">// ✅ Files.walk — stream the tree, filter, collect</span>
+<span class="kw">try</span><span class="txt"> </span><span class="pun">(</span><span class="typ">Stream</span><span class="pun">&lt;</span><span class="typ">Path</span><span class="pun">&gt;</span><span class="txt"> </span><span class="txt">paths</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="typ">Files</span><span class="pun">.</span><span class="met">walk</span><span class="pun">(</span><span class="typ">Path</span><span class="pun">.</span><span class="met">of</span><span class="pun">(</span><span class="str">&quot;src&quot;</span><span class="pun">)</span><span class="pun">)</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="typ">List</span><span class="pun">&lt;</span><span class="typ">Path</span><span class="pun">&gt;</span><span class="txt"> </span><span class="txt">javaFiles</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="txt">paths</span>
+<span class="txt">        </span><span class="pun">.</span><span class="met">filter</span><span class="pun">(</span><span class="txt">p</span><span class="txt"> </span><span class="pun">-</span><span class="pun">&gt;</span><span class="txt"> </span><span class="txt">p</span><span class="pun">.</span><span class="met">toString</span><span class="pun">(</span><span class="pun">)</span><span class="pun">.</span><span class="met">endsWith</span><span class="pun">(</span><span class="str">&quot;.java&quot;</span><span class="pun">)</span><span class="pun">)</span>
+<span class="txt">        </span><span class="pun">.</span><span class="met">toList</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span>
+<span class="pun">}</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-114.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(183/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-114" readonly rows="10">💡 Java Tip 💡: Use Files.walk() to recursively process files in a directory. #Java #IO
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(226/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-114" readonly rows="10">💡 Need every file under a folder? Use Files.walk().
 
-✅ Java Tip 💡: Use Files.walk() to recursively process files in a directory. #Java #IO
+✅ Returns a Stream&lt;Path&gt; of the tree (recursive)
+
+✅ Filter with .endsWith(".java") or any predicate
+
+✅ Always close the stream — try-with-resources frees the walk
 
 #Java #IO</textarea>
       <p class="copy-row">
@@ -1515,18 +1531,32 @@
 
         </style>
         <div class="carbon-local-115">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor"><pre><code><span class="typ">List</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;</span><span class="txt"> </span><span class="txt">lines</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="typ">Files</span><span class="pun">.</span><span class="met">readAllLines</span><span class="pun">(</span><span class="typ">Path</span><span class="pun">.</span><span class="met">of</span><span class="pun">(</span><span class="str">&quot;data.txt&quot;</span><span class="pun">)</span><span class="pun">)</span><span class="pun">;</span>
-<span class="typ">Files</span><span class="pun">.</span><span class="met">writeString</span><span class="pun">(</span><span class="typ">Path</span><span class="pun">.</span><span class="met">of</span><span class="pun">(</span><span class="str">&quot;out.txt&quot;</span><span class="pun">)</span><span class="pun">,</span><span class="txt"> </span><span class="str">&quot;hello&quot;</span><span class="pun">)</span><span class="pun">;</span></code></pre></div></div>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="com">// ❌ Legacy File I/O — verbose, easy to leak readers</span>
+<span class="typ">File</span><span class="txt"> </span><span class="txt">file</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="kw">new</span><span class="txt"> </span><span class="met">File</span><span class="pun">(</span><span class="str">&quot;data.txt&quot;</span><span class="pun">)</span><span class="pun">;</span>
+<span class="typ">BufferedReader</span><span class="txt"> </span><span class="txt">reader</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="kw">new</span><span class="txt"> </span><span class="met">BufferedReader</span><span class="pun">(</span><span class="kw">new</span><span class="txt"> </span><span class="met">FileReader</span><span class="pun">(</span><span class="txt">file</span><span class="pun">)</span><span class="pun">)</span><span class="pun">;</span>
+<span class="typ">String</span><span class="txt"> </span><span class="txt">line</span><span class="pun">;</span>
+<span class="kw">while</span><span class="txt"> </span><span class="pun">(</span><span class="pun">(</span><span class="txt">line</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="txt">reader</span><span class="pun">.</span><span class="met">readLine</span><span class="pun">(</span><span class="pun">)</span><span class="pun">)</span><span class="txt"> </span><span class="pun">!</span><span class="pun">=</span><span class="txt"> </span><span class="kw">null</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="typ">System</span><span class="pun">.</span><span class="txt">out</span><span class="pun">.</span><span class="met">println</span><span class="pun">(</span><span class="txt">line</span><span class="pun">)</span><span class="pun">;</span>
+<span class="pun">}</span>
+<span class="txt">reader</span><span class="pun">.</span><span class="met">close</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="com">// ✅ NIO.2 Path + Files — short and portable</span>
+<span class="typ">Path</span><span class="txt"> </span><span class="txt">path</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="typ">Path</span><span class="pun">.</span><span class="met">of</span><span class="pun">(</span><span class="str">&quot;data.txt&quot;</span><span class="pun">)</span><span class="pun">;</span>
+<span class="typ">String</span><span class="txt"> </span><span class="txt">text</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="typ">Files</span><span class="pun">.</span><span class="met">readString</span><span class="pun">(</span><span class="txt">path</span><span class="pun">)</span><span class="pun">;</span>
+<span class="typ">Files</span><span class="pun">.</span><span class="met">writeString</span><span class="pun">(</span><span class="typ">Path</span><span class="pun">.</span><span class="met">of</span><span class="pun">(</span><span class="str">&quot;out.txt&quot;</span><span class="pun">)</span><span class="pun">,</span><span class="txt"> </span><span class="txt">text</span><span class="pun">)</span><span class="pun">;</span>
+<span class="typ">List</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;</span><span class="txt"> </span><span class="txt">lines</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="typ">Files</span><span class="pun">.</span><span class="met">readAllLines</span><span class="pun">(</span><span class="txt">path</span><span class="pun">)</span><span class="pun">;</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-115.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(172/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-115" readonly rows="10">💡 Java Tip 💡:Use Path and Files from NIO.2 for modern file handling. #Java #NIO
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(217/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-115" readonly rows="10">💡 Prefer Path + Files (NIO.2) over legacy File I/O.
 
-✅ Java Tip 💡:Use Path and Files from NIO.2 for modern file handling. #Java #NIO
+✅ Path.of(...) is portable across OSes
+
+✅ One-liners: readString, writeString, readAllLines
+
+✅ Clearer APIs than FileReader / BufferedReader boilerplate
 
 #Java #NIO</textarea>
       <p class="copy-row">

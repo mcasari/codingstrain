@@ -1241,11 +1241,15 @@
     </article>
     <article>
       <h2>Tweet #114</h2>
-      <p class="preview">💡 Java Tip 💡: Use Files.walk() to recursively process files in a directory. #Java #IO</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(183/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-114" readonly rows="10">💡 Java Tip 💡: Use Files.walk() to recursively process files in a directory. #Java #IO
+      <p class="preview">💡 Need every file under a folder? Use Files.walk().</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(226/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-114" readonly rows="10">💡 Need every file under a folder? Use Files.walk().
 
-✅ Java Tip 💡: Use Files.walk() to recursively process files in a directory. #Java #IO
+✅ Returns a Stream&lt;Path&gt; of the tree (recursive)
+
+✅ Filter with .endsWith(".java") or any predicate
+
+✅ Always close the stream — try-with-resources frees the walk
 
 #Java #IO</textarea>
       <p class="copy-row">
@@ -1257,11 +1261,15 @@
     </article>
     <article>
       <h2>Tweet #115</h2>
-      <p class="preview">💡 Java Tip 💡:Use Path and Files from NIO.2 for modern file handling. #Java #NIO</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(172/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-115" readonly rows="10">💡 Java Tip 💡:Use Path and Files from NIO.2 for modern file handling. #Java #NIO
+      <p class="preview">💡 Prefer Path + Files (NIO.2) over legacy File I/O.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(217/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-115" readonly rows="10">💡 Prefer Path + Files (NIO.2) over legacy File I/O.
 
-✅ Java Tip 💡:Use Path and Files from NIO.2 for modern file handling. #Java #NIO
+✅ Path.of(...) is portable across OSes
+
+✅ One-liners: readString, writeString, readAllLines
+
+✅ Clearer APIs than FileReader / BufferedReader boilerplate
 
 #Java #NIO</textarea>
       <p class="copy-row">
