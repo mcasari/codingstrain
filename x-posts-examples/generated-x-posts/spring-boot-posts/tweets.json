@@ -1173,19 +1173,23 @@
   {
     "id": 259,
     "module": "spring-boot-tips",
-    "body": "🚀 Spring Boot: @ConditionalOnClass is a Spring Boot annotation used in auto-configuration.\n\n✅It conditionally enables a bean or configuration only if a specified class is present on the classpath\n\n✅ #SpringBoot #Microservices\n\n✅ Runnable sample: `spring-boot-tips`",
-    "tags": "#SpringBoot #Microservices",
+    "body": "💡 `@ConditionalOnClass` — only wire a bean if the class is on the classpath.\n\n✅ Powers starter auto-config (Kafka, Redis, …)\n\n✅ No dependency? Config is skipped — no `ClassNotFoundException`\n\n✅ Pair with `@ConditionalOnMissingBean` so apps can override",
+    "tags": "#SpringBoot #AutoConfig",
     "codepen_style": "carbon",
     "codepen_large": true,
+    "code": "// ❌ Always load — blows up if Redis isn’t on the classpath\n@Configuration\nclass RedisAutoConfig {\n    @Bean\n    RedisTemplate<String, String> redisTemplate() {\n        return new RedisTemplate<>();\n    }\n}\n\n// ✅ Only when Redis classes exist\n@Configuration\n@ConditionalOnClass(RedisTemplate.class)\nclass RedisAutoConfig {\n    @Bean\n    @ConditionalOnMissingBean\n    RedisTemplate<String, String> redisTemplate() {\n        return new RedisTemplate<>();\n    }\n}\n",
+    "codepen_columns": 2,
     "category": "spring-boot"
   },
   {
     "id": 260,
     "module": "spring-boot-tips",
-    "body": "🚀Spring Boot: spring.main.lazy-initialization=true doesn't just delay bean creation, it skips @PostConstruct entirely until first use. Be careful and watch for side effects.\n\n✅ #SpringBoot #SoftwareDevelopment\n\n✅ Runnable sample: `spring-boot-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
-    "tags": "#SpringBoot #SoftwareDevelopment",
+    "body": "💡 `spring.main.lazy-initialization=true` delays more than bean creation.\n\n✅ Beans (and `@PostConstruct`) run only on first use\n\n✅ Faster startup — but warmup / schema checks may never fire\n\n✅ Keep critical init eager, or touch the bean during startup\n\n#SpringBoot #Startup",
+    "tags": "#SpringBoot #Startup",
     "codepen_style": "carbon",
     "codepen_large": true,
+    "code": "# ❌ Lazy=true — @PostConstruct waits until first use\nspring:\n  main:\n    lazy-initialization: true\n\n@Service\nclass CacheWarmer {\n    @PostConstruct\n    void warm() {\n        cache.loadAll(); // NOT at startup when lazy\n    }\n}\n\n# ✅ Need init at boot? Stay eager (default) or force the bean\nspring:\n  main:\n    lazy-initialization: false   # default — PostConstruct at startup\n\n# Or keep lazy, but touch critical beans early:\n@Bean\nApplicationRunner touch(CacheWarmer warmer) {\n    return args -> { /* injecting warmer creates it now */ };\n}\n",
+    "codepen_columns": 2,
     "category": "spring-boot"
   }
 ]

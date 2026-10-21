@@ -1,5 +1,9 @@
-🚀Spring Boot: spring.main.lazy-initialization=true doesn't just delay bean creation, it skips @PostConstruct entirely until first use. Be careful and watch for side effects.
+💡 spring.main.lazy-initialization=true delays more than bean creation.
 
-✅ #SpringBoot #SoftwareDevelopment
+✅ Beans (and @PostConstruct) run only on first use
 
-#SpringBoot #SoftwareDevelopment
+✅ Faster startup — but warmup / schema checks may never fire
+
+✅ Keep critical init eager, or touch the bean during startup
+
+#SpringBoot #Startup

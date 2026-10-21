@@ -2153,15 +2153,17 @@
     </article>
     <article>
       <h2>Tweet #259</h2>
-      <p class="preview">🚀 Spring Boot: @ConditionalOnClass is a Spring Boot annotation used in auto-configuration.</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(253/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-259" readonly rows="10">🚀 Spring Boot: @ConditionalOnClass is a Spring Boot annotation used in auto-configuration.
+      <p class="preview">💡 @ConditionalOnClass — only wire a bean if the class is on the classpath.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(271/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-259" readonly rows="10">💡 @ConditionalOnClass — only wire a bean if the class is on the classpath.
 
-✅It conditionally enables a bean or configuration only if a specified class is present on the classpath
+✅ Powers starter auto-config (Kafka, Redis, …)
 
-✅ #SpringBoot #Microservices
+✅ No dependency? Config is skipped — no ClassNotFoundException
 
-#SpringBoot #Microservices</textarea>
+✅ Pair with @ConditionalOnMissingBean so apps can override
+
+#SpringBoot #AutoConfig</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-259">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -2171,13 +2173,17 @@
     </article>
     <article>
       <h2>Tweet #260</h2>
-      <p class="preview">🚀Spring Boot: spring.main.lazy-initialization=true doesn&#x27;t just delay bean creation, it skips @PostC</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(243/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-260" readonly rows="10">🚀Spring Boot: spring.main.lazy-initialization=true doesn't just delay bean creation, it skips @PostConstruct entirely until first use. Be careful and watch for side effects.
+      <p class="preview">💡 spring.main.lazy-initialization=true delays more than bean creation.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(268/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-260" readonly rows="10">💡 spring.main.lazy-initialization=true delays more than bean creation.
 
-✅ #SpringBoot #SoftwareDevelopment
+✅ Beans (and @PostConstruct) run only on first use
 
-#SpringBoot #SoftwareDevelopment</textarea>
+✅ Faster startup — but warmup / schema checks may never fire
+
+✅ Keep critical init eager, or touch the bean during startup
+
+#SpringBoot #Startup</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-260">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>

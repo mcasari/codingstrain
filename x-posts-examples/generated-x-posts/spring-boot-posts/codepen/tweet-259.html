@@ -138,13 +138,23 @@
 
         </style>
         <div class="carbon-local-259">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-boot-tips</span></div><div class="carbon-editor"><pre><code><span class="com">// 🚀 Spring Boot: @ConditionalOnClass is a Spring Boot annotation used in auto-configuration.</span>
-<span class="com">//</span>
-<span class="com">// ✅It conditionally enables a bean or configuration only if a specified class is present on the classpath</span>
-<span class="com">//</span>
-<span class="com">// ✅ #SpringBoot #Microservices</span>
-<span class="com">//</span>
-<span class="com">// ✅ Runnable sample: `spring-boot-tips`</span></code></pre></div></div>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-boot-tips</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="com">// ❌ Always load — blows up if Redis isn’t on the classpath</span>
+<span class="ann">@Configuration</span>
+<span class="kw">class</span><span class="txt"> </span><span class="typ">RedisAutoConfig</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="ann">@Bean</span>
+<span class="txt">    </span><span class="typ">RedisTemplate</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">,</span><span class="txt"> </span><span class="typ">String</span><span class="pun">&gt;</span><span class="txt"> </span><span class="met">redisTemplate</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="kw">return</span><span class="txt"> </span><span class="kw">new</span><span class="txt"> </span><span class="typ">RedisTemplate</span><span class="pun">&lt;</span><span class="pun">&gt;</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span>
+<span class="txt">    </span><span class="pun">}</span>
+<span class="pun">}</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="com">// ✅ Only when Redis classes exist</span>
+<span class="ann">@Configuration</span>
+<span class="ann">@ConditionalOnClass</span><span class="pun">(</span><span class="typ">RedisTemplate</span><span class="pun">.</span><span class="kw">class</span><span class="pun">)</span>
+<span class="kw">class</span><span class="txt"> </span><span class="typ">RedisAutoConfig</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="ann">@Bean</span>
+<span class="txt">    </span><span class="ann">@ConditionalOnMissingBean</span>
+<span class="txt">    </span><span class="typ">RedisTemplate</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">,</span><span class="txt"> </span><span class="typ">String</span><span class="pun">&gt;</span><span class="txt"> </span><span class="met">redisTemplate</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="kw">return</span><span class="txt"> </span><span class="kw">new</span><span class="txt"> </span><span class="typ">RedisTemplate</span><span class="pun">&lt;</span><span class="pun">&gt;</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span>
+<span class="txt">    </span><span class="pun">}</span>
+<span class="pun">}</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-259.html" target="_blank" rel="noopener">Open pen preview</a>

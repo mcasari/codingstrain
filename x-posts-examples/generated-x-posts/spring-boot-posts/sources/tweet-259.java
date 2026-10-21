@@ -1,7 +1,19 @@
-// 🚀 Spring Boot: @ConditionalOnClass is a Spring Boot annotation used in auto-configuration.
-//
-// ✅It conditionally enables a bean or configuration only if a specified class is present on the classpath
-//
-// ✅ #SpringBoot #Microservices
-//
-// ✅ Runnable sample: `spring-boot-tips`
+// ❌ Always load — blows up if Redis isn’t on the classpath
+@Configuration
+class RedisAutoConfig {
+    @Bean
+    RedisTemplate<String, String> redisTemplate() {
+        return new RedisTemplate<>();
+    }
+}
+
+// ✅ Only when Redis classes exist
+@Configuration
+@ConditionalOnClass(RedisTemplate.class)
+class RedisAutoConfig {
+    @Bean
+    @ConditionalOnMissingBean
+    RedisTemplate<String, String> redisTemplate() {
+        return new RedisTemplate<>();
+    }
+}

@@ -1,7 +1,9 @@
-🚀 Spring Boot: @ConditionalOnClass is a Spring Boot annotation used in auto-configuration.
+💡 @ConditionalOnClass — only wire a bean if the class is on the classpath.
 
-✅It conditionally enables a bean or configuration only if a specified class is present on the classpath
+✅ Powers starter auto-config (Kafka, Redis, …)
 
-✅ #SpringBoot #Microservices
+✅ No dependency? Config is skipped — no ClassNotFoundException
 
-#SpringBoot #Microservices
+✅ Pair with @ConditionalOnMissingBean so apps can override
+
+#SpringBoot #AutoConfig

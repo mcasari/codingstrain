@@ -516,27 +516,39 @@
 
         </style>
         <div class="carbon-local-259">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-boot-tips</span></div><div class="carbon-editor"><pre><code><span class="com">// 🚀 Spring Boot: @ConditionalOnClass is a Spring Boot annotation used in auto-configuration.</span>
-<span class="com">//</span>
-<span class="com">// ✅It conditionally enables a bean or configuration only if a specified class is present on the classpath</span>
-<span class="com">//</span>
-<span class="com">// ✅ #SpringBoot #Microservices</span>
-<span class="com">//</span>
-<span class="com">// ✅ Runnable sample: `spring-boot-tips`</span></code></pre></div></div>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-boot-tips</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="com">// ❌ Always load — blows up if Redis isn’t on the classpath</span>
+<span class="ann">@Configuration</span>
+<span class="kw">class</span><span class="txt"> </span><span class="typ">RedisAutoConfig</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="ann">@Bean</span>
+<span class="txt">    </span><span class="typ">RedisTemplate</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">,</span><span class="txt"> </span><span class="typ">String</span><span class="pun">&gt;</span><span class="txt"> </span><span class="met">redisTemplate</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="kw">return</span><span class="txt"> </span><span class="kw">new</span><span class="txt"> </span><span class="typ">RedisTemplate</span><span class="pun">&lt;</span><span class="pun">&gt;</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span>
+<span class="txt">    </span><span class="pun">}</span>
+<span class="pun">}</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="com">// ✅ Only when Redis classes exist</span>
+<span class="ann">@Configuration</span>
+<span class="ann">@ConditionalOnClass</span><span class="pun">(</span><span class="typ">RedisTemplate</span><span class="pun">.</span><span class="kw">class</span><span class="pun">)</span>
+<span class="kw">class</span><span class="txt"> </span><span class="typ">RedisAutoConfig</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="ann">@Bean</span>
+<span class="txt">    </span><span class="ann">@ConditionalOnMissingBean</span>
+<span class="txt">    </span><span class="typ">RedisTemplate</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">,</span><span class="txt"> </span><span class="typ">String</span><span class="pun">&gt;</span><span class="txt"> </span><span class="met">redisTemplate</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="kw">return</span><span class="txt"> </span><span class="kw">new</span><span class="txt"> </span><span class="typ">RedisTemplate</span><span class="pun">&lt;</span><span class="pun">&gt;</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span>
+<span class="txt">    </span><span class="pun">}</span>
+<span class="pun">}</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-259.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(253/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-259" readonly rows="10">🚀 Spring Boot: @ConditionalOnClass is a Spring Boot annotation used in auto-configuration.
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(271/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-259" readonly rows="10">💡 @ConditionalOnClass — only wire a bean if the class is on the classpath.
 
-✅It conditionally enables a bean or configuration only if a specified class is present on the classpath
+✅ Powers starter auto-config (Kafka, Redis, …)
 
-✅ #SpringBoot #Microservices
+✅ No dependency? Config is skipped — no ClassNotFoundException
 
-#SpringBoot #Microservices</textarea>
+✅ Pair with @ConditionalOnMissingBean so apps can override
+
+#SpringBoot #AutoConfig</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-259">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -673,25 +685,43 @@
 
         </style>
         <div class="carbon-local-260">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-boot-tips</span></div><div class="carbon-editor"><pre><code><span class="com">// 🚀Spring Boot: spring.main.lazy-initialization=true doesn&#x27;t just delay bean creation, it skips @PostConstruct entirely until first use. Be careful and watch for side effects.</span>
-<span class="com">//</span>
-<span class="com">// ✅ #SpringBoot #SoftwareDevelopment</span>
-<span class="com">//</span>
-<span class="com">// ✅ Runnable sample: `spring-boot-tips`</span>
-<span class="com">//</span>
-<span class="com">// ✅ Architecture diagram + Carbon CodePen below</span></code></pre></div></div>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-boot-tips</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="pun">#</span><span class="txt"> </span><span class="pun">❌</span><span class="txt"> </span><span class="typ">Lazy</span><span class="pun">=</span><span class="kw">true</span><span class="txt"> </span><span class="pun">—</span><span class="txt"> </span><span class="ann">@PostConstruct</span><span class="txt"> </span><span class="txt">waits</span><span class="txt"> </span><span class="txt">until</span><span class="txt"> </span><span class="txt">first</span><span class="txt"> </span><span class="txt">use</span>
+<span class="txt">spring</span><span class="pun">:</span>
+<span class="txt">  </span><span class="txt">main</span><span class="pun">:</span>
+<span class="txt">    </span><span class="txt">lazy</span><span class="pun">-</span><span class="txt">initialization</span><span class="pun">:</span><span class="txt"> </span><span class="kw">true</span>
+
+<span class="ann">@Service</span>
+<span class="kw">class</span><span class="txt"> </span><span class="typ">CacheWarmer</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="ann">@PostConstruct</span>
+<span class="txt">    </span><span class="kw">void</span><span class="txt"> </span><span class="met">warm</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="txt">cache</span><span class="pun">.</span><span class="met">loadAll</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span><span class="txt"> </span><span class="com">// NOT at startup when lazy</span>
+<span class="txt">    </span><span class="pun">}</span>
+<span class="pun">}</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="pun">#</span><span class="txt"> </span><span class="pun">✅</span><span class="txt"> </span><span class="typ">Need</span><span class="txt"> </span><span class="txt">init</span><span class="txt"> </span><span class="txt">at</span><span class="txt"> </span><span class="txt">boot</span><span class="pun">?</span><span class="txt"> </span><span class="typ">Stay</span><span class="txt"> </span><span class="met">eager</span><span class="txt"> </span><span class="pun">(</span><span class="kw">default</span><span class="pun">)</span><span class="txt"> </span><span class="txt">or</span><span class="txt"> </span><span class="txt">force</span><span class="txt"> </span><span class="txt">the</span><span class="txt"> </span><span class="txt">bean</span>
+<span class="txt">spring</span><span class="pun">:</span>
+<span class="txt">  </span><span class="txt">main</span><span class="pun">:</span>
+<span class="txt">    </span><span class="txt">lazy</span><span class="pun">-</span><span class="txt">initialization</span><span class="pun">:</span><span class="txt"> </span><span class="kw">false</span><span class="txt">   </span><span class="pun">#</span><span class="txt"> </span><span class="kw">default</span><span class="txt"> </span><span class="pun">—</span><span class="txt"> </span><span class="typ">PostConstruct</span><span class="txt"> </span><span class="txt">at</span><span class="txt"> </span><span class="txt">startup</span>
+
+<span class="pun">#</span><span class="txt"> </span><span class="typ">Or</span><span class="txt"> </span><span class="txt">keep</span><span class="txt"> </span><span class="txt">lazy</span><span class="pun">,</span><span class="txt"> </span><span class="txt">but</span><span class="txt"> </span><span class="txt">touch</span><span class="txt"> </span><span class="txt">critical</span><span class="txt"> </span><span class="txt">beans</span><span class="txt"> </span><span class="txt">early</span><span class="pun">:</span>
+<span class="ann">@Bean</span>
+<span class="typ">ApplicationRunner</span><span class="txt"> </span><span class="met">touch</span><span class="pun">(</span><span class="typ">CacheWarmer</span><span class="txt"> </span><span class="txt">warmer</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="kw">return</span><span class="txt"> </span><span class="txt">args</span><span class="txt"> </span><span class="pun">-</span><span class="pun">&gt;</span><span class="txt"> </span><span class="pun">{</span><span class="txt"> </span><span class="com">/* injecting warmer creates it now */</span><span class="txt"> </span><span class="pun">}</span><span class="pun">;</span>
+<span class="pun">}</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-260.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(243/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-260" readonly rows="10">🚀Spring Boot: spring.main.lazy-initialization=true doesn't just delay bean creation, it skips @PostConstruct entirely until first use. Be careful and watch for side effects.
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(268/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-260" readonly rows="10">💡 spring.main.lazy-initialization=true delays more than bean creation.
 
-✅ #SpringBoot #SoftwareDevelopment
+✅ Beans (and @PostConstruct) run only on first use
 
-#SpringBoot #SoftwareDevelopment</textarea>
+✅ Faster startup — but warmup / schema checks may never fire
+
+✅ Keep critical init eager, or touch the bean during startup
+
+#SpringBoot #Startup</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-260">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
