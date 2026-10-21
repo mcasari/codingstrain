@@ -1,12 +1,13 @@
-// ✅ Boot 4
-package com.example.env;
+// ❌ Boot 3 — old package + factories key
+import org.springframework.boot.env.EnvironmentPostProcessor;
+# META-INF/spring.factories
+org.springframework.boot.env.EnvironmentPostProcessor=\
+com.example.env.RegionEnvironmentPostProcessor
 
+// ✅ Boot 4 — package is now org.springframework.boot
 import org.springframework.boot.EnvironmentPostProcessor;
-import org.springframework.core.env.ConfigurableEnvironment;
-
 public class RegionEnvironmentPostProcessor
         implements EnvironmentPostProcessor {
-
     @Override
     public void postProcessEnvironment(
             ConfigurableEnvironment env,
@@ -14,7 +15,6 @@ public class RegionEnvironmentPostProcessor
         // add defaults before context refresh
     }
 }
-
 # META-INF/spring.factories
 org.springframework.boot.EnvironmentPostProcessor=\
 com.example.env.RegionEnvironmentPostProcessor

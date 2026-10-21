@@ -1,7 +1,9 @@
-🚀Spring Boot integrates easily with Kafka to implement event-driven architectures.
+💡 Spring Boot + Kafka: publish and consume events with almost no glue.
 
-✅ #SpringBoot #JavaDev
+✅ Inject KafkaTemplate to send to a topic
 
-✅ The final step is implementing consumer and producers as Java objects:
+✅ @KafkaListener turns a method into a consumer
 
-#SpringBoot #JavaDev
+✅ Starter auto-wires the client from spring.kafka.*
+
+#SpringBoot #Kafka

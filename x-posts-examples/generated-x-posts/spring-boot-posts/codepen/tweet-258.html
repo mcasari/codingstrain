@@ -138,13 +138,26 @@
 
         </style>
         <div class="carbon-local-258">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-boot-tips</span></div><div class="carbon-editor"><pre><code><span class="com">// 🚀Spring Boot integrates easily with Kafka to implement event-driven architectures.</span>
-<span class="com">//</span>
-<span class="com">// ✅ #SpringBoot #JavaDev</span>
-<span class="com">//</span>
-<span class="com">// ✅ The final step is implementing consumer and producers as Java objects:</span>
-<span class="com">//</span>
-<span class="com">// ✅ Runnable sample: `spring-boot-tips`</span></code></pre></div></div>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-kafka-demo</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="com">// ✅ Producer — send with KafkaTemplate</span>
+<span class="ann">@Service</span>
+<span class="kw">class</span><span class="txt"> </span><span class="typ">MessageProducer</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="kw">private</span><span class="txt"> </span><span class="kw">final</span><span class="txt"> </span><span class="typ">KafkaTemplate</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">,</span><span class="txt"> </span><span class="typ">String</span><span class="pun">&gt;</span><span class="txt"> </span><span class="txt">kafka</span><span class="pun">;</span>
+
+<span class="txt">    </span><span class="met">MessageProducer</span><span class="pun">(</span><span class="typ">KafkaTemplate</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">,</span><span class="txt"> </span><span class="typ">String</span><span class="pun">&gt;</span><span class="txt"> </span><span class="txt">kafka</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="kw">this</span><span class="pun">.</span><span class="txt">kafka</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="txt">kafka</span><span class="pun">;</span>
+<span class="txt">    </span><span class="pun">}</span>
+
+<span class="txt">    </span><span class="kw">void</span><span class="txt"> </span><span class="met">send</span><span class="pun">(</span><span class="typ">String</span><span class="txt"> </span><span class="txt">message</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="txt">kafka</span><span class="pun">.</span><span class="met">send</span><span class="pun">(</span><span class="str">&quot;demo-topic&quot;</span><span class="pun">,</span><span class="txt"> </span><span class="txt">message</span><span class="pun">)</span><span class="pun">;</span>
+<span class="txt">    </span><span class="pun">}</span>
+<span class="pun">}</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="com">// ✅ Consumer — method becomes a listener</span>
+<span class="ann">@Service</span>
+<span class="kw">class</span><span class="txt"> </span><span class="typ">MessageConsumer</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="ann">@KafkaListener</span><span class="pun">(</span><span class="txt">topics</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="str">&quot;demo-topic&quot;</span><span class="pun">,</span><span class="txt"> </span><span class="txt">groupId</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="str">&quot;demo-group&quot;</span><span class="pun">)</span>
+<span class="txt">    </span><span class="kw">void</span><span class="txt"> </span><span class="met">listen</span><span class="pun">(</span><span class="typ">String</span><span class="txt"> </span><span class="txt">message</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="typ">System</span><span class="pun">.</span><span class="txt">out</span><span class="pun">.</span><span class="met">println</span><span class="pun">(</span><span class="str">&quot;Received: &quot;</span><span class="txt"> </span><span class="pun">+</span><span class="txt"> </span><span class="txt">message</span><span class="pun">)</span><span class="pun">;</span>
+<span class="txt">    </span><span class="pun">}</span>
+<span class="pun">}</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-258.html" target="_blank" rel="noopener">Open pen preview</a>

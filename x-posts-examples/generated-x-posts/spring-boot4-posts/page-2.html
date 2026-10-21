@@ -1449,7 +1449,7 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0.5rem;
-            min-height: 960px;
+            min-height: 744px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             border-radius: 12px;
             display: flex;
@@ -1457,7 +1457,7 @@
           }
           .carbon-local-29 .carbon {
             flex: 1;
-            min-height: 944px;
+            min-height: 728px;
             max-width: none;
           }
           .carbon {
@@ -1565,15 +1565,14 @@
 
         </style>
         <div class="carbon-local-29">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-boot4-tips</span></div><div class="carbon-editor"><pre><code><span class="com">// ✅ Boot 4</span>
-<span class="kw">package</span><span class="txt"> </span><span class="txt">com</span><span class="pun">.</span><span class="txt">example</span><span class="pun">.</span><span class="txt">env</span><span class="pun">;</span>
-
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-boot4-tips</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="com">// ❌ Boot 3 — old package + factories key</span>
+<span class="kw">import</span><span class="txt"> </span><span class="txt">org</span><span class="pun">.</span><span class="txt">springframework</span><span class="pun">.</span><span class="txt">boot</span><span class="pun">.</span><span class="txt">env</span><span class="pun">.</span><span class="typ">EnvironmentPostProcessor</span><span class="pun">;</span>
+<span class="pun">#</span><span class="txt"> </span><span class="typ">META</span><span class="pun">-</span><span class="typ">INF</span><span class="pun">/</span><span class="txt">spring</span><span class="pun">.</span><span class="txt">factories</span>
+<span class="txt">org</span><span class="pun">.</span><span class="txt">springframework</span><span class="pun">.</span><span class="txt">boot</span><span class="pun">.</span><span class="txt">env</span><span class="pun">.</span><span class="typ">EnvironmentPostProcessor</span><span class="pun">=</span><span class="pun">\</span>
+<span class="txt">com</span><span class="pun">.</span><span class="txt">example</span><span class="pun">.</span><span class="txt">env</span><span class="pun">.</span><span class="typ">RegionEnvironmentPostProcessor</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="com">// ✅ Boot 4 — package is now org.springframework.boot</span>
 <span class="kw">import</span><span class="txt"> </span><span class="txt">org</span><span class="pun">.</span><span class="txt">springframework</span><span class="pun">.</span><span class="txt">boot</span><span class="pun">.</span><span class="typ">EnvironmentPostProcessor</span><span class="pun">;</span>
-<span class="kw">import</span><span class="txt"> </span><span class="txt">org</span><span class="pun">.</span><span class="txt">springframework</span><span class="pun">.</span><span class="txt">core</span><span class="pun">.</span><span class="txt">env</span><span class="pun">.</span><span class="typ">ConfigurableEnvironment</span><span class="pun">;</span>
-
 <span class="kw">public</span><span class="txt"> </span><span class="kw">class</span><span class="txt"> </span><span class="typ">RegionEnvironmentPostProcessor</span>
 <span class="txt">        </span><span class="kw">implements</span><span class="txt"> </span><span class="typ">EnvironmentPostProcessor</span><span class="txt"> </span><span class="pun">{</span>
-
 <span class="txt">    </span><span class="ann">@Override</span>
 <span class="txt">    </span><span class="kw">public</span><span class="txt"> </span><span class="kw">void</span><span class="txt"> </span><span class="met">postProcessEnvironment</span><span class="pun">(</span>
 <span class="txt">            </span><span class="typ">ConfigurableEnvironment</span><span class="txt"> </span><span class="txt">env</span><span class="pun">,</span>
@@ -1581,24 +1580,23 @@
 <span class="txt">        </span><span class="com">// add defaults before context refresh</span>
 <span class="txt">    </span><span class="pun">}</span>
 <span class="pun">}</span>
-
 <span class="pun">#</span><span class="txt"> </span><span class="typ">META</span><span class="pun">-</span><span class="typ">INF</span><span class="pun">/</span><span class="txt">spring</span><span class="pun">.</span><span class="txt">factories</span>
 <span class="txt">org</span><span class="pun">.</span><span class="txt">springframework</span><span class="pun">.</span><span class="txt">boot</span><span class="pun">.</span><span class="typ">EnvironmentPostProcessor</span><span class="pun">=</span><span class="pun">\</span>
-<span class="txt">com</span><span class="pun">.</span><span class="txt">example</span><span class="pun">.</span><span class="txt">env</span><span class="pun">.</span><span class="typ">RegionEnvironmentPostProcessor</span></code></pre></div></div>
+<span class="txt">com</span><span class="pun">.</span><span class="txt">example</span><span class="pun">.</span><span class="txt">env</span><span class="pun">.</span><span class="typ">RegionEnvironmentPostProcessor</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-29.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(236/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-29" readonly rows="10">🚀 Spring Boot 4: EnvironmentPostProcessor package moved.
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(254/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-29" readonly rows="10">💡 Spring Boot 4: EnvironmentPostProcessor moved to a new package.
 
 ✅ New: org.springframework.boot.EnvironmentPostProcessor
 
-✅ Old package kept temporarily (deprecated)
+✅ Old …boot.env… package still works — but is deprecated
 
-✅ Update spring.factories / AutoConfiguration.imports
+✅ Update the import and your spring.factories key
 
 #SpringBoot4 #Config</textarea>
       <p class="copy-row">

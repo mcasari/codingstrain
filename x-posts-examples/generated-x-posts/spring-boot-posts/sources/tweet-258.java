@@ -1,7 +1,22 @@
-// 🚀Spring Boot integrates easily with Kafka to implement event-driven architectures.
-//
-// ✅ #SpringBoot #JavaDev
-//
-// ✅ The final step is implementing consumer and producers as Java objects:
-//
-// ✅ Runnable sample: `spring-boot-tips`
+// ✅ Producer — send with KafkaTemplate
+@Service
+class MessageProducer {
+    private final KafkaTemplate<String, String> kafka;
+
+    MessageProducer(KafkaTemplate<String, String> kafka) {
+        this.kafka = kafka;
+    }
+
+    void send(String message) {
+        kafka.send("demo-topic", message);
+    }
+}
+
+// ✅ Consumer — method becomes a listener
+@Service
+class MessageConsumer {
+    @KafkaListener(topics = "demo-topic", groupId = "demo-group")
+    void listen(String message) {
+        System.out.println("Received: " + message);
+    }
+}
