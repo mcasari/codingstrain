@@ -1,3 +1,9 @@
-💡 Learn design patterns to write reusable, maintainable code. #Java #DesignPatterns
+💡 Design patterns are reusable solutions — start with Strategy.
+
+✅ Replace a growing if/else with small classes
+
+✅ Same job, different behavior — swap without rewriting callers
+
+✅ Learn patterns when you feel pain, not just from a catalog
 
 #Java #DesignPatterns

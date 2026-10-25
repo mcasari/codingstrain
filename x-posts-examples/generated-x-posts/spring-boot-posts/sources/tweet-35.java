@@ -5,5 +5,3 @@
 // ✅ Runnable sample: `spring-batch-csv-sample`
 //
 // ✅ Architecture diagram + Carbon CodePen below
-//
-// #SpringBoot
