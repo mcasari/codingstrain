@@ -1,7 +1,9 @@
-💡 Java Tip 💡: Make use of annotations like @NotNull, @Nullable for better tooling support. #Java #Annotations
+💡 Mark nulls with @NonNull / @Nullable — help the IDE catch bugs.
 
-✅ Java Tip 💡: Make use of annotations like @NotNull, @Nullable for better tooling support. #Java #Annotations
+✅ Documents what may be null (no runtime change)
 
-✅ Uses @PostMapping in the snippet
+✅ Tools warn on possible NPEs while you type
+
+✅ Pick one standard (JSpecify or JetBrains) project-wide
 
 #Java #Annotations
