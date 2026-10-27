@@ -2022,22 +2022,36 @@
 
         </style>
         <div class="carbon-local-118">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor"><pre><code><span class="com">// Arrow form: no fall-through, returns a value</span>
-<span class="typ">String</span><span class="txt"> </span><span class="txt">label</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="kw">switch</span><span class="txt"> </span><span class="pun">(</span><span class="txt">status</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
-<span class="txt">    </span><span class="kw">case</span><span class="txt"> </span><span class="typ">ACTIVE</span><span class="txt">  </span><span class="pun">-</span><span class="pun">&gt;</span><span class="txt"> </span><span class="str">&quot;running&quot;</span><span class="pun">;</span>
-<span class="txt">    </span><span class="kw">case</span><span class="txt"> </span><span class="typ">PAUSED</span><span class="txt">  </span><span class="pun">-</span><span class="pun">&gt;</span><span class="txt"> </span><span class="str">&quot;on hold&quot;</span><span class="pun">;</span>
-<span class="txt">    </span><span class="kw">case</span><span class="txt"> </span><span class="typ">STOPPED</span><span class="txt"> </span><span class="pun">-</span><span class="pun">&gt;</span><span class="txt"> </span><span class="str">&quot;done&quot;</span><span class="pun">;</span>
-<span class="pun">}</span><span class="pun">;</span></code></pre></div></div>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="com">// ❌ Switch grows with every new status</span>
+<span class="kw">double</span><span class="txt"> </span><span class="met">fee</span><span class="pun">(</span><span class="typ">String</span><span class="txt"> </span><span class="txt">status</span><span class="pun">,</span><span class="txt"> </span><span class="kw">double</span><span class="txt"> </span><span class="txt">amount</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="kw">switch</span><span class="txt"> </span><span class="pun">(</span><span class="txt">status</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="kw">case</span><span class="txt"> </span><span class="str">&quot;NEW&quot;</span><span class="pun">:</span><span class="txt"> </span><span class="kw">return</span><span class="txt"> </span><span class="txt">amount</span><span class="txt"> </span><span class="pun">*</span><span class="txt"> </span><span class="num">0.02</span><span class="pun">;</span>
+<span class="txt">        </span><span class="kw">case</span><span class="txt"> </span><span class="str">&quot;VIP&quot;</span><span class="pun">:</span><span class="txt"> </span><span class="kw">return</span><span class="txt"> </span><span class="txt">amount</span><span class="txt"> </span><span class="pun">*</span><span class="txt"> </span><span class="num">0.01</span><span class="pun">;</span>
+<span class="txt">        </span><span class="kw">case</span><span class="txt"> </span><span class="str">&quot;CANCELLED&quot;</span><span class="pun">:</span><span class="txt"> </span><span class="kw">return</span><span class="txt"> </span><span class="num">0</span><span class="pun">;</span>
+<span class="txt">        </span><span class="kw">default</span><span class="pun">:</span><span class="txt"> </span><span class="kw">throw</span><span class="txt"> </span><span class="kw">new</span><span class="txt"> </span><span class="met">IllegalArgumentException</span><span class="pun">(</span><span class="txt">status</span><span class="pun">)</span><span class="pun">;</span>
+<span class="txt">    </span><span class="pun">}</span>
+<span class="pun">}</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="com">// ✅ Polymorphism — each type owns its fee</span>
+<span class="kw">interface</span><span class="txt"> </span><span class="typ">Priced</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="kw">double</span><span class="txt"> </span><span class="met">fee</span><span class="pun">(</span><span class="kw">double</span><span class="txt"> </span><span class="txt">amount</span><span class="pun">)</span><span class="pun">;</span>
+<span class="pun">}</span>
+<span class="com">// NewOrder / VipOrder / CancelledOrder each implement Priced</span>
+<span class="kw">double</span><span class="txt"> </span><span class="met">fee</span><span class="pun">(</span><span class="typ">Priced</span><span class="txt"> </span><span class="txt">order</span><span class="pun">,</span><span class="txt"> </span><span class="kw">double</span><span class="txt"> </span><span class="txt">amount</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="kw">return</span><span class="txt"> </span><span class="txt">order</span><span class="pun">.</span><span class="met">fee</span><span class="pun">(</span><span class="txt">amount</span><span class="pun">)</span><span class="pun">;</span><span class="txt"> </span><span class="com">// no switch to edit</span>
+<span class="pun">}</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-118.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(204/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-118" readonly rows="10">💡 Java Tip 💡: Refactor large switch statements into polymorphic classes. #Java #Refactoring
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(242/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-118" readonly rows="10">💡 Big switch on type/status? Move behavior into classes.
 
-✅ Java Tip 💡: Refactor large switch statements into polymorphic classes. #Java #Refactoring
+✅ Every new case means editing the same method again
+
+✅ Polymorphism: each type implements its own behavior
+
+✅ Add a case by adding a class — callers stay unchanged
 
 #Java #Refactoring</textarea>
       <p class="copy-row">
@@ -2176,23 +2190,32 @@
 
         </style>
         <div class="carbon-local-119">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor"><pre><code><span class="com">// 💡 Java tip:💡: Use thread pools (`Executors`) instead of manually managing threads. #Java #Concurrency</span>
-<span class="com">//</span>
-<span class="com">// ✅ Java tip:💡: Use thread pools (`Executors`) instead of manually managing threads. #Java #Concurrency</span>
-<span class="com">//</span>
-<span class="com">// ✅ Runnable sample: `java-tips`</span>
-<span class="com">//</span>
-<span class="com">// ✅ Architecture diagram + Carbon CodePen below</span></code></pre></div></div>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="com">// ❌ New OS thread per job — costly, unbounded</span>
+<span class="kw">for</span><span class="txt"> </span><span class="pun">(</span><span class="typ">String</span><span class="txt"> </span><span class="txt">url</span><span class="txt"> </span><span class="pun">:</span><span class="txt"> </span><span class="txt">urls</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="kw">new</span><span class="txt"> </span><span class="met">Thread</span><span class="pun">(</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">-</span><span class="pun">&gt;</span><span class="txt"> </span><span class="txt">http</span><span class="pun">.</span><span class="met">get</span><span class="pun">(</span><span class="txt">url</span><span class="pun">)</span><span class="pun">)</span><span class="pun">.</span><span class="met">start</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span><span class="txt"> </span><span class="com">// no limit, hard to join</span>
+<span class="pun">}</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="com">// ✅ Reuse a fixed pool — bounded and manageable</span>
+<span class="typ">ExecutorService</span><span class="txt"> </span><span class="txt">pool</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="typ">Executors</span><span class="pun">.</span><span class="met">newFixedThreadPool</span><span class="pun">(</span><span class="num">8</span><span class="pun">)</span><span class="pun">;</span>
+<span class="kw">try</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="kw">for</span><span class="txt"> </span><span class="pun">(</span><span class="typ">String</span><span class="txt"> </span><span class="txt">url</span><span class="txt"> </span><span class="pun">:</span><span class="txt"> </span><span class="txt">urls</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="txt">pool</span><span class="pun">.</span><span class="met">submit</span><span class="pun">(</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">-</span><span class="pun">&gt;</span><span class="txt"> </span><span class="txt">http</span><span class="pun">.</span><span class="met">get</span><span class="pun">(</span><span class="txt">url</span><span class="pun">)</span><span class="pun">)</span><span class="pun">;</span>
+<span class="txt">    </span><span class="pun">}</span>
+<span class="pun">}</span><span class="txt"> </span><span class="kw">finally</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="txt">pool</span><span class="pun">.</span><span class="met">shutdown</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span><span class="txt"> </span><span class="com">// always stop the pool</span>
+<span class="pun">}</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-119.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(220/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-119" readonly rows="10">💡 Java tip:💡: Use thread pools (Executors) instead of manually managing threads. #Java #Concurrency
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(213/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-119" readonly rows="10">💡 Don’t new Thread() for every task — use a thread pool.
 
-✅ Java tip:💡: Use thread pools (Executors) instead of manually managing threads. #Java #Concurrency
+✅ Creating threads is expensive; pools reuse them
+
+✅ Executors caps how many run at once
+
+✅ Always shutdown() the pool when you’re done
 
 #Java #Concurrency</textarea>
       <p class="copy-row">

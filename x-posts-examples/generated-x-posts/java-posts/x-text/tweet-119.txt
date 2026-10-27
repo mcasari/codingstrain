@@ -1,5 +1,9 @@
-💡 Java tip:💡: Use thread pools (Executors) instead of manually managing threads. #Java #Concurrency
+💡 Don’t new Thread() for every task — use a thread pool.
 
-✅ Java tip:💡: Use thread pools (Executors) instead of manually managing threads. #Java #Concurrency
+✅ Creating threads is expensive; pools reuse them
+
+✅ Executors caps how many run at once
+
+✅ Always shutdown() the pool when you’re done
 
 #Java #Concurrency

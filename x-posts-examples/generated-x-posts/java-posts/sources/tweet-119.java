@@ -1,7 +1,14 @@
-// 💡 Java tip:💡: Use thread pools (`Executors`) instead of manually managing threads. #Java #Concurrency
-//
-// ✅ Java tip:💡: Use thread pools (`Executors`) instead of manually managing threads. #Java #Concurrency
-//
-// ✅ Runnable sample: `java-tips`
-//
-// ✅ Architecture diagram + Carbon CodePen below
+// ❌ New OS thread per job — costly, unbounded
+for (String url : urls) {
+    new Thread(() -> http.get(url)).start(); // no limit, hard to join
+}
+
+// ✅ Reuse a fixed pool — bounded and manageable
+ExecutorService pool = Executors.newFixedThreadPool(8);
+try {
+    for (String url : urls) {
+        pool.submit(() -> http.get(url));
+    }
+} finally {
+    pool.shutdown(); // always stop the pool
+}

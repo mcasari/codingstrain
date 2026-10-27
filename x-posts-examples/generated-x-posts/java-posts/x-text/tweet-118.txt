@@ -1,5 +1,9 @@
-💡 Java Tip 💡: Refactor large switch statements into polymorphic classes. #Java #Refactoring
+💡 Big switch on type/status? Move behavior into classes.
 
-✅ Java Tip 💡: Refactor large switch statements into polymorphic classes. #Java #Refactoring
+✅ Every new case means editing the same method again
+
+✅ Polymorphism: each type implements its own behavior
+
+✅ Add a case by adding a class — callers stay unchanged
 
 #Java #Refactoring

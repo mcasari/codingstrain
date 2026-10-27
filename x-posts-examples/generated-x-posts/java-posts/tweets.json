@@ -732,20 +732,23 @@
   {
     "id": 118,
     "module": "java-tips",
-    "body": "💡 Java Tip 💡: Refactor large switch statements into polymorphic classes. #Java #Refactoring\n\n✅ Java Tip 💡: Refactor large switch statements into polymorphic classes. #Java #Refactoring\n\n✅ Runnable sample: `java-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "body": "💡 Big `switch` on type/status? Move behavior into classes.\n\n✅ Every new case means editing the same method again\n\n✅ Polymorphism: each type implements its own behavior\n\n✅ Add a case by adding a class — callers stay unchanged",
     "tags": "#Java #Refactoring",
     "codepen_style": "carbon",
     "codepen_large": true,
-    "code": "// Arrow form: no fall-through, returns a value\nString label = switch (status) {\n    case ACTIVE  -> \"running\";\n    case PAUSED  -> \"on hold\";\n    case STOPPED -> \"done\";\n};",
+    "code": "// ❌ Switch grows with every new status\ndouble fee(String status, double amount) {\n    switch (status) {\n        case \"NEW\": return amount * 0.02;\n        case \"VIP\": return amount * 0.01;\n        case \"CANCELLED\": return 0;\n        default: throw new IllegalArgumentException(status);\n    }\n}\n\n// ✅ Polymorphism — each type owns its fee\ninterface Priced {\n    double fee(double amount);\n}\n// NewOrder / VipOrder / CancelledOrder each implement Priced\ndouble fee(Priced order, double amount) {\n    return order.fee(amount); // no switch to edit\n}\n",
+    "codepen_columns": 2,
     "category": "java"
   },
   {
     "id": 119,
     "module": "java-tips",
-    "body": "💡 Java tip:💡: Use thread pools (`Executors`) instead of manually managing threads. #Java #Concurrency\n\n✅ Java tip:💡: Use thread pools (`Executors`) instead of manually managing threads. #Java #Concurrency\n\n✅ Runnable sample: `java-tips`\n\n✅ Architecture diagram + Carbon CodePen below",
+    "body": "💡 Don’t `new Thread()` for every task — use a thread pool.\n\n✅ Creating threads is expensive; pools reuse them\n\n✅ `Executors` caps how many run at once\n\n✅ Always `shutdown()` the pool when you’re done\n\n#Java #Concurrency",
     "tags": "#Java #Concurrency",
     "codepen_style": "carbon",
     "codepen_large": true,
+    "code": "// ❌ New OS thread per job — costly, unbounded\nfor (String url : urls) {\n    new Thread(() -> http.get(url)).start(); // no limit, hard to join\n}\n\n// ✅ Reuse a fixed pool — bounded and manageable\nExecutorService pool = Executors.newFixedThreadPool(8);\ntry {\n    for (String url : urls) {\n        pool.submit(() -> http.get(url));\n    }\n} finally {\n    pool.shutdown(); // always stop the pool\n}\n",
+    "codepen_columns": 2,
     "category": "java"
   },
   {
