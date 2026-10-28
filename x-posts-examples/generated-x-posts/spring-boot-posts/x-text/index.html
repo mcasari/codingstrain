@@ -1065,17 +1065,17 @@
     </article>
     <article>
       <h2>Tweet #197</h2>
-      <p class="preview">💡 Spring Boot tip: use</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(176/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-197" readonly rows="10">💡 Spring Boot tip: use
+      <p class="preview">💡 Put business rules in a @Transactional service — not the controller.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(264/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-197" readonly rows="10">💡 Put business rules in a @Transactional service — not the controller.
 
-✅  You coordinate business logic in the service layer, and a service method:
+✅ One method can call several repositories safely
 
-✅ Calls one or more repositories
+✅ All DB work commits together — or rolls back together
 
-✅ Implements business rules
+✅ Controllers stay thin: validate input, call the service
 
-#SpringBoot</textarea>
+#SpringBoot #Transactions</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-197">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>

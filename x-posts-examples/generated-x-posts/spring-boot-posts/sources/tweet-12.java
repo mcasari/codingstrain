@@ -5,3 +5,5 @@
 // ✅ Runnable sample: `spring-boot-validated-config`
 //
 // ✅ Architecture diagram + Carbon CodePen below
+//
+// #SpringBoot

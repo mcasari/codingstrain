@@ -1,9 +1,9 @@
-💡 Spring Boot tip: use
+💡 Put business rules in a @Transactional service — not the controller.
 
-✅  You coordinate business logic in the service layer, and a service method:
+✅ One method can call several repositories safely
 
-✅ Calls one or more repositories
+✅ All DB work commits together — or rolls back together
 
-✅ Implements business rules
+✅ Controllers stay thin: validate input, call the service
 
-#SpringBoot
+#SpringBoot #Transactions
