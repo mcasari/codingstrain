@@ -619,10 +619,12 @@
   {
     "id": 199,
     "module": "spring-boot-tips",
-    "body": "🚀 Spring Boot: springdoc-openapi automatically generates OpenAPI 3.0 (Swagger) documentation from your Spring Boot REST controllers.\n\n✅ An interactive Swagger UI\n\n✅ Auto-scanned from your code\n\n✅ Export API docs in JSON/YAML",
-    "tags": "#SpringBoot",
+    "body": "💡 Add springdoc-openapi — Swagger docs from your controllers, no hand-written YAML.\n\n✅ Drop in the starter dependency — endpoints are scanned\n\n✅ Open `/swagger-ui.html` for an interactive UI\n\n✅ Export OpenAPI JSON/YAML for clients and gateways\n\n#SpringBoot #OpenAPI",
+    "tags": "#SpringBoot #OpenAPI",
     "codepen_style": "carbon",
     "codepen_large": true,
+    "code": "<!-- ❌ No docs — clients guess your API from code alone -->\n<!-- (no springdoc dependency, no /swagger-ui.html) -->\n\n<!-- ✅ springdoc-openapi — OpenAPI 3 from REST controllers -->\n<dependency>\n  <groupId>org.springdoc</groupId>\n  <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>\n</dependency>\n@RestController\n@RequestMapping(\"/users\")\nclass UserController {\n    @Operation(summary = \"Get user by id\")\n    @GetMapping(\"/{id}\")\n    User get(@PathVariable Long id) {\n        return users.findById(id);\n    }\n}\n// UI: /swagger-ui.html   JSON: /v3/api-docs\n",
+    "codepen_columns": 2,
     "category": "spring-boot"
   },
   {

@@ -22,7 +22,7 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0.5rem;
-            min-height: 720px;
+            min-height: 780px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             border-radius: 12px;
             display: flex;
@@ -30,7 +30,7 @@
           }
           .carbon-local-199 .carbon {
             flex: 1;
-            min-height: 704px;
+            min-height: 764px;
             max-width: none;
           }
           .carbon {
@@ -138,13 +138,22 @@
 
         </style>
         <div class="carbon-local-199">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-boot-tips</span></div><div class="carbon-editor"><pre><code><span class="com">// 🚀 Spring Boot: springdoc-openapi automatically generates OpenAPI 3.0 (Swagger) documentation from your Spring Boot REST controllers.</span>
-<span class="com">//</span>
-<span class="com">// ✅ An interactive Swagger UI</span>
-<span class="com">//</span>
-<span class="com">// ✅ Auto-scanned from your code</span>
-<span class="com">//</span>
-<span class="com">// ✅ Export API docs in JSON/YAML</span></code></pre></div></div>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-boot-tips</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="pun">&lt;</span><span class="pun">!</span><span class="pun">-</span><span class="pun">-</span><span class="txt"> </span><span class="pun">❌</span><span class="txt"> </span><span class="typ">No</span><span class="txt"> </span><span class="txt">docs</span><span class="txt"> </span><span class="pun">—</span><span class="txt"> </span><span class="txt">clients</span><span class="txt"> </span><span class="txt">guess</span><span class="txt"> </span><span class="txt">your</span><span class="txt"> </span><span class="typ">API</span><span class="txt"> </span><span class="txt">from</span><span class="txt"> </span><span class="txt">code</span><span class="txt"> </span><span class="txt">alone</span><span class="txt"> </span><span class="pun">-</span><span class="pun">-</span><span class="pun">&gt;</span>
+<span class="pun">&lt;</span><span class="pun">!</span><span class="pun">-</span><span class="pun">-</span><span class="txt"> </span><span class="pun">(</span><span class="txt">no</span><span class="txt"> </span><span class="txt">springdoc</span><span class="txt"> </span><span class="txt">dependency</span><span class="pun">,</span><span class="txt"> </span><span class="txt">no</span><span class="txt"> </span><span class="pun">/</span><span class="txt">swagger</span><span class="pun">-</span><span class="txt">ui</span><span class="pun">.</span><span class="txt">html</span><span class="pun">)</span><span class="txt"> </span><span class="pun">-</span><span class="pun">-</span><span class="pun">&gt;</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="pun">&lt;</span><span class="pun">!</span><span class="pun">-</span><span class="pun">-</span><span class="txt"> </span><span class="pun">✅</span><span class="txt"> </span><span class="txt">springdoc</span><span class="pun">-</span><span class="txt">openapi</span><span class="txt"> </span><span class="pun">—</span><span class="txt"> </span><span class="typ">OpenAPI</span><span class="txt"> </span><span class="num">3</span><span class="txt"> </span><span class="txt">from</span><span class="txt"> </span><span class="typ">REST</span><span class="txt"> </span><span class="txt">controllers</span><span class="txt"> </span><span class="pun">-</span><span class="pun">-</span><span class="pun">&gt;</span>
+<span class="pun">&lt;</span><span class="txt">dependency</span><span class="pun">&gt;</span>
+<span class="txt">  </span><span class="pun">&lt;</span><span class="txt">groupId</span><span class="pun">&gt;</span><span class="txt">org</span><span class="pun">.</span><span class="txt">springdoc</span><span class="pun">&lt;</span><span class="pun">/</span><span class="txt">groupId</span><span class="pun">&gt;</span>
+<span class="txt">  </span><span class="pun">&lt;</span><span class="txt">artifactId</span><span class="pun">&gt;</span><span class="txt">springdoc</span><span class="pun">-</span><span class="txt">openapi</span><span class="pun">-</span><span class="txt">starter</span><span class="pun">-</span><span class="txt">webmvc</span><span class="pun">-</span><span class="txt">ui</span><span class="pun">&lt;</span><span class="pun">/</span><span class="txt">artifactId</span><span class="pun">&gt;</span>
+<span class="pun">&lt;</span><span class="pun">/</span><span class="txt">dependency</span><span class="pun">&gt;</span>
+<span class="ann">@RestController</span>
+<span class="ann">@RequestMapping</span><span class="pun">(</span><span class="str">&quot;/users&quot;</span><span class="pun">)</span>
+<span class="kw">class</span><span class="txt"> </span><span class="typ">UserController</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="ann">@Operation</span><span class="pun">(</span><span class="txt">summary</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="str">&quot;Get user by id&quot;</span><span class="pun">)</span>
+<span class="txt">    </span><span class="ann">@GetMapping</span><span class="pun">(</span><span class="str">&quot;/{id}&quot;</span><span class="pun">)</span>
+<span class="txt">    </span><span class="typ">User</span><span class="txt"> </span><span class="met">get</span><span class="pun">(</span><span class="ann">@PathVariable</span><span class="txt"> </span><span class="typ">Long</span><span class="txt"> </span><span class="txt">id</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="kw">return</span><span class="txt"> </span><span class="txt">users</span><span class="pun">.</span><span class="met">findById</span><span class="pun">(</span><span class="txt">id</span><span class="pun">)</span><span class="pun">;</span>
+<span class="txt">    </span><span class="pun">}</span>
+<span class="pun">}</span>
+<span class="com">// UI: /swagger-ui.html   JSON: /v3/api-docs</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-199.html" target="_blank" rel="noopener">Open pen preview</a>
