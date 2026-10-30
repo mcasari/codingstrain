@@ -138,13 +138,20 @@
 
         </style>
         <div class="carbon-local-127">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor"><pre><code><span class="com">// 💡 Java Tip 💡: You can use LinkedHashMap to easily implement an LRU (Least Recently Used) Cache.</span>
-<span class="com">//</span>
-<span class="com">// ✅ Java Tip 💡: You can use LinkedHashMap to easily implement an LRU (Least Recently Used) Cache</span>
-<span class="com">//</span>
-<span class="com">// ✅ #Java #Collections</span>
-<span class="com">//</span>
-<span class="com">// ✅ Runnable sample: `java-tips`</span></code></pre></div></div>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="com">// ❌ HashMap grows forever — nothing is evicted</span>
+<span class="typ">Map</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">,</span><span class="txt"> </span><span class="kw">byte</span><span class="pun">[</span><span class="pun">]</span><span class="pun">&gt;</span><span class="txt"> </span><span class="txt">cache</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="kw">new</span><span class="txt"> </span><span class="typ">HashMap</span><span class="pun">&lt;</span><span class="pun">&gt;</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span>
+<span class="txt">cache</span><span class="pun">.</span><span class="met">put</span><span class="pun">(</span><span class="txt">id</span><span class="pun">,</span><span class="txt"> </span><span class="txt">payload</span><span class="pun">)</span><span class="pun">;</span><span class="txt"> </span><span class="com">// memory leak over time</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="com">// ✅ LinkedHashMap LRU — eldest entry removed when over capacity</span>
+<span class="kw">class</span><span class="txt"> </span><span class="typ">LruCache</span><span class="pun">&lt;</span><span class="typ">K</span><span class="pun">,</span><span class="txt"> </span><span class="typ">V</span><span class="pun">&gt;</span><span class="txt"> </span><span class="kw">extends</span><span class="txt"> </span><span class="typ">LinkedHashMap</span><span class="pun">&lt;</span><span class="typ">K</span><span class="pun">,</span><span class="txt"> </span><span class="typ">V</span><span class="pun">&gt;</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="kw">private</span><span class="txt"> </span><span class="kw">final</span><span class="txt"> </span><span class="kw">int</span><span class="txt"> </span><span class="txt">max</span><span class="pun">;</span>
+<span class="txt">    </span><span class="met">LruCache</span><span class="pun">(</span><span class="kw">int</span><span class="txt"> </span><span class="txt">max</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="kw">super</span><span class="pun">(</span><span class="num">16</span><span class="pun">,</span><span class="txt"> </span><span class="num">0.75</span><span class="txt">f</span><span class="pun">,</span><span class="txt"> </span><span class="kw">true</span><span class="pun">)</span><span class="pun">;</span><span class="txt"> </span><span class="com">// accessOrder = true</span>
+<span class="txt">        </span><span class="kw">this</span><span class="pun">.</span><span class="txt">max</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="txt">max</span><span class="pun">;</span>
+<span class="txt">    </span><span class="pun">}</span>
+<span class="txt">    </span><span class="ann">@Override</span>
+<span class="txt">    </span><span class="kw">protected</span><span class="txt"> </span><span class="kw">boolean</span><span class="txt"> </span><span class="met">removeEldestEntry</span><span class="pun">(</span><span class="typ">Map</span><span class="pun">.</span><span class="typ">Entry</span><span class="pun">&lt;</span><span class="typ">K</span><span class="pun">,</span><span class="txt"> </span><span class="typ">V</span><span class="pun">&gt;</span><span class="txt"> </span><span class="txt">eldest</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="kw">return</span><span class="txt"> </span><span class="met">size</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">&gt;</span><span class="txt"> </span><span class="txt">max</span><span class="pun">;</span><span class="txt"> </span><span class="com">// drop least-recently used</span>
+<span class="txt">    </span><span class="pun">}</span>
+<span class="pun">}</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-127.html" target="_blank" rel="noopener">Open pen preview</a>

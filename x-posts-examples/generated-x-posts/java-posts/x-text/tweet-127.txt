@@ -1,7 +1,9 @@
-💡 Java Tip 💡: You can use LinkedHashMap to easily implement an LRU (Least Recently Used) Cache.
+💡 Need a tiny LRU cache? Use LinkedHashMap — no extra library.
 
-✅ Java Tip 💡: You can use LinkedHashMap to easily implement an LRU (Least Recently Used) Cache
+✅ accessOrder=true moves entries to the end on each get
 
-✅ #Java #Collections
+✅ Override removeEldestEntry to drop the oldest when full
+
+✅ Simple and clear — for production, prefer Caffeine/Guava
 
 #Java #Collections
