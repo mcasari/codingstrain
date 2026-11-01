@@ -138,13 +138,15 @@
 
         </style>
         <div class="carbon-local-218">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-boot-tips</span></div><div class="carbon-editor"><pre><code><span class="com">// 🚀 Spring Boot: To make your services return a paginated response, instead of a giant list, you can use Page&lt;T&gt; and Pageable.</span>
-<span class="com">//</span>
-<span class="com">// ✅ #SpringBoot #JavaDev</span>
-<span class="com">//</span>
-<span class="com">// ✅ Runnable sample: `spring-boot-tips`</span>
-<span class="com">//</span>
-<span class="com">// ✅ Architecture diagram + Carbon CodePen below</span></code></pre></div></div>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-boot-tips</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="com">// ❌ Loads every row — slow and memory-heavy</span>
+<span class="ann">@GetMapping</span><span class="pun">(</span><span class="str">&quot;/users&quot;</span><span class="pun">)</span>
+<span class="typ">List</span><span class="pun">&lt;</span><span class="typ">User</span><span class="pun">&gt;</span><span class="txt"> </span><span class="met">all</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="kw">return</span><span class="txt"> </span><span class="txt">users</span><span class="pun">.</span><span class="met">findAll</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span>
+<span class="pun">}</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="com">// ✅ Pageable in, Page out — one page at a time</span>
+<span class="ann">@GetMapping</span><span class="pun">(</span><span class="str">&quot;/users&quot;</span><span class="pun">)</span>
+<span class="typ">Page</span><span class="pun">&lt;</span><span class="typ">User</span><span class="pun">&gt;</span><span class="txt"> </span><span class="met">page</span><span class="pun">(</span><span class="typ">Pageable</span><span class="txt"> </span><span class="txt">pageable</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="kw">return</span><span class="txt"> </span><span class="txt">users</span><span class="pun">.</span><span class="met">findAll</span><span class="pun">(</span><span class="txt">pageable</span><span class="pun">)</span><span class="pun">;</span><span class="txt"> </span><span class="com">// ?page=0&amp;size=20&amp;sort=name</span>
+<span class="pun">}</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-218.html" target="_blank" rel="noopener">Open pen preview</a>

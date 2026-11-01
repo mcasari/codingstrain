@@ -351,25 +351,31 @@
 
         </style>
         <div class="carbon-local-218">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-boot-tips</span></div><div class="carbon-editor"><pre><code><span class="com">// 🚀 Spring Boot: To make your services return a paginated response, instead of a giant list, you can use Page&lt;T&gt; and Pageable.</span>
-<span class="com">//</span>
-<span class="com">// ✅ #SpringBoot #JavaDev</span>
-<span class="com">//</span>
-<span class="com">// ✅ Runnable sample: `spring-boot-tips`</span>
-<span class="com">//</span>
-<span class="com">// ✅ Architecture diagram + Carbon CodePen below</span></code></pre></div></div>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-boot-tips</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="com">// ❌ Loads every row — slow and memory-heavy</span>
+<span class="ann">@GetMapping</span><span class="pun">(</span><span class="str">&quot;/users&quot;</span><span class="pun">)</span>
+<span class="typ">List</span><span class="pun">&lt;</span><span class="typ">User</span><span class="pun">&gt;</span><span class="txt"> </span><span class="met">all</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="kw">return</span><span class="txt"> </span><span class="txt">users</span><span class="pun">.</span><span class="met">findAll</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span>
+<span class="pun">}</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="com">// ✅ Pageable in, Page out — one page at a time</span>
+<span class="ann">@GetMapping</span><span class="pun">(</span><span class="str">&quot;/users&quot;</span><span class="pun">)</span>
+<span class="typ">Page</span><span class="pun">&lt;</span><span class="typ">User</span><span class="pun">&gt;</span><span class="txt"> </span><span class="met">page</span><span class="pun">(</span><span class="typ">Pageable</span><span class="txt"> </span><span class="txt">pageable</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="kw">return</span><span class="txt"> </span><span class="txt">users</span><span class="pun">.</span><span class="met">findAll</span><span class="pun">(</span><span class="txt">pageable</span><span class="pun">)</span><span class="pun">;</span><span class="txt"> </span><span class="com">// ?page=0&amp;size=20&amp;sort=name</span>
+<span class="pun">}</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-218.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(170/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-218" readonly rows="10">🚀 Spring Boot: To make your services return a paginated response, instead of a giant list, you can use Page&lt;T&gt; and Pageable.
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(246/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-218" readonly rows="10">💡 Don’t return a giant List — paginate with Pageable and Page&lt;T&gt;.
 
-✅ #SpringBoot #JavaDev
+✅ Spring binds ?page=0&amp;size=20 into a Pageable
 
-#SpringBoot #JavaDev</textarea>
+✅ Page includes content + total count for the UI
+
+✅ Works from controller → repository with almost no glue
+
+#SpringBoot #Pagination</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-218">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1758,7 +1764,9 @@
 <span class="com">//</span>
 <span class="com">// ✅ Reads are frequent</span>
 <span class="com">//</span>
-<span class="com">// ✅ Writes are relatively rare</span></code></pre></div></div>
+<span class="com">// ✅ Writes are relatively rare</span>
+<span class="com">//</span>
+<span class="com">// #SpringBoot #JavaDev</span></code></pre></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-227.html" target="_blank" rel="noopener">Open pen preview</a>
@@ -2072,7 +2080,9 @@
 <span class="com">//</span>
 <span class="com">// ✅ Make API independent on the persistence layer</span>
 <span class="com">//</span>
-<span class="com">// ✅ Prevent lazy loading problems</span></code></pre></div></div>
+<span class="com">// ✅ Prevent lazy loading problems</span>
+<span class="com">//</span>
+<span class="com">// #SpringBoot #SoftwareEngineer</span></code></pre></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-229.html" target="_blank" rel="noopener">Open pen preview</a>
@@ -3167,7 +3177,9 @@
 <span class="com">//</span>
 <span class="com">// ✅ ess JDBC overhead</span>
 <span class="com">//</span>
-<span class="com">// ✅ aster bulk operations</span></code></pre></div></div>
+<span class="com">// ✅ aster bulk operations</span>
+<span class="com">//</span>
+<span class="com">// #SpringBoot #JavaDev</span></code></pre></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-236.html" target="_blank" rel="noopener">Open pen preview</a>

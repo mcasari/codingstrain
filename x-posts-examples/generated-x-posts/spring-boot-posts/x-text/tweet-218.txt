@@ -1,5 +1,9 @@
-🚀 Spring Boot: To make your services return a paginated response, instead of a giant list, you can use Page<T> and Pageable.
+💡 Don’t return a giant List — paginate with Pageable and Page<T>.
 
-✅ #SpringBoot #JavaDev
+✅ Spring binds ?page=0&size=20 into a Pageable
 
-#SpringBoot #JavaDev
+✅ Page includes content + total count for the UI
+
+✅ Works from controller → repository with almost no glue
+
+#SpringBoot #Pagination
