@@ -1,7 +1,9 @@
-🚀 Spring Boot: To make Jackson create your objects from JSON in an explicit, and predictable way, you can use @JsonCreator.
+💡 Want predictable JSON → object mapping? Use @JsonCreator.
 
-✅ This way, each parameter is explicitly bound
+✅ Marks the exact constructor Jackson should call
 
-✅ #SpringBoot #JavaDev
+✅ @JsonProperty binds each JSON field explicitly
 
-#SpringBoot #JavaDev
+✅ Great for immutable types — no setters required
+
+#SpringBoot #Jackson
