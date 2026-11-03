@@ -360,23 +360,31 @@
 
         </style>
         <div class="carbon-local-128">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor"><pre><code><span class="com">// 💡 Java tip : Starting from Java 19 you can explore a feature called &quot;virtual threads&quot;. Virtual threads are lightweight threads managed by the JVM rather than the OS. #Java #Concurrency</span>
-<span class="com">//</span>
-<span class="com">// ✅ Runnable sample: `java-tips`</span>
-<span class="com">//</span>
-<span class="com">// ✅ Architecture diagram + Carbon CodePen below</span>
-<span class="com">//</span>
-<span class="com">// ✅ From the codingstrain examples repo</span></code></pre></div></div>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-virtual-threads-demo</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="com">// ❌ Platform thread — maps to a real OS thread</span>
+<span class="typ">Thread</span><span class="txt"> </span><span class="txt">t</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="kw">new</span><span class="txt"> </span><span class="met">Thread</span><span class="pun">(</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">-</span><span class="pun">&gt;</span><span class="txt"> </span><span class="txt">http</span><span class="pun">.</span><span class="met">get</span><span class="pun">(</span><span class="txt">url</span><span class="pun">)</span><span class="pun">)</span><span class="pun">;</span>
+<span class="txt">t</span><span class="pun">.</span><span class="met">start</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span><span class="txt"> </span><span class="com">// expensive if you create thousands</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="com">// ✅ Virtual thread — JVM-managed, cheap to start</span>
+<span class="typ">Thread</span><span class="pun">.</span><span class="met">ofVirtual</span><span class="pun">(</span><span class="pun">)</span>
+<span class="txt">    </span><span class="pun">.</span><span class="met">name</span><span class="pun">(</span><span class="str">&quot;fetch-&quot;</span><span class="pun">,</span><span class="txt"> </span><span class="num">0</span><span class="pun">)</span>
+<span class="txt">    </span><span class="pun">.</span><span class="met">start</span><span class="pun">(</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">-</span><span class="pun">&gt;</span><span class="txt"> </span><span class="txt">http</span><span class="pun">.</span><span class="met">get</span><span class="pun">(</span><span class="txt">url</span><span class="pun">)</span><span class="pun">)</span><span class="pun">;</span>
+
+<span class="com">// Or one-liner:</span>
+<span class="typ">Thread</span><span class="pun">.</span><span class="met">startVirtualThread</span><span class="pun">(</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">-</span><span class="pun">&gt;</span><span class="txt"> </span><span class="txt">http</span><span class="pun">.</span><span class="met">get</span><span class="pun">(</span><span class="txt">url</span><span class="pun">)</span><span class="pun">)</span><span class="pun">;</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-128.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(204/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-128" readonly rows="10">💡 Java tip : Starting from Java 19 you can explore a feature called "virtual threads". Virtual threads are lightweight threads managed by the JVM rather than the OS. #Java #Concurrency
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(263/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-128" readonly rows="10">💡 Virtual threads (Java 21) are lightweight threads the JVM manages.
 
-#Java #Concurrency</textarea>
+✅ Not 1:1 with OS threads — cheap to create by the thousands
+
+✅ Start one with Thread.ofVirtual().start(...)
+
+✅ Best for waiting (I/O); still use pools for heavy CPU work
+
+#Java #VirtualThreads</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-128">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -670,7 +678,9 @@
 <span class="com">//</span>
 <span class="com">// ✅Or make threads communicate through messages, without directly modifying shared state.</span>
 <span class="com">//</span>
-<span class="com">// ✅ Java tip 💡: Try to avoid sharing data across threads</span></code></pre></div></div>
+<span class="com">// ✅ Java tip 💡: Try to avoid sharing data across threads</span>
+<span class="com">//</span>
+<span class="com">// #Java #Concurrency</span></code></pre></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-130.html" target="_blank" rel="noopener">Open pen preview</a>
@@ -984,7 +994,9 @@
 <span class="com">//</span>
 <span class="com">// ✅ Good for CPU-intensive processing</span>
 <span class="com">//</span>
-<span class="com">// ✅ ⚠️ Sharing mutable state is not safe</span></code></pre></div></div>
+<span class="com">// ✅ ⚠️ Sharing mutable state is not safe</span>
+<span class="com">//</span>
+<span class="com">// #Java #JavaDev</span></code></pre></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-132.html" target="_blank" rel="noopener">Open pen preview</a>
@@ -1450,9 +1462,7 @@
 <span class="com">//</span>
 <span class="com">// ✅ Runnable sample: `java-tips`</span>
 <span class="com">//</span>
-<span class="com">// ✅ Architecture diagram + Carbon CodePen below</span>
-<span class="com">//</span>
-<span class="com">// #Java #DataStructures</span></code></pre></div></div>
+<span class="com">// ✅ Architecture diagram + Carbon CodePen below</span></code></pre></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-135.html" target="_blank" rel="noopener">Open pen preview</a>
@@ -1607,7 +1617,9 @@
 <span class="com">//</span>
 <span class="com">// ✅ We can for example define two separate interfaces:</span>
 <span class="com">//</span>
-<span class="com">// ✅ An alternative could be creating a default Vehicle implementation, and extending it while implementing the Motorized interface only for vehicles that have engines.</span></code></pre></div></div>
+<span class="com">// ✅ An alternative could be creating a default Vehicle implementation, and extending it while implementing the Motorized interface only for vehicles that have engines.</span>
+<span class="com">//</span>
+<span class="com">// #SOLID #SoftwareDesign</span></code></pre></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-136.html" target="_blank" rel="noopener">Open pen preview</a>

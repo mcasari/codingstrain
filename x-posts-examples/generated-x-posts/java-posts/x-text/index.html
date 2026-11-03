@@ -1499,11 +1499,17 @@
     </article>
     <article>
       <h2>Tweet #128</h2>
-      <p class="preview">💡 Java tip : Starting from Java 19 you can explore a feature called &quot;virtual threads&quot;. Virtual threa</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(204/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-128" readonly rows="10">💡 Java tip : Starting from Java 19 you can explore a feature called "virtual threads". Virtual threads are lightweight threads managed by the JVM rather than the OS. #Java #Concurrency
+      <p class="preview">💡 Virtual threads (Java 21) are lightweight threads the JVM manages.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(263/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-128" readonly rows="10">💡 Virtual threads (Java 21) are lightweight threads the JVM manages.
 
-#Java #Concurrency</textarea>
+✅ Not 1:1 with OS threads — cheap to create by the thousands
+
+✅ Start one with Thread.ofVirtual().start(...)
+
+✅ Best for waiting (I/O); still use pools for heavy CPU work
+
+#Java #VirtualThreads</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-128">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>

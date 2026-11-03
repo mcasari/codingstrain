@@ -1,3 +1,9 @@
-💡 Java tip : Starting from Java 19 you can explore a feature called "virtual threads". Virtual threads are lightweight threads managed by the JVM rather than the OS. #Java #Concurrency
+💡 Virtual threads (Java 21) are lightweight threads the JVM manages.
 
-#Java #Concurrency
+✅ Not 1:1 with OS threads — cheap to create by the thousands
+
+✅ Start one with Thread.ofVirtual().start(...)
+
+✅ Best for waiting (I/O); still use pools for heavy CPU work
+
+#Java #VirtualThreads
