@@ -138,13 +138,23 @@
 
         </style>
         <div class="carbon-local-238">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-boot-tips</span></div><div class="carbon-editor"><pre><code><span class="com">// 🚀 Spring Boot: A webhook is when another system  sends a POST request to your app when something happens. In Spring Boot you implement it simply exposing an endpoint that receives that POST request.</span>
-<span class="com">//</span>
-<span class="com">// ✅ #SpringBoot #JavaDev</span>
-<span class="com">//</span>
-<span class="com">// ✅ Runnable sample: `spring-boot-tips`</span>
-<span class="com">//</span>
-<span class="com">// ✅ Architecture diagram + Carbon CodePen below</span></code></pre></div></div>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-boot-tips</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="com">// ❌ Polling — keep asking “any news?” on a timer</span>
+<span class="ann">@Scheduled</span><span class="pun">(</span><span class="txt">fixedDelay</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="num">60_000</span><span class="pun">)</span>
+<span class="kw">void</span><span class="txt"> </span><span class="met">poll</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="kw">var</span><span class="txt"> </span><span class="txt">events</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="txt">github</span><span class="pun">.</span><span class="met">fetchNewEvents</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span><span class="txt"> </span><span class="com">// wasteful</span>
+<span class="txt">    </span><span class="txt">events</span><span class="pun">.</span><span class="met">forEach</span><span class="pun">(</span><span class="kw">this</span><span class="pun">:</span><span class="pun">:</span><span class="txt">handle</span><span class="pun">)</span><span class="pun">;</span>
+<span class="pun">}</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="com">// ✅ Webhook — they POST when something happens</span>
+<span class="ann">@RestController</span>
+<span class="kw">class</span><span class="txt"> </span><span class="typ">GitHubWebhook</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="ann">@PostMapping</span><span class="pun">(</span><span class="str">&quot;/webhooks/github&quot;</span><span class="pun">)</span>
+<span class="txt">    </span><span class="typ">ResponseEntity</span><span class="pun">&lt;</span><span class="typ">Void</span><span class="pun">&gt;</span><span class="txt"> </span><span class="met">onEvent</span><span class="pun">(</span>
+<span class="txt">            </span><span class="ann">@RequestHeader</span><span class="pun">(</span><span class="str">&quot;X-Hub-Signature-256&quot;</span><span class="pun">)</span><span class="txt"> </span><span class="typ">String</span><span class="txt"> </span><span class="txt">sig</span><span class="pun">,</span>
+<span class="txt">            </span><span class="ann">@RequestBody</span><span class="txt"> </span><span class="typ">String</span><span class="txt"> </span><span class="txt">body</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="met">verify</span><span class="pun">(</span><span class="txt">sig</span><span class="pun">,</span><span class="txt"> </span><span class="txt">body</span><span class="pun">)</span><span class="pun">;</span><span class="txt"> </span><span class="com">// reject fakes</span>
+<span class="txt">        </span><span class="met">handle</span><span class="pun">(</span><span class="txt">body</span><span class="pun">)</span><span class="pun">;</span>
+<span class="txt">        </span><span class="kw">return</span><span class="txt"> </span><span class="typ">ResponseEntity</span><span class="pun">.</span><span class="met">ok</span><span class="pun">(</span><span class="pun">)</span><span class="pun">.</span><span class="met">build</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span>
+<span class="txt">    </span><span class="pun">}</span>
+<span class="pun">}</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-238.html" target="_blank" rel="noopener">Open pen preview</a>
