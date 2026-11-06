@@ -1,5 +1,9 @@
-🚀 Spring Boot:  To execute SQL scripts before or after a test method, you can use the @Sql annotation.
+💡 Need test data in the DB? Use @Sql — run a script before the test.
 
-✅ #SpringBoot #JavaDev
+✅ Loads classpath: SQL before (or after) each test method
 
-#SpringBoot #JavaDev
+✅ Keeps setup out of Java — data lives in .sql files
+
+✅ Works with @SpringBootTest / @DataJpaTest
+
+#SpringBoot #Testing

@@ -838,25 +838,39 @@
 
         </style>
         <div class="carbon-local-221">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-boot-tips</span></div><div class="carbon-editor"><pre><code><span class="com">// 🚀 Spring Boot:  To execute SQL scripts before or after a test method, you can use the @Sql annotation.</span>
-<span class="com">//</span>
-<span class="com">// ✅ #SpringBoot #JavaDev</span>
-<span class="com">//</span>
-<span class="com">// ✅ Runnable sample: `spring-boot-tips`</span>
-<span class="com">//</span>
-<span class="com">// ✅ Architecture diagram + Carbon CodePen below</span></code></pre></div></div>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">sql-annotation-demo</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="com">// ❌ Manual inserts clutter the test</span>
+<span class="ann">@Test</span>
+<span class="kw">void</span><span class="txt"> </span><span class="met">findsAlice</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="txt">jdbc</span><span class="pun">.</span><span class="met">update</span><span class="pun">(</span><span class="str">&quot;INSERT INTO users(id,name) VALUES (1,&#x27;Alice&#x27;)&quot;</span><span class="pun">)</span><span class="pun">;</span>
+<span class="txt">    </span><span class="met">assertEquals</span><span class="pun">(</span><span class="str">&quot;Alice&quot;</span><span class="pun">,</span><span class="txt"> </span><span class="txt">repo</span><span class="pun">.</span><span class="met">findById</span><span class="pun">(</span><span class="num">1</span><span class="typ">L</span><span class="pun">)</span><span class="pun">.</span><span class="met">orElseThrow</span><span class="pun">(</span><span class="pun">)</span><span class="pun">.</span><span class="met">getName</span><span class="pun">(</span><span class="pun">)</span><span class="pun">)</span><span class="pun">;</span>
+<span class="pun">}</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="com">// ✅ @Sql — script prepares the DB</span>
+<span class="ann">@SpringBootTest</span>
+<span class="ann">@Sql</span><span class="pun">(</span><span class="str">&quot;/test-data.sql&quot;</span><span class="pun">)</span><span class="txt">  </span><span class="com">// INSERT INTO users … Alice</span>
+<span class="kw">class</span><span class="txt"> </span><span class="typ">UserRepositoryTest</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="ann">@Autowired</span><span class="txt"> </span><span class="typ">UserRepository</span><span class="txt"> </span><span class="txt">repo</span><span class="pun">;</span>
+
+<span class="txt">    </span><span class="ann">@Test</span>
+<span class="txt">    </span><span class="kw">void</span><span class="txt"> </span><span class="met">findsAlice</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="met">assertEquals</span><span class="pun">(</span><span class="str">&quot;Alice&quot;</span><span class="pun">,</span>
+<span class="txt">            </span><span class="txt">repo</span><span class="pun">.</span><span class="met">findById</span><span class="pun">(</span><span class="num">1</span><span class="typ">L</span><span class="pun">)</span><span class="pun">.</span><span class="met">orElseThrow</span><span class="pun">(</span><span class="pun">)</span><span class="pun">.</span><span class="met">getName</span><span class="pun">(</span><span class="pun">)</span><span class="pun">)</span><span class="pun">;</span>
+<span class="txt">    </span><span class="pun">}</span>
+<span class="pun">}</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-221.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(148/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-221" readonly rows="10">🚀 Spring Boot:  To execute SQL scripts before or after a test method, you can use the @Sql annotation.
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(248/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-221" readonly rows="10">💡 Need test data in the DB? Use @Sql — run a script before the test.
 
-✅ #SpringBoot #JavaDev
+✅ Loads classpath: SQL before (or after) each test method
 
-#SpringBoot #JavaDev</textarea>
+✅ Keeps setup out of Java — data lives in .sql files
+
+✅ Works with @SpringBootTest / @DataJpaTest
+
+#SpringBoot #Testing</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-221">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
@@ -1777,7 +1791,9 @@
 <span class="com">//</span>
 <span class="com">// ✅ Reads are frequent</span>
 <span class="com">//</span>
-<span class="com">// ✅ Writes are relatively rare</span></code></pre></div></div>
+<span class="com">// ✅ Writes are relatively rare</span>
+<span class="com">//</span>
+<span class="com">// #SpringBoot #JavaDev</span></code></pre></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-227.html" target="_blank" rel="noopener">Open pen preview</a>
@@ -2091,7 +2107,9 @@
 <span class="com">//</span>
 <span class="com">// ✅ Make API independent on the persistence layer</span>
 <span class="com">//</span>
-<span class="com">// ✅ Prevent lazy loading problems</span></code></pre></div></div>
+<span class="com">// ✅ Prevent lazy loading problems</span>
+<span class="com">//</span>
+<span class="com">// #SpringBoot #SoftwareEngineer</span></code></pre></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-229.html" target="_blank" rel="noopener">Open pen preview</a>
@@ -3186,7 +3204,9 @@
 <span class="com">//</span>
 <span class="com">// ✅ ess JDBC overhead</span>
 <span class="com">//</span>
-<span class="com">// ✅ aster bulk operations</span></code></pre></div></div>
+<span class="com">// ✅ aster bulk operations</span>
+<span class="com">//</span>
+<span class="com">// #SpringBoot #JavaDev</span></code></pre></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-236.html" target="_blank" rel="noopener">Open pen preview</a>
