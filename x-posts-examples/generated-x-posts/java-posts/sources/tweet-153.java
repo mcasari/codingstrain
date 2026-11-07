@@ -1,7 +1,13 @@
-// 💡 Java tip: From Java 9 you can use Objects.checkIndex() to replace manual if checks for validating index bounds. It is a small feature that helps making the code cleaner.  #Java #JavaTip
-//
-// ✅ Runnable sample: `java-tips`
-//
-// ✅ Architecture diagram + Carbon CodePen below
-//
-// ✅ From the codingstrain examples repo
+// ❌ Manual bounds check — easy to get the condition wrong
+T get(int index) {
+    if (index < 0 || index >= size) {
+        throw new IndexOutOfBoundsException("index=" + index);
+    }
+    return elementData[index];
+}
+
+// ✅ Objects.checkIndex — one call, standard exception
+T get(int index) {
+    Objects.checkIndex(index, size); // 0 <= index < size
+    return elementData[index];
+}

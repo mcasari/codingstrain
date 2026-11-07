@@ -5,5 +5,3 @@
 // ✅ You can also use placeholders like ${spring-boot.version} or ${java.version} to inject values inside it.
 //
 // ✅ If you want, you can disable the banner with the following configuration property:
-//
-// #Java #SpringBoot
