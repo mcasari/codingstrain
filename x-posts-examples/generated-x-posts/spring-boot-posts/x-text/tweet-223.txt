@@ -1,5 +1,9 @@
-🚀Spring Boot: To exclude any fields whose value is null in Jackson serialization you can use @JsonInclude(Include.NON_NULL) .
+💡 Don’t leak null fields in JSON — use @JsonInclude(NON_NULL).
 
-✅ #SpringBoot #JavaDev
+✅ Omits properties whose value is null from the response
 
-#SpringBoot #JavaDev
+✅ Cleaner payloads for clients and smaller responses
+
+✅ Put it on a class, a field, or globally via Jackson config
+
+#SpringBoot #Jackson
