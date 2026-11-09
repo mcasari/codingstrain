@@ -1,5 +1,9 @@
-🚀 Spring Boot: Use @TestConfiguration to use test-specific beans that must not be loaded in production.
+💡 Need a bean only in tests? Use @TestConfiguration.
 
-✅ #SpringBoot #JavaDev
+✅ Defines test-only beans — not loaded in production
 
-#SpringBoot #JavaDev
+✅ Nest it in the test or @Import it explicitly
+
+✅ Safer than putting fakes under src/main
+
+#SpringBoot #Testing

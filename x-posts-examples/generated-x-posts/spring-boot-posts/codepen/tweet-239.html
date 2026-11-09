@@ -22,7 +22,7 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0.5rem;
-            min-height: 720px;
+            min-height: 744px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             border-radius: 12px;
             display: flex;
@@ -30,7 +30,7 @@
           }
           .carbon-local-239 .carbon {
             flex: 1;
-            min-height: 704px;
+            min-height: 728px;
             max-width: none;
           }
           .carbon {
@@ -138,13 +138,27 @@
 
         </style>
         <div class="carbon-local-239">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-boot-tips</span></div><div class="carbon-editor"><pre><code><span class="com">// 🚀 Spring Boot: Use @TestConfiguration to use test-specific beans that must not be loaded in production.</span>
-<span class="com">//</span>
-<span class="com">// ✅ #SpringBoot #JavaDev</span>
-<span class="com">//</span>
-<span class="com">// ✅ Runnable sample: `spring-boot-tips`</span>
-<span class="com">//</span>
-<span class="com">// ✅ Architecture diagram + Carbon CodePen below</span></code></pre></div></div>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-boot-tips</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="com">// ❌ Fake client in main — risk of shipping to prod</span>
+<span class="ann">@Configuration</span>
+<span class="kw">class</span><span class="txt"> </span><span class="typ">MailConfig</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="ann">@Bean</span>
+<span class="txt">    </span><span class="typ">MailClient</span><span class="txt"> </span><span class="met">mailClient</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="kw">return</span><span class="txt"> </span><span class="kw">new</span><span class="txt"> </span><span class="met">NoOpMailClient</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span><span class="txt"> </span><span class="com">// oops, production too</span>
+<span class="txt">    </span><span class="pun">}</span>
+<span class="pun">}</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="com">// ✅ Test-only bean — never component-scanned from main</span>
+<span class="ann">@SpringBootTest</span>
+<span class="kw">class</span><span class="txt"> </span><span class="typ">OrderServiceTest</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="ann">@TestConfiguration</span>
+<span class="txt">    </span><span class="kw">static</span><span class="txt"> </span><span class="kw">class</span><span class="txt"> </span><span class="typ">MailTestConfig</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="ann">@Bean</span>
+<span class="txt">        </span><span class="typ">MailClient</span><span class="txt"> </span><span class="met">mailClient</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">            </span><span class="kw">return</span><span class="txt"> </span><span class="kw">new</span><span class="txt"> </span><span class="met">NoOpMailClient</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span>
+<span class="txt">        </span><span class="pun">}</span>
+<span class="txt">    </span><span class="pun">}</span>
+
+<span class="txt">    </span><span class="ann">@Test</span>
+<span class="txt">    </span><span class="kw">void</span><span class="txt"> </span><span class="met">placesOrder</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span><span class="txt"> </span><span class="com">/* … */</span><span class="txt"> </span><span class="pun">}</span>
+<span class="pun">}</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-239.html" target="_blank" rel="noopener">Open pen preview</a>
