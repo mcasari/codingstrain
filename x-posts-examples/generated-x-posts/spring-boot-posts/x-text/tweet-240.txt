@@ -1,5 +1,9 @@
-🚀 Spring Boot testing: @MockBean by default resets the mocks between tests, to keep them independent. You can disable this behaviour with @MockBean(reset = MockReset.NONE).
+💡 @MockBean resets stubs between tests by default — keep tests independent.
 
-✅ #SpringBoot #JavaDev
+✅ Default MockReset.AFTER clears interactions after each test
 
-#SpringBoot #JavaDev
+✅ Stubs from test A won’t leak into test B
+
+✅ Only use reset = MockReset.NONE when you really share setup
+
+#SpringBoot #Testing

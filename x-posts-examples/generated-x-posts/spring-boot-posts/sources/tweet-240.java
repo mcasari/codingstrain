@@ -1,7 +1,19 @@
-// 🚀 Spring Boot testing: @MockBean by default resets the mocks between tests, to keep them independent. You can disable this behaviour with @MockBean(reset = MockReset.NONE).
-//
-// ✅ #SpringBoot #JavaDev
-//
-// ✅ Runnable sample: `spring-boot-tips`
-//
-// ✅ Architecture diagram + Carbon CodePen below
+// ❌ Keep stubs across tests — easy to get order-dependent failures
+@SpringBootTest
+class OrderServiceTest {
+    @MockBean(reset = MockReset.NONE)
+    PaymentClient payments; // stubbing survives into the next test
+}
+
+// ✅ Default — reset after each test (MockReset.AFTER)
+@SpringBootTest
+class OrderServiceTest {
+    @MockBean  // same as reset = MockReset.AFTER
+    PaymentClient payments;
+
+    @Test
+    void chargesCard() {
+        when(payments.charge(any())).thenReturn(ok());
+        // … assert …
+    } // stub cleared before the next @Test
+}

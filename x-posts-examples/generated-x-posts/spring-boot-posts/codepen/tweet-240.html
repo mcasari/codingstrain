@@ -138,13 +138,23 @@
 
         </style>
         <div class="carbon-local-240">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-boot-tips</span></div><div class="carbon-editor"><pre><code><span class="com">// 🚀 Spring Boot testing: @MockBean by default resets the mocks between tests, to keep them independent. You can disable this behaviour with @MockBean(reset = MockReset.NONE).</span>
-<span class="com">//</span>
-<span class="com">// ✅ #SpringBoot #JavaDev</span>
-<span class="com">//</span>
-<span class="com">// ✅ Runnable sample: `spring-boot-tips`</span>
-<span class="com">//</span>
-<span class="com">// ✅ Architecture diagram + Carbon CodePen below</span></code></pre></div></div>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-boot-tips</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="com">// ❌ Keep stubs across tests — easy to get order-dependent failures</span>
+<span class="ann">@SpringBootTest</span>
+<span class="kw">class</span><span class="txt"> </span><span class="typ">OrderServiceTest</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="ann">@MockBean</span><span class="pun">(</span><span class="txt">reset</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="typ">MockReset</span><span class="pun">.</span><span class="typ">NONE</span><span class="pun">)</span>
+<span class="txt">    </span><span class="typ">PaymentClient</span><span class="txt"> </span><span class="txt">payments</span><span class="pun">;</span><span class="txt"> </span><span class="com">// stubbing survives into the next test</span>
+<span class="pun">}</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="com">// ✅ Default — reset after each test (MockReset.AFTER)</span>
+<span class="ann">@SpringBootTest</span>
+<span class="kw">class</span><span class="txt"> </span><span class="typ">OrderServiceTest</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="ann">@MockBean</span><span class="txt">  </span><span class="com">// same as reset = MockReset.AFTER</span>
+<span class="txt">    </span><span class="typ">PaymentClient</span><span class="txt"> </span><span class="txt">payments</span><span class="pun">;</span>
+
+<span class="txt">    </span><span class="ann">@Test</span>
+<span class="txt">    </span><span class="kw">void</span><span class="txt"> </span><span class="met">chargesCard</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">        </span><span class="met">when</span><span class="pun">(</span><span class="txt">payments</span><span class="pun">.</span><span class="met">charge</span><span class="pun">(</span><span class="met">any</span><span class="pun">(</span><span class="pun">)</span><span class="pun">)</span><span class="pun">)</span><span class="pun">.</span><span class="met">thenReturn</span><span class="pun">(</span><span class="met">ok</span><span class="pun">(</span><span class="pun">)</span><span class="pun">)</span><span class="pun">;</span>
+<span class="txt">        </span><span class="com">// … assert …</span>
+<span class="txt">    </span><span class="pun">}</span><span class="txt"> </span><span class="com">// stub cleared before the next @Test</span>
+<span class="pun">}</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-240.html" target="_blank" rel="noopener">Open pen preview</a>
