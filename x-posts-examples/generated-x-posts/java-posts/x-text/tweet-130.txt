@@ -1,9 +1,9 @@
-💡 Java tip 💡: Try to avoid sharing data across threads.
+💡 Avoid sharing mutable data across threads — races hide there.
 
-✅Use immutable objects
+✅ Prefer immutable objects each thread can read safely
 
-✅Or make threads communicate through messages, without directly modifying shared state.
+✅ Or pass messages (queues) instead of editing the same fields
 
-✅ Java tip 💡: Try to avoid sharing data across threads
+✅ Shared mutable state needs locks/concurrent types — last resort
 
 #Java #Concurrency
