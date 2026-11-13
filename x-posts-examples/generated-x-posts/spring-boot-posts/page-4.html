@@ -686,29 +686,29 @@
 
         </style>
         <div class="carbon-local-200">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-boot-tips</span></div><div class="carbon-editor"><pre><code><span class="com">// 🚀 Spring Boot: You can enable a smooth shutdown with &quot;server.shutdown=graceful&quot; in your configuration.</span>
-<span class="com">//</span>
-<span class="com">// ✅  It helps you avoid these situations:</span>
-<span class="com">//</span>
-<span class="com">// ✅ 🔴 Active HTTP requests failing abruptly</span>
-<span class="com">//</span>
-<span class="com">// ✅ 🔴 Database rolling back unexpectedly</span></code></pre></div></div>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-boot-tips</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="pun">#</span><span class="txt"> </span><span class="pun">✅</span><span class="txt"> </span><span class="met">Default</span><span class="txt"> </span><span class="pun">(</span><span class="typ">Boot</span><span class="txt"> </span><span class="num">3.4</span><span class="txt"> </span><span class="pun">/</span><span class="txt"> </span><span class="num">4</span><span class="pun">)</span><span class="txt"> </span><span class="pun">—</span><span class="txt"> </span><span class="txt">graceful</span><span class="txt"> </span><span class="txt">is</span><span class="txt"> </span><span class="txt">already</span><span class="txt"> </span><span class="txt">on</span>
+<span class="pun">#</span><span class="txt"> </span><span class="txt">server</span><span class="pun">.</span><span class="txt">shutdown</span><span class="pun">=</span><span class="met">graceful</span><span class="txt">  </span><span class="pun">(</span><span class="txt">implicit</span><span class="pun">)</span>
+<span class="txt">spring</span><span class="pun">:</span>
+<span class="txt">  </span><span class="txt">lifecycle</span><span class="pun">:</span>
+<span class="txt">    </span><span class="txt">timeout</span><span class="pun">-</span><span class="txt">per</span><span class="pun">-</span><span class="txt">shutdown</span><span class="pun">-</span><span class="txt">phase</span><span class="pun">:</span><span class="txt"> </span><span class="num">30</span><span class="txt">s</span><span class="txt">  </span><span class="pun">#</span><span class="txt"> </span><span class="txt">max</span><span class="txt"> </span><span class="txt">drain</span><span class="txt"> </span><span class="txt">time</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="pun">#</span><span class="txt"> </span><span class="pun">❌</span><span class="txt"> </span><span class="typ">Opt</span><span class="txt"> </span><span class="txt">out</span><span class="txt"> </span><span class="pun">—</span><span class="txt"> </span><span class="txt">kill</span><span class="txt"> </span><span class="txt">in</span><span class="pun">-</span><span class="txt">flight</span><span class="txt"> </span><span class="txt">requests</span><span class="txt"> </span><span class="txt">immediately</span>
+<span class="txt">server</span><span class="pun">:</span>
+<span class="txt">  </span><span class="txt">shutdown</span><span class="pun">:</span><span class="txt"> </span><span class="txt">immediate</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-200.html" target="_blank" rel="noopener">Open pen preview</a>
           · <a href="https://codepen.io/pen/" target="_blank" rel="noopener">New pen on CodePen</a>
         </p>
       </div>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(239/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-200" readonly rows="10">🚀 Spring Boot: You can enable a smooth shutdown with "server.shutdown=graceful" in your configuration.
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(265/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-200" readonly rows="10">💡 Graceful shutdown is on by default (Boot 3.4+) — drain requests before exit.
 
-✅  It helps you avoid these situations:
+✅ Stops new traffic, finishes in-flight HTTP calls
 
-✅ 🔴 Active HTTP requests failing abruptly
+✅ Tune the wait: spring.lifecycle.timeout-per-shutdown-phase
 
-✅ 🔴 Database rolling back unexpectedly
+✅ Opt out only if you must: server.shutdown=immediate
 
-#SpringBoot</textarea>
+#SpringBoot #Ops</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-200">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>

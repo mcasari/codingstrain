@@ -1,9 +1,9 @@
-🚀 Spring Boot: You can enable a smooth shutdown with "server.shutdown=graceful" in your configuration.
+💡 Graceful shutdown is on by default (Boot 3.4+) — drain requests before exit.
 
-✅  It helps you avoid these situations:
+✅ Stops new traffic, finishes in-flight HTTP calls
 
-✅ 🔴 Active HTTP requests failing abruptly
+✅ Tune the wait: spring.lifecycle.timeout-per-shutdown-phase
 
-✅ 🔴 Database rolling back unexpectedly
+✅ Opt out only if you must: server.shutdown=immediate
 
-#SpringBoot
+#SpringBoot #Ops

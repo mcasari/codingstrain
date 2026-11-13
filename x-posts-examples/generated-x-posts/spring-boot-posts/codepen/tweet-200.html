@@ -138,13 +138,13 @@
 
         </style>
         <div class="carbon-local-200">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-boot-tips</span></div><div class="carbon-editor"><pre><code><span class="com">// 🚀 Spring Boot: You can enable a smooth shutdown with &quot;server.shutdown=graceful&quot; in your configuration.</span>
-<span class="com">//</span>
-<span class="com">// ✅  It helps you avoid these situations:</span>
-<span class="com">//</span>
-<span class="com">// ✅ 🔴 Active HTTP requests failing abruptly</span>
-<span class="com">//</span>
-<span class="com">// ✅ 🔴 Database rolling back unexpectedly</span></code></pre></div></div>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-boot-tips</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="pun">#</span><span class="txt"> </span><span class="pun">✅</span><span class="txt"> </span><span class="met">Default</span><span class="txt"> </span><span class="pun">(</span><span class="typ">Boot</span><span class="txt"> </span><span class="num">3.4</span><span class="txt"> </span><span class="pun">/</span><span class="txt"> </span><span class="num">4</span><span class="pun">)</span><span class="txt"> </span><span class="pun">—</span><span class="txt"> </span><span class="txt">graceful</span><span class="txt"> </span><span class="txt">is</span><span class="txt"> </span><span class="txt">already</span><span class="txt"> </span><span class="txt">on</span>
+<span class="pun">#</span><span class="txt"> </span><span class="txt">server</span><span class="pun">.</span><span class="txt">shutdown</span><span class="pun">=</span><span class="met">graceful</span><span class="txt">  </span><span class="pun">(</span><span class="txt">implicit</span><span class="pun">)</span>
+<span class="txt">spring</span><span class="pun">:</span>
+<span class="txt">  </span><span class="txt">lifecycle</span><span class="pun">:</span>
+<span class="txt">    </span><span class="txt">timeout</span><span class="pun">-</span><span class="txt">per</span><span class="pun">-</span><span class="txt">shutdown</span><span class="pun">-</span><span class="txt">phase</span><span class="pun">:</span><span class="txt"> </span><span class="num">30</span><span class="txt">s</span><span class="txt">  </span><span class="pun">#</span><span class="txt"> </span><span class="txt">max</span><span class="txt"> </span><span class="txt">drain</span><span class="txt"> </span><span class="txt">time</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="pun">#</span><span class="txt"> </span><span class="pun">❌</span><span class="txt"> </span><span class="typ">Opt</span><span class="txt"> </span><span class="txt">out</span><span class="txt"> </span><span class="pun">—</span><span class="txt"> </span><span class="txt">kill</span><span class="txt"> </span><span class="txt">in</span><span class="pun">-</span><span class="txt">flight</span><span class="txt"> </span><span class="txt">requests</span><span class="txt"> </span><span class="txt">immediately</span>
+<span class="txt">server</span><span class="pun">:</span>
+<span class="txt">  </span><span class="txt">shutdown</span><span class="pun">:</span><span class="txt"> </span><span class="txt">immediate</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-200.html" target="_blank" rel="noopener">Open pen preview</a>
