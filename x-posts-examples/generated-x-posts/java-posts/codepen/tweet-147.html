@@ -138,13 +138,14 @@
 
         </style>
         <div class="carbon-local-147">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor"><pre><code><span class="com">// 💡 Java tip: Use Duration and Instant for precise time calculations.</span>
-<span class="com">//</span>
-<span class="com">// ✅ #Java</span>
-<span class="com">//</span>
-<span class="com">// ✅ Runnable sample: `java-tips`</span>
-<span class="com">//</span>
-<span class="com">// ✅ Architecture diagram + Carbon CodePen below</span></code></pre></div></div>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="com">// ❌ Raw millis — easy to mix units and get wrong math</span>
+<span class="kw">long</span><span class="txt"> </span><span class="txt">start</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="typ">System</span><span class="pun">.</span><span class="met">currentTimeMillis</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span>
+<span class="met">doWork</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span>
+<span class="kw">long</span><span class="txt"> </span><span class="txt">elapsedMs</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="typ">System</span><span class="pun">.</span><span class="met">currentTimeMillis</span><span class="pun">(</span><span class="pun">)</span><span class="txt"> </span><span class="pun">-</span><span class="txt"> </span><span class="txt">start</span><span class="pun">;</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="com">// ✅ Instant + Duration — clear intent</span>
+<span class="typ">Instant</span><span class="txt"> </span><span class="txt">start</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="typ">Instant</span><span class="pun">.</span><span class="met">now</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span>
+<span class="met">doWork</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span>
+<span class="typ">Duration</span><span class="txt"> </span><span class="txt">elapsed</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="typ">Duration</span><span class="pun">.</span><span class="met">between</span><span class="pun">(</span><span class="txt">start</span><span class="pun">,</span><span class="txt"> </span><span class="typ">Instant</span><span class="pun">.</span><span class="met">now</span><span class="pun">(</span><span class="pun">)</span><span class="pun">)</span><span class="pun">;</span>
+<span class="kw">long</span><span class="txt"> </span><span class="txt">elapsedMs</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="txt">elapsed</span><span class="pun">.</span><span class="met">toMillis</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-147.html" target="_blank" rel="noopener">Open pen preview</a>

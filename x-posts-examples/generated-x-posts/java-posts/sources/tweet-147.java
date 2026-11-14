@@ -1,7 +1,10 @@
-// 💡 Java tip: Use Duration and Instant for precise time calculations.
-//
-// ✅ #Java
-//
-// ✅ Runnable sample: `java-tips`
-//
-// ✅ Architecture diagram + Carbon CodePen below
+// ❌ Raw millis — easy to mix units and get wrong math
+long start = System.currentTimeMillis();
+doWork();
+long elapsedMs = System.currentTimeMillis() - start;
+
+// ✅ Instant + Duration — clear intent
+Instant start = Instant.now();
+doWork();
+Duration elapsed = Duration.between(start, Instant.now());
+long elapsedMs = elapsed.toMillis();

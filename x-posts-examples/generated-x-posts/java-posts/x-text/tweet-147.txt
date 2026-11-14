@@ -1,5 +1,9 @@
-💡 Java tip: Use Duration and Instant for precise time calculations.
+💡 Prefer Instant + Duration over raw millis for time math.
 
-✅ #Java
+✅ Instant is a point on the UTC timeline
 
-#Java
+✅ Duration.between(start, end) is readable elapsed time
+
+✅ Avoids timezone surprises that Date / Calendar hide
+
+#Java #Time

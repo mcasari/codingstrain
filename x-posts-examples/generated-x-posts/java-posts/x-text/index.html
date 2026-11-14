@@ -1815,13 +1815,17 @@
     </article>
     <article>
       <h2>Tweet #147</h2>
-      <p class="preview">💡 Java tip: Use Duration and Instant for precise time calculations.</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(83/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-147" readonly rows="10">💡 Java tip: Use Duration and Instant for precise time calculations.
+      <p class="preview">💡 Prefer Instant + Duration over raw millis for time math.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(225/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-147" readonly rows="10">💡 Prefer Instant + Duration over raw millis for time math.
 
-✅ #Java
+✅ Instant is a point on the UTC timeline
 
-#Java</textarea>
+✅ Duration.between(start, end) is readable elapsed time
+
+✅ Avoids timezone surprises that Date / Calendar hide
+
+#Java #Time</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-147">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>
