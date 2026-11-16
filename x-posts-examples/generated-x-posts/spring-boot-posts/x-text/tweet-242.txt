@@ -1,7 +1,9 @@
-🚀 Spring Boot: You can validate config classes with the @Validated annotation.
+💡 Validate @ConfigurationProperties with @Validated — fail at startup.
 
-✅ It makes your app fail fast at startup if the configuration is invalid.
+✅ Constraints run when the context starts
 
-✅ #SpringBoot #JavaDev
+✅ Bad YAML won’t reach production quietly
 
-#SpringBoot #JavaDev
+✅ Use @NotBlank, @Min, @Positive on fields
+
+#SpringBoot #Config

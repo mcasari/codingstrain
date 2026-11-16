@@ -138,10 +138,18 @@
 
         </style>
         <div class="carbon-local-242">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-boot-tips</span></div><div class="carbon-editor"><pre><code><span class="kw">public</span><span class="txt"> </span><span class="met">Order</span><span class="pun">(</span><span class="typ">Customer</span><span class="txt"> </span><span class="txt">customer</span><span class="pun">)</span><span class="txt"> </span><span class="pun">{</span>
-<span class="txt">    </span><span class="com">// Fail fast at construction with a clear message</span>
-<span class="txt">    </span><span class="kw">this</span><span class="pun">.</span><span class="txt">customer</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="typ">Objects</span><span class="pun">.</span><span class="met">requireNonNull</span><span class="pun">(</span><span class="txt">customer</span><span class="pun">,</span><span class="txt"> </span><span class="str">&quot;customer&quot;</span><span class="pun">)</span><span class="pun">;</span>
-<span class="pun">}</span></code></pre></div></div>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">spring-boot-tips</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="com">// ❌ Properties bind with no checks — bugs show up at runtime</span>
+<span class="ann">@ConfigurationProperties</span><span class="pun">(</span><span class="txt">prefix</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="str">&quot;app.mail&quot;</span><span class="pun">)</span>
+<span class="kw">class</span><span class="txt"> </span><span class="typ">MailProperties</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="typ">String</span><span class="txt"> </span><span class="txt">host</span><span class="pun">;</span><span class="txt">      </span><span class="com">// can be null / blank</span>
+<span class="txt">    </span><span class="kw">int</span><span class="txt"> </span><span class="txt">port</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="pun">-</span><span class="num">1</span><span class="pun">;</span><span class="txt">    </span><span class="com">// nonsense value still starts the app</span>
+<span class="pun">}</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="com">// ✅ @Validated — invalid config fails startup</span>
+<span class="ann">@Validated</span>
+<span class="ann">@ConfigurationProperties</span><span class="pun">(</span><span class="txt">prefix</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="str">&quot;app.mail&quot;</span><span class="pun">)</span>
+<span class="kw">class</span><span class="txt"> </span><span class="typ">MailProperties</span><span class="txt"> </span><span class="pun">{</span>
+<span class="txt">    </span><span class="ann">@NotBlank</span><span class="txt"> </span><span class="typ">String</span><span class="txt"> </span><span class="txt">host</span><span class="pun">;</span>
+<span class="txt">    </span><span class="ann">@Min</span><span class="pun">(</span><span class="num">1</span><span class="pun">)</span><span class="txt"> </span><span class="ann">@Max</span><span class="pun">(</span><span class="num">65535</span><span class="pun">)</span><span class="txt"> </span><span class="kw">int</span><span class="txt"> </span><span class="txt">port</span><span class="pun">;</span>
+<span class="pun">}</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-242.html" target="_blank" rel="noopener">Open pen preview</a>

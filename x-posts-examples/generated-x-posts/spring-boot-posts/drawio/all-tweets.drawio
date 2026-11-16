@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <mxfile host="app.diagrams.net" agent="codingstrain" version="22.1.8" type="device">
-  <diagram id="cdc9a28e-4f64-4d1a-bc05-ac17b7016fa9" name="Tweet 1 · Diagram">
+  <diagram id="01fee520-875a-47ed-a01f-c5eba270ccbf" name="Tweet 1 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -22,7 +22,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="cb251446-07bd-477f-9bf4-36cca2b02af8" name="Tweet 2 · Diagram">
+  <diagram id="7f59e20a-eee7-4067-be6c-09037a90a97d" name="Tweet 2 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -44,7 +44,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="a640afc5-6511-439e-87de-42d303dca574" name="Tweet 3 · Diagram">
+  <diagram id="1365a44a-3085-4238-b62d-cb849292adb1" name="Tweet 3 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -66,7 +66,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="08f610b0-9834-4ecf-a66e-5b74f5ce019d" name="Tweet 4 · Diagram">
+  <diagram id="107b1ddd-18ba-4581-8689-9fc652c1535b" name="Tweet 4 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -88,7 +88,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="4326aafc-6611-44cb-9160-a573b109b36f" name="Tweet 5 · Diagram">
+  <diagram id="cb39ef38-a24b-40cd-8ec3-2b94c3c300e9" name="Tweet 5 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="460" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -109,7 +109,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="d69ac4be-b146-4716-b058-093224b13ef3" name="Tweet 6 · Diagram">
+  <diagram id="65d0b9b3-32b8-4925-a1db-ab497196a759" name="Tweet 6 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="460" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -130,7 +130,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="1c3a91de-0a6f-4da6-85e5-96f67b31e06b" name="Tweet 7 · Diagram">
+  <diagram id="e870031d-29d8-42a1-b553-ac6af41cdf07" name="Tweet 7 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="460" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -151,7 +151,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="b0db6c84-1e9d-4c7d-a687-5b2828ff8a18" name="Tweet 8 · Diagram">
+  <diagram id="6410fd0c-03fa-49b2-bec6-bc1f090289b0" name="Tweet 8 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="460" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -172,7 +172,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="98f4e791-152e-4a61-b073-48f4614c0930" name="Tweet 9 · Diagram">
+  <diagram id="20bcc759-9294-432a-8117-003d567b9a0d" name="Tweet 9 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -192,7 +192,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="f487a7b7-adcc-4ce2-bf04-60c1a967ea3b" name="Tweet 10 · Diagram">
+  <diagram id="6f66cb17-b8b5-410a-a793-778f783a55a9" name="Tweet 10 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -212,7 +212,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="db349f28-ecc8-46ba-8a12-7a7d90cdfbc7" name="Tweet 11 · Diagram">
+  <diagram id="bef04856-d34b-4f90-b58d-0c146a3ab394" name="Tweet 11 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -232,7 +232,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="818df240-1eed-4fc9-a01e-33d9b8c7d2f6" name="Tweet 12 · Diagram">
+  <diagram id="2c5eeb97-aab6-428c-8722-64b4e1b02105" name="Tweet 12 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -252,7 +252,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="827269aa-7c3f-4b8c-bc21-8eda71fd1706" name="Tweet 13 · Diagram">
+  <diagram id="d280b55c-ba7c-4f28-834f-581e237fdc43" name="Tweet 13 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -271,7 +271,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="ffed2924-b68f-4a9d-a50a-18eb2986a07f" name="Tweet 14 · Diagram">
+  <diagram id="728ced91-b720-46d8-a459-a78c488b5be9" name="Tweet 14 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -290,7 +290,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="1720401e-8f79-4931-a0e8-0fedb0fafc86" name="Tweet 15 · Diagram">
+  <diagram id="ac361887-aee4-4ae5-bdb3-5eccb61dbc14" name="Tweet 15 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="460" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -311,7 +311,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="14d5599e-f812-41e2-8484-e3225fc8740b" name="Tweet 16 · Diagram">
+  <diagram id="f7a82733-13a6-482b-93c7-1d285621c162" name="Tweet 16 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="460" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -332,7 +332,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="015464e5-b9d2-4c4b-9fa7-6d127179db55" name="Tweet 17 · Diagram">
+  <diagram id="4b941510-8972-4801-98d1-c30b2f10d374" name="Tweet 17 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="460" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -353,7 +353,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="d8edd03e-4edd-4631-872c-0b16cf4773d3" name="Tweet 18 · Diagram">
+  <diagram id="bdb463ff-e7d9-46aa-b3d1-fdc251358d0e" name="Tweet 18 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="460" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -374,7 +374,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="b2ef1256-72e5-4379-8c01-3fe1656150b3" name="Tweet 19 · Diagram">
+  <diagram id="2d2b94e6-0aa0-484c-97cc-8de9cb61bdb2" name="Tweet 19 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -393,7 +393,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="a4bc0b3b-d641-4784-b1ab-8fbf5f0c313f" name="Tweet 20 · Diagram">
+  <diagram id="b70b3583-389e-40c4-99db-81e2277b172b" name="Tweet 20 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -412,7 +412,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="587c55bd-c709-4701-97f5-70fd7a2f8e16" name="Tweet 21 · Diagram">
+  <diagram id="6718a7e2-76cb-4de7-b9a6-a8c4df00926e" name="Tweet 21 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -431,7 +431,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="dda8eff0-16b9-4432-b99d-0c97b8db2abe" name="Tweet 22 · Diagram">
+  <diagram id="6c68a624-cfae-41e1-b83a-2565b8803cca" name="Tweet 22 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -450,7 +450,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="f50eae97-1754-42f3-9535-71e2d0918f41" name="Tweet 23 · Diagram">
+  <diagram id="60f74d49-6be6-4916-bbd7-cc868dad739a" name="Tweet 23 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -469,7 +469,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="50e650af-e129-4085-aa0b-17de7df2db4e" name="Tweet 24 · Diagram">
+  <diagram id="fd3485c5-9de2-4330-950a-2952c8057450" name="Tweet 24 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="440" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -488,7 +488,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="4f9e5a36-4a19-4378-aff1-f1b774d980ca" name="Tweet 25 · Diagram">
+  <diagram id="d5505700-29ea-456d-8abc-9abd7e5c4b2c" name="Tweet 25 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="440" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -507,7 +507,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="b3debbd3-df07-4fb6-ac14-4a64cd99e7a0" name="Tweet 26 · Diagram">
+  <diagram id="a671fb9d-53b8-43c4-b6a3-e1e51a4d67ba" name="Tweet 26 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="440" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -526,7 +526,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="ec6570a2-4ca4-4af4-87a1-de744a2b432f" name="Tweet 27 · Diagram">
+  <diagram id="e7a89f84-3b8b-4dd7-8011-410bfc6e7d94" name="Tweet 27 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="440" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -545,7 +545,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="4814c869-7786-435d-9b13-59b6cd0c20d9" name="Tweet 28 · Diagram">
+  <diagram id="05a0ef0c-6e80-46bf-8324-4ff90937cbcd" name="Tweet 28 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -564,7 +564,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="eb726fda-902f-43a1-9be3-08ce67d11ba0" name="Tweet 29 · Diagram">
+  <diagram id="0770608f-3a0d-4c85-86b4-20008f7e11cd" name="Tweet 29 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -583,7 +583,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="8341b0d7-adf3-401e-a7ad-97a68f6bed98" name="Tweet 30 · Diagram">
+  <diagram id="59055647-fec8-42d2-ac29-ee8c57b4a8e4" name="Tweet 30 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -602,7 +602,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="af014e03-c822-4422-aebd-b7210591dd2f" name="Tweet 31 · Diagram">
+  <diagram id="68bc8344-5d11-41b7-a8ec-5f719f625325" name="Tweet 31 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -619,7 +619,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="1f4d8a1c-974c-4f48-a270-f7551731ece8" name="Tweet 32 · Diagram">
+  <diagram id="59868699-93aa-4304-92a6-0b2d66c1f5dc" name="Tweet 32 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -636,7 +636,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="c3619beb-0d29-4599-b200-8d3ce9687dce" name="Tweet 33 · Diagram">
+  <diagram id="2a11ed1f-e9bd-4a72-9a81-879fe91b47b3" name="Tweet 33 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -657,7 +657,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="90d2a319-ce55-4886-b6a0-0728cb454cca" name="Tweet 34 · Diagram">
+  <diagram id="f7266fa5-4b8a-45be-aaf4-7372154b0c06" name="Tweet 34 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -676,7 +676,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="d6573d11-8f1a-422a-8231-cb009b2812f4" name="Tweet 35 · Diagram">
+  <diagram id="a9144cb7-5eef-43f4-9c3b-f07d25ea3065" name="Tweet 35 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -695,7 +695,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="f11f7181-9f43-4ad8-b93d-2972f73aa58e" name="Tweet 36 · Diagram">
+  <diagram id="6c11b470-389e-4baa-b165-ffc84695ec7f" name="Tweet 36 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -714,7 +714,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="58058d24-6e0a-4f4c-a73b-0d7dc8c7f54b" name="Tweet 37 · Diagram">
+  <diagram id="af8505f4-c8fd-454d-9eb8-4ad5b3c5d043" name="Tweet 37 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -733,7 +733,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="93bd7769-7416-48a4-b428-963be83adde7" name="Tweet 38 · Diagram">
+  <diagram id="88214b25-e35d-4259-96d9-98a47c2d1b4d" name="Tweet 38 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -752,7 +752,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="1d0d5cef-b8d9-4a04-9f8f-3014920d5d7b" name="Tweet 39 · Diagram">
+  <diagram id="5a912144-f6d7-4a15-976b-395571f060ee" name="Tweet 39 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -771,7 +771,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="fb831160-16d8-44c8-9a21-82ef2a193fe9" name="Tweet 40 · Diagram">
+  <diagram id="a37210fd-0fc3-4bae-959c-bd6d267fa8fd" name="Tweet 40 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -790,7 +790,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="e9f4a4be-0ddd-478d-8ea6-eb43b4edb32f" name="Tweet 48 · Diagram">
+  <diagram id="c0919285-7236-4900-bf94-ef9256f122ea" name="Tweet 48 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -812,7 +812,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="1c4147de-cbf7-44ed-919a-8b69953a80e3" name="Tweet 49 · Diagram">
+  <diagram id="1e93ce09-2701-493f-be65-9334c127ae3d" name="Tweet 49 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -829,7 +829,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="ef813115-36cf-49df-9d8e-33a6df26a0d1" name="Tweet 50 · Diagram">
+  <diagram id="3834e9c7-e0df-48e9-a900-6391ac32f0a7" name="Tweet 50 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="520" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -862,7 +862,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="6541a70b-9561-4876-aecc-1f8c9247b295" name="Tweet 51 · Diagram">
+  <diagram id="47ef8cb6-1dea-4550-aa08-211d5948ed5a" name="Tweet 51 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="580" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -890,7 +890,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="f5608ece-af7e-4fdf-a2e8-85c2c7c12339" name="Tweet 52 · Diagram">
+  <diagram id="e317222b-c9d1-4186-a012-b49ed479312b" name="Tweet 52 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -910,7 +910,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="3d99c128-e1d9-445c-9cd9-ace266d43ad7" name="Tweet 53 · Diagram">
+  <diagram id="686bf608-22e7-4a64-ba17-4ef06aca1fa4" name="Tweet 53 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -926,7 +926,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="97eca75d-6bc7-4ef0-a696-a91991742d72" name="Tweet 183 · Diagram">
+  <diagram id="4fa426ea-110e-4195-a83a-4154f6a5af85" name="Tweet 183 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -948,7 +948,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="c29ef264-38bb-4030-892c-c8aab6ee27ae" name="Tweet 184 · Diagram">
+  <diagram id="88e7cb7b-0ff7-4377-8808-09f7e66bf488" name="Tweet 184 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -967,7 +967,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="c76a439b-76f2-4156-9043-2662b36a697f" name="Tweet 185 · Diagram">
+  <diagram id="3dd575aa-9b04-4484-acf7-258a01594fa8" name="Tweet 185 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -988,7 +988,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="faf1e564-2f48-4cfb-910d-d71b5997666c" name="Tweet 186 · Diagram">
+  <diagram id="90066989-f419-405a-b7c7-1c9b25d4eb3b" name="Tweet 186 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1009,7 +1009,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="6df29958-b683-4de3-b95b-29ced94ce4c1" name="Tweet 187 · Diagram">
+  <diagram id="02063e19-757f-4a97-ac79-98f53e8f4d04" name="Tweet 187 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1030,7 +1030,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="078d8e8f-d7d2-4ab9-a1dc-8caa23919e66" name="Tweet 188 · Diagram">
+  <diagram id="8c1c7366-392c-49c0-9f71-f23dca5bcbe1" name="Tweet 188 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1051,7 +1051,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="b729f2a1-6f77-419e-9550-bd8eca6fed06" name="Tweet 189 · Diagram">
+  <diagram id="e6e2d091-8d29-4990-a49e-b1bcaf6b612d" name="Tweet 189 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1072,7 +1072,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="ff747cf0-6402-4ece-89f2-f06037ddb78d" name="Tweet 190 · Diagram">
+  <diagram id="3e23bf28-bcd8-4510-bbeb-40df620e93fc" name="Tweet 190 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1093,7 +1093,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="181cdfaf-fdb8-4455-9795-137720bdc29d" name="Tweet 191 · Diagram">
+  <diagram id="99001989-b08e-46d5-8c52-421b43cdc0a4" name="Tweet 191 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1114,7 +1114,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="f4b2d476-b645-44d7-a6ee-520af343bc1d" name="Tweet 192 · Diagram">
+  <diagram id="7177ac36-a6ac-4fae-a2c7-f704bfafe240" name="Tweet 192 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1135,7 +1135,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="1fd3539e-e74f-44fa-9b04-8fa4629cb41b" name="Tweet 193 · Diagram">
+  <diagram id="586f110a-cece-4241-87e0-762d63ca020b" name="Tweet 193 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1156,7 +1156,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="3d0b2e8e-9906-4688-a374-a270136d2e57" name="Tweet 194 · Diagram">
+  <diagram id="3abc3215-1d7f-4a89-89dc-5158ca104d06" name="Tweet 194 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1177,7 +1177,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="578cd3dc-13b1-422b-879d-8e527971750b" name="Tweet 195 · Diagram">
+  <diagram id="e0255c3d-59fa-4e7e-819e-afb9e8e2a4f9" name="Tweet 195 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1198,7 +1198,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="648fd624-0855-4934-ade4-358540b24a30" name="Tweet 196 · Diagram">
+  <diagram id="3be9aabd-8c84-4e4f-b83b-59e7a6e634ad" name="Tweet 196 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1217,7 +1217,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="c454a468-5673-438f-9cfc-f151b7ef723a" name="Tweet 197 · Diagram">
+  <diagram id="91a176b2-39eb-4ba4-b719-158f910a885f" name="Tweet 197 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1238,7 +1238,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="8831cf62-3f70-4600-986b-5d42df0b7a13" name="Tweet 198 · Diagram">
+  <diagram id="62c48fb3-a616-40f9-ae0a-0d0168c5d9a9" name="Tweet 198 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1259,7 +1259,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="cfe5d343-93b2-4659-b1a4-870702279bda" name="Tweet 199 · Diagram">
+  <diagram id="0ee3d000-54a0-4b7e-aa0d-9f3b2414caa4" name="Tweet 199 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1281,7 +1281,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="48c19835-2572-4658-8930-b7190614688c" name="Tweet 200 · Diagram">
+  <diagram id="3c8bb3ba-fefb-44eb-81ae-94afab0a5ddd" name="Tweet 200 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1302,7 +1302,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="2a5f4214-6bea-46e2-bebf-d6022df2e07b" name="Tweet 201 · Diagram">
+  <diagram id="c7889a9d-b60b-44fd-80af-44478e3e438b" name="Tweet 201 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1323,7 +1323,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="8f08c828-8c69-406b-9f77-0cea44ad252f" name="Tweet 202 · Diagram">
+  <diagram id="9ba7e488-f18d-4a93-bade-0e981e09cc0e" name="Tweet 202 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1344,7 +1344,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="8035b9f2-816a-4a58-afb5-ec4e67639823" name="Tweet 203 · Diagram">
+  <diagram id="76b6b896-c1a7-40e7-b73f-42d20857a42f" name="Tweet 203 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1365,7 +1365,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="777f69ab-216f-4e4d-a785-933b0322ad48" name="Tweet 204 · Diagram">
+  <diagram id="a8bc3955-43c5-47cc-8852-96418c8f89be" name="Tweet 204 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1386,7 +1386,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="ec09cfb6-be50-4e8b-a282-ce3826e6ddb5" name="Tweet 205 · Diagram">
+  <diagram id="160805b3-adb1-4642-9cd8-0acabcd5b7cd" name="Tweet 205 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1407,7 +1407,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="a0d019ed-eada-40e6-a7e5-2d87a6206653" name="Tweet 206 · Diagram">
+  <diagram id="d03bdd4f-181e-46cd-82b0-f3605833b532" name="Tweet 206 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1428,7 +1428,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="ec6a7c7d-5c2b-4f25-a80a-d22660ab593c" name="Tweet 207 · Diagram">
+  <diagram id="73e76186-8b15-49ce-86aa-9b729472595c" name="Tweet 207 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1448,7 +1448,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="bf35ea73-37d1-49a4-95a3-9ad5e2a2badb" name="Tweet 208 · Diagram">
+  <diagram id="85d85953-4948-479f-b2a1-18f29d27419f" name="Tweet 208 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1469,7 +1469,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="3618a485-4f05-438b-82f3-f4f5d01598a4" name="Tweet 209 · Diagram">
+  <diagram id="7cbb6016-81c3-4b58-9a32-fbad882ec0d5" name="Tweet 209 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1490,7 +1490,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="d1db4446-b92d-4710-a3f3-2d166fd964b4" name="Tweet 210 · Diagram">
+  <diagram id="75d03ff1-fa37-40d8-bb1c-8fa1d5537717" name="Tweet 210 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1511,7 +1511,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="14f38b9a-d54e-4a82-a2f7-aac89c9f43ff" name="Tweet 211 · Diagram">
+  <diagram id="22954911-e52b-416e-b903-c02fa5a3b6aa" name="Tweet 211 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1532,7 +1532,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="d6f8193b-04de-4d20-ad11-eef65770b869" name="Tweet 212 · Diagram">
+  <diagram id="a5ca689e-5297-4351-bee9-a04675d6dfb6" name="Tweet 212 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1553,7 +1553,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="3153540c-a758-4bdc-b0a5-98fd5a8d7eed" name="Tweet 213 · Diagram">
+  <diagram id="e8fa4ddc-7c1d-4390-9ca8-f50932d994a7" name="Tweet 213 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1574,7 +1574,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="a8da885d-35e8-40c2-9389-9cd578b86200" name="Tweet 214 · Diagram">
+  <diagram id="fa504d5d-50a9-4926-8ff5-7fab4896ddd6" name="Tweet 214 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1595,7 +1595,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="f78c606f-828c-40a1-8241-818030640084" name="Tweet 215 · Diagram">
+  <diagram id="875532c4-7dac-4abf-bcb3-033752dcaace" name="Tweet 215 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1616,7 +1616,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="c0feed0d-f1be-4713-a29d-318b9760b3ee" name="Tweet 216 · Diagram">
+  <diagram id="f1a9774d-e483-4764-b3b3-36fd0f580849" name="Tweet 216 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1637,7 +1637,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="a4734500-8b1d-4f28-b9c1-3642ed16fad8" name="Tweet 217 · Diagram">
+  <diagram id="33ef468e-c943-42bb-be70-d9a6d8c43ab3" name="Tweet 217 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1656,7 +1656,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="07d7ff9e-d8b8-45fd-8f14-f4a10a49f815" name="Tweet 218 · Diagram">
+  <diagram id="5538cd9f-b935-4b68-851a-e01a154a792e" name="Tweet 218 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1678,7 +1678,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="93ab4ac0-3e73-42ac-b0c7-21e09a6b569f" name="Tweet 219 · Diagram">
+  <diagram id="70d154d4-ac65-4d71-ac41-5b2337c69867" name="Tweet 219 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1699,7 +1699,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="95ed3ebc-65eb-4840-97d5-8d3457fa4ae6" name="Tweet 220 · Diagram">
+  <diagram id="1e0d0229-20ec-4050-b1ae-934b39daa5a0" name="Tweet 220 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1720,7 +1720,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="448c69a3-6cf1-4de1-a76f-fc5efd42a777" name="Tweet 221 · Diagram">
+  <diagram id="b2d4ba12-06d9-4055-9bd0-dce0722f5e51" name="Tweet 221 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1739,7 +1739,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="ed342cc2-ecd9-45b3-94af-38f94e009b7e" name="Tweet 222 · Diagram">
+  <diagram id="dce6bb51-064e-4bd8-b012-4202851f39a4" name="Tweet 222 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1756,7 +1756,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="84454a02-7a10-4792-960a-ec576012c0b3" name="Tweet 223 · Diagram">
+  <diagram id="b156d4d8-037a-4719-9b38-1f576df14ebf" name="Tweet 223 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1777,7 +1777,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="d7575226-0554-438c-baa5-5572666eea46" name="Tweet 224 · Diagram">
+  <diagram id="ca1cbbae-e6c6-4aa4-ad2a-44e4411c528d" name="Tweet 224 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1798,7 +1798,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="debeedfe-7df3-4b78-8ad9-ebfdd360477c" name="Tweet 225 · Diagram">
+  <diagram id="72bc9cf4-715b-4437-ae40-514355627762" name="Tweet 225 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1819,7 +1819,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="73d7633f-aa89-47e4-8a19-b8a8e8fbc40d" name="Tweet 226 · Diagram">
+  <diagram id="23f8c74d-c480-4356-9428-33a4646c73df" name="Tweet 226 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1840,7 +1840,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="3dd0b194-17c3-43d2-983a-d71af34cfddb" name="Tweet 227 · Diagram">
+  <diagram id="b752d93b-2363-4694-8289-28a56c24618b" name="Tweet 227 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1861,7 +1861,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="161b1a1d-a88d-4866-8c05-8961a9407a0a" name="Tweet 228 · Diagram">
+  <diagram id="5e38b625-4568-4050-af7b-36a037fb0221" name="Tweet 228 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1882,7 +1882,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="2082a3d2-987c-48a0-949d-f3085fab5ffd" name="Tweet 229 · Diagram">
+  <diagram id="3e3a19c6-1de2-4fe9-9450-a5ee16f1e803" name="Tweet 229 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1903,7 +1903,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="efd548ae-f8cc-4157-9024-84cc8d1c70f3" name="Tweet 230 · Diagram">
+  <diagram id="94f44083-e32b-4ad6-ac33-f7cfb7dc0c97" name="Tweet 230 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1924,7 +1924,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="97909ff6-b838-4c41-b66a-abb498a232a4" name="Tweet 231 · Diagram">
+  <diagram id="d223976e-85ea-464b-be4d-57650275e0fb" name="Tweet 231 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1945,7 +1945,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="0344c153-7f11-49ad-b59c-f3511cb8ceba" name="Tweet 232 · Diagram">
+  <diagram id="e1af8350-1bdd-4455-9912-ed4dafebf8fd" name="Tweet 232 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1966,7 +1966,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="12a5856c-33af-41df-92d0-26b138d7f77b" name="Tweet 233 · Diagram">
+  <diagram id="dd2302b0-7766-4929-8cb8-7c22655881d2" name="Tweet 233 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -1987,7 +1987,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="55c2c9f8-bf2b-4bd0-af1c-0e2c34bc4f30" name="Tweet 234 · Diagram">
+  <diagram id="d83b565d-f4a2-432b-a769-a1c9975a3900" name="Tweet 234 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -2008,7 +2008,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="b334e8a5-1a59-4abe-bf01-32a0031d74d9" name="Tweet 235 · Diagram">
+  <diagram id="8b0dc2ea-6df1-4697-aa4f-9de56ea54e56" name="Tweet 235 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -2029,7 +2029,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="c01b19f5-ace6-4558-ad3f-effacfb4d1ba" name="Tweet 236 · Diagram">
+  <diagram id="ceefb728-adaa-4812-ad85-d85146c8cd5a" name="Tweet 236 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -2050,7 +2050,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="17402f01-a218-4213-968d-c6e43c69e0ab" name="Tweet 237 · Diagram">
+  <diagram id="4708b171-98e0-46d5-b9e0-26cd032f0368" name="Tweet 237 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -2071,7 +2071,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="70dba244-e6a6-4dc9-8552-cdb30d9a0938" name="Tweet 238 · Diagram">
+  <diagram id="abc61a15-136e-4e18-be83-a0ab02d94d85" name="Tweet 238 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -2093,7 +2093,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="4bb4e562-3a13-49cf-8e77-cd49e7cb50aa" name="Tweet 239 · Diagram">
+  <diagram id="e32b20d0-8b4c-4d6b-b708-2063240caeeb" name="Tweet 239 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -2112,7 +2112,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="bd052454-6572-4cbf-93a6-6cba6127e318" name="Tweet 240 · Diagram">
+  <diagram id="b51af7d7-3bf4-41b9-bada-c37e52c2a7de" name="Tweet 240 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -2131,7 +2131,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="05d8fed8-e45f-4c75-8f9d-a61ac689b2d9" name="Tweet 241 · Diagram">
+  <diagram id="456dde33-c46a-47b0-a457-f89c6619f9c2" name="Tweet 241 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -2152,28 +2152,27 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="ce859ca8-d5b8-4e36-ba0f-12e41c3a5657" name="Tweet 242 · Diagram">
-    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
+  <diagram id="dc9d152e-a187-49f7-bd97-e8e995c0a629" name="Tweet 242 · Diagram">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="2" value="Tweet #242 · Spring Boot: You can validate config classes with the @Val…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
+        <mxCell id="2" value="Tweet #242 · Validate `@ConfigurationProperties` with `@Validated` — fa…" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="40" y="16" width="760" height="32" as="geometry"/></mxCell>
         <mxCell id="3" value="spring-boot-tips · codingstrain" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=0;fontColor=#64748B;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="520" height="22" as="geometry"/></mxCell>
-        <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="300" as="geometry"/></mxCell>
-        <mxCell id="5" value="Concept flow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
-        <mxCell id="6" value="Problem / context" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#3B82F6;strokeColor=#1D4ED8;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="120" y="190" width="200" height="70" as="geometry"/></mxCell>
-        <mxCell id="7" value="It makes your app fail fast at startup if the configuration is invalid" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="360" y="190" width="240" height="70" as="geometry"/></mxCell>
-        <mxCell id="8" value="→" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="6" target="7"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
-        <mxCell id="9" value="#SpringBoot #JavaDev" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="620" y="190" width="240" height="70" as="geometry"/></mxCell>
-        <mxCell id="10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="7" target="9"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
-        <mxCell id="11" value="Runnable sample: `spring-boot-tips`" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="880" y="190" width="240" height="70" as="geometry"/></mxCell>
-        <mxCell id="12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="9" target="11"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
-        <mxCell id="13" value="✓ See CodePen for implementation" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#16A34A;" vertex="1" parent="1"><mxGeometry x="840" y="310" width="240" height="56" as="geometry"/></mxCell>
-        <mxCell id="14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="11" target="13"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="4" value="" style="rounded=1;fillColor=#FFFFFF;strokeColor=#E2E8F0;strokeWidth=2;shadow=0;" vertex="1" parent="1"><mxGeometry x="40" y="78" width="1080" height="320" as="geometry"/></mxCell>
+        <mxCell id="5" value="Validated configuration" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1"><mxGeometry x="60" y="92" width="1040" height="28" as="geometry"/></mxCell>
+        <mxCell id="6" value="application.yml" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#6366F1;strokeColor=#4F46E5;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="90" y="200" width="200" height="78" as="geometry"/></mxCell>
+        <mxCell id="7" value="@ConfigurationProperties" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#6366F1;strokeColor=#4F46E5;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="350" y="200" width="200" height="78" as="geometry"/></mxCell>
+        <mxCell id="8" value="@Validated" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#EC4899;strokeColor=#DB2777;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="610" y="200" width="200" height="78" as="geometry"/></mxCell>
+        <mxCell id="9" value="Spring Context" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#8B5CF6;strokeColor=#7C3AED;strokeWidth=2;fontColor=#FFFFFF;fontSize=13;fontStyle=1;shadow=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="870" y="200" width="200" height="78" as="geometry"/></mxCell>
+        <mxCell id="10" value="bind" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="6" target="7"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="11" value="Bean Validation" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="7" target="8"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="12" value="startup" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;strokeColor=#64748B;strokeWidth=2;fontColor=#64748B;fontSize=11;" edge="1" parent="1" source="8" target="9"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="13" value="✓ Fail at startup, not in production" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#16A34A;" vertex="1" parent="1"><mxGeometry x="80" y="330" width="500" height="34" as="geometry"/></mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="cd80e3f9-3de3-4534-9f4e-3ae6730e7ba1" name="Tweet 243 · Diagram">
+  <diagram id="b052cf7a-e86d-47c7-91ba-f5f7b21c4634" name="Tweet 243 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -2194,7 +2193,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="332b1d55-de04-42af-ad97-85eaf02c6bac" name="Tweet 244 · Diagram">
+  <diagram id="95b6aab8-155b-41f3-a6eb-4da161818c0d" name="Tweet 244 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -2215,7 +2214,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="ea0c6410-a63c-4360-aef0-83a1e94646b1" name="Tweet 245 · Diagram">
+  <diagram id="2f05a5fe-cada-4d9c-ae5c-1690cbcbfc8f" name="Tweet 245 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -2236,7 +2235,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="e5c5d022-e9d0-468a-ab44-55bc1fa82948" name="Tweet 246 · Diagram">
+  <diagram id="556ff4e1-f18a-4d45-ba80-dd5e698b7e7f" name="Tweet 246 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -2257,7 +2256,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="af582949-0b46-4404-830f-f69cb515b684" name="Tweet 247 · Diagram">
+  <diagram id="ee164445-9d20-4e0a-9ed7-9c89c495da0b" name="Tweet 247 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -2276,7 +2275,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="a2a92e08-a837-4200-9217-3a79aabef60b" name="Tweet 248 · Diagram">
+  <diagram id="390ebcce-4cbe-4515-9fb7-27919d77827b" name="Tweet 248 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -2297,7 +2296,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="f8ca6fdb-294a-464a-b010-8be5685f97c3" name="Tweet 249 · Diagram">
+  <diagram id="081d9bde-88fa-43fc-b1e0-d17264e3e532" name="Tweet 249 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -2318,7 +2317,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="80e9304a-87b0-43a3-b50c-c0795b88a2f1" name="Tweet 250 · Diagram">
+  <diagram id="3f74ad65-77e3-421d-8558-93e685a7f2e4" name="Tweet 250 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -2339,7 +2338,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="652da5dd-c401-4abb-8419-30e956de0bf5" name="Tweet 251 · Diagram">
+  <diagram id="1c1834c4-1b77-496e-9467-73909d7d6967" name="Tweet 251 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -2360,7 +2359,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="074ba333-9ce8-4664-8cfc-9635ee9b0229" name="Tweet 252 · Diagram">
+  <diagram id="ec7aa2c0-60ac-416a-a798-7938a0c3b4e5" name="Tweet 252 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="460" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -2381,7 +2380,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="b44a46c9-05e5-4378-b751-f5ccef652b00" name="Tweet 253 · Diagram">
+  <diagram id="8a373095-bd35-4760-ac4d-b26c56ba3034" name="Tweet 253 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -2402,7 +2401,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="7de60117-3c01-4151-8f02-20d8979ef5f0" name="Tweet 254 · Diagram">
+  <diagram id="725153dd-b746-4f0f-aca1-a44cabdabc0b" name="Tweet 254 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -2423,7 +2422,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="c6f5b20f-a3ba-4098-beab-20a7de2ad2a6" name="Tweet 255 · Diagram">
+  <diagram id="58d7a46e-1d94-41b1-a4c5-8b09ae6ef171" name="Tweet 255 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -2444,7 +2443,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="0d70d933-1da7-4120-8271-5654460be15a" name="Tweet 256 · Diagram">
+  <diagram id="ab7de20f-702e-4052-a2e0-c4cd6a8da810" name="Tweet 256 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -2465,7 +2464,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="1a400846-b4b6-4e74-8957-919cb18b2a6d" name="Tweet 257 · Diagram">
+  <diagram id="5e75df5c-1cd4-41f7-b635-491408b2cc58" name="Tweet 257 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -2486,7 +2485,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="fe320312-39f4-4052-be3a-bf3c0874737c" name="Tweet 258 · Diagram">
+  <diagram id="278fb270-b02d-478c-8cfd-56eccf0d5664" name="Tweet 258 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -2505,7 +2504,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="2cc62cfa-6ad0-41c6-a528-2cfb55cbffce" name="Tweet 259 · Diagram">
+  <diagram id="bd340721-269d-4991-9106-0c7de3c8729e" name="Tweet 259 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="480" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
@@ -2524,7 +2523,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="9e3d8432-d61f-4580-a3c0-723525462039" name="Tweet 260 · Diagram">
+  <diagram id="4df88775-870b-47c9-84de-7a5c48c1e9bd" name="Tweet 260 · Diagram">
     <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="420" math="0" shadow="0" background="#F8FAFC">
       <root>
         <mxCell id="0"/>
