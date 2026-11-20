@@ -138,13 +138,11 @@
 
         </style>
         <div class="carbon-local-148">
-          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor"><pre><code><span class="com">// 💡 Java tip: Starting from Java 11, you can use String.strip() instead of trim(), since it handles Unicode whitespaces correctly.</span>
-<span class="com">//</span>
-<span class="com">// ✅ #Java #JavaTips</span>
-<span class="com">//</span>
-<span class="com">// ✅ Runnable sample: `java-tips`</span>
-<span class="com">//</span>
-<span class="com">// ✅ Architecture diagram + Carbon CodePen below</span></code></pre></div></div>
+          <div class="carbon"><div class="carbon-titlebar"><span class="carbon-dot red"></span><span class="carbon-dot yellow"></span><span class="carbon-dot green"></span><span class="carbon-module">java-tips</span></div><div class="carbon-editor cols"><div class="col"><pre><code><span class="com">// ❌ trim() — only chars &lt;= U+0020; NBSP stays</span>
+<span class="typ">String</span><span class="txt"> </span><span class="txt">a</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="str">&quot;\u00A0hello\u00A0&quot;</span><span class="pun">.</span><span class="met">trim</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span>
+<span class="com">// still &quot;\u00A0hello\u00A0&quot;</span></code></pre></div><span class="col-divider"></span><div class="col"><pre><code><span class="com">// ✅ strip() — Unicode whitespace (Java 11+)</span>
+<span class="typ">String</span><span class="txt"> </span><span class="txt">b</span><span class="txt"> </span><span class="pun">=</span><span class="txt"> </span><span class="str">&quot;\u00A0hello\u00A0&quot;</span><span class="pun">.</span><span class="met">strip</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span>
+<span class="com">// &quot;hello&quot;</span></code></pre></div></div></div>
         </div>
         <p class="codepen-links">
           <a href="codepen/tweet-148.html" target="_blank" rel="noopener">Open pen preview</a>

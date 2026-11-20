@@ -1835,13 +1835,17 @@
     </article>
     <article>
       <h2>Tweet #148</h2>
-      <p class="preview">💡 Java tip: Starting from Java 11, you can use String.strip() instead of trim(), since it handles Un</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(164/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-148" readonly rows="10">💡 Java tip: Starting from Java 11, you can use String.strip() instead of trim(), since it handles Unicode whitespaces correctly.
+      <p class="preview">💡 Prefer String.strip() (Java 11+) over trim() for whitespace.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(235/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-148" readonly rows="10">💡 Prefer String.strip() (Java 11+) over trim() for whitespace.
 
-✅ #Java #JavaTips
+✅ trim() only removes characters &lt;= U+0020
 
-#Java #JavaTips</textarea>
+✅ strip() uses Unicode whitespace (NBSP, etc.)
+
+✅ Also: stripLeading() / stripTrailing() when you need one side
+
+#Java #Strings</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-148">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>

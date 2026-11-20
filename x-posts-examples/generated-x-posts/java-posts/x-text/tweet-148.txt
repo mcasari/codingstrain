@@ -1,5 +1,9 @@
-💡 Java tip: Starting from Java 11, you can use String.strip() instead of trim(), since it handles Unicode whitespaces correctly.
+💡 Prefer String.strip() (Java 11+) over trim() for whitespace.
 
-✅ #Java #JavaTips
+✅ trim() only removes characters <= U+0020
 
-#Java #JavaTips
+✅ strip() uses Unicode whitespace (NBSP, etc.)
+
+✅ Also: stripLeading() / stripTrailing() when you need one side
+
+#Java #Strings
