@@ -1,7 +1,18 @@
-// 🚀 Spring Boot: Better avoid wildcard exclusions for transitive dependencies in POMs, because they can hide problems.
-//
-// ✅ ❌ Wildcard exclusions just remove the symptom and mask the underlying version mismatch
-//
-// ✅ #SpringBoot #JavaDev
-//
-// ✅ Runnable sample: `spring-boot-tips`
+<!-- ❌ Wildcard exclusion — symptom gone, root cause hidden -->
+<dependency>
+  <groupId>com.example</groupId>
+  <artifactId>legacy-client</artifactId>
+  <exclusions>
+    <exclusion>
+      <groupId>*</groupId>
+      <artifactId>*</artifactId>
+    </exclusion>
+  </exclusions>
+</dependency>
+
+<!-- ✅ Exclude only the conflict — or manage the version -->
+<exclusion>
+  <groupId>commons-logging</groupId>
+  <artifactId>commons-logging</artifactId>
+</exclusion>
+<!-- Better: let spring-boot-dependencies pick the version -->

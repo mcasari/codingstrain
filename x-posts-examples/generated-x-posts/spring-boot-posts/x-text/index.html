@@ -1557,15 +1557,17 @@
     </article>
     <article>
       <h2>Tweet #224</h2>
-      <p class="preview">🚀 Spring Boot: Better avoid wildcard exclusions for transitive dependencies in POMs, because they ca</p>
-      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(252/280)</span></p>
-      <textarea class="tweet-copy" id="tweet-copy-224" readonly rows="10">🚀 Spring Boot: Better avoid wildcard exclusions for transitive dependencies in POMs, because they can hide problems.
+      <p class="preview">💡 Avoid wildcard Maven exclusions — they hide the real version clash.</p>
+      <p class="tweet-copy-label">Copy for X <span class="x-char-count">(266/280)</span></p>
+      <textarea class="tweet-copy" id="tweet-copy-224" readonly rows="10">💡 Avoid wildcard Maven exclusions — they hide the real version clash.
 
-✅ ❌ Wildcard exclusions just remove the symptom and mask the underlying version mismatch
+✅ *:* drops everything transitive and masks mismatches
 
-✅ #SpringBoot #JavaDev
+✅ Exclude the one conflicting artifact by groupId/artifactId
 
-#SpringBoot #JavaDev</textarea>
+✅ Or align versions via Boot’s BOM / dependencyManagement
+
+#SpringBoot #Maven</textarea>
       <p class="copy-row">
         <button type="button" class="copy-x-btn" data-target="tweet-copy-224">Copy for X</button>
         <span class="copy-status" aria-live="polite"></span>

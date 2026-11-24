@@ -5,3 +5,5 @@
 // ✅ Runnable sample: `springboot-redis-cache-demo`
 //
 // ✅ Architecture diagram + Carbon CodePen below
+//
+// #SpringBoot

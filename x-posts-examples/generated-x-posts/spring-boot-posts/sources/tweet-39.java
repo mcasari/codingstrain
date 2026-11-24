@@ -5,3 +5,5 @@
 // ✅ Runnable sample: `spring-mock-reset-example`
 //
 // ✅ Architecture diagram + Carbon CodePen below
+//
+// #SpringBoot #Testing

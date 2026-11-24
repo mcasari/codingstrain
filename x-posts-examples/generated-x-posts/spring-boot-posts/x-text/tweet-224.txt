@@ -1,7 +1,9 @@
-🚀 Spring Boot: Better avoid wildcard exclusions for transitive dependencies in POMs, because they can hide problems.
+💡 Avoid wildcard Maven exclusions — they hide the real version clash.
 
-✅ ❌ Wildcard exclusions just remove the symptom and mask the underlying version mismatch
+✅ *:* drops everything transitive and masks mismatches
 
-✅ #SpringBoot #JavaDev
+✅ Exclude the one conflicting artifact by groupId/artifactId
 
-#SpringBoot #JavaDev
+✅ Or align versions via Boot’s BOM / dependencyManagement
+
+#SpringBoot #Maven
