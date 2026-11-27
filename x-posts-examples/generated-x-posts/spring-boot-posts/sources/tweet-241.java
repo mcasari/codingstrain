@@ -1,7 +1,8 @@
-// 🚀 Spring Boot testing: Using spring.main.log-startup-info=false, you can skip the verbose startup summary.
-//
-// ✅ #SpringBoot #JavaDev
-//
-// ✅ Runnable sample: `spring-boot-tips`
-//
-// ✅ Architecture diagram + Carbon CodePen below
+# ❌ Default — every @SpringBootTest reprints the startup summary
+# spring.main.log-startup-info=true  (implicit)
+
+# ✅ application-test.yml — quieter CI / test output
+spring:
+  main:
+    log-startup-info: false
+    banner-mode: off

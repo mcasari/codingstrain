@@ -1,5 +1,9 @@
-🚀 Spring Boot testing: Using spring.main.log-startup-info=false, you can skip the verbose startup summary.
+💡 Quiet noisy test logs — set spring.main.log-startup-info=false.
 
-✅ #SpringBoot #JavaDev
+✅ Skips the verbose “started … in X seconds” startup summary
 
-#SpringBoot #JavaDev
+✅ Handy in @SpringBootTest where that noise drowns assertions
+
+✅ Pair with spring.main.banner-mode=off to hide the banner too
+
+#SpringBoot #Testing
